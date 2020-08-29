@@ -5831,6 +5831,7 @@ _txt_craftessence
 _txt_expup
 _txt_statusup
 img_common_frame01
+listframes6_bg
 banner_
 banner_notice_
 banner_icon_
@@ -5851,6 +5852,7 @@ skill_00000
 f_
 f_1000000
 f_1000010
+f_1000012
 c_
 c_1000000
 Enemys/DownloadEnemy
@@ -5886,6 +5888,10 @@ _m
 _bright
 _l
 _thick
+MyRoomSound/DownloadMyRoomSound
+DownloadMyRoomSoundAtlas
+soundlogo_
+{0:D3}
 UISkin02DialogAtlas
 UISkin/UISkin01TerminalAtlas
 UISkin/UISkin02TerminalAtlas
@@ -6059,6 +6065,7 @@ mask00
 black00
 EndOpenBaseDialog
 EndCloseBaseDialog
+ba30
 Camera
 Camera_obj
 CAMERA_END
@@ -6067,7 +6074,14 @@ effect/BitEffect/bit_buster{0:00}
 effect/BitEffect/bit_arts{0:00}
 effect/BitEffect/bit_quick{0:00}
 effect/BitEffect/bit_flash02
+hp_iconeffect_before_1_
+MOTION_SHIFT_GAUGE_DOWN
+hp_iconeffect_1_
+MOTION_SHIFT_GAUGE_UP
+hp_iconcharge_1_
 act
+en_text01
+en_damage01
 Shadow
 en_Head
 ActorObject
@@ -6137,6 +6151,8 @@ ef_pig_return01
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
 HIDE_STATUS_EFFECT_IDS
 TREASURE_DEVICE_DISP_STATUS_EFFECT_FLAG
+Effect/weapon/{0}/{1}
+Effect/weapon/{0}
 chr(Clone)
 BOOST_EFFECT_ICON
 BOOST_EFFECT_TIMING
@@ -6239,11 +6255,14 @@ TUTORIAL_QUEST_ID2
 TUTORIAL_QUEST_ID3
 TUTORIAL_QUEST_ID4
 TUTORIAL_QUEST_ID4_PHASE
+en_Parts_Up01
+en_Parts_Under01
 FLAG_BATTLE_RETRY_UNAVAILABLE
 skipSkill
 hightSpeed
 TdConstantVel
 SkipDead
+Battle/Common
 <{0}>
 kill
 appear
@@ -6257,7 +6276,13 @@ isAddition
 treasureDeviceVoiceId
 changeAttri
 billBoardGroup
+multiTargetCore
+multiTargetUp
+multiTargetUnder
+startPos
+deadChangePos
 shift
+shiftPosition
 shiftClear
 change
 forceDropItem
@@ -6283,7 +6308,6 @@ uniqueId
 svtId
 limitCount
 _PLAYER
-Battle/Common
 GOTO_BATTLESTARTTALK
 GOTO_BATTLENDTALK
 GOTO_TERMINAL
@@ -6471,6 +6495,12 @@ baseVals.GetValue:
 ] Index[
 _SAFE
 MOTION_SHIFT
+FOCUS_UP_EX
+FOCUS_UP
+FOCUS_CENTER_EX
+FOCUS_CENTER
+FOCUS_UNDER_EX
+FOCUS_UNDER
  funcEnt.funcType : 
   => targetId : 
   <= no Target
@@ -6493,12 +6523,14 @@ MOTION_ENTRY_TAC
 BATTLE_SUBENTRY_PLAYER
 BATTLE_SUBENTRY_ENEMY_UNKNOWN
 BATTLE_SUBENTRY_ENEMY
+RESET_CAMERA_BAT
 MOTION_PLAYER_TURN_END
 MOTION_ENEMY_TURN_END
 MOTION_RESURRECTION
 MOTION_NO_DEAD
 MOTION_STAND_DEAD
 MOTION_EFFECT_DEAD
+MOTION_WAIT_DEAD
 MOTION_DEAD
 MOTION_APP
 NP_HIGHER
@@ -6558,7 +6590,13 @@ loadEvents
 MOTION_CHANGE
 MOTION_RECOVER
 MOTION_RECOVER_TAC
+ACTION_START_UP
+ACTION_START_CENTER
+ACTION_START_UNDER
 ACTION_START
+TACTICAL_START_UP
+TACTICAL_START_CENTER
+TACTICAL_START_UNDER
 TACTICAL_START
 BREAK_ON_BATTLE_WAIT
 BREAK_ON_BATTLE_WAIT_FINISH
@@ -6611,6 +6649,9 @@ effect/ef_boostitem03
 TEST_NOBLE_PHANTASM
 ba2
 RESUME_ENEMY_ALL_DEATH
+RESUME_UP
+RESUME_CENTER
+RESUME_UNDER
 RESUME
 QUEST_BOSS
 ba1
@@ -6625,6 +6666,9 @@ FadeOff
 ResultWindowPanel
 START_NP_ENEMY
 START_NP_PLAYER
+END_NP_UP
+END_NP_CENTER
+END_NP_UNDER
 GAME_OVER_COMMAND_SPELL_ID
 NOBLE_DAMAGE_VOICE_RANDOM
 speed1_dead
@@ -6969,8 +7013,6 @@ ENEMY_ATTACK_RATE_BUSTER
 CRITICAL_INDIVIDUALITY
 ×{0}
 hp_icon_
-hp_iconeffect_before_1_
-hp_iconeffect_1_
 onClickServant
 SvtW_StartClose
 {0:#,0}/{1:#,0}
@@ -6979,9 +7021,10 @@ servant_icon
 effect/ef_cwflash01
 hp_break_
 ba3
-ba30
-updateShiftHplabel
+OnUpdateShiftGaugeChangeHp
 ignoretimescale
+OnCompleteShiftGaugeChangeHp
+updateShiftHplabel
 Battle/Prefab/ef_add_enemy
 BATTLE_RAID_TOTALHP
 raid_down_normal_
@@ -8299,6 +8342,7 @@ userSupportDeck
 viewEnemy
 viewQuestEnemyInfo
 viewQuestInfo
+mstVoiceClosedMessage
 mstVoiceCond
 mstVoice
 mstVoiceMaterialCond
@@ -9093,6 +9137,7 @@ SetMainColor
 SetAddColor
 FGOActorDelete サーヴァント位置Index取得エラー
 SvtId:【{0}】UniqueID:【{1}】IsEnemy:【{2}】
+{0}(Clone)
 AnimCameraObject
 NOBLE_ANIM
 NOBLE_ANIM_PLAYER
@@ -9468,9 +9513,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.10.0
-7aee3349d8dc0068f9f1f7f58ca7b1158ebe80943f1c4ddd8d3076dc12cc2346
-20200318_21:07
+2.11.0
+64ad7ed1ebb9de6e14f54762ab9950a37e5c9d64d938f43305916a4c8c725d6c
+20200401_19:41
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9776,6 +9821,7 @@ DEV
 LIMIT
 EXTERNAL
 PLAY
+DESIGN
 TheCheckKey
 iOS
 https://itunes.apple.com/lookup?id=
@@ -9856,6 +9902,7 @@ NPUP_CONFIRM_WARNING_TXT
 NPUP_CONFIRM_TXT
 td
 battle_svt_id
+eventDeckIndex
 NONE
 Movie/ops{0:00000}.usm
 MATERIAL_TOP_OPENING_{0:00000}
@@ -12114,6 +12161,8 @@ img_questloop_on
 img_loop_off
 questboard_icon_cap{0:D2}
 QUEST_NONE
+Terminal/Effect
+ef_blackpoint
 RemoveTempBG
 MATERIAL_MAP_CHAPTER_SUB
 CHAPTER_F_START_ID
@@ -12462,7 +12511,6 @@ CALDEAGATE WAIT
 STORY WAIT
 SPOT SELECT WAIT
 evGoBack_Earth
-EVENT_INIT
 EV_SCENE_STATUS_INIT
 evGO_CALDEA
 EV_SCENE_STATUS_RESUME_FROM_SCRIPT
@@ -12506,6 +12554,7 @@ ops{0:00000}.usm
 bit_treasure_get
 NoticeLastModified
 bit_order_grade_get
+EVENT_INIT
 SellServant
 ServantEquipList
 VOTE_QUEST_CONFIRM_INFO
@@ -12822,6 +12871,7 @@ charaFadein
 charaFadeout
 charaFadeTime
 charaFadeSpeed
+overlayFadein
 charaPut
 charaScale
 charaMove
@@ -12985,6 +13035,7 @@ icon_class_{0:D3}
 ：
 ・
 FrontCommonUI
+[line 
 Effect Parent
 Effect Child
 [*
@@ -13123,6 +13174,7 @@ CostumeCombineList
 tdTransform
 cameraActionId
 battleHeight
+lostCommonReleaseId
 invalidSkillShift
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
@@ -13189,6 +13241,7 @@ SHORT_SERVANT_CANCEL
 card/friendshipExceed
 card/combineExceed
 weaponGroup
+weaponEffect
 overWriteTDName
 overWriteTDRuby
 overWriteTDFileName
@@ -13631,6 +13684,9 @@ LEVEL_DETAIL_INFO
 Target
 EventId
 ApplySupportSvt
+revivalUp
+revivalUnder
+aress
 SKILL_COMBINE_EFFFECT_UNRELEASE
 COSTUME_CHANGE_DESCRIPTION
 COSTUME_CHANGE_SKILL_TITLE
@@ -13729,8 +13785,6 @@ Audio
 .acb
 btn_playmusic_on
 btn_playmusic_off
-soundlogo_
-{0:D3}
 SOUNDPLAYER_SOUND_NAME
 img_soundplayer_listoff01
 img_soundplayer_listoff02
@@ -13814,6 +13868,9 @@ playerCutInSvtIds
 effectBgmId
 startBgmOff
 bossIdAndChangeBgmId
+aiActTypeAttackCommandCard
+npcServantId
+cardType
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
