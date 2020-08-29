@@ -9562,9 +9562,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.13.0
-c2c12ebbb7bebee0f0127d78656bacbf09c02b16fe377a65f6667475e9ed8c60
-20200519_22:26
+2.13.1
+78e5d318d7a3b1e2d40fdca53edbd1a22bfab9735b366803ad9dbf7353635d49
+20200522_20:04
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12648,9 +12648,11 @@ EVENT_RACE_RESULT_REWARD_DLG_MESSAGE
 EventRaceBoostEffect
 evSpotSelect_GoQuestSelect
 EVENT_BOARD_GAME_DICE_VOICE_INFO
+EVENT_BOARD_GAME_QUEST_ARRIVAL_VOICE_SVT_ID_LIST
 PlayEventBoardGameArrivalEffectAuto
 game1_button
 arrow
+ar102
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_TITLE
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE
@@ -12663,11 +12665,12 @@ PlayBoardGamePieceEffectSub
 MapGimmickEffect_StopPiece
 PlayBoardGameStopPiecePanel
 MapGimmickEffect_GappolyStopPiecePanel
-PlayBoardGameQuestArrivalEffect
 MapGimmickEffect_GappolyQuestArrival
-MapGimmickEffect_GappolyButtonActive
 SetEventBoardQuestArrivalPanel
+ChangeBoardGameDiceButttonActive
+MapGimmickEffect_GappolyButtonActive
 MapGimmickEffect_GappolyPiece_3
+MapGimmickEffect_GappolyPiece_4
 MapGimmickEffect_GappolyPiece_1
 MapGimmickEffect_GappolyPiece_2
 token_{0:D2}
@@ -12675,6 +12678,7 @@ square_{0:D2}
 clear_marker
 clear_marker_{0:D2}
 item
+0_M040
 Terminal/MapImgs/
 Terminal/QuestMap/Capter{0:D4}
 Terminal/QuestMap/Capter{0:D4}_{1:D4}
@@ -12688,8 +12692,8 @@ img_road{0:D4}_{1:D2}
 MapSpotPath_{0}
 fadeIn
 MapTouchEnableAuto
-Effect/Dice
 ViewEventBoardGameQuestListAuto
+Effect/Dice
 diceType
 diceValue
 EndBoardGamePieceEffect
