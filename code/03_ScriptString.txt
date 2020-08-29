@@ -5597,6 +5597,7 @@ AGE_VEIFICATION_CONFIRM_TITLE
 AGE_VEIFICATION_CONFIRM_MESSAGE
 AGE_VEIFICATION_CONFIRM_DECIDE
 AGE_VEIFICATION_CONFIRM_CANCEL
+Window/CloseButton
 AgeVerificationType
 AgeVerificationExpirationDate
 AgeVerificationCumulativeAmount
@@ -5634,6 +5635,25 @@ total:{3}/{4} kb({5:f1}%)
  fps
 
 TimeScale 
+AndroidBackKeyManager
+GLOBAL_ANDROID_BACKKEY_INVALID
+Click
+OnClick
+BACK_BUTTON_CONFIRM
+BACK_BUTTON_CONFIRM_YES
+BACK_BUTTON_CONFIRM_NO
+TerminalScene
+TitlePrefab
+TitleScene
+MainPanel
+BattleScene
+click
+getApplicationContext
+cancel
+android.widget.Toast
+makeText
+LENGTH_SHORT
+show
 jp.delightworks.unityplugin.permission.PermissionRequestPlugin
 enabledRuntimePermission
 android.support.v4.content.ContextCompat
@@ -5983,7 +6003,6 @@ rp_max
 NOTIFICATION_FATIGUE_RECOVER_MESSAGE
 no_fatigue
 BattleScriptScene
-BattleScene
 OnMoveEnd
 Back
 MAX_QP
@@ -6436,6 +6455,7 @@ NobleLevel
 [{0}]({1}{2:#,0})[-]
 CLOSE_TO_MENU
 CLOSE_TO_TACTICAL
+Scroll Bar/item_list_close
 BgmName
 BGM_BATTLE_1
 END_PROC
@@ -6590,8 +6610,7 @@ HP_VAL_LOWER
 BATTLE_SKILLERROR_HP_LOWER
 HP_PER_HIGHER
 HP_PER_LOWER
-BATTLE_RETIRE_CONSUME_COST_CHECKSTR
-BATTLE_RETIRE_CHECKSTR
+itemlist_win/Scroll Bar/close
 onOpenComplete
 icon_count_02
 icon_count_01
@@ -6615,6 +6634,12 @@ Effect/BattleStart/StageClear01
 bit_battlefinish01
 Effect/Raid
 Battle/TurnSituation/
+Interface/UI Root/30_ContinuePanel/base_win/contretire_win/btn_cancel
+Interface/UI Root/30_ContinuePanel/base_win/usecheck_win/win/btn_cancel
+Interface/UI Root/10_frontCom Panel/Master/win_spell/checkPanel/win_check/btn_ng
+Interface/UI Root/10_frontCom Panel/Master/win_menu/retire1_win/close
+Interface/UI Root/10_frontCom Panel/Master/win_menu/SetVolumePanel/SetVolume/window_close
+Interface/UI Root/01_BackCom Panel/Master/MasterObject/btn_menu/click
 Effect/BattleStart/BattleStart01
 Effect/BattleStart/FinalBattle01
 Effect/BattleStart/WaveEffect/
@@ -6641,6 +6666,8 @@ TACTICAL_START_UP
 TACTICAL_START_CENTER
 TACTICAL_START_UNDER
 TACTICAL_START
+Interface/UI Root
+Movie/
 BREAK_ON_BATTLE_WAIT
 BREAK_ON_BATTLE_WAIT_FINISH
 UNIT_ALL
@@ -6668,6 +6695,7 @@ damageData:
 EFFECT_INVINCIBLE_AVOID_OFFSET_Z
 effect/ef_hit_special
 icon_oc_{0:D2}
+avoidanceText
 {0:#,0} 
 BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE
 BATTLE_EFFECT_ID_INVINCIBLE
@@ -6728,6 +6756,8 @@ Battle/TurnEffect/
 EventInfoPointGaugeControl
 ef_raid_damage
 bit_raid_battlereport
+CRIMovie/CRIMoviePlayerWithPanel
+2DUI
 bit_raid_turnstart
 bit_raid_turnstart_
 Bg/
@@ -6786,10 +6816,12 @@ ba15
 ef_excard02
 ba22
 ef_excard01
+BATTLE_RETIRE_CHECKSTR
 BATTLE_CONTINUE_CHECK_SPELL
 BATTLE_CONTINUE_CHECK_STONE
 BATTLE_CONTINUE_NO_STONE
 START_CONTINUE
+BATTLE_RETIRE_CONSUME_COST_CHECKSTR
 NEXT
 BATTLE_CONTINUE_BUTTON_USESTONE
 BATTLE_CONTINUE_BUTTON_BUYSTONE
@@ -6844,6 +6876,8 @@ CLICK_SPELL
 CLICK_MENU
 effect/ef_poplabel{0:00}
 effect/ef_masterskill_buff
+CLICK_CKRETIRE
+Wait
 btn_master_skill
 CLICK_CLOSE
 CLICK_SVTWINDOW
@@ -6962,6 +6996,7 @@ battle/resume
 MockBattleResumeRequest
 questId
 questPhase
+btn_cancel
 CONSUME_TYPE_AP
 CONSUME_TYPE_RP
 BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM
@@ -6997,6 +7032,7 @@ EndrolPanel
 2.0
 Audio/Battle
 .acb.bytes
+btn_close
 commandcard_select_1st
 commandcard_select_2nd
 commandcard_select_3rd
@@ -7005,6 +7041,7 @@ BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_NOW_TYPE
 BATTLE_DIALOG_SELECTMAINSUB_SERVANT
 BATTLE_SELECTSUBERROR_NOSELECT_TITLE
 BATTLE_SELECTSUBERROR_NOSELECT_CONF
+Sprite
 BATTLE_DIALOG_CAN_NOT_REPLACE
 BATTLE_DIALOG_SELECT_SERVANT
 NoblePhantasm/CutIns
@@ -7060,6 +7097,7 @@ btn_bg_off_1
 btn_txt_servant_states_off
 btn_txt_servant_property_off
 btn_txt_servant_states_on
+Top/close
 changeHp
 changeUpdateStatus
 fixUpdateStatus
@@ -7107,6 +7145,7 @@ pingPong
 easeType
 easeOutCirc
 effect/ef_command_flash01
+effect/data/effect/ef_skill_rankup01
 BATTLE_SUPERBOSS_TOTALHP
 battle/setup
 MockBattleSetupRequest
@@ -7124,6 +7163,7 @@ followerRandomLimitCount
 {0}  Lv.{1}
 [BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}
 MAX {0}%
+Close
 battle/turn
 battle/useContinue
 MockBattleUseContinueRequest
@@ -7271,7 +7311,6 @@ bytes={0}-
 bytes={0}-{1}
 gzip, identity
 Keep-Alive
-Close
 Keep-Alive, TE
 Close, TE
 TE
@@ -7418,6 +7457,9 @@ SERVANT_EQUIP_STORAGE_PURCHASE_RESULT
 SERVANT_FRAME_PURCHASE_CLOSE
 STORAGE_SHOP_SOLD_OUT
 STORAGE_SHOP_NOTIFICATION
+ConfirmWindow/ConfirmInfo/CancelButton
+ConfirmWindow/ResultInfo/CloseButton
+ConfirmWindow/Notification/CloseButton
 ""
 --:--
 {0}:{1:00}
@@ -7495,6 +7537,7 @@ MALE_TEXT
 COMMON_CONFIRM_CANCEL
 CHANGE_TITLE
 CHANGE_NAME_TITLE
+BaseWindow/CancleBtn
 Custom/Sprite-ScriptActionFigureErasure
 Talk/
 OnEndEffect
@@ -7560,6 +7603,7 @@ _PrevPosition
 _IsEnemy
 SERVANT_FRAME_PURCHASE_TITLE
 SERVANT_FRAME_PURCHASE_MESSAGE_START
+InfoDialog/CloseButton
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
 ClientApi/OutputLog
 title
@@ -7716,6 +7760,7 @@ img_combine_6
 img_combine_0
 Tutorial/tutorial_0006
 tutorial_0006
+CombineHelpListPanel/BaseWindow/UpperCloseButton
 レベル上限：
 IMPOSSIBLE_LIMITUP_COLOR
 #,0
@@ -7972,6 +8017,10 @@ WINDOWTITLE_COMMANDSPELL_BATTLE
 WINDOWTITLE_COMMANDSPELL_NO_BATTLE
 shop/CommitPurchase
 purchaseToken
+BATTLERESUME_CONFIRM_DECIDE
+BATTLERESUME_CONFIRM_CANCEL
+Window/CancelButton
+ConfirmWindow/CancelButton
 Effect(
 _start
 _loop
@@ -8031,6 +8080,7 @@ TERMS_OF_USE_SHOW
 TERMS_OF_USE_LOCATION_CANCEL
 TERMS_OF_USE_LOCATION_DECIDE
 WEB_VIEW_TITLE_TERMS_OF_USE
+SerializedLoginResult
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION
 LOGIN_BONUS_TITLE
 LOGIN_BONUS_TOTAL
@@ -8078,6 +8128,8 @@ CONNECTING
 LOADING
 クラス：
 CONNECT_TIP_MESSAGE
+ProgressBar/CancelButton
+MiniProgressBar/CancelButton
 connectMarkA
 connectMarkB
 connectMarkC
@@ -8296,6 +8348,7 @@ mstFriendship
 mstFuncCategory
 mstFuncGroup
 mstFunc
+mstGachaBehavior
 mstGachaDetail
 mstGachaGroup
 mstGachaImage
@@ -8355,6 +8408,7 @@ mstSvtAnimationOverwrite
 mstSvtCard
 mstSvtChange
 mstClass
+mstSvtCollection
 mstSvtCommandCodeUnlock
 mstSvtCommentAdd
 mstSvtComment
@@ -8559,6 +8613,7 @@ PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE
 PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION
 PARTY_ORGANIZATION_NAME_CLEAR
 PARTY_ORGANIZATION_NAME_INIT
+BaseWindow/CancleButton
 PARTY_ORGANIZATION_DECK_SELECT_COPY_TITLE
 PARTY_ORGANIZATION_DECK_SELECT_COPY_DETAIL
 PARTY_ORGANIZATION_DECK_SELECT_CANCEL
@@ -8593,6 +8648,7 @@ CommandCord/
 cord
 cord_n
 cord_b
+Window/CloseBtn
 dialogMessage_{0}_{1}
 cpcount
 http://www.yourwebsite.com/logo.png
@@ -8653,8 +8709,10 @@ EQUIP_GRAPH_USE_WARNING_TITLE
 EquipGraph
 img_skill_0
 MASTER_EQSKILL_LV_INFO
+Window/ExitButton
 EVENT_BANNER_WINDOW_TITLE
 EVENT_BANNER_WINDOW_MESSAGE
+BaseWindow/CloseBtn
 banner_loading
 game1_count_
 token_balloon
@@ -8829,7 +8887,6 @@ ef_4tab_open
 ef_3tab_open
 ef_2tab_open
 btn_disable_txt_
-TerminalScene
 SvtVoiceマスタが適切に設定されていません。
 FinishedSvtSlideIn
 event_type_txt_
@@ -9156,6 +9213,7 @@ FRIEND_NO_FRIEND_MESSAGE
 FRIEND_NO_FRIEND_CLOSE
 FOLLOW_MAX_MESSAGE
 FOLLOW_MAX_CLOSE
+ConfirmWindow/CloseButton
 MSG_PRESELECT_BASE_FRIENDSHIP_EXCEED
 CONFIRM_TITLE_FRIENDSHIP_EXCEED_COMBINE
 INFO_MSG_FRIENDSHIP_EXCEED
@@ -9171,6 +9229,11 @@ FULLDOWNLOAD_CONFIRM_MSG
 FULLDOWNLOAD_CONFIRM_DECIDE
 DAMAGE
 WEB_VIEW_TITLE_SUMMON
+RankupAnimation
+RankupBeforeClassImageId
+RankupBeforeRarity
+RankupAfterClassImageId
+RankupAfterRarity
 MockGachaResponse
 gacha/draw
 MockMultiGachaResponse
@@ -9270,8 +9333,6 @@ EmptyObjectFromNull
 Missing camera!
 MainCamera
 No such component: 
-Movie/
-CRIMovie/CRIMoviePlayerWithPanel
  missing behaviour: 
 Behaviour missing
 Missing FsmComponent!
@@ -9382,6 +9443,7 @@ Mana increases the number of spells that can be cast
 PAYSTONE_INFO_TITLE
 FREESTONE_INFO_TITLE
 STONE_INFO_NOTICE
+InfoWindow/CloseBtn
 isPresent
 listframes_shadow
 listframes{0}_bg
@@ -9645,9 +9707,6 @@ MAIN_MENU_BAR_SELECT_MYROOM
 icon_servant_exchange_available_{0}
 CommonUI/UI Root/SystemUICamera
 MovieRoot
-BACK_BUTTON_CONFIRM_YES
-BACK_BUTTON_CONFIRM_NO
-BACK_BUTTON_CONFIRM
 IsNotificationStatusSend
 IsReBootCacheClearKey
 yyyy年MM月dd日HH時mm分
@@ -9664,9 +9723,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.16.0
-acfd31a0d3393e904da78d6b4e99e123494e15784eae4db08fce5e7d79766608
-20200731_23:39
+2.17.0
+0d8877a0a351558451d2a54f52b018fa338da90317528f087af55b093a9c3998
+20200808_20:14
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9865,6 +9924,7 @@ MYROOM_HELP_TAKE_OVER_EXPLANATION
 MYROOM_MENU_NAME_8
 MYROOM_HELP_RETURN_TITLE_EXPLANATION
 MYROOM_MENU_NAME_9
+MyRoomHelpListPanel/BaseWindow/UpperCloseButton
 MYROOM_MENU_NAME_
 MYROOM_NOTICE_NAME_
 MYROOM_MENU_FAVORITE_INFO_TXT
@@ -10042,6 +10102,7 @@ urlOpenType
 urlLink
 banners
 buttonOffset
+Window/OkBtn
 bannerUrl
 notification/regist
 registPushKey
@@ -12005,6 +12066,7 @@ OpenServantDetail
 TUTORIAL_MESSAGE_PARTY_ORGANIZATION4
 PARTY_ORGANIZATION_COMMAND_CARD_TITLE
 PARTY_ORGANIZATION_COMMAND_CARD_CLOSE
+BaseWindow/CloseButton
 PARTY_ORGANIZATION_CONFIRM_COPY_FROM_PARTY_TITLE
 PARTY_ORGANIZATION_CONFIRM_COPY_TO_PARTY_TITLE
 PARTY_ORGANIZATION_CONFIRM_COPY_TITLE
@@ -12140,6 +12202,7 @@ PARTY_ORGANIZATION_REMOVE_SELECT_INIT_ALL
 PARTY_ORGANIZATION_REMOVE_SELECT_REMOVE_EQUIP
 PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME
 PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL
+BaseWindow/CancelButton
 PARTY_ORGANIZATION_RESTRICTION_HELP_CLOSE
 PARTY_ORGANIZATION_RESTRICTION_HELP_TOTAL_COST_TITLE
 PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE
@@ -12230,6 +12293,7 @@ Present
 PRESENT_BOX_NOTIFICATION_MESSAGE1
 PRESENT_BOX_NOTIFICATION_MESSAGE2
 PRESENT_BOX_NOTIFICATION_CLOSE
+MainPanel/BaseView/CloseButton
 OPEN_PRESENT_BOX
 PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_TITLE
 PRESENT_BOX_SELECTABLE_BULK_CONFIRM_DLG_DETAIL_UPPER
@@ -12343,6 +12407,7 @@ Unlit/Transparent Colored_Choco
 Custom/SpriteWithMask_Choco
 overwriteEquipSkills
 resultBgmId
+FadeOutBgmBeforeMovie
 resultEffectId
 battleEffectId
 fieldMotionId
@@ -12352,6 +12417,7 @@ noResult
 breakOnBattleWin
 breakOnBattleWinFadeColorBlack
 breakOnBattleWinWaitMSec
+battleFinishMovie
 battleFinishCameraTargetAll
 turnSituationType
 getSpecialShadowEffectId
@@ -12411,6 +12477,7 @@ quest_free
 quest_event
 quest_Interlude
 quest_heroic
+WAR_IDS_OF_COUNTING_QUEST_ONLY_REACHABLE_MAPS
 Home/RaidAutoUpdate
 _1
 _2
@@ -12610,7 +12677,6 @@ ai_quest_free
 OnClickListViewDetail
 InitScene
 DebugTestScene
-TitleScene
 SummonScene
 ShopScene
 FriendScene
@@ -12735,7 +12801,6 @@ QUEST_CLEAR_CHANGE_ACTION_COLLECTION_CLOSE
 QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN
 SystemUI
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION_OPEN_DETAIL
-2DUI
 TerminalPlayerIcon
 TerminalPlayerMap
 TerminalBaseMap
@@ -13147,7 +13212,6 @@ Back/back{0:D5}
 Image/mask_{0}
 V
 Movie/{0}.mp4
-cancel
 masterMale
 masterFemale
 switchCase2
@@ -13257,6 +13321,7 @@ FrontCommonUI
 Effect Parent
 Effect Child
 [*
+MessageShake/LogMark/BackLogButton
 [image 
  1.5]
 OnDelayWaitNextTouch
@@ -13275,6 +13340,8 @@ NoSelectMove
 SelectMove
 SCRIPT_ACTION_SKIP_CONFIRM_DETAIL
 SCRIPT_ACTION_SKIP_CONFIRM_EXIT
+Window/NormalBase/CancelButton
+Window/ExitBase/CancelButton
 SUMMON_OPEN_FRIENDQUEST_INFO
 [{0:D4}] {1}
 indicator
@@ -13397,8 +13464,9 @@ CostumeCombineList
 tdTransform
 cameraActionId
 battleHeight
-lostCommonReleaseId
 invalidSkillShift
+SkillRankUp
+changeLimitVoiceInFriendshipLv
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 SERVANT_EQUIP_EFFECT_FILTER_TITLE
@@ -13460,6 +13528,7 @@ FRIEND_GACHA_ADD_LIMIT
 SHORT_SERVANT_FRAME_LIMIT
 SHORT_SERVANT_FRAME
 SHORT_SERVANT_CANCEL
+ConfirmWindow/ConfirmBntInfo/CancelButton
 card/friendshipExceed
 card/combineExceed
 weaponGroup
@@ -13546,6 +13615,8 @@ SHOP_SELL_SERVANT_QP_MAX_ALERT_MESSAGE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_TITLE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_MESSAGE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_GETABLE
+Window/Objects/CancelButton
+Window/Objects/CloseButton
 card/combineSkill
 skillId
 COND_TYPE_TITLE
@@ -13631,6 +13702,7 @@ SERVANT_STATUS_TD_SPEED_DIALOG_CANCEL
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
+Base/TitlePrefab/BackObj/BtnBg
 img_txt_profile
 SERVANT_STATUS_PROFILE_ILLUST_TITLE
 SERVANT_STATUS_PROFILE_CV_TITLE
@@ -13768,6 +13840,7 @@ SPECIAL_ASCENSION_CONFIRM_TXT
 SPECIAL_ASCENSION_WARNING1_TXT
 SPECIAL_ASCENSION_WARNING2_TXT
 EndCloseDlg
+DlgPanel/ConfirmBtnInfo/CancleBtn
 OPTION_SCENARIO_SPEED
 OPTION_SCENARIO_TEXTWAIT_SPEED
 OPTION_SCENARIO_COMMENT
@@ -13899,6 +13972,7 @@ img_shop_14
 SHOP_HELP_STONE_SHOP_EXPLANATION
 img_shop_7
 SHOP_SPECIAL_ITEM_ENABLE
+ShopHelpListPanel/BaseWindow/UpperCloseButton
 InvokedPlayVoiceList
 SHOP_SCENE_VOICE_WELCOME
 SHOP_SCENE_VOICE_MANA
@@ -14183,6 +14257,7 @@ icon_np_on
 Effect/Summon
 Servant_get_prefab_for_battle
 Servant_get_prefab
+ConfirmWindow/ConfirmBntInfo/CancleButton
 SHORT_HAVE_STONE
 STONE_PURCHASE
 SHORT_HAVE_CHARGE_STONE
@@ -14247,6 +14322,7 @@ END_SUMMON
 EXECUTE
 countMax
 IsNoSkip
+SummonEffectAnimation
 INIT_DONE
 countIndex
 ServantId
@@ -14268,6 +14344,11 @@ CodeCardRarity02
 Rank
 BACKSIDE_CLASS_IMAGE_ID
 SETUP_DONE
+summon_up_01
+summon_up_02
+summon_up_03
+summon_up_04
+UpAnimationName
 btn_txt_summon0
 btn_txt_summon10
 TUTORIAL_GACHA_ID
@@ -14308,6 +14389,7 @@ SUPPORT_SELECT_INPUT_DECK_NAME_TITLE
 SUPPORT_SELECT_INPUT_DECK_NAME_EXPLANATION
 SUPPORT_SELECT_NAME_CLEAR
 SUPPORT_SELECT_DECK_NAME_INIT
+BaseWindow/ButtonRoot/CancleButton
 SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE
 SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE
 SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK
@@ -14724,6 +14806,7 @@ TitleInfoEventSuperBossEffect_Dead
 event_superboss_status_battle_
 event_superboss_status_win_
 Title/Prefabs/title_effect00
+UI Root/Camera/TakeOverPanel/BtnObj/CancelBtn
 PLAY_NORMAL_MODE
 OPENING_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
 OPENING_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE
@@ -14777,8 +14860,6 @@ BATTLERESUME_CONFIRM_MESSAGE_CONSUME_ITEM_QP
 BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_ITEM
 BATTLERESUME_CONFIRM_MESSAGE_CONSUME_AP_QP
 BATTLERESUME_CONFIRM_TITLE
-BATTLERESUME_CONFIRM_DECIDE
-BATTLERESUME_CONFIRM_CANCEL
 BATTLECONTINUERESUME_CONFIRM_TITLE
 BATTLECONTINUERESUME_CONFIRM_MESSAGE
 BATTLECONTINUERESUME_CONFIRM_DECIDE
@@ -14875,7 +14956,6 @@ OnKey
 OnDragStart
 OnDragOver
 OnDragOut
-OnClick
 OnDoubleClick
 OnDrop
 OnTooltip
@@ -15006,7 +15086,6 @@ cut
 SHOP_BULK_WINDOW_MIN_LABEL
 SHOP_BULK_WINDOW_MAX_LABEL
 EditorOnly
-Sprite
 Custom/Sprite-ScriptActionFigureCrossFade
 _MainTex2
 _SubTex2
@@ -15219,6 +15298,12 @@ B4042
 B2010
 B2020
 B2030
+B2410
+B2420
+B2430
+B2810
+B2820
+B2830
 bgChangeEffectType
 bgChangeEffectTime
 eventTowerId
