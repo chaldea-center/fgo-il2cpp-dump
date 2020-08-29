@@ -4075,6 +4075,8 @@ Return value address cannot be 0.
 returnValueAddress
 _Color
 _MainTex
+Zero-sized array is not allowed.
+array has less elements than passed count.
 Invalid column index!
 {0:F5}	{1:F5}	{2:F5}	{3:F5}
 {4:F5}	{5:F5}	{6:F5}	{7:F5}
@@ -5478,6 +5480,7 @@ OnPaymentCheckResultError
 課金エラー:OnPaymentCheckResultError productId 
 NETWORK_ERROR_TIME_OVER_MESSAGE
 STONE_PURCHASE_RESULT_BLOCK
+perMonthAmount
 bankAvailable
 message
 課金エラー:PaymentProductError productId 
@@ -6191,6 +6194,7 @@ billBoardGroup
 shift
 shiftClear
 change
+forceDropItem
 entryIndex
 treasureDeviceName
 treasureDeviceRuby
@@ -6260,6 +6264,7 @@ FGO_Battle/Particle/Base
 Hidden/Particle/MultiplyAdd
 Hidden/Particle/MultiplyAdd1Pass
 FGO_CH/AlphaBlendSingleFlat
+SKILL_E_ALL_PLAYER
 stopAnimation
 resumeAnimation
 updateDamageGauge
@@ -6636,6 +6641,7 @@ CONNECT_NG
 通信に失敗したので再度通信を行います
 BATTLE_CONTINUE_USECHECK_SPELL
 BATTLE_CONTINUE_USECHECK_STONE
+en_target01
 EnemyMasterFace/enemyMstFace{0:d5}
 enemyMstFace{0:d5}
 ChrVoice_{0}
@@ -8156,6 +8162,7 @@ mstSvtScriptAdd
 mstSvtScript
 mstSvtSkill
 mstSvtSkillRelease
+mstSvtTreasureDeviceDamage
 mstSvtTreasureDeviceRelease
 mstSvtTreasureDevice
 mstSvtVoice
@@ -9363,9 +9370,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.5.1
-36f8ab35fa468266a1c728b30f6eb3219e8b46f1dc8d82d167d90fdee0fbbee9
-20191127_19:47
+2.6.0
+1b1a7093504facfd79f6e13d4ae413bc1ae1d269116a6382ea55140378788042
+20191212_17:18
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11943,6 +11950,8 @@ purchaseDataBase64
 storeError
 signatureData
 purchasedBankShopId
+freeStoneNum
+chargeStoneNum
 shop/purchaseByStone
 shop/purchase
 afterActionBk
@@ -12057,6 +12066,7 @@ useEventDeckNo
 shadowOffSvtIds
 masterSkillDelay
 masterSkillDelayInfo
+invisibleConnectAndLoad
 movieFolder
 moviePlayType
 effectColor
@@ -12444,19 +12454,26 @@ MapTouchEnableAuto
 Effect/Race
 ScreenshotFolder
 {0}/s{1:D04}.png
+_BlurFactor
 _CenterX
 _CenterY
 _Strength
 _Range
 _Coefficient
+SAMPLERANGE_{0}
+_Sigma
 imageText 
 mainText 
 Master : Male
 Master : Female
+isMaterial
+isNotMaterial
 Flag   : 
 ServantId : 
 branchHaveSvtEquip
 branchNotHaveSvtEquip
+branchMaterial
+branchNotMaterial
  - 1
 Figure
 Equip
@@ -12639,6 +12656,8 @@ cameraFilter
 distortionstart
 distortionloop
 distortionstop
+blur
+blurOff
 specialEffect
 specialEffectPause
 specialEffectStart
@@ -12821,6 +12840,10 @@ selectBranchSkipTrueColor
 capture error
 masterSeneLoad
 Distortion
+lens
+motion
+GaussianBlur
+MotionBlur
 cutting
 ScriptActionEncrypt/
 TalkResume
@@ -12899,7 +12922,6 @@ NoblePhantasm/
 Effect/weapon/
 Effect/CutIn/Skill/{0}
 Servants/Motion/
-motion
 {0:D0}_{1}
 effect/ef_shadow0
 Servants/Camera/
@@ -12978,6 +13000,7 @@ CostumeCombineList
 tdTransform
 cameraActionId
 battleHeight
+invalidSkillShift
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 SERVANT_EQUIP_EFFECT_FILTER_TITLE
@@ -13043,6 +13066,7 @@ overWriteServantName
 overWriteServantBattleName
 NP_NAME_LEVEL
 NP_NAME
+effectFolder
 card/combineLimit
 saintGraphImageId
 icon_equip_cc
@@ -13769,6 +13793,7 @@ RETURN_RESULT
 RETURN_MAIN
 img_summon_maintenance
 BGM_SUMMON_1
+SUMMON_SKIP_STOP_SERVANT_IDS
 END_PREPARATION
 END_SUMMON
 EXECUTE
@@ -13779,6 +13804,7 @@ countIndex
 ServantId
 LimitCount
 IsRankUp
+IsSkipStop
 IsNewCard
 NoticeRarity
 CardType
@@ -13835,6 +13861,21 @@ SUPPORT_SELECT_INPUT_DECK_NAME_TITLE
 SUPPORT_SELECT_INPUT_DECK_NAME_EXPLANATION
 SUPPORT_SELECT_NAME_CLEAR
 SUPPORT_SELECT_DECK_NAME_INIT
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TITLE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_MESSAGE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_BASE_DECK
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_TARGET_DECK
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_DECIDE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_CONFIRM_CANCEL
+SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_TITLE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_MESSAGE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_TITLE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_MESSAGE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_INIT_ALL_DECK_NAME
+SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_TITLE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_REMOVE_ALL_EQUIP_MESSAGE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_DECIDE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_CANCEL
 SUPPORT_SELECT_NO_SERVANT_TITLE
 SUPPORT_SELECT_NO_SERVANT_WARNING
 SUPPORT_SELECT_SERVANT_CLEAR_TITLE
@@ -13848,6 +13889,20 @@ SUPPORT_SELECT_EQUIP_CHANGE_MESSAGE
 SUPPORT_SELECT_WARNING_DIALOG_CLOSE
 SUPPORT_SELECT_WARNING_DIALOG_CANCEL
 SUPPORT_SELECT_WARNING_DIALOG_DECIDE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_TITLE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_MESSAGE
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL
+SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM
+SUPPORT_SELECT_NAME
+SUPPORT_SELECT_EDIT_MENU_TITLE
+SUPPORT_SELECT_EDIT_MENU_DECK_NAME
+SUPPORT_SELECT_EDIT_MENU_MESSAGE
+SUPPORT_SELECT_EDIT_MENU_BUTTON_COPY
+SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_ALL
+SUPPORT_SELECT_EDIT_MENU_BUTTON_INIT_ALL
+SUPPORT_SELECT_EDIT_MENU_BUTTON_REMOVE_EQUIP
+SUPPORT_SELECT_EDIT_MENU_BUTTON_CHANGE_DECK_NAME
+SUPPORT_SELECT_EDIT_MENU_BUTTON_CANCEL
 icon_class1001
 icon_class001
 icon_class002
@@ -13859,7 +13914,6 @@ icon_class007
 icon_class1002
 OnFinishedSwapMove
 OnFinishedReturnMove
-SUPPORT_SELECT_NAME
 SUPPORT_FOLLOWER_HELP
 SUPPORT_INFO_HELP
 SUPPORT_SELECT_HELP
@@ -14302,6 +14356,7 @@ randomSeqIds
 randomWeights
 groupSeqIDs
 tdTypeChangeIDs
+delayEnd
 TUTORIAL_ARROW_MARK_MESSAGE
 EndCloseTutorialArrowMenu
 チュートリアル表示エラー
@@ -14566,6 +14621,8 @@ MockUserPresentListResponse
 TIME_REST_PRESENT_LIMITED
 TIME_REST_STRING
 TIME_REST_PRESENT
+TIME_REST_PRESENT_INDEFINITE_PERIOD
+TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT
 img_listboard_bg02
 img_listboard_bg03
 ribon_present_limited_period
