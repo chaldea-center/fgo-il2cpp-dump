@@ -5891,6 +5891,8 @@ NOTIFICATION_AP_RECOVER_MESSAGE
 ap_max
 NOTIFICATION_RP_RECOVER_MESSAGE
 rp_max
+NOTIFICATION_FATIGUE_RECOVER_MESSAGE
+no_fatigue
 BattleScriptScene
 BattleScene
 OnMoveEnd
@@ -5976,6 +5978,8 @@ EVENT_DAILY_POINT_RESET_AT
 REPRINT_LAST_WAR_RAID_EVENT_ID_LIST
 PROLOGUE_QUEST_ID
 COMMAND_CARD_PRM_UP_MAX
+EVENT_TOWER_FADEOUT_DELAY_TIME
+EVENT_TOWER_FADEOUT_PLAY_TIME
 id:
 , name:
 , appleShopId:
@@ -6682,7 +6686,6 @@ LONGPRESS_ENEMY
 CLOSE_CONF
 CLICK_SPELL
 CLICK_MENU
-START_MASTER_BUFF
 effect/ef_poplabel{0:00}
 effect/ef_masterskill_buff
 btn_master_skill
@@ -7855,11 +7858,11 @@ GET_FRIEND_POINT_NOW_POINT
 GET_FRIEND_POINT_AT_LIMIT
 GET_FRIEND_POINT_GACHA_BTN
 GET_FRIEND_POINT_SUPPORT_BTN
-Effect/Talk/bit_costume_get
-bit_costume_get
-Effect/Talk/bit_cosutme_get
 FRIEND_POINT_NAME
 QP_NAME
+Effect/Talk/
+bit_costume_get
+bit_equip_get
 NETWORK_ERROR_DATA_UPDATE_START
 データ更新開始
 キャンセル
@@ -8038,6 +8041,7 @@ mstEventConquestReward
 mstEventDetail
 mstEventEquipSkillRelease
 mstEventFactory
+mstEventFatigueRecovery
 mstEventFilter
 mstEventGroup
 mstEventItemDisplayGroup
@@ -8060,6 +8064,7 @@ mstEventQuest
 mstEventRace
 mstEventRaceResult
 mstEventRaid
+mstEventRewardBg
 mstEventRewardExtra
 mstEventRewardGuideRelease
 mstEventReward
@@ -8068,7 +8073,7 @@ mstEventRewardSceneRelease
 mstEventRewardSet
 mstEventScript
 mstEventScriptRelease
-eventSvtFatigue
+mstEventSvtFatigue
 mstEventSvt
 mstEventStatus
 mstEventStatusQuest
@@ -8213,6 +8218,7 @@ userEventMission
 userEventPoint
 userEventRace
 userEventRaid
+eventSvtFatigue
 mstUserExp
 userFollower
 userFollow
@@ -8440,6 +8446,7 @@ no arguments
 /[delegate]
 [delegate]
 EventDelegate
+FloorRewardPrefabName
 forceOverwrite
 event_logo_
 SET_END
@@ -8622,12 +8629,6 @@ TIME_REST_EVENTREWARD
 event_title_txt_
 EVENT_REWARD_RANKING_SUPPORT_INFO
 QP_UNIT
-SERVANT_BEFORE_OUT_NOT_FATIGUE_TIME
-SERVANT_AFTER_OUT_NOT_FATIGUE_TIME
-RECOVERY_VALUE
-SERVANT_OUT_RECOVERY_FATIGUE_TITLE
-SERVANT_OUT_RECOVERY_FATIGUE_MSG
-ar45
 EVENT_SHOP_RECEIVED_ITEM_BEFORE
 MENU_SELECT_ITEM
 MENU_SELECT_BULK_ITEM
@@ -8654,10 +8655,10 @@ GOTO_CALL
 img_titlebg_
 event_rewardframe_{0}
 Effect/EventShop
-EventServantFatigue
+EventServantFatigue/2
 RecoveryFatigue
 EVENT_SHOP_RECEIVED_ITEM_AFTER
-ar44
+ar93
 OPEN_PRESENT
 PriorityIndex_
 MissionId_
@@ -8669,29 +8670,44 @@ MstMission
 ExtraMission
 LimitedMission
 MstMissionIndex
+FatigueNotiffication
+RecoveryIdx
 LastViewEventId_
 eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}
 event/scriptFlag
 {0}/{1:D2}/{2:D2} {3:D2}:{4:D2}
 nameReleaseCond
+SERVANT_RECOVERY_FATIGUE_LIST_INDIVIDUALITY
+SELECT_NO_SORTIE_TITLE
 SERVANT_SELECT_NO_SORTIE_FATIGURE_RECOVER
-SERVANT_ALREADY_RECOVER_NOT_SELECT
 SERVANT_RECOVER_CAN_NOT_SELECT
+SERVANT_ALREADY_RECOVER_NOT_SELECT
 SERVANT_SELECT_NO_SORTIE_FATIGURE
 SERVANT_RECOVER_FATIGUE_GUIDE_HELP
-SERVANT_BEFORE_IN_NOT_FATIGUE_TIME
-SERVANT_AFTER_IN_NOT_FATIGUE_TIME
 SERVANT_IN_RECOVERY_FATIGUE_TITLE
 SERVANT_IN_RECOVERY_FATIGUE_MSG
+SERVANT_OUT_RECOVERY_FATIGUE_TITLE
+SERVANT_CHANGE_RECOVERY_FATIGUE_TITLE
+SERVANT_CHANGE_RECOVERY_FATIGUE_MSG
+SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY_DELIMITER
+SERVANT_BEFORE_IN_NOT_FATIGUE_TIME
+SERVANT_AFTER_IN_NOT_FATIGUE_TIME
+SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY
 EventServantFatigueList
 OnClickSelectObject
 SERVANT_RECOVERY_FATIGUE_REST_TIME
-event_recvoer_servant_bg
+event_recvoer_servant_bg02
+Bg/Sprite
+btn_txt_Complete_notification
+recovery{0}
+effect_prefab
+effect_prefab_2
 notClearPriority
 ui_start_quest_id
 ui_start_quest_phase
 ui_end_quest_id
 ui_end_quest_phase
+ui_hidden
 EVENT_SUPERBOSS_ENCOUNTER_{0}_{1}
 イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。
 svtVoicePlay
@@ -8712,6 +8728,11 @@ _twoValue1
 _threeValue0
 _threeValue1
 _threeValue2
+SERVANT_RECOVERY_FATIGUE_LIST_PICKUP_COLOR
+SERVANT_IN_RECOVERY_FATIGUE_TEXT
+SERVANT_OUT_RECOVERY_FATIGUE_TEXT
+SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT
+SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM
 HEADER_MSG_FAVORITE
 SERVANT_STATUS_FAVORITE_CONFIRM_TITLE
 SERVANT_STATUS_FAVORITE_CONFIRM_EVENT_JOIN_MESSAGE
@@ -8914,6 +8935,7 @@ gacha_id{0}_{1}
 MALE
 FEMALE
 OTHER
+overwriteTreasureEffectId
 status_icongift_close
 PlayerStatusGiftAnimClip
 status_icongift_open
@@ -9119,6 +9141,7 @@ listframes{0}_txt_point
 listframes{0}_txt_plain
 listframes{0}_txt_costume
 listframes{0}_txt_item
+listframes{0}_txt_mysticcode
 SetBaseTransform
 STONE_UNIT
 MANA_UNIT
@@ -9193,6 +9216,7 @@ SERVANT_SORT_KIND_NOT_HAVING_COSTUME
 SERVANT_SORT_KIND_NOT_HAVING_ITEM
 SERVANT_SORT_KIND_LIMIT_COUNT_2
 SERVANT_SORT_KIND_EVENT_ORDER
+SERVANT_SORT_KIND_RECOVERY_FATIGUE
 SERVANT_SORT_FILTER_KIND_1
 SERVANT_SORT_FILTER_KIND_2
 SERVANT_SORT_FILTER_KIND_3
@@ -9370,9 +9394,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.6.2
-afa152a63b9565f14b2b1f0a72647eb2eda41703154b79fddb2d393a4350ccf3
-20191226_20:24
+2.7.0
+6d72fe2fb1acd7feb250201680c4ba8fee76106ca4f75182f938eb967cb7f3f2
+20200117_22:07
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9577,15 +9601,22 @@ MATERIAL_MAP_AVANT_TITLE
 MATERIAL_MAP_QUEST_TITLE
 WarEpilogue
 MATERIAL_MAP_EPILOGUE_TITLE
+EVENT_ID_RAID_1
+MATERIAL_EVENT_JOIN
 MATERIAL_STORY_SUMMON
 MATERIAL_STORY_LIMIT_UP_{0}
 MATERIAL_STORY_AFTER_NAME_REVEAL
-MATERIAL_STORY_NAME_REVEAL
 MATERIAL_STORY_COSTUME_GET
+MATERIAL_STORY_NAME_REVEAL
 MYROOM_PLAYABLE_LIMIT_COUNT_1
 MYROOM_PLAYABLE_LIMIT_COUNT_2
 MYROOM_PLAYABLE_LIMIT_COUNT_3
-EVENT_ID_RAID_1
+MYROOM_PLAYABLE_MSG_AND
+MYROOM_PLAYABLE_MSG_END
+H010
+H4010
+H020
+H4020
 MATERIAL_MAP_PROLOGUE
 MATERIAL_TOP_SERVANT
 MATERIAL_TOP_COSTUME
@@ -9616,6 +9647,7 @@ X6
 [/c]
 [/g]
 [/o]
+[--]
 [sub]
 [sup]
 [/sub]
@@ -11785,7 +11817,9 @@ PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING3
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING4
-img_frames_mask10
+#0A408C
+SELECT_NO_SORTIE_REASON_FATIGUE
+img_frames_mask07
 img_frames_mask03
 BOOST_ITEM_USE_CONFIRM_DECIDE
 BOOST_ITEM_USE_CONFIRM_CANCEL
@@ -11818,7 +11852,7 @@ correction_icon_
 img_frames_mask08
 SELECT_NO_SORTIE_FATIGURE_RECOVER_NARROW_FIGURE
 SELECT_NO_SORTIE_FATIGURE_NARROW_FIGURE
-img_frames_mask09
+img_frames_mask02
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_SUPPORT_POSITION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION_MAIN
@@ -12364,9 +12398,7 @@ evCAPTER_CREATE_FINISH
 evCAPTER_SELECT_FINISH
 Effect/Talk/bit_order_grade_get
 PLAY_OPENING_MOVIE
-Effect/Talk/bit_treasure_get
 effectId
-bit_treasure_get
 QUEST_MESSAGE_DLG_MOVIE_DELETE_TITLE
 QUEST_MESSAGE_DLG_MOVIE_DELETE_DECIDE
 QUEST_MESSAGE_DLG_MOVIE_DELETE_CANCEL
@@ -12397,6 +12429,7 @@ condBattleStart
 terminalDialogMessages
 movieFile
 ops{0:00000}.usm
+bit_treasure_get
 NoticeLastModified
 bit_order_grade_get
 SellServant
@@ -12587,6 +12620,7 @@ tVoiceUser
 D4
 QuestStartInsert
 AssetData 
+overwrite
 template
 [=
 scene
@@ -12690,6 +12724,7 @@ verticalImageSet
 masterVerticalImageSet
 horizontalImageSet
 masterHorizontalImageSet
+spriteMaskSet
 charaChange
 figureChange
 masterChange
@@ -12742,11 +12777,15 @@ charaCutinPause
 charaCutinStart
 charaCutout
 charaCutStop
+charaMask
+spriteMaskOn
+spriteMaskOff
 communicationChara
 communicationCharaLoop
 communicationCharaFace
 communicationCharaStop
 communicationCharaClear
+questMessageOverwrite
 tdelay
 screen
 twt
@@ -12761,6 +12800,7 @@ depthOff
 Font/{0}
 Image/{0}
 Back/back{0:D5}
+Image/mask_{0}
 V
 Movie/{0}.mp4
 Movie/{0}.usm
@@ -12803,6 +12843,9 @@ startEnd
 startFade
 startFade2
 load2
+[align]
+[align center]
+[align right]
 OnCrossFadeEndScene
 Talk/bit_queststart
 EndExecuteCamera
@@ -12845,6 +12888,10 @@ motion
 GaussianBlur
 MotionBlur
 cutting
+inside
+outside
+ is not found
+QuestMessageAdd
 ScriptActionEncrypt/
 TalkResume
 TalkResumeV2
@@ -13089,6 +13136,7 @@ Fgo_20191029
 event/recoverySync
 enterUserSvtId
 outUserSvtId
+GACHA_EFFECT_SVT_NUM
 faceSize
 myroomForm
 conds
@@ -13412,6 +13460,7 @@ img_txt_bgm
 shop_item_menu_
 SHOP_BUY_PREPARATION
 LOTTERY_REST_NUM
+SHOP_BUY_EVENTSHOP_PREPARATION
 TIME_REST2_NONE
 SHOP_INDEFINITE_PERIOD
 SHOP_BUY_SOLD_OUT
@@ -14007,6 +14056,8 @@ id_
 TERMINAL_CLEAR_REWARD_DISP
 CAPTER CREATE
 CAPTER INIT
+TERMINAL_NETWORK_ERROR_DIALOG_TITLE
+TERMINAL_NETWORK_ERROR_DIALOG_MESSAGE
 MST_MISSION_CHANGE_MSG
 MST_MISSION_CHANGE_DECIDE
 masterMissionResetKey
@@ -14043,6 +14094,7 @@ TitleInfoEventLeagueVsStatusPrefab
 TitleInfoEventLeagueVsPrefab
 EVENT_REWARD_END_MESSAGE
 TitleInfoEventDailyPointItemPrefab
+TitleInfoEventTowerPrefab
 EventPointGaugeRoot
 TitleInfoEventSideItemPrefab
 TitleInfoEventBuffSideItemPrefab
@@ -14057,6 +14109,7 @@ map_header_bg_
 img_titlebg_clear
 img_title_header_{0}
 Effect/Tower
+bit_floor_reward
 Effect/EventFactory
 Effect/Dedicate
 TitleInfoEventRaidBossPrefab
@@ -14071,6 +14124,12 @@ EventRaidBossUiStatusJumble
 EventSuperBossUi
 EventSuperBossUiStatus
 img_txt_terminal
+img_txt_chaldeagate
+img_txt_rankupquest
+img_txt_dailyquest
+img_txt_interlude
+img_txt_mainrecord_10
+img_txt_mainrecord_15
 img_txt_form_menu
 img_txt_form_master
 img_txt_form_check
@@ -14124,11 +14183,9 @@ TitleInfoEventUIPrefab
 TitleInfoEventConquestGetPrefab
 bit_dedicate_reward
 TitleInfoProductivityGrowthDialogPrefab
-bit_floor_reward
 TitleInfoEventBulletinBoardPrefab
 TitleInfoEventFactoryPrefab
 TitleInfoEventTimeStatusPrefab
-TitleInfoEventTowerPrefab
 bit_dedicate_reward_
 PlayVoice
 StartVoice
@@ -14238,16 +14295,13 @@ time_status_top
 time_status_icon_loop
 time_status_fes01
 time_status_fes02
-EVENT_TOWER_FLOOR
-ef_tower_change1_start
-ef_tower_change1_end
-tower_img_front
-tower_img_back
+ef_tower_change{0}_start
+ef_tower_change{0}_end
+tower_img_base{0:00}
 tower_img_floor
 tower_img_floor_clear
-tower_img_tower{0:00}
-ef_tower_change1
-bit_floor_reward_
+tower_img_title{0:00}
+ef_tower_change
 EVENT_TOWER_REWARD_GET
 EVENT_TOWER_REWARD_GET_2
 tower_{0}_{1}
@@ -14259,8 +14313,8 @@ event_superboss_hp_split
 TITLE_INFO_SUPERBOSS_TOTALHP
 PlayHpCut
 SetClearAlpha
-ar12
 ar60
+ar12
 event_superboss_icon_
 TitleInfoEventSuperBossEffect_Split
 TitleInfoEventSuperBossEffect_Dead
@@ -14735,6 +14789,7 @@ B2020
 B2030
 bgChangeEffectType
 bgChangeEffectTime
+eventTowerId
 WAREHOUSE_CONFIRM_PUT_IN_TITLE
 WAREHOUSE_CONFIRM_PUT_IN_MESSAGE
 WAREHOUSE_CONFIRM_PUT_IN_DECIDE
