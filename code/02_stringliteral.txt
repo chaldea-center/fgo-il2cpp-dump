@@ -6044,6 +6044,10 @@ EVENT_TOWER_FADEOUT_PLAY_TIME
 MAX_FRIENDPOINT_BOOST_ITEM_USE
 FRIENDPOINT_BOOST_ITEM_EFFECT_ID
 MAIN_INTERLUDE_WAR_ID
+EVENT_BOARD_GAME_DICE_BUTTON_POS
+EVENT_BOARD_GAME_MAP_ID_LIST
+EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID
+EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID
 id:
 , name:
 , appleShopId:
@@ -6183,6 +6187,7 @@ arts
 extra
 card_icon_{0}
 card_txt_{0}
+DISPLAY_REMAINING_TURN
 anim_commandfloat
 effect/ef_noblecard
 ba12
@@ -6199,6 +6204,7 @@ endFashSvt
 endFashTypeCard
 (残り{0}ターン)
 BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN
+icon_sleep
 icon_cardsealed_arts
 icon_cardsealed_buster
 icon_cardsealed_quick
@@ -6412,6 +6418,7 @@ END_TASK
 BREAK_ON_BATTLE
 EVENT_LOSE
 EVENT_WIN
+LOSE_RETIRE_CLEAR
 EVENT_NEXTBATTLE
 EVENT_ENDBATTLE
 CRITICAL_RATE_PER_STAR
@@ -7317,6 +7324,9 @@ img_gachatxt_{0:D2}
 EffectId
 motionName
 AppId
+DamageRelease
+BATTLE_DO_NOT_ACT_DAMAGE_RELEASE_TEXT
+ReleaseText
 missText
 BATTLE_DEFAULT_GUTS_TEXT
 gutsText
@@ -7326,6 +7336,7 @@ checkIndvType
 relationId
 atkPriority
 defPriority
+extendLowerLimit
 MANA_NEED_INFO
 RARE_PRI_NEED_INFO
 STONE_FRAGMENTS_NEED_INFO
@@ -8126,6 +8137,9 @@ mstEquipImage
 mstEquip
 mstEquipSkill
 mstEventAdd
+mstEventBoardGameCell
+mstEventBoardGameToken
+mstEventBoardGameTokenReward
 mstEventBonusFilterGroupInfo
 mstEventBonusFilterGroupMember
 mstEventBonusFilter
@@ -8232,6 +8246,7 @@ mstQuestPhaseDetail
 mstQuestPhase
 mstQuestPickup
 mstQuestRacePoint
+mstQuestRandomGroup
 mstQuestRelease
 mstQuestReset
 mstQuestRestriction
@@ -8241,6 +8256,7 @@ mstQuestSpotRelease
 mstRecover
 mstStageRemap
 mstRestriction
+mstSvtAnimationOverwrite
 mstSvtCard
 mstSvtChange
 mstClass
@@ -8313,6 +8329,7 @@ userCommandCode
 userContinue
 userDeck
 userEquip
+userEventBoardGameToken
 userEventDeck
 userEvent
 userEventMissionConditionDetail
@@ -8543,6 +8560,12 @@ MASTER_EQSKILL_LV_INFO
 EVENT_BANNER_WINDOW_TITLE
 EVENT_BANNER_WINDOW_MESSAGE
 banner_loading
+game1_count_
+token_balloon
+token_enpty
+EventUI/Prefabs/80285
+DownloadEventUIAtlas8028500
+token_bg
 text_effect_color
 gauge_id
 EVENT_CONQUEST_POS_ITEM_FORMAT
@@ -8563,38 +8586,8 @@ no arguments
 [delegate]
 EventDelegate
 FloorRewardPrefabName
+useDiceSpotId
 forceOverwrite
-event_logo_
-SET_END
-CHANGE_SVT
-btn_bg_off
-btn_bg_on
-btn_gacha_off_
-btn_gacha_on_
-btn_reward_off_
-btn_reward_on_
-img_pointtxt02_
-img_txt_pointreward_
-img_pointtxt01_
-img_txt_lineup_
-img_txt_remaining_
-img_resettxt_
-BOX_GACHA_LIMIT_NUM_TXT
-EXE_BOXGACHA
-SHOW_MSG
-START_GACHA
-BOX_GACHA_CHECK_PRESEN_NUM_TXT
-WEB_VIEW_TITLE_BOXGACHA
-BOX_GACHA_LIMIT_TXT
-img_txt_end_
-BOX_GACHA_LIMIT_INFO_MSG
-END_NOTICE
-BOX_GACHA_RESET_RESULT_MSG
-BOX_GACHA_RESET_LAST_RESULT_MSG
-BOX_GACHA_RESET_LIMIT_RESULT_MSG
-BOX_GACHA_RESET_LIMIT_NO_RARE_RESUTL_MSG
-BOX_GACHA_RESET_RESULT_NO_RARE_MSG
-EventReward/EventRewardAtlas
 box_status_side_01
 box_status_side_02
 box_status_side_03
@@ -8633,6 +8626,8 @@ EVENT_QPPOINT_LIMIT_FORMAT
 qp_counter_
 qp_counter_comma
 QPEVENT_NEXT_DISPLAY_DATA
+event_item_board_description
+USE_ITEM_CONFIRM_MSG
 Shop/Atlas/ShopAtlas
 eventGroupId
 img_shopbg04
@@ -8668,7 +8663,9 @@ MISSION_EMPTY_TXT
 EVENT_ITEM_REPLACE_EVENT_NAME
 EVENT_REWARD_REPLACE_MSG
 MISSION_REWARD
+SHOW_MSG
 REWARD_ACCEPTABLE
+END_NOTICE
 
  
 {0}×{1:#,0}
@@ -8740,14 +8737,33 @@ TerminalScene
 SvtVoiceマスタが適切に設定されていません。
 FinishedSvtSlideIn
 event_type_txt_
+CHANGE_SVT
+BOX_GACHA_LIMIT_NUM_TXT
+img_resettxt_
+img_txt_remaining_
+img_txt_end_
+img_txt_lineup_
+EXE_BOXGACHA
+START_GACHA
+BOX_GACHA_CHECK_PRESEN_NUM_TXT
+WEB_VIEW_TITLE_BOXGACHA
+BOX_GACHA_LIMIT_TXT
+BOX_GACHA_LIMIT_INFO_MSG
 MAX_ALL_USERS_BOX_GACHA_COUNT
+BOX_GACHA_RESET_RESULT_MSG
+BOX_GACHA_RESET_LAST_RESULT_MSG
+BOX_GACHA_RESET_LIMIT_RESULT_MSG
+BOX_GACHA_RESET_LIMIT_NO_RARE_RESUTL_MSG
+BOX_GACHA_RESET_RESULT_NO_RARE_MSG
 GetBoxGachaEventEnableTime
 TIME_REST2_TIMEOVER
 TIME_OVER_EVENTREWARD
 TIME_REST_EVENTREWARD
+img_pointtxt01_
 event_title_txt_
 EVENT_REWARD_RANKING_SUPPORT_INFO
 QP_UNIT
+img_pointtxt02_
 EVENT_SHOP_RECEIVED_ITEM_BEFORE
 MENU_SELECT_ITEM
 MENU_SELECT_BULK_ITEM
@@ -8773,10 +8789,13 @@ SET_ITEM_GET_ITEM_MSG
 SVT_GET
 GOTO_CALL
 img_titlebg_
+event_logo_
 event_rewardframe_{0}
 Effect/EventShop
 EventServantFatigue/2
 RecoveryFatigue
+EventReward/EventRewardAtlas
+SET_END
 NOT_GET_COMMIT_AFTER_SCRIPT
 NOT_GET_COMMIT_AFTER_SCRIPT_WARNING
 EVENT_SHOP_RECEIVED_ITEM_AFTER
@@ -9005,6 +9024,7 @@ MENU_OPERATION_SEARCH
 btn_txt_friendlist_on
 btn_txt_friendrequest_off
 btn_txt_friendsearch_off
+btn_bg_on
 btn_txt_friendlist_off
 btn_txt_friendrequest_on
 btn_txt_friendsearch_on
@@ -9052,6 +9072,7 @@ FULLDOWNLOAD_INFO_DETAIL_TXT
 FULLDOWNLOAD_CONFIRM_TITLE
 FULLDOWNLOAD_CONFIRM_MSG
 FULLDOWNLOAD_CONFIRM_DECIDE
+DAMAGE
 WEB_VIEW_TITLE_SUMMON
 MockGachaResponse
 gacha/draw
@@ -9278,6 +9299,7 @@ SetBaseTransform
 STONE_UNIT
 MANA_UNIT
 FRIEND_POINT_UNIT
+item/use
  null ,
 ":
 EVENT_RACE_RESULT_TIME_NONE
@@ -9540,9 +9562,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.12.3
-08f3a4e3dbdcd545ed289074e79172770472a176d405b02739e4f05f0c3369c9
-20200511_10:42
+2.13.0
+c2c12ebbb7bebee0f0127d78656bacbf09c02b16fe377a65f6667475e9ed8c60
+20200519_22:26
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9694,7 +9716,6 @@ CHECK_OK
 NEXT_TOTAL_LOGIN_BONUS_DAYS
 _rootMatrix
 _invrootMatrix
-INIT
 LOAD_END
 CHANGE_LIMIT
 Help
@@ -9712,8 +9733,6 @@ CLOSE_FAVORITE_CHANGE
 CLOSE_SOUND_PLAYER
 State 5
 ReleaseTouch
-ON_SVT
-ON_BG
 MyRoomUIAnimationEnd
 BGM_MYROOM_1
 LOAD_END_TO_HELP
@@ -12248,6 +12267,8 @@ masterSkillDelayInfo
 invisibleConnectAndLoad
 nextSceneId
 nextSceneParam
+condHaving
+notHavingQuest
 movieFolder
 moviePlayType
 effectColor
@@ -12486,10 +12507,8 @@ FormationScene
 PartyOrganizationScene
 ServantListScene
 ServantEquipListScene
-EventGachaScene
 MasterFormationScene
 BattleDemoScene
-EventShopScene
 WarehouseScene
 EventRewardScene
 EmptyScene
@@ -12578,6 +12597,8 @@ condBattleStart
 terminalDialogMessages
 movieFile
 ops{0:00000}.usm
+Effect/Talk/bit_token_get{0}
+bit_token_get{0}
 bit_treasure_get
 NoticeLastModified
 bit_order_grade_get
@@ -12611,8 +12632,13 @@ Spot_Player
 evSpotSet_Finish
 evTexLoad_Finish
 Terminal/Info
+MapGimmickEffect_GappolyBoard
+MapGimmickEffect_GappolyPiece
+MapGimmickEffect_GappolyQuestArrivalPanel
+MapGimmickEffect_GappolyStopPanel
 evMap2D_Mark_Create_Finish
 EVENT_RACE_PATH_LENGTH
+EVENT_BOARD_GAME_MAP_POSITION
 SEND_MES_END
 evChange_Map
 EventRaceResultEffect_{0}
@@ -12621,6 +12647,34 @@ EVENT_RACE_RESULT_REWARD_DLG_TITLE
 EVENT_RACE_RESULT_REWARD_DLG_MESSAGE
 EventRaceBoostEffect
 evSpotSelect_GoQuestSelect
+EVENT_BOARD_GAME_DICE_VOICE_INFO
+PlayEventBoardGameArrivalEffectAuto
+game1_button
+arrow
+EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_TITLE
+EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE
+EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE
+EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_CANCEL
+EVENT_BOARD_GAME_DICE_SELECT
+bit_diceroll_
+DiceCounter
+Directional light
+PlayBoardGamePieceEffectSub
+MapGimmickEffect_StopPiece
+PlayBoardGameStopPiecePanel
+MapGimmickEffect_GappolyStopPiecePanel
+PlayBoardGameQuestArrivalEffect
+MapGimmickEffect_GappolyQuestArrival
+MapGimmickEffect_GappolyButtonActive
+SetEventBoardQuestArrivalPanel
+MapGimmickEffect_GappolyPiece_3
+MapGimmickEffect_GappolyPiece_1
+MapGimmickEffect_GappolyPiece_2
+token_{0:D2}
+square_{0:D2}
+clear_marker
+clear_marker_{0:D2}
+item
 Terminal/MapImgs/
 Terminal/QuestMap/Capter{0:D4}
 Terminal/QuestMap/Capter{0:D4}_{1:D4}
@@ -12634,6 +12688,12 @@ img_road{0:D4}_{1:D2}
 MapSpotPath_{0}
 fadeIn
 MapTouchEnableAuto
+Effect/Dice
+ViewEventBoardGameQuestListAuto
+diceType
+diceValue
+EndBoardGamePieceEffect
+StartBoardGamePieceEffectSub
 Effect/Race
 ScreenshotFolder
 {0}/s{1:D04}.png
@@ -12813,6 +12873,7 @@ cueVoiceVolume
 capture
 captureRelease
 pictureFrame
+pictureFrameTop
 maskin
 maskout
 maskOff
@@ -13136,6 +13197,7 @@ CommandCodes/Texture/
 NoblePhantasm/Sequence/
 ChrSequence1
  + 
+btn_bg_off
 SERVANT_SORT_INDIVIDUAL_NOT_DISPLAY
 SERVANT_SORT_INDIVIDUAL_DISPLAY
 SERVANT_SORT_FILTER_KIND_19
@@ -13875,6 +13937,7 @@ Spot_
 spot_
 MapSpotEffect_{0}
 img_spotname_bg
+SPOT_FREE_QUEST_LAST_TIME
 AtScaleAnimEnd
 ar2
 turn
@@ -14222,9 +14285,11 @@ SAVEKEY_TerminalConquestInfoDisp
 SAVEKEY_LastPlayBgmName
 SAVEKEY_LastPlayQuestConsumeType
 SAVEKEY_TerminalLastSelectQuestIndex
+TerminalLastPlayedFreeQuestSpotId
 story
 id_
 SAVEKEY_EventRaidDefeatedEffectInfo
+SAVEKEY_QuestRandomGroupList
 TERMINAL_CLEAR_REWARD_DISP
 CAPTER CREATE
 CAPTER INIT
@@ -14781,6 +14846,8 @@ OnCheckLongPress
  (Copy)
  has no material setter
  has no shader setter
+_PanelReplace
+_PanelSpaceMatrix
  has no mainTexture setter
 http://uniwebview.onevcat.com/demo/index1-1.html
 ToolBar
@@ -15144,7 +15211,6 @@ Array is multidimensional
 number of items exceeds capacity
 DataArray
 Collection was modified; enumeration operation may not execute.
-item
 index and count exceed length of list
 shouldnt happen
 key already present in dictionary
