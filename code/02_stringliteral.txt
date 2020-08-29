@@ -4265,6 +4265,9 @@ http://localhost/
 UnityWebRequest has already been sent and its URL cannot be altered
 UnityWebRequest has already been sent; cannot modify the upload handler
 UnityWebRequest has already been sent; cannot modify the download handler
+UnityWebRequest has already been sent; cannot modify the certificate handler
+UnityWebRequest has already been sent; cannot modify the timeout
+Cannot create a data handler without payload data
 text/plain; charset="
 .png
 .dat
@@ -5516,6 +5519,7 @@ secretKey
 ok
 ng
 .meta
+{{"ProductId":"{0}"}}
 Consume
 SendReceipt
 Payment
@@ -5527,19 +5531,19 @@ PaymentBankStatus
 OnCancelPaymentStore
 OnPaymentCheckResult
 OnPaymentCheckResultError
-課金エラー:OnPaymentCheckResultError productId 
+課金エラー:OnPaymentCheckResultError ErrorCode ({0})
 NETWORK_ERROR_TIME_OVER_MESSAGE
 STONE_PURCHASE_RESULT_BLOCK
 perMonthAmount
 bankAvailable
 message
-課金エラー:PaymentProductError productId 
+課金エラー:PaymentProductError
 OnCancelErrorPaymentStore
-課金エラー:AccountingManager:OnPaymentUnknown productId 
+課金エラー:AccountingManager:OnPaymentUnknown ErrorCode ({0})
 [Cancel]
-課金エラー:AccountingManager:OnPaymentCancel productId 
+課金エラー:AccountingManager:OnPaymentCancel ErrorCode ({0})
 ACCOUNTING_ALREADY_OWNED_MESSAGE
-課金エラー:AccountingManager:PaymentItemAlreadyOwnedNoData productId 
+課金エラー:AccountingManager:PaymentItemAlreadyOwnedNoData ErrorCode ({0})
 {"orderId":"NoData","packageName":"
 ","productId":"
 ","purchaseTime":
@@ -5553,7 +5557,7 @@ Error[
 OnPaymentAfterConsume
 OnPaymentAfterConsumeError
 AccountingManager::OnPaymentAfterConsumeError productId 
-課金エラー:AccountingManager::OnPaymentAfterConsumeError productId 
+課金エラー:AccountingManager::OnPaymentAfterConsumeError ErrorCode ({0})
 PaymentAfterConsume
 NETWORK_ERROR_PURCHASE_SUSPEND_MESSAGE
 OnSuspendPaymentStore
@@ -8002,6 +8006,12 @@ COSTUME_OPEN_TITLE
 COSTUME_OPEN_MSG
 COSTUME_OPEN_WARNING
 SPLINE MESH
+UnityWebRequestNetworkTest CretificatesCheckError simpleName={0}, spkiHash={1}
+*.fate-go.jp
+hMTjJKbSxkOe6YYfgjp1dSz+5wed2BKGvkW21gmouX0=
+X0AgauqLxw5bWijiuXjTE18EShD/KJlhtzUwx/DxOqU=
+*.fategrandorder.jp
+Jx61JJK2f+S9BGf2GOx0dYD3h+gGWVRzdqodXC77wQk=
 LAST_WAR_ID
 wo11
 ef_difference21
@@ -9468,9 +9478,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.9.1
-348f04b4de92e95d32d9247c525cb7a657b31a8f20379e8691769e5ff51a4f6a
-20200228_20:13
+2.9.2
+e6686fff492f2efbe731c4ee744a1b8989e1633db9ccd358da0ec14d9006556f
+20200313_14:30
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9750,9 +9760,6 @@ dataVer
 dateVer
 lastAccessTime
 verCode
-hMTjJKbSxkOe6YYfgjp1dSz+5wed2BKGvkW21gmouX0=
-Jx61JJK2f+S9BGf2GOx0dYD3h+gGWVRzdqodXC77wQk=
-X0AgauqLxw5bWijiuXjTE18EShD/KJlhtzUwx/DxOqU=
 userCreateServer
 
 friendcode(5.3): 
@@ -14470,6 +14477,9 @@ logo_title_cil
 BGM_TITLE_3
 /newsupdate
 LAST-MODIFIED
+{0}clientApi/healthCheck
+UnityWebRequestNetworkTest Exception: {0}
+UnityWebRequestNetworkTest Error: {0}
 gamedata/top
 MockTopGameDataRequest
 MockTopGameDataRequest.txt
