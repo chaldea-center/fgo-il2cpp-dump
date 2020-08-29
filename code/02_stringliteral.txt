@@ -6082,6 +6082,7 @@ common
  <={2}
 MOTION_DAMAGE
 MOTION_
+MOTION_BACK
 Noble_Check
 @OnComplete Fired!
  => <{0}>:
@@ -6127,6 +6128,8 @@ NoSkipDead
 END_LOAD
 ef_pig_return01
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
+HIDE_STATUS_EFFECT_IDS
+TREASURE_DEVICE_DISP_STATUS_EFFECT_FLAG
 chr(Clone)
 BOOST_EFFECT_ICON
 BOOST_EFFECT_TIMING
@@ -6475,7 +6478,6 @@ check--Group(
 is same Group 
 STATUS_UP_BUFF
 is rate over 
-MOTION_BACK
 FIELD_PLAYER
 FIELD_ENEMY
 MOTION_ENTRY_TAC
@@ -7288,6 +7290,8 @@ SERVANT_FRAME_PURCHASE_CLOSE
 STORAGE_SHOP_SOLD_OUT
 STORAGE_SHOP_NOTIFICATION
 ""
+--:--
+{0}:{1:00}
 AssetCaches
 MasterDataCaches
 PaymentHistorys
@@ -8246,6 +8250,7 @@ mstSpot
 mstSpotPath
 mstSpotRoad
 mstStage
+mstStatusEffectPosOverwrite
 mstStoneShop
 mstSubEquip
 tblFriend
@@ -9461,9 +9466,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.8.1
-21b4ada5d22fa81df60af274d10fface172f326c5f6c8413f8489653bf3c4310
-20200213_16:33
+2.9.0
+ebe34e5abdbb60ba129d9a4d4ce8c32d30613ea40d29c62660d5b70a97ee9192
+20200221_16:11
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9555,6 +9560,7 @@ MaterialCostumeServant1
 MaterialCostumeServant2
 SERVANT_SORT_COSTUME_NOT_OPEN
 SERVANT_SORT_COSTUME_OPEN
+MATERIAL_PROGRESS_SUFFIX
 img_menuboard_01
 img_menuboard_03
 Fgo_20191017
@@ -9592,10 +9598,10 @@ QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_DECIDE
 QUEST_MESSAGE_DLG_CANCEL
 QUEST_MESSAGE_DLG_MOVIE_PLAY_SUB_MESSAGE
 QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_SUB_MESSAGE
-{0}/{1}/{1}.mp4
+{0}/{1}/{1}.usm
 /extend-data/movie
 {0}/SplitFile
-{0}/{1}.mp4
+{0}/{1}.usm
 MASTER_TOTAL_EXP
 img_servant
 img_craftessence
@@ -9665,7 +9671,6 @@ CLICK_FAVORITE_CHANGE
 RETURN_BLACKLIST
 MATERIAL_BRANCH_SCENARIO_{0:D8}_{1:D1}
 MATERIAL_MAP_AVANT_TITLE
-MATERIAL_MAP_QUEST_TITLE
 WarEpilogue
 MATERIAL_MAP_EPILOGUE_TITLE
 EVENT_ID_RAID_1
@@ -9684,6 +9689,7 @@ H010
 H4010
 H020
 H4020
+MATERIAL_MAP_QUEST_TITLE
 MATERIAL_MAP_PROLOGUE
 MATERIAL_TOP_SERVANT
 MATERIAL_TOP_COSTUME
@@ -12116,6 +12122,8 @@ questboard_icon_cap{0:D2}
 QUEST_NONE
 RemoveTempBG
 MATERIAL_MAP_CHAPTER_SUB
+CHAPTER_F_START_ID
+CHAPTER_F_END_ID
 CAMPAIGN_COST_COLOR
 OVER_COST_COLOR
 QUEST_INFO_TAB_REWARD
@@ -12168,6 +12176,8 @@ shadowOffSvtIds
 masterSkillDelay
 masterSkillDelayInfo
 invisibleConnectAndLoad
+nextSceneId
+nextSceneParam
 movieFolder
 moviePlayType
 effectColor
@@ -12676,6 +12686,7 @@ INPUT_SELECT_BRANCH
 ScriptManagerAutoMessage
 btn_auto_on
 btn_auto_off
+SCRIPT_CHAPTER_SUB_TITLE_BASE
 [end]
 -1
 branchQuestClear
@@ -12688,6 +12699,7 @@ D4
 QuestStartInsert
 AssetData 
 overwrite
+maxLine
 template
 [=
 scene
@@ -13615,7 +13627,7 @@ cutInPrefabOffsets
 cutInPrefabSizes
 cutInCamPlayerAll
 cutInMessageMode
-OverwriteMotion_
+OverwriteMotion_{0}
  ＋ 
 LEVEL_DETAIL_INFO
 Target
