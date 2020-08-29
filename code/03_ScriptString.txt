@@ -4050,6 +4050,8 @@ not
 native handle can not be null
 Center: {0}, Extents: {1}
 Passed in array to fill with cameras is to small to hold the number of cameras. Use Camera.allCamerasCount to get the needed size.
+Invalid CameraEvent value "{0}".
+evt
 RGBA({0:F3}, {1:F3}, {2:F3}, {3:F3})
 Invalid Vector3 index!
 RGBA({0}, {1}, {2}, {3})
@@ -4131,6 +4133,7 @@ RenderTextureDesc msaaSamples must be 1, 2, 4, or 8.
 desc.msaaSamples
 RenderTextureDesc depthBufferBits must be 0, 16, or 24.
 desc.depthBufferBits
+Type {0} NameID {1} InstanceID {2}
 {0} x {1} @ {2}Hz
 The scene is invalid.
 The scene is not loaded.
@@ -4251,6 +4254,8 @@ Number of channels in created clip must be greater than 0
 Frequency in created clip must be greater than 0
 GVR Audio Spatializer
 One shot audio
+DynamicMaterial
+({0})
 Font size and style overrides are only supported for dynamic fonts. Font '{0}' is not dynamic.
 BestFit is only supported for dynamic fonts. Font '{0}' is not dynamic.
 Font '{0}' is not dynamic, which is required to override its size
@@ -4296,10 +4301,14 @@ Can't set handle: the playable is not an AnimationPosePlayable.
 Can't set handle: the playable is not an AnimationRemoveScalePlayable.
 Cannot call IPlayable.SetHandle on an instance that already contains a valid handle.
 Can't set handle: the playable is not an AnimatorControllerPlayable.
+sources
+The RotationConstraint component has no sources.
+Constraint source index {0} is out of bounds (0-{1}).
 humanBoneId must be between 0 and 
 Setting and getting Body Position/Rotation, IK Goals, Lookat and BoneLocalRotation should only be done in OnAnimatorIK or OnStateIK
 Can't set handle: the playable is not an AnimationScriptPlayable.
 AnimationClip
+weights
 [0]
 [1]
 [2]
@@ -4479,8 +4488,6 @@ Unimplemented:
 JsonUtility.ToJson does not support engine types.
 Cannot deserialize JSON to new instances of type '
 .'
-({0})
-DynamicMaterial
 String access is not supported for audio clips
 
 -----------------
@@ -5568,6 +5575,22 @@ stone
 gacha
 action001
 action002
+_Factor
+_TargetLength
+_NearMinLength
+_NearRangeLength
+_FarMinLength
+_FarRangeLength
+_DepthLimit
+_MipmapTex{0}
+_Spread
+_ThresholdParams
+_BloomIntensity
+_BloomTex
+Adv/Map/Ground_RIM_LM
+Adv/Map/Texture_RIM_LM
+blit to Back buffer
+_BlurTex
 AGE_VEIFICATION_TITLE
 AGE_VEIFICATION_MESSAGE
 AGE_VEIFICATION_CONFIRM_TITLE
@@ -5609,6 +5632,8 @@ total:{3}/{4} kb({5:f1}%)
 
  fps)
  fps
+
+TimeScale 
 jp.delightworks.unityplugin.permission.PermissionRequestPlugin
 enabledRuntimePermission
 android.support.v4.content.ContextCompat
@@ -5872,11 +5897,13 @@ DownloadCommandCodeMiniAtlas
 Bond/DownloadBond
 DownloadBondAtlas
 Notification/DownloadNotification
+mission_board_{0:D2}
 mission_board_{0}
 mission_board_03
 mission_board_02
 mission_boardnoticeclear_{0}
 mission_boardnotice_{0}
+mission_board_06
 FaceBattle/DownloadFaceBattle
 Event/DownloadEvent
 DownloadEventAtlas
@@ -6207,9 +6234,10 @@ BATTLE_COMMAND_CODE_RECHARGE_TURN
 scale
 endFashSvt
 endFashTypeCard
-(残り{0}ターン)
+icon_cardfixation
 BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN
 icon_sleep
+icon_commandchange_{0}
 icon_cardsealed_arts
 icon_cardsealed_buster
 icon_cardsealed_quick
@@ -6641,6 +6669,7 @@ EFFECT_INVINCIBLE_AVOID_OFFSET_Z
 effect/ef_hit_special
 icon_oc_{0:D2}
 {0:#,0} 
+BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE
 BATTLE_EFFECT_ID_INVINCIBLE
 BATTLE_EFFECT_ID_AVOIDANCE
 BATTLE_EFFECT_ID_INVINCIBLE_PIERCE
@@ -6654,6 +6683,7 @@ effect/BitEffect/
 bit_mastercutin01
 masterfigure
 bit_enemymastercutin01
+startBattleSkip
 anim_wait
 StartEffectId
 bit_battlestart_3_{0}
@@ -6662,19 +6692,21 @@ Label_donominator
 bit_waveEffect_{0}
 effect/ef_boostitem03
 TEST_NOBLE_PHANTASM
-ba2
+CurrentEvent
+SKIP_START_PERF
 RESUME_ENEMY_ALL_DEATH
 RESUME_UP
 RESUME_CENTER
 RESUME_UNDER
 RESUME
 QUEST_BOSS
-ba1
 QUEST_START
 QUEST_ROUTE
 playAddition
 black_in
 black_out
+ba2
+ba1
 black
 Alpha_FadeIn
 FadeOff
@@ -6691,6 +6723,7 @@ speed1_treasure_device
 FOUR_PILLARS
 Battle/Gimmick/{0}
 gimmick
+ef_special_invincible
 Battle/TurnEffect/
 EventInfoPointGaugeControl
 ef_raid_damage
@@ -6898,6 +6931,9 @@ RESULT_FOLLOW_REQUEST_YES
 icon_friend
 icon_follow
 OnClickNoActionFriend
+FLAG_20200805
+OnClickTutorialFollow
+TUTORIAL_MESSAGE_FOLLOW_OFFER
 BATTLE_RESULTITEM_TITLECONF
 BATTLE_RESULT_GET_EP_RATE
 img_bg_total_ep
@@ -6989,6 +7025,12 @@ BattleCamera
 /CutIns/
 /BattleCamera
 /Cameras/BattleCamera
+/Actor/chr
+/Actor/chr/body_level_
+body_level_
+/Actor/chr/weapon_level_
+weapon_level_
+/Actor/chr/
 BattleCutIn
 BattleBG
 Battle/Prefab/
@@ -7068,6 +7110,7 @@ effect/ef_command_flash01
 BATTLE_SUPERBOSS_TOTALHP
 battle/setup
 MockBattleSetupRequest
+{}
 activeDeckId
 followerId
 followerClassId
@@ -7076,6 +7119,8 @@ enemySelect
 questSelect
 userEquipId
 followerType
+choiceRandomLimitCounts
+followerRandomLimitCount
 {0}  Lv.{1}
 [BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}
 MAX {0}%
@@ -7425,6 +7470,9 @@ isLock
 isChoice
 svtCommonFlag
 battleVoice
+randomLimitCount
+randomLimitCountSupport
+limitCountSupport
 card/lockSync
 lockUserSvtIds
 unlockUserSvtIds
@@ -7490,8 +7538,26 @@ Custom/Sprite-ScriptActionFigureWipe
 [FFFFFF]
 [AAAAAA]
 This is an example paragraph for the text list, testing line 
-_PrevPosition
+CONFIRM_TITLE_SVT_COMBINE
+COMBINE_LAST_EQUIP_CMD_SVT_INFO
+COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE
+COMMAND_CODE_REMOVE_RESULT_TITLE
+COMMAND_CODE_REMOVE_RESULT_MESSAGE
+SELECT_SERVANT_EVENT_JOIN
+SELECT_CANNOT
+SELECT_CHOICE
+SELECT_LOCK
+SELECT_FAVORITE
+SELECT_PARTY
+SUPPORT_MEMBER
+NOT_SELECT_EQUIPED
+OnClickSelectListView
+CancelDragEnd
+OnLongPushListView
+FGO_Noble/GrabPassBlur
 _Position
+_PrevPosition
+_IsEnemy
 SERVANT_FRAME_PURCHASE_TITLE
 SERVANT_FRAME_PURCHASE_MESSAGE_START
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
@@ -7533,7 +7599,6 @@ COMMAND_CARD_EXCEED_STATUS_COMBINE
 MSG_ABLED_COMMAND_CARD_EXCEED
 SELECTED_COMMAND_CODE
 NOT_SELECT_MAX_EQUIP
-NOT_SELECT_EQUIPED
 COMMAND_CODE_EMPTY
 img_bg_buster
 img_bg_quick
@@ -7551,7 +7616,6 @@ btn_sort_up
 btn_txt_up
 btn_txt_down
 CombineCommandCode
-OnLongPushListView
 combine_01
 combine_02
 combine_03
@@ -7736,7 +7800,6 @@ EXCHANGE_CAMPAIGN_COMBINE_MSG
 EXCHANGE_CAMPAIGN_NP_MSG
 START_EFFECT
 DISP_TIMESTR_FORMAT
-CONFIRM_TITLE_SVT_COMBINE
 COMBINE_MATERIAL_SVT
 CONFIRM_TITLE_LIMITUP
 COMBINE_MATERIAL_ITEM
@@ -7754,7 +7817,6 @@ TUTORIAL_MESSAGE_COMBINE5
 UserSvt 
 NONSELECT_BASE_ALLMAX
 NONSELECT_MATERIAL
-SELECT_CANNOT
 MSG_CAMPAIGN_COMBINE_EXP
 COMBINE_CAN_STATUS_UP_INFO
 PARTY_MEMBER_TXT
@@ -7762,8 +7824,6 @@ FAVORITE_SERVANT
 LOCK_SERVANT
 CHOICE_SERVANT
 SAME_SERVANT
-SELECT_SERVANT_EVENT_JOIN
-SUPPORT_MEMBER
 NONSELECT_MATERIAL_BASE_LVMAX
 NONSELECT_NPUP_BASE
 NONSELECT_UNDER_STATUS_MAX
@@ -7807,29 +7867,38 @@ CombineServant
 OnClickSelectBase
 OnClickSelectMaterial
 OnPressCancel
-CancelDragEnd
 COMMAND_CODE_UNLOCK_TITLE
 COMMAND_CODE_ITEM_ITEM_INFO
 COMMAND_CODE_UNLOCK_SPEND_QP
 COMBINE_HAVE_QP
 COMMAND_CODE_UNLOCK_CONFIRM_MSG
+COMMAND_CODE_LOCK_RETURN_MSG
+COMMAND_CODE_LOCK_RETURN_DETAIL_MSG
 COMMAND_CODE_EQUIP_TITLE
 COMMAND_CODE_EQUIP_MSG
 COMMAND_CODE_EQUIP_CONFIRM_MSG
+COMMAND_CODE_LOCK_TITLE
+COMMAND_CODE_LOCK_MSG
+COMMAND_CODE_LOCK_EQUIP_WARNING_MSG
+COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG
+COMMAND_CODE_LOCK_SPEND_ITEM
+COMMAND_CODE_LOCK_HAVE_ITEM
 COMMAND_CODE_REMOVE_TITLE
 COMMAND_CODE_REMOVE_MSG
 COMMAND_CODE_REMOVE_WARNING_MSG
 COMMAND_CODE_REMOVE_SPEND_ITEM
 COMMAND_CODE_REMOVE_HAVE_ITEM
 COMMAND_CODE_NOT_CLEAR_ITEM_MSG
-COMMAND_CODE_WARNING_TITLE
-COMMAND_CODE_WARNING_MSG
 COMMAND_CODE_OVERWRITE_TITLE
 COMMAND_CODE_OVERWRITE_MSG
 COMMAND_CODE_OVERWRITE_COFIRM_MSG
+COMMAND_CODE_REMOVE_DETAIL_MSG
+COMMAND_CODE_WARNING_TITLE
+COMMAND_CODE_WARNING_MSG
 COMMAND_CODE_LOCK_WARNING_TITLE
 COMMAND_CODE_LOCK_WARNING_MSG
 COMBINE_COMMAND_CODE_OVERWRITE_WARNING_MSG
+COMBINE_COMMAND_CODE_TOUCH_EMPTY_COMMAND_CODE_MSG
 COMBINE_COMMAND_CODE_BASE_SELECT_HEADER_MSG
 COMBINE_COMMAND_CODE_BASE_SELECT_MSG
 COMBINE_COMMAND_CODE_CARD_SELECT_HEADER_MSG
@@ -7837,15 +7906,19 @@ COMBINE_COMMAND_CODE_CARD_SELECT_MSG
 SHORT_QP_INFO_MSG
 SHORT_ITEM_INFO_MSG
 COMBINE_COMMAND_CODE_UNLOCK_HEADER_MSG
+COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG
 COMBINE_COMMAND_CODE_OVERWRITE_HEADER_MSG
 COMBINE_COMMAND_CODE_EQUIP_HEADER_MSG
 icon_arrow_pink
 img_txt_unlockcc
 img_txt_equipcc_1
 img_txt_equipcc_3
+img_txt_equipcc_4
 btn_txt_unlockcc
 btn_txt_equipcc
+btn_txt_replace
 btn_txt_overwrite
+button_overwrite
 COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_TITLE
 COMMAND_CARD_EXCEED_CONFIRM_DIRLOG_MULTI_DESCRIPTION
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_USE_ITEM
@@ -7874,6 +7947,7 @@ commandCode/attach
 userCommandCodeId
 attachedUserCommandCodeId
 commandCode/detach
+commandCode/lock
 commandCode/setStatus
 commandCodeId
 rarity
@@ -8054,7 +8128,6 @@ _Contrast
 icon_costume_01
 icon_costume_02
 icon_costume_03
-OnClickSelectListView
 COSTUME_OPEN_TITLE
 COSTUME_OPEN_MSG
 COSTUME_OPEN_WARNING
@@ -8255,6 +8328,7 @@ npcSvtFollower
 mstOpeningMovie
 otherUserGame
 mstPartialMaintenance
+pickupUserFollower
 mstPrivilege
 mstQuestBehavior
 mstQuestConsumeItem
@@ -8295,6 +8369,7 @@ mstSvtGroup
 mstSvtIndividuality
 mstSvtLimitAdd
 mstSvtLimit
+mstSvtLimitSpoilerProtection
 mstSvt
 mstSvtMaterialFolder
 mstSvtPassiveSkill
@@ -8835,6 +8910,7 @@ MstMissionIndex
 FatigueNotiffication
 RecoveryIdx
 LastViewEventId_
+DailyMission
 eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}
 event/scriptFlag
 {0}/{1:D2}/{2:D2} {3:D2}:{4:D2}
@@ -9212,6 +9288,7 @@ TAcam
 854
 CHECKMOTIONSKIP_BUFFLIST
 Hidden/Grayscale Effect
+MOTION_BRANCH_
 Untagged
 Specify Name, Tag, or both.
 TextField
@@ -9517,6 +9594,7 @@ EVENT_POINT_ADD_INFO
 EVENT_POINT_RATE_INFO
 EVENT_POINT_NONE_INFO
 [FCF050]
+[ff730f]
 servantName 
 ^
 /b
@@ -9586,9 +9664,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.15.0
-c35fbfdb297edd9c1b2ef51ed820b62ccfa5b518a0a9f6eb8f9d6a7d2bbde476
-20200717_21:21
+2.16.0
+acfd31a0d3393e904da78d6b4e99e123494e15784eae4db08fce5e7d79766608
+20200731_23:39
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9643,6 +9721,8 @@ MST_REMISSON_TITLE_TXT
 MST_REMISSON_MSG
 MST_REDISP_TITLE_TXT
 MST_REDISP_MSG
+btn_txt_on_daily
+btn_txt_off_daily
 btn_txt_on_weekly
 btn_txt_off_weekly
 btn_txt_on_extra
@@ -9655,6 +9735,8 @@ MST_MISSION_EMPTY_TXT
 Wait_Action
 MISSIONN_REWARD
 MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2
+btn_bg_on_5
+btn_bg_off_5
 CLOSE_MATERIAL
 OnStartOpen
 OnStartClose
@@ -9699,6 +9781,7 @@ MISSION_PEWARD_DETAIL_SVT_COSTUME
 Effect/Talk/bit_item_get{0}
 bit_item_get{0}
 master_mission_extra
+master_mission_daily
 master_mission_weekly
 master_mission_event
 master_mission_special
@@ -12013,6 +12096,8 @@ img_frames_mask03
 BOOST_ITEM_USE_CONFIRM_DECIDE
 BOOST_ITEM_USE_CONFIRM_CANCEL
 PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_SPLIT
+PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_START
+PARTY_ORGANIZATION_CONFIRM_FIXED_MY_SERVANT_POSITION_RESTRICTION_END
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_CLOSE
@@ -12457,6 +12542,7 @@ card_combine_limit_special
 battle_quest_route
 friend_lock_sync
 raid_auto_update
+command_code_lock
 02
 03
 04
@@ -12730,6 +12816,7 @@ StartBoardGamePieceEffectSub
 Effect/Race
 ScreenshotFolder
 {0}/s{1:D04}.png
+ADV/{0}
 _BlurFactor
 _CenterX
 _CenterY
@@ -13036,6 +13123,13 @@ communicationCharaStop
 communicationCharaClear
 questMessageOverwrite
 rewardSwitch
+advSet
+advSoundSet
+advPrepare
+advPlayAnimator
+advActorShow
+advActorHide
+advRelease
 tdelay
 screen
 twt
@@ -13116,6 +13210,8 @@ EndExecuteFlashDep
 OnFlashDepRequest
 Wipe/cutVer
 EndExecuteWipe
+withFrameFadeout
+withFrameFadein
 EndExecuteFade
 inputName
 BGM_EVENT_2
@@ -13216,6 +13312,7 @@ downloadAndRelease not found file
 Servants_
 Custom/SoftEdgeUnlitCutZ (SoftClip)
 joint_all_Base
+_Use_alphawidth
 Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)
 fbxevent
 NoblePhantasm/
@@ -13276,7 +13373,6 @@ useQp
 getExp
 successResult
 LEVELUP_NOTICE_TITLE
-{}
 CHAPTER2_PROLOGUE_WAR_ID
 Fgo_20160620_1
 ChapterProgress
@@ -13386,10 +13482,6 @@ Servant1
 Servant2
 Servant4
 CommandCard
-SELECT_CHOICE
-SELECT_LOCK
-SELECT_FAVORITE
-SELECT_PARTY
 ServantOperation
 OnClickLockModeItem
 OnClickChoiceModeItem
@@ -13405,6 +13497,8 @@ myroomForm
 conds
 condType
 SERVANT_SELL_TITLE
+SELL_LAST_EQUIP_CMD_SVT_INFO
+SELL_LAST_EQUIP_CMD_SVT_MESSAGE
 SERVANT_SELL_CLOSE
 SERVANT_SELL_DECIDE
 SERVANT_SELL_CANCEL
@@ -13431,10 +13525,10 @@ SERVANT_SELL_MESSAGE_NO_SELECT
 SERVANT_EQUIP_SELL_MESSAGE_NO_SELECT
 SERVANT_COMMAND_CODE_SELL_MSG_NO_SELECT
 SELL_EXCEEDED_MATERIAL_INFO_MSG
+SERVANT_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_SELL_EQUIP_CMD_CODE_WARNING_MSG
 SERVANT_MATERIAL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_ALL_SELL_REQUEST_RARITY_MESSAGE
-SERVANT_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_EQUIP_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_COMMAND_CODE_SELL_REQUEST_RARITY_MSG
 SERVANT_SELL_EQUIP_CMD_CODE_LAST_SVT_MSG1
@@ -13457,6 +13551,12 @@ skillId
 COND_TYPE_TITLE
 DISP_SKLL_LV
 SKILLCHARGETURN_TXT
+icon_stateup
+CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab
+icon_stateup_on
+icon_stateup_off
+icon_skill_on
+icon_skill_off
 SORT_WINDOW_TITLE
 SORT_WINDOW_DETAIL
 SMART_SORT_NAME
@@ -13490,6 +13590,8 @@ SERVANT_STATUS_BATTLE_EXPLANATION2
 SERVANT_STATUS_BATTLE_EXPLANATION3
 EndLoadInit
 CancelInput
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_BATTLE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_BATTLE
 OnDragEnd
 OnPress
 OnHover
@@ -13512,6 +13614,9 @@ button_choice_reg
 button_choice_unreg
 button_favorite_reg
 button_favorite_unreg
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_DIALOG_SETTING_OWN
 SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_TITLE
 SERVANT_STATUS_SERVANT_QUEST_INTERLUDE2_CONFIRM_MESSAGE
 SERVANT_STATUS_SERVANT_QUEST_CONFIRM_DECIDE
@@ -13523,6 +13628,9 @@ SERVANT_STATUS_SERVANT_QUEST_RAINFORCEMENT_CONFIRM_MESSAGE
 SERVANT_STATUS_TD_SPEED_DIALOG_MESSAGE
 SERVANT_STATUS_TD_SPEED_DIALOG_DECIDE
 SERVANT_STATUS_TD_SPEED_DIALOG_CANCEL
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
 img_txt_profile
 SERVANT_STATUS_PROFILE_ILLUST_TITLE
 SERVANT_STATUS_PROFILE_CV_TITLE
@@ -13542,17 +13650,36 @@ SERVANT_STATUS_EXPLANATION_COMMAND_CARD
 SERVANT_STATUS_EXPLANATION_COMMAND_CARD2
 SERVANT_STATUS_EXPLANATION_COMMAND_CARD3
 CommandCard(
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_COMMAND
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND
 SERVANT_STATUS_EXPLANATION_SKILL_COMMAND_CODE
 SERVANT_STATUS_EXPLANATION_EQUIP_ICON
 SERVANT_STATUS_EXPLANATION_FACE
 SERVANT_STATUS_EXPLANATION_FACE2
 SERVANT_STATUS_EXPLANATION_FACE3
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_FACE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE
 img_npgage_bg
 SERVANT_STATUS_NP_GUAGE_MESSAGE
 img_npgage_
 SERVANT_STATUS_EXPLANATION_PORTRAIT
 SERVANT_STATUS_EXPLANATION_PORTRAIT2
 SERVANT_STATUS_EXPLANATION_PORTRAIT3
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_STATUS_ICON
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_STATUS_ICON
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_OWN
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_SUPPORT
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_REFLECT_OWN
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_COMBINE_INFO
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_ALL_SET_INFO
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_ENABLE_INFO
 SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_INTERLUDE
 SERVANT_STATUS_EXPLANATION_SERVANT_QUEST_RAINFORCEMENT
 SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE
@@ -13619,6 +13746,10 @@ OPTION_NOTICE_RP_EXPLANATION
 img_txt_playopening
 OPTION_NOT_PLAY_OPENING_MOVIE
 OPTION_NOT_PLAY_OPENING_MOVIE_INFO
+OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON
+OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION
+OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON
+OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION
 COMBINE_EXCEEDED_MATERIAL_INFO_MSG
 RARE_MATERIAL_INFO_MSG
 STATUS_HP_OVER_DIALOG_MSG
@@ -13646,6 +13777,8 @@ OPTION_SCENARIO_TEXT_SPEED
 OPTION_SCENARIO_SCROLL_SPEED
 MAX
 G2
+OPTION_SPOILER_PROTECTION_TITLE
+OPTION_SPOILER_PROTECTION_INFO
 OPTION_SVT_RAND_DISP
 OPTION_SVT_EXPLANATION
 OPTION_FRIEND_COSTUME_DISP
@@ -14045,12 +14178,8 @@ ExtendServantEquipMax
 storage/takein
 userSvtIds
 storage/takeout
-icon_stateup_off
-icon_stateup_on
 icon_np_off
 icon_np_on
-icon_skill_off
-icon_skill_on
 Effect/Summon
 Servant_get_prefab_for_battle
 Servant_get_prefab
@@ -14595,7 +14724,6 @@ TitleInfoEventSuperBossEffect_Dead
 event_superboss_status_battle_
 event_superboss_status_win_
 Title/Prefabs/title_effect00
-PLAY_LOGO_MODE
 PLAY_NORMAL_MODE
 OPENING_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
 OPENING_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE
@@ -14691,6 +14819,7 @@ TouchEffect
 limitSeqId_{0}
 fixAppearanceId_
 relationBgmIds
+excludeTdChangeTypes
 ForcedOnlyFirstOneSpeed
 randomSeqIds
 randomWeights
