@@ -5742,6 +5742,7 @@ NETWORK_ERROR_DATA_UPDATE_EXP
 {0}
 
  ※Wi-Fi接続での更新を推奨します。
+NOW_LOADING
 AssetStorage boot load crc error : チェックサム値が不一致
 AssetStorage boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった
 AssetStorage boot load error : ファイル先頭の１行目の内容が空
@@ -5891,6 +5892,8 @@ MyRoomSound/DownloadMyRoomSound
 DownloadMyRoomSoundAtlas
 soundlogo_
 {0:D3}
+MyRoom/DownloadMyRoom
+DownloadMyRoomAtlas
 UISkin02DialogAtlas
 UISkin/UISkin01TerminalAtlas
 UISkin/UISkin02TerminalAtlas
@@ -6048,6 +6051,7 @@ EVENT_BOARD_GAME_DICE_BUTTON_POS
 EVENT_BOARD_GAME_MAP_ID_LIST
 EVENT_BOARD_GAME_NEXT_BOARD_QUEST_ID
 EVENT_BOARD_GAME_NEXT_ROUND_QUEST_ID
+TITLE_FLOW_OLD
 id:
 , name:
 , appleShopId:
@@ -7193,6 +7197,7 @@ AbortRequested
 HTTPConnection
 OnBeforeRedirection returned False
 Got redirect status({0}) without 'location' header!
+X-Server-Time
 Connected to 
 Already connected to 
 CONNECT {0}:{1} HTTP/1.1
@@ -8247,6 +8252,7 @@ npcFollower
 npcFollowerRelease
 npcSvtEquip
 npcSvtFollower
+mstOpeningMovie
 otherUserGame
 mstPartialMaintenance
 mstPrivilege
@@ -9579,11 +9585,10 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.14.0
-50f25f8317e60920c62de9e70b66a4e9fb1f5ff727d6da997357137170ed9093
-20200708_12:46
+2.15.0
+c35fbfdb297edd9c1b2ef51ed820b62ccfa5b518a0a9f6eb8f9d6a7d2bbde476
+20200717_21:21
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9610,6 +9615,7 @@ color
 useAnim
 firstEffectType
 firstEffectTime
+referrerMapId
 EndFadeout
 EndFadein
 MASTER_EQUIP_SKILL_INFO_TXT
@@ -9972,6 +9978,7 @@ battle_svt_id
 eventDeckIndex
 NONE
 Movie/ops{0:00000}.usm
+Movie/{0}.usm
 MATERIAL_TOP_OPENING_{0:00000}
 CHAPTER{0}_PROLOGUE_WAR_ID
 OptionBgmVolume
@@ -9992,6 +9999,7 @@ OptionSvtRand
 OptionMessageDisp
 OptionVolumeMute
 OptionSelectAdvantageClassAuto
+OptionNotPlayOpeningMovie
 FRP256v1
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00
@@ -12599,17 +12607,17 @@ eQBoardL1Type
 evGO_SELECT
 QUEST_CHAPTER_CLOSED
 WAR_CLEAR_CLOSED_
+MAIN_INTERLUDE_CLOSED_MESSAGE
 GO_MAP
 QUEST_CALDEA_NONE
-MAIN_INTERLUDE_CLOSED_MESSAGE
 QUEST_SHORTCUT_NONE
 QUEST_EVENT_WAR_END
 QUEST_EVENT_WAR_SHOP
 QUEST_EVENT_WAR_SHOP_BTN
 QUEST_EVENT_WAR_TIME
-QUEST_TIME_OVER
 SHORT_DLG_TITLE
 QUEST_AP_MAX_OVER
+QUEST_TIME_OVER
 QUEST_CONFIRM_DELETE_MSG
 QUEST_CONFIRM_RESET_MSG
 condBattleStart
@@ -12632,10 +12640,11 @@ QUEST_CONFIRM_NO_BATTLE_CONFIRM
 QUEST_CONFIRM_START
 VOTE_QUEST_CONFIRM_RESULT_MESSAGE
 evGO_SELECT_SHORTCUT
+evEVENT_FINISH
 QUEST_MESSAGE_DLG_DECIDE
 QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_TITLE
 QUEST_MESSAGE_DLG_MOVIE_PLAY_TITLE
-evEVENT_FINISH
+evEVENT_MESSAGE_FINISH
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION_CLOSE
 QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN
 SystemUI
@@ -12659,6 +12668,7 @@ evMap2D_Mark_Create_Finish
 EVENT_RACE_PATH_LENGTH
 EVENT_BOARD_GAME_MAP_POSITION
 SEND_MES_END
+EVENT_REWARD_END_MESSAGE
 evChange_Map
 EventRaceResultEffect_{0}
 EVENT_RACE_RESULT_REWARD_DLG_ITEM
@@ -12963,6 +12973,7 @@ horizontalImageSet
 masterHorizontalImageSet
 spriteMaskSet
 charaChange
+charaCrossFade
 figureChange
 masterChange
 equipChange
@@ -13042,7 +13053,6 @@ Back/back{0:D5}
 Image/mask_{0}
 V
 Movie/{0}.mp4
-Movie/{0}.usm
 cancel
 masterMale
 masterFemale
@@ -13126,6 +13136,7 @@ motion
 GaussianBlur
 MotionBlur
 cutting
+crossFade
 inside
 outside
  is not found
@@ -13605,6 +13616,9 @@ OPTION_NOTICE_AP
 OPTION_NOTICE_RP
 OPTION_NOTICE_ELSE
 OPTION_NOTICE_RP_EXPLANATION
+img_txt_playopening
+OPTION_NOT_PLAY_OPENING_MOVIE
+OPTION_NOT_PLAY_OPENING_MOVIE_INFO
 COMBINE_EXCEEDED_MATERIAL_INFO_MSG
 RARE_MATERIAL_INFO_MSG
 STATUS_HP_OVER_DIALOG_MSG
@@ -14351,7 +14365,6 @@ TitleInfoEventRaceRoundPrefab
 TitleInfoEventRaceRankPrefab
 TitleInfoEventLeagueVsStatusPrefab
 TitleInfoEventLeagueVsPrefab
-EVENT_REWARD_END_MESSAGE
 TitleInfoEventDailyPointItemPrefab
 TitleInfoEventTowerPrefab
 EventPointGaugeRoot
@@ -14584,6 +14597,11 @@ event_superboss_status_win_
 Title/Prefabs/title_effect00
 PLAY_LOGO_MODE
 PLAY_NORMAL_MODE
+OPENING_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
+OPENING_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE
+OPENING_MOVIE_SKIP_CONFIRM_DIALOG_CLOSE
+OPENING_MOVIE_SKIP_CONFIRM_DIALOG_SKIP
+END_OPENING_MOVIE
 APP_VERSION
 TITLE_COPYRIGHT
 USER_FRIEND_CODE
@@ -14644,6 +14662,8 @@ logo_title_er
 BGM_TITLE_2
 logo_title_cil
 BGM_TITLE_3
+playedMovie
+playingMovie
 /newsupdate
 LAST-MODIFIED
 gamedata/top
@@ -14858,6 +14878,19 @@ SHOP_BULK_WINDOW_MIN_LABEL
 SHOP_BULK_WINDOW_MAX_LABEL
 EditorOnly
 Sprite
+Custom/Sprite-ScriptActionFigureCrossFade
+_MainTex2
+_SubTex2
+_FaceTex2
+_FaceAlphaTex2
+_FaceInfo2
+_FaceTexOffset2
+_FaceTex
+_FaceAlphaTex
+_FaceInfo
+_FaceTexOffset
+_PositionOffset
+_FadeFactor
 CharaFigure/Form/
 CharaFigure/
 CharaFigure/1000000
