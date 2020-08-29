@@ -6162,6 +6162,8 @@ IGNORE_AURA_BUFF
 BATTLE_BUFF_TURN
 BATTLE_BUFF_COUNT
 BATTLE_BUFF_BOOST
+X_SCALE_APPLY_SVTIDS
+_xscale
 Custom/SoftEdgeUnlitCutZ_Choco
 Shaders/ChocoMap
 _ChocoTex
@@ -9513,9 +9515,9 @@ NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 NOW_LOADING
 課金エラー:AccountingManager:Initialize end result [
-2.11.0
-64ad7ed1ebb9de6e14f54762ab9950a37e5c9d64d938f43305916a4c8c725d6c
-20200401_19:41
+2.11.1
+3f13c57a36866ca0d78fa254f6de278610ae701cfed7fcbf791d71600d973b9d
+20200407_00:58
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -14550,6 +14552,7 @@ TouchEffect
 limitSeqId_{0}
 fixAppearanceId_
 relationBgmIds
+ForcedOnlyFirstOneSpeed
 randomSeqIds
 randomWeights
 groupSeqIDs
