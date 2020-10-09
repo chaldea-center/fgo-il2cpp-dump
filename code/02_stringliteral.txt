@@ -6007,6 +6007,8 @@ NOTIFICATION_RP_RECOVER_MESSAGE
 rp_max
 NOTIFICATION_FATIGUE_RECOVER_MESSAGE
 no_fatigue
+NOTIFICATION_COMPLETE_HARVEST_MESSAGE
+no_harvest_{0}
 BattleScriptScene
 OnMoveEnd
 Back
@@ -6415,6 +6417,7 @@ en_item_
 en_weapon_
 Assets/AssetStorages/NoblePhantasm/
 Assets/AssetStorages/Servants/
+FGO_CH/Base
 FGO_CH/AlphaBlendSingle
 FGO_Battle/Particle/Base
 Hidden/Particle/MultiplyAdd
@@ -8326,6 +8329,7 @@ mstEventItemDisplayRelease
 mstEventLocationCampaign
 mstEvent
 mstEventMissionAction
+mstEventMissionAdd
 mstEventMissionConditionDetail
 mstEventMissionCondition
 mstEventMission
@@ -8336,6 +8340,7 @@ mstEventPointGroup
 mstEventPoint
 mstEventPointUpper
 mstEventPointUpperRelease
+mstEventQuestCooltime
 mstEventQuest
 mstEventRace
 mstEventRaceResult
@@ -8504,6 +8509,7 @@ userEventMissionConditionDetail
 userEventMissionFix
 userEventMission
 userEventPoint
+userEventQuestCooltime
 userEventRace
 userEventRaid
 eventSvtFatigue
@@ -8757,7 +8763,12 @@ EventUI/Prefabs/80285
 DownloadEventUIAtlas8028500
 token_bg
 text_effect_color
+status_battle_color
+status_last_color
+status_win_color
 gauge_id
+count_format
+status_height
 EVENT_CONQUEST_POS_ITEM_FORMAT
 EVENT_CONQUEST_GET_ITEM_FORMAT
 EVENT_CONQUEST_GET_COUNT_LABEL
@@ -8793,6 +8804,14 @@ EVENT_CONQUEST_ITEM_FORMAT
 EVENT_CONQUEST_PRODUCT_FORMAT
 armaments_title
 EVENT_CONQUEST_ARMAMENT_LABEL
+80289001
+EVENT_HARVEST_CAUTION_DECIDE_BUTTON
+harvestGrowthBeforeQuestId
+EVENT_HARVEST_CAUTION_TITLE
+harvestGrowthTitle
+EVENT_HARVEST_GROWTH_ITEM_FORMAT
+EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT
+EVENT_HARVEST_GROWTH_MESSAGE
 event_bg_bar
 event_point_bar
 EndGaugeAnime
@@ -8816,6 +8835,12 @@ EVENT_QPPOINT_LIMIT_FORMAT
 qp_counter_
 qp_counter_comma
 QPEVENT_NEXT_DISPLAY_DATA
+80289002
+EVENT_RAID_TIME_LIMIT_TXT
+EVENT_RAID_TIME_OVER_TXT
+{0:D2}:{1:D2}:{2:D2}[-]
+[FF0000]
+[FFFF00]
 event_item_board_description
 USE_ITEM_CONFIRM_MSG
 Shop/Atlas/ShopAtlas
@@ -8898,6 +8923,8 @@ EVENT_POINT_GIFT_ADD_COUNT
 EVENT_POINT_GIFT_ADD
 EVENT_POINT_GIFT_ADD_COMMAND_CODE
 bit_vs_result_
+MapGimmickEffect_SpotCooltime
+isActiveCooltimeGimmick
 EVENT_RACE_BOOST_COUNT
 onEndAnim
 race_boost_effect_{0}
@@ -9003,6 +9030,7 @@ ExtraMission
 LimitedMission
 MstMissionIndex
 FatigueNotiffication
+CooltimeNotification
 RecoveryIdx
 LastViewEventId_
 DailyMission
@@ -9493,6 +9521,7 @@ listframes{0}_txt_costume
 listframes{0}_txt_item
 listframes{0}_txt_mysticcode
 icon_eventjoin_01
+QUEST_CONFIRM_NO_CONSUME_COUNT
 SetBaseTransform
 STONE_UNIT
 MANA_UNIT
@@ -9761,9 +9790,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.19.1
-2cbd43ddecfd6891dd4fdf658e6fca8e45918477118fcf22bfe947b863d2adac
-20200918_22:30
+2.20.0
+d25211a258add6b74026c8a66bb1b142d343858fd35b298feeadd2fa1b83b22b
+20201005_21:56
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12521,7 +12550,6 @@ quest_free
 quest_event
 quest_Interlude
 quest_heroic
-WAR_IDS_OF_COUNTING_QUEST_ONLY_REACHABLE_MAPS
 Home/RaidAutoUpdate
 _1
 _2
@@ -12835,6 +12863,8 @@ Effect/Talk/bit_token_get{0}
 bit_token_get{0}
 WarBoard/Terminal/Effect/bit_warclear_get{0}
 bit_warclear_get{0}
+Effect/Talk/bit_harvest_get{0}
+bit_harvest_get{0}
 bit_treasure_get
 NoticeLastModified
 bit_order_grade_get
@@ -12844,9 +12874,10 @@ ServantEquipList
 VOTE_QUEST_CONFIRM_INFO
 QUEST_CONFIRM_CANCEL
 QUEST_CONFIRM_NO_BATTLE_NO_CONSUME
-QUEST_CONFIRM_NO_BATTLE_CONSUME
 QUEST_CONFIRM_NO_BATTLE_CONFIRM
 QUEST_CONFIRM_START
+QUEST_CONFIRM_NO_BATTLE_CONSUME_ICON
+QUEST_CONFIRM_NO_BATTLE_CONSUME
 VOTE_QUEST_CONFIRM_RESULT_MESSAGE
 evGO_SELECT_SHORTCUT
 evEVENT_FINISH
@@ -12864,6 +12895,7 @@ TerminalBaseMap
 Map Touch Enable
 Map Touch Disable
 SelectCore
+EVENT_RAID_TIME_OVER_NOTICE
 Spot_Player
 evSpotSet_Finish
 evTexLoad_Finish
@@ -12872,6 +12904,8 @@ MapGimmickEffect_GappolyBoard
 MapGimmickEffect_GappolyPiece
 MapGimmickEffect_GappolyQuestArrivalPanel
 MapGimmickEffect_GappolyStopPanel
+MapGimmickEffect_EventQuestCooltime
+EventHarvestNoticeButton
 evMap2D_Mark_Create_Finish
 EVENT_RACE_PATH_LENGTH
 EVENT_BOARD_GAME_MAP_POSITION
@@ -12916,6 +12950,7 @@ clear_marker
 clear_marker_{0:D2}
 item
 0_M040
+RAID_TIME_OVER_NOTICE_
 Terminal/MapImgs/
 Terminal/QuestMap/Capter{0:D4}
 Terminal/QuestMap/Capter{0:D4}_{1:D4}
@@ -13007,6 +13042,9 @@ GachaTemplate
 [wait time 
 ]
 
+[charaChange A 
+form
+ 0 normal 0
 [charaFace A 
 [voice 
 ]
@@ -14234,8 +14272,13 @@ COMBINE_LIMIT_SPECIAL_PRIVILEGE_ID
 SPEND_LIMIT_TITLE
 SPEND_LIMIT_MESSAGE
 SPEND_LIMIT_CLOSE
+EVENT_COOLTIME_REMAIN
+cooltime_base
 StateLargeIn_End
 StateLargeOut_End
+stopRaidDeadTime
+mapGimmickId
+mapGimmickEffectId
 smfSpotBtn_Click
 Spot_
 spot_
@@ -14591,12 +14634,14 @@ TerminalBeforeEventActivityPoint
 TerminalBeforeEventActivityPointGauge
 SAVEKEY_TerminalConquestInfos
 SAVEKEY_TerminalConquestInfoDisp
+SAVEKEY_TerminalHarvestGrowthInfo
 SAVEKEY_LastPlayBgmName
 SAVEKEY_LastPlayQuestConsumeType
 SAVEKEY_TerminalLastSelectQuestIndex
 TerminalLastPlayedFreeQuestSpotId
 story
 id_
+harvestGrowthAfterQuestId
 SAVEKEY_EventRaidDefeatedEffectInfo
 SAVEKEY_QuestRandomGroupList
 TERMINAL_CLEAR_REWARD_DISP
@@ -14731,6 +14776,8 @@ img_txt_main_interlude
 TitleInfoEventUIPrefab
 TitleInfoEventConquestGetPrefab
 bit_dedicate_reward
+TitleInfoHarvestCautionDialogPrefab
+TitleInfoHarvestGrowthDialogPrefab
 TitleInfoProductivityGrowthDialogPrefab
 TitleInfoEventBulletinBoardPrefab
 TitleInfoEventFactoryPrefab
