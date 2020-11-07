@@ -7,7 +7,7 @@ bad_line_starts = ("/*", "//", "|")
 
 FILES_TO_EXTRACT = [
     "assets/bin/Data/Managed/Metadata/global-metadata.dat",
-    "lib/armeabi-v7a/libil2cpp.so",
+    "lib/arm64-v8a/libil2cpp.so",
 ]
 
 
