@@ -5953,12 +5953,11 @@ formation_frame_support3
 listcframes1_bg
 listcframes2_bg
 listcframes3_bg
+EventUI/Prefabs/{0}
 shop/createSeed
 seed
-[FF0000]x{0:#,0}[-]
-x{0:#,0}
-[FF0000]+{0:#,0}[-]
-+{0:#,0}
+[FF0000]{0}{1:#,0}[-]
+{0}{1:#,0}
 SUMMON_AUTOSALE_TITLE
 SUMMON_AUTOSALE_MSG
 COMMON_CONFIRM_DECIDE
@@ -6236,6 +6235,7 @@ endFashSvt
 endFashTypeCard
 icon_cardfixation
 BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN
++{0:#,0}
 icon_sleep
 icon_commandchange_{0}
 icon_cardsealed_arts
@@ -6339,6 +6339,7 @@ npCharge
 svt_change
 priority
 svt_voice_id
+isHideShadow
 Player
 Enemy
 Sound
@@ -6440,7 +6441,6 @@ battle_states_popup
 NobleLevel
 {0}{1:#,0}
 [{2}]({3}{4:#,0})[-]
-{0}{1:#,0}
 [{0}]({1}{2:#,0})[-]
 CLOSE_TO_MENU
 CLOSE_TO_TACTICAL
@@ -6531,7 +6531,6 @@ WAR_BOARD_PROGRESS_OPPONENT_BUFF_TYPES
  enemytargetId: 
  pttargetId: 
 >actSetId: 
-BATTLE_GUARD_FUNCTION
 ====< end BattleLogicFunction::procList >=====
 checkFuncAction firstResult:false
 checkFuncAction(
@@ -6571,6 +6570,7 @@ is same Limit
 check--Group( 
 is same Group 
 STATUS_UP_BUFF
+BATTLE_GUARD_FUNCTION
 is rate over 
 FIELD_PLAYER
 FIELD_ENEMY
@@ -6659,8 +6659,8 @@ TACTICAL_START_UP
 TACTICAL_START_CENTER
 TACTICAL_START_UNDER
 TACTICAL_START
-Interface/UI Root
 Movie/
+Interface/UI Root
 BREAK_ON_BATTLE_WAIT
 BREAK_ON_BATTLE_WAIT_FINISH
 UNIT_ALL
@@ -8156,10 +8156,59 @@ QP_NAME
 Effect/Talk/
 bit_costume_get
 bit_equip_get
+bit_present_get
 NETWORK_ERROR_DATA_UPDATE_START
 データ更新開始
 キャンセル
 SupportSelectScene
+CompleteMission/{0}/asset
+CompleteMissionPanel
+CompleteMission/{0}/{1}
+event_rewardget_{0}01
+event_rewardget_{0}02
+DEFAULT_LOCK_BOARD_GROUP_ID
+TIME_REST_ACHIVE
+TIME_REST_QUEST
+MST_MISSION_EMPTY_TXT
+MISSION_EMPTY_TXT
+Wait_Action
+btn_txt_all
+btn_txt_receipt
+btn_txt_progress
+btn_txt_completed
+MISSIONN_REWARD
+SHOW_MSG
+REWARD_ACCEPTABLE
+END_NOTICE
+
+ 
+{0}×{1:#,0}
+MISSION_ACTION_ITEM_FORMAT
+＋
+×
+MISSION_ACTION_SUCCESS_MULTIPLE2
+MISSION_ACTION_SUCCESS
+END_EFFECT
+Effect/EventMission
+ef_mission_extric01
+modifyOpenItem
+panelAfterCallback
+COMPLETE_MISSION_ACTION_SUCCESS
+MISSION_ACTION_PRESENT_BOX_FULL_WARNING
+actionAfterCallback
+MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2
+
+ 
+ 
+MISSION_ACTION_MULTIPLE_GET_MESSAGE
+animAfterCallback
+DownloadEventUIAtlas{0}01
+img_txt_target_panel
+event_tab_type5_0
+button_mission_{0}
+img_flame_{0}
+mission_on_{0}
+mission_bg_{0}
 COND_TYPE_NONE
 COND_TYPE_QUEST_CLEAR
 COND_TYPE_QUEST_PHASE_CLEAR
@@ -8324,6 +8373,7 @@ mstCommandSpell
 mstCommonConsume
 mstCommonRelease
 mstCommonRestriction
+mstCompleteMission
 mstConstantLong
 mstConstant
 mstConstantStr
@@ -8459,6 +8509,7 @@ mstQuestRacePoint
 mstQuestRandomGroup
 mstQuestRelease
 mstQuestReset
+mstQuestRestrictionInfo
 mstQuestRestriction
 mstQuestScript
 mstQuestScriptRelease
@@ -8867,6 +8918,8 @@ EventInfoPointGaugePrefab
 Effect/Event/{0}
 bit_gauge_change
 _battle
+EVENT_POSSESSION_ITEM_TITLE
+EVENT_POSSESSION_ITEM_VALUE
 EVENT_CONQUEST_UP_ITEM_FORMAT
 EVENT_CONQUEST_UP_ITEM_ADD_FORMAT
 EVENT_CONQUEST_UP_TITLE
@@ -8917,43 +8970,14 @@ SELECT_FP_NUM_UP
 func_group_icon_
 eventMission/receive
 missionId
-DEFAULT_LOCK_BOARD_GROUP_ID
 MISSION_PERIOD_END
-TIME_REST_QUEST
-TIME_REST_ACHIVE
 TIME_REST_TIMEOVER
-MISSION_EMPTY_TXT
 EVENT_ITEM_REPLACE_EVENT_NAME
 EVENT_REWARD_REPLACE_MSG
 MISSION_REWARD
-SHOW_MSG
-REWARD_ACCEPTABLE
-END_NOTICE
-
- 
-{0}×{1:#,0}
-＋
-×
-MISSION_ACTION_SUCCESS_MULTIPLE2
-MISSION_ACTION_ITEM_FORMAT
-MISSION_ACTION_SUCCESS
-END_EFFECT
-Effect/EventMission
-ef_mission_extric01
-modifyOpenItem
-btn_txt_all
-btn_txt_receipt
-btn_txt_progress
 btn_txt_notopen
-btn_txt_completed
-MISSION_ACTION_PRESENT_BOX_FULL_WARNING
 MISSION_ACTION_PRESENT_BOX_OVER_WARNING
-actionAfterCallback
 MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX
-
- 
- 
-MISSION_ACTION_MULTIPLE_GET_MESSAGE
 EVENT_DAY_TXT
 EVENT_TIME_TXT
 EVENT_MIN_TXT
@@ -9087,6 +9111,7 @@ FatigueNotiffication
 CooltimeNotification
 RecoveryIdx
 LastViewEventId_
+CompleteMission
 DailyMission
 eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}
 event/scanPanelMap
@@ -9148,7 +9173,7 @@ _threeValue0
 _threeValue1
 _threeValue2
 Back/back
-@(?<name>.*?)\.[Uu][Ss][Mm]$
+/(?<name>[^/]*?)\.[Uu][Ss][Mm]$
 back10000
 back10001
 cut063_cinema
@@ -9648,6 +9673,8 @@ listframes{0}_txt_mysticcode
 icon_eventjoin_01
 QUEST_CONFIRM_NO_CONSUME_COUNT
 SetBaseTransform
+COMMON_COUNT_OPERATOR_CROSS
+COMMON_COUNT_OPERATOR_PLUS
 STONE_UNIT
 MANA_UNIT
 FRIEND_POINT_UNIT
@@ -9926,9 +9953,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.24.1
-2eb04401c853dea100fa1a2e0f83b94f6b2559d8337b7683ebcafb62410292a2
-20201204_17:49
+2.25.0
+44851a935fc29a5212c5a918da21a366f2ccd98c84afc909c2873feda139295f
+20201211_18:40
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -9979,6 +10006,8 @@ NO_CHANGE_EQUIP
 UIMasterFullFigure
 UIMasterFullFigure(
 btn_event_3
+MISSION_ACHIVE_MSG
+COMPLETE_MISSION_TIME_REST_ACHIVE
 MST_REMISSON_TITLE_TXT
 MST_REMISSON_MSG
 MST_REDISP_TITLE_TXT
@@ -9993,10 +10022,6 @@ btn_txt_on_limited
 btn_txt_off_limited
 StoneFragments
 NO_TIME_INFO
-MST_MISSION_EMPTY_TXT
-Wait_Action
-MISSIONN_REWARD
-MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2
 btn_bg_on_5
 btn_bg_off_5
 CLOSE_MATERIAL
@@ -10046,6 +10071,7 @@ bit_item_get{0}
 master_mission_extra
 master_mission_daily
 master_mission_weekly
+master_mission_panel
 master_mission_event
 master_mission_special
 mis1
@@ -10080,6 +10106,7 @@ CURRENT_QP_UNIT
 img_fp
 CURRENT_FRIEND_POINT_UNIT
 MESSAGE_CHANGE_NO_INPUT
+MasterProfileInfo
 {0}月 {1}日
 CLICK_CANCLE
 ChangeUserName
@@ -13272,6 +13299,7 @@ ScriptManagerAutoMessage
 btn_auto_on
 btn_auto_off
 SCRIPT_CHAPTER_SUB_TITLE_BASE
+[enableFullScreen]
 [end]
 -1
 selectionUse
@@ -14323,6 +14351,8 @@ ApplySupportSvt
 revivalUp
 revivalUnder
 aress
+EnableTarget
+AddIndiv
 SKILL_COMBINE_EFFFECT_UNRELEASE
 COSTUME_CHANGE_DESCRIPTION
 COSTUME_CHANGE_SKILL_TITLE
@@ -14333,12 +14363,14 @@ getApplication
 com.smrtbeat.SmartBeatConfig
 setApiKey
 setEnabled
+setAutoBreadcrumb
 addIgnoredSignal
 com.smrtbeat.SmartBeat
 initAndStartSession
 notifyOnResume
 notifyActivityStarted
 leaveBreadcrumbs
+_leaveAutomaticBreadcrumbs
 setUserId
 enableLogCat
 enable
@@ -14347,6 +14379,14 @@ addExtraData
 isReadyForDuplicateUserCountPrevention
 notifyOnPause
 enableDebugLog
+sceneLoaded
+next
+current
+activeSceneChanged
+sceneUnloaded
+java.util.HashMap
+put
+1.21.4
 /smartbeat_screenshot
 _{0:00}
 logHandleExceptionForUnity
