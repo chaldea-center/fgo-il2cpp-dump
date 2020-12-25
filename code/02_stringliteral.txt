@@ -8169,6 +8169,7 @@ event_rewardget_{0}02
 DEFAULT_LOCK_BOARD_GROUP_ID
 TIME_REST_ACHIVE
 TIME_REST_QUEST
+EventReward/EventRewardAtlas
 MST_MISSION_EMPTY_TXT
 MISSION_EMPTY_TXT
 Wait_Action
@@ -8204,11 +8205,11 @@ MISSION_ACTION_MULTIPLE_GET_MESSAGE
 animAfterCallback
 DownloadEventUIAtlas{0}01
 img_txt_target_panel
-event_tab_type5_0
 button_mission_{0}
 img_flame_{0}
 mission_on_{0}
 mission_bg_{0}
+event_tab_type5_0
 COND_TYPE_NONE
 COND_TYPE_QUEST_CLEAR
 COND_TYPE_QUEST_PHASE_CLEAR
@@ -9090,7 +9091,6 @@ EventServantFatigue/2
 RecoveryFatigue
 WarBoard/Shop/Effect/bit_grail_get
 bit_grail_get
-EventReward/EventRewardAtlas
 SET_END
 NOT_GET_COMMIT_AFTER_SCRIPT
 NOT_GET_COMMIT_AFTER_SCRIPT_WARNING
@@ -9953,9 +9953,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.25.0
-44851a935fc29a5212c5a918da21a366f2ccd98c84afc909c2873feda139295f
-20201211_18:40
+2.25.1
+5bfea6167c1a91c87997bf67b48e9aa992440be180ee5c36bbba7df3e52dc54f
+20201217_16:41
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10008,6 +10008,7 @@ UIMasterFullFigure(
 btn_event_3
 MISSION_ACHIVE_MSG
 COMPLETE_MISSION_TIME_REST_ACHIVE
+COMPLETE_MISSION_END
 MST_REMISSON_TITLE_TXT
 MST_REMISSON_MSG
 MST_REDISP_TITLE_TXT
