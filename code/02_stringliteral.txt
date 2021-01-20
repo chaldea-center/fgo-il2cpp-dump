@@ -5827,6 +5827,12 @@ ShopBanners/DownloadShopBanner
 CharaGraphOption/CharaGraphOption
 CharaFigure/8001000
 ({0}) - {1}
+COMMON_CONFIRM_CLOSE
+EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE
+EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE
+EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA
+EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT
+event_skill_icon_{0}{1:D2}
 AtlasManager/Items/ItemAtlas
 AtlasManager/ClassIcons/ClassIconsAtlas
 AtlasManager/SkillIcons/SkillIconAtlas
@@ -5961,7 +5967,6 @@ seed
 SUMMON_AUTOSALE_TITLE
 SUMMON_AUTOSALE_MSG
 COMMON_CONFIRM_DECIDE
-COMMON_CONFIRM_CLOSE
 SUMMON_AUTOSALE_EXP_TXT
 SUMMON_AUTOSALE_FOU_TXT
 SUMMON_AUTOSALE_EQUIP_TXT
@@ -6137,7 +6142,6 @@ common
 MOTION_DAMAGE
 MOTION_
 MOTION_BACK
-SHOW_EFFECT_CHECK_SCALE_SVT_IDS
 Noble_Check
 @OnComplete Fired!
  => <{0}>:
@@ -6297,8 +6301,6 @@ TUTORIAL_QUEST_ID2
 TUTORIAL_QUEST_ID3
 TUTORIAL_QUEST_ID4
 TUTORIAL_QUEST_ID4_PHASE
-rebootAlreadyPlayMovie
-playWaveStartMovie
 en_Parts_Up01
 en_Parts_Under01
 FLAG_BATTLE_RETRY_UNAVAILABLE
@@ -6449,6 +6451,8 @@ BgmName
 BGM_BATTLE_1
 END_PROC
 PROC_RETIRE
+rebootAlreadyPlayMovie
+playWaveStartMovie
 NG
 BATTLE_DIALOG_RESULT_ERROR_TITLE
 BATTLE_DIALOG_RESULT_ERROR_CONF
@@ -6683,6 +6687,7 @@ queue_action.Count:
  isSystem 
  isMotion 
 Is_Skill_Cutin_Player_Side
+Is_Skill_Cutin_Field_Side
 MOTION_SKILL_CUTIN
 damageData:
 EFFECT_INVINCIBLE_AVOID_OFFSET_Z
@@ -6747,6 +6752,7 @@ Battle/Gimmick/{0}
 gimmick
 ef_special_invincible
 Battle/TurnEffect/
+SKIP_SKILL_CUTIN
 EventInfoPointGaugeControl
 TopDialogPanel
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
@@ -8333,6 +8339,7 @@ mstAiAct
 mstAiField
 mstAi
 mstArea
+mstAssist
 mstAttriRelation
 mstAuraEffect
 mstAuraEffectPosOverwrite
@@ -8884,6 +8891,8 @@ EventDelegate
 FloorRewardPrefabName
 useDiceSpotId
 forceOverwrite
+EVENT_ASSIST_SKILL_LEVEL_FORMAT
+EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT
 box_status_side_01
 box_status_side_02
 box_status_side_03
@@ -9020,6 +9029,11 @@ event_ranking_
 event_goal_flag
 event_ranking_reward_txt
 event_support_txt
+LEVEL_INFO
+EVENT_REWARD_ASSIST_SKILL_LV
+EVENT_REWARD_ASSIST_SKILL_TITLE
+EVENT_REWARD_ASSIST_SKILL_MSG
+EVENT_REWARD_ASSIST_SKILL_CONFIRM
 btn_txt_off_
 btn_txt_on_
 btn_bg_on_2
@@ -9030,6 +9044,7 @@ ef_4tab_open
 ef_3tab_open
 ef_2tab_open
 btn_disable_txt_
+EVENT_REWARD_MUTE_SVT_ID_{0}
 SvtVoiceマスタが適切に設定されていません。
 FinishedSvtSlideIn
 event_type_txt_
@@ -9079,6 +9094,7 @@ ADD_USER_QP_MSG
 BUY_AFTER_QP_NUM
 ADD_USER_ITEM_MSG
 BUY_AFTER_USER_ITEM_NUM
+EVENT_REWARD_ASSIST_SKILL_RESULT
 SET_ITEM_INDIVIDUAL
 SET_ITEM_GET_SERVANT_MSG
 SET_ITEM_GET_ITEM_MSG
@@ -9672,6 +9688,7 @@ listframes{0}_txt_costume
 listframes{0}_txt_item
 listframes{0}_txt_mysticcode
 icon_eventjoin_01
+event_skill_icon_{0:D2}
 QUEST_CONFIRM_NO_CONSUME_COUNT
 SetBaseTransform
 COMMON_COUNT_OPERATOR_CROSS
@@ -9873,7 +9890,6 @@ COUNT_INFO
 PRICE_INFO
 PRICE2_INFO
 ID_ICON_INFO
-LEVEL_INFO
 LEVEL_ICON_INFO
 COST_INFO
 COST_ICON_INFO
@@ -9954,9 +9970,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.25.2
-f88d5e2d56896c9d6879897b7e96ac385278c05dd0e2d25b688d0c6bfda0f751
-20210106_19:20
+2.26.0
+3345a4dbb66f43e42c1a41b47715682018c9018a2cfe29890f5e8a44e4db93f9
+20210115_19:31
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10241,6 +10257,12 @@ LateUpdate
 OnSubmitChange
 OnSliderChange
 OnChange
+SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER
+userCreateServer
+
+friendcode(5.3): 
+SaveDataVer
+TerminalStart
 /webview/
 file:
 &v=
@@ -10248,22 +10270,7 @@ lastAccessTime=
 &lastAccessTime=
 ?lastAccessTime=
 Mock/
-appVer
-dataVer
-dateVer
-lastAccessTime
-verCode
-userCreateServer
-
-friendcode(5.3): 
-SaveDataVer
 /AssetStorages/
-SERVER_CERTIFICATE_ERROR_TITLE
-SERVER_CERTIFICATE_ERROR_ANDROID
-app_version_up
-SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER
-CommunicationStart
-TerminalStart
 contact
 summonDetail
 help
@@ -10281,6 +10288,15 @@ DEV
 LIMIT
 PLAY
 DESIGN
+appVer
+dataVer
+dateVer
+lastAccessTime
+verCode
+CommunicationStart
+SERVER_CERTIFICATE_ERROR_TITLE
+SERVER_CERTIFICATE_ERROR_ANDROID
+app_version_up
 TheCheckKey
 iOS
 https://itunes.apple.com/lookup?id=
@@ -12269,6 +12285,8 @@ SERVANT_LIST
 MENU_SERVANT_LIST
 Fgo_20151127_1
 PARTY_ORGANIZATION_EVENT_TOTAL_DATA
+event_skill_btn_{0}
+EVENT_ASSIST_SKILL_DO_NOT
 TUTORIAL_MESSAGE_PARTY_ORGANIZATION1_2
 buttontxt_queststart
 buttontxt_battlestart
@@ -12709,6 +12727,9 @@ nextSceneParam
 condHaving
 notHavingQuest
 isScriptPlayForWarBoard
+assistIds
+assistIdWeight
+hideAssistConfButton
 movieFolder
 moviePlayType
 effectColor
@@ -13781,6 +13802,7 @@ battleHeight
 invalidSkillShift
 SkillRankUp
 changeLimitVoiceInFriendshipLv
+HideInAnimNode
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 SERVANT_EQUIP_EFFECT_FILTER_TITLE
@@ -14499,6 +14521,7 @@ SEテストに
 そのサウンドはcpk内に存在しません
 そのサウンドはcpkリスト内に存在しません
 ValVoice_
+SE_21
 キュー順
 昇順
 降順
