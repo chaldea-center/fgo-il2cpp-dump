@@ -5832,6 +5832,7 @@ EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT
+LEVEL_INFO
 event_skill_icon_{0}{1:D2}
 AtlasManager/Items/ItemAtlas
 AtlasManager/ClassIcons/ClassIconsAtlas
@@ -6097,6 +6098,7 @@ id:
 , closeAt:
 shop/bankStatus
 platformType
+WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG
 EarthPoint_
 clear00
 mask00
@@ -7485,6 +7487,7 @@ extendLowerLimit
 ProgressSelfTurn
 ProgressTurnCond
 CardEffectId
+battleEndNotReduceTurnFlag
 MANA_NEED_INFO
 RARE_PRI_NEED_INFO
 STONE_FRAGMENTS_NEED_INFO
@@ -7629,6 +7632,7 @@ Custom/Sprite-ScriptActionFigureWipe
 [FFFFFF]
 [AAAAAA]
 This is an example paragraph for the text list, testing line 
+checkDateVersion/check
 CONFIRM_TITLE_SVT_COMBINE
 COMBINE_LAST_EQUIP_CMD_SVT_INFO
 COMBINE_LAST_EQUIP_CMD_SVT_MESSAGE
@@ -8660,9 +8664,11 @@ mstWarBoardActionTrendCond
 mstWarBoardActionTrend
 mstWarBoardAi
 warBoardData
+mstWarBoardEffect
 mstWarBoardIndividualityClass
 mstWarBoardItem
 mstWarBoard
+mstWarBoardOnboardSkill
 mstWarBoardQuest
 mstWarBoardRatingBase
 mstWarBoardRatingOffset
@@ -9029,7 +9035,6 @@ event_ranking_
 event_goal_flag
 event_ranking_reward_txt
 event_support_txt
-LEVEL_INFO
 EVENT_REWARD_ASSIST_SKILL_LV
 EVENT_REWARD_ASSIST_SKILL_TITLE
 EVENT_REWARD_ASSIST_SKILL_MSG
@@ -9970,9 +9975,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.26.0
-3345a4dbb66f43e42c1a41b47715682018c9018a2cfe29890f5e8a44e4db93f9
-20210115_19:31
+2.27.0
+d9de67294b64c13322980caba715e357e682a9880dd62a1714c90dcf580de970
+20210129_17:00
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12903,6 +12908,7 @@ war_board_finish
 war_board_resume
 event_scan_panel_map
 battle_use_continue_item
+check_date_version
 02
 03
 04
@@ -14290,6 +14296,7 @@ img_bg_mp
 img_bg_rp
 img_bg_fragments
 img_bg_spsummon
+img_bg_hgd
 UpdateRemainTime
 remainDays
 LIMITED_SHOP_REMAIN_DAYS
@@ -14322,6 +14329,8 @@ SHOP_HELP_SPECIAL_ITEM_SHOP_EXPLANATION
 img_shop_14
 SHOP_HELP_STONE_SHOP_EXPLANATION
 img_shop_7
+SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION
+img_shop_15
 SHOP_SPECIAL_ITEM_ENABLE
 ShopHelpListPanel/BaseWindow/UpperCloseButton
 InvokedPlayVoiceList
@@ -14336,6 +14345,7 @@ SHOP_SCENE_VOICE_SELL
 SHOP_SCENE_VOICE_STONE
 SHOP_SCENE_VOICE_SVTSTORAGE
 SHOP_SCENE_VOICE_EQSTORAGE
+SHOP_SCENE_VOICE_GRAIL_FRAGMENTS
 SHOP_SCENE_VOICE_BACK1
 SHOP_SCENE_VOICE_BACK2
 AnonymousHelp
@@ -14352,6 +14362,7 @@ SHOP_BUY_SERVANT_STORAGE
 SHOP_BUY_SERVANT_EQUIP_STORAGE
 SHOP_BUY_STONE_FRAGMENTS
 SHOP_BUY_BANK_ITEM
+SHOP_BUY_GRAIL_FRAGMENTS
 SHOP_BUY_SPECIAL_ITEM
 SHOP_BUY_ANONYMOUS
 MSG_SKILL_SELECT
@@ -15257,7 +15268,7 @@ event_superboss_status_win_
 仮
 FadeOutBGM
 PlayBGM
-BtnBg
+BackAnchor/BtnBg
 ar112
 Title/Prefabs/title_effect00
 UI Root/Camera/TakeOverPanel/BtnObj/CancelBtn
@@ -15822,9 +15833,10 @@ WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR
 WARBOARD_PARTY_COST_OVER_TITLE
 WARBOARD_PARTY_COST_OVER_MESSAGE
 WARBOARD_SORTIE_CONFIRMATION_TITLE
-WARBOARD_SORTIE_CONFIRMATION_MESSAGE
+WARBOARD_SORTIE_CONFIRMATION_MESSAGE_FREE_SQUARE
 WARBOARD_SORTIE_CONFIRMATION_YES
 WARBOARD_SORTIE_CONFIRMATION_NO
+WARBOARD_SORTIE_CONFIRMATION_MESSAGE
 WARBOARD_RETURN_CONFIRM_TITLE
 WARBOARD_RETURN_CONFIRM_MESSAGE
 WARBOARD_RETURN_CONFIRM_YES
@@ -15833,6 +15845,7 @@ TopBase/BackButton
 masterInfo
 getItemInfo
 WARBOARDDATA_SAVEDATA
+AFTER_CONTINUE_DEVICE_FOR_WARBOARD
 warBoard/finish
 isResult
 ItemGet
@@ -15853,12 +15866,13 @@ WARBOARD_TURN_END_CONFIRMATION_NO
 WARBOARD_ACTION_COUNT_DECREASE_NOTICE_MESSAGE
 WARBOARD_ACTION_COUNT_DECREASE_NOTICE_CLOSE
 PlayBgmForPlaying
-WarBoard/PartyOrganization
 WarBoardPartyMenu
+WarBoard/PartyOrganization
 SimplePopupElementServant
 SimplePopupElementBuff
 SimplePopup
 ServantDetailPopup
+ServantEquipSimpleDialog
 EnemyServantDetailPopup
 CommonMiniPopup
 WARBOARD_MAX_SERVANT_CACHE_COUNT
@@ -15877,10 +15891,15 @@ EffectLose
 EffectAttackMasterPiece
 EffectEncount
 ItemIcons
+EffectIconsAtlas
 CameraRoot
 SeSetting
 Configuration
 Playing
+ZoomSwitchUI
+ef_states_up_01
+ef_states_down_01
+SkillNameInfo
 BoardBG
 ImageSetAtlas
 warBoard/masterAttack
@@ -15899,6 +15918,9 @@ WARBOARD_TURN_BASE
 warBoard/resume
 road
 road_on
+bas1
+bas10
+bas13
 servant_base_{0}
 onBoard_initial_placement_class2_{0}
 ServantDying
@@ -15906,13 +15928,15 @@ Servant_Dead_Effect
 warBoard/setup
 squareIndexes
 userSvtEquips
+square{0:D3}
+squares
 {0:#,0} / {1:#,0}
 WARBOARD_SERVANT_INFO_ENEMY_ATK
-squares
 Move_Point_{0}
 Move_Point_0
-square{0:D3}
 WARBOARD_SQUARE_COST
+PlayUnDispCostAnim2
+FinishUnDispCostAnim
 warBoard/start
 warBoard/turnEnd
 WAREHOUSE_CONFIRM_PUT_IN_TITLE
@@ -16083,6 +16107,7 @@ An element with the same key already exists in the dictionary.
 KeyValuePairs
 not of type: 
 HashSet have been modified while it was iterated over
+other
 list modified
 node
 Array is multidimensional
