@@ -6273,6 +6273,7 @@ CameraFSM
 iconId
 skills
 lv
+condId
 SUB_PT_BUFF_INDIVI
 SAVEKEY_
 RESERVE_BATTKE_SAVEKEY
@@ -6286,6 +6287,7 @@ DUEL
 Battle
 QUESTUSEDTURNSAVEKEY
 CONTINUECOUNT
+BATTLE_USE_ITEM_SAVEKEY
 Initial
 p_svlist
 e_svlist
@@ -6490,6 +6492,9 @@ STAR_REFRESH_BUFF_TYPE
 REFRESH_DIRECTION
 ADD_DIRECTION
 RECOVERY_DIRECTION
+{0},{1},{2}
+BATTLE_DIALOG_BATTLEUSEITEM_ERROR_TITLE
+BATTLE_DIALOG_BATTLEUSEITEM_ERROR_CONF
 SELECT_COMMANDSPELL
 BATTLE_DIALOG_USECOMMANDSPELL_ERROR_TITLE
 BATTLE_DIALOG_USECOMMANDSPELL_ERROR_CONF
@@ -6688,6 +6693,7 @@ queue_action.Count:
  isField 
  isSystem 
  isMotion 
+ isLoadServant 
 Is_Skill_Cutin_Player_Side
 Is_Skill_Cutin_Field_Side
 MOTION_SKILL_CUTIN
@@ -6867,10 +6873,11 @@ BATTLE_NOKORIENEMY
 icon_drop_item_0
 ef_masterskill_flash
 frame_master_bg_disable
+skill_partition
 BattleAssetUIAtlas
 frame_cs_bg_disable
-{0}/{1}/{2}
 BATTLE_MASTER_SKILL_CHARGE
+BATTLE_MASTER_SKILL_ADD_SPLIT
 btn_master_skill_disable
 START_TAC
 START_CLOSE
@@ -7172,6 +7179,8 @@ easeType
 easeOutCirc
 effect/ef_command_flash01
 effect/data/effect/ef_skill_rankup01
+skill_item_{0}
+BATTLE_MASTER_SKILL_ADD_NOT_OPEN_COND_COLOR
 BATTLE_SUPERBOSS_TOTALHP
 battle/setup
 MockBattleSetupRequest
@@ -7188,6 +7197,8 @@ followerType
 choiceRandomLimitCounts
 followerRandomLimitCount
 {0}  Lv.{1}
+menu_txt_remaining
+menu_txt_spend
 [BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}
 MAX {0}%
 Close
@@ -7198,6 +7209,9 @@ useItemId
 useItemNum
 battle/useContinue
 MockBattleUseContinueRequest
+battle/useItem
+eventId
+num
 BATTLE_NOBUFFLIST
 BATTLE_ITEMLIST_NOTGET
 BATTLE_ITEM_DISP_COLUMN
@@ -7435,7 +7449,6 @@ COMMON_CONSUME_DESCRIPTION_TITLE
 BOOST_ITEM_USE_CONFIRM_DECIDE
 boxGacha/draw
 boxGachaId
-num
 event_gachabanner_
 event_rewardgacha_
 BOX_GACHA_REWARD_NORMAL_TXT
@@ -8204,6 +8217,8 @@ Effect/EventMission
 ef_mission_extric01
 modifyOpenItem
 panelAfterCallback
+[^0-9]
+{0}×{1}
 COMPLETE_MISSION_ACTION_SUCCESS
 MISSION_ACTION_PRESENT_BOX_FULL_WARNING
 actionAfterCallback
@@ -8338,6 +8353,7 @@ materialservantlimitcountsave.dat
 servantprofilelimitcount.dat
 servantprofileeventjoin.dat
 battleusecontinueitemrequestsave.dat
+battleuseitemrequestsave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -8352,6 +8368,7 @@ mstBannerAdd
 mstBanner
 mstBattleBg
 battle
+beforeBirthDay
 mstBgm
 mstBgmRelease
 mstBoardMessage
@@ -8696,6 +8713,8 @@ DataManager version load error :
 master versiton different (
 DataManager version load error : list file parameter error
 DataManager version load error : list file break
+~{0}
+{1}
 deleted
 updated
 replaced
@@ -8881,7 +8900,6 @@ EVENT_CONQUEST_POS_ITEM_FORMAT
 EVENT_CONQUEST_GET_ITEM_FORMAT
 EVENT_CONQUEST_GET_COUNT_LABEL
 event/dailyPoint
-eventId
 eventDeck/setup
 phase
 deckInfo
@@ -9035,6 +9053,20 @@ event_ranking_
 event_goal_flag
 event_ranking_reward_txt
 event_support_txt
+ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG
+ANOTHER_PAY_INFO_TITLE
+ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO
+ANOTHER_PAY_ITEM_CONFIRM_CHOICES_MSG
+ANOTHER_PAY_CONFIRM_TITLE
+ANOTHER_PAY_ITEM_CONFIRM_MSG
+ANOTHER_PAY_ITEM_RECONFIRM_INFO
+ANOTHER_PAY_ITEM_CONFIRM_INFO
+ANOTHER_PAY_PURCHASED_CONFIRM_MSG
+ANOTHER_PAY_PURCHASED_EFFECT_CONFIRM_MSG
+ANOTHER_PAY_PERIOD_END_MSG
+NO_QUEST_EVENT_SHOP_DECIDE_BUTTON
+ANOTHER_PAY_NORMAL_BUY
+ANOTHER_PAY_ANOTHER_BUY
 EVENT_REWARD_ASSIST_SKILL_LV
 EVENT_REWARD_ASSIST_SKILL_TITLE
 EVENT_REWARD_ASSIST_SKILL_MSG
@@ -9086,7 +9118,6 @@ MENU_SELECT_BULK_ITEM
 MENU_CANCEL
 CHECK_DETAIL
 MENU_DECIDE
-NO_QUEST_EVENT_SHOP_DECIDE_BUTTON
 NORMAL_FINISH
 rewardInfos
 eventActivityPointAddFlag
@@ -9285,6 +9316,7 @@ FavoriteChange1
  in fieldFsm 
 CharaFigure
 {0}/{1}/SplitFile
+{0}/{1}/{2}
 {0}{1}{2}
 SplitFile/{0},{1}
 PathCRC
@@ -9664,9 +9696,16 @@ punch
 rotation
 shake
 PlayMakerLegacyNetworking
+RESET_BIRTHDAY_TITLE
 INPUT_BIRTHDAY_TITLE
 INPUT_BIRTHDAY_INFO
+RESET_BIRTHDAY_NOTICE
 INPUT_BIRTHDAY_NOTICE
+RESET_BIRTHDAY_CONFIRM_TITLE
+RESET_BIRTHDAY_CONFIRM_MESSAGE
+SET_BIRTHDAY_CONFIRM_NOTICE
+SET_BIRTHDAY_CONFIRM_TITLE
+SET_BIRTHDAY_CONFIRM_MESSAGE
 CHECK_BIRTHDAY_TITLE_MESSAGE
 CHECK_BIRTHDAY_MESSAGE
 Strength increases melee damage
@@ -9975,9 +10014,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.27.0
-d9de67294b64c13322980caba715e357e682a9880dd62a1714c90dcf580de970
-20210129_17:00
+2.28.0
+fc55a81ce39abc7ffb607769b6bb6da813274c3eaf249e4430c1061767efb602
+20210205_12:07
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10130,7 +10169,7 @@ img_fp
 CURRENT_FRIEND_POINT_UNIT
 MESSAGE_CHANGE_NO_INPUT
 MasterProfileInfo
-{0}月 {1}日
+BIRTHDAY
 CLICK_CANCLE
 ChangeUserName
 CLICK_SUBMIT
@@ -12593,6 +12632,7 @@ freeStoneNum
 chargeStoneNum
 shop/purchaseByStone
 shop/purchase
+anotherPayFlag
 afterActionBk
 10703
 30101
@@ -12686,6 +12726,7 @@ Servants/Commands/
 Unlit/Transparent Colored_Choco
 Custom/SpriteWithMask_Choco
 overwriteEquipSkills
+addEquipSkills
 resultBgmId
 FadeOutBgmBeforeMovie
 resultEffectId
@@ -13047,7 +13088,6 @@ evCAPTER_SELECT_FINISH
 Effect/Talk/bit_order_grade_get
 PROLOGUE_WAR_IDS
 WAR_CLEAR_MOVIE_
-.usm
 PLAY_OPENING_MOVIE
 effectId
 QUEST_MESSAGE_DLG_MOVIE_DELETE_TITLE
@@ -13083,7 +13123,7 @@ QUEST_CONFIRM_RESET_MSG
 condBattleStart
 terminalDialogMessages
 movieFile
-ops{0:00000}.usm
+.usm
 Effect/Talk/bit_token_get{0}
 bit_token_get{0}
 WarBoard/Terminal/Effect/bit_warclear_get{0}
@@ -13629,6 +13669,7 @@ masterverticalImageSet
 communicatioChara
 structure error
 selectBranchSkipTrueColor
+[r][r]
 capture error
 masterSeneLoad
 Distortion
@@ -14299,6 +14340,9 @@ img_bg_spsummon
 img_bg_hgd
 UpdateRemainTime
 remainDays
+useAnotherPayCommonReleaseId
+anotherItemIds
+anotherPayType
 LIMITED_SHOP_REMAIN_DAYS
 MONTHLY_SHOP_REMAIN_DAYS
 addMessage
@@ -15366,7 +15410,6 @@ card/voice
 refresh/top
 signup/top
 TouchEffect
-[^0-9]
 limitSeqId_{0}
 fixAppearanceId_
 relationBgmIds
@@ -15791,7 +15834,6 @@ B2550
 bgChangeEffectType
 bgChangeEffectTime
 eventTowerId
-{0},{1},{2}
 WARBOARD_MENU_TITLE_LABEL
 WARBOARD_MENU_SUSPEND_BUTTON_LABEL
 WARBOARD_MENU_RETIRE_BUTTON_LABEL
