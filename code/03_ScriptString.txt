@@ -7501,6 +7501,9 @@ ProgressSelfTurn
 ProgressTurnCond
 CardEffectId
 battleEndNotReduceTurnFlag
+Self
+Opponent
+Check{0}BuffTypes
 MANA_NEED_INFO
 RARE_PRI_NEED_INFO
 STONE_FRAGMENTS_NEED_INFO
@@ -7577,6 +7580,7 @@ battleVoice
 randomLimitCount
 randomLimitCountSupport
 limitCountSupport
+isPush
 card/lockSync
 lockUserSvtIds
 unlockUserSvtIds
@@ -7632,9 +7636,16 @@ button_alllock_reg
 button_alllock_unreg
 button_allchoice_reg
 button_allchoice_unreg
+button_push_reg
+button_push_unreg
 SERVANT_LIST_EXPLANATION_STATUS
 SERVANT_LIST_EXPLANATION_LOCK
 SERVANT_LIST_EXPLANATION_CHOICE
+SERVANT_LIST_EXPLANATION_PUSH
+SERVANT_STATUS_PUSH_CONFIRM_TITLE
+SERVANT_STATUS_PUSH_CONFIRM_MESSAGE
+SERVANT_STATUS_PUSH_CONFIRM_DECIDE
+SERVANT_STATUS_PUSH_CONFIRM_CANCEL
 UICharaGraphTexture
 UICharaGraphTexture(
 -I
@@ -7937,6 +7948,7 @@ FAVORITE_SERVANT
 LOCK_SERVANT
 CHOICE_SERVANT
 SAME_SERVANT
+SELECT_PUSH
 NONSELECT_MATERIAL_BASE_LVMAX
 NONSELECT_NPUP_BASE
 NONSELECT_UNDER_STATUS_MAX
@@ -7977,6 +7989,7 @@ SortInfo
 MarkObject
 ScaleChangeButton
 CombineServant
+OnClickSelectPush
 OnClickSelectBase
 OnClickSelectMaterial
 OnPressCancel
@@ -8441,6 +8454,7 @@ mstEventItemDisplay
 mstEventItemDisplayRelease
 mstEventLocationCampaign
 mstEvent
+mstEventMissionActionAdd
 mstEventMissionAction
 mstEventMissionAdd
 mstEventMissionConditionDetail
@@ -9793,6 +9807,7 @@ SvtEquipEffectFilterNew-
 ChoiceSortOrder-
 PresentBoxSortFilterNew-
 PresentBoxRaritySortFilterNew-
+ScrollBarValue-
 SERVANT_SORT_KIND_PARTY
 SERVANT_SORT_KIND_CREATE
 SERVANT_SORT_KIND_RARITY
@@ -10014,9 +10029,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.28.0
-fc55a81ce39abc7ffb607769b6bb6da813274c3eaf249e4430c1061767efb602
-20210205_12:07
+2.29.0
+0006d67d6c52666b893dfddfe6bfe2eedf841a9135e7bf941dc82e2fabf1eab7
+20210219_17:47
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12558,6 +12573,7 @@ WarBoardPartyServant
 PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_STATUS
 PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_LOCK
 PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_CHOICE
+PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_PUSH
 TICKET_SUMMON_DETAIL
 TICKET_NUM
 PAY_SUMMON_DETAIL
@@ -13132,7 +13148,6 @@ Effect/Talk/bit_harvest_get{0}
 bit_harvest_get{0}
 bit_treasure_get
 NoticeLastModified
-bit_order_grade_get
 EVENT_INIT
 SellServant
 ServantEquipList
@@ -13149,6 +13164,7 @@ evEVENT_FINISH
 QUEST_MESSAGE_DLG_DECIDE
 QUEST_MESSAGE_DLG_MOVIE_DOWNLOAD_TITLE
 QUEST_MESSAGE_DLG_MOVIE_PLAY_TITLE
+bit_order_grade_get
 evEVENT_MESSAGE_FINISH
 QUSET_BOARD_EFFECT_DISAPPEAR_MESSAGE
 Map Touch Enable
@@ -13937,6 +13953,7 @@ CommandCard
 ServantOperation
 OnClickLockModeItem
 OnClickChoiceModeItem
+OnClickPushModeItem
 EXCHANGE_CAMPAIGN_SELL_MSG
 Fgo_20191115
 Fgo_20191029
@@ -16015,6 +16032,7 @@ WAREHOUSE_EXPLANATION_PUT_IN
 WAREHOUSE_EXPLANATION_PUT_OUT
 WAREHOUSE_EXPLANATION_LOCK
 WAREHOUSE_EXPLANATION_CHOICE
+WAREHOUSE_EXPLANATION_PUSH
 SELECT_PARTY_EQUIP
 SUPPORT_EQUIP
 COMMON_EQUIP_USED
