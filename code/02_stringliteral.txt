@@ -5400,6 +5400,7 @@ isGdprCountryIncluded
 isGdprUserNeedConfirm
 isGdprUserAllowed
 setGdprUserAllowed
+getMetapsInstallId
 updateCreateNotificationChannel
 deleteNotificationChannel
 getDeferredDeepLink
@@ -9944,8 +9945,10 @@ MAIN_MENU_BAR_SELECT_SHOP
 MAIN_MENU_BAR_SELECT_FRIEND
 MAIN_MENU_BAR_SELECT_MYROOM
 icon_servant_exchange_available_{0}
+AdManager Initialize error.(Start) message=
 CommonUI/UI Root/SystemUICamera
 MovieRoot
+AdManager Initialize error.(reboot) message=
 IsNotificationStatusSend
 IsReBootCacheClearKey
 yyyy年MM月dd日HH時mm分
@@ -9962,9 +9965,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.30.0
-dd800c60425066895b73abf72a98d8309710308992730bffd116b996d3265bf9
-20210226_14:12
+2.30.2
+c0aa7f1834892603e15c5dfdf19b27fffa0acc120897328ec4b2290a18ae6f80
+20210305_12:01
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
