@@ -10000,9 +10000,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.32.0
-5a9a25d2f94df0737f98f5ba3e8a7fe08d2eaa1da8c960f063a4970f0e23012d
-20210416_19:32
+2.32.1
+c5148d15d05ccafd991bcce706d4b4be0c68d96f48edc5ed442565142acebc90
+20210421_17:23
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
