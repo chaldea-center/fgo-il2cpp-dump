@@ -1,14 +1,14 @@
 import argparse
 import json
 from pathlib import Path
-from typing import Dict
+from typing import Dict, Union
 
 
 bad_line_starts = ("/*", "//", "|", "*/")
 bad_line_contains = ("PrivateImplementationDetails", "{}")
 
 
-def main(input_dump: str, output_dump: str) -> None:
+def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
     input_path = Path(input_dump).resolve()
     output_path = Path(output_dump).resolve()
 

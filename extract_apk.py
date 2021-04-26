@@ -1,8 +1,7 @@
 import argparse
 from pathlib import Path
 from zipfile import ZipFile
-
-bad_line_starts = ("/*", "//", "|")
+from typing import Union
 
 
 FILES_TO_EXTRACT = [
@@ -11,7 +10,7 @@ FILES_TO_EXTRACT = [
 ]
 
 
-def main(input_dump: str, output_folder: str) -> None:
+def main(input_dump: Union[str, Path], output_folder: Union[str, Path]) -> None:
     output = Path(output_folder).resolve()
     output.mkdir(parents=True, exist_ok=True)
 
