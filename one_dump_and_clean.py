@@ -17,16 +17,13 @@ def main(apk_path: str, il2cppdumper: str) -> None:
 
     metadata = apk_folder / "global-metadata.dat"
     il2cpp = apk_folder / "libil2cpp.so"
-    p = subprocess.Popen(
-        [
-            il2cppdumper,
-            str(il2cpp),
-            str(metadata),
-            str(apk_folder),
-        ],
-        stdin=subprocess.PIPE,
-        shell=True,
-    )
+    commands = [
+        il2cppdumper,
+        str(il2cpp),
+        str(metadata),
+        str(apk_folder),
+    ]
+    p = subprocess.Popen(" ".join(commands), stdin=subprocess.PIPE, shell=True)
     p.communicate(input=b"a\n")
 
     clean_dump.main(apk_folder, code_folder)
@@ -41,7 +38,7 @@ def main(apk_path: str, il2cppdumper: str) -> None:
         if line.startswith("2021"):
             date = line.strip()
             date = f"{date[:4]}_{date[4:6]}_{date[6:]}"
-            version = string_literal[i - 2]
+            version = string_literal[i - 2].strip()
             break
 
     if date is not None and version is not None:
