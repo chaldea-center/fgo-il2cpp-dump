@@ -8351,13 +8351,10 @@ UnityWebRequestNetworkTest CretificatesCheckError simpleName={0}, spkiHash={1}
 *.fate-go.jp
 hMTjJKbSxkOe6YYfgjp1dSz+5wed2BKGvkW21gmouX0=
 *.data.fate-go.jp
-tK+QOP631fTjQiI7VEqpAuS3QV2QlYfqrWZhLirZ1SM=
-VQOyqRojQrRjIZT3ZFwTJKMWsvjy7IE+hsSLvYUm+d0=
 ZWsq+RVmQ1Vi1lLH+oEAJ/HUWJbzWi59D9M65x68Ito=
 fQuysEa2I6kUd3WlXaoci1HktLLWGuQudiz+mVwtC8o=
+Bku9kTXFKZY7Di9bbfM/xrIicozwrFV51cDzOFssQb4=
 *.fategrandorder.jp
-Jx61JJK2f+S9BGf2GOx0dYD3h+gGWVRzdqodXC77wQk=
-TgtYdAbL45xnGVzAFdx3bVdd4V0OsRTtwrVKxEkFLUk=
 u6jRjeFS14mo3waDQEOcqMoYlwoHaf3vgAtk4qsRLpc=
 LAST_WAR_ID
 wo11
@@ -8735,7 +8732,9 @@ mstWarBoardSquare
 mstWarBoardStageLayout
 mstWarBoardStage
 mstWarBoardStageNpc
+mstWarBoardStagePieceDetail
 mstWarBoardTacticalTrend
+mstWarBoardTreasure
 mstWarGroup
 mstWar
 MASTER_DATA_EMPTY_LIST{0:000}
@@ -10000,9 +9999,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.32.2
-55fb1bc613ea46cd9e0433ab47c0dc2400b79f2e62b5618883448b2beccb7c82
-20210423_17:41
+2.33.0
+e75943a679ac22b9990516d750a732b55393e4df65d335d4634700b193255b48
+20210507_22:55
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10292,6 +10291,7 @@ LateUpdate
 OnSubmitChange
 OnSliderChange
 OnChange
+Jx61JJK2f+S9BGf2GOx0dYD3h+gGWVRzdqodXC77wQk=
 SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER
 userCreateServer
 
@@ -10328,6 +10328,7 @@ dataVer
 dateVer
 lastAccessTime
 verCode
+idempotencyKey
 CommunicationStart
 SERVER_CERTIFICATE_ERROR_TITLE
 SERVER_CERTIFICATE_ERROR_ANDROID
@@ -12950,6 +12951,7 @@ war_board_start
 war_board_setup
 war_board_buff_save
 war_board_move
+war_board_treasure
 war_board_turn_end
 war_board_master_attack
 war_board_command_spell
@@ -13635,6 +13637,7 @@ startEnd
 startFade
 startFade2
 load2
+x-small
 [align]
 [align center]
 [align right]
@@ -14427,7 +14430,7 @@ SHOP_BUY_EVENT_ITEM
 SHOP_SELL_SERVANT
 SHOP_BUY_MANA_ITEM
 SHOP_BUY_RARE_PRI
-SHOP_BUY_SHOP04
+SHOP_BUY_SVT_COSTUME
 SHOP_BUY_SERVANT_STORAGE
 SHOP_BUY_SERVANT_EQUIP_STORAGE
 SHOP_BUY_STONE_FRAGMENTS
@@ -15705,19 +15708,19 @@ RECEIVE_ALL_DONE
 RECEIVE_FILTER_NOTHING
 PRESENT_EXPIRED_ERROR_MESSAGE
 SUMMON_EVENT_SERVANT_TITLE_JOIN
-PRESENT_HISTORY_DATE_TIME_FORMAT
-PRESENT_HISTORY_NO_HISTORY_MESSAGE
 PresentHistoryButton
 PRESENT_SELECT_INFO
 SHOW_EFFECT
-PRESENT_HISTORY_DIALOG_SUBTITLE
-PRESENT_HISTORY_DIALOG_TITLE
 PRESENT_RECIEVE_DIALOG_SUBTITLE
 PRESENT_RECIEVE_DIALOG_SUBTITLE_SMALL
 PRESENT_RECIEVE_DIALOG_TITLE
 PRESENT_RECIEVE_DIALOG_CANCEL
 PRESENT_RECIEVE_DIALOG_DECIDE
+PRESENT_HISTORY_DIALOG_SUBTITLE
+PRESENT_HISTORY_DIALOG_TITLE
+PRESENT_HISTORY_NO_HISTORY_MESSAGE
 PRESENT_INFO
+PRESENT_HISTORY_DATE_TIME_FORMAT
 present/history
 present/list
 MockUserPresentListResponse
@@ -15879,6 +15882,7 @@ WARBOARD_MENU_RETIRE_CONFIRMATION_TITLE
 WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE
 WARBOARD_MENU_RETIRE_CONFIRMATION_YES
 WARBOARD_MENU_RETIRE_CONFIRMATION_NO
+WARBOARD_MENU_RETIRE_CONFIRMATION_MESSAGE_GET_TREASURE
 BG/BackButton
 WAR_BOARD_BATTLE_LOSE_BGM
 WAR_BOARD_BATTLE_WIN_HIDE_RESULT_TYPES
@@ -15956,6 +15960,7 @@ WarBoard/Background/{0}
 WarBoard/ImageSet/{0}
 Square
 Road
+Treasure
 MasterPiece
 ServantPiece
 EffectStart
@@ -15966,6 +15971,7 @@ EffectLose
 EffectAttackMasterPiece
 EffectEncount
 ItemIcons
+DropItemIconsAtlas
 EffectIconsAtlas
 CameraRoot
 SeSetting
@@ -15990,6 +15996,7 @@ class2_{0}
 PartyOrganization/PartyServantSelectMenu
 MasterDamage
 WARBOARD_TURN_BASE
+icon_drop_item_{0:00}
 warBoard/resume
 road
 road_on
@@ -15997,7 +16004,9 @@ bas1
 bas10
 bas13
 servant_base_{0}
+icon_strong_enemy
 onBoard_initial_placement_class2_{0}
+WARBOARD_PIECE_ICON_SVT_LV
 ServantDying
 Servant_Dead_Effect
 warBoard/setup
@@ -16005,6 +16014,10 @@ squareIndexes
 userSvtEquips
 square{0:D3}
 squares
+WARBOARD_INFO_POPUP_SVT_ATK
+WARBOARD_INFO_POPUP_SVT_HP
+WARBOARD_INFO_POPUP_SVT_DETAIL_BUTTON
+WARBOARD_INFO_POPUP_SVT_LV
 {0:#,0} / {1:#,0}
 WARBOARD_SERVANT_INFO_ENEMY_ATK
 Move_Point_{0}
@@ -16012,7 +16025,24 @@ Move_Point_0
 WARBOARD_SQUARE_COST
 PlayUnDispCostAnim2
 FinishUnDispCostAnim
+{0}:{1}:{2}:{3}
+warBoardSvtDetail
 warBoard/start
+icon_drop_item_L_{0:00}
+CommonTreasureGet
+CommonTreasureGetPlus
+CommonTreasureGetPlus2
+RareTreasureGet
+RareTreasureGetPlus
+RareTreasureGetPlus2
+SrareTreasureGet
+SrareTreasureGetPlus
+SrareTreasureGetPlus2
+WARBOARD_GET_TREASURE_DIALOG_MESSAGE
+WARBOARD_GET_TREASURE_DIALOG_TITLE_GET
+WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT
+warBoard/treasure
+treasureId
 warBoard/turnEnd
 WAREHOUSE_CONFIRM_PUT_IN_TITLE
 WAREHOUSE_CONFIRM_PUT_IN_MESSAGE
