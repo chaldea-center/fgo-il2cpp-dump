@@ -4080,6 +4080,7 @@ _Color
 _MainTex
 Zero-sized array is not allowed.
 array has less elements than passed count.
+Invalid matrix index!
 Invalid column index!
 {0:F5}	{1:F5}	{2:F5}	{3:F5}
 {4:F5}	{5:F5}	{6:F5}	{7:F5}
@@ -6570,6 +6571,7 @@ FOCUS_CENTER_EX
 FOCUS_CENTER
 FOCUS_UNDER_EX
 FOCUS_UNDER
+LOSS_COMMAND_SPELL
  funcEnt.funcType : 
   => targetId : 
   <= no Target
@@ -6764,8 +6766,10 @@ FOUR_PILLARS
 Battle/Gimmick/{0}
 gimmick
 ef_special_invincible
+Effect/CutIn/Skill/{0}
 Battle/TurnEffect/
 SKIP_SKILL_CUTIN
+{0}_{1}_{2}
 EventInfoPointGaugeControl
 TopDialogPanel
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
@@ -7176,6 +7180,7 @@ raid_down_normal_
 raid_down_last_
 raid_down_end_
 icon_sealact_seal
+icon_sealact_disable
 icon_sealact_skill
 updateSealActSpriteValues
 completeSealActSpriteValues
@@ -7665,9 +7670,6 @@ UICommandGraphTexture
 UICommandGraphTexture(
 circleOut
 Custom/Sprite-ScriptActionFigureWipe
-[FFFFFF]
-[AAAAAA]
-This is an example paragraph for the text list, testing line 
 checkDateVersion/check
 CONFIRM_TITLE_SVT_COMBINE
 COMBINE_LAST_EQUIP_CMD_SVT_INFO
@@ -8858,7 +8860,6 @@ cord_b
 Window/CloseBtn
 dialogMessage_{0}_{1}
 cpcount
-http://www.yourwebsite.com/logo.png
 DROP_AUTOSELL_TITLE
 DROP_AUTOSELL_MSG
 DROP_AUTOSELL_EXP_TXT
@@ -8900,7 +8901,6 @@ default_clearance
 default_text_color
 FontSize
 cutinId
-UpdateAnchors
 GENERIC_ERROR_MESSAGE
 SERVANT_EQUIP_OPERATION_EXPLANATION_STATUS
 SERVANT_EQUIP_OPERATION_EXPLANATION_LOCK
@@ -8967,6 +8967,12 @@ box_status_side_03
 box_status_side_04
 EVENT_TOTALBOXGACHA_TOTAL_FORMAT
 EVENT_TOTALBOXGACHA_NEXT_FORMAT
+CHRONOLOGY_OPEN_BUTTON
+chronology_button
+Terminal/Info/TitleInfoChronologyDialogPrefab
+CHRONOLOGY_DIALOG_TITLE
+CHRONOLOGY_DIALOG_CLOSE
+chronology_line
 EVENT_POINT_COMMON_FORMAT
 EVENT_COMMAND_BUFF_POINT_COUNT_STOP
 EVENT_CONQUEST_GET_TITLE
@@ -9020,6 +9026,7 @@ EVENT_RAID_TIME_OVER_TXT
 {0:D2}:{1:D2}:{2:D2}[-]
 [FF0000]
 [FFFF00]
+[FFFFFF]
 baseObject
 event_itembase
 EVENT_SUBMARINE_RESOURCE_TITLE
@@ -9690,15 +9697,6 @@ SET_BIRTHDAY_CONFIRM_TITLE
 SET_BIRTHDAY_CONFIRM_MESSAGE
 CHECK_BIRTHDAY_TITLE_MESSAGE
 CHECK_BIRTHDAY_MESSAGE
-Strength increases melee damage
-Constitution increases health
-Agility increases armor
-Intelligence increases mana
-Damage adds to the amount of damage done in combat
-Crit increases the chance of landing a critical strike
-Armor protects from damage
-Health prolongs life
-Mana increases the number of spells that can be cast
 PAYSTONE_INFO_TITLE
 FREESTONE_INFO_TITLE
 STONE_INFO_NOTICE
@@ -9999,9 +9997,9 @@ DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
 課金エラー:AccountingManager:Initialize end result [
-2.33.2
-d7b0487bc1480e6cf429e6b3bb8022f602394f27e3ca83ff5488d11cee770dc1
-20210520_11:06
+2.34.0
+8e5a38167936e5521ef270b425bc44dd225a913ccb1af1d45d7f8d41449937ea
+20210603_17:19
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12515,6 +12513,7 @@ MENU_SUPPORT_ONLY_QUEST_START
 MENU_PARTY_SELECT
 MENU_PARTY_OGRANIZATION_CHANGE
 MENU_PARTY_OGRANIZATION_SWAP
+WaitQuest
 MENU_BACK
 PARTY_ORGANIZATION_DECIDE_WARNING_TITLE_COST_OVER
 PARTY_ORGANIZATION_DECIDE_WARNING_MESSAGE_COST_OVER
@@ -12584,7 +12583,6 @@ changedItems
 startingIndex
 newItems
 oldItems
-idle
 RAID_MARKDISP_STEP
 raid_point_frame_old
 status_raid_point_frame
@@ -12783,6 +12781,8 @@ isScriptPlayForWarBoard
 assistIds
 assistIdWeight
 hideAssistConfButton
+questPhaseScript_1
+questPhaseScript_2
 movieFolder
 moviePlayType
 effectColor
@@ -12809,6 +12809,8 @@ box_g_lock
 box_g_open
 QUEST_CLEAR_COSTUME_GET
 QUEST_CLEAR_REWARD_GET
+title_
+sub_title_
 quest_main
 quest_free
 quest_event
@@ -13094,6 +13096,7 @@ EV_SCENE_STATUS_INIT
 evGO_CALDEA
 EV_SCENE_STATUS_RESUME_FROM_SCRIPT
 EV_SCENE_STATUS_RESUME
+QUEST_CHAPTER_CLOSED_SPECIAL_308
 evCAPTER_CREATE_FINISH
 evCAPTER_SELECT_FINISH
 Effect/Talk/bit_order_grade_get
@@ -13274,6 +13277,8 @@ branchNotMaterial
 branchQuestClear
 branchQuestNotClear
 revivalBranch
+branchRouteSelect
+branchNotRouteSelect
  - 1
 Figure
 Equip
@@ -13476,6 +13481,7 @@ fowardEffectDestroy
 effectPause
 effectStart
 effectStop
+effectForceStop
 effectDestroy
 backEffect
 backEffectPause
@@ -13781,7 +13787,6 @@ Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)
 fbxevent
 NoblePhantasm/
 Effect/weapon/
-Effect/CutIn/Skill/{0}
 Servants/Motion/
 {0:D0}_{1}
 effect/ef_shadow0
@@ -14226,8 +14231,6 @@ OPTION_BLACKLIST_EXPLANATION
 CLICK_BLACKLIST
 img_gachatxt_0
 img_gachatxt_10
-White
-Magenta
 OPTION_FRIEND_MESSAGE_DISP
 OPTION_FRIEND_MESSAGE_EXPLANATION
 banner_event_002
@@ -14425,7 +14428,7 @@ SpecialItemHelp
 SHOP_EVENT_RETURN_ERROR
 SHOP_SCENE_VOICE_CANCEL
 SHOP04_SHOP_STATE
-BGM_EVENT_134
+BGM_EVENT_128
 SHOP_ITEM_TIME_LIMIT
 SHOP_BUY_EVENT_ITEM
 SHOP_SELL_SERVANT
@@ -14452,6 +14455,7 @@ cutInPrefabSizes
 cutInCamPlayerAll
 cutInMessageMode
 OverwriteMotion_{0}
+skillScript_1
  ＋ 
 LEVEL_DETAIL_INFO
 Target
@@ -14464,6 +14468,7 @@ EnableTarget
 AddIndiv
 actRarity
 svtBgmChange
+noTargetSkipSkill
 indv
 beforeClearBgmId
 afterClearBgmId
@@ -15331,7 +15336,7 @@ EVENT_TOWER_REWARD_GET_2
 tower_{0}_{1}
 onAnimEnd
 tower_img_base{0:00}_stamp
-EventUI/Prefabs/
+EventUI/Prefabs/{0}/{1}
 event_superboss_hp_lower
 event_superboss_hp_upper
 event_superboss_hp_split_frame
@@ -15502,6 +15507,7 @@ Premultiplied
 Unity Bug
 OnSelect
 OnScroll
+UpdateAnchors
 OnKey
 OnDragStart
 OnDragOver
@@ -15583,15 +15589,6 @@ COMBINE_RES_INFO
 
 Input Highlight
 Input Caret
-[-]
-
-[AFAFAF]Level 
-
-[FF0000]
-
-[00FF00]+
-
-[FF9900]
 RANKUP_GRADIENT_TOP
 RANKUP_GRADIENT_BOTTOM
 RANKUP_OUTLINE
@@ -16172,6 +16169,11 @@ iTween Camera Fade
 TweenDelay
 namedcolorvalue
 params
+_MainCamVPMatrix
+_ParallelViewMatrix
+_ParallelProjectionMatrix
+_ProjectorMatrixVP
+_ProjectorPos
 Spot_Line_
 StateQaaEnd
 JNI: Unknown generic array type '
