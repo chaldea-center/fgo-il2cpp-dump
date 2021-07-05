@@ -3718,6 +3718,7 @@ MatchCollection in invalid state
 'Current' called after 'MoveNext()' returned false
 input
 startat
+evaluator
 replacement
 overlapping?
 Shouldn't happen
@@ -4071,6 +4072,7 @@ layerNames
 Location service updates are not enabled. Check LocationService.status before querying last location.
 Null
 {0}
+{0}: {1}
 ManagedStream object must be non-null
 ManagedStream object must be readable (stream.CanRead must return true)
 ManagedStream object must be seekable (stream.CanSeek must return true)
@@ -4250,20 +4252,6 @@ equal
 The input asset name cannot be null.
 The input asset name cannot be empty.
 The input type cannot be null.
-Can't set handle: the playable is not an AudioClipPlayable.
-Can't set handle: the playable is not an AudioMixerPlayable.
-Can't set handle: the playable is not an AudioPlayableOutput.
-Length of created clip must be larger than 0
-Number of channels in created clip must be greater than 0
-Frequency in created clip must be greater than 0
-GVR Audio Spatializer
-One shot audio
-DynamicMaterial
-({0})
-Font size and style overrides are only supported for dynamic fonts. Font '{0}' is not dynamic.
-BestFit is only supported for dynamic fonts. Font '{0}' is not dynamic.
-Font '{0}' is not dynamic, which is required to override its size
-Font '{0}' is not dynamic, which is required to override its style
 charset
 Unsupported encoding '{0}': {1}
 Cannot create a preallocated-buffer DownloadHandlerScript backed by a null or zero-length array
@@ -4272,9 +4260,11 @@ Cannot set a UnityWebRequest's method to an empty or null string
 HTTP/1.1 {0} {1}
 http://localhost/
 UnityWebRequest has already been sent and its URL cannot be altered
+UnityWebRequest has already been sent and its chunked transfer encoding setting cannot be altered
 UnityWebRequest has already been sent; cannot modify the upload handler
 UnityWebRequest has already been sent; cannot modify the download handler
 UnityWebRequest has already been sent; cannot modify the certificate handler
+Cannot create a data handler without payload data
 text/plain; charset="
 .png
 .dat
@@ -4292,6 +4282,31 @@ Content-disposition: form-data; name="
 jar
 file:/
 ^\s*\w+(?:\.\w+)+(\/.*)?$
+Can't set handle: the playable is not an AudioClipPlayable.
+Can't set handle: the playable is not an AudioMixerPlayable.
+Can't set handle: the playable is not an AudioPlayableOutput.
+Length of created clip must be larger than 0
+Number of channels in created clip must be greater than 0
+Frequency in created clip must be greater than 0
+GVR Audio Spatializer
+One shot audio
+DynamicMaterial
+({0})
+Font size and style overrides are only supported for dynamic fonts. Font '{0}' is not dynamic.
+BestFit is only supported for dynamic fonts. Font '{0}' is not dynamic.
+Font '{0}' is not dynamic, which is required to override its size
+Font '{0}' is not dynamic, which is required to override its style
+Raw data access is not supported for asset bundles
+String access is not supported for asset bundles
+{}[],:"
+false
+null
+\b
+\f
+\n
+\r
+\t
+\u
 Can't set handle: the playable is not an AnimationClipPlayable.
 Can't set handle: the playable is not an AnimationLayerMixerPlayable.
 layerIndex
@@ -4492,7 +4507,13 @@ Unimplemented:
 JsonUtility.ToJson does not support engine types.
 Cannot deserialize JSON to new instances of type '
 .'
+Cannot set productId to an empty or null string
+Cannot set currency to an empty or null string
+Cannot set custom event name to an empty or null string
+Invalid type: {0} passed
 String access is not supported for audio clips
+You are trying to load data from a www stream which has not completed the download yet.
+You need to yield the download or wait until isDone returns true.
 
 -----------------
 IL2CPP Root Domain
@@ -4537,6 +4558,83 @@ Saving root certs in {0} ({1} is not writable)
 Firebase.Platform.cacrl_pem.txt
 Firebase.Platform.caintermediatecrl_pem.txt
 Installing {0} certs
+{0,6}|{1,6}|{2,7}|{3} {4} UnusedBits:{5} : 
+'
+
+      |      |       | 
+{0,6}|{1,6}|{2,7}|{3} {4} : {5} [{6}]
+
+{0,6}|{1,6}|{2,7}|{3} {4} : 
+{0,6}|{1,6}|{2,7}|{3} {4} : {5}
+
+Failed to load data.
+Offset| Len  |LenByte|
+
+======+======+=======+
+CONTEXT SPECIFIC (
+APPLICATION (
+PRIVATE (
+CONSTRUCTED (
+UNIVERSAL (
+BOOLEAN
+INTEGER
+BIT STRING
+OCTET STRING
+OBJECT IDENTIFIER
+OBJECT DESCRIPTOR
+RELATIVE-OID
+EXTERNAL
+REAL
+ENUMERATED
+UTF8 STRING
+SEQUENCE
+SET
+NUMERIC STRING
+PRINTABLE STRING
+T61 STRING
+VIDEOTEXT STRING
+IA5 STRING
+UTC TIME
+GENERALIZED TIME
+GRAPHIC STRING
+VISIBLE STRING
+GENERAL STRING
+UNIVERSAL STRING
+BMP STRING
+UNKNOWN TAG
+Failed to decode OID value: 
+k_AppleReceiptKey
+k_PKCS7Key
+k_ReceiptBytesKey
+CN: 
+
+ON: 
+
+Unit Name: 
+
+Country: 
+<RSAKeyValue><Modulus>
+</Modulus><Exponent>
+</Exponent></RSAKeyValue>
+productID
+reason
+price
+currency
+unity.PurchaseFailed
+subtype connot be longer than {0}
+data cannot be longer than {0}
+No impl available!
+Trying to purchase null Product
+purchase({0})
+Unable to purchase unknown product with id: {0}
+Unable to confirm purchase with null Product
+Unable to confirm purchase; Product has missing or empty transactionID
+Failed to purchase unknown product {0}
+onPurchaseFailedEvent({0})
+Already recorded transaction 
+Unavailable product {0} -{1}
+Unity
+UnityPurchasing
 Name: 
 
 eventCamera: 
@@ -4821,7 +4919,6 @@ Bad array index:
 Bad param index: 
 Save Action: Unsupported parameter type: 
 ActionTarget: 
-null
 none
 HutongGames.PlayMaker.UpdateHelper
 SetDirty
@@ -4966,6 +5063,296 @@ Yellow
 Orange
 Red
 Purple
+iOS
+Android
+UnityEngine.Advertisements.Purchasing,UnityEngine.Advertisements
+UnityEngine.Advertisements.Purchasing,UnityEngine.Advertisements.
+SendEvent
+RetrieveProducts
+Purchase
+FinishTransaction
+OnSetupFailed
+OnProductsRetrieved
+OnPurchaseSucceeded
+OnPurchaseFailed
+onProductPurchaseDeferred
+onPromotionalPurchaseAttempted
+onTransactionsRestoredSuccess
+onTransactionsRestoredFail
+onAppReceiptRefreshed
+onAppReceiptRefreshFailed
+com.android.billingclient.api.BillingClientStateListener
+Unity IAP
+IAP
+catalog.json
+Unable to cache IAP catalog
+{0}/{1}
+https://catalog.iap.cloud.unity3d.com
+Fetching IAP cloud catalog...
+products
+store_ids
+Error parsing JSON
+Failed persisting IAP catalog
+Error loading cached catalog
+Fetched catalog
+Error parsing IAP catalog
+Failed to fetch IAP catalog, using cache.
+unity.cloud_userid
+unity.player_sessionid
+com.ballatergames.debug - {0}
+SendPurchasingEvent
+fake
+$0.01
+Fake title for 
+Fake description
+USD
+storeSpecificId
+Unknown
+{ "this" : "is a fake receipt" }
+failed a fake store purchase
+com.android.billingclient.api.AcknowledgePurchaseResponseListener
+getSku
+com.android.billingclient.api.ConsumeResponseListener
+OnAllPurchasesRetrieved
+GooglePlay
+ {code: 
+, M: GPSFTS.HFT}
+GooglePlayStoreService state ({0}) unrecognized, cannot process ProductDescriptionQuery
+com.android.billingclient.api.PriceChangeConfirmationListener
+SKU does not exist in the store.
+com.android.billingclient.api.PurchasesUpdatedListener
+ {M: GPUL.HEC} - Response Code = 
+PurchaseState is UNSPECIFIED_STATE, no more details exists {M: GPUL.OPO}
+User cancelled purchase
+Item already owned
+ {M: GPUL.OPF}
+UnityEngine.UDP.Inventory
+GetProductList
+GetPurchaseInfo
+HasPurchase
+metadata
+receipt
+transactionId
+productId
+message
+Reason key not found in purchase failure json: 
+Unknown ProductID
+localizedPrice
+localizedPriceString
+localizedTitle
+localizedDescription
+isoCurrencyCode
+enabled
+payouts
+typeString
+st
+subtype
+q
+quantity
+https://events.iap.unity3d.com/events
+storeSpecificErrorCode
+https://ecommerce.iap.unity3d.com
+UnityIAP
+JSONStore init has no reference to SPM, can't start managed store
+iapPromo
+UnityIAP: Promo Purchase(
+iap.purchase
+iap_service
+amount
+com.unity.purchasing.common.IUnityCallback
+java.util.ArrayList
+\\u(?<Value>[a-zA-Z0-9]{4})
+Value
+com.android.billingclient.api.BillingClient$BillingResponseCode
+USER_CANCELED
+ITEM_ALREADY_OWNED
+com.android.billingclient.api.BillingFlowParams
+com.android.billingclient.api.ConsumeParams
+com.android.billingclient.api.AcknowledgePurchaseParams
+com.android.billingclient.api.BillingClient
+newBuilder
+setListener
+enablePendingPurchases
+startConnection
+queryPurchases
+querySkuDetailsAsync
+launchBillingFlow
+setSkuDetails
+setOldSku
+setReplaceSkusProrationMode
+setObfuscatedProfileId
+setObfuscatedAccountId
+setPurchaseToken
+consumeAsync
+acknowledgePurchase
+getResponseCode
+getDebugMessage
+More than one SKU found when purchasing SKU 
+. Please verify your Google Play Store in-app product settings.
+getPurchaseState
+getOrderId
+getOriginalJson
+getSignature
+getPurchaseToken
+isAcknowledged
+getPurchasesList
+Failed to retrieve Purchase from Purchase List at index 
+ of 
+. FillPurchases will skip this item
+com.android.billingclient.api.Purchase$PurchaseState
+PURCHASED
+PENDING
+com.android.billingclient.api.BillingClient$SkuType
+INAPP
+SUBS
+Failed to bind to native store: 
+com.unity.purchasing.amazon.AmazonPurchasing
+com.unity.purchasing.samsung.SamsungPurchasing
+Cannot set Android target to UDP. Make sure you have installed UDP in your project
+IAPProductCatalog
+UnityEngine.UDP.ProductInfo
+Currency
+Price
+PriceAmountMicros
+ProductId
+Title
+n/a
+appid
+platform
+platformid
+gameId
+sdk_ver
+deviceid
+userid
+sessionid
+build_guid
+iap_ver
+gamerToken
+trackingOptOut
+abGroup
+store_abgroup
+catalogid
+iap_test
+store
+game_ver
+osv
+w
+h
+ppi
+orient
+UnityIAP: Promo initialized with null logger!
+UnityIAP Promo
+Trying to update list without manager or products ready
+Attempt to set promo products without a valid purchaser!
+iapProductId
+productType
+imageUrl
+Clearing promo product metadata
+UnityIAP: Initialization complete with  
+ items
+Promo received null or empty command
+purchaseTrackingUrls
+purchase
+setids
+UnityIAP Promo: AdUnit closed without purchase
+Unknown request received: 
+Exception while processing incoming request: 
+Promo purchase attempted without proper configuration
+Promo purchase unable to determine Product ID
+Promo purchase argument exception
+Promo product is null or empty!
+Promo product lookup failed
+{0}={1}
+com.android.billingclient.api.SkuDetailsParams
+inapp
+subs
+setSkusList
+setType
+com.unity.purchasing.samsung.ISamsungAppsCallback
+com.unity.purchasing.samsung.ISamsungAppsStoreCallback
+setMode
+restoreTransactions
+com.android.billingclient.api.SkuDetailsResponseListener
+2.3.0
+UnityIAP Version: 2.3.0
+IAPUtil
+BillingMode
+SetCatalogProviderFunction
+MacAppStore
+AppleAppStore
+WinRT
+FacebookStore
+AmazonApps
+SamsungApps
+FetchProducts
+storeDisabled
+/catalog
+store.json
+androidStore
+UnityEngine.UDP.StoreService
+StoreName
+introductoryPrice
+introductoryPriceLocale
+not available
+introductoryPriceNumberOfPeriods
+numberOfUnits
+unit
+Unable to parse introductory period cycles and duration, this product does not have configuration of introductory price period
+UDP
+Failed to access UDP. Please make sure your UDP package is installed and up-to-date
+Cannot Initialize UDP store module. Please make sure your UDP package is installed and up-to-date
+Cannot Purchase via UDP. Please make sure your UDP package is installed and up-to-date
+{ "error" : "already retrieving products" }
+Cannot Retrieve Products from UDP. Please make sure your UDP package is installed and up-to-date
+Cannot Complete transaction for UDP. Please make sure your UDP package is installed and up-to-date
+GameOrderId
+{ "error" : "Cannot load inventory from UDP. Please make sure your UDP package is installed and up-to-date" }
+{ "error" : "Cannot parse inventory type for UDP. Please make sure your UDP package is installed and up-to-date" }
+RetrieveProducts failed: 
+Channel
+UDPImpl received mismatching product Id for purchase. Expected {0}, received {1}
+error
+purchaseInfo
+UnityEditor
+com.unity
+ requires m_CurrentDialog. Not showing dialog.
+UIFakeStoreCanvas
+/Panel/
+EventSystem
+HeaderText
+Do you want to Purchase 
+?
+
+[Environment: FakeStore]
+Do you want to initialize purchasing for products {
+}?
+
+[Environment: FakeStore]
+Button1
+Button2
+Button1/Text
+Button2/Text
+Panel2/Panel3/Dropdown
+Panel2
+UnityEngine.UDP.UdpIapBridge
+com.unity3d.player.UnityPlayer
+currentActivity
+UnityEngine.UDP.UserInfo
+json
+skuDetails
+getPrice
+getPriceAmountMicros
+getTitle
+getDescription
+getPriceCurrencyCode
+getSubscriptionPeriod
+getFreeTrialPeriod
+getIntroductoryPrice
+getIntroductoryPricePeriod
+getIntroductoryPriceCycles
+Explicit RestoreTransactions()
+Fake title - 
+Fake description - 
 m_IsActive
 Active
 AnimationPlayableAsset of 
@@ -5176,8 +5563,14 @@ Cannot Add a property that we already have
 Cannot Add a field that we already have
 localPosition
 position
-com.unity3d.player.UnityPlayer
-currentActivity
+Download attempt ignored because a download is already in progress.
+Attempt #{0} at downloading AssetBundle...
+Failed to download AssetBundle: {0}
+PlayCoreEventHandler
+An instance of PlayCoreEventHandler is not present in the scene.
+com.google.android.play.core.tasks.OnFailureListener
+getMessage
+getErrorCode
 runOnUiThread
 getWindow
 getDecorView
@@ -5196,17 +5589,6 @@ colorA
 colorB
 colorC
 colorD
-jp.delightworks.unityplugin.charge.ChargeServicePlugin
-InitializeProduct
-IsBusyInitializeProduct
-GetInitializeResult
-GetProductList
-PaymentCheck
-PaymentProduct
-PaymentConsume
-GetReceiptResponse
-GetReceiptData
-GetSignatureData
 _RampTex
 jp.delightworks.unityplugin.CommonServicePlugin
 AlertDialog
@@ -5329,50 +5711,6 @@ OnFingerUp
 _RotationMatrix
 _CenterRadius
 _Angle
-Unable to wrap the given object with JsonData
-The key has to be a string
-Instance of JsonData doesn't hold a double
-Instance of JsonData doesn't hold an int
-Instance of JsonData doesn't hold a string
-JsonData instance doesn't hold a boolean
-JsonData instance doesn't hold a double
-JsonData instance doesn't hold an int
-JsonData instance doesn't hold a long
-JsonData instance doesn't hold a string
-The JsonData instance has to be initialized first
-Instance of JsonData is not a dictionary
-Instance of JsonData is not a list
-JsonData array
-JsonData object
-Uninitialized JsonData
-Invalid token '{0}' in input string
-Invalid character '{0}' in input string
-System.Collections.IList
-System.Collections.IDictionary
-op_Implicit
-Can't assign null to an instance of type {0}
-Can't assign value '{0}' (type {1}) to type {2}
-Type {0} can't act as an array
-The type {0} doesn't have the property '{1}'
-Max allowed object depth reached while trying to export from type {0}
-reader
-Input doesn't evaluate to proper JSON text
-writer
-A complete JSON symbol has already been written
-Can't close an array here
-Can't close an object here
-Expected a property
-Can't add a property here
-Can't add a value here
-\n
-\r
-\t
-\f
-\b
-\u
-false
-.0
-{
 OnLongPress
 com.metaps.common.UnityWrapper
 setHandlerName
@@ -5445,6 +5783,23 @@ OnTwoFingerSwipe
 OnTwoFingerLongPress
 OnTap
 OnTwist
+Initializing UnityPurchasing via Codeless IAP
+CodelessIAPStoreListener attempted to get unknown product 
+Purchase failed because Purchasing was not initialized correctly
+Purchasing failed to initialize. Reason: {0}
+Purchase not correctly processed for product "
+". Add an active IAPButton to process this purchase, or add an IAPListener to receive any unhandled purchase events.
+Failed purchase not correctly handled for product "
+". Add an active IAPButton to handle this failure, or add an IAPListener to receive any unhandled purchase failures.
+IAPButton productId is empty
+The product catalog has no product with the ID "
+IAPButton.PurchaseProduct() with product ID: 
+ is not a supported platform for the Codeless IAP restore button
+Transactions restored: 
+IAPButton.ProcessPurchase(PurchaseEventArgs {0} - {1})
+IAPButton.OnPurchaseFailed(Product {0}, PurchaseFailureReason {1})
+IAPListener.ProcessPurchase(PurchaseEventArgs {0} - {1})
+IAPListener.OnPurchaseFailed(Product {0}, PurchaseFailureReason {1})
 _Blur
 _VignetteTex
 _ChromaticAberration
@@ -5500,47 +5855,6 @@ ok
 ng
 .meta
 {{"ProductId":"{0}"}}
-Consume
-SendReceipt
-Payment
-PaymentCheck2
-Deferred
-ACCOUNTING_ERROR_INCOMPATIBLE_MESSAGE
-ACCOUNTING_ERROR_INITIALIZE_MESSAGE
-PaymentBankStatus
-OnCancelPaymentStore
-OnPaymentCheckResult
-OnPaymentCheckResultError
-課金エラー:OnPaymentCheckResultError ErrorCode ({0})
-NETWORK_ERROR_TIME_OVER_MESSAGE
-STONE_PURCHASE_RESULT_BLOCK
-perMonthAmount
-bankAvailable
-message
-課金エラー:PaymentProductError
-OnCancelErrorPaymentStore
-課金エラー:AccountingManager:OnPaymentUnknown ErrorCode ({0})
-[Cancel]
-課金エラー:AccountingManager:OnPaymentCancel ErrorCode ({0})
-ACCOUNTING_ALREADY_OWNED_MESSAGE
-課金エラー:AccountingManager:PaymentItemAlreadyOwnedNoData ErrorCode ({0})
-{"orderId":"NoData","packageName":"
-","productId":"
-","purchaseTime":
-,"purchaseState":0,"developerPayload":"
-","purchaseToken":"NoData"}
-ReceiptError
-JPY
-receipt_error
-PaymentOk
-Error[
-OnPaymentAfterConsume
-OnPaymentAfterConsumeError
-AccountingManager::OnPaymentAfterConsumeError productId 
-課金エラー:AccountingManager::OnPaymentAfterConsumeError ErrorCode ({0})
-PaymentAfterConsume
-NETWORK_ERROR_PURCHASE_SUSPEND_MESSAGE
-OnSuspendPaymentStore
 purchase_and_
 ORIGINAL_ID
 LEVEL
@@ -6235,7 +6549,6 @@ touchCommandCard
 LongPress
 HEROINE_CHANGECARDVOICE
 effect/ef_commandup_{0}{1:00}
-q
 a
 BATTLE_COMMAND_CODE_RECHARGE_TURN
 scale
@@ -6982,7 +7295,6 @@ BATTLE_RESULTEXP_FRIENDMAX
 BATTLE_RESULTEXP_FULLAP_FULLBP
 BATTLE_RESULTEXP_FULLAP
 {0} {1}個
-{0}/{1}
 RESULT_FRIEND_CONF
 FOLLOW_CONNECT
 status
@@ -7243,7 +7555,6 @@ Age
 max-age
 must-revalidate
 If-None-Match
-{0}: {1}
 HTTPCacheService
 Cache Service Disabled!
 HTTPCache
@@ -7432,7 +7743,6 @@ FRIEND_SHOW_INFOMATION
 HIDE_END
 friendOfferList
 blacklist/top
-error
 {0:N0}
 CURRENT_NUM_TXT
 icon_race_
@@ -8394,6 +8704,7 @@ servantprofilelimitcount.dat
 servantprofileeventjoin.dat
 battleusecontinueitemrequestsave.dat
 battleuseitemrequestsave.dat
+unconfirmedpayment.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -9527,6 +9838,49 @@ FRIENDSHIP_UNIT
 USER_EXP_NAME
 USER_EXP_UNIT
 UNIT_INFO
+Google Play Store: play billing service unavailable!
+To listen to deferred purchases, please register a listener via IGooglePlayStoreExtensions.
+com.android.billingclient.api.BillingFlowParams$Builder
+Cannot purchase {0} now, please try again later.
+Developer payload is no longer supported in Google Play Store. See https://developer.android.com/google/play/billing/developer-payload for more details.
+Google Play Store: cannot set obfuscated account ID to null or empty.
+Google Play Store: cannot set obfuscated profile ID to null or empty.
+Cannot find SKU for Unity product {0}
+com.android.billingclient.api.PriceChangeFlowParams$Builder
+launchPriceChangeConfirmationFlow
+endConnection
+For upgrading/downgrading subscription products on Google Play, please use IGooglePlayStoreExtensions.UpdateSubscription.
+Cannot find the subscription purchase record to be updated: {0}
+Cannot update subscription for {0} now, please try again later.
+To listen to deferred purchases, please enable deferred purchases from IGooglePlayConfiguration.
+Service is unavailable.
+com.android.billingclient.api.BillingClientImpl
+3.0.0-unity
+Failed to connect to service with error code '{0}' and debug message: '{1}'.
+com.android.billingclient.api.SkuDetailsParams$Builder
+Unsupported Google Play Store skuType {0}.
+Purchase failed with error code '{0}' and debug message: '{1}'
+Couldn't find Unity product that maps to {0} when processing acknowledge purchase result
+Acknowledging purchase {0} failed with error code {1} and debug message: {2}.
+Update the purchase {0} after FinishTransaction failed with error code {1}. The purchase receipt might be out of date. One can call FetchAdditionalProducts on this product to get the updated purchase receipt.
+Failed to finish the transaction with error code {0} and debug message: {1}. Please consider to call FinishAdditionalTransaction using the extension.
+com.android.billingclient.api.ConsumeParams$Builder
+com.android.billingclient.api.AcknowledgePurchaseParams$Builder
+Unhandled product type {0} in FinishTransaction
+Confirming subscription price change failed with error code {0} and debug message: {1}
+A purchase for {0} is already in progress.
+Service disconnected, retrying connection...
+Google Play Billing Service is only implemented for Android devices.
+GooglePlayBillingUtil
+Google Play Store: 
+Missing response code, return BillingResponseCode.Error.
+Unknown response code {0}, return BillingResponseCode.Error.
+getBillingResult
+Failed to retrieve products information! Error code {0}, debug message: {1}.
+Failed to parse skuDetails {0} 
+Failed to retrieve purchase information! Error code {0}, debug message: {1}.
+Failed to parse purchase {0} 
+com.android.billingclient.api.SkuDetails
 icon_grade_1
 img_masterprofile_bg1
 img_masterprofile_bg2
@@ -9678,7 +10032,6 @@ onstart
 iTweenOnStart
 onstartparams
 axis
-amount
 orienttopath
 looktime
 move
@@ -9756,6 +10109,7 @@ CHANGE_SKILL_TITLE
 BEFORE_CHANGE_SKILL_SUB_TITLE
 AFTER_CHANGE_SKILL_SUB_TITLE
 COMMON_CONFIRM_TO_WEBVIEW
+NETWORK_ERROR_TIME_OVER_MESSAGE
 OnDropItem
 btn_sort_old
 btn_sort_new
@@ -9999,15 +10353,13 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-課金エラー:AccountingManager:Initialize end result [
-2.34.2
-0b7f1bb0624ef0012c00e4305c3fdb77fe9a2e94467f6e7767a61208e9143108
-20210625_11:44
+2.34.3
+07623ba63f1a4af4b62f81e0a81c64757ab2f34fe9844bf71298e1165357e4ab
+20210630_18:46
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
 1015521325
-Android
 game.fate-go.jp
 https://cdn.data.fate-go.jp/AssetStorages
 webview.fate-go.jp
@@ -10109,7 +10461,6 @@ ACTIVITY_SERVICE
 getSystemService
 getProcessMemoryInfo
 getTotalPss
-{0}={1}
 ,:{}"[]
 {0:N0}/{1:N0}
 itemGetEffectId
@@ -10335,7 +10686,6 @@ SERVER_CERTIFICATE_ERROR_TITLE
 SERVER_CERTIFICATE_ERROR_ANDROID
 app_version_up
 TheCheckKey
-iOS
 https://itunes.apple.com/lookup?id=
 &country=jp
 results
@@ -10381,6 +10731,7 @@ maint
 invalid_user
 reconnection
 invalid_battle
+COMMON_CONFIRM_RETRY
 NETWORK_USER_DELETE_DECIDE
 NETWORK_USER_DELETE_CANCEL
 WEB_VIEW_TITLE_INFOMATION
@@ -11086,7 +11437,6 @@ AffiliationChanged
 Superseded
 CessationOfOperation
 CertificateHold
-Unknown
 RemoveFromCrl
 PrivilegeWithdrawn
 AACompromise
@@ -11186,7 +11536,6 @@ BusinessCategory
 TelephoneNumber
 ou
 cn
-st
 serialnumber
 street
 emailaddress
@@ -11719,7 +12068,6 @@ keyLen
 attempt to create weak DESede key
 attempt to create weak DES key
 key material too short.
-h
 unrecognised algorithm: 
 OID is not a valid public key parameter set
 ECDSA
@@ -12258,11 +12606,13 @@ dateTime
 invalid characters encountered in base64 data
 invalid characters encountered at end of base64 data
 invalid characters encountered in Hex data
+reader
 -----BEGIN 
 -----END 
 X-
  not found
 base64 data appears to be truncated
+writer
 -----
 Can only push back one byte
 Data Overflow
@@ -12634,12 +12984,70 @@ purchaseData
 purchaseDataBase64
 storeError
 signatureData
-purchasedBankShopId
-freeStoneNum
-chargeStoneNum
+purchaseResultArray is null.
+purchaseResults
 shop/purchaseByStone
+InitiatePurchase: FAIL. PurchasingFramework not initialized.
+InitiatePurchase: FAIL. StoreController is null.
+InitiatePurchase: FAIL. StoreController.products is null.
+InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase
+STONE_PURCHASE_RESULT_BLOCK
+BankStatusRequest string error: 
+perMonthAmount
+bankAvailable
+RestorePurchases FAIL. Not initialized.
+RestorePurchases started ...
+RestorePurchases FAIL. Not supported on this platform. Current = 
+PurchaseLogic:SendReceiptData [
+UserId error: UserId=
+user_id_error
+PurchaseLogic:EndSendReceiptData [
+receipt_error
+PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId=
+PurchaseResult NotFound.
+PurchaseResult NotFound Error
+PaymentOk
+ReceiptError
+Error[
+PurchaseLogic:OnEndPaymentStore result 
+[ 
+Confirming purchase of 
+Entity is not found. bankShopId=
+JPY
+OnInitialized: PASS
+OnDeferred product=
+OnInitializeFailed InitializationFailureReason:
+ProcessPurchase: PASS. Product: '{0}'
+Price: 
+ProcessPurchase: FAIL. Unrecognized product: '{0}'
+OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}
+RestorePurchases continuing: 
+. If no further messages, no purchases available to restore.
+[UnityIAP]課金エラー:
+[UnityIAP]課金エラー(ratio:
+):
+Purchasing product asychronously: '{0}'
+Unexpected PurchaseAvailablilty value: 
+Payload
+unexpected obfuscatedAccountId:
+[UnityIAP]unityPurchasingInitializeFailedCount:
+ rateToSend:
+UnityPurchasingInitializeFailedCount
+RawReceipt Decode Error. 
+購入できません
+App内の購入が機能制限されています
+購入処理中です、完了までお待ち下さい
+指定されたプロダクトデータが取得できませんでした
+購入処理中に問題が発生しました
+UnityIAP:UpdateMonthlyPurchasePrice 
+UnityIAP:SendPurchaseAction 
+UnityIAP:ConfirmPurchase 
+_purchaseResultArray is null
+bankShopMaster is null
 shop/purchase
 anotherPayFlag
+[purchase log]
+
 afterActionBk
 10703
 30101
@@ -12872,7 +13280,6 @@ login
 gacha_draw
 deck_setup
 user_formation
-purchase
 purchase_by_stone
 purchase_by_bank
 sell_svt
@@ -14704,13 +15111,14 @@ E++
 E-
 E+++
 EX
-STONE_PURCHASE_BUSY_STORE
 STONE_PURCHASE_RESULT_WAIT
 WEB_VIEW_TITLE_STONE_PURCHASE
 STONE_PURCHASE_RESULT_CANCEL
 STONE_PURCHASE_RESULT_SUCCESS
 STONE_PURCHASE_RESULT_FAIL
 STONE_PURCHASE_RESULT_SUSPEND
+ACCOUNTING_ERROR_INITIALIZE_MESSAGE
+STONE_PURCHASE_RESULT_DUPLICATE_TRANSACTION_MESSAGE
 STONE_PURCHASE_RESULT_CLOSE
 BattleContinue
 ApRecover
@@ -16184,6 +16592,14 @@ JNI: Unknown generic array type '
 JNI: Unknown field type '
 JNI: Unknown return type '
 Type {0} expected {1} received.
+Success
+Buy
+Unrecognized DialogType 
+entrySet
+iterator
+getKey
+getValue
+hasNext
 No IComparable or IComparable<{0}> interface found.
 AddEventHandlerComponent: 
 comparison
@@ -16195,13 +16611,23 @@ Passed argument 'args[0]' is of the wrong type. Type:{0} Expected:{1}
 The uv index is invalid. Must be in the range 0 to 7.
 Can't set Delayed: use SetDelay() instead
 Invalid type: {0} passed to event expecting {1}
+Cannot get content from a null UnityWebRequest object
+Cannot get content from an unfinished UnityWebRequest object
+No binding for type 
 No elements in source list
+{
  path = 
 , args = 
  }
  Platform = 
 , IsEditor = 
 , InstallationRequired = 
+GetResult called before operation is done.
+GetResult called after operation failed with error: 
+com.google.android.play.core.tasks.OnSuccessListener
+javaTask must not be null.
+addOnSuccessListener
+addOnFailureListener
 Missing component: 
  on: 
 items
