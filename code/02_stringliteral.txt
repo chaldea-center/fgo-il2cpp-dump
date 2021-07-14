@@ -6451,6 +6451,7 @@ Count_Action
 Count_Hit
 TargetObject
 SummonMasterObject
+SummonEndFlag
 summon
 weapon
 common
@@ -6507,6 +6508,7 @@ ef_pig_return01
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
 HIDE_STATUS_EFFECT_IDS
 TREASURE_DEVICE_DISP_STATUS_EFFECT_FLAG
+_fade
 Effect/weapon/{0}/{1}
 Effect/weapon/{0}
 chr(Clone)
@@ -7080,6 +7082,10 @@ Battle/Gimmick/{0}
 gimmick
 ef_special_invincible
 Effect/CutIn/Skill/{0}
+FADE_OUT
+FADE_IN
+BEFORE_FIELD_CALL_EFFECT_END
+AFTER_FIELD_CALL_EFFECT_END
 Battle/TurnEffect/
 SKIP_SKILL_CUTIN
 {0}_{1}_{2}
@@ -7371,6 +7377,7 @@ servantId
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE
 Battle/Field/{0}
+BATTLE_EFFECT_ID_3003001
 battle/routeSelect
 routeSelect
 battle/scenario
@@ -7455,6 +7462,7 @@ btn_txt_servant_states_on
 Top/close
 changeHp
 changeUpdateStatus
+UpdateStatusByTransform
 fixUpdateStatus
 shiftUpdateStatus
 updateNp
@@ -7823,6 +7831,8 @@ ProgressSelfTurn
 ProgressTurnCond
 CardEffectId
 battleEndNotReduceTurnFlag
+drawShadowDespiteBattleCharaInvisible
+battleCharaAlpha
 Self
 Opponent
 Check{0}BuffTypes
@@ -8673,6 +8683,20 @@ u6jRjeFS14mo3waDQEOcqMoYlwoHaf3vgAtk4qsRLpc=
 LAST_WAR_ID
 wo11
 ef_difference21
+Device Default (
+264
+326
+350
+401
+460
+ (iPad Pro 相当)
+ (iPhone8 相当)
+ (印刷物 推奨解像度)
+ (iPhone8 Plus 相当)
+ (iPhone12 相当)
+Current: W=
+, H=
+ , DPI=
 scriptsave.dat
 purchasebybankrequestsave.dat
 battleusecontinuerequestsave.dat
@@ -8931,6 +8955,7 @@ mstSvtScriptAdd
 mstSvtScript
 mstSvtSkill
 mstSvtSkillRelease
+mstSvtTreasureDeviceAdd
 mstSvtTreasureDeviceDamage
 mstSvtTreasureDeviceRelease
 mstSvtTreasureDevice
@@ -9073,6 +9098,7 @@ DataManager version load error : list file break
 deleted
 updated
 replaced
+master is null[{0}:{1}]
 baseURL
 contactURL
 filePass
@@ -9084,6 +9110,7 @@ eventType
 DEBUG_MENU_START_BATTLE_MOCK_SCENE
  [ON] 
  [OFF] 
+BattleKeepFavorite
 BattleDebugMenuFavorite
 ClientDebug/QuestThrough
 ClientDebug/ServerTime
@@ -9376,6 +9403,7 @@ TIME_REST_QUEST
 TIME_REST_ACHIVE
 TIME_REST_TIMEOVER
 EVENT_ITEM_REPLACE_EVENT_NAME
+EVENT_ITEM_REPLACE_BEFORE_EVENT_NAME
 EVENT_REWARD_REPLACE_MSG
 MISSION_REWARD
 btn_txt_notopen
@@ -10353,9 +10381,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.34.3
-07623ba63f1a4af4b62f81e0a81c64757ab2f34fe9844bf71298e1165357e4ab
-20210630_18:46
+2.35.0
+6466694429607b47f56943ff3fd7589903bdaeeb5cfa0a63bfbcada3485de55d
+20210708_16:05
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10700,7 +10728,6 @@ retry
 200
 302
 400
-401
 404
 500
 502
@@ -10754,6 +10781,7 @@ notification/regist
 registPushKey
 INFO_MSG_NPUP_BASE
 HEADER_MSG_NPUP_MATERIAL
+COMBINE_NP_ADD_TITLE
 COMBINE_NPUP_BASE
 NPUP_EXCEEDED
 COMBINE_NPUP_MATERIAL
@@ -13158,6 +13186,8 @@ battleFinishMovie
 waveStartMovie
 progressAfterMovie
 movieWave
+movieAfterCrossFadeTime
+movieAfterCrossFadeStartFrame
 battleFinishCameraTargetAll
 turnSituationType
 getSpecialShadowEffectId
@@ -14096,6 +14126,7 @@ specialEffectPuase
 resume
 masterverticalImageSet
 communicatioChara
+saveMaterial
 structure error
 selectBranchSkipTrueColor
 [r][r]
@@ -14112,12 +14143,14 @@ inside
 outside
  is not found
 QuestMessageAdd
+[#
 ScriptActionEncrypt/
 TalkResume
 TalkResumeV2
 SwitchSelections
 LastScriptLine
 Dummy
+SAVE_ROUTE_SELECT_IN_COLLECTION
 OnSwipeBlockPanel
 top
 bottom
@@ -14442,6 +14475,7 @@ Window/Objects/CloseButton
 card/combineSkill
 skillId
 COND_TYPE_TITLE
+strengthStatusReleaseId
 DISP_SKLL_LV
 SKILLCHARGETURN_TXT
 icon_stateup
@@ -14558,9 +14592,6 @@ SERVANT_STATUS_EXPLANATION_FACE2
 SERVANT_STATUS_EXPLANATION_FACE3
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_FACE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE
-img_npgage_bg
-SERVANT_STATUS_NP_GUAGE_MESSAGE
-img_npgage_
 SERVANT_STATUS_EXPLANATION_PORTRAIT
 SERVANT_STATUS_EXPLANATION_PORTRAIT_LIMIT_COUNT_SEALED_MSG
 SERVANT_STATUS_EXPLANATION_PORTRAIT2
@@ -14587,6 +14618,9 @@ SERVANT_STATUS_EXPLANATION_SKILL_ACTIVE
 DispObject
 SERVANT_STATUS_TOTAL_EXP
 SERVANT_STATUS_TOTAL_FRIENDSHIP
+img_npgage_bg
+SERVANT_STATUS_NP_GUAGE_MESSAGE
+img_npgage_
 img_parametergage_bar
 img_parametergage_edge
 img_parametergage_bar_ex
@@ -14866,6 +14900,8 @@ cutInCamPlayerAll
 cutInMessageMode
 OverwriteMotion_{0}
 skillScript_1
+BeforeFieldCallEffect
+AfterFieldCallEffect
  ＋ 
 LEVEL_DETAIL_INFO
 Target
@@ -14876,9 +14912,14 @@ revivalUnder
 aress
 EnableTarget
 AddIndiv
+funcPositionForSplitFuncSequence
+ignoreWhiteFade
 actRarity
 svtBgmChange
 noTargetSkipSkill
+additionalSkillId
+additionalSkillLv
+additionalSkillActorType
 indv
 beforeClearBgmId
 afterClearBgmId
@@ -15084,6 +15125,9 @@ aiActTypeAttackCommandCard
 npcServantId
 cardType
 disableUniqueFieldMotion
+battleStartVoiceSvtId
+battleStartVoiceSvtLimit
+battleStartVoiceIds
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -15868,6 +15912,7 @@ fixAppearanceId_
 relationBgmIds
 excludeTdChangeTypes
 ForcedOnlyFirstOneSpeed
+npNameFileSuffix
 randomSeqIds
 randomWeights
 groupSeqIDs
@@ -16435,7 +16480,6 @@ Move_Point_0
 WARBOARD_SQUARE_COST
 PlayUnDispCostAnim2
 FinishUnDispCostAnim
-{0}:{1}:{2}:{3}
 warBoardSvtDetail
 warBoard/start
 icon_drop_item_L_{0:00}
@@ -16525,7 +16569,6 @@ animCam_aim
 /Actor
 /BattleBaseField/EnemySide
 /BattleActors/Target1
-_fade
 Resources/effect
 /BattleBaseField/EnemySide/chrRoot1
 /BattleBaseField/EnemySide/chrRoot2
