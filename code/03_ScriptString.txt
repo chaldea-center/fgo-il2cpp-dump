@@ -5967,6 +5967,28 @@ getPath
 /data
 .mp4
 pN6ds2Bg
+buttontxt_synthesis
+img_txt_extraskill
+img_txt_extraskill_item
+APPEND_SKILL_COMBINE_PRESELECT_BASE_INFO
+MSG_SKILL_SELECT
+buttontxt_notsynthesis
+btn_txt_open2
+APPEND_SKILL_COMBINE_ITEM_NOT_ENOUGH
+NEED_QP
+SHORT_QP_INFO_MSG
+SHORT_ITEM_INFO_MSG
+APPEND_SKILL_OPEN_TITLE
+APPEND_SKILL_LVUP_TITLE
+APPEND_SKILL_COMBINE_INFO
+APPEND_SKILL_OPEN_MSG
+APPEND_SKILL_LVUP_MSG
+APPEND_SKILL_LVMAX_MSG
+card/combineAppendPassiveSkill
+baseUserSvtId
+skillNum
+currentSkillLv
+icon_append_mini
 .unity3d
 txt
 html
@@ -6151,6 +6173,7 @@ EVENT_ASSIST_SKILL_CONFIRM_DIALOG_LEVEL_FORMAT
 LEVEL_INFO
 event_skill_icon_{0}{1:D2}
 AtlasManager/Items/ItemAtlas
+AtlasManager/Coins/CoinAtlas
 AtlasManager/ClassIcons/ClassIconsAtlas
 AtlasManager/SkillIcons/SkillIconAtlas
 AtlasManager/BuffIcons/BuffIconAtlas
@@ -6175,6 +6198,7 @@ banner_notice_
 banner_icon_
 shop_event_menu_
 DownloadItemAtlas
+DownloadCoinAtlas
 DownloadClassIconsAtlas
 DownloadSkillIconAtlas
 DownloadFaceAtlas
@@ -6250,6 +6274,8 @@ listframes00_bg
 listframes1_bg
 listframes2_bg
 listframes3_bg
+listframes4_bg
+listframes5_bg
 listframes20_bg
 listframes0
 listframes1
@@ -6263,19 +6289,26 @@ formation_framebg_0
 formation_framebg_1
 formation_framebg_2
 formation_framebg_3
+formation_framebg_4
+formation_framebg_5
 formation_blank_01
 formation_support
 formation_frame_0
 formation_frame_1
 formation_frame_2
 formation_frame_3
+formation_frame_4
+formation_frame_5
 formation_frame_support0
 formation_frame_support1
 formation_frame_support2
 formation_frame_support3
+formation_frame_support4
+formation_frame_support5
 listcframes1_bg
 listcframes2_bg
 listcframes3_bg
+Coins/DownloadCoin
 EventUI/Prefabs/{0}
 shop/createSeed
 seed
@@ -6400,6 +6433,8 @@ TITLE_FLOW_OLD
 STORY_WAR_ID
 LEGACY_ASPECT_MOVIES
 FULL_SCREEN_NP_CHRS
+FULL_SCREEN_NP_SEQ_IDS
+GACHA_DAILY_MAX_DRAW_NUM_RESET_AT
 id:
 , name:
 , appleShopId:
@@ -6421,7 +6456,6 @@ mask00
 black00
 EndOpenBaseDialog
 EndCloseBaseDialog
-ba30
 Camera
 Camera_obj
 CAMERA_END
@@ -6545,7 +6579,6 @@ card_txt_{0}
 DISPLAY_REMAINING_TURN
 anim_commandfloat
 effect/ef_noblecard
-ba12
 z
 touchCommandCard
 LongPress
@@ -6795,7 +6828,6 @@ LOSE_RETIRE_CLEAR
 EVENT_NEXTBATTLE
 EVENT_ENDBATTLE
 CRITICAL_RATE_PER_STAR
-ba10a
 END_SELECTCARD
 CHAINBONUS_ARTS_RATE
 CHAINBONUS_QUICK
@@ -6943,7 +6975,6 @@ icon_count_01
 icon_count_bg
 updateNpGauge
 EndTweenFunc
-ba16
 {0,3}%
 {0}_{1}
 {0}{1}_{2}
@@ -7005,8 +7036,6 @@ BATTLE_LOSE
 CameraAction
 MOVE_NEXTBATTLE
 CLOSE_COMMAND
-ba18
-sy3
 ActionBattle
 no queue
 queue_action.Count:
@@ -7062,8 +7091,6 @@ MOVIE_AFTER_WIN
 playAddition
 black_in
 black_out
-ba2
-ba1
 black
 Alpha_FadeIn
 FadeOff
@@ -7116,7 +7143,6 @@ ef_weakarrow
 INIT_OPEN
 anim_giveout
 anim_draw
-ba10
 markindex
 SELECTCARD
 LONG_PRESS
@@ -7124,13 +7150,11 @@ DISSELECT
 OPEN_SEALED
 SELECT
 SELECT_EXE
-ba11
 effect/BitEffect/bit_cut_u2
 effect/BitEffect/bit_cut_u3
 effect/BitEffect/bit_cut_ua
 effect/BitEffect/bit_cut_2a
 effect/BitEffect/bit_cut_3a
-ba23
 img_battle_select{0:0}
 effect/ef_critlaunch
 BATTLE_COMMANDDIALOG_DONTACT
@@ -7151,11 +7175,7 @@ TUTORIAL_MESSAGE_BATTLE_230
 TUTORIAL_MESSAGE_BATTLE_321
 effect/ef_noblegauge01
 effect/ef_noblegauge02
-ba17
-ba13
-ba15
 ef_excard02
-ba22
 ef_excard01
 BATTLE_CONTINUE_ITEM_GIVEUP
 BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE
@@ -7210,8 +7230,6 @@ BATTLE_MASTER_SKILL_ADD_SPLIT
 btn_master_skill_disable
 START_TAC
 START_CLOSE
-ba19
-sy8
 END_CLOSEALL
 CLOSE_SPELL
 CLICK_USESPELL
@@ -7223,7 +7241,6 @@ BATTLE_SELECTSUBERROR_NOSUB_CONF
 btn_off
 btn_on
 START_SKILL
-ba7
 START_COM
 LONGPRESS_ENEMY
 CLOSE_CONF
@@ -7236,8 +7253,6 @@ Wait
 btn_master_skill
 CLICK_CLOSE
 CLICK_SVTWINDOW
-ba20
-ba21
 WAIT_OTHER_SKILL
 END_SKILL
 TUTORIAL_SKILL
@@ -7245,7 +7260,6 @@ openSvtIndex
 BATTLE_TURN_SITUATTION_LABEL_WITH_RAIDNAME_{0}
 UpdateValue
 finishUpdateValue
-ba24
 bit_result_levelup01
 endMoveFigure
 OPEN
@@ -7254,6 +7268,8 @@ bit_reward_shine02
 RESULT_BOUNDS_OPENQUEST
 RESULT_BOUNDS_UPDATE_MATERIAL
 RESULT_BOUNDS_GETVOICE
+RESULT_BOUNDS_GET_COIN_COUNT
+RESULT_BOUNDS_GET_COIN_NAME
 ーーー
 ＋ 
 （
@@ -7451,6 +7467,9 @@ BATTLE_HASNOT_TD
 Max {0}%
 EQUIP_DETAIL_LINK
 BATTLE_DIALOG_DETAIL_NOEQUIP
+img_txt_classskill
+COND_TYPE_TITLE
+COND_TYPE_APPEND_PASSIVE_SKILL_RELEASE
 BATTLE_DIALOG_DETAIL_NOCOMMANDCODE
 BattleServantDetailTab
 btn_bg_on_1
@@ -7460,6 +7479,9 @@ btn_txt_servant_states_off
 btn_txt_servant_property_off
 btn_txt_servant_states_on
 Top/close
+img_skillclass_0
+icon_stateup_on
+icon_stateup_off
 changeHp
 changeUpdateStatus
 UpdateStatusByTransform
@@ -7489,11 +7511,9 @@ enemy_icon_leader
 servant_icon
 effect/ef_cwflash01
 hp_break_
-ba3
 OnUpdateShiftGaugeChangeHp
 ignoretimescale
 OnCompleteShiftGaugeChangeHp
-ba38
 updateShiftHplabel
 Battle/Prefab/ef_add_enemy
 BATTLE_RAID_TOTALHP
@@ -7897,7 +7917,6 @@ SUPPORT_EVENTQUEST
 SUPPORT_DECK_ID_FIXED
 SUPPORT_DECKID_FREE
 card/combineLimitSpecial
-baseUserSvtId
 card/favorite
 imageLimitCount
 dispLimitCount
@@ -8099,7 +8118,6 @@ combine_fodder015
 EffectPanel/Combine_bit_prefab(Clone)/Combine_bit/BG_root
 EffectPanel/Combine_fodder01(Clone)/Combine_bit/BG_root
 Bg/10500
-co1
 CombineEffect
 CardScale
 BaseCardNodeName
@@ -8162,6 +8180,8 @@ COMBINE_HELP_COMBINE_CMD_CODE
 img_combine_8
 COMBINE_HELP_COMBINE_CMD_CARD_EXCEED
 img_combine_11
+COMBINE_HELP_APPEND_SKILL
+img_combine_12
 COMBINE_HELP_COMBINE_NP
 img_combine_3
 COMBINE_HELP_COMBINE_LV_EXCEED
@@ -8234,6 +8254,9 @@ bit_result_grail_02
 bit_result_grail_01
 CostumeName
 bit_result_skinchange01
+bit_result_extraskill01
+bit_result_extraskill02
+bit_result_120
 LimitUpBaseSvtNodeName
 LimitUpResSvtNodeName
 BaseSvtCardNodeName
@@ -8241,8 +8264,12 @@ ResultSvtCardNodeName
 QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE
 QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2
 playVoice
+SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_
 LIMIT_COUNT_SEALED_TITLE
 LIMIT_COUNT_SEALED_MESSAGE
+bit_result_extraskill
+bit_result_
+START_COMBINE_LIMIT
 Fgo_20201104
 ChrVoice_
 ServantCombine
@@ -8258,6 +8285,7 @@ EXCHANGE_CAMPAIGN_NOTICE_MSG_TITLE
 EXCHANGE_CAMPAIGN_COMBINE_MSG
 EXCHANGE_CAMPAIGN_NP_MSG
 START_EFFECT
+img_txt_extraskill_title
 DISP_TIMESTR_FORMAT
 COMBINE_MATERIAL_SVT
 CONFIRM_TITLE_LIMITUP
@@ -8299,6 +8327,7 @@ SKILL_LVDISP_ENABLE_TXT
 SKILL_LVDISP_TXT
 NONSELECT_SKILLUP_BASE
 MSG_ABLED_SKILLUP
+PARTY_ORGANIZATION_SERVANT_EVENT_JOIN
 MSG_ABLED_TDUP
 NO_SELECT_LVEXCEED
 NONSEELECT_STATUSUP_MAX
@@ -8318,6 +8347,7 @@ COMBINE_COMMAND_CODE_BASE_SERVANT_SELECT_MSG
 HEADER_MSG_FRIENDSHIP_EXCEED
 HEADER_MSG_SPECIAL_ASCENSION
 COMMAND_CARD_EXCEED_SELECT_BASE_SERVANT_MSG
+APPEND_SKILL_COMBINE_SELECT_BASE_INFO
 COMBINE_LAST_EQUIP_CMD_SVT
 img_nplv
 img_list_lv
@@ -8366,8 +8396,6 @@ COMBINE_COMMAND_CODE_BASE_SELECT_HEADER_MSG
 COMBINE_COMMAND_CODE_BASE_SELECT_MSG
 COMBINE_COMMAND_CODE_CARD_SELECT_HEADER_MSG
 COMBINE_COMMAND_CODE_CARD_SELECT_MSG
-SHORT_QP_INFO_MSG
-SHORT_ITEM_INFO_MSG
 COMBINE_COMMAND_CODE_UNLOCK_HEADER_MSG
 COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG
 COMBINE_COMMAND_CODE_OVERWRITE_HEADER_MSG
@@ -8401,8 +8429,6 @@ COMMAND_CARD_EXCEED_WARNING_ITEM_HEADER_MSG
 COMMAND_CARD_EXCEED_CONFIRM_HEADER_MSG
 COMMAND_CARD_EXCEED_SELECT_BASE_MSG
 COMMAND_CARD_EXCEED_SELECT_COMMAND_CARD_MSG
-buttontxt_notsynthesis
-buttontxt_synthesis
 card/commandCardExceed
 exceedCount
 commandCode/attach
@@ -8615,6 +8641,7 @@ CONNECT_LOAD_MESSAGE3
 CONNECT_CANCEL_MESSAGE
 CONNECT_LATEST_MESSAGE
 CONNECT_COMPLET_MESSAGE
+FLAG_20210801
 COMBINE_SCENE_VOICE_WELCOME
 COMBINE_SCENE_VOICE_RETURN
 continue/decide
@@ -8681,7 +8708,6 @@ Bku9kTXFKZY7Di9bbfM/xrIicozwrFV51cDzOFssQb4=
 *.fategrandorder.jp
 u6jRjeFS14mo3waDQEOcqMoYlwoHaf3vgAtk4qsRLpc=
 LAST_WAR_ID
-wo11
 ef_difference21
 Device Default (
 264
@@ -8729,6 +8755,7 @@ servantprofileeventjoin.dat
 battleusecontinueitemrequestsave.dat
 battleuseitemrequestsave.dat
 unconfirmedpayment.dat
+servantcharactergraphexopen.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -8760,6 +8787,7 @@ mstCard
 mstClassRelation
 mstClassRelationOverwrite
 mstClosedMessage
+mstCombineAppendPassiveSkill
 mstCombineCostume
 mstCombineLimit
 mstCombine
@@ -8866,6 +8894,7 @@ friendshipQuestDialogInfo
 mstFuncCategory
 mstFuncGroup
 mstFunc
+mstGachaAppend
 mstGachaBehavior
 mstGachaDetail
 mstGachaGroup
@@ -8902,6 +8931,7 @@ otherUserGame
 mstPartialMaintenance
 pickupUserFollower
 mstPrivilege
+mstQuestAdd
 mstQuestBehavior
 mstQuestConsumeItem
 mstQuestDateRange
@@ -8925,6 +8955,7 @@ mstRecover
 mstStageRemap
 mstRestriction
 mstSvtAnimationOverwrite
+mstSvtAppendPassiveSkill
 mstSvtCard
 mstSvtChange
 mstClass
@@ -8945,6 +8976,7 @@ mstSvtLimitAdd
 mstSvtLimitImage
 mstSvtLimit
 mstSvtLimitSpoilerProtection
+mstSvtLvDetail
 mstSvt
 mstSvtMaterialFolder
 mstSvtPassiveSkill
@@ -8980,6 +9012,8 @@ mstStage
 mstStatusEffectPosOverwrite
 mstStoneShop
 mstSubEquip
+mstSvtAppendPassiveSkillUnlock
+mstSvtCoin
 tblFriend
 tblUserGame
 mstTelop
@@ -9019,6 +9053,7 @@ userFollower
 userFollow
 userFormation
 userFriendRequestHistory
+userGachaDrawLog
 userGachaExtraCount
 userGacha
 userGame
@@ -9033,6 +9068,8 @@ userQuestInfo
 userQuest
 userQuestRecord
 userQuestRoute
+userSvtAppendPassiveSkillLv
+userSvtAppendPassiveSkill
 userSvtCollection
 userSvtCommandCard
 userSvtCommandCode
@@ -9043,6 +9080,7 @@ userShop
 userSubEquip
 userEventSuperBoss
 userSupportDeck
+userSvtCoin
 viewEnemy
 viewQuestEnemyInfo
 viewQuestInfo
@@ -9208,7 +9246,6 @@ updateValues
 completeValues
 {0,
 {0,3}
-wo1
 ef_difference11
 Texture
 (Custom)
@@ -9318,7 +9355,6 @@ EVENT_COMMAND_BUFF_POINT_COUNT_STOP
 EVENT_CONQUEST_GET_TITLE
 EVENT_CONQUEST_GET_MESSAGE
 military_production_bg
-qev79
 EVENT_CONQUEST_ITEM_NUM
 EVENT_CONQUEST_PRODUCT_NUM
 EVENT_CONQUEST_ITEM_FORMAT
@@ -9685,6 +9721,9 @@ FOLLOWER_SELECT_BACK_TITLE
 BonusFilterEquipId
 BonusFilterGroupId
 FOLLOWER_SELECT_FRIEND_POINT_CAMPAIGN
+icon_skill_mini
+img_friend_skill
+img_friend_appendskill
 TIME_BEFORE_TITLE_COLOR
 NP_MAX_COLOR_NAME
 NP_COLOR_NAME
@@ -9706,9 +9745,12 @@ FOLLOWER_SELECT_FRIEND_CHOCO_UNAVAILABLE_COLOR
 FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR
 FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR
 FollowerSelectClass
+buttontxt_formation_19
+btn_sefilter_2
 BonusFilterEventId
 SERVANT_SORT_BONUS_FILTER_BUTTON_TITLE
 ScrollViewEnabled
+btn_sefilter_2_on
 btn_sefilter
 btn_sefilter_on
 FollowerSelect
@@ -9716,6 +9758,11 @@ OnLongPushServantEquip
 OnLongPushSkill1ListView
 OnLongPushSkill2ListView
 OnLongPushSkill3ListView
+OnLongPushAppendSkill1ListView
+OnLongPushAppendSkill2ListView
+OnLongPushAppendSkill3ListView
+OnLongPushAppendSkill4ListView
+OnLongPushAppendSkill5ListView
 OnClickSupportListView
 follower/setup
 followerData
@@ -10183,6 +10230,7 @@ SERVANT_SORT_KIND_NOT_HAVING_ITEM
 SERVANT_SORT_KIND_LIMIT_COUNT_2
 SERVANT_SORT_KIND_EVENT_ORDER
 SERVANT_SORT_KIND_RECOVERY_FATIGUE
+SERVANT_SORT_KIND_SERVANT_NAME
 SERVANT_SORT_FILTER_KIND_1
 SERVANT_SORT_FILTER_KIND_2
 SERVANT_SORT_FILTER_KIND_3
@@ -10381,9 +10429,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.35.1
-8dadc32fa82d675ddc6b8d7c4d0c6206c32d4fb5b45829980532e3d174075163
-20210715_19:14
+2.36.0
+c43ed20ad018234ef3487b067652fbc24465784207f4f08d934bea20264de6f6
+20210726_20:25
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10504,7 +10552,6 @@ master_mission_weekly
 master_mission_panel
 master_mission_event
 master_mission_special
-mis1
 eventMissionAnnounce
 【名前】
 【モーションID】
@@ -10564,6 +10611,7 @@ CLOSE_NOTICE
 CLOSE_ITEMLIST
 CLOSE_FAVORITE_CHANGE
 CLOSE_SOUND_PLAYER
+CLOSE_USER_SERVANT_COIN
 State 5
 ReleaseTouch
 MyRoomUIAnimationEnd
@@ -10592,11 +10640,23 @@ MYROOM_HELP_TAKE_OVER_EXPLANATION
 MYROOM_MENU_NAME_8
 MYROOM_HELP_RETURN_TITLE_EXPLANATION
 MYROOM_MENU_NAME_9
+MYROOM_HELP_SERVANT_COIN_EXPLANATION
+MYROOM_MENU_NAME_10
 MyRoomHelpListPanel/BaseWindow/UpperCloseButton
-MYROOM_MENU_NAME_
+CLICK_USER_ITEM
+CLICK_USER_SERVANT_COIN
+CLICK_SOUND_PLAYER
+CLICK_PROFILE
+CLICK_FAVORITE_CHANGE
+CLICK_NOTICE
+CLICK_GAMEOPTION
+MYROOM_MENU_NAME_7
+CLICK_SERIAL_CODE
+CLICK_CONTINUE_DEVICE
+CLICK_TITLE
+nameLabel
 MYROOM_NOTICE_NAME_
 MYROOM_MENU_FAVORITE_INFO_TXT
-CLICK_FAVORITE_CHANGE
 LastPlayedQuestId
 LastPlayedWarId
 LastPlayedEventId
@@ -10786,7 +10846,6 @@ COMBINE_NPUP_BASE
 NPUP_EXCEEDED
 COMBINE_NPUP_MATERIAL
 COMBINE_SPEND_QP
-NEED_QP
 CONFIRM_COMBINE_MSG
 NPUP_RECONFIRM_TXT
 NPUP_CONFIRM_WARNING_TXT
@@ -13403,6 +13462,7 @@ war_board_resume
 event_scan_panel_map
 battle_use_continue_item
 check_date_version
+card_combine_passive_skill
 02
 03
 04
@@ -13640,7 +13700,6 @@ EVENT_BOARD_GAME_QUEST_ARRIVAL_VOICE_SVT_ID_LIST
 PlayEventBoardGameArrivalEffectAuto
 game1_button
 arrow
-ar102
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_TITLE
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_MESSAGE
 EVENT_BOARD_GAME_DICE_ALLCLEAR_WARNING_DECIDE
@@ -14191,14 +14250,46 @@ SUMMON_OPEN_FRIENDQUEST_INFO
 indicator
 sy1
 sy2
+sy3
 sy4
 sy5
 sy6
 sy7
+sy8
 sy1a
 um1
 um2
 sy9
+ba1
+ba2
+ba3
+ba7
+ba10
+ba10a
+ba11
+ba12
+ba16
+ba18
+ba19
+ba20
+ba21
+ba22
+ba23
+ba24
+ba30
+ar2
+ar102
+co1
+mis1
+testSe
+wo1
+wo11
+ba38
+ba13
+ba15
+ba17
+ar112
+qev79
 Se/
 SePlayerObject
 ResidentSE/
@@ -14256,6 +14347,7 @@ SERVANT_SORT_EXPLANATION5
 SERVANT_SORT_INDIVIDUAL_CLEAR
 SERVANT_SORT_TITLE3
 ServantBonusFilterSelect1
+Fgo_20210622
 SERVANT_CHECK_COMBINE_DIALOG_TITLE
 SERVANT_CHECK_EQUIP_COMBINE_TITLE
 SERVANT_CHECK_COMBINE_DIALOG_MESSAGE
@@ -14268,6 +14360,10 @@ img_arrow_1
 img_arrow_3
 img_arrow_2
 img_arrow_4
+SERVANT_COIN_CONFIRM_GET_TITLE
+SERVANT_COIN_CONFIRM_GET_DESCRIPTION
+SERVANT_COIN_CONFIRM_OVERFLOW_TITLE
+SERVANT_COIN_CONFIRM_OVERFLOW_DESCRIPTION
 img_txt_campaign_
 CONDUCTION_LIMITUP_MSG
 CONDUCTION_LIMITUP
@@ -14320,6 +14416,7 @@ invalidSkillShift
 SkillRankUp
 changeLimitVoiceInFriendshipLv
 HideInAnimNode
+additionExpandImage
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 SERVANT_EQUIP_EFFECT_FILTER_TITLE
@@ -14396,6 +14493,7 @@ NP_NAME
 effectFolder
 card/combineLimit
 saintGraphImageId
+ascensionAfterDialogId
 icon_equip_cc
 icon_equip
 SERVANT_EQUIP_TAKE
@@ -14474,14 +14572,12 @@ Window/Objects/CancelButton
 Window/Objects/CloseButton
 card/combineSkill
 skillId
-COND_TYPE_TITLE
 strengthStatusReleaseId
 DISP_SKLL_LV
 SKILLCHARGETURN_TXT
+APPEND_SKILL_ICON_INFO_LV
 icon_stateup
 CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab
-icon_stateup_on
-icon_stateup_off
 icon_skill_on
 icon_skill_off
 SORT_WINDOW_TITLE
@@ -14505,9 +14601,9 @@ SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_
 SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE
 LIMIT_COUNT_SELECT_SEALED
 OnClickListViewButton
+EventMoveEnd
 EventMaximMove
 EventMaximMove2
-EventMoveEnd
 EventFadeoutFrameMove
 EventFadeoutFrameMove2
 EventUsuallyMove
@@ -14571,12 +14667,12 @@ _FLAVOR
 OnClickListViewVoice
 UNKNOWN_NAME_ILLUST
 NO_ENTRY_NAME_ILLUST
+SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE
 img_txt_npspeed
 SERVANT_STATUS_BATTLE_VOICE_AFTER
 SERVANT_STATUS_BATTLE_VOICE_BEFORE
 SERVANT_STATUS_BATTLE_VOICE_MESSAGE
 img_txt_battlevoice
-SERVANT_STATUS_EXPLANATION_SKILL_PASSIVE
 SERVANT_STATUS_EXPLANATION_COMMAND_CARD
 SERVANT_STATUS_EXPLANATION_COMMAND_CARD_LIMIT_COUNT_SEALED_MSG
 SERVANT_STATUS_EXPLANATION_COMMAND_CARD2
@@ -14694,9 +14790,15 @@ RARE_MATERIAL_INFO_MSG
 STATUS_HP_OVER_DIALOG_MSG
 STATUS_ATK_OVER_DIALOG_MSG
 STATUS_OVER_DIALOG_MSG
+APPEND_SKILL_OPEN_SPEND_COIN
+APPEND_SKILL_OPEN_HAVE_COIN
+APPEND_SKILL_OPEN_CONFIRM
+APPEND_SKILL_COMBINE_CONFIRM
 CONFIRM_TITLE_TD_RECONFIRM_COMBINE
 CONFIRM_EXCEED_COMBINE
 LVEXCEED_COMBINE_SPEND_QP
+LVEXCEED_COMBINE_SPEND_ITEM
+LVEXCEED_EXE_CONFIRM
 COSTUME_NEED_QP_TEXT
 COSTUME_HAVE_QP_TEXT
 COSTUME_CONFIRM_MSG
@@ -14735,7 +14837,6 @@ OPTION_VOICE
 OPTION_VOLUME_MUTE
 OPTION_VOLUME_MUTE_INFO
 OPTION_VOLUME_MUTE_EXPLANATION
-testSe
 testVoice
 _IsVertical
 _IsProportion
@@ -14886,7 +14987,6 @@ SHOP_BUY_BANK_ITEM
 SHOP_BUY_GRAIL_FRAGMENTS
 SHOP_BUY_SPECIAL_ITEM
 SHOP_BUY_ANONYMOUS
-MSG_SKILL_SELECT
 INFO_MSG_SKILLUP
 SKILL_EFFECT_LEVEL_TITLE
 SKILL_EFFECT_TITLE
@@ -14923,7 +15023,9 @@ additionalSkillActorType
 indv
 beforeClearBgmId
 afterClearBgmId
+APPEND_SKILL_RESULT_AFTER_LV
 SKILL_COMBINE_EFFFECT_UNRELEASE
+APPEND_SKILL_RESULT_LV
 COSTUME_CHANGE_DESCRIPTION
 COSTUME_CHANGE_SKILL_TITLE
 RESULT_BOUNDS_POWERUP
@@ -15097,7 +15199,6 @@ MapSpotEffect_{0}
 img_spotname_bg
 SPOT_FREE_QUEST_LAST_TIME
 AtScaleAnimEnd
-ar2
 turn
 turnEffectType
 turnElapsedEndBattle
@@ -15221,6 +15322,7 @@ SHORT_HAVE_STONE
 STONE_PURCHASE
 SHORT_HAVE_CHARGE_STONE
 SHORT_HAVE_POINT
+CONFIRM_CHARGESUMMON_PREFE_MSG
 CONFIRM_CHARGESUMMON_MSG
 CONFIRM_PAYSUMMON_MSG
 CONFIRM_TICKETSUMMON_MSG
@@ -15235,13 +15337,15 @@ gachaIds
 FrequencyType
 RETURN_TUTORIAL
 CLEAR_TUTORIAL
-USER_FREE_STONE
-TUTORIAL_MESSAGE_SUMMON1
 TUTORIAL_MESSAGE_SUMMON2
 SummonBanners/DownloadSummonBanner
 SUMMON_HELP_MESSAGE
+img_line_summon
+img_bg_banner
 FAIL_LOAD
 img_summon_
+img_summon_mini_
+img_summon_mini_236
 SetBannerCenter
 CHANGE_BANNER
 CHECK_SERVANT_FRAME
@@ -15263,8 +15367,8 @@ ring_gard2_1
 ring_gard2_2
 ring_gard2_3
 center_glow
-GET_SINGLE
 GET_MULTI
+GET_SINGLE
 GO_BACK
 NEW_SVT
 CLICK_OK
@@ -15276,6 +15380,7 @@ NEXT_SVT
 RETURN_RESULT
 RETURN_MAIN
 img_summon_maintenance
+icon_summon_arrow2
 BGM_SUMMON_1
 SUMMON_SKIP_STOP_SERVANT_IDS
 END_PREPARATION
@@ -15313,6 +15418,7 @@ UpAnimationName
 btn_txt_summon0
 btn_txt_summon10
 TUTORIAL_GACHA_ID
+USER_FREE_STONE
 btn_txt_summon{0:00}
 btn_txt_summon11
 btn_txt_summon02
@@ -15323,6 +15429,12 @@ btn_txt_bonus_10times_plus1
 btn_summon_bg3
 btn_summon_bg1
 btn_txt_bonus_10plus1
+btn_summon_bg5
+btn_txt_reset
+btn_txt_only_1
+img_bg_saintquartzuse3
+btn_txt_summon01
+summon_txt_done
 EndAnimation
 ConfirmWindow/ConfirmBntInfo/DecideButton
 SUMMON_QP_LIMIT_WARNING_TITLE
@@ -15341,9 +15453,12 @@ SUMMON_RESULT_AUTOSALE_MSG
 CONTINUE_SUMMON_BTN
 SHORT_SERVANT_FORMATION
 SUMMON_LIMIT_OVER_BTN
+SUMMON_APPEND_END
+SUMMON_TICKET_END
 HAVE_SVT_NUM_TITLE
 HAVE_SVTEQ_NUM_TITLE
 LIMIT_OVER
+SUMMON_RESULT_COIN_FORMAT
 SummonEffect2Prefab
 SmmonEffPref
 SummonRoot
@@ -15611,6 +15726,7 @@ img_txt_friend
 img_txt_material
 img_txt_presentbox
 img_txt_itemscarried
+img_txt_servantcoin_title
 img_txt_masterprofile
 img_txt_gameoption
 img_txt_information
@@ -15810,7 +15926,6 @@ event_superboss_status_win_
 FadeOutBGM
 PlayBGM
 BackAnchor/BtnBg
-ar112
 Title/Prefabs/title_effect00
 UI Root/Camera/TakeOverPanel/BtnObj/CancelBtn
 PLAY_NORMAL_MODE
@@ -15975,10 +16090,15 @@ CharaGraph/
 CharaGraph/100000
 CommandGraph/
 CommandGraph/1000000
+CharaGraph/CharaGraphEx/
 frame0
 frame1
 frame2
 frame3
+frame4
+frame5
+frame6
+frame7
 frame17
 frame20
 eframeB_atk
@@ -16200,6 +16320,8 @@ itemSelectNum
 turnMaxDamage
 knockdownNum
 totalDamageToAliveEnemy
+USER_SERVANT_COIN_LIST_EMPTY
+UserServantCoinList1
 Fgo_20150511
 userStatus/flagSet
 onFlagNumbers
@@ -16657,6 +16779,7 @@ Invalid type: {0} passed to event expecting {1}
 Cannot get content from a null UnityWebRequest object
 Cannot get content from an unfinished UnityWebRequest object
 No binding for type 
+master[{0}] is null[{1}:{2}]
 No elements in source list
 {
  path = 
