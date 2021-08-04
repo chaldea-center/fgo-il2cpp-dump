@@ -5895,6 +5895,8 @@ AGE_VEIFICATION_TYPE1
 AGE_VEIFICATION_TYPE2
 AGE_VEIFICATION_TYPE3
 forcedSkillSpeed
+fieldHp
+fieldHpUiId
 voicePlay
 enemyMasterEffectType
 NOT_
@@ -6474,6 +6476,7 @@ en_text01
 en_damage01
 Shadow
 en_Head
+en_buff01
 ActorObject
 ActorSide
 CameraFsm
@@ -6699,6 +6702,8 @@ svt_change
 priority
 svt_voice_id
 isHideShadow
+UpdateDefenceTargetDamageGauge
+CompleteDefenceTargetDamageGauge
 Player
 Enemy
 Sound
@@ -6817,6 +6822,7 @@ LOSE_PERFORMANCE
 BATTLE_DIALOG_RETIRE_TITLE
 BATTLE_RAID_DIALOG_RETIRE_TITLE
 BATTLE_DIALOG_RETIRE_CONF
+BATTLE_DIALOG_RETIRE_CONF_{0}_{1}
 BATTLE_DIALOG_RETIRE_ONLY_NPC
 BATTLE_RAID_DIALOG_RETIRE_CONF
 END_TASK
@@ -7113,6 +7119,8 @@ FADE_OUT
 FADE_IN
 BEFORE_FIELD_CALL_EFFECT_END
 AFTER_FIELD_CALL_EFFECT_END
+defence_target_loss_hp_01
+effect/ef_poplabel{0:00}
 Battle/TurnEffect/
 SKIP_SKILL_CUTIN
 {0}_{1}_{2}
@@ -7206,6 +7214,9 @@ CONNECT_NG
 通信に失敗したので再度通信を行います
 BATTLE_CONTINUE_USECHECK_SPELL
 BATTLE_CONTINUE_USECHECK_STONE
+BATTLE_DEFENCE_TARGET_NAME_{0}
+BattleAssetUIAtlas
+icon{0}
 en_target01
 EnemyMasterFace/enemyMstFace{0:d5}
 enemyMstFace{0:d5}
@@ -7223,7 +7234,6 @@ icon_drop_item_0
 ef_masterskill_flash
 frame_master_bg_disable
 skill_partition
-BattleAssetUIAtlas
 frame_cs_bg_disable
 BATTLE_MASTER_SKILL_CHARGE
 BATTLE_MASTER_SKILL_ADD_SPLIT
@@ -7246,7 +7256,6 @@ LONGPRESS_ENEMY
 CLOSE_CONF
 CLICK_SPELL
 CLICK_MENU
-effect/ef_poplabel{0:00}
 effect/ef_masterskill_buff
 CLICK_CKRETIRE
 Wait
@@ -7420,6 +7429,7 @@ BATTLE_SELECTSUBERROR_NOSELECT_CONF
 Sprite
 BATTLE_DIALOG_CAN_NOT_REPLACE
 BATTLE_DIALOG_SELECT_SERVANT
+N_{0}{1}
 NoblePhantasm/CutIns
 Actors/Actor
 _y0
@@ -7480,8 +7490,6 @@ btn_txt_servant_property_off
 btn_txt_servant_states_on
 Top/close
 img_skillclass_0
-icon_stateup_on
-icon_stateup_off
 changeHp
 changeUpdateStatus
 UpdateStatusByTransform
@@ -7853,6 +7861,9 @@ CardEffectId
 battleEndNotReduceTurnFlag
 drawShadowDespiteBattleCharaInvisible
 battleCharaAlpha
+UpBuffRateBuffType
+UpBuffRateBuffIndiv
+MaxBuffRate
 Self
 Opponent
 Check{0}BuffTypes
@@ -8031,6 +8042,11 @@ FGO_Noble/GrabPassBlur
 _Position
 _PrevPosition
 _IsEnemy
+_LightDirValue
+_GameCam_VP
+_LocalRot_Mat
+_AllMat
+_org_
 SERVANT_FRAME_PURCHASE_TITLE
 SERVANT_FRAME_PURCHASE_MESSAGE_START
 InfoDialog/CloseButton
@@ -8250,6 +8266,7 @@ bit_result_advent01
 bit_result_powerup
 CrtMaxLvExceedNodeName
 ResMaxLvExceedNodeName
+bit_result_limitbreak
 bit_result_grail_02
 bit_result_grail_01
 CostumeName
@@ -8954,6 +8971,7 @@ mstQuestSpotRelease
 mstRecover
 mstStageRemap
 mstRestriction
+mstSvtAdd
 mstSvtAnimationOverwrite
 mstSvtAppendPassiveSkill
 mstSvtCard
@@ -9000,6 +9018,7 @@ mstShopGroup
 mstShop
 mstShopRelease
 mstShopScript
+mstSkillAdd
 mstSkillDetail
 mstSkillLv
 mstSkill
@@ -9144,6 +9163,9 @@ getList family cannot return null.
 mstAssetbundleKey
 存在しないバフIDです
 バフID[{0}]はマスターに存在しておりません
+{0}(対象選択)
+プレイヤー
+エネミー
 eventType 
 DEBUG_MENU_START_BATTLE_MOCK_SCENE
  [ON] 
@@ -10089,6 +10111,7 @@ Enum
 Array
 At least one event setup is required
 Missing Material!
+ba40
 StartCoroutine: 
 FLAG_ON
 FLAG_OFF
@@ -10429,9 +10452,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.36.0
-c43ed20ad018234ef3487b067652fbc24465784207f4f08d934bea20264de6f6
-20210726_20:25
+2.37.0
+3c72da05233eedb3b4259b0fef3c1961f025d62231831149fa66a167ed51de01
+20210730_21:42
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10779,6 +10802,8 @@ https://itunes.apple.com/lookup?id=
 results
 trackViewUrl
 https://play.google.com/store/apps/details?id=
+TERMINAL_NETWORK_ERROR_DIALOG_TITLE
+TERMINAL_NETWORK_NOT_REACHABLE_MESSAGE
 authCode
 _userId=
 background cancel
@@ -13204,6 +13229,7 @@ img_quest_unit_{0:D2}
 QUEST_NONE
 Terminal/Effect
 ef_blackpoint
+ef_whitepoint
 bit_board_appear
 bit_fade_black
 bit_board_disappear
@@ -13646,6 +13672,8 @@ bit_harvest_get{0}
 PROLOGUE_WAR_IDS
 PROLOGUE_WAR_AFTER_QUEST_CLEAR_IDS
 bit_treasure_get
+beforeTerminalMessageIds
+QUEST_CLEAR_BEFORE_TERMINAL_MESSAGE_
 NoticeLastModified
 EVENT_INIT
 SellServant
@@ -13778,6 +13806,8 @@ branchQuestNotClear
 revivalBranch
 branchRouteSelect
 branchNotRouteSelect
+branchRouteSelectCount
+branchNotRouteSelectCount
  - 1
 Figure
 Equip
@@ -14307,6 +14337,7 @@ sellData
 sellCommandCode
 WEB_VIEW_TITLE_SERIAL_CODE
 SerialCodeTop
+presentDialogMessageId
 card_servant_
 Servants/Status/
 status_servant_
@@ -14578,6 +14609,8 @@ SKILLCHARGETURN_TXT
 APPEND_SKILL_ICON_INFO_LV
 icon_stateup
 CommonUI/ServantStatus/ServantSkillStrengthStatusPrefab
+icon_stateup_on
+icon_stateup_off
 icon_skill_on
 icon_skill_off
 SORT_WINDOW_TITLE
@@ -15229,6 +15262,8 @@ disableUniqueFieldMotion
 battleStartVoiceSvtId
 battleStartVoiceSvtLimit
 battleStartVoiceIds
+enemyFieldPosCount
+3.6BossBattle
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -15625,7 +15660,6 @@ SAVEKEY_QuestRandomGroupList
 TERMINAL_CLEAR_REWARD_DISP
 CAPTER CREATE
 CAPTER INIT
-TERMINAL_NETWORK_ERROR_DIALOG_TITLE
 TERMINAL_NETWORK_ERROR_DIALOG_MESSAGE
 MST_MISSION_CHANGE_MSG
 MST_MISSION_CHANGE_DECIDE
@@ -16033,6 +16067,11 @@ randomWeights
 groupSeqIDs
 tdTypeChangeIDs
 delayEnd
+fieldHpDamage
+fieldHpDamageEffectId
+fieldHpDamageInvincible
+fieldHpDamageSpecialInvincibleEffectId
+fieldHpGuardEffectId
 TUTORIAL_ARROW_MARK_MESSAGE
 EndCloseTutorialArrowMenu
 チュートリアル表示エラー
@@ -16725,6 +16764,7 @@ Stop Trail2
 Stop Trail2 Smoothly
 SUMMON_OPEN_FRINEDQUEST_TITLE
 SUMMON_OPEN_FRINEDQUEST_NAME
+PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
 vector2
 vector3
 rect
