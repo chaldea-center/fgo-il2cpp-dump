@@ -1,41 +1,3 @@
-No access to the given key
-values.xml
-values
-value
-While loading registry key at {0}: {1}
-name
-type
-int
-bytearray
-string
-expand
-qword
-string-array
-\
-Unknown RegistryHive
-.mono/registry
-MONO_REGISTRY_PATH
-machine.config
-..
-registry
-Cannot write to the registry key.
-Microsoft.Win32.RegistryKey
-Name of registry key cannot be greater than 255 characters
-Illegal operation attempted on a registry key that has been marked for deletion.
-HKEY_CLASSES_ROOT
-HKEY_CURRENT_CONFIG
-HKEY_CURRENT_USER
-HKEY_DYN_DATA
-HKEY_LOCAL_MACHINE
-HKEY_PERFORMANCE_DATA
-HKEY_USERS
-Registry hive '{0}' is not implemented.
-software
-the given value does not exist
-Only string and byte arrays can written as registry values
-{0}{1}
-value 
-The network path was not found.
 collation.core.bin
 collation.tailoring.bin
 Mono INTERNAL ERROR (Should not happen): Collation tailoring table is broken for culture {0} ({1}) at 0x{2:X}
@@ -62,6 +24,7 @@ There is no such thing as radix one notation
 radix
 0
 1
+value
 Operation would return a negative value
 bi1 out of range
 bi2 out of range
@@ -347,6 +310,7 @@ xml:space
 Attempted to read or write protected memory. This is often an indication that other memory has been corrupted.
 info
  is an open generic type
+type
 (unknown)
 No constructor found for {0}::.ctor({1})
 Type '{0}' doesn't derive from MarshalByRefObject.
@@ -388,6 +352,7 @@ Arrays must contain >= 1 elements.
 Arrays must be of same size.
 Each value has to be >= 0.
 Length + bound must not exceed Int32.MaxValue.
+values
 Each value has to be >= 0 and <= Int32.MaxValue.
 indices
 array
@@ -754,12 +719,6 @@ XDG_PICTURES_DIR
 Pictures
 /usr/share
 Invalid SpecialFolder
-variable
-String cannot be of zero length.
-Environment variable name cannot contain an equal character.
-The first char in the string is the null character.
-SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-Environment
 ClassName
 Message
 HelpURL
@@ -807,6 +766,7 @@ suffix
 CompareInfo - 
 Positive number required.
 Culture ID {0} (0x{0:X4}) is not a supported culture.
+name
 Culture name 
  is not supported.
 This instance is read only
@@ -1082,6 +1042,7 @@ The specified path is not of a legal form (empty).
 UNC paths should be of the form \\server\share.
 \\
 The specified path is not of a legal form.
+..
 Pathname is longer than the maximum length
 Timeouts are not supported on this stream.
 EndRead already called.
@@ -2020,6 +1981,7 @@ Seek
 SetLength
 Error occured during a cryptographic operation.
 Unexpected error occured during a cryptographic operation.
+\
 Null Key
 Wrong Key Length
 Key
@@ -3665,6 +3627,7 @@ certificate
 Cannot export certificate(s) to the '{0}' format
 findValue
 Invalid find value type '{0}', expected '{1}'.
+string
 X509KeyUsageFlags
 Invalid OID value '{0}'.
 X509DateTime
@@ -4206,6 +4169,7 @@ getComponentType
 getName
 getLength
 isPrimitive
+int
 boolean
 byte
 short
@@ -4517,9 +4481,11 @@ You need to yield the download or wait until isDone returns true.
 
 -----------------
 IL2CPP Root Domain
+
+
+
 https://www.gstatic.com/firebase/ssl/roots.pem
 DEFAULT
-__FIRAPP_DEFAULT
 UnityEditor.EditorApplication, UnityEditor
 isPlaying
 isPlayingOrWillChangePlaymode
@@ -4530,34 +4496,9 @@ UnityEditor.PlayModeStateChange, UnityEditor
 PlayModeStateChangedWithArg
 playmodeStateChanged
 Firebase Services
-No certs are being installed because the platform doesn't support it.
+GetStackTraceLogType
+stackTraceLogType
 unity
-Using workaround for .NET 4.6 certificate bug.
-Detected .NET 4.6 certificate bug, Firebase might not work.
-Firebase.Database.Internal.TubeSock.WebSocket
-Root cert install required: {0}
-System.Security.Cryptography.X509Certificates.OSX509Certificates
-
-||
-
------BEGIN CERTIFICATE-----
------END CERTIFICATE-----
-Firebase.Platform.cacert_pem.txt
-Installing CRLs in 
------BEGIN X509 CRL-----
------END X509 CRL-----
-Installed {0} CRLs
-Error installing CRLs: {0}
-Mono.Security
-Mono.Security.X509.X509StoreManager
-_userPath
-_userStore
-Error resetting cert store: 
-Could not refresh the cert store. You may have to restart the app to connect to Firebase.
-Saving root certs in {0} ({1} is not writable)
-Firebase.Platform.cacrl_pem.txt
-Firebase.Platform.caintermediatecrl_pem.txt
-Installing {0} certs
 {0,6}|{1,6}|{2,7}|{3} {4} UnusedBits:{5} : 
 '
 
@@ -4837,26 +4778,33 @@ iOS application.
 
 A Firebase shared library (.dll / .so) could not be loaded.
 
+App has been disposed
 Firebase.Analytics.FirebaseAnalytics, Firebase.Analytics
 analytics
 Firebase.Auth.FirebaseAuth, Firebase.Auth
 auth
+Firebase.Crashlytics.Crashlytics, Firebase.Crashlytics
+crashlytics
 Firebase.Database.FirebaseDatabase, Firebase.Database
 database
 Firebase.DynamicLinks.DynamicLinks, Firebase.DynamicLinks
 dynamic_links
 Firebase.Functions.FirebaseFunctions, Firebase.Functions
 functions
-Firebase.InstanceId.FirebaseInstanceId, Firebase.InstanceId
-instance_id
+Firebase.Installations.FirebaseInstallations, Firebase.Installations
+installations
 Firebase.Invites.FirebaseInvites, Firebase.Invites
 invites
 Firebase.Messaging.FirebaseMessaging, Firebase.Messaging
 messaging
+Firebase.Performance.FirebasePerformance, Firebase.Performance
+performance
 Firebase.RemoteConfig.FirebaseRemoteConfig, Firebase.RemoteConfig
 remote_config
 Firebase.Storage.FirebaseStorage, Firebase.Storage
 storage
+Firebase.TestLab.GameLoop, Firebase.TestLab
+test_lab
 {0} module '{1}' for '{2}'
 Enable
 Disable
@@ -4873,7 +4821,7 @@ fire-
 -ver
 Don't call other Firebase functions while CheckDependencies is running.
 Don't call Firebase functions before CheckDependencies has finished
-5.5.0
+8.1.0
 |
 state.Fsm == null
 Could Not Create Action: 
@@ -6080,6 +6028,7 @@ KB
 MB
 GB
 TB
+{0}{1}
 N2
 SCRIPT
 DelayLoadStart
@@ -6356,6 +6305,8 @@ MAX_USER_SVT_EQUIP
 MAX_USER_COMMAND_CODE
 DECK_MAX
 SUPPORT_DECK_MAX
+FIX_MAIN_SUPPORT_DECK_NUM
+FIX_EVENT_SUPPORT_DECK_NUM
 MAX_USER_SVT_STORAGE
 MAX_USER_SVT_EQUIP_STORAGE
 ONE_ACT
@@ -6657,6 +6608,8 @@ seqId
 ", "data":"
 " }
 BATTLE_SVT_COMMON_FLAG
+rebootAlreadyPlayMovie
+playWaveStartMovie
 TUTORIAL_QUEST_ID1
 TUTORIAL_QUEST_ID2
 TUTORIAL_QUEST_ID3
@@ -6693,6 +6646,7 @@ shift
 shiftPosition
 shiftClear
 change
+isSkillShiftInfo
 forceDropItem
 entryIndex
 treasureDeviceName
@@ -6814,8 +6768,6 @@ BgmName
 BGM_BATTLE_1
 END_PROC
 PROC_RETIRE
-rebootAlreadyPlayMovie
-playWaveStartMovie
 NG
 BATTLE_DIALOG_RESULT_ERROR_TITLE
 BATTLE_DIALOG_RESULT_ERROR_CONF
@@ -7280,6 +7232,7 @@ OPEN
 SUMMON_EVENT_SERVANT_TITLE_GET
 bit_reward_shine02
 RESULT_BOUNDS_OPENQUEST
+RESULT_BOUNDS_UPDATE_MATERIAL_SG
 RESULT_BOUNDS_UPDATE_MATERIAL
 RESULT_BOUNDS_GETVOICE
 RESULT_BOUNDS_GET_COIN_COUNT
@@ -7372,6 +7325,8 @@ recordValueJson
 tdPlayed
 usedEquipSkillList
 svtCommonFlagList
+skillShiftUniqueIds
+skillShiftNpcSvtIds
 aliveUniqueIds
 battleStatus
 ,[
@@ -7388,9 +7343,6 @@ BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE
 QUEST_ITEM_COST_OVER
-
-
-
 BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE
 AP_OVER_MAX_COLOR
 BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT
@@ -7561,6 +7513,7 @@ userEquipId
 followerType
 choiceRandomLimitCounts
 followerRandomLimitCount
+followerSupportDeckId
 {0}  Lv.{1}
 menu_txt_remaining
 menu_txt_spend
@@ -7919,21 +7872,24 @@ alpha
 OpenWindow
 Tutorial/tutorial_alpha
 tutorial_alpha
-SELECT_NO_SORTIE
-formation_blank_small
-SUPPORT_SELECT_CURRENT_STATE
-SUPPORT_SELECT_OLD_STATE
 SUPPORT_SELECT_CANCEL_DIALOG_TITLE
-PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE
-PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE
-PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL
 SUPPORT_DECKID_QUESTION
 SUPPORT_CURRENT_DECKID
 SUPPORT_LAST_DECKID
+COMMON_CONFIRM_CANCEL
 SUPPORT_MAINQUEST
 SUPPORT_EVENTQUEST
 SUPPORT_DECK_ID_FIXED
 SUPPORT_DECKID_FREE
+SUPPORT_DECK_NOT_FIXED
+ConfirmWindow/CancelButton
+SELECT_NO_SORTIE
+formation_blank_small
+SUPPORT_SELECT_CURRENT_STATE
+SUPPORT_SELECT_OLD_STATE
+PARTY_ORGANIZATION_CONFIRM2_CANCEL_MESSAGE
+PARTY_ORGANIZATION_CONFIRM2_CANCEL_DECIDE
+PARTY_ORGANIZATION_CONFIRM2_CANCEL_CANCEL
 card/combineLimitSpecial
 card/favorite
 imageLimitCount
@@ -7977,7 +7933,6 @@ FEMALE_TEXT
 MALE_TEXT
 onUpdateEffect
 onCompleteEffect
-COMMON_CONFIRM_CANCEL
 CHANGE_TITLE
 CHANGE_NAME_TITLE
 BaseWindow/CancleBtn
@@ -8486,7 +8441,6 @@ purchaseToken
 BATTLERESUME_CONFIRM_DECIDE
 BATTLERESUME_CONFIRM_CANCEL
 Window/CancelButton
-ConfirmWindow/CancelButton
 COMMON_CONSUME_INFO_IF_ENOUGH
 COMMON_CONSUME_INFO_IF_LACKING
 COMMON_CONSUME_INFO_SEPARATOR
@@ -8648,6 +8602,7 @@ LOADING
 THINKING
 クラス：
 CONNECT_TIP_MESSAGE
+DownloadEventUIAtlas{0}{1}
 ProgressBar/CancelButton
 MiniProgressBar/CancelButton
 connectMarkA
@@ -8779,6 +8734,7 @@ battleusecontinueitemrequestsave.dat
 battleuseitemrequestsave.dat
 unconfirmedpayment.dat
 servantcharactergraphexopen.dat
+questhintdialogopensave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -9048,9 +9004,13 @@ totalEventPoint
 totalEventRace
 totalEventRaid
 mstTotalLogin
+mstTreasureBoxGift
+mstTreasureBox
+mstTreasureBoxTalk
 mstTreasureDeviceDetail
 mstTreasureDeviceLv
 mstTreasureDevice
+updateProfileDialogInfo
 userAccessary
 userBlacklist
 userBoxGacha
@@ -9101,6 +9061,7 @@ userSvtCommandCode
 userSvtLeader
 userSvt
 userSvtStorage
+userSvtVoicePlayed
 userShop
 userSubEquip
 userEventSuperBoss
@@ -9362,6 +9323,9 @@ EventDelegate
 FloorRewardPrefabName
 useDiceSpotId
 ServantFatigueId
+changeLoadAnimations
+commonReleaseId
+animationId
 EventServantFatigue/{0}
 forceOverwrite
 EVENT_ASSIST_SKILL_LEVEL_FORMAT
@@ -9595,6 +9559,8 @@ SET_ITEM_INDIVIDUAL
 SET_ITEM_GET_SERVANT_MSG
 SET_ITEM_GET_ITEM_MSG
 SVT_GET
+SHOP_AFTER_ACTION_DIALOG_CLOSE
+SHOP_AFTER_ACTION_DIALOG_MAP
 GOTO_CALL
 img_titlebg_
 event_logo_
@@ -9673,6 +9639,21 @@ END_PLAY
 EVENT_TOWER_HIDE_COND
 event_towerbanner_
 event_tower_rewardget_
+TREASURE_BOX_USER_EVENT_ITEM
+TREASURE_BOX_PAY_EVENT_ITEM
+TREASURE_BOX_DRAW_TEXT
+GetTreasureBoxEventEnableTime
+[E1A545,FEEF99]
+[FFFF00,FFFF00]
+Effect/TreasureBox
+TREASURE_BOX_DRAW_AFTER_DIALOG_MESSAGE
+treasurechest_btn_open
+treasurechest_bg_{0}
+treasurechest_img_frame_0{0}f
+treasurechest_img_frame_0{0}b
+treasurechest_img_bg
+treasurechest_btn_info
+treasurechest_img_line
 event_logo_mini_
 _Volume
 _SubTex
@@ -9794,10 +9775,8 @@ OnLongPushAppendSkill5ListView
 OnClickSupportListView
 follower/setup
 followerData
-mainSupportDeckId
-eventSupportDeckId
-fixMainSupportDeck
-fixEventSupportDeck
+fixMainSupportDeckIds
+fixEventSupportDeckIds
 TUTORIAL_MESSAGE_FORMATION1
 CLICK_TERMINAL
 friend/accept
@@ -10261,6 +10240,7 @@ SERVANT_SORT_KIND_LIMIT_COUNT_2
 SERVANT_SORT_KIND_EVENT_ORDER
 SERVANT_SORT_KIND_RECOVERY_FATIGUE
 SERVANT_SORT_KIND_SERVANT_NAME
+SERVANT_SORT_KIND_DISP_NO
 SERVANT_SORT_FILTER_KIND_1
 SERVANT_SORT_FILTER_KIND_2
 SERVANT_SORT_FILTER_KIND_3
@@ -10459,9 +10439,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.37.2
-723d93a599b6f10ef3085ff1131fa5679a91da924246b8ca40dded18eccaf3da
-20210823_22:40
+2.38.0
+6f478a3b7533b71821c937fcc71c2999340f35cb30720840b84e8dc512128c57
+20210903_20:02
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10809,8 +10789,9 @@ https://itunes.apple.com/lookup?id=
 results
 trackViewUrl
 https://play.google.com/store/apps/details?id=
-TERMINAL_NETWORK_ERROR_DIALOG_TITLE
-TERMINAL_NETWORK_NOT_REACHABLE_MESSAGE
+NETWORK_ERROR_BOOT_RETRY_MESSAGE
+NETWORK_ERROR_BOOT_RETRY_DECIDE
+NETWORK_ERROR_BOOT_RETRY_CANCEL
 authCode
 _userId=
 background cancel
@@ -10842,7 +10823,6 @@ reload_cache
 goto_login_access
 refresh_terminal
 NETWORK_ERROR_SERVER_CANCEL_MESSAGE
-NETWORK_ERROR_BOOT_RETRY_MESSAGE
 NETWORK_ERROR_BOOT_MESSAGE
 NETWORK_ERROR_CSID_CODE
 data_update
@@ -13243,11 +13223,13 @@ bit_board_disappear
 bit_board_disappear2
 bit_fade_black2
 RemoveTempBG
+MATERIAL_MAP_CHAPTER_SUB_{0:D2}
 MATERIAL_MAP_CHAPTER_SUB
 CHAPTER_F_START_ID
 CHAPTER_F_END_ID
 CAMPAIGN_COST_COLOR
 OVER_COST_COLOR
+Fgo_20210622
 QUEST_INFO_TAB_REWARD
 QUEST_INFO_TAB_ENEMY
 QUEST_INFO_TOP
@@ -13268,6 +13250,7 @@ FadeOutBgmBeforeMovie
 resultEffectId
 battleEffectId
 fieldMotionId
+phaseRouteSelect
 resultEnemyVoiceIds
 resultLoseDisp
 noResult
@@ -13278,6 +13261,8 @@ battleFinishMovie
 waveStartMovie
 progressAfterMovie
 movieWave
+masterImageId
+notResetResultDispFlag
 movieAfterCrossFadeTime
 movieAfterCrossFadeStartFrame
 battleFinishCameraTargetAll
@@ -13316,6 +13301,9 @@ assistIdWeight
 hideAssistConfButton
 questPhaseScript_1
 questPhaseScript_2
+hintTitle
+hintMessage
+hintOpenType
 movieFolder
 moviePlayType
 effectColor
@@ -13496,6 +13484,7 @@ event_scan_panel_map
 battle_use_continue_item
 check_date_version
 card_combine_passive_skill
+treasure_box_draw
 02
 03
 04
@@ -13643,6 +13632,7 @@ QUEST_START_ACTION_TITLE_STORY
 QUEST_CLEAR_CHANGE_ACTION_STORY_FORMAT
 QUEST_CLEAR_CHANGE_ACTION_POWERUP_FORMAT
 QUEST_CLEAR_CHANGE_ACTION_STORY
+QUEST_CLEAR_CHANGE_ACTION_COLLECTION_SG
 evGO_EVENT
 WAR_CLEAR_REWARD_GET
 TUTORIAL_MESSAGE_TERMINAL_FAVORITE
@@ -13853,6 +13843,10 @@ ScriptManagerSelectBranch
 PlayScenario 
 PlayMessage
 PlayShop 
+SUMMON_OPEN_FRINEDQUEST_TITLE
+SUMMON_OPEN_FRINEDQUEST_NAME
+SUMMON_EVENT_SERVANT_TITLE_JOIN
+PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
 PlayGacha 
 GachaTemplate
 [wait time 
@@ -14385,7 +14379,6 @@ SERVANT_SORT_EXPLANATION5
 SERVANT_SORT_INDIVIDUAL_CLEAR
 SERVANT_SORT_TITLE3
 ServantBonusFilterSelect1
-Fgo_20210622
 SERVANT_CHECK_COMBINE_DIALOG_TITLE
 SERVANT_CHECK_EQUIP_COMBINE_TITLE
 SERVANT_CHECK_COMBINE_DIALOG_MESSAGE
@@ -14394,6 +14387,16 @@ SERVANT_CHECK_EQUIP_SELL_TITLE
 SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE
 SERVANT_CHECK_SELL_DIALOG_TITLE
 SERVANT_CHECK_SELL_DIALOG_MESSAGE
+Window/Objects/Buttons/CancelButton
+icon_reinforced
+icon_rarity5
+img_slider_thumb
+img_slider_thumb_locked
+SERVANT_SELL_WARNING_COMBINE_TITLE
+SERVANT_SELL_WARNING_COMBINE_BODY
+SERVANT_SELL_WARNING_SLIDER
+SERVANT_SELL_WARNING_SSRARE_TITLE
+SERVANT_SELL_WARNING_SSRARE_BODY
 img_arrow_1
 img_arrow_3
 img_arrow_2
@@ -14419,6 +14422,9 @@ useQp
 getExp
 successResult
 LEVELUP_NOTICE_TITLE
+COND_TYPE_AND_FLAVOR2
+imageLimit
+condTitle
 CHAPTER2_PROLOGUE_WAR_ID
 Fgo_20160620_1
 ChapterProgress
@@ -14521,11 +14527,14 @@ card/friendshipExceed
 card/combineExceed
 weaponGroup
 weaponEffect
+limitCountUpResultServantLimitCount
 overWriteTDName
 overWriteTDRuby
 overWriteTDFileName
 overWriteServantName
 overWriteServantBattleName
+overWriteTDRank
+overWriteTDTypeText
 NP_NAME_LEVEL
 NP_NAME
 effectFolder
@@ -14702,10 +14711,13 @@ SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
 Base/TitlePrefab/BackObj/BtnBg
 #4C4C4C
 img_txt_profile
+img_index_02
+img_index_03
 SERVANT_STATUS_PROFILE_ILLUST_TITLE
 SERVANT_STATUS_PROFILE_CV_TITLE
 SERVANT_STATUS_PROFILE_CONDITION
 _FLAVOR
+_FLAVOR2
 OnClickListViewVoice
 UNKNOWN_NAME_ILLUST
 NO_ENTRY_NAME_ILLUST
@@ -15506,6 +15518,8 @@ SUMMON_RESULT_COIN_FORMAT
 SummonEffect2Prefab
 SmmonEffPref
 SummonRoot
+SUPPORT_DECK_FIXED_ERROR_TITLE
+SUPPORT_DECK_FIXED_ERROR_MESSAGE
 SUPPORT_SELECT_INPUT_DECK_NAME_TITLE
 SUPPORT_SELECT_INPUT_DECK_NAME_EXPLANATION
 SUPPORT_SELECT_NAME_CLEAR
@@ -15545,6 +15559,8 @@ SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SELECT_CANCEL
 BaseWindow/CacnelButton
 SUPPORT_SELECT_CONFIRM_DECK_SUPPORT_NUM
 SUPPORT_SELECT_NAME
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_SAME_KIND
+SUPPORT_SELECT_CONFIRM_DECK_MENU_COPY_NOT_SELECT
 SUPPORT_SELECT_EDIT_MENU_TITLE
 SUPPORT_SELECT_EDIT_MENU_DECK_NAME
 SUPPORT_SELECT_EDIT_MENU_MESSAGE
@@ -15587,9 +15603,15 @@ icon_class_on005
 icon_class_on006
 icon_class_on007
 icon_class_on1002
-btn_txt_set{0}_2
+icon_event_2
+icon_event_2_{0}
+icon_event_1
+icon_event_1_{0}
 btn_txt_set{0}_1
+btn_txt_set0_1
 SUPPORT_SETTING_SCENE_INITIAL_PAGE_INDEX
+SUPPORT_DECK_FIXED_ERROR_SERVANT_NAME_ONLY
+SUPPORT_DECK_FIXED_ERROR_SERVANT
 SUPPORT_KIND_0
 SUPPORT_KIND_1
 SUPPORT_KIND_2
@@ -15608,6 +15630,7 @@ SupportServantEquip
 onClickSelectedItem
 PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER
 SUPPORT_SELECT_USE_SUPPORT
+SUPPORT_SELECT_ALREADY_SET
 SupportServantSelectAll
 SupportServantSelect
 SUPPORT_SERVANT_SELECT_EXPLANATION
@@ -15658,6 +15681,8 @@ SAVEKEY_LastPlayQuestConsumeType
 SAVEKEY_PlayedTerminalEffects
 SAVEKEY_PlayTerminalEffectDisappear
 SAVEKEY_TerminalSelectedStoryQuestId
+SAVEKEY_ConnectMarkEventId
+SAVEKEY_ConnectMarkAnimationId
 SAVEKEY_TerminalLastSelectQuestIndex
 TerminalLastPlayedFreeQuestSpotId
 TerminalLastPanelEventPoint
@@ -15669,6 +15694,7 @@ SAVEKEY_QuestRandomGroupList
 TERMINAL_CLEAR_REWARD_DISP
 CAPTER CREATE
 CAPTER INIT
+TERMINAL_NETWORK_ERROR_DIALOG_TITLE
 TERMINAL_NETWORK_ERROR_DIALOG_MESSAGE
 MST_MISSION_CHANGE_MSG
 MST_MISSION_CHANGE_DECIDE
@@ -16065,6 +16091,22 @@ card/voice
 refresh/top
 signup/top
 TouchEffect
+treasurechest_btn_txt
+TREASURE_BOX_BULK_BUY_TITLE
+treasurechest_btn
+TREASURE_BOX_EVENT_POINT
+TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE
+TREASURE_BOX_EVENT_POINT_REWARD
+treasurechest_img_bg_reward
+TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE
+TREASURE_BOX_EVENT_GET_POINT_NUM
+TREASURE_BOX_EVENT_TOTAL_POINT_NUM
+TUTORIAL_IMAGE_DIALOG_NEXT
+TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE
+StartDisp
+ef_treasure_drop
+treasureBox/draw
+treasureBoxId
 limitSeqId_{0}
 fixAppearanceId_
 relationBgmIds
@@ -16076,6 +16118,7 @@ randomWeights
 groupSeqIDs
 tdTypeChangeIDs
 delayEnd
+_actSet
 fieldHpDamage
 fieldHpDamageEffectId
 fieldHpDamageInvincible
@@ -16086,7 +16129,6 @@ EndCloseTutorialArrowMenu
 チュートリアル表示エラー
 マスタに登録されているチュートリアル画像が入っていません。
  チュートリアル画像ID : 
-TUTORIAL_IMAGE_DIALOG_NEXT
 TUTORIAL_IMAGE_DIALOG_PREV
 Tutorial/combine_tutorial_alpha
 combine_tutorial_alpha
@@ -16219,6 +16261,7 @@ RANKUP_OUTLINE
 [url=
 {0:0.0}%
 MasterFace/statusMask
+MasterFace/image{0:D5}
 MasterFace/equip{0:D5}
 MasterFigure/equip{0:D5}
 EnemyMasterFigure/figure{0:D5}
@@ -16330,7 +16373,6 @@ PRESENT_LIST_NOTICE
 RECEIVE_ALL_DONE
 RECEIVE_FILTER_NOTHING
 PRESENT_EXPIRED_ERROR_MESSAGE
-SUMMON_EVENT_SERVANT_TITLE_JOIN
 PresentHistoryButton
 PRESENT_SELECT_INFO
 SHOW_EFFECT
@@ -16771,9 +16813,6 @@ Stop Trail1 Smoothly
 Activate Trail2
 Stop Trail2
 Stop Trail2 Smoothly
-SUMMON_OPEN_FRINEDQUEST_TITLE
-SUMMON_OPEN_FRINEDQUEST_NAME
-PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
 vector2
 vector3
 rect
@@ -16834,9 +16873,6 @@ No elements in source list
  path = 
 , args = 
  }
- Platform = 
-, IsEditor = 
-, InstallationRequired = 
 GetResult called before operation is done.
 GetResult called after operation failed with error: 
 com.google.android.play.core.tasks.OnSuccessListener
