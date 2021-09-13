@@ -9552,6 +9552,7 @@ SHOP_BUY_SUCCESS_SEND_PRESENT_BOX
 SHOP_BUY_SUCCESS
 ADD_USER_QP_MSG
 BUY_AFTER_QP_NUM
+ADD_USER_SVT_COIN_MSG
 ADD_USER_ITEM_MSG
 BUY_AFTER_USER_ITEM_NUM
 EVENT_REWARD_ASSIST_SKILL_RESULT
@@ -10424,6 +10425,9 @@ AdManager Initialize error.(Start) message=
 CommonUI/UI Root/SystemUICamera
 MovieRoot
 AdManager Initialize error.(reboot) message=
+Firebase.FirebaseApp
+(ratio: 
+):
 IsNotificationStatusSend
 IsReBootCacheClearKey
 yyyy年MM月dd日HH時mm分
@@ -10439,9 +10443,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.38.0
-6f478a3b7533b71821c937fcc71c2999340f35cb30720840b84e8dc512128c57
-20210903_20:02
+2.38.1
+1e32bddb3d4f1084935a674a719525e8efcddd7cabb1eb2dc2034dbe1a88888d
+20210909_15:26
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -13124,7 +13128,6 @@ RestorePurchases continuing:
 . If no further messages, no purchases available to restore.
 [UnityIAP]課金エラー:
 [UnityIAP]課金エラー(ratio:
-):
 Purchasing product asychronously: '{0}'
 Unexpected PurchaseAvailablilty value: 
 Payload
@@ -14915,6 +14918,7 @@ SHOP_BUY_ITEM_FULL_WARNING
 SHOP_BUY_ITEM_OVER_WARNING
 PURCHASE_AFTER_PRESENT_BOX
 PURCHASE_AFTER_COSTUME
+PURCHASE_AFTER_USER_SVT_COIN
 PURCHASE_AFTER_USER_ITEM
 PURCHASE_AFTER_QP
 LIMIT_MATERIAL_SALE_AFTER_QP
