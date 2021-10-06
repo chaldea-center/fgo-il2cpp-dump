@@ -1,3 +1,41 @@
+No access to the given key
+values.xml
+values
+value
+While loading registry key at {0}: {1}
+name
+type
+int
+bytearray
+string
+expand
+qword
+string-array
+\
+Unknown RegistryHive
+.mono/registry
+MONO_REGISTRY_PATH
+machine.config
+..
+registry
+Cannot write to the registry key.
+Microsoft.Win32.RegistryKey
+Name of registry key cannot be greater than 255 characters
+Illegal operation attempted on a registry key that has been marked for deletion.
+HKEY_CLASSES_ROOT
+HKEY_CURRENT_CONFIG
+HKEY_CURRENT_USER
+HKEY_DYN_DATA
+HKEY_LOCAL_MACHINE
+HKEY_PERFORMANCE_DATA
+HKEY_USERS
+Registry hive '{0}' is not implemented.
+software
+the given value does not exist
+Only string and byte arrays can written as registry values
+{0}{1}
+value 
+The network path was not found.
 collation.core.bin
 collation.tailoring.bin
 Mono INTERNAL ERROR (Should not happen): Collation tailoring table is broken for culture {0} ({1}) at 0x{2:X}
@@ -24,7 +62,6 @@ There is no such thing as radix one notation
 radix
 0
 1
-value
 Operation would return a negative value
 bi1 out of range
 bi2 out of range
@@ -310,7 +347,6 @@ xml:space
 Attempted to read or write protected memory. This is often an indication that other memory has been corrupted.
 info
  is an open generic type
-type
 (unknown)
 No constructor found for {0}::.ctor({1})
 Type '{0}' doesn't derive from MarshalByRefObject.
@@ -352,7 +388,6 @@ Arrays must contain >= 1 elements.
 Arrays must be of same size.
 Each value has to be >= 0.
 Length + bound must not exceed Int32.MaxValue.
-values
 Each value has to be >= 0 and <= Int32.MaxValue.
 indices
 array
@@ -719,6 +754,12 @@ XDG_PICTURES_DIR
 Pictures
 /usr/share
 Invalid SpecialFolder
+variable
+String cannot be of zero length.
+Environment variable name cannot contain an equal character.
+The first char in the string is the null character.
+SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+Environment
 ClassName
 Message
 HelpURL
@@ -766,7 +807,6 @@ suffix
 CompareInfo - 
 Positive number required.
 Culture ID {0} (0x{0:X4}) is not a supported culture.
-name
 Culture name 
  is not supported.
 This instance is read only
@@ -1042,7 +1082,6 @@ The specified path is not of a legal form (empty).
 UNC paths should be of the form \\server\share.
 \\
 The specified path is not of a legal form.
-..
 Pathname is longer than the maximum length
 Timeouts are not supported on this stream.
 EndRead already called.
@@ -1981,7 +2020,6 @@ Seek
 SetLength
 Error occured during a cryptographic operation.
 Unexpected error occured during a cryptographic operation.
-\
 Null Key
 Wrong Key Length
 Key
@@ -3627,7 +3665,6 @@ certificate
 Cannot export certificate(s) to the '{0}' format
 findValue
 Invalid find value type '{0}', expected '{1}'.
-string
 X509KeyUsageFlags
 Invalid OID value '{0}'.
 X509DateTime
@@ -4169,7 +4206,6 @@ getComponentType
 getName
 getLength
 isPrimitive
-int
 boolean
 byte
 short
@@ -4481,11 +4517,9 @@ You need to yield the download or wait until isDone returns true.
 
 -----------------
 IL2CPP Root Domain
-
-
-
 https://www.gstatic.com/firebase/ssl/roots.pem
 DEFAULT
+__FIRAPP_DEFAULT
 UnityEditor.EditorApplication, UnityEditor
 isPlaying
 isPlayingOrWillChangePlaymode
@@ -4496,9 +4530,35 @@ UnityEditor.PlayModeStateChange, UnityEditor
 PlayModeStateChangedWithArg
 playmodeStateChanged
 Firebase Services
-GetStackTraceLogType
-stackTraceLogType
+No certs are being installed because the platform doesn't support it.
 unity
+Using workaround for .NET 4.6 certificate bug.
+Detected .NET 4.6 certificate bug, Firebase might not work.
+Firebase.Database.Internal.TubeSock.WebSocket
+Root cert install required: {0}
+System.Security.Cryptography.X509Certificates.OSX509Certificates
+
+||
+
+-----BEGIN CERTIFICATE-----
+-----END CERTIFICATE-----
+Firebase.Platform.cacert_pem.txt
+Installing CRLs in 
+-----BEGIN X509 CRL-----
+-----END X509 CRL-----
+Installed {0} CRLs
+Error installing CRLs: {0}
+Mono.Security
+Mono.Security.X509.X509StoreManager
+_userPath
+_userStore
+Error resetting cert store: 
+Could not refresh the cert store. You may have to restart the app to connect to Firebase.
+Saving root certs in {0} ({1} is not writable)
+Firebase.Platform.cacrl_pem.txt
+Firebase.Platform.caintermediatecrl_pem.txt
+Installing {0} certs
+SyncContext not initialized.
 {0,6}|{1,6}|{2,7}|{3} {4} UnusedBits:{5} : 
 '
 
@@ -4719,6 +4779,22 @@ Toggle {0} is not part of ToggleGroup {1}
 Mesh can not have more than 65000 vertices
  Inner Exception: 
 FATAL: An earlier pending exception from unmanaged code was missed and thus not thrown (
+Value is less than zero
+Multi dimensional array.
+Number of elements to copy is too large.
+Enumeration not started.
+Enumeration finished.
+Collection modified.
+{0} (instance 0x{1:X}) can't be registered for cleanup with 0x{2:X}.
+{0} (instance 0x{1:X}) registered for cleanup when 0x{2:X} is destroyed
+{0} (instance 0x{1:X}) unregistered for cleanup when 0x{2:X} is destroyed
+{0} (instance 0x{1:X}) being deleted
+{0} (instance 0x{1:X}) deleted
+{0} (instance 0x{1:X}) will be disposed
+{0} (instance 0x{1:X}) is being finalized, deleting object now
+valid
+invalid
+C++ destructor does not have public access
 On Android, Firebase requires C/C++ and Java components
 that are distributed with the Firebase and Android SDKs.
 
@@ -4783,28 +4859,22 @@ Firebase.Analytics.FirebaseAnalytics, Firebase.Analytics
 analytics
 Firebase.Auth.FirebaseAuth, Firebase.Auth
 auth
-Firebase.Crashlytics.Crashlytics, Firebase.Crashlytics
-crashlytics
 Firebase.Database.FirebaseDatabase, Firebase.Database
 database
 Firebase.DynamicLinks.DynamicLinks, Firebase.DynamicLinks
 dynamic_links
 Firebase.Functions.FirebaseFunctions, Firebase.Functions
 functions
-Firebase.Installations.FirebaseInstallations, Firebase.Installations
-installations
+Firebase.InstanceId.FirebaseInstanceId, Firebase.InstanceId
+instance_id
 Firebase.Invites.FirebaseInvites, Firebase.Invites
 invites
 Firebase.Messaging.FirebaseMessaging, Firebase.Messaging
 messaging
-Firebase.Performance.FirebasePerformance, Firebase.Performance
-performance
 Firebase.RemoteConfig.FirebaseRemoteConfig, Firebase.RemoteConfig
 remote_config
 Firebase.Storage.FirebaseStorage, Firebase.Storage
 storage
-Firebase.TestLab.GameLoop, Firebase.TestLab
-test_lab
 {0} module '{1}' for '{2}'
 Enable
 Disable
@@ -4821,7 +4891,11 @@ fire-
 -ver
 Don't call other Firebase functions while CheckDependencies is running.
 Don't call Firebase functions before CheckDependencies has finished
-8.1.0
+Asynchronous operation was not started.
+Invalid type 
+ for conversion to Variant
+Unable to convert dictionary keys to string
+5.5.0
 |
 state.Fsm == null
 Could Not Create Action: 
@@ -6028,7 +6102,6 @@ KB
 MB
 GB
 TB
-{0}{1}
 N2
 SCRIPT
 DelayLoadStart
@@ -6388,6 +6461,7 @@ LEGACY_ASPECT_MOVIES
 FULL_SCREEN_NP_CHRS
 FULL_SCREEN_NP_SEQ_IDS
 GACHA_DAILY_MAX_DRAW_NUM_RESET_AT
+MEMORY_DECK_LIMIT_BY_QUEST
 id:
 , name:
 , appleShopId:
@@ -6793,7 +6867,6 @@ CHAINBONUS_QUICK
 SKIP
 RESET_CAMERA_TAC
 TUTORIAL
-RESUME_CONT
 PLAY_TREASUREARMS
 END_ABILITYFAZE
 wait_tuto
@@ -7302,7 +7375,6 @@ RESULT_FOLLOW_REQUEST_YES
 icon_friend
 icon_follow
 OnClickNoActionFriend
-FLAG_20200805
 OnClickTutorialFollow
 TUTORIAL_MESSAGE_FOLLOW_OFFER
 BATTLE_RESULTITEM_TITLECONF
@@ -7343,6 +7415,9 @@ BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE
 QUEST_ITEM_COST_OVER
+
+
+
 BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE
 AP_OVER_MAX_COLOR
 BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT
@@ -8176,6 +8251,12 @@ IMPOSSIBLE_LIMITUP_COLOR
 SVTEQ_LVMAX_INFO_TXT
 MAX_LVUP_TXT
 LIMITUP_MAX_TXT
+img_slider_thumb
+img_slider_thumb_locked
+LIMITUP_CHECK_COMBINE_TITLE
+LIMITUP_CHECK_COMBINE_BODY
+LIMITUP_CHECK_WARNING_SLIDER
+Window/Objects/Buttons/CancelButton
 img_myroom_01
 MENU_OPERATION_FRIEND
 img_myroom_02
@@ -8245,6 +8326,7 @@ QUEST_AFTER_MESSAGE_SECRET_TREASURE_DEVICE_2
 playVoice
 SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_
 LIMIT_COUNT_SEALED_TITLE
+END_ANIMATION
 bit_result_extraskill
 bit_result_
 START_COMBINE_LIMIT
@@ -8326,7 +8408,6 @@ HEADER_MSG_FRIENDSHIP_EXCEED
 HEADER_MSG_SPECIAL_ASCENSION
 COMMAND_CARD_EXCEED_SELECT_BASE_SERVANT_MSG
 APPEND_SKILL_COMBINE_SELECT_BASE_INFO
-COMBINE_LAST_EQUIP_CMD_SVT
 img_nplv
 img_list_lv
 SortInfo
@@ -8353,22 +8434,18 @@ COMMAND_CODE_LOCK_EQUIP_WARNING_MSG
 COMMAND_CODE_LOCK_DEFAULT_WARNING_MSG
 COMMAND_CODE_LOCK_SPEND_ITEM
 COMMAND_CODE_LOCK_HAVE_ITEM
-COMMAND_CODE_REMOVE_TITLE
-COMMAND_CODE_REMOVE_MSG
-COMMAND_CODE_REMOVE_WARNING_MSG
-COMMAND_CODE_REMOVE_SPEND_ITEM
-COMMAND_CODE_REMOVE_HAVE_ITEM
 COMMAND_CODE_NOT_CLEAR_ITEM_MSG
 COMMAND_CODE_OVERWRITE_TITLE
 COMMAND_CODE_OVERWRITE_MSG
 COMMAND_CODE_OVERWRITE_COFIRM_MSG
+COMMAND_CODE_REMOVE_TITLE
+COMMAND_CODE_REMOVE_MSG
 COMMAND_CODE_REMOVE_DETAIL_MSG
 COMMAND_CODE_WARNING_TITLE
 COMMAND_CODE_WARNING_MSG
 COMMAND_CODE_LOCK_WARNING_TITLE
 COMMAND_CODE_LOCK_WARNING_MSG
 CancelButton
-COMBINE_COMMAND_CODE_OVERWRITE_WARNING_MSG
 COMBINE_COMMAND_CODE_TOUCH_EMPTY_COMMAND_CODE_MSG
 COMBINE_COMMAND_CODE_BASE_SELECT_HEADER_MSG
 COMBINE_COMMAND_CODE_BASE_SELECT_MSG
@@ -8376,7 +8453,6 @@ COMBINE_COMMAND_CODE_CARD_SELECT_HEADER_MSG
 COMBINE_COMMAND_CODE_CARD_SELECT_MSG
 COMBINE_COMMAND_CODE_UNLOCK_HEADER_MSG
 COMBINE_COMMAND_CODE_REPLACE_HEADER_MSG
-COMBINE_COMMAND_CODE_OVERWRITE_HEADER_MSG
 COMBINE_COMMAND_CODE_EQUIP_HEADER_MSG
 icon_arrow_pink
 img_txt_unlockcc
@@ -8619,7 +8695,6 @@ CONNECT_LOAD_MESSAGE3
 CONNECT_CANCEL_MESSAGE
 CONNECT_LATEST_MESSAGE
 CONNECT_COMPLET_MESSAGE
-FLAG_20210801
 COMBINE_SCENE_VOICE_WELCOME
 COMBINE_SCENE_VOICE_RETURN
 continue/decide
@@ -8735,6 +8810,8 @@ battleuseitemrequestsave.dat
 unconfirmedpayment.dat
 servantcharactergraphexopen.dat
 questhintdialogopensave.dat
+lastuseddecknumbersave.dat
+materialbranchroutesave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -9761,8 +9838,6 @@ BonusFilterEventId
 SERVANT_SORT_BONUS_FILTER_BUTTON_TITLE
 ScrollViewEnabled
 btn_sefilter_2_on
-btn_sefilter
-btn_sefilter_on
 FollowerSelect
 OnLongPushServantEquip
 OnLongPushSkill1ListView
@@ -10035,7 +10110,6 @@ No such component:
  missing behaviour: 
 Behaviour missing
 Missing FsmComponent!
-END_ANIMATION
 SetMainColor
 SetAddColor
 FGOActorDelete サーヴァント位置Index取得エラー
@@ -10165,6 +10239,7 @@ item/use
  null
 ":
 EVENT_RACE_RESULT_TIME_NONE
+Fgo_20210906
 MSG_PRESELECT_BASE_SVT
 CONDUCTION_COMBINE_MSG
 CONDUCTION_COMBINE
@@ -10443,9 +10518,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.38.1
-1e32bddb3d4f1084935a674a719525e8efcddd7cabb1eb2dc2034dbe1a88888d
-20210909_15:26
+2.39.0
+78567166baa9f9aab802ef6de8512c03c86eb718cb0fd450d12d85fba22518aa
+20211001_11:58
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10472,6 +10547,7 @@ useAnim
 firstEffectType
 firstEffectTime
 referrerMapId
+overwriteMapAssetId
 EndFadeout
 EndFadein
 MASTER_EQUIP_SKILL_INFO_TXT
@@ -10514,6 +10590,7 @@ StoneFragments
 NO_TIME_INFO
 btn_bg_on_5
 btn_bg_off_5
+Fgo_20210908
 CLOSE_MATERIAL
 OnStartOpen
 OnStartClose
@@ -10893,6 +10970,7 @@ OptionMessageDisp
 OptionVolumeMute
 OptionSelectAdvantageClassAuto
 OptionNotPlayOpeningMovie
+OptionAutoSelectParty
 FRP256v1
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00
@@ -13306,6 +13384,7 @@ questPhaseScript_1
 questPhaseScript_2
 hintTitle
 hintMessage
+hintLeftIndent
 hintOpenType
 movieFolder
 moviePlayType
@@ -13341,8 +13420,6 @@ quest_event
 quest_Interlude
 quest_heroic
 Home/RaidAutoUpdate
-_1
-_2
 class_n_
 class_b_
 class_s_
@@ -14244,6 +14321,7 @@ SwitchSelections
 LastScriptLine
 Dummy
 SAVE_ROUTE_SELECT_IN_COLLECTION
+forceFullScreenSize
 OnSwipeBlockPanel
 top
 bottom
@@ -14390,11 +14468,8 @@ SERVANT_CHECK_EQUIP_SELL_TITLE
 SERVANT_CHECK_EQUIP_SELL_WARNING_MESSAGE
 SERVANT_CHECK_SELL_DIALOG_TITLE
 SERVANT_CHECK_SELL_DIALOG_MESSAGE
-Window/Objects/Buttons/CancelButton
 icon_reinforced
 icon_rarity5
-img_slider_thumb
-img_slider_thumb_locked
 SERVANT_SELL_WARNING_COMBINE_TITLE
 SERVANT_SELL_WARNING_COMBINE_BODY
 SERVANT_SELL_WARNING_SLIDER
@@ -14538,6 +14613,7 @@ overWriteServantName
 overWriteServantBattleName
 overWriteTDRank
 overWriteTDTypeText
+randomGroupIndex
 NP_NAME_LEVEL
 NP_NAME
 effectFolder
@@ -14605,10 +14681,6 @@ SERVANT_MATERIAL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_ALL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_EQUIP_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_COMMAND_CODE_SELL_REQUEST_RARITY_MSG
-SERVANT_SELL_EQUIP_CMD_CODE_LAST_SVT_MSG1
-SERVANT_SELL_EQUIP_CMD_CODE_LAST_SVT_MSG2
-SERVANT_SELL_EQUIP_CMD_CODE_LAST_SVT_MSG3
-SERVANT_SELL_EQUIP_CMD_CODE_LAST_SVT_MSG4
 SERVANT_SELL_QP_MAX_DECIDE
 SERVANT_SELL_TRANSITION_COMBINE
 SERVANT_SELL_QP_MAX_CLOSE
@@ -14711,6 +14783,7 @@ SERVANT_STATUS_TD_SPEED_DIALOG_CANCEL
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_MESSAGE
 Base/TitlePrefab/BackObj/BtnBg
 #4C4C4C
 img_txt_profile
@@ -14824,6 +14897,8 @@ Server Number is not registered.
 /gamedata/top
 OPTION_ADVANTAGE_CLASS_AUTO
 OPTION_ADVANTAGE_CLASS_AUTO_INFO
+OPTION_AUTO_SELECT_PARTY
+OPTION_AUTO_SELECT_PARTY_INFO
 OPTION_BLACKLIST_EXPLANATION
 CLICK_BLACKLIST
 img_gachatxt_0
@@ -15428,7 +15503,6 @@ ring_gard2_2
 ring_gard2_3
 center_glow
 GET_MULTI
-GET_SINGLE
 GO_BACK
 NEW_SVT
 CLICK_OK
@@ -15626,9 +15700,12 @@ SUPPORT_KIND_6
 SUPPORT_KIND_7
 SUPPORT_KIND_8
 SUPPORT_SELECT_NAME_BASE
-{"classId":
+{"supportDeckId":
+,"classId":
 ,"userSvtId":
 ,"userSvtEquipId":
+,"name":"
+"}
 Other 
 SupportServantEquip
 onClickSelectedItem
@@ -16877,6 +16954,9 @@ No elements in source list
  path = 
 , args = 
  }
+ Platform = 
+, IsEditor = 
+, InstallationRequired = 
 GetResult called before operation is done.
 GetResult called after operation failed with error: 
 com.google.android.play.core.tasks.OnSuccessListener
@@ -16923,6 +17003,7 @@ dest
 Nullable object must have a value.
 Cannot set the result of a completed task.
 Cannot set the exception of a completed task.
+Cannot cancel a completed task.
 ThreadLocal has been disposed.
 Passed argument 'args' is invalid size. Expected size is 1
 Incompatible handle: Trying to assign a playable data of type `{0}` that is not compatible with the PlayableBehaviour of type `{1}`.
