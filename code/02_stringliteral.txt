@@ -6215,6 +6215,7 @@ _txt_servant
 _txt_craftessence
 _txt_expup
 _txt_statusup
+_txt_noblephantasmup
 img_common_frame01
 listframes6_bg
 banner_
@@ -6756,6 +6757,8 @@ REQUEST_OK
 RESET_CAMERA_NOBLEEND
 RootCameraPrefab
 Battle_RESULT_ITEM_DROPUP
+img_txt_bg_red
+img_txt_noblephantasmup
 {0:#,0}
 body_level
 effect/obj_treasure_item01
@@ -7099,6 +7102,8 @@ effect/BitEffect/bit_cutin{0:00}
 effect/BitEffect/
 bit_mastercutin01
 masterfigure
+ef_master
+root_master
 bit_enemymastercutin01
 startBattleSkip
 anim_wait
@@ -7338,6 +7343,7 @@ OPEN_EVENTPOINTBUFF
 btn_bg_21
 btn_bg_20
 img_txt_reward
+img_bg_events
 img_bg_ep
 + {0:#,0}
 BATTLE_RESULTEXP_MASTERTITLE
@@ -8351,7 +8357,7 @@ COMBINE_MATERIAL_SVT
 CONFIRM_TITLE_LIMITUP
 COMBINE_MATERIAL_ITEM
 CONFIRM_TITLE_SKILL_COMBINE
-CONFIRM_TITLE_TD_COMBINE
+CONFIRM_TITLE_TD_COMBINE_EVENT_JOIN
 EVENT_JOIN_COMBINE_MSG
 0_
 SPECIAL_ASCENSION_TIME_OVER_TXT
@@ -8826,6 +8832,7 @@ mstBannerAdd
 mstBanner
 mstBattleBg
 battle
+mstBattleMasterImage
 beforeBirthDay
 mstBgm
 mstBgmRelease
@@ -9072,6 +9079,7 @@ mstStoneShop
 mstSubEquip
 mstSvtAppendPassiveSkillUnlock
 mstSvtCoin
+mstSvtMaterialTd
 tblFriend
 tblUserGame
 mstTelop
@@ -10518,9 +10526,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.39.0
-78567166baa9f9aab802ef6de8512c03c86eb718cb0fd450d12d85fba22518aa
-20211001_11:58
+2.40.0
+7afda42511aa3b4055e69461d6656f1458beec7d072b040799b044547bea74a4
+20211014_10:58
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -14216,6 +14224,8 @@ Back/back{0:D5}
 Image/mask_{0}
 V
 Movie/{0}.mp4
+trueRoute
+badRoute
 masterMale
 masterFemale
 switchCase2
@@ -14284,6 +14294,7 @@ withFrameFadein
 EndExecuteFade
 inputName
 BGM_EVENT_2
+[skip allFalse]
 charaMoveREturnFSR
 charaMoveREturnFSSideR
 this command is not supported for delay : 
@@ -14293,12 +14304,14 @@ FSSideL
 FSSideR
 stretchOff
 specialEffectPuase
+allFalse
 resume
 masterverticalImageSet
 communicatioChara
 saveMaterial
 structure error
 selectBranchSkipTrueColor
+skipStop
 [r][r]
 capture error
 masterSeneLoad
@@ -14318,6 +14331,7 @@ ScriptActionEncrypt/
 TalkResume
 TalkResumeV2
 SwitchSelections
+routeTypes
 LastScriptLine
 Dummy
 SAVE_ROUTE_SELECT_IN_COLLECTION
@@ -14470,11 +14484,14 @@ SERVANT_CHECK_SELL_DIALOG_TITLE
 SERVANT_CHECK_SELL_DIALOG_MESSAGE
 icon_reinforced
 icon_rarity5
+icon_noblephantasmup
 SERVANT_SELL_WARNING_COMBINE_TITLE
 SERVANT_SELL_WARNING_COMBINE_BODY
 SERVANT_SELL_WARNING_SLIDER
 SERVANT_SELL_WARNING_SSRARE_TITLE
 SERVANT_SELL_WARNING_SSRARE_BODY
+SERVANT_SELL_WARNING_MATERIAL_TD_TITLE
+SERVANT_SELL_WARNING_MATERIAL_TD_BODY
 img_arrow_1
 img_arrow_3
 img_arrow_2
@@ -14641,6 +14658,8 @@ event/recoverySync
 enterUserSvtId
 outUserSvtId
 GACHA_EFFECT_SVT_NUM
+SUMMON_SERVANT_MATERIAL_TD_GET_TITLE
+SUMMON_SERVANT_MATERIAL_TD_GET_MESSAGE
 faceSize
 myroomForm
 combineResultMultipleForm
@@ -14927,6 +14946,7 @@ APPEND_SKILL_OPEN_HAVE_COIN
 APPEND_SKILL_OPEN_CONFIRM
 APPEND_SKILL_COMBINE_CONFIRM
 CONFIRM_TITLE_TD_RECONFIRM_COMBINE
+CONFIRM_TITLE_TD_COMBINE
 CONFIRM_EXCEED_COMBINE
 LVEXCEED_COMBINE_SPEND_QP
 LVEXCEED_COMBINE_SPEND_ITEM
@@ -15364,6 +15384,8 @@ battleStartVoiceSvtLimit
 battleStartVoiceIds
 enemyFieldPosCount
 3.6BossBattle
+battleMasterImageId
+releaseUnusedAssetsWhenEntryMember
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -16272,6 +16294,7 @@ frame6
 frame7
 frame17
 frame20
+img_ribbon_noblephantasmup
 eframeB_atk
 eframeB_hp
 GUI/Text Shader
@@ -16875,6 +16898,10 @@ Assets/
 .prefab
 AssetStorages/
 /AllEffects
+Mirror_mat
+tmp_camera
+ (Instance)
+_MirrorRenderEnable
 _player
 _enemy
 ChrVoice/
