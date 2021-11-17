@@ -1,41 +1,3 @@
-No access to the given key
-values.xml
-values
-value
-While loading registry key at {0}: {1}
-name
-type
-int
-bytearray
-string
-expand
-qword
-string-array
-\
-Unknown RegistryHive
-.mono/registry
-MONO_REGISTRY_PATH
-machine.config
-..
-registry
-Cannot write to the registry key.
-Microsoft.Win32.RegistryKey
-Name of registry key cannot be greater than 255 characters
-Illegal operation attempted on a registry key that has been marked for deletion.
-HKEY_CLASSES_ROOT
-HKEY_CURRENT_CONFIG
-HKEY_CURRENT_USER
-HKEY_DYN_DATA
-HKEY_LOCAL_MACHINE
-HKEY_PERFORMANCE_DATA
-HKEY_USERS
-Registry hive '{0}' is not implemented.
-software
-the given value does not exist
-Only string and byte arrays can written as registry values
-{0}{1}
-value 
-The network path was not found.
 collation.core.bin
 collation.tailoring.bin
 Mono INTERNAL ERROR (Should not happen): Collation tailoring table is broken for culture {0} ({1}) at 0x{2:X}
@@ -62,6 +24,7 @@ There is no such thing as radix one notation
 radix
 0
 1
+value
 Operation would return a negative value
 bi1 out of range
 bi2 out of range
@@ -347,6 +310,7 @@ xml:space
 Attempted to read or write protected memory. This is often an indication that other memory has been corrupted.
 info
  is an open generic type
+type
 (unknown)
 No constructor found for {0}::.ctor({1})
 Type '{0}' doesn't derive from MarshalByRefObject.
@@ -388,6 +352,7 @@ Arrays must contain >= 1 elements.
 Arrays must be of same size.
 Each value has to be >= 0.
 Length + bound must not exceed Int32.MaxValue.
+values
 Each value has to be >= 0 and <= Int32.MaxValue.
 indices
 array
@@ -754,12 +719,6 @@ XDG_PICTURES_DIR
 Pictures
 /usr/share
 Invalid SpecialFolder
-variable
-String cannot be of zero length.
-Environment variable name cannot contain an equal character.
-The first char in the string is the null character.
-SYSTEM\CurrentControlSet\Control\Session Manager\Environment
-Environment
 ClassName
 Message
 HelpURL
@@ -807,6 +766,7 @@ suffix
 CompareInfo - 
 Positive number required.
 Culture ID {0} (0x{0:X4}) is not a supported culture.
+name
 Culture name 
  is not supported.
 This instance is read only
@@ -1082,6 +1042,7 @@ The specified path is not of a legal form (empty).
 UNC paths should be of the form \\server\share.
 \\
 The specified path is not of a legal form.
+..
 Pathname is longer than the maximum length
 Timeouts are not supported on this stream.
 EndRead already called.
@@ -2020,6 +1981,7 @@ Seek
 SetLength
 Error occured during a cryptographic operation.
 Unexpected error occured during a cryptographic operation.
+\
 Null Key
 Wrong Key Length
 Key
@@ -3665,6 +3627,7 @@ certificate
 Cannot export certificate(s) to the '{0}' format
 findValue
 Invalid find value type '{0}', expected '{1}'.
+string
 X509KeyUsageFlags
 Invalid OID value '{0}'.
 X509DateTime
@@ -4206,6 +4169,7 @@ getComponentType
 getName
 getLength
 isPrimitive
+int
 boolean
 byte
 short
@@ -4516,9 +4480,11 @@ You need to yield the download or wait until isDone returns true.
 
 -----------------
 IL2CPP Root Domain
+
+
+
 https://www.gstatic.com/firebase/ssl/roots.pem
 DEFAULT
-__FIRAPP_DEFAULT
 UnityEditor.EditorApplication, UnityEditor
 isPlaying
 isPlayingOrWillChangePlaymode
@@ -4529,34 +4495,9 @@ UnityEditor.PlayModeStateChange, UnityEditor
 PlayModeStateChangedWithArg
 playmodeStateChanged
 Firebase Services
-No certs are being installed because the platform doesn't support it.
+GetStackTraceLogType
+stackTraceLogType
 unity
-Using workaround for .NET 4.6 certificate bug.
-Detected .NET 4.6 certificate bug, Firebase might not work.
-Firebase.Database.Internal.TubeSock.WebSocket
-Root cert install required: {0}
-System.Security.Cryptography.X509Certificates.OSX509Certificates
-
-||
-
------BEGIN CERTIFICATE-----
------END CERTIFICATE-----
-Firebase.Platform.cacert_pem.txt
-Installing CRLs in 
------BEGIN X509 CRL-----
------END X509 CRL-----
-Installed {0} CRLs
-Error installing CRLs: {0}
-Mono.Security
-Mono.Security.X509.X509StoreManager
-_userPath
-_userStore
-Error resetting cert store: 
-Could not refresh the cert store. You may have to restart the app to connect to Firebase.
-Saving root certs in {0} ({1} is not writable)
-Firebase.Platform.cacrl_pem.txt
-Firebase.Platform.caintermediatecrl_pem.txt
-Installing {0} certs
 SyncContext not initialized.
 {0,6}|{1,6}|{2,7}|{3} {4} UnusedBits:{5} : 
 '
@@ -4784,16 +4725,6 @@ Number of elements to copy is too large.
 Enumeration not started.
 Enumeration finished.
 Collection modified.
-{0} (instance 0x{1:X}) can't be registered for cleanup with 0x{2:X}.
-{0} (instance 0x{1:X}) registered for cleanup when 0x{2:X} is destroyed
-{0} (instance 0x{1:X}) unregistered for cleanup when 0x{2:X} is destroyed
-{0} (instance 0x{1:X}) being deleted
-{0} (instance 0x{1:X}) deleted
-{0} (instance 0x{1:X}) will be disposed
-{0} (instance 0x{1:X}) is being finalized, deleting object now
-valid
-invalid
-C++ destructor does not have public access
 On Android, Firebase requires C/C++ and Java components
 that are distributed with the Firebase and Android SDKs.
 
@@ -4858,22 +4789,30 @@ Firebase.Analytics.FirebaseAnalytics, Firebase.Analytics
 analytics
 Firebase.Auth.FirebaseAuth, Firebase.Auth
 auth
+Firebase.Crashlytics.Crashlytics, Firebase.Crashlytics
+crashlytics
 Firebase.Database.FirebaseDatabase, Firebase.Database
 database
 Firebase.DynamicLinks.DynamicLinks, Firebase.DynamicLinks
 dynamic_links
 Firebase.Functions.FirebaseFunctions, Firebase.Functions
 functions
+Firebase.Installations.FirebaseInstallations, Firebase.Installations
+installations
 Firebase.InstanceId.FirebaseInstanceId, Firebase.InstanceId
 instance_id
 Firebase.Invites.FirebaseInvites, Firebase.Invites
 invites
 Firebase.Messaging.FirebaseMessaging, Firebase.Messaging
 messaging
+Firebase.Performance.FirebasePerformance, Firebase.Performance
+performance
 Firebase.RemoteConfig.FirebaseRemoteConfig, Firebase.RemoteConfig
 remote_config
 Firebase.Storage.FirebaseStorage, Firebase.Storage
 storage
+Firebase.TestLab.GameLoop, Firebase.TestLab
+test_lab
 {0} module '{1}' for '{2}'
 Enable
 Disable
@@ -4891,10 +4830,11 @@ fire-
 Don't call other Firebase functions while CheckDependencies is running.
 Don't call Firebase functions before CheckDependencies has finished
 Asynchronous operation was not started.
+Internal error while completing task {0}
 Invalid type 
  for conversion to Variant
 Unable to convert dictionary keys to string
-5.5.0
+7.2.0
 |
 state.Fsm == null
 Could Not Create Action: 
@@ -5968,7 +5908,7 @@ LENGTH_SHORT
 show
 jp.delightworks.unityplugin.permission.PermissionRequestPlugin
 enabledRuntimePermission
-android.support.v4.content.ContextCompat
+androidx.core.content.ContextCompat
 checkSelfPermission
 shouldShowRequestPermissionRationale
 sendPermissionRequest
@@ -6101,6 +6041,7 @@ KB
 MB
 GB
 TB
+{0}{1}
 N2
 SCRIPT
 DelayLoadStart
@@ -6570,6 +6511,7 @@ ef_pig_return01
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
 HIDE_STATUS_EFFECT_IDS
 TREASURE_DEVICE_DISP_STATUS_EFFECT_FLAG
+DelayEnd
 _fade
 Effect/weapon/{0}/{1}
 Effect/weapon/{0}
@@ -7421,9 +7363,6 @@ BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ITEM_VALUE
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM
 BATTLE_RETRYABLE_CONFIRM_DIALOG_TAKE_ITEM_VALUE
 QUEST_ITEM_COST_OVER
-
-
-
 BATTLE_RETRYABLE_CONFIRM_DIALOG_RETURN_QUEST_SCENE
 AP_OVER_MAX_COLOR
 BATTLE_RETRYABLE_CONFIRM_DIALOG_REQUIRE_ACT_POINT
@@ -7818,6 +7757,10 @@ FRIEND_SHOW_INFOMATION
 HIDE_END
 friendOfferList
 blacklist/top
+Servants/Commands/
+Unlit/Transparent Colored_Choco
+Custom/SpriteWithMask_Choco
+missiontarget_bg
 {0:N0}
 CURRENT_NUM_TXT
 icon_race_
@@ -8800,6 +8743,7 @@ servantcharactergraphexopen.dat
 questhintdialogopensave.dat
 lastuseddecknumbersave.dat
 materialbranchroutesave.dat
+clearrandommissionsave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -8907,11 +8851,13 @@ mstEventPointGroup
 mstEventPoint
 mstEventPointUpper
 mstEventPointUpperRelease
+mstEventProgressValue
 mstEventQuestCooltime
 mstEventQuest
 mstEventRace
 mstEventRaceResult
 mstEventRaid
+mstEventRandomMission
 mstEventRewardBg
 mstEventRewardExtra
 mstEventRewardGuideRelease
@@ -9062,6 +9008,7 @@ mstSubEquip
 mstSvtAppendPassiveSkillUnlock
 mstSvtCoin
 mstSvtMaterialTd
+mstSvtMultiPortrait
 tblFriend
 tblUserGame
 mstTelop
@@ -9098,6 +9045,7 @@ userEventPoint
 userEventQuestCooltime
 userEventRace
 userEventRaid
+userEventRandomMission
 eventSvtFatigue
 userEventSpot
 mstUserExp
@@ -9390,6 +9338,7 @@ ServantFatigueId
 changeLoadAnimations
 commonReleaseId
 animationId
+randomMissionMaxNum
 EventServantFatigue/{0}
 forceOverwrite
 EVENT_ASSIST_SKILL_LEVEL_FORMAT
@@ -9418,6 +9367,11 @@ EVENT_CONQUEST_PRODUCT_FORMAT
 armaments_title
 EVENT_CONQUEST_ARMAMENT_LABEL
 80341001
+RankUpEffect
+EVENT_PROGRESS_NEXT_RANK_NONE
+COMMON_COUNT_OPERATOR_PLUS
+EVENT_PROGRESS_RANKUP_TITLE
+EVENT_PROGRESS_RANKUP_MESSAGE
 EVENT_HARVEST_CAUTION_DECIDE_BUTTON
 harvestGrowthBeforeQuestId
 EVENT_HARVEST_CAUTION_TITLE
@@ -9462,6 +9416,7 @@ EVENT_RAID_TIME_OVER_TXT
 baseObject
 event_itembase
 EVENT_SUBMARINE_RESOURCE_TITLE
+EVENT_PROGRESS_VALUE
 event_item_board_description
 USE_ITEM_CONFIRM_MSG
 Shop/Atlas/ShopAtlas
@@ -9501,6 +9456,7 @@ MISSION_REWARD
 btn_txt_notopen
 MISSION_ACTION_PRESENT_BOX_OVER_WARNING
 MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX
+eventMission/randomCancel
 EVENT_DAY_TXT
 EVENT_TIME_TXT
 EVENT_MIN_TXT
@@ -9533,6 +9489,15 @@ EventRaceBoostEffect_{0}
 EVENT_RACE_RESULT_TIME_STR
 EVENT_RACE_RESULT_PATH_LENGTH
 raceresults_team_{0}
+Fgo_20211029
+mission_board_{0}01
+mission_board_mask_{0}01
+btn_mission_cancel
+mission_board_rank_{0}{1:D2}
+mission_bg_
+EVENT_REWARD_RANDOM_MISSION_EMPTY
+EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_TITLE
+EVENT_REWARD_RANDOM_MISSION_DEL_CONFIRM_MSG
 event_ranking_group_
 event_ranking_group_name_
 event_rewardranking_
@@ -9627,6 +9592,10 @@ SVT_GET
 SHOP_AFTER_ACTION_DIALOG_CLOSE
 SHOP_AFTER_ACTION_DIALOG_MAP
 GOTO_CALL
+EVENT_REWARD_RANDOM_CLEAR_LIST_ITEM
+EVENT_REWARD_RANDOM_CLEAR_LIST_TITLE
+EVENT_REWARD_RANDOM_CLEAR_LIST_SUBTITLE
+EVENT_REWARD_RANDOM_MISSION_NUM_OVER
 img_titlebg_
 event_logo_
 event_rewardframe_{0}
@@ -9983,6 +9952,8 @@ FRIENDSHIP_UNIT
 USER_EXP_NAME
 USER_EXP_UNIT
 UNIT_INFO
+MISSION_REWARD_FOMAT_COMMANDCODE
+MISSION_REWARD_FOMAT_COSTUME_RELEASE
 Google Play Store: play billing service unavailable!
 To listen to deferred purchases, please register a listener via IGooglePlayStoreExtensions.
 com.android.billingclient.api.BillingFlowParams$Builder
@@ -10219,7 +10190,6 @@ event_skill_icon_{0:D2}
 QUEST_CONFIRM_NO_CONSUME_COUNT
 SetBaseTransform
 COMMON_COUNT_OPERATOR_CROSS
-COMMON_COUNT_OPERATOR_PLUS
 STONE_UNIT
 MANA_UNIT
 FRIEND_POINT_UNIT
@@ -10508,9 +10478,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.42.0
-0688edf3e66fe8514a0b0214b1cd169dae63ec8e852a651852491c06064427d6
-20211105_14:31
+2.43.0
+8b2fd6f69f36716a83fac79754bedf96ea46c37164f91934ec5ea9c44d580318
+20211112_22:37
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10621,7 +10591,6 @@ getTotalPss
 ,:{}"[]
 {0:N0}/{1:N0}
 itemGetEffectId
-MISSION_PEWARD_DETAIL_SVT_COSTUME
 Effect/Talk/bit_item_get{0}
 bit_item_get{0}
 DEFAULT_LOCK_BOARD_GROUP_ID
@@ -10634,6 +10603,7 @@ master_mission_panel
 master_mission_event
 master_mission_special
 eventMissionAnnounce
+clearRandomMissions
 【名前】
 【モーションID】
 【ヒット数】
@@ -13318,9 +13288,6 @@ questinfo_enemy_brank
 ？？？
 Enemys/Icon/
 enemy_icon_
-Servants/Commands/
-Unlit/Transparent Colored_Choco
-Custom/SpriteWithMask_Choco
 overwriteEquipSkills
 addEquipSkills
 resultBgmId
@@ -13563,6 +13530,7 @@ battle_use_continue_item
 check_date_version
 card_combine_passive_skill
 treasure_box_draw
+event_mission_random_cancel
 02
 03
 04
@@ -13888,7 +13856,8 @@ Figure
 Equip
 VerticalImage
 HorizontalImage
-\scriptList.txt
+file:///
+*.txt
 OnClickSingleListView
 C:/Avalon/Temporary/ScriptData
 DefaultScript.txt
@@ -13926,6 +13895,27 @@ SUMMON_OPEN_FRINEDQUEST_NAME
 SUMMON_EVENT_SERVANT_TITLE_JOIN
 PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
 PlayGacha 
+GachaTemplateMulti
+ABCDEFGHIJ
+[charaSet {0} {1} 1]
+[charaFace {0} {2}]
+
+[charaDepth {0} {1}]
+
+[charaFadein {0} 1 {1},{2}]
+
+[wait time {0}]
+
+[charaChange {0} {1}form{2} 0 normal 0]
+
+[charaFace {0} {1}]
+
+[charaFace {0} {1}]{2}
+
+[voice {0}_{1}]
+[wait voiceCancel]
+
+CharaFigure/1000000
 GachaTemplate
 [wait time 
 ]
@@ -14347,7 +14337,6 @@ OnDelayWaitNextTouch
 EndScroll
 {0} {1} {2}
 〇
-*.txt
 [#[FF0000]主[-]人公:しゅじんこう]はぐだぐだな主人公
 ルビを含むテキストにも[#置換:ちかん]できますよ
 message 
@@ -15074,6 +15063,8 @@ OnClickListViewEvent
 img_tutorial_txtbg_sq
 SHOP_HELP_EVENT_SHOP_EXPLANATION
 img_shop_8
+SHOP_HELP_START_UP_SUMMON
+img_shop_17
 SHOP_HELP_SELL_SERVANT_EXPLANATION
 img_shop_4
 SHOP_HELP_MANA_SHOP_EXPLANATION
@@ -15113,6 +15104,7 @@ SHOP_SCENE_VOICE_SVTSTORAGE
 SHOP_SCENE_VOICE_EQSTORAGE
 SHOP_SCENE_VOICE_GRAIL_FRAGMENTS
 SHOP_SCENE_VOICE_SHOP04
+SHOP_SCENE_VOICE_STARTUPSUMMON
 SHOP_SCENE_VOICE_BACK1
 SHOP_SCENE_VOICE_BACK2
 AnonymousHelp
@@ -15124,6 +15116,7 @@ SHOP04_SHOP_STATE
 BGM_EVENT_128
 SHOP_ITEM_TIME_LIMIT
 SHOP_BUY_EVENT_ITEM
+SHOP_START_UP_SUMMON
 SHOP_SELL_SERVANT
 SHOP_BUY_MANA_ITEM
 SHOP_BUY_RARE_PRI
@@ -15385,10 +15378,10 @@ releaseUnusedAssetsWhenEntryMember
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
+StandFigureR(
 StandFigureM
 StandFigureM(
 StandFigureR
-StandFigureR(
 A+
 A++
 A-
@@ -16419,7 +16412,6 @@ _PositionOffset
 _FadeFactor
 CharaFigure/Form/
 CharaFigure/
-CharaFigure/1000000
 Form/{0}/
 fa
 Custom/Sprite-ScriptActionFigureSummon2
@@ -16471,6 +16463,7 @@ ENTRY_GENDER_MAN
 ENTRY_GENDER_WOMAN
 CONFIRM_INFO_MESSAGE
 CONFIRM_TITLE_MESSAGE
+MISSION_PEWARD_DETAIL_SVT_COSTUME
 PRESENT_BOX_EVENT_POINT_REWARD_TITLE
 PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE
 ENABLE_PRESENT_HISTORY
@@ -16983,9 +16976,6 @@ No elements in source list
  path = 
 , args = 
  }
- Platform = 
-, IsEditor = 
-, InstallationRequired = 
 GetResult called before operation is done.
 GetResult called after operation failed with error: 
 com.google.android.play.core.tasks.OnSuccessListener
