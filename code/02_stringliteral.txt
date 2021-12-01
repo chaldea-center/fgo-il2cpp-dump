@@ -5062,7 +5062,6 @@ unity.cloud_userid
 unity.player_sessionid
 com.ballatergames.debug - {0}
 SendPurchasingEvent
-This is a fake receipt. When running on an Apple store, a base64 encoded App Receipt would be returned
 fake
 $0.01
 Fake title for 
@@ -7132,6 +7131,8 @@ DISSELECT
 OPEN_SEALED
 SELECT
 SELECT_EXE
+ef_excard02
+ef_excard01
 effect/BitEffect/bit_cut_u2
 effect/BitEffect/bit_cut_u3
 effect/BitEffect/bit_cut_ua
@@ -7157,8 +7158,6 @@ TUTORIAL_MESSAGE_BATTLE_230
 TUTORIAL_MESSAGE_BATTLE_321
 effect/ef_noblegauge01
 effect/ef_noblegauge02
-ef_excard02
-ef_excard01
 BATTLE_CONTINUE_ITEM_GIVEUP
 BATTLE_CONTINUE_ITEM_GIVEUP_DEADLINE
 BATTLE_CONTINUE_ITEM_USE_CHECK
@@ -10479,9 +10478,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.43.1
-23ac0c50f4ea624be1db7c5fa72b1d26e65d4ea3d1f8001ec03ce51878721b0d
-20211117_21:17
+2.43.3
+5d120ac892cc78283416bc625a84244d75c4c3354886331c28b253458faf9f8d
+20211125_21:02
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10936,6 +10935,7 @@ OptionSelectAdvantageClassAuto
 OptionNotPlayOpeningMovie
 OptionAutoSelectParty
 OptionResolutionType
+OptionPreBattleFormation
 FRP256v1
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00
@@ -13150,7 +13150,6 @@ user_id_error
 PurchaseLogic:EndSendReceiptData [
 receipt_error
 PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId=
-DeferredPurchaseProductIds
 PurchaseResult NotFound.
 PurchaseResult NotFound Error
 PaymentOk
@@ -13164,11 +13163,9 @@ JPY
 OnInitialized: PASS
 OnDeferred product=
 OnInitializeFailed InitializationFailureReason:
-ProcessPurchase: product is null
 ProcessPurchase: PASS. Product: '{0}'
 Price: 
 ProcessPurchase: FAIL. Unrecognized product: '{0}'
-Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}
 OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}
 RestorePurchases continuing: 
 . If no further messages, no purchases available to restore.
@@ -13182,16 +13179,14 @@ unexpected obfuscatedAccountId:
  rateToSend:
 UnityPurchasingInitializeFailedCount
 RawReceipt Decode Error. 
-Receipt Check Error. 
-purchase-info
-transaction-id
-Old Style Receipt Parse Error. 
 購入できません
 App内の購入が機能制限されています
 購入処理中です、完了までお待ち下さい
 指定されたプロダクトデータが取得できませんでした
 購入処理中に問題が発生しました
-UnityIAP:
+UnityIAP:UpdateMonthlyPurchasePrice 
+UnityIAP:SendPurchaseAction 
+UnityIAP:ConfirmPurchase 
 _purchaseResultArray is null
 bankShopMaster is null
 shop/purchase
@@ -13216,6 +13211,9 @@ QUEST_BOARD_KNOCKDOWN_COUNT
 QUEST_BOARD_KNOCKDOWN_DAMAGE
 QUEST_BOARD_KNOCKDOWN_PLUS
 QUEST_BOARD_KNOCKDOWN_DAMAGE_NAME
+img_quest_formlimit_01
+QUEST_BOARD_PREBATTLE_FORMATION_LABEL
+#FFEC00
 img_questtxt_free
 img_questtxt_event
 QUEST_BOARD_COST_QP
@@ -13705,6 +13703,7 @@ QUEST_EVENT_WAR_SHOP_BTN
 QUEST_EVENT_WAR_TIME
 SHORT_DLG_TITLE
 QUEST_AP_MAX_OVER
+DEFAULT_PREBATTLE_FORMATION_DIALOG
 QUEST_TIME_OVER
 QUEST_CONFIRM_DELETE_MSG
 QUEST_CONFIRM_RESET_MSG
@@ -14918,6 +14917,8 @@ OPTION_NOTICE_RP_EXPLANATION
 img_txt_playopening
 OPTION_NOT_PLAY_OPENING_MOVIE
 OPTION_NOT_PLAY_OPENING_MOVIE_INFO
+OPTION_PREBATTLEFORMATION_INFO
+OPTION_PREBATTLEFORMATION_DISP
 OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON
 OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION
 OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON
@@ -16975,7 +16976,6 @@ Can't set Delayed: use SetDelay() instead
 Invalid type: {0} passed to event expecting {1}
 Cannot get content from a null UnityWebRequest object
 Cannot get content from an unfinished UnityWebRequest object
-No binding for config type 
 No binding for type 
 master[{0}] is null[{1}:{2}]
 No elements in source list
