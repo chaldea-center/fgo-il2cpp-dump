@@ -5062,6 +5062,7 @@ unity.cloud_userid
 unity.player_sessionid
 com.ballatergames.debug - {0}
 SendPurchasingEvent
+This is a fake receipt. When running on an Apple store, a base64 encoded App Receipt would be returned
 fake
 $0.01
 Fake title for 
@@ -6235,6 +6236,8 @@ Back/
 UISkin/UISkin02CommonBG2Atlas
 UISkin/UISkin01MiniDialogAtlas
 UISkin/UISkin02MiniDialogAtlas
+UISkin/UISkin02CommonBG3Atlas
+UISkin/UISkin02CommonBG4Atlas
 listframes00_bg
 listframes1_bg
 listframes2_bg
@@ -6926,6 +6929,8 @@ BATTLE_SUBENTRY_ENEMY
 RESET_CAMERA_BAT
 MOTION_PLAYER_TURN_END
 MOTION_ENEMY_TURN_END
+NPC_STEPIN
+NPC_BACKSTEP
 MOTION_RESURRECTION
 MOTION_NO_DEAD
 MOTION_STAND_DEAD
@@ -6987,10 +6992,11 @@ bit_battlefinish02_{0:D2}
 CommonMotion
 FieldMotionPrefab
 FieldMotionPrefab(common)
-FieldMotionPrefab(motion)
+(motion)
 BattleFSM
 FadeObject
 Battle/BattleResult
+NPC_
 loadEvents
 MOTION_CHANGE
 MOTION_RECOVER
@@ -7097,6 +7103,7 @@ BEFORE_FIELD_CALL_EFFECT_END
 AFTER_FIELD_CALL_EFFECT_END
 defence_target_loss_hp_01
 effect/ef_poplabel{0:00}
+startEffectReleaseId
 Battle/TurnEffect/
 SKIP_SKILL_CUTIN
 {0}_{1}_{2}
@@ -7731,9 +7738,9 @@ Connection timed out!
 StreamList
 Position get
 Position set
-BGM
 BGM_CHALDEA_1
 BGM_CHALDEA_2
+BGM
 COMMON_CONFIRM_YES
 COMMON_CONFIRM_NO
 blacklist/regist
@@ -8079,6 +8086,72 @@ e806f6
 4441
 Invalid ObscuredVector2 index!
 Invalid ObscuredVector3 index!
+COIN_ROOM_SELECT_DIALOD_REMAINING_TEXT
+COIN_ROOM_SELECT_DIALOD_SELECTED_COIN_TXET
+Window/CancelButton
+COIN_ROOM_CONFIRM_DIALOG_TITLE
+COIN_ROOM_CONFIRM_DIALOG_DETAIL
+Window/Objects/CancelButton
+COIN_ROOM_SLIDER_CONFIRM_DIALOG_TITLE
+COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL
+img_slider_thumb
+img_slider_thumb_locked
+Window/Objects/Buttons/CancelButton
+COIN_ROOM_COIN_ICON_CAN_STRENGTH
+COIN_ROOM_COIN_ICON_SELECTED_NUM
+COIN_ROOM_COIN_ICON_NOT_SELECT
+OnClickIcon
+OnPressIcon
+USER_SERVANT_COIN_LIST_EMPTY
+COIN_ROOM_SELECTED_TARGET_NUM
+COIN_ROOM_SELECT_LIST_STATUS_TITLE
+COIN_ROOM_ADD_NUM
+btn_bg_05
+btn_bg_06
+#000000
+#FE4545
+btn_filter
+btn_filter_on
+btn_txt_old
+btn_txt_new
+btn_sort_down
+btn_sort_up
+btn_txt_up
+btn_txt_down
+CoinRoomCoinList1
+effect_Circle_act2
+effect_Circle_act1
+box3
+UpdateGauge
+onupdatetarget
+effect_Circle_loop
+COIN_ROOM_LOBBY_INFO
+COIN_ROOM_LOBBY_TIME_INFO
+DownloadCoinRoomAtlas
+coinRoom/put
+{"id":
+,"num":
+itemData
+UIRootPanel
+LobbyPanel
+COIN_ROOM_SELECT_LIST_SUB_TITLE
+SERVANT_SORT_TITLE
+SERVANT_SORT_TITLE2
+SERVANT_SORT_EXPLANATION
+SERVANT_SORT_EXPLANATION2
+SERVANT_SORT_DECIDE
+SERVANT_SORT_CANCEL
+SERVANT_SORT_CLEAR
+SERVANT_SORT_RESET
+COIN_ROOM_SMART_SORT_DETAIL_1
+COIN_ROOM_SMART_SORT_DETAIL_2
+Window/SortList/CancelButton
+Window/FilterList/CancelButton
+COIN_ROOM_GET
+COIN_ROOM_MAX
+COIN_ROOM_MAX_NUM
+COIN_ROOM_RELEASE_QUEST_ID
+CoinRoom
 Unlit/Transparent Colored
 COMMAND_CARD_EXCEED_STATUS_COMBINE
 MSG_ABLED_COMMAND_CARD_EXCEED
@@ -8092,14 +8165,6 @@ SUM_INFO
 button_select_reg
 button_select_unreg
 COMBINE_COMMAND_CODE_SELECT_COMMAND_CODE_MSG
-btn_filter
-btn_filter_on
-btn_txt_old
-btn_txt_new
-btn_sort_down
-btn_sort_up
-btn_txt_up
-btn_txt_down
 CombineCommandCode
 combine_01
 combine_02
@@ -8209,12 +8274,9 @@ IMPOSSIBLE_LIMITUP_COLOR
 SVTEQ_LVMAX_INFO_TXT
 MAX_LVUP_TXT
 LIMITUP_MAX_TXT
-img_slider_thumb
-img_slider_thumb_locked
 LIMITUP_CHECK_COMBINE_TITLE
 LIMITUP_CHECK_COMBINE_BODY
 LIMITUP_CHECK_WARNING_SLIDER
-Window/Objects/Buttons/CancelButton
 img_myroom_01
 MENU_OPERATION_FRIEND
 img_myroom_02
@@ -8465,7 +8527,6 @@ shop/CommitPurchase
 purchaseToken
 BATTLERESUME_CONFIRM_DECIDE
 BATTLERESUME_CONFIRM_CANCEL
-Window/CancelButton
 COMMON_CONSUME_INFO_IF_ENOUGH
 COMMON_CONSUME_INFO_IF_LACKING
 COMMON_CONSUME_INFO_SEPARATOR
@@ -8558,6 +8619,7 @@ Effect/Talk/
 bit_costume_get
 bit_equip_get
 bit_present_get
+bit_coingrail_get
 NETWORK_ERROR_DATA_UPDATE_START
 データ更新開始
 キャンセル
@@ -8645,6 +8707,7 @@ CONNECT_CANCEL_MESSAGE
 CONNECT_LATEST_MESSAGE
 CONNECT_COMPLET_MESSAGE
 FLAG_20211217
+FLAG_20220101
 COMBINE_SCENE_VOICE_WELCOME
 COMBINE_SCENE_VOICE_RETURN
 continue/decide
@@ -9038,6 +9101,7 @@ updateProfileDialogInfo
 userAccessary
 userBlacklist
 userBoxGacha
+userCoinRoom
 combineExp
 userCommandCodeCollection
 userCommandCode
@@ -9066,6 +9130,7 @@ userFriendPointGachaFreeDrawCampaignLog
 userFriendRequestHistory
 userGachaDrawLog
 userGachaExtraCount
+userGachaDrawHistory
 userGacha
 userGame
 userItem
@@ -9326,6 +9391,7 @@ status_win_color
 gauge_id
 count_format
 status_height
+lastbattle_icon_id
 EVENT_CONQUEST_POS_ITEM_FORMAT
 EVENT_CONQUEST_GET_ITEM_FORMAT
 EVENT_CONQUEST_GET_COUNT_LABEL
@@ -9934,6 +10000,8 @@ FULLDOWNLOAD_CONFIRM_TITLE
 FULLDOWNLOAD_CONFIRM_MSG
 FULLDOWNLOAD_CONFIRM_DECIDE
 DAMAGE
+GACHA_PC_MESSAGE
+GACHA_PC_MESSAGE_END
 WEB_VIEW_TITLE_SUMMON
 RankupAnimation
 RankupBeforeClassImageId
@@ -9949,6 +10017,7 @@ shopIdIndex
 gachaSubId
 storyAdjustIds
 gacha_id{0}_{1}
+gacha/drawHistory
 MALE
 FEMALE
 OTHER
@@ -9971,6 +10040,11 @@ USER_EXP_UNIT
 UNIT_INFO
 MISSION_REWARD_FOMAT_COMMANDCODE
 MISSION_REWARD_FOMAT_COSTUME_RELEASE
+GACHA_HISTORY_LIST_MESSAGE_NO_CLASS
+COMMAND_CODE_TAKE
+MISSION_PEWARD_DETAIL_SVT_COSTUME
+GACHA_HISTORY_LIST_MESSAGE
+SERVANT_EQUIP_TAKE
 Google Play Store: play billing service unavailable!
 To listen to deferred purchases, please register a listener via IGooglePlayStoreExtensions.
 com.android.billingclient.api.BillingFlowParams$Builder
@@ -10404,6 +10478,9 @@ TIME_STR_OVER_YEARS
 {0:D}/{1:D2}/{2:D2}
 {0:D2}:{1:D2}
 {0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}
+ja-JP
+{0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}
+ddd
 {0:D2}h{1:D2}m{2:D2}s
 HAVE_UNIT_INFO
 COUNT_INFO
@@ -10496,9 +10573,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.44.0
-cd52a8cc989a71d6cdd7470b85c7fa22c180dece3c592955eeb985f3ea055a74
-20211203_16:34
+2.45.0
+ab7458e9a57062e4aa803476d0b536aec78e637e3a8443669353029555bb8fc7
+20211217_19:33
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10575,21 +10652,9 @@ OnStartClose
 MATERIAL_FIND_SERVANT_EQUIP
 MATERIAL_FIND_SERVANT
 MATERIAL_FIND_COMMAND_CODE
-btn_bg_05
-btn_bg_06
-#000000
-#FE4545
 MaterialCollectionServant1
 MaterialCollectionServant2
 MaterialCollectionServant4
-SERVANT_SORT_TITLE
-SERVANT_SORT_TITLE2
-SERVANT_SORT_EXPLANATION
-SERVANT_SORT_EXPLANATION2
-SERVANT_SORT_DECIDE
-SERVANT_SORT_CANCEL
-SERVANT_SORT_CLEAR
-SERVANT_SORT_RESET
 MATERIAL_FIND_NOT_SELECT_COSTUME
 MaterialCostumeServant1
 MaterialCostumeServant2
@@ -13169,6 +13234,7 @@ user_id_error
 PurchaseLogic:EndSendReceiptData [
 receipt_error
 PurchaseBehaviour.Result.SUCCESS_WITHOUT_NOTICE _currentTransactionId=
+DeferredPurchaseProductIds
 PurchaseResult NotFound.
 PurchaseResult NotFound Error
 PaymentOk
@@ -13182,9 +13248,11 @@ JPY
 OnInitialized: PASS
 OnDeferred product=
 OnInitializeFailed InitializationFailureReason:
+ProcessPurchase: product is null
 ProcessPurchase: PASS. Product: '{0}'
 Price: 
 ProcessPurchase: FAIL. Unrecognized product: '{0}'
+Declined ask to buy purchase: Product: '{0}', PurchaseFailureReason: {1}
 OnPurchaseFailed: FAIL. Product: '{0}', PurchaseFailureReason: {1}
 RestorePurchases continuing: 
 . If no further messages, no purchases available to restore.
@@ -13198,14 +13266,16 @@ unexpected obfuscatedAccountId:
  rateToSend:
 UnityPurchasingInitializeFailedCount
 RawReceipt Decode Error. 
+Receipt Check Error. 
+purchase-info
+transaction-id
+Old Style Receipt Parse Error. 
 購入できません
 App内の購入が機能制限されています
 購入処理中です、完了までお待ち下さい
 指定されたプロダクトデータが取得できませんでした
 購入処理中に問題が発生しました
-UnityIAP:UpdateMonthlyPurchasePrice 
-UnityIAP:SendPurchaseAction 
-UnityIAP:ConfirmPurchase 
+UnityIAP:
 _purchaseResultArray is null
 bankShopMaster is null
 shop/purchase
@@ -13257,6 +13327,7 @@ img_questboard_story04mask
 img_questboard_story05mask
 raid_point_frame
 questboard_cap_closed
+questboard_cap_closed_{0}
 questboard_cap_closed_special
 img_questboard_event{0:D3}
 questboard_cap{0:D3}
@@ -13318,6 +13389,7 @@ FadeOutBgmBeforeMovie
 resultEffectId
 battleEffectId
 fieldMotionId
+fieldMotionIds
 phaseRouteSelect
 resultEnemyVoiceIds
 resultLoseDisp
@@ -13348,6 +13420,7 @@ gimmickAnimType
 endVoiceOff
 finishEffectId
 endBgmOff
+keepSubBgmUntilBattleResult
 correctionIconId
 auto_sel_support_type
 overwriteLimitCountSvtIds
@@ -13373,6 +13446,9 @@ hintTitle
 hintMessage
 hintLeftIndent
 hintOpenType
+aiNpc
+npcId
+aiIds
 movieFolder
 moviePlayType
 qev79
@@ -13554,6 +13630,7 @@ check_date_version
 card_combine_passive_skill
 treasure_box_draw
 event_mission_random_cancel
+coin_room_put
 02
 03
 04
@@ -13641,6 +13718,7 @@ EventRewardScene
 EmptyScene
 SummonEffectScene
 WarBoardScene
+CoinRoomScene
 STARTUP
 [-]/
 {0:D}:{1:D2}
@@ -14048,6 +14126,10 @@ shakeStop
 messageShake
 messageShakeStop
 soundStopAllFade
+subBgm
+subBgmStop
+keepSubBgmOn
+keepSubBgmOff
 seVolume
 voiceVolume
 tVoice
@@ -14432,7 +14514,6 @@ SE Play (not found) for debug : [
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON
 shop/sellSvt
-{"id":
 ,"num":1}
 sellData
 sellCommandCode
@@ -14527,9 +14608,11 @@ COND_TYPE_AND_FLAVOR2
 imageLimit
 condTitle
 CHAPTER2_PROLOGUE_WAR_ID
+CHAPTER2_EPILOGUE_WAR_ID
 Fgo_20160620_1
 ChapterProgress
 UIChangeType
+OverwriteUIVersion
 ForceReadNewProfiles
 card/combineCostume
 costumeId
@@ -14648,8 +14731,6 @@ LIMIT_COUNT_SEALED_MESSAGE_
 LIMIT_COUNT_SEALED_MESSAGE
 icon_equip_cc
 icon_equip
-SERVANT_EQUIP_TAKE
-COMMAND_CODE_TAKE
 Servant1
 Servant2
 Servant4
@@ -14718,7 +14799,6 @@ SHOP_SELL_SERVANT_QP_MAX_ALERT_MESSAGE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_TITLE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_MESSAGE
 SHOP_SELL_SERVANT_QP_WILL_BE_MAX_ALERT_GETABLE
-Window/Objects/CancelButton
 Window/Objects/CloseButton
 card/combineSkill
 skillId
@@ -15115,6 +15195,7 @@ SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION
 img_shop_15
 SHOP_HELP_SHOP04_SHOP_EXPLANATION
 img_shop_16
+SHOP_HELP_COIN_ROOM_EXPLANATION
 ShopHelpListPanel/BaseWindow/UpperCloseButton
 InvokedPlayVoiceList
 SHOP_SCENE_VOICE_WELCOME
@@ -15140,7 +15221,16 @@ SHOP_EVENT_RETURN_ERROR
 SHOP_SCENE_VOICE_CANCEL
 SHOP04_SHOP_STATE
 BGM_EVENT_128
+PeriodTimeRoot
+InfoLabel
+COIN_ROOM_BANNER_INFO
+TimeLabel
+ValueLabel
 SHOP_ITEM_TIME_LIMIT
+PreLabelRoot
+PreLabel
+COIN_ROOM_CLOSED_MESSAGE
+CoinRoomBanner
 SHOP_BUY_EVENT_ITEM
 SHOP_START_UP_SUMMON
 SHOP_SELL_SERVANT
@@ -15151,6 +15241,7 @@ SHOP_BUY_SERVANT_STORAGE
 SHOP_BUY_SERVANT_EQUIP_STORAGE
 SHOP_BUY_STONE_FRAGMENTS
 SHOP_BUY_BANK_ITEM
+SHOP_COIN_ROOM
 SHOP_BUY_GRAIL_FRAGMENTS
 SHOP_BUY_SPECIAL_ITEM
 SHOP_BUY_ANONYMOUS
@@ -15401,6 +15492,8 @@ enemyFieldPosCount
 3.6BossBattle
 battleMasterImageId
 releaseUnusedAssetsWhenEntryMember
+subBgms
+ForceSetNormalEnemyStatusUI
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -15517,6 +15610,7 @@ SUMMON_HELP_MESSAGE
 img_line_summon
 img_bg_banner
 FAIL_LOAD
+btn_sumonhistory
 img_summon_
 img_summon_mini_
 img_summon_mini_236
@@ -15588,6 +15682,11 @@ summon_up_02
 summon_up_03
 summon_up_04
 UpAnimationName
+GACHA_HISTORY_TITLE
+GACHA_HISTORY_UPPER_MESSAGE
+GACHA_HISTORY_EMPTY
+GACHA_HISTORY_LIST_DOT
+GACHA_HISTORY_LIST_DATETIME
 FRIEND_POINT_SUMMON_MULTIPLE_FREE_CAMPAIGN_BUTTON_MSG
 btn_txt_summon0
 btn_txt_summon10
@@ -15624,6 +15723,9 @@ SUMMON_QP_LIMIT_WARNING_TITLE2
 SUMMON_QP_LIMIT_WARNING_WARNING2
 OnEnd
 SUMMON_RESULT_AUTOSALE_MSG
+SUMMON_EXTRA_ITEM_GIFT_MSG
+SUMMON_EXTRA_ITEMS_GIFT_MSG
+SUMMON_EXTRA_ITEM_GIFTS_MSG
 CONTINUE_SUMMON_BTN
 SHORT_SERVANT_FORMATION
 SUMMON_FREE_10_BTN
@@ -15949,6 +16051,7 @@ img_txt_supportformcheck
 img_txt_mastermission
 img_txt_form_secondarchive
 img_txt_main_interlude
+img_txt_holygrailforging
 TitleInfoEventUIPrefab
 TitleInfoEventConquestGetPrefab
 bit_dedicate_reward
@@ -16038,6 +16141,7 @@ EVENT_RAID_REST_COUNT_AFTER
 EVENT_DEFEAT_COUNT_TXT
 TITLE_INFO_RAID_TOTALHP
 raid_boss_icon_
+raid_boss_icon_last_
 TitleInfoEventRaidBossEffect_Dead
 event_raid_num_
 event_raid_ok
@@ -16053,6 +16157,7 @@ event_raid_sub_group_back
 event_raid_sub_group_partition
 event_raid_sub_group_battle_{0:00}
 event_raid_status_01
+event_raid_status_02
 +{0:0.0}%
 +{0}%
 time_status_side_01
@@ -16194,8 +16299,10 @@ logo_title_cil
 BGM_TITLE_3
 playedMovie
 playingMovie
+title2_2
 /newsupdate
 LAST-MODIFIED
+ExecTitleFade
 gamedata/top
 MockTopGameDataRequest
 MockTopGameDataRequest.txt
@@ -16492,7 +16599,6 @@ ENTRY_GENDER_MAN
 ENTRY_GENDER_WOMAN
 CONFIRM_INFO_MESSAGE
 CONFIRM_TITLE_MESSAGE
-MISSION_PEWARD_DETAIL_SVT_COSTUME
 PRESENT_BOX_EVENT_POINT_REWARD_TITLE
 PRESENT_BOX_EVENT_POINT_REWARD_MESSAGE
 ENABLE_PRESENT_HISTORY
@@ -16538,7 +16644,6 @@ itemSelectNum
 turnMaxDamage
 knockdownNum
 totalDamageToAliveEnemy
-USER_SERVANT_COIN_LIST_EMPTY
 UserServantCoinList1
 Fgo_20150511
 userStatus/flagSet
@@ -16998,6 +17103,7 @@ Can't set Delayed: use SetDelay() instead
 Invalid type: {0} passed to event expecting {1}
 Cannot get content from a null UnityWebRequest object
 Cannot get content from an unfinished UnityWebRequest object
+No binding for config type 
 No binding for type 
 master[{0}] is null[{1}:{2}]
 No elements in source list
