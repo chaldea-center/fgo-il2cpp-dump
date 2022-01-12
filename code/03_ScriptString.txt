@@ -4076,7 +4076,6 @@ Index must be greater than 0
 inputIndex 
  is greater than the number of available inputs (
 ).
-Can't set handle: the playable is not a ScriptPlayableOutput.
 messageId must not be empty
 N
 Could not store preference value
@@ -4151,6 +4150,8 @@ Texture creation failed. '{0}' is not supported on this platform. Use 'SystemInf
 Texture creation failed. '{0}' is not supported for {1} usage on this platform. Use 'SystemInfo.IsFormatSupported' C# API to check format support.
 Texture '{0}' is not readable, the texture memory can not be accessed from scripts. You can make the texture readable in the Texture Import Settings.
 nativeTex can not be null
+No texture data provided to LoadRawTextureData
+LoadRawTextureData: not enough data provided (will result in overread).
 Failed to create 2D array texture because of invalid parameters.
 selection
 Selection is out of range.
@@ -4245,9 +4246,6 @@ Content-disposition: form-data; name="
 jar
 file:/
 ^\s*\w+(?:\.\w+)+(\/.*)?$
-Can't set handle: the playable is not an AudioClipPlayable.
-Can't set handle: the playable is not an AudioMixerPlayable.
-Can't set handle: the playable is not an AudioPlayableOutput.
 Length of created clip must be larger than 0
 Number of channels in created clip must be greater than 0
 Frequency in created clip must be greater than 0
@@ -4272,9 +4270,6 @@ null
 \u
 Can't set handle: the playable is not an AnimationClipPlayable.
 Can't set handle: the playable is not an AnimationLayerMixerPlayable.
-layerIndex
-layerIndex {0} must be in the range of 0 to {1}.
-mask
 Can't set handle: the playable is not an AnimationMixerPlayable.
 Can't set handle: the playable is not an AnimationMotionXToDeltaPlayable.
 Can't set handle: the playable is not an AnimationOffsetPlayable.
@@ -5315,48 +5310,6 @@ getIntroductoryPriceCycles
 Explicit RestoreTransactions()
 Fake title - 
 Fake description - 
-m_IsActive
-Active
-AnimationPlayableAsset of 
-Legacy Animation Clips are not supported
-Nested animation tracks should never be asked to create a graph directly
-Control Track Clip ({0}) is causing a prefab to instantiate itself recursively. Aborting further instances.
-Control Playable ({0}) is referencing the same PlayableDirector component than the one in which it is playing.
-randomSeed
-autoRandomSeed
-Time is over the discrete range.
-Prefab cannot be null
-Prefab Control Playable ({0}) has already been initialized with a Prefab ({1}).
- [Timeline]
-Addtrack cannot parent to a track not in the Timeline
-Supplied type must be a track asset
-Cannot assign a child of type 
-to a parent of type 
-Cannot delete a clip from this timeline
-Delete Curves
-Delete Clip Asset
-Delete Track
-Delete Parameters
-Delete Recording
-Invalid time value assigned
-{0} ({1:F2}, {2:F2}):{3:F2} | {4}
-Tracks list is null
-tracks
-GameObject parameter is null
-go
-) did not produce a valid playable. Use the compilable property to indicate whether the track is valid for processing
-Cannot create a default clip for type 
-Clips of type 
- are not permitted on tracks of type 
-Could not create an instance of the ScriptableObject type 
-asset
-CreateClipFromPlayableAsset  only supports ScriptableObject-derived Types
-IntervalTree argument cannot be null
-tree
-GameObject argument cannot be null
-untitled
-graph must be a valid PlayableGraph
-clip
 Component has started without being Initialized
 Cannot create a transition with sourceCamera({0}) and destinationCamera({1}), one of them is null
 Transitions/WellFired{0}
@@ -5453,6 +5406,7 @@ Need a dictionary
 Dont know what to do
 Window full
 Bit buffer is not byte aligned!
+clip
 Legacy clip {0} cannot be used in this component. Set .legacy property to false before using this clip
 Animation clip {0} in state {1} is Legacy. Set clip.legacy to false, or reimport as Generic to use it with SimpleAnimationComponent
 Animation clip {0} is Legacy. Set clip.legacy to false, or reimport as Generic to use it with SimpleAnimationComponent
@@ -5566,20 +5520,26 @@ dummyCueSheet_streamfiles.awb
 dummyCueSheet.acf
 DspBusSetting_0
 dummyCueSheet
+[CRIWARE] Parameter {0} not available for 3d randomize calculation type {1}
 [CRIWARE] Invalid value for distanceFactor. Value >= 0f required.
 [CRIWARE] Invalid value for dopplerMultiplier. Value >= 0f required.
 CriAtomExAsrRack() failed.
+[CRIWARE] This ASR Rack is not initialized.
 criAtomExOutputAnalyzer_Create() failed.
 CriAtomPlugin is not initialized.
 CriAtomExRawPcmVoicePool() failed.
 CriAtomExStandardVoicePool() failed.
 CriAtomExWaveVoicePool() failed.
+com.crimw.crijavaclasses.CriOutputDeviceObserver
+CallbackFromObserver_ANDROID
+Start
+Stop
+CoroutineForCheck_ANDROID
+CheckOutputDeviceType
 CriAtomOculusAudio
 SupportCurrentPlatform
 GetSpatializerCoreInterface
 GetNativeParameterId failed.
-Criware/VoiceOn.png
-Criware/VoiceOff.png
 [CRIWARE] Internal: Duplicated object GUID
 [CRIWARE] Internal: Object disposal(Type:
 ) not handled by CriDisposableObjectManager; memory leak may have occured.
@@ -5600,42 +5560,47 @@ criFsWebInstaller_Create() failed.
 [CRIWARE] internal logic error. 
  is required to be a subclass of RendererResourceFactory.
 [CRIWARE] internal logic error. need priority attribute. (
-CriMana/AndroidH264Rgb
 _SrcBlendMode
 _DstBlendMode
+_CullMode
+_ZWriteMode
+CRI_ALPHA_MOVIE
 CRI_APPLY_TARGET_ALPHA
+CRI_LINEAR_COLORSPACE
+CriMana/AndroidH264Rgb
 _TextureRGB
 _TextureA
-CRI_ALPHA_MOVIE
-_AlphaTexture_ST
-CRI_LINEAR_COLORSPACE
 _MovieTexture_ST
+_AlphaTexture_ST
 CriMana/AndroidH264DummySupportCheck
 CriMana/AndroidSofdecPrimeYuv
 _TextureY
 _TextureU
 _TextureV
+CRI_UV_FORMAT
 _MovieChromaTexture_ST
+_TextureUV
 _MovieAlphaTexture_ST
-CriMana/SofdecPrimeYuv
+CriMana/AndroidSofdecPrimeYuvLegacy
 [CRIWARE] unsupported movie.
+CriMana/SofdecPrimeYuv
 CriManaPlugin is not initialized.
 [CRIWARE] StopForSeek is not supported on this platform/codec.
 [CRIWARE] CriFsBinder is null
 StreamingAssets
 Ambisonic Source
 CriManaMovieResources
-CriWare/film.png
 VertexLit
 CriMana-MovieMaterial
 CriManaVp9
 SetupVp9Decoder
 android.os.Build$VERSION
 SDK_INT
+CriWare.CriManaVp9, CriMw.CriWare.Vp9.Runtime
 [CRIWARE] Internal: Duplicated CriMonoBehaviour GUID
 /CRIWARE
 CRIWARE
-2.32.34
+2.38.28
 W
 DialogManager
 YES
@@ -5817,6 +5782,8 @@ ok
 ng
 .meta
 {{"ProductId":"{0}"}}
+COMMON_CONFIRM_CLOSE
+ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME
 purchase_and_
 ORIGINAL_ID
 LEVEL
@@ -6130,7 +6097,6 @@ ShopBanners/DownloadShopBanner
 CharaGraphOption/CharaGraphOption
 CharaFigure/8001000
 ({0}) - {1}
-COMMON_CONFIRM_CLOSE
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_TITLE
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_MESSAGE
 EVENT_ASSIST_SKILL_CONFIRM_DIALOG_NO_DATA
@@ -6406,7 +6372,6 @@ FULL_SCREEN_NP_CHRS
 FULL_SCREEN_NP_SEQ_IDS
 GACHA_DAILY_MAX_DRAW_NUM_RESET_AT
 MEMORY_DECK_LIMIT_BY_QUEST
-94065901_icon
 id:
 , name:
 , appleShopId:
@@ -7276,6 +7241,8 @@ RESULT_BOUNDS_GET_COIN_NAME
 ）
 OpenResult
 START_Begin
+freeShopIds
+returnRarePriShopIds
 sendFsmEvent
 BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM
 BATTLE_RESULEVENTTITEM_NEXT_POINT
@@ -8715,6 +8682,7 @@ CONNECT_LATEST_MESSAGE
 CONNECT_COMPLET_MESSAGE
 FLAG_20211217
 FLAG_20220101
+FLAG_20220119
 COMBINE_SCENE_VOICE_WELCOME
 COMBINE_SCENE_VOICE_RETURN
 continue/decide
@@ -9245,6 +9213,8 @@ TAKEOVER_INPUT_OK
 SETUP_OK
 Server 
 UserId 
+CRIScriptVersion:{0}
+CRIBinaryVersion:{0}
 DEBUG_MENU_SETTING_SERVER
 DEBUG_TEST_EXIT_APPLICATION_TITLE
 DEBUG_TEST_EXIT_APPLICATION_DITAIL
@@ -10580,9 +10550,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.45.2
-ea73a5aef886eade270b7d4825b09488709aeb2b04ce7025c7477ac62277ad3b
-20211226_11:13
+2.46.0
+e22725efd01fe40b8566d73a2a7a544fb276b8f9c4707c1b276a110d603204a4
+20220107_22:19
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10867,7 +10837,6 @@ UI
 2D UI
 UI Root (3D)
 UI Root
-Start
 Update
 LateUpdate
 OnSubmitChange
@@ -14325,6 +14294,7 @@ trueRoute
 badRoute
 masterMale
 masterFemale
+mask
 switchCase2
 menu2
 rtime
@@ -14424,6 +14394,7 @@ outside
  is not found
 QuestMessageAdd
 [#
+bit_queststart
 ScriptActionEncrypt/
 TalkResume
 TalkResumeV2
@@ -14638,6 +14609,7 @@ ServantCostumeEventBalloon_
 COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG
 COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG
 bgmId
+NOT_SELECT_LET_GO
 NOT_SELECT_COSTUME
 EVENT_COMBINE_COSTUME_LF
 #FFFFFF
@@ -15142,12 +15114,23 @@ SHOP_CANT_BUY
 NOT_HAVING_SHOP_ITEM_RECEIVABLE
 STONE_NEED_INFO
 EVENT_ITEM_NEED_INFO
+freeShopCondId
+RETURN_RARE_PRI_SHOP_DECIDE_BUTTON
 btn_txt_event_
+freeShopCondMessage
+SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS
+SHOP_FREE_EXCHANGE_CONDITIONS
+SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS
+SHOP_PAID_EXCHANGE_CONDITIONS
+info_base
 img_txt_bgm
 shop_item_menu_
 SHOP_BUY_PREPARATION
 LOTTERY_REST_NUM
 SHOP_BUY_EVENTSHOP_PREPARATION
+SHOP_QUEST_PAID_EXCHANGE_CLEARED
+SHOP_QUEST_FREE_EXCHANGE_CLEARED
+freeShopReleaseDate
 TIME_REST2_NONE
 SHOP_INDEFINITE_PERIOD
 SHOP_BUY_SOLD_OUT
@@ -15157,6 +15140,7 @@ SHOP_SPECIAL_LIST_EMPTY
 EventMove
 EventMoveFinish
 SHOP_RETURN_EXCHANGE_ITEM
+img_bg_pp
 img_bg_mp
 img_bg_rp
 img_bg_fragments
@@ -15204,6 +15188,8 @@ img_shop_15
 SHOP_HELP_SHOP04_SHOP_EXPLANATION
 img_shop_16
 SHOP_HELP_COIN_ROOM_EXPLANATION
+SHOP_HELP_SHOP13_EXPLANATION
+img_shop_18
 ShopHelpListPanel/BaseWindow/UpperCloseButton
 InvokedPlayVoiceList
 SHOP_SCENE_VOICE_WELCOME
@@ -15244,6 +15230,7 @@ SHOP_BUY_EVENT_ITEM
 SHOP_START_UP_SUMMON
 SHOP_SELL_SERVANT
 SHOP_BUY_MANA_ITEM
+SHOP13
 SHOP_BUY_RARE_PRI
 SHOP_BUY_SVT_COSTUME
 SHOP_BUY_SERVANT_STORAGE
@@ -15428,7 +15415,6 @@ SoundPlayerNewKey
 *BGM_*.cpk.bytes
 Cpk数 : 
 曲数 : 
-Stop
 SE Count : 
 BGMテストに
 変更
@@ -15930,6 +15916,10 @@ CAPTER CREATE
 CAPTER INIT
 TERMINAL_NETWORK_ERROR_DIALOG_TITLE
 TERMINAL_NETWORK_ERROR_DIALOG_MESSAGE
+ACHIEVEMENT_EXCHANGE_CONDITIONS_FREE_SHOP_TITLE
+ACHIEVEMENT_EXCHANGE_CONDITIONS_FREE_SHOP_DETAIL
+ACHIEVEMENT_EXCHANGE_CONDITIONS_RETURN_RARE_PRI_SHOP_TITLE
+ACHIEVEMENT_EXCHANGE_CONDITIONS_RETURN_RARE_PRI_SHOP_DETAIL
 MST_MISSION_CHANGE_MSG
 MST_MISSION_CHANGE_DECIDE
 masterMissionResetKey
@@ -17060,6 +17050,8 @@ Stop Trail1 Smoothly
 Activate Trail2
 Stop Trail2
 Stop Trail2 Smoothly
+questStartEffectSkip
+QuestStartEffect
 vector2
 vector3
 rect

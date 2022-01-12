@@ -35,7 +35,7 @@ def main(apk_path: str, il2cppdumper: str) -> None:
     version = None
 
     for i, line in enumerate(string_literal):
-        if line.startswith("2021"):
+        if line.startswith("2022"):
             date = line.strip()
             date = f"{date[:4]}_{date[4:6]}_{date[6:]}"
             version = string_literal[i - 2].strip()
