@@ -4032,7 +4032,6 @@ Null callback specified.
 empty offsets list passed.
 offsets
 layerNames
-Location service updates are not enabled. Check LocationService.status before querying last location.
 Null
 {0}
 {0}: {1}
@@ -9998,8 +9997,6 @@ gacha/drawHistory
 MALE
 FEMALE
 OTHER
-jp.delightworks.unityplugin.locationutil.LocationUtil
-IsEnabledByUser
 overwriteTreasureEffectId
 overwriteDetailText
 BTN_GIFT
@@ -10550,9 +10547,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.46.0
-e22725efd01fe40b8566d73a2a7a544fb276b8f9c4707c1b276a110d603204a4
-20220107_22:19
+2.46.1
+2b5c688c9404e392ab6545e3db1aa5f63f6cc3157a2eab09c92e3f0f1a38e679
+20220114_19:46
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -14394,7 +14391,6 @@ outside
  is not found
 QuestMessageAdd
 [#
-bit_queststart
 ScriptActionEncrypt/
 TalkResume
 TalkResumeV2
