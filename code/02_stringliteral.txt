@@ -5772,6 +5772,28 @@ LINE
 FACEBOOK
 TWITTER
 MessageDialog
+ACCOUNT_DELETE_CONFIRM_TITLE
+ACCOUNT_DELETE_CONFIRM_MESSAGE
+ACCOUNT_DELETE_CONFIRM_WARNING
+ACCOUNT_DELETE_CONFIRM_CANCEL
+ACCOUNT_DELETE_CONFIRM_DECIDE
+img_slider_thumb
+img_slider_thumb_locked
+Window/Objects/Buttons/CancelButton
+#494949
+ACCOUNT_DELETE_PASSWORD_PASSWORD
+ACCOUNT_DELETE_PASSWORD_USER_ID
+ACCOUNT_DELETE_PASSWORD_NAME
+ACCOUNT_DELETE_PASSWORD_COPY
+ACCOUNT_DELETE_PASSWORD_DECIDE
+ACCOUNT_DELETE_PASSWORD_CANCEL
+ACCOUNT_DELETE_PASSWORD_ISSUED_WARNING
+ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_TITLE
+ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_INFO
+ACCOUNT_DELETE_PASSWORD_ALREADY_ISSUED_MESSAGE
+ACCOUNT_DELETE_PASSWORD_ISSUED_TITLE
+ACCOUNT_DELETE_PASSWORD_ISSUED_MESSAGE
+ACCOUNT_DELETE_PASSWORD_HIDDEN_STR
 account/regist
 MockAccountRegistRequest
 userId
@@ -6320,6 +6342,8 @@ MASHU_SVT_ID1
 MASHU_SVT_ID2
 MASTER_MISSION_SVT_ID1
 TREASUREDEVICE_ID_MASHU3
+OBERON_CHOCO_SVT_ID
+LOSTBELT6_CLEAR_QUEST_ID
 BIRTHDAY_BEFORE_VALENTINE_SVT_ID
 IGNORE_FORM_CHANGE_SVT_ID
 VALENTINE_RELEASE_AT
@@ -6562,7 +6586,6 @@ Logic
 RootFSM
 UIFSM
 CameraFSM
-reserved deckIndex is out of range
 iconId
 skills
 lv
@@ -6848,6 +6871,7 @@ checkFuncAction(
 functionAddState=>
 TAMAMOCAT_STUN_BUFF_ID
 TAMAMOCAT_TREASURE_DEVICE_ID_
+EXTEND_TURN_BUFF_TYPE
 BATTLE_MISS_FUNCTION
 BATTLE_NO_EFFECT_FUNCTION
 functionGainHp:
@@ -6959,7 +6983,7 @@ FieldMotionPrefab(common)
 (motion)
 BattleFSM
 FadeObject
-Battle/BattleResult
+black_default
 NPC_
 loadEvents
 MOTION_CHANGE
@@ -7072,6 +7096,8 @@ Battle/TurnEffect/
 SKIP_SKILL_CUTIN
 {0}_{1}_{2}
 EventInfoPointGaugeControl
+Effect/BattleResult/{0}
+Battle/BattleResult
 TopDialogPanel
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE
@@ -7238,6 +7264,11 @@ RESULT_BOUNDS_GET_COIN_NAME
 （
 （＋
 ）
+UpdateBuddyPointInfo
+FinishUpdateBuddyPoint
+{0}（＋{1}）
+BATTLE_BUDDY_POINT_RANK_{0}
+bit_buddy_rankup
 OpenResult
 START_Begin
 freeShopIds
@@ -7832,6 +7863,7 @@ UpBuffRateBuffIndiv
 MaxBuffRate
 TargetIndiv
 IncludeIgnoreIndividuality
+CounterMessage
 Self
 Opponent
 Check{0}BuffTypes
@@ -8066,9 +8098,6 @@ Window/Objects/CancelButton
 COIN_ROOM_SLIDER_CONFIRM_DIALOG_TITLE
 COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_1
 COIN_ROOM_SLIDER_CONFIRM_DIALOG_DETAIL_2
-img_slider_thumb
-img_slider_thumb_locked
-Window/Objects/Buttons/CancelButton
 COIN_ROOM_CAN_NOT_SELECTED
 COIN_ROOM_COIN_ICON_CONFIRM_NUM
 COIN_ROOM_COIN_ICON_NOT_SELECT
@@ -8863,6 +8892,7 @@ mstEventBonusFilterGroupMember
 mstEventBonusFilter
 eventBoostItemUsed
 mstEventBossStatusUi
+mstEventBuddyPoint
 mstEventBulletinBoard
 mstEventBulletinBoardRelease
 mstEventCampaign
@@ -8916,6 +8946,7 @@ mstEventScript
 mstEventScriptRelease
 mstEventSvtFatigue
 mstEventSvt
+mstEventSvtPointRank
 mstEventStatus
 mstEventStatusQuest
 mstEventSuperBoss
@@ -8927,6 +8958,7 @@ mstEventUi
 mstEventUiRelease
 mstEventUiValue
 mstEventVoicePlay
+mstFieldMotion
 mstFriendship
 friendshipQuestDialogInfo
 mstFuncCategory
@@ -9081,6 +9113,7 @@ userCommandCodeCollection
 userCommandCode
 userContinue
 userDeck
+userDeleteReservation
 userEquip
 userEventBoardGameToken
 userEventDeck
@@ -9095,6 +9128,7 @@ userEventRace
 userEventRaid
 userEventRandomMission
 eventSvtFatigue
+userEventSvtPoint
 userEventSpot
 mstUserExp
 userFollower
@@ -9368,6 +9402,11 @@ gauge_id
 count_format
 status_height
 lastbattle_icon_id
+rank_
+EventUI/Prefabs
+bit_buddy_result
+buddy_bg_at
+BEST_BUDDY_POINT_RESULT
 EVENT_CONQUEST_POS_ITEM_FORMAT
 EVENT_CONQUEST_GET_ITEM_FORMAT
 EVENT_CONQUEST_GET_COUNT_LABEL
@@ -9494,7 +9533,10 @@ PARTY_ORGANIZATION_EVENT_TARGET_PT_OTHER_FULL
 PARTY_ORGANIZATION_EVENT_TARGET_PT_ALL
 PARTY_ORGANIZATION_EVENT_TARGET_PT_FULL
 SELECT_FP_NUM_UP
+PARTY_ORGANIZATION_SERVANT_POINT_RANK_
+PARTY_ORGANIZATION_SERVANT_POINT_INFO
 func_group_icon_
+func_group_icon_1028
 eventMission/receive
 missionId
 MISSION_PERIOD_END
@@ -9627,6 +9669,7 @@ MENU_DECIDE
 NORMAL_FINISH
 rewardInfos
 eventActivityPointAddFlag
+purchaseResults
 lotteryShopId
 SHOP_BUY_SUCCESS_MULTIPLE
 SHOP_BUY_SUCCESS_SEND_MIX
@@ -9644,6 +9687,9 @@ SET_ITEM_GET_ITEM_MSG
 SVT_GET
 SHOP_AFTER_ACTION_DIALOG_CLOSE
 SHOP_AFTER_ACTION_DIALOG_MAP
+NOT_GET_COMMIT_AFTER_SCRIPT_WARNING
+NOT_GET_COMMIT_AFTER_SCRIPT
+EVENT_SHOP_RECEIVED_ITEM_AFTER
 GOTO_CALL
 EVENT_REWARD_RANDOM_CLEAR_LIST_ITEM
 EVENT_REWARD_RANDOM_CLEAR_LIST_TITLE
@@ -9657,9 +9703,6 @@ RecoveryFatigue
 WarBoard/Shop/Effect/bit_grail_get
 bit_grail_get
 SET_END
-NOT_GET_COMMIT_AFTER_SCRIPT
-NOT_GET_COMMIT_AFTER_SCRIPT_WARNING
-EVENT_SHOP_RECEIVED_ITEM_AFTER
 OPEN_PRESENT
 PriorityIndex_
 MissionId_
@@ -9674,6 +9717,7 @@ LimitedMission
 MstMissionIndex
 FatigueNotiffication
 CooltimeNotification
+LotteryShopSkipState
 LastViewEventId_
 CompleteMission
 DailyMission
@@ -10341,6 +10385,7 @@ SERVANT_SORT_KIND_EVENT_ORDER
 SERVANT_SORT_KIND_RECOVERY_FATIGUE
 SERVANT_SORT_KIND_SERVANT_NAME
 SERVANT_SORT_KIND_DISP_NO
+SERVANT_SORT_KIND_BUDDY_POINT
 SERVANT_SORT_FILTER_KIND_1
 SERVANT_SORT_FILTER_KIND_2
 SERVANT_SORT_FILTER_KIND_3
@@ -10503,6 +10548,14 @@ Fadeout
 Fadein
 END_LOGO
 LogoPlay
+LOTTERY_SHOP_BULK_BUY_RESULT_TITLE
+LOTTERY_SHOP_BULK_BUY_RESULT_MESSAGE
+LOTTERY_SHOP_HAVE_EVENT_ITEM
+LOTTERY_SHOP_NEED_EVENT_ITEM
+LOTTERY_SHOP_PAY_INFO
+LOTTERY_SHOP_SKIP_INFO
+btn_txt_trade
+btn_txt_event_
 CommonUI/MainMenuBarPrefab
 MAIN_MENU_BAR_SELECT_NONE
 MAIN_MENU_BAR_SELECT
@@ -10547,9 +10600,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.46.2
-e1678a59d7db9be91a5e2c993cc82e04878b9fdf5d2369cdc3ac68deb9e481bd
-20220126_12:35
+2.47.0
+591298af570e671879a36cb67b8c2b08c6e9331ebd64d2cda18a3feb94547782
+20220204_21:56
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10649,8 +10702,8 @@ getTotalPss
 ,:{}"[]
 {0:N0}/{1:N0}
 itemGetEffectId
-Effect/Talk/bit_item_get{0}
-bit_item_get{0}
+Effect/Talk/bit_present_get{0}
+bit_present_get{0}
 DEFAULT_LOCK_BOARD_GROUP_ID
 OnCompleteEventIntoMove
 OnCompleteEventExitMove
@@ -10839,9 +10892,9 @@ LateUpdate
 OnSubmitChange
 OnSliderChange
 OnChange
+m7bYe+BXpb5KiNoaej//MFHrZO5G6lLY+wGHsdjx9zA=
 hMTjJKbSxkOe6YYfgjp1dSz+5wed2BKGvkW21gmouX0=
 7DLkup0msw1dZtefVQAeC8LuNliXNffWmE4CCGB2M1o=
-u6jRjeFS14mo3waDQEOcqMoYlwoHaf3vgAtk4qsRLpc=
 SYSTEM_ERROR_SERVER_TIME_LIMIT_OVER
 userCreateServer
 
@@ -10857,6 +10910,8 @@ lastAccessTime=
 Mock/
 /AssetStorages/
 contact
+privacyPolicy
+deleteAccount
 summonDetail
 help
 terms
@@ -10939,6 +10994,10 @@ WEB_VIEW_TITLE_CONTACT_US
 WEB_VIEW_TITLE_CREDIT
 WEB_VIEW_TITLE_RIGHT_NOTATION
 CLOSE_WEBVIEW
+ACCOUNT_DELETE_RECONFIRM_MESSAGE
+ACCOUNT_DELETE_RECONFIRM_DECIDE
+ACCOUNT_DELETE_RECONFIRM_CANCEL
+CLICK_OK
 OPEN_BROWSER
 titleOffset
 messageOffset
@@ -10993,6 +11052,8 @@ OptionNotPlayOpeningMovie
 OptionAutoSelectParty
 OptionResolutionType
 OptionPreBattleFormation
+GO1
+GO2
 FRP256v1
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C03
 F1FD178C0B3AD58F10126DE8CE42435B3961ADBCABC8CA6DE8FCF353D86E9C00
@@ -13031,6 +13092,7 @@ OnClickListDropServant
 OnClickListDropServantDetail
 OnClickListDropEquip
 OnClickListDropEquipDetail
+PARTY_ORGANIZATION_GET_SERVANT_POINT
 ??
 ???
 correction_icon_
@@ -13189,7 +13251,6 @@ purchaseDataBase64
 storeError
 signatureData
 purchaseResultArray is null.
-purchaseResults
 shop/purchaseByStone
 InitiatePurchase: FAIL. PurchasingFramework not initialized.
 InitiatePurchase: FAIL. StoreController is null.
@@ -13605,6 +13666,7 @@ card_combine_passive_skill
 treasure_box_draw
 event_mission_random_cancel
 coin_room_put
+userDelete
 02
 03
 04
@@ -13785,6 +13847,8 @@ condBattleStart
 terminalDialogMessages
 movieFile
 .usm
+Effect/Talk/bit_item_get{0}
+bit_item_get{0}
 Effect/Talk/bit_token_get{0}
 bit_token_get{0}
 WarBoard/Terminal/Effect/bit_warclear_get{0}
@@ -14622,6 +14686,7 @@ changeLimitVoiceInFriendshipLv
 HideInAnimNode
 additionExpandImage
 coinRoomCheck
+svtBuffTurnExtend
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 COMMAND_CODE_EFFECT_FILTER_GROUP_
@@ -15087,7 +15152,6 @@ PURCHASE_AFTER_ITEM_SET
 SHOP_BUY_CONFIRM_PERIOD_WARNING
 LIMIT_MATERIAL_SHOP_MAX_ALERT
 SHOP_MAX_ALERT
-btn_txt_trade
 btn_txt_sale
 ？
 [000000]？
@@ -15112,7 +15176,6 @@ STONE_NEED_INFO
 EVENT_ITEM_NEED_INFO
 freeShopCondId
 RETURN_RARE_PRI_SHOP_DECIDE_BUTTON
-btn_txt_event_
 freeShopCondMessage
 SHOP_ACHIEVEMENT_FREE_EXCHANGE_CONDITIONS
 SHOP_FREE_EXCHANGE_CONDITIONS
@@ -15126,7 +15189,6 @@ LOTTERY_REST_NUM
 SHOP_BUY_EVENTSHOP_PREPARATION
 SHOP_QUEST_PAID_EXCHANGE_CLEARED
 SHOP_QUEST_FREE_EXCHANGE_CLEARED
-freeShopReleaseDate
 TIME_REST2_NONE
 SHOP_INDEFINITE_PERIOD
 SHOP_BUY_SOLD_OUT
@@ -15136,6 +15198,7 @@ SHOP_SPECIAL_LIST_EMPTY
 EventMove
 EventMoveFinish
 SHOP_RETURN_EXCHANGE_ITEM
+img_icon_acquired
 img_bg_pp
 img_bg_mp
 img_bg_rp
@@ -15143,6 +15206,7 @@ img_bg_fragments
 img_bg_spsummon
 img_bg_hgd
 UpdateRemainTime
+freeShopReleaseDate
 remainDays
 useAnotherPayCommonReleaseId
 anotherItemIds
@@ -15217,10 +15281,10 @@ COIN_ROOM_BANNER_INFO
 TimeLabel
 ValueLabel
 SHOP_ITEM_TIME_LIMIT
+#6B6B6B
 PreLabelRoot
 PreLabel
 COIN_ROOM_CLOSED_MESSAGE
-#6B6B6B
 CoinRoomBanner
 SHOP_BUY_EVENT_ITEM
 SHOP_START_UP_SUMMON
@@ -15485,6 +15549,7 @@ battleMasterImageId
 releaseUnusedAssetsWhenEntryMember
 subBgms
 ForceSetNormalEnemyStatusUI
+enemyEntryOrder
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -15629,7 +15694,6 @@ center_glow
 GET_MULTI
 GO_BACK
 NEW_SVT
-CLICK_OK
 SHOW_TALK
 NO_EXIST
 OLD_SVT
@@ -16247,6 +16311,8 @@ CONTINUE_DEVICE_TAKEOVER_EXPLANATIOIN1
 CONTINUE_DEVICE_TAKEOVER_EXPLANATIOIN2
 TAKEOVER_CANCEL
 takeover
+DELETE_FINISH
+DELETE_PASSWORD
 RequestLoginFirst
 GO_TERMINAL
 GO_BATTLE
@@ -16287,6 +16353,7 @@ BATTLECONTINUERESUME_CONFIRM_DECIDE
 BATTLECONTINUERESUME_CONFIRM_CANCEL
 INIT_CACHE_CLEAR_CONFIRM_TITLE_2
 INIT_CACHE_CLEAR_CONFIRM_MESSAGE_2
+ACCOUNT_DELETE_FINISH_MESSAGE
 BGM_TITLE_1
 logo_title_er
 BGM_TITLE_2
@@ -16558,6 +16625,8 @@ _PanelReplace
 _PanelSpaceMatrix
  has no mainTexture setter
 replaceGiftIdList
+userDelete/top
+UserDeleteFlag
 userformation/Setup
 deckNo
 STONE_TAKE
@@ -16763,6 +16832,9 @@ B2140
 B2540
 B2150
 B2550
+B3050
+B3060
+B3070
 bgChangeEffectType
 bgChangeEffectTime
 eventTowerId
