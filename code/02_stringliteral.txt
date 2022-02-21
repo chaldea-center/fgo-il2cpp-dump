@@ -9407,6 +9407,8 @@ EventUI/Prefabs
 bit_buddy_result
 buddy_bg_at
 BEST_BUDDY_POINT_RESULT
+BEST_BUDDY_RESULT_REPLAY_DIALOG
+BuddyResultEventUI
 EVENT_CONQUEST_POS_ITEM_FORMAT
 EVENT_CONQUEST_GET_ITEM_FORMAT
 EVENT_CONQUEST_GET_COUNT_LABEL
@@ -10600,9 +10602,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.47.0
-591298af570e671879a36cb67b8c2b08c6e9331ebd64d2cda18a3feb94547782
-20220204_21:56
+2.47.1
+0290d1dc0995df88db4b4e651dc3373cfa617dd29884ff655fb798f3f4d11515
+20220216_17:34
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -16056,6 +16058,7 @@ img_txt_chaldeagate
 img_txt_rankupquest
 img_txt_dailyquest
 img_txt_interlude
+img_txt_advanced
 img_txt_mainrecord_10
 img_txt_mainrecord_15
 img_txt_form_menu
