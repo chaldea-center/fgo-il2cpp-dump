@@ -6395,6 +6395,8 @@ FULL_SCREEN_NP_CHRS
 FULL_SCREEN_NP_SEQ_IDS
 GACHA_DAILY_MAX_DRAW_NUM_RESET_AT
 MEMORY_DECK_LIMIT_BY_QUEST
+EVENT_STORY_COND_QUEST_RELEASE_DATA
+91503502:91503501
 id:
 , name:
 , appleShopId:
@@ -8296,6 +8298,8 @@ bit_result04
 SKILL_COMBINE_EFFFECT_UNSUMMON
 SKILL_COMBINE_EFFFECT_UNSUMMON_DETAIL
 START_SKILLUP_EFFECT
+TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON
+TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL
 START_NOBLEUP_EFFECT
 START_FRIENDSHIPUP_EFFECT
 START_SVTCOMBINE_EFFECT
@@ -8879,6 +8883,7 @@ mstDialogMessage
 mstEffect
 mstEnemyMasterBattle
 mstEnemyMaster
+mstEquipAdd
 mstEquipExp
 mstEquipImage
 mstEquip
@@ -9015,6 +9020,7 @@ mstQuestPickup
 mstQuestRacePoint
 mstQuestRandomGroup
 mstQuestRelease
+mstQuestReleaseOverwrite
 mstQuestReset
 mstQuestRestrictionInfo
 mstQuestRestriction
@@ -9056,6 +9062,7 @@ mstSvtProfile
 mstSvtRarity
 mstSvtScriptAdd
 mstSvtScript
+mstSvtScriptMultiple
 mstSvtSkill
 mstSvtSkillRelease
 mstSvtTreasureDeviceAdd
@@ -10490,6 +10497,12 @@ TIME_REST5_MINUTES
 TIME_REST5_HOURS
 TIME_REST5_DAYS
 TIME_REST5_OVER_YEARS
+TIME_REST6_HEAD
+TIME_REST6_TIMEOVER
+TIME_REST6_MINUTES
+TIME_REST6_HOURS
+TIME_REST6_DAYS
+TIME_REST6_OVER_YEARS
 TIME_STR_TIMEOVER
 TIME_STR_MINUTES
 TIME_STR_HOURS
@@ -10602,9 +10615,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.47.1
-0290d1dc0995df88db4b4e651dc3373cfa617dd29884ff655fb798f3f4d11515
-20220216_17:34
+2.48.0
+402a506b35113b0c547b23c1f805afdc780f3e753fbf4bc453b5083c493005d1
+20220225_22:05
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -10756,8 +10769,15 @@ CHECK_OK
 NEXT_TOTAL_LOGIN_BONUS_DAYS
 {0}:{1}lap {2}ms
 UNKNOWN
+MultipleViewSelectedUsrSvtId
+HEADER_MSG_MULTIPLE_SERVANT_SELECTED
+HEADER_MSG_MULTIPLE_SERVANT_
+MULTIPLE_SERVANT_SELECTED_SERVANT_
+MultipleView1
 _rootMatrix
 _invrootMatrix
+MULTIPLE_VIEW_BUTTON_TEXT
+MULTIPLE_VIEW_BUTTON_TITLE_TEXT
 LOAD_END
 CHANGE_LIMIT
 Help
@@ -10780,9 +10800,11 @@ State 5
 ReleaseTouch
 MyRoomUIAnimationEnd
 CLICK_MATERIAL
+FinishedCloseMultiServant
 BGM_MYROOM_1
 LOAD_END_TO_HELP
 LoadServantFormEnd
+FinishedFadeMultipleServant
 MyRoom/FrontObject/{0}
 MyRoomFrontObj
 ShopHelpItem 
@@ -13331,6 +13353,7 @@ caldeagate_notice_{0:00}
 TIME_REST_QUEST_BOARD_EVENT
 TIME_REST_QUEST_BOARD_CAMPAIGN
 TIME_REST_QUEST_BOARD_QUEST
+TIME_REST_STRING
 questboard_crushing
 questboard_challenge
 QUEST_BOARD_KNOCKDOWN_COUNT
@@ -13486,6 +13509,7 @@ hintOpenType
 aiNpc
 npcId
 aiIds
+equipAddId
 movieFolder
 moviePlayType
 qev79
@@ -14073,6 +14097,7 @@ form
 ]
 [wait voiceCancel]
 
+EquipGachaTemplate
 {0:D10}
 PlayChapter 
 PlayChapterStart 
@@ -14552,6 +14577,10 @@ SE
 SE Play (not found) for debug : [
 ] : [
 ] vol:
+MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_
+MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_
+MultipleViewSelectImageLimit
+SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON
 shop/sellSvt
@@ -14765,12 +14794,12 @@ overWriteServantBattleName
 overWriteTDRank
 overWriteTDTypeText
 randomGroupIndex
+ascensionAfterDialogId
 NP_NAME_LEVEL
 NP_NAME
 effectFolder
 card/combineLimit
 saintGraphImageId
-ascensionAfterDialogId
 LIMIT_COUNT_SEALED_MESSAGE_
 LIMIT_COUNT_SEALED_MESSAGE
 icon_equip_cc
@@ -14872,13 +14901,13 @@ SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MESSAGE
 SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_SKILL_TITLE
 SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_NP_TITLE
 SERVANT_STATUS_BATTLE_CHANGE_CONFIRM_MODIFY_COLOR
-SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_
 SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE
 LIMIT_COUNT_SELECT_SEALED
 OnClickListViewButton
 EventMoveEnd
 EventMaximMove
 EventMaximMove2
+PlayScriptButton
 EventFadeoutFrameMove
 EventFadeoutFrameMove2
 EventUsuallyMove
@@ -14934,8 +14963,25 @@ SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_MESSAGE
 Base/TitlePrefab/BackObj/BtnBg
-img_txt_profile
 img_index_02
+CommonUI
+Ground/Field/bg(Clone)
+bg(Clone)/bg10500
+SummonBgRoot
+ServantStatusDialogPrefab(Clone)
+ServantEquipStatusDialogPrefab(Clone)
+EquipGraphListMenuPrefab(Clone)
+SupportServantEquipListMenuPrefab(Clone)
+BgCamera
+CommonUICamera
+FrontCommonUICamera
+SystemUICamera
+TouchCamera
+BtnBg
+StatusButton
+LockButton
+ChoiceButton
+img_txt_profile
 img_index_03
 SERVANT_STATUS_PROFILE_ILLUST_TITLE
 SERVANT_STATUS_PROFILE_CV_TITLE
@@ -16101,6 +16147,7 @@ img_txt_mainscenario_{0}
 img_txt_eventquest
 img_txt_servantrecord
 img_txt_myroom_main_interlude
+img_txt_second_servant
 img_txt_sprofile
 img_txt_battlecharacter
 img_txt_selectsupport
@@ -16692,7 +16739,6 @@ present/history
 present/list
 MockUserPresentListResponse
 TIME_REST_PRESENT_LIMITED
-TIME_REST_STRING
 TIME_REST_PRESENT
 TIME_REST_PRESENT_INDEFINITE_PERIOD
 TIME_REST_PRESENT_INDEFINITE_PERIOD_TEXT
