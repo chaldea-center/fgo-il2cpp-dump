@@ -927,6 +927,9 @@ Directory '
 Pattern is invalid
 searchPattern
 Path is invalid
+Invalid enum value '{0}' for '{1}'.
+SearchOption
+searchOption
 Directory not found
 Failed to read past end of stream.
 sourceFileName
@@ -943,6 +946,10 @@ Could not find a part of the path.
 Reading more than 2GB with this call is not supported
 Unexpected end of stream
 fileName
+Could not find file "
+".
+Access to the path "
+" is denied.
 I/O Error
 FileLoad_FileName
 FileLoad_FusionLog
@@ -4219,23 +4226,38 @@ The input type cannot be null.
 charset
 Unsupported encoding '{0}': {1}
 Cannot create a preallocated-buffer DownloadHandlerScript backed by a null or zero-length array
+Cannot create a multipart form data section without body data
+encoding=
+; encoding=
+text/plain
+Cannot create a multipart form file section without body data
+file.dat
 UnityWebRequest has already been sent and its request method can no longer be altered
 Cannot set a UnityWebRequest's method to an empty or null string
 HTTP/1.1 {0} {1}
 http://localhost/
 UnityWebRequest has already been sent and its URL cannot be altered
 UnityWebRequest has already been sent and its chunked transfer encoding setting cannot be altered
+Cannot set a Request Header with a null or empty name
+Cannot set a Request header with a null
+UnityWebRequest has already been sent and its request headers cannot be altered
 UnityWebRequest has already been sent; cannot modify the upload handler
 UnityWebRequest has already been sent; cannot modify the download handler
+UnityWebRequest has already been sent; cannot modify the certificate handler
+UnityWebRequest has already been sent; cannot modify the timeout
+multipart/form-data; boundary=
+form-data
+Content-Disposition: 
+; name="
+; filename="
+Content-Type: 
 Cannot create a data handler without payload data
 text/plain; charset="
 .png
 .dat
 image/png
 multipart/form-data; boundary="
-Content-Type: 
 Content-disposition: form-data; name="
-; filename="
 =?
 ?Q?
 ?=
@@ -5325,6 +5347,375 @@ gameViewRenderRect
 m_ShownResolution
 Trying to pop a window {0} that is not at the head of the stack
 Window has started without being Initialized, you probably should have called OpenWindowWithData on the windowStack
+Missing game object name
+Missing valid configuration
+Event aggregation configuration was disabled. Enabling it manually via API
+guid
+Backtrace metrics support is enabled. Please use BacktraceClient.Metrics.
+Application awake
+Backtrace Client: OnDestroy
+Please enable BacktraceClient first.
+Backtrace API doesn't exist. Please validate client token or server url!
+ANRException: Blocked thread detected
+stackTrace
+Received incorrect background exception message. Message: {0}
+Application pause
+paused
+ANRException
+exception.thread
+Cannot set method if configuration contain invalid url to Backtrace server or client is disabled
+performance.report
+performance.database
+performance.json
+_mod_duplicate
+Backtrace Database is disabled
+Cannot initialize database - invalid path to database. Database is disabled
+breadcrumbs.lastId
+F0
+performance.database.flush
+performance.database.send
+Backtrace database path is empty or unavailable.
+Backtrace database path doesn't exist. Database path: {0}
+${
+${application.persistentdatapath}
+${application.datapath}
+kernel32.dll
+dbghelp.dll
+IOS
+Linux
+Mac OS
+ps3
+ps4
+Samsung TV
+tvOS
+WebGL
+WiiU
+Windows
+Xbox
+PROCESSOR_ARCHITECTURE
+The checked flag is not from the same type as the checked variable.
+ObjectDisposedException
+NotSupportedException source
+NotSupportedException destination
+0000000000000000000000000000000000000000000000000000000000000000
+{0}{1}
+application/json
+{
+""
+":
+\u{0}{1}{2}{3}
+uname.machine
+uname.sysname
+uname.version
+uname.fullname
+uname.family
+cpu.count
+cpu.frequency
+cpu.brand
+audio.supported
+cpu.boottime
+graphic.id
+graphic.name
+graphic.type
+graphic.vendor
+graphic.vendor.id
+graphic.driver.version
+graphic.memory
+graphic.multithreaded
+graphic.shader
+graphic.topUv
+battery.level
+battery.status
+device.model
+device.name
+device.type
+gc.heap.used
+process.age
+system.memory.active
+system.memory.reserved
+system.memory.unused
+system.memory.temp
+mono.heap
+mono.used
+backtrace.version
+3.7.3
+api.compatibility
+scripting.backend
+application.version
+application.url
+application.company.name
+application.data_path
+application.id
+application.installer.name
+application.internet_reachability
+application.editor
+application.focused
+application.mobile
+application.playing
+application.background
+application.sandboxType
+application.system.language
+application.unity.version
+application.debug
+application.temporary_cache
+IL2CPP
+.NET Framework 3.5 equivalent
+scene.count.build
+scene.count
+scene.active
+scene.buildIndex
+scene.handle
+scene.isDirty
+scene.isLoaded
+scene.name
+scene.path
+Invalid Backtrace URL
+backtrace.io
+submit.backtrace.io
+${Application.persistentDataPath}/backtrace
+https://submit.backtrace.io/
+Invalid Backtrace url
+token=
+crashpad
+https://{0}
+/json
+/plcrash
+format=json
+format=plcrash
+/minidump
+format=minidump
+Empty symbols submission token
+/symbols
+format=symbols
+Missing token in Backtrace url
+uuid
+lang
+csharp
+langVersion
+agent
+backtrace-unity
+agentVersion
+mainThread
+timestamp
+classifiers
+annotations
+threads
+sourceCode
+upload_file
+{0}.json
+{0}({1}){2}
+attachment_
+error.message
+error.type
+OOMException
+Hang
+Unhandled exception
+_mod_fingerprint
+_mod_factor
+Client report limit reached
+Cannot parse Backtrace JSON response. Error: {0}. Content: {1}
+Log File
+title
+text
+highlightLine
+main
+Backtrace.Unity
+funcName
+metadata_token
+library
+line
+column
+{0}.{1}()
+{0}.cs
+{0}.java
+{0} (at {1}:{2})
+(Mono JIT Code)
+(wrapper runtime-invoke)
+java.lang
+Unknown Source
+(wrapper remoting-invoke-with-check)
+(at
+AndroidJavaException
+report
+[{0}] {1}<{2}>: {3}
+(Backtrace)
+No stack trace available
+SceneManager:scene {0} unloaded
+SceneManager:scene {0} loaded
+LoadSceneMode
+SceneManager:scene changed from {0} to {1}
+(no scene)
+to
+Application:low memory
+Application:quitting
+Application:focus changed.
+hasFocus
+Network:{0}
+Breadcrumbs storage path is null or empty
+bt-breadcrumbs-0
+Breadcrumbs size must be greater or equal to 10kB
+level
+,
+
+
+]
+[
+
+Cannot generate report attachments. Reason: {0}
+{0}-dump.dmp
+{0}-screen.jpg
+{0}-lg.log
+Environment Variables
+Exception properties
+Game objects
+children
+isStatic
+layer
+transform.position
+transform.rotation
+activeInHierarchy
+activeSelf
+instanceId
+parnetName
+root object
+Scoped attributes provider collection is not defined
+dynamic attributes provider colleciton is not defined
+application.session
+fault
+stack
+metric_group
+summed_events
+unique
+unique_events
+backtrace.io.backtrace_unity_android_plugin
+BacktraceANRWatchdog
+BacktraceAndroidBackgroundUnhandledExceptionHandler
+android.os.Build
+device.manufacturer
+MANUFACTURER
+FDSize
+descriptor.count
+VmPeak
+vm.vma.peak
+VmSize
+vm.vma.size
+VmLck
+vm.locked.size
+VmHWM
+vm.rss.peak
+VmRSS
+vm.rss.size
+VmStk
+vm.stack.size
+VmData
+vm.data
+VmExe
+vm.exe
+VmLib
+vm.shared.size
+VmPTE
+vm.pte.size
+VmSwap
+vm.swap.size
+State
+voluntary_ctxt_switches
+sched.cs.voluntary
+nonvoluntary_ctxt_switches
+sched.cs.involuntary
+SigPnd
+vm.sigpnd
+ShdPnd
+vm.shdpnd
+Threads
+vm.threads
+MemTotal
+system.memory.total
+MemFree
+system.memory.free
+Buffers
+system.memory.buffers
+Cached
+system.memory.cached
+SwapCached
+system.memory.swap.cached
+Active
+Inactive
+system.memory.inactive
+SwapTotal
+system.memory.swap.total
+SwapFree
+system.memory.swap.free
+Dirty
+system.memory.dirty
+Writeback
+system.memory.writeback
+Slab
+system.memory.slab
+VmallocTotal
+system.memory.vmalloc.total
+VmallocUsed
+system.memory.vmalloc.used
+VmallocChunk
+system.memory.vmalloc.chunk
+HandleUnhandledExceptionsFromAndroidBackgroundThread
+Cannot initialize unhandled exception watcher - reason: {0}
+getApplicationContext
+getApplicationInfo
+nativeLibraryDir
+lib
+Backtrace native integration status: Disabled NDK integration
+Backtrace native integration status: database path doesn't exist
+android.os.Build$VERSION
+SDK_INT
+device.sdk
+Backtrace native integration status: Unsupported Android API level
+libcrashpad_handler.so
+Backtrace native integration status: Cannot find crashpad library
+Backtrace native integration status: Cannot initialize Crashpad client
+Crash
+/proc/{0}/status
+/proc/meminfo
+kB
+finish
+OnAnrDetected
+Cannot initialize ANR watchdog - reason: {0}
+memory.warning
+memory.warning.date
+stopMonitoring
+ANRException: Blocked thread detected.
+{0} cannot be null
+BacktraceCredentials
+[Backtrace]::Reponse code: {0}, Response text: {1}
+
+ Please check provided url to Backtrace service or learn more from our integration guide: https://support.backtrace.io/hc/en-us/articles/360040515991-Unity-Integration-Guide
+Server report limit reached
+Backtrace - minidump send time: {0}μs
+{0} have to be greater than 0!
+_retryNumber
+BacktraceDatabaseRecord
+.dmp
+.json
+.jpg
+.log
+ScreenshotQuality has to be greater than 0
+ScreenshotQuality cannot be larger than 100
+ScreenshotMaxHeight has to be greater than 0
+*-record.json
+bt-breadcrumbs
+Cannot remove file in path: {0}. Reason: {1}
+File {0} is in use. Message: {1}
+Cannot delete file: {0}. Message: {1}
+{0}-attachment.json
+{0}-record.json
+Backtrace: Cannot save record on the hard drive. Reason: {0}
+Application Launches
+Attribute name is not available in attribute scope. Please define attribute to set unique event.
+unique-events
+summed-events
+{0}{1}/submit?token={2}&universe={3}
+https://events.backtrace.io/api/
+reportPerMin have to be greater than or equal to zero
+Backtrace report limit hit({0}/min) – Ignoring errors for 1 minute
 Variable was not found '{0}'.
 BZip2InputStream position cannot be set
 BZip2InputStream Seek not supported
@@ -5359,7 +5750,6 @@ GZIP crc sum mismatch, theirs "
 " and ours "
 Number of bytes mismatch in footer
 Write not permitted in current state
-level
 Finish() already called
 Deflater closed
 unknown compressionFunction
@@ -5593,8 +5983,6 @@ VertexLit
 CriMana-MovieMaterial
 CriManaVp9
 SetupVp9Decoder
-android.os.Build$VERSION
-SDK_INT
 CriWare.CriManaVp9, CriMw.CriWare.Vp9.Runtime
 [CRIWARE] Internal: Duplicated CriMonoBehaviour GUID
 /CRIWARE
@@ -5889,7 +6277,6 @@ TitleScene
 MainPanel
 BattleScene
 click
-getApplicationContext
 cancel
 android.widget.Toast
 makeText
@@ -5919,6 +6306,11 @@ getPath
 /data
 .mp4
 pN6ds2Bg
+versionCode
+android.content.pm.PackageManager
+getPackageName
+GET_ACTIVITIES
+getPackageInfo
 buttontxt_synthesis
 img_txt_extraskill
 img_txt_extraskill_item
@@ -6030,7 +6422,6 @@ KB
 MB
 GB
 TB
-{0}{1}
 N2
 SCRIPT
 DelayLoadStart
@@ -6329,7 +6720,8 @@ REQUEST_RAID_UPDATE_EVENT_MAP
 RAID_DEFEATED_EFFECT_TIME
 MAX_COMMAND_SPELL
 ONE_COMMAND_SPELL
-USE_POLICY_VERSION
+USE_TERMS_AGREEMENT_REQUIERD_APP_VERSION
+USE_TERMS_LATEST_VERSION
 IS_IOS_EXAMINATION
 ENABLE_SERIAL_CODE
 STATUS_UP_ADJUST_ATK
@@ -6397,6 +6789,8 @@ GACHA_DAILY_MAX_DRAW_NUM_RESET_AT
 MEMORY_DECK_LIMIT_BY_QUEST
 EVENT_STORY_COND_QUEST_RELEASE_DATA
 91503502:91503501
+IOS_EXAMINATION_NEWS_URL
+https://view.fate-go.jp/
 id:
 , name:
 , appleShopId:
@@ -6473,7 +6867,6 @@ wait
 @playAnim
  =>{0},{1}
 SHORT_DEAD_EFFECT_SHADOW_SVT_ID
-to
 easetype
 onupdate
 updateDeadEffect
@@ -7890,7 +8283,6 @@ STORAGE_SHOP_NOTIFICATION
 ConfirmWindow/ConfirmInfo/CancelButton
 ConfirmWindow/ResultInfo/CloseButton
 ConfirmWindow/Notification/CloseButton
-""
 --:--
 {0}:{1:00}
 AssetCaches
@@ -8056,7 +8448,6 @@ SERVANT_FRAME_PURCHASE_MESSAGE_START
 InfoDialog/CloseButton
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
 ClientApi/OutputLog
-title
 msg
 code
 code/input
@@ -8556,7 +8947,6 @@ SCRIPT_ACTION_CODE_RETURN
 talkName
 [r]
 image
-line
 talkStart
 fontSize
 font
@@ -8770,6 +9160,14 @@ icon_costume_03
 COSTUME_OPEN_TITLE
 COSTUME_OPEN_MSG
 COSTUME_OPEN_WARNING
+UserId
+BacktraceConfigurationProduction
+Backtrace
+Google
+BuildNumber
+platformer
+ProductionBuildType
+Release
 SPLINE MESH
 LAST_WAR_ID
 ef_difference21
@@ -9530,7 +9928,6 @@ longitude
 altitude
 horizontalAccuracy
 verticalAccuracy
-timestamp
 locationCampaign
 ngParse
 PARTY_ORGANIZATION_EVENT_MEMBER_OTHER_EFFECT
@@ -10313,7 +10710,6 @@ MANA_UNIT
 FRIEND_POINT_UNIT
 item/use
  null
-":
 EVENT_RACE_RESULT_TIME_NONE
 Fgo_20210906
 MSG_PRESELECT_BASE_SVT
@@ -10615,9 +11011,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.48.0
-402a506b35113b0c547b23c1f805afdc780f3e753fbf4bc453b5083c493005d1
-20220225_22:05
+2.48.1
+5802fdfe1f1a8180df0253cc9989de66a1dd312a725c56b9fe9bb2111f943d0e
+20220303_20:03
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -12660,7 +13056,6 @@ Fp
 even value of q
 invalid F2m field value
 bigInt
-0000000000000000000000000000000000000000000000000000000000000000
 fixed-point comb doesn't support scalars larger than the curve order
 bc_fixed_point
 Need curve with known group order
@@ -17226,10 +17621,13 @@ No binding for config type
 No binding for type 
 master[{0}] is null[{1}:{2}]
 No elements in source list
-{
  path = 
 , args = 
  }
+Skipping report: attribute name is null or empty
+Skipping report: Reached store limit.
+appversion
+dropped_events
 GetResult called before operation is done.
 GetResult called after operation failed with error: 
 com.google.android.play.core.tasks.OnSuccessListener
