@@ -6312,6 +6312,7 @@ android.content.pm.PackageManager
 getPackageName
 GET_ACTIVITIES
 getPackageInfo
+load_mark_
 buttontxt_synthesis
 img_txt_extraskill
 img_txt_extraskill_item
@@ -6792,6 +6793,24 @@ IOS_EXAMINATION_NEWS_URL
 https://view.fate-go.jp/
 OTHER_IMAGE_LIMIT_COUNT
 EXCLUSIVE_NPC_SERVANT_ID_START
+STAND_FIGURE_R_OFFSET_EFFECT_NAMES
+STAND_FIGURE_R_OFFSET_EFFECT_IMAGES
+bit_result_bond
+bit_result_noble
+bit_result_servant
+bit_result_skill
+bit_result_command_card_exceed
+bit_result_extraskill
+bit_result_friendship_exceed
+1053900:100:0
+1053910:100:0
+1053901:100:0
+1053911:100:0
+1053902:100:0
+1053912:100:0
+1053000:100:0
+1053001:100:0
+1053002:100:0
 id:
 , name:
 , appleShopId:
@@ -6895,7 +6914,7 @@ Battle/Textures/shadow_
 Battle/Textures/shadow_1
 _AddColor
 SKIP_VOICE
-NoSkipDead
+SKIP_DEAD
 END_LOAD
 ef_pig_return01
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
@@ -6906,6 +6925,8 @@ _fade
 Effect/weapon/{0}/{1}
 Effect/weapon/{0}
 chr(Clone)
+subBgms
+subBgmsPriority
 BOOST_EFFECT_ICON
 BOOST_EFFECT_TIMING
 NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF
@@ -7063,6 +7084,8 @@ svt_change
 priority
 svt_voice_id
 isHideShadow
+NoSkipDead
+NoAutoSkipDead
 UpdateDefenceTargetDamageGauge
 CompleteDefenceTargetDamageGauge
 Player
@@ -7091,11 +7114,13 @@ Battle_RESULT_ITEM_DROPUP
 ribbon_noblephantasmup_01
 {0:#,0}
 body_level
-effect/obj_treasure_item01
 treasure
 effect/obj_treasure_p
 effect/obj_treasure_pp
 effect/obj_treasure{0:D2}
+effect/obj_treasure_item01
+Battle/DropEffect/1
+obj_treasure_item_bound
 Effect/SideEffect/
 ef_enchant
 effect/ef_sideeffect01
@@ -7787,6 +7812,7 @@ BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE
 Battle/Field/{0}
 BATTLE_EFFECT_ID_3003001
+Battle/DropEffect/{0}
 battle/routeSelect
 routeSelect
 battle/scenario
@@ -8710,9 +8736,7 @@ START_POWERUP_EFFECT
 bit_result_grail
 ResultEffect
 START_LVEXCEED_EFFECT
-bit_result_friendship_exceed
 START_FRIENDSHIP_EXCEED_EFFECT
-bit_result_command_card_exceed
 START_COMMAND_CARD_EXCEED_EFFECT
 bit_result_ultimate_anim
 START_SECRET_TREASURE_DEVICE_EFFECT
@@ -8748,7 +8772,6 @@ playVoice
 SERVANT_CHARA_GRAPH_EX_OPEN_MANAGER_
 LIMIT_COUNT_SEALED_TITLE
 END_ANIMATION
-bit_result_extraskill
 bit_result_
 START_COMBINE_LIMIT
 Fgo_20201104
@@ -9095,6 +9118,7 @@ MiniProgressBar/CancelButton
 connectMarkA
 connectMarkB
 connectMarkC
+load_mark
 System/tips_back01
 ID : 
 System/tips_back02
@@ -9427,6 +9451,7 @@ mstQuestReset
 mstQuestRestrictionInfo
 mstQuestRestriction
 mstQuestScript
+mstQuestScriptMaterialNext
 mstQuestScriptRelease
 mstQuestSpotRelease
 mstRecover
@@ -11019,9 +11044,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.49.2
-37974d276db153d41ff3bb86783297374ac73b7b1c55c211c9b1a482f3c5c01f
-20220330_21:50
+2.50.0
+7edc730d7208313dce5269d4b92e920521eab7b479f652bb4501ad428ff0a8f6
+20220402_06:12
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11273,6 +11298,7 @@ H010
 H4010
 H020
 H4020
+MaterialFinishReadQuestList
 EVENT_ID_RAID_1
 MATERIAL_MAP_QUEST_TITLE
 MATERIAL_MAP_PROLOGUE
@@ -14428,6 +14454,7 @@ isNotMaterial
 Flag   : 
 ServantId : 
 isRevival
+Number : {0}, releaseId : {1}
 masterBranch
 branchHaveSvtEquip
 branchNotHaveSvtEquip
@@ -14440,6 +14467,7 @@ branchRouteSelect
 branchNotRouteSelect
 branchRouteSelectCount
 branchNotRouteSelectCount
+ifClear
  - 1
 Figure
 Equip
@@ -14460,6 +14488,8 @@ servantName
 [~
 [~1]
 effectmessage
+else
+endIf
 Ts
 BATTLE_START
 Effect
@@ -14481,6 +14511,7 @@ PlayMessage
 PlayShop 
 SUMMON_OPEN_FRINEDQUEST_TITLE
 SUMMON_OPEN_FRINEDQUEST_NAME
+SUMMON_EVENT_SERVANT_DIRECT_GET_TITLE
 SUMMON_EVENT_SERVANT_TITLE_JOIN
 PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
 PlayGacha 
@@ -14580,6 +14611,7 @@ selectionUse
 masterScene
 tVoiceUser
 D4
+debugComment
 QuestStartInsert
 AssetData 
 overwrite
@@ -15215,6 +15247,7 @@ overWriteTDRank
 overWriteTDTypeText
 randomGroupIndex
 ascensionAfterDialogId
+OverwriteShadowServantEffectNodes
 NP_NAME_LEVEL
 NP_NAME
 effectFolder
@@ -15818,44 +15851,6 @@ COSTUME_CHANGE_SKILL_TITLE
 RESULT_BOUNDS_POWERUP
 _mapIdVal
 _blurOnOff
-getApplication
-com.smrtbeat.SmartBeatConfig
-setApiKey
-setEnabled
-setAutoBreadcrumb
-addIgnoredSignal
-com.smrtbeat.SmartBeat
-initAndStartSession
-notifyOnResume
-notifyActivityStarted
-leaveBreadcrumbs
-_leaveAutomaticBreadcrumbs
-setUserId
-enableLogCat
-enable
-disable
-addExtraData
-isReadyForDuplicateUserCountPrevention
-notifyOnPause
-enableDebugLog
-sceneLoaded
-next
-current
-activeSceneChanged
-sceneUnloaded
-java.util.HashMap
-put
-1.21.4
-/smartbeat_screenshot
-_{0:00}
-logHandleExceptionForUnity
-Warning
-Log
-) : 
-log
-SmartBeat
-API key for iOS
-API key for Android
 *.cpk.bytes
 ErrorCount : 0
 AllButton
@@ -16019,7 +16014,6 @@ enemyFieldPosCount
 3.6BossBattle
 battleMasterImageId
 releaseUnusedAssetsWhenEntryMember
-subBgms
 ForceSetNormalEnemyStatusUI
 enemyEntryOrder
 RednerTexture
@@ -16693,6 +16687,7 @@ event_raid_status_01
 event_raid_status_02
 +{0:0.0}%
 +{0}%
+_{0:00}
 time_status_side_01
 time_status_side_03
 time_status_side_02
@@ -17634,6 +17629,7 @@ Buy
 Unrecognized DialogType 
 entrySet
 iterator
+next
 getKey
 getValue
 hasNext
