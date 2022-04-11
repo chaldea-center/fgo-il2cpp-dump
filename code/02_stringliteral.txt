@@ -9250,6 +9250,7 @@ questhintdialogopensave.dat
 lastuseddecknumbersave.dat
 materialbranchroutesave.dat
 clearrandommissionsave.dat
+materialgroupclearhistorysave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -11044,9 +11045,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.50.0
-7edc730d7208313dce5269d4b92e920521eab7b479f652bb4501ad428ff0a8f6
-20220402_06:12
+2.50.1
+7904cafa00c9cb5597e5ecc7a3f2e0ceec8b144ef28b04a4b42338750bab9757
+20220407_16:37
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11135,6 +11136,7 @@ MATERIAL_PROGRESS_SUFFIX
 MATERIAL_MAP_EPILOGUE_TITLE
 img_menuboard_01
 img_menuboard_03
+Fgo_20220404
 Fgo_20191017
 SAME_SVTEQUIP_COMBINE
 MdcStr:Dc Crc Error
