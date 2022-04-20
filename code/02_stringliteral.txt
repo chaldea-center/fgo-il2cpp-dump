@@ -8387,8 +8387,6 @@ pX6q6xK2UymhFKcaGHHUlfXqfTsWF0uH
 W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7
 CENTER_EFFECT_DETAIL_DIALOG_TITLE
 CENTER_EFFECT_DETAIL_DIALOG_MESSAGE
-fieldPosSkillId
-fieldPosSkillLv
 Lv.
 no data
 CHANGE_GENDER_TITLE
@@ -11045,9 +11043,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.50.1
-7904cafa00c9cb5597e5ecc7a3f2e0ceec8b144ef28b04a4b42338750bab9757
-20220407_16:37
+2.51.0
+25567c6e425c6e9692d7d5aca71b6bb8a294c7b93563d64d26d703dd22aed4de
+20220414_20:18
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11207,6 +11205,8 @@ MULTIPLE_SERVANT_SELECTED_SERVANT_
 MultipleView1
 _rootMatrix
 _invrootMatrix
+MyRoomBackObj
+MyRoom/BackObject/{0}
 MULTIPLE_VIEW_BUTTON_TEXT
 MULTIPLE_VIEW_BUTTON_TITLE_TEXT
 LOAD_END
@@ -15953,6 +15953,7 @@ SEテストに
 そのサウンドはcpkリスト内に存在しません
 ValVoice_
 SE_21
+SE_22
 キュー順
 昇順
 降順
@@ -16018,6 +16019,8 @@ battleMasterImageId
 releaseUnusedAssetsWhenEntryMember
 ForceSetNormalEnemyStatusUI
 enemyEntryOrder
+fieldPosSkillId
+fieldPosSkillLv
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
