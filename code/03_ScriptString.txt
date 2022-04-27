@@ -6232,6 +6232,9 @@ AGE_VEIFICATION_NONE
 AGE_VEIFICATION_TYPE1
 AGE_VEIFICATION_TYPE2
 AGE_VEIFICATION_TYPE3
+aiIds
+applySvtType
+individuality
 includeUnsubState
 forcedSkillSpeed
 fieldHp
@@ -6660,6 +6663,14 @@ Coins/DownloadCoin
 EventUI/Prefabs/{0}
 shop/createSeed
 seed
+RESET_DIGGING_CONFIRM_DIALOG_DECIDE
+RESET_DIGGING_CONFIRM_DIALOG_CANCEL
+DIGGING_CONFIRM_DIALOG_CONSUME
+DIGGING_CONFIRM_DIALOG_POSSESSION
+AUTO_DIGGING_CONFIRM_DIALOG_TITLE
+AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE
+AUTO_DIGGING_CONFIRM_DIALOG_MESSAGE
+AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE
 [FF0000]{0}{1:#,0}[-]
 {0}{1:#,0}
 SUMMON_AUTOSALE_TITLE
@@ -6811,6 +6822,15 @@ bit_result_friendship_exceed
 1053000:100:0
 1053001:100:0
 1053002:100:0
+5047900:100:0
+5047910:100:0
+5047901:100:0
+5047911:100:0
+5047902:100:0
+5047912:100:0
+5047000:100:0
+5047001:100:0
+5047002:100:0
 id:
 , name:
 , appleShopId:
@@ -6832,6 +6852,7 @@ mask00
 black00
 EndOpenBaseDialog
 EndCloseBaseDialog
+{0:#,0}
 Camera
 Camera_obj
 CAMERA_END
@@ -6841,6 +6862,13 @@ effect/BitEffect/bit_arts{0:00}
 effect/BitEffect/bit_quick{0:00}
 effect/BitEffect/bit_flash02
 hp_iconeffect_before_1_
+Interval
+BaseTime
+TimePerChara
+MessageType
+BATTLE_MSG_INTERVAL
+BATTLE_MSG_BASE_TIME
+BATTLE_TIME_PER_CHARA
 MOTION_SHIFT_GAUGE_DOWN
 hp_iconeffect_1_
 MOTION_SHIFT_GAUGE_UP
@@ -6996,6 +7024,7 @@ battleId
 commandSpellId
 usedTurnList
 continueNum
+[r]
 onStartComp
 delay
 onEndComp
@@ -7112,7 +7141,6 @@ RESET_CAMERA_NOBLEEND
 RootCameraPrefab
 Battle_RESULT_ITEM_DROPUP
 ribbon_noblephantasmup_01
-{0:#,0}
 body_level
 treasure
 effect/obj_treasure_p
@@ -7121,12 +7149,12 @@ effect/obj_treasure{0:D2}
 effect/obj_treasure_item01
 Battle/DropEffect/1
 obj_treasure_item_bound
+Battle/Effect/
 Effect/SideEffect/
 ef_enchant
 effect/ef_sideeffect01
 Effect/BattleCommon/{0}
 Effect Default
-Battle/Effect/
 Battle/CommonEffects/
 en_waist
 en_body
@@ -7190,6 +7218,7 @@ Extra!
 flash
 out
 battle_states_popup
+battle_message_{0}
 NobleLevel
 {0}{1:#,0}
 [{2}]({3}{4:#,0})[-]
@@ -7531,6 +7560,8 @@ CRIMovie/CRIMoviePlayerWithPanel
 2DUI
 bit_raid_turnstart
 bit_raid_turnstart_
+Effect/BattleResult/{0}/{1}
+Servants_
 Bg/
 UpdateColor
 endChangeColor
@@ -7697,6 +7728,10 @@ OpenResult
 START_Begin
 freeShopIds
 returnRarePriShopIds
+RESULT_QP_PLUS
+ScrollBarMotionUpdateValue
+ScrollBarMotionCompleteValue
+easeType
 sendFsmEvent
 BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM
 BATTLE_RESULEVENTTITEM_NEXT_POINT
@@ -7760,6 +7795,8 @@ OnClickTutorialFollow
 TUTORIAL_MESSAGE_FOLLOW_OFFER
 BATTLE_RESULTITEM_TITLECONF
 BATTLE_RESULT_GET_EP_RATE
+ef_presenter
+ef_additem
 img_bg_total_ep
 img_bg_total_dp
 BATTLE_RESULT_GET_EP
@@ -7945,7 +7982,6 @@ updateSealActSpriteValues
 completeSealActSpriteValues
 loopType
 pingPong
-easeType
 easeOutCirc
 effect/ef_command_flash01
 effect/data/effect/ef_skill_rankup01
@@ -8970,7 +9006,6 @@ SCRIPT_ACTION_CODE_COMMENT
 SCRIPT_ACTION_CODE_VOICE
 SCRIPT_ACTION_CODE_RETURN
 talkName
-[r]
 image
 talkStart
 fontSize
@@ -9034,6 +9069,7 @@ GET_FRIEND_POINT_AT_LIMIT
 GET_FRIEND_POINT_GACHA_BTN
 GET_FRIEND_POINT_SUPPORT_BTN
 COMPENSATION_ITEM_MESSAGE_
+GET_EVENT_POINT_AFTER_DIALOG_MESSAGE
 FRIEND_POINT_NAME
 QP_NAME
 Effect/Talk/
@@ -9264,6 +9300,8 @@ mstBanner
 mstBattleBg
 battle
 mstBattleMasterImage
+mstBattleMessageGroup
+mstBattleMessage
 beforeBirthDay
 mstBgm
 mstBgmRelease
@@ -9331,6 +9369,9 @@ mstEventCombineCostume
 mstEventCombine
 mstEventConquestReward
 mstEventDetail
+mstEventDiggingBlock
+mstEventDigging
+mstEventDiggingReward
 mstEventEquipSkillRelease
 mstEventFactory
 mstEventFatigueRecovery
@@ -9551,6 +9592,7 @@ userEquip
 userEventAlloutBattle
 userEventBoardGameToken
 userEventDeck
+userEventDigging
 userEventMap
 userEvent
 userEventMissionConditionDetail
@@ -9757,6 +9799,54 @@ cord_n
 cord_b
 Window/CloseBtn
 dialogMessage_{0}_{1}
+EventUI/Prefabs/80367
+BlockPrefab
+RewardPrefab
+AutoDiggingDialog
+DiggingConfirmDialog
+DiggingPointRewardDialog
+DiggingRewardDialog
+DiggingCompleteImagePrefab
+DiggingSettings
+[FF0000]
+event_digging_block_{0}
+event_digging_layer_{0}
+ar173
+EventPoint_
+DIGGING_CONFIRM_DIALOG_MESSAGE
+DIGGING_CONFIRM_DIALOG_CANCEL
+DIGGING_CONFIRM_DIALOG_CHECK_MESSAGE
+SelectAnimation
+AUTO_DIGGING_BUTTON_TITLE
+RESET_DIGGING_BUTTON_TITLE
+RESET_DIGGING_CONFIRM_DIALOG_TITLE
+RESET_DIGGING_CONFIRM_DIALOG_MESSAGE
+ShoveltAnimation_skip
+ShoveltAnimation
+PickaxetAnimation_skip
+PickaxetAnimation
+HammertAnimation_skip
+HammertAnimation
+digging_clear_img
+SkipDiggingConfirmCheckBoxState
+digging_bg_{0}
+digging_bg_frame_{0}
+digging_txt_touchscreen
+DiggingComplete
+treasurechest_btn
+DIGGING_EVENT_POINT
+DIGGING_REWARD_DIALOG_VIEW_CHANGE
+TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE
+DIGGING_EVENT_POINT_REWARD
+treasurechest_img_bg_reward
+treasurechest_btn_on
+DIGGING_REWARD_DIALOG_GET_QP_TITLE
+DIGGING_REWARD_DIALOG_TOTAL_QP_TITLE
+DIGGING_GET_REWARD_DIALOG_TITLE
+DIGGING_GET_REWARD_DIALOG_SUB_TITLE
+DIGGING_EVENT_POINT_NUM
+DIGGING_TOTAL_EVENT_POINT_NUM
+TUTORIAL_IMAGE_DIALOG_NEXT
 cpcount
 DROP_AUTOSELL_TITLE
 DROP_AUTOSELL_MSG
@@ -9866,7 +9956,12 @@ changeLoadAnimations
 commonReleaseId
 animationId
 randomMissionMaxNum
+eventUiCushion
 EventServantFatigue/{0}
+event/digging
+areaNum
+idxX
+idxY
 forceOverwrite
 EVENT_ASSIST_SKILL_LEVEL_FORMAT
 EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT
@@ -9899,6 +9994,9 @@ EVENT_PROGRESS_NEXT_RANK_NONE
 COMMON_COUNT_OPERATOR_PLUS
 EVENT_PROGRESS_RANKUP_TITLE
 EVENT_PROGRESS_RANKUP_MESSAGE
+event_point_bg_8036701
+event_point_bg_8036702
+EVENT_POINT_COMMON_FORMAT_COUNT_STOP
 EVENT_HARVEST_CAUTION_DECIDE_BUTTON
 harvestGrowthBeforeQuestId
 EVENT_HARVEST_CAUTION_TITLE
@@ -9908,6 +10006,24 @@ EVENT_HARVEST_GROWTH_ITEM_GRADEUP
 EVENT_HARVEST_GROWTH_ITEM_NEW
 EVENT_HARVEST_GROWTH_ITEM_ADD_FORMAT
 EVENT_HARVEST_GROWTH_MESSAGE
+event_gauge_base_8036702
+event_gauge_sd_8036702
+event_gauge_bg_8036702
+event_gauge_base_8036701
+event_title_80367
+event_gauge_sd_8036701
+event_gauge_bg_8036701
+event_gauge_img_8036703
+event_gauge_img_8036702
+event_gauge_img_8036701
+ef_bunyan
+ef_bunyan99
+ef_bunyan2
+ef_bunyan1
+ef_anning2
+ef_anning1
+ef_anning
+EVENT_CUSHION_VALUE
 event_bg_bar
 event_point_bar
 EndGaugeAnime
@@ -9937,12 +10053,12 @@ EVENT_RAID_TIME_LIMIT_TXT
 00:00:00[-]
 EVENT_RAID_TIME_OVER_TXT
 {0:D2}:{1:D2}:{2:D2}[-]
-[FF0000]
 [FFFF00]
 [FFFFFF]
 baseObject
 event_itembase
 EVENT_SUBMARINE_RESOURCE_TITLE
+{0:D2}
 EVENT_PROGRESS_VALUE
 event_item_board_description
 USE_ITEM_CONFIRM_MSG
@@ -10036,6 +10152,7 @@ event_ranking_
 event_goal_flag
 event_ranking_reward_txt
 event_support_txt
+event/resetDigging
 ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG
 ANOTHER_PAY_INFO_TITLE
 ANOTHER_PAY_ITEM_CONFIRM_CHOICES_INFO
@@ -10213,7 +10330,6 @@ GetTreasureBoxEventEnableTime
 [E1A545,FEEF99]
 [FFFF00,FFFF00]
 Effect/TreasureBox
-TREASURE_BOX_DRAW_AFTER_DIALOG_MESSAGE
 treasurechest_btn_open
 treasurechest_bg_{0}
 treasurechest_img_frame_0{0}f
@@ -11043,9 +11159,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.51.0
-25567c6e425c6e9692d7d5aca71b6bb8a294c7b93563d64d26d703dd22aed4de
-20220414_20:18
+2.51.1
+b975b96cabf1aa1c387900aeeb4b2d3222f0db8f9ca8e3157f35405feb673715
+20220423_00:44
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -13390,6 +13506,7 @@ MENU_PARTY_ORGANIZATION
 SERVANT_LIST
 MENU_SERVANT_LIST
 Fgo_20151127_1
+[div]
 PARTY_ORGANIZATION_EVENT_TOTAL_DATA
 event_skill_btn_{0}
 EVENT_ASSIST_SKILL_DO_NOT
@@ -13947,7 +14064,6 @@ hintLeftIndent
 hintOpenType
 aiNpc
 npcId
-aiIds
 equipAddId
 overwriteEnemyInfos
 overwriteEnemyInfoNames
@@ -14035,6 +14151,26 @@ RP_FULL_MSG
 RP_UNRECOVERABLE_MESSAGE
 item/recover
 recoverId
+Servants/100100
+Effect/weapon/31
+NoblePhantasm/100100
+{0}/RegulationCheck
+{0},{2},{1}
+Servants/Motion
+Servants/Camera
+Servants/Commands
+Servants/Status
+Effect/weapon
+NoblePhantasm
+NoblePhantasm/Sequence
+アセット名,ファイルサイズ(byte),ダウンロード時間(ミリ秒),ロード時間(ミリ秒),使用メモリ量(MB),内包Prefabの最大負荷(ミリ秒)
+アセット名,プレファブ名,描画負荷(ミリ秒),アニメーション負荷(ミリ秒),メモリ使用量(MB)
+アセット名,CPUスコア,メモリスコア,ロードスコア
+{0},{1},{2},{3}
+[ff0000]{0:F2}[-]
+{0:F2}
+チェック結果
+masterName
 signup
 regist_account
 gamedata
@@ -14141,6 +14277,8 @@ event_mission_random_cancel
 coin_room_put
 userDelete
 battle_reset
+event_digging
+event_reset_digging
 02
 03
 04
@@ -14571,7 +14709,6 @@ QuestStartBlack
 {0:D8}{1:D1}7
 {0:D8}{1:D1}3
 {0:D2}/{1:D4}
-{0:D2}
 94
 PlayBattleStart 
 PlayBattleStart2 
@@ -14876,6 +15013,7 @@ x-small
 [align]
 [align center]
 [align right]
+=spot
 OnCrossFadeEndScene
 Talk/bit_queststart
 EndExecuteCamera
@@ -15051,7 +15189,6 @@ status_servant_
 card_servant_np
 not found file 
 downloadAndRelease not found file 
-Servants_
 Custom/SoftEdgeUnlitCutZ (SoftClip)
 joint_all_Base
 _Use_alphawidth
@@ -16021,6 +16158,7 @@ ForceSetNormalEnemyStatusUI
 enemyEntryOrder
 fieldPosSkillId
 fieldPosSkillLv
+aiAllocations
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -16591,6 +16729,8 @@ TitleInfoHarvestCautionDialogPrefab
 TitleInfoHarvestGrowthDialogPrefab
 TitleInfoEventPointRewardDialogPrefab
 TitleInfoProductivityGrowthDialogPrefab
+ef_dannna_up
+ef_dannna_up1
 TitleInfoEventBulletinBoardPrefab
 TitleInfoEventFactoryPrefab
 TitleInfoEventTimeStatusPrefab
@@ -16863,15 +17003,11 @@ signup/top
 TouchEffect
 treasurechest_btn_txt
 TREASURE_BOX_BULK_BUY_TITLE
-treasurechest_btn
 TREASURE_BOX_EVENT_POINT
-TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE
 TREASURE_BOX_EVENT_POINT_REWARD
-treasurechest_img_bg_reward
 TREASURE_BOX_EVENT_ITEM_GET_DIALOG_TITLE
 TREASURE_BOX_EVENT_GET_POINT_NUM
 TREASURE_BOX_EVENT_TOTAL_POINT_NUM
-TUTORIAL_IMAGE_DIALOG_NEXT
 TREASURE_BOX_EVENT_ITEM_LINEUP_DIALOG_TITLE
 ef_treasure_drop
 treasureBox/draw
