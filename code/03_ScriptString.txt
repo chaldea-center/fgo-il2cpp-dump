@@ -6685,6 +6685,17 @@ SERVANT_SORT_FILTER_RARITY_UNCOMMON
 SERVANT_SORT_FILTER_RARITY_RARE
 btn_bg_03
 btn_bg_04
+{0}
+(expected={1}, actual={2})
+既に表明違反時の処理が設定されています
+not null
+[AssetData]
+{0}をロードできませんでした
+表明違反時処理が設定されていません
+
+
+※このダイアログはデバッグパネルの
+Assertion:On/Off で非表示にすることができます
 NOTIFICATION_AP_RECOVER_MESSAGE
 ap_max
 NOTIFICATION_RP_RECOVER_MESSAGE
@@ -6962,6 +6973,7 @@ NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF
 HIDE_DEFF_TYPE
 REVERT_BUFF_LOWER_LIMIT
 IGNORE_AURA_BUFF
+INVALID_SACRIFICE_INDIV
 BATTLE_BUFF_TURN
 BATTLE_BUFF_COUNT
 BATTLE_BUFF_BOOST
@@ -7035,6 +7047,7 @@ RootFSM
 UIFSM
 CameraFSM
 iconId
+cutInView
 skills
 lv
 condId
@@ -7662,7 +7675,7 @@ BATTLE_ELAPSED_TURN
 BATTLE_TOTALELAPSED_TURN
 BATTLE_RAID_REMAINING_TIME
 BATTLE_NOKORIENEMY
-残り{0}体
+残り{0:#,0}体
 {0:D}
 icon_drop_item_0
 ef_masterskill_flash
@@ -7706,8 +7719,6 @@ questId
 UpdateValue
 finishUpdateValue
 bit_result_levelup01
-endMoveFigure
-OPEN
 SUMMON_EVENT_SERVANT_TITLE_GET
 bit_reward_shine02
 RESULT_BOUNDS_OPENQUEST
@@ -7716,6 +7727,8 @@ RESULT_BOUNDS_UPDATE_MATERIAL
 RESULT_BOUNDS_GETVOICE
 RESULT_BOUNDS_GET_COIN_COUNT
 RESULT_BOUNDS_GET_COIN_NAME
+endMoveFigure
+OPEN
 ーーー
 ＋ 
 （
@@ -7847,6 +7860,8 @@ RETRIEVABLE_QUEST_CONFIRM_BOOST
 BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST
 WINGNAME
 servantId
+MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE
+BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE
 Battle/Field/{0}
@@ -7878,6 +7893,7 @@ BATTLE_SELECTSUBERROR_NOSELECT_CONF
 Sprite
 BATTLE_DIALOG_CAN_NOT_REPLACE
 BATTLE_DIALOG_SELECT_SERVANT
+BATTLE_DIALOG_NOT_SELECT_TARGET
 N_{0}{1}
 NoblePhantasm/CutIns
 Actors/Actor
@@ -7939,6 +7955,7 @@ btn_txt_servant_property_off
 btn_txt_servant_states_on
 Top/close
 img_skillclass_0
+INDIVIDUALITY_IS_SUPPORT
 changeHp
 changeUpdateStatus
 UpdateStatusByTransform
@@ -11173,9 +11190,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.53.0
-504d72ef70b46df56c7fc294a0b8d527d340e3d485edab0962c2c0ee5bace4f1
-20220519_17:41
+2.54.0
+48a1e86bdbb80b4795204d447cfc073ce21b132a5bd5b096cb919830b1d3b93e
+20220527_17:38
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11537,6 +11554,8 @@ dateVer
 lastAccessTime
 verCode
 idempotencyKey
+{0} / {1}
+deviceInfo
 CommunicationStart
 SERVER_CERTIFICATE_ERROR_TITLE
 SERVER_CERTIFICATE_ERROR_ANDROID
@@ -13975,6 +13994,7 @@ raid_point_frame
 questboard_cap_closed
 questboard_cap_closed_{0}
 questboard_cap_closed_special
+questboard_cap_closed_special_2
 img_questboard_event{0:D3}
 questboard_cap{0:D3}
 img_questboard_story01
@@ -14004,9 +14024,13 @@ ef_blackpoint
 ef_whitepoint
 bit_board_appear
 bit_fade_black
+bit_board_appear2
+bit_fade_black3
 bit_board_disappear
 bit_board_disappear2
 bit_fade_black2
+bit_board_disappear3
+bit_board_disappear4
 RemoveTempBG
 MATERIAL_MAP_CHAPTER_SUB_{0:D2}
 MATERIAL_MAP_CHAPTER_SUB
@@ -14097,6 +14121,7 @@ npcId
 equipAddId
 overwriteEnemyInfos
 overwriteEnemyInfoNames
+clearGiftItemListDisplay
 movieFolder
 moviePlayType
 qev79
@@ -14453,6 +14478,7 @@ evGO_CALDEA
 EV_SCENE_STATUS_RESUME_FROM_SCRIPT
 EV_SCENE_STATUS_RESUME
 QUEST_CHAPTER_CLOSED_SPECIAL_308
+QUEST_CHAPTER_CLOSED_SPECIAL_311
 evCAPTER_CREATE_FINISH
 evCAPTER_SELECT_FINISH
 Effect/Talk/bit_order_grade_get
@@ -14528,6 +14554,7 @@ QUEST_MESSAGE_DLG_MOVIE_PLAY_TITLE
 bit_order_grade_get
 evEVENT_MESSAGE_FINISH
 QUSET_BOARD_EFFECT_DISAPPEAR_MESSAGE
+QUSET_BOARD_WHITE_MARK_EFFECT_DISAPPEAR_MESSAGE
 Map Touch Enable
 QUEST_CLEAR_CHANGE_ACTION_STORY_OPEN
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION_OPEN_DETAIL
@@ -14759,6 +14786,7 @@ PlayRaceResult
 Play 
 TempScriptActionRednerTexture
 through
+TempScriptActionRednerTextureSub
 captureScriptActionRednerTexture
 normal
 Custom/Sprite-ScriptActionRender
@@ -14988,6 +15016,23 @@ advPlayAnimator
 advActorShow
 advActorHide
 advRelease
+subCameraOn
+subCameraOff
+subCameraFilter
+subRenderFadein
+subRenderFadeinFSL
+subRenderFadeinFSR
+subRenderFadeinFSSideL
+subRenderFadeinFSSideR
+subRenderFadeout
+subRenderMove
+subRenderMoveFSL
+subRenderMoveFSR
+subRenderMoveFSSideL
+subRenderMoveFSSideR
+subRenderScale
+subRenderMoveScale
+charaLayer
 tdelay
 screen
 twt
@@ -15110,6 +15155,7 @@ inside
 outside
  is not found
 QuestMessageAdd
+ScriptRenderSub
 [#
 ScriptActionEncrypt/
 TalkResume
@@ -15463,6 +15509,8 @@ myroomForm
 combineResultMultipleForm
 conds
 condType
+TerminalOffset
+BattleBondOffset
 SERVANT_SELL_TITLE
 SELL_LAST_EQUIP_CMD_SVT_INFO
 SELL_LAST_EQUIP_CMD_SVT_MESSAGE
@@ -16209,6 +16257,7 @@ enemyEntryOrder
 fieldPosSkillId
 fieldPosSkillLv
 aiAllocations
+enemyCountStartValue
 RednerTexture
 RecycleRednerTexture
 TempStandFigurenRednerTexture
@@ -17828,6 +17877,8 @@ getKey
 getValue
 hasNext
 No IComparable or IComparable<{0}> interface found.
+[SerializeField]
+{0}の参照が切れています
 AddEventHandlerComponent: 
 comparison
 Comparison threw an exception.
