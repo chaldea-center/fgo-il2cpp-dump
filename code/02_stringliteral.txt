@@ -6843,6 +6843,9 @@ bit_result_friendship_exceed
 5047000:100:0
 5047001:100:0
 5047002:100:0
+IS_WAR_BOARD_AI_CALC_EVAL_SUM
+WAR_BOARD_ADD_ACTION_TREND_VALUE_ATTACK
+WAR_BOARD_ADD_ACTION_TREND_VALUE_MOVE
 id:
 , name:
 , appleShopId:
@@ -8343,6 +8346,7 @@ MaxBuffRate
 TargetIndiv
 IncludeIgnoreIndividuality
 CounterMessage
+ShowStateWarBoardEnemyEquip
 MST_BUFF_INDV_ADD_BUFF_ACTIVE
 Self
 Opponent
@@ -9293,6 +9297,8 @@ lastuseddecknumbersave.dat
 materialbranchroutesave.dat
 clearrandommissionsave.dat
 materialgroupclearhistorysave.dat
+warboardmessagehistorysave.dat
+warboardmoviehistorysave.dat
 mstAccessary
 mstAiAct
 mstAiField
@@ -9322,6 +9328,7 @@ boxGachaHistory
 mstBoxGacha
 mstBoxGachaTalk
 mstBuff
+mstBuffTypeDetail
 mstCampaignInfo
 mstCard
 mstClassRelation
@@ -9662,6 +9669,7 @@ mstVoicePlayCond
 mstVoicePlayGroup
 mstVoiceRelease
 mstWarAdd
+mstWarBoardActionPointClass
 mstWarBoardActionPoint
 mstWarBoardActionTrendCond
 mstWarBoardActionTrend
@@ -9671,12 +9679,16 @@ mstWarBoardEffect
 mstWarBoardIndividualityClass
 mstWarBoardItem
 mstWarBoard
+mstWarBoardMessage
+mstWarBoardMessageScript
 mstWarBoardOnboardSkill
+mstWarBoardPartySkill
 mstWarBoardQuest
 mstWarBoardRatingBase
 mstWarBoardRatingOffset
 mstWarBoardRoad
 mstWarBoardSquare
+mstWarBoardStageDetail
 mstWarBoardStageLayout
 mstWarBoardStage
 mstWarBoardStageNpc
@@ -9685,6 +9697,7 @@ mstWarBoardTacticalTrend
 mstWarBoardTreasure
 mstWarGroup
 mstWar
+mstWarQuestSelection
 MASTER_DATA_EMPTY_LIST{0:000}
 DataManager boot load crc error : チェックサム値が不一致
 DataManager boot load error : 読み込んだファイルの先頭がチェックサムデータではなかった
@@ -11190,9 +11203,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.54.0
-48a1e86bdbb80b4795204d447cfc073ce21b132a5bd5b096cb919830b1d3b93e
-20220527_17:38
+2.55.0
+31a034e27e5475bc99e1a2698feb99247623bad71ce74fd3094835f69068956c
+20220610_22:22
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11540,8 +11553,10 @@ tBanner
 spdeal
 boxGacha
 dBanner
+warBoard
 webview/summonDetail?userId=
 &gachaId=
+webview/warBoard?stageId=
 QA
 PLAN
 DEV
@@ -13725,6 +13740,7 @@ PARTY_ORGANIZATION_GET_SERVANT_POINT
 ??
 ???
 correction_icon_
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC
 img_frames_mask12
 #0039E2
 img_frames_mask08
@@ -13963,9 +13979,6 @@ QUEST_BOARD_KNOCKDOWN_COUNT
 QUEST_BOARD_KNOCKDOWN_DAMAGE
 QUEST_BOARD_KNOCKDOWN_PLUS
 QUEST_BOARD_KNOCKDOWN_DAMAGE_NAME
-img_quest_formlimit_01
-QUEST_BOARD_PREBATTLE_FORMATION_LABEL
-#FFEC00
 img_questtxt_free
 img_questtxt_event
 QUEST_BOARD_COST_QP
@@ -13979,6 +13992,7 @@ img_quest_lasttime
 event_war_
 chaldea_category_{0}
 quest_board_
+img_questboard_
 quest_board_icon_
 quest_board_mask_
 questboard_shohi_
@@ -14018,6 +14032,7 @@ img_questloop_on
 img_loop_off
 questboard_icon_cap{0:D2}
 img_quest_unit_{0:D2}
+img_quest_pre_organization
 QUEST_NONE
 Terminal/Effect
 ef_blackpoint
@@ -14122,6 +14137,7 @@ equipAddId
 overwriteEnemyInfos
 overwriteEnemyInfoNames
 clearGiftItemListDisplay
+WarBoardStartMovieName
 movieFolder
 moviePlayType
 qev79
@@ -14473,6 +14489,7 @@ STORY WAIT
 evGoBack_Earth
 Map Touch Disable
 evBACK_TO_STORY
+evBACK_TO_RECOLLECTION
 EV_SCENE_STATUS_INIT
 evGO_CALDEA
 EV_SCENE_STATUS_RESUME_FROM_SCRIPT
@@ -14681,11 +14698,11 @@ file:///
 OnClickSingleListView
 C:/Avalon/Temporary/ScriptData
 DefaultScript.txt
+■
 small
 medium
 large
 x-large
-■
 [^
 servantName
 [~
@@ -14717,6 +14734,7 @@ SUMMON_OPEN_FRINEDQUEST_NAME
 SUMMON_EVENT_SERVANT_DIRECT_GET_TITLE
 SUMMON_EVENT_SERVANT_TITLE_JOIN
 PRESENT_BOX_SUMMON_NOTIFICATION_MESSAGE_
+WarBoardMessage 
 PlayGacha 
 GachaTemplateMulti
 ABCDEFGHIJ
@@ -14828,6 +14846,7 @@ talkEnd
 menu
 notification
 enableFullScreen
+faceTalkScreen
 flagRandom
 delayStop
 delayStopAll
@@ -15000,6 +15019,7 @@ charaCutinStart
 charaCutout
 charaCutStop
 charaMask
+charaFaceIcon
 spriteMaskOn
 spriteMaskOff
 communicationChara
@@ -15141,6 +15161,9 @@ saveMaterial
 structure error
 selectBranchSkipTrueColor
 skipStop
+img_talk_textbg
+img_talk_namebg
+img_arrow_under
 [r][r]
 capture error
 masterSeneLoad
@@ -15166,6 +15189,14 @@ LastScriptLine
 Dummy
 SAVE_ROUTE_SELECT_IN_COLLECTION
 forceFullScreenSize
+Effect Parent
+Effect Child
+[*
+MessageShake/LogMark/BackLogButton
+[image 
+ 1.5]
+OnDelayWaitNextTouch
+EndScroll
 OnSwipeBlockPanel
 top
 bottom
@@ -15177,14 +15208,6 @@ icon_class_{0:D3}
 ・
 FrontCommonUI
 [line 
-Effect Parent
-Effect Child
-[*
-MessageShake/LogMark/BackLogButton
-[image 
- 1.5]
-OnDelayWaitNextTouch
-EndScroll
 {0} {1} {2}
 〇
 [#[FF0000]主[-]人公:しゅじんこう]はぐだぐだな主人公
@@ -16059,6 +16082,7 @@ skillScript_1
 BeforeFieldCallEffect
 AfterFieldCallEffect
 CanNotSkip
+WarBoardForcePassiveEveryBattle
  ＋ 
 LEVEL_DETAIL_INFO
 Target
@@ -16218,6 +16242,8 @@ MapSpotEffect_{0}
 img_spotname_bg
 SPOT_FREE_QUEST_LAST_TIME
 AtScaleAnimEnd
+Effect/RecollectionQuest
+ef_badge_glow
 turn
 turnEffectType
 turnElapsedEndBattle
@@ -16673,6 +16699,7 @@ SAVEKEY_PlayTerminalEffectDisappear
 SAVEKEY_TerminalSelectedStoryQuestId
 SAVEKEY_ConnectMarkEventId
 SAVEKEY_ConnectMarkAnimationId
+SAVEKEY_TerminalSelectedRecollectionWarId
 SAVEKEY_TerminalLastSelectQuestIndex
 TerminalLastPlayedFreeQuestSpotId
 TerminalLastPanelEventPoint
@@ -16731,6 +16758,7 @@ EVENT_SUBMARINE_POINT_NAME
 TitleInfoEventDailyPointItemPrefab
 TitleInfoEventTowerPrefab
 EventPointGaugeRoot
+_movie
 TitleInfoEventSideItemPrefab
 TitleInfoEventBuffSideItemPrefab
 TIME_STATUS_COND_QUEST_DATA
@@ -16823,6 +16851,7 @@ img_txt_mastermission
 img_txt_form_secondarchive
 img_txt_main_interlude
 img_txt_holygrailforging
+img_title_header_80382
 TitleInfoEventUIPrefab
 TitleInfoEventConquestGetPrefab
 bit_dedicate_reward
@@ -17592,6 +17621,7 @@ Fonts/FGO-NumberFont-02
 WARBOARD_PARTY_ORGANIZATION_COST_COLOR
 WARBOARD_PARTY_ORGANIZATION_COST_SPLIT
 WARBOARD_PARTY_ORGANIZATION_COST_OVER_COLOR
+WEB_VIEW_TITLE_WARBOARD_RULE
 WARBOARD_PARTY_COST_OVER_TITLE
 WARBOARD_PARTY_COST_OVER_MESSAGE
 WARBOARD_SORTIE_CONFIRMATION_TITLE
@@ -17604,6 +17634,8 @@ WARBOARD_RETURN_CONFIRM_MESSAGE
 WARBOARD_RETURN_CONFIRM_YES
 WARBOARD_RETURN_CONFIRM_NO
 TopBase/BackButton
+WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE
+WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE
 masterInfo
 getItemInfo
 WARBOARDDATA_SAVEDATA
@@ -17619,9 +17651,12 @@ CameraShake
 WARBOARD_ATTACK_CONFIRMATION_MESSAGE
 WARBOARD_ATTACK_CONFIRMATION_YES
 WARBOARD_ATTACK_CONFIRMATION_NO
-WARBOARD_SWAP_CONFIRMATION_MESSAGE
+WARBOARD_SWAP_CONFIRMATION_MASTER_MESSAGE_HAS_COST
+WARBOARD_SWAP_CONFIRMATION_SVT_MESSAGE_HAS_COST
+WARBOARD_SWAP_CONFIRMATION_MESSAGE_HAS_COST
 WARBOARD_SWAP_CONFIRMATION_YES
 WARBOARD_SWAP_CONFIRMATION_NO
+WARBOARD_SWAP_CONFIRMATION_MESSAGE
 WARBOARD_TURN_END_CONFIRMATION_MESSAGE
 WARBOARD_TURN_END_CONFIRMATION_YES
 WARBOARD_TURN_END_CONFIRMATION_NO
@@ -17637,6 +17672,8 @@ ServantDetailPopup
 ServantEquipSimpleDialog
 EnemyServantDetailPopup
 CommonMiniPopup
+ConsumedPieceActionPointPopup
+SwapConfirmPopup
 WARBOARD_MAX_SERVANT_CACHE_COUNT
 WARBOARD_MIDDLE_MEMORY_SERVANT_CACHE_COUNT
 WarBoard/Background/{0}
@@ -17661,6 +17698,7 @@ SeSetting
 Configuration
 Playing
 ZoomSwitchUI
+PartyBuffHelpUI
 ef_states_up_01
 ef_states_down_01
 SkillNameInfo
@@ -17675,9 +17713,13 @@ targetGroupId
 targetPieceIndex
 Frame{0}
 MasterBreak
+Fgo_20220427
+Fgo_20220601
+WarBoardStartMovie
 class2_{0}
 PartyOrganization/PartyServantSelectMenu
 MasterDamage
+WARBOARD_SERVANT_STATUS_PERMANENT_SLEEP
 WARBOARD_TURN_BASE
 icon_drop_item_{0:00}
 warBoard/resume
@@ -17702,6 +17744,8 @@ WARBOARD_INFO_POPUP_SVT_HP
 WARBOARD_INFO_POPUP_SVT_DETAIL_BUTTON
 WARBOARD_INFO_POPUP_SVT_LV
 {0:#,0} / {1:#,0}
+WARBOARD_INFO_POPUP_SVT_ACTION_POINT
+WARBOARD_INFO_POPUP_SVT_ACTION_POINT_COST
 WARBOARD_SERVANT_INFO_ENEMY_ATK
 Move_Point_{0}
 Move_Point_0
@@ -17709,6 +17753,9 @@ WARBOARD_SQUARE_COST
 PlayUnDispCostAnim2
 FinishUnDispCostAnim
 warBoardSvtDetail
+overwriteBaseActionPoint
+overwriteAttackCost
+overwriteMoveCost
 warBoard/start
 icon_drop_item_L_{0:00}
 CommonTreasureGet
