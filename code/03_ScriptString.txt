@@ -6193,11 +6193,6 @@ ng
 {{"ProductId":"{0}"}}
 COMMON_CONFIRM_CLOSE
 ACHIEVEMENT_EXCHANGE_CONDITIONS_SHOP_NAME
-purchase_and_
-ORIGINAL_ID
-LEVEL
-FAVORITE_SVTID
-event
 stone
 gacha
 action001
@@ -6704,6 +6699,8 @@ NOTIFICATION_FATIGUE_RECOVER_MESSAGE
 no_fatigue
 NOTIFICATION_COMPLETE_HARVEST_MESSAGE
 no_harvest_{0}
+NOTIFICATION_COMPLETE_EXPEDITION_MESSAGE
+no_expedition_{0}
 BattleScriptScene
 OnMoveEnd
 Back
@@ -6908,6 +6905,7 @@ Count_Hit
 TargetObject
 SummonMasterObject
 SummonEndFlag
+event
 summon
 weapon
 common
@@ -7392,6 +7390,7 @@ MOTION_NO_DEAD
 MOTION_STAND_DEAD
 MOTION_EFFECT_DEAD
 MOTION_WAIT_DEAD
+MOTION_DEAD_ENERGY
 MOTION_DEAD
 MOTION_APP
 NP_HIGHER
@@ -7538,7 +7537,6 @@ black_out
 black
 Alpha_FadeIn
 FadeOff
-ResultWindowPanel
 START_NP_ENEMY
 START_NP_PLAYER
 END_NP_UP
@@ -7566,6 +7564,7 @@ SKIP_SKILL_CUTIN
 EventInfoPointGaugeControl
 Effect/BattleResult/{0}
 Battle/BattleResult
+ResultWindowPanel
 TopDialogPanel
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_TITLE
 BATTLE_MOVIE_SKIP_CONFIRM_DIALOG_MESSAGE
@@ -7863,8 +7862,6 @@ RETRIEVABLE_QUEST_CONFIRM_BOOST
 BATTLE_RETRYABLE_CONFIRM_DIALOG_BOOST_SUPPORT_REQUEST
 WINGNAME
 servantId
-MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE
-BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_TITLE
 BATTLE_DIALOG_SKIP_SCENARIO_WITH_MAPSCREEN_MESSAGE
 Battle/Field/{0}
@@ -8222,6 +8219,13 @@ Position set
 BGM_CHALDEA_1
 BGM_CHALDEA_2
 BGM
+bit_expedition_finish
+bit_expedition_finish_end
+bit_expedition_finish_dog_{0}
+bit_expedition_finish_dog_{0}_end
+bit_expedition_start
+bit_expedition_start_dog_{0}
+bg_{0}
 COMMON_CONFIRM_YES
 COMMON_CONFIRM_NO
 blacklist/regist
@@ -9300,6 +9304,7 @@ materialgroupclearhistorysave.dat
 warboardmessagehistorysave.dat
 warboardmoviehistorysave.dat
 mstAccessary
+mstAdCheckPoint
 mstAiAct
 mstAiField
 mstAi
@@ -9388,6 +9393,8 @@ mstEventDiggingBlock
 mstEventDigging
 mstEventDiggingReward
 mstEventEquipSkillRelease
+mstEventExpedition
+mstEventExpeditionPiece
 mstEventFactory
 mstEventFatigueRecovery
 mstEventFilter
@@ -9461,6 +9468,7 @@ mstGachaStoryAdjust
 mstGachaSub
 mstGachaTicket
 mstGiftAdd
+mstGiftDetail
 mstGift
 mstGuide
 mstIllustrator
@@ -9505,8 +9513,10 @@ mstQuestReleaseOverwrite
 mstQuestReset
 mstQuestRestrictionInfo
 mstQuestRestriction
+mstQuestScriptBranchMaterial
 mstQuestScript
 mstQuestScriptMaterialNext
+mstQuestScriptMaterialOverwrite
 mstQuestScriptRelease
 mstQuestSpotRelease
 mstRecover
@@ -9608,6 +9618,7 @@ userEventAlloutBattle
 userEventBoardGameToken
 userEventDeck
 userEventDigging
+userEventExpedition
 userEventMap
 userEvent
 userEventMissionConditionDetail
@@ -9985,6 +9996,32 @@ areaNum
 idxX
 idxY
 forceOverwrite
+event/expeditionFinish
+expeditionIdxs
+shop_item_menu_{0}_2
+shop_item_menu_mask
+event_gauge_front
+event_gauge_back
+EXPEDITION_REWARD_TITLE_LABEL
+event_gauge_front_complete
+EXPEDITION_EVENT_END
+bit_runningdog_{0}_1
+TIME_REST_TIMEOVER
+bit_runningdog_{0}_2
+EXPEDITION_TIME_LABEL
+EXPEDITION_BEST_MATCH_LABEL
+EXPEDITION_COMPLETE_LABEL
+EXPEDITION_TIME_FORMAT
+TIME_REST_NONE
+EXPEDITION_TIME_REST
+EXPEDITION_PUSH_BTN_LABEL
+SellServant
+ServantEquipList
+btn_completecheck_bg
+EXPEDITION_COMP_BTN_LABEL
+event/expeditionStart
+expeditionIdx
+pieceIdx
 EVENT_ASSIST_SKILL_LEVEL_FORMAT
 EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT
 box_status_side_01
@@ -10116,7 +10153,6 @@ missionIds
 MISSION_PERIOD_END
 TIME_REST_QUEST
 TIME_REST_ACHIVE
-TIME_REST_TIMEOVER
 EVENT_ITEM_REPLACE_EVENT_NAME
 EVENT_ITEM_REPLACE_BEFORE_EVENT_NAME
 EVENT_REWARD_REPLACE_MSG
@@ -10293,6 +10329,7 @@ LimitedMission
 MstMissionIndex
 FatigueNotiffication
 CooltimeNotification
+ExpeditionNotification
 LotteryShopSkipState
 LastViewEventId_
 CompleteMission
@@ -10364,6 +10401,42 @@ event_logo_mini_80368
 event_logo_mini_
 _Volume
 _SubTex
+EventUI/Prefabs/80381
+stay_dog_10
+stay_dog_20
+stay_dog_30
+stay_dog_40
+stay_dog_50
+stay_dog_60
+stay_dog_70
+stay_dog_80
+ExpeditionConfirmDialog
+ExpeditionRewardDialog
+ExpeditionPointRewardDialog
+bit_runningdog_10
+bit_runningdog_20
+bit_runningdog_30
+bit_runningdog_40
+bit_runningdog_50
+bit_runningdog_60
+bit_runningdog_70
+bit_runningdog_80
+COMMON_COUNT_OPERATOR_CROSS
+EXPEDITION_CONFIRM_DIALOG_TITLE
+EXPEDITION_CONFIRM_DIALOG_DESCRIPTION
+EXPEDITION_CONFIRM_DIALOG_CONSUMPTION
+EXPEDITION_CONFIRM_DIALOG_ACQUIRED_REWARD
+EXPEDITION_CONFIRM_DIALOG_ACQUIRED_POINT
+EXPEDITION_CONFIRM_DIALOG_DECIDE
+EXPEDITION_CONFIRM_DIALOG_WARNIG_MESSAGE
+EXPEDITION_EVENT_POINT
+EXPEDITION_REWARD_DIALOG_VIEW_CHANGE
+EXPEDITION_DIALOG_CANCEL
+EXPEDITION_BOX_EVENT_POINT_REWARD_TITLE
+EXPEDITION_EVENT_POINT_REWARD
+EXPEDITION_REWARD_DIALOG_TITLE
+EXPEDITION_REWARD_DIALOG_GET_POINT_TITLE
+EXPEDITION_REWARD_DIALOG_TOTAL_POINT_TITLE
 Servants/
 /chr
 /fbxevent
@@ -10485,6 +10558,19 @@ fixMainSupportDeckIds
 fixEventSupportDeckIds
 TUTORIAL_MESSAGE_FORMATION1
 CLICK_TERMINAL
+ytnpcux7t534
+D3
+actionId: 
+ price: 
+ currency: 
+ transactionId: 
+purchase_and_
+ORIGINAL_ID
+LEVEL
+FAVORITE_SVTID
+story
+tutorial
+takeover
 friend/accept
 friend/cancel
 USER_FRIEND_CODE
@@ -10643,6 +10729,7 @@ BTN_GIFT
 EV_GIFT_EXIT
 EV_GIFT_PROC_FIN
 GotNewServantTrigger
+phaseRewardImageId
 SERVANT_UNIT
 SERVANT_EQUIP_UNIT
 EXCEPT_SERVANT_UNIT
@@ -10715,6 +10802,10 @@ status_master_frame
 status_master_frame1
 img_listbg_03
 img_listbg_04
+PlayStayAnim
+stay_dog_{0}_loop
+stay_dog_{0}_action
+icon_bg_{0}
 Ray Distance should be greater than zero!
 
 Invalid State!
@@ -10765,7 +10856,6 @@ localScale.z
 Action sends no events!
 Define at least 2 colors to make a gradient.
 {1:D2}h:{2:D2}m:{3:D2}s:{10}ms
-D3
 EmptyObjectFromNull
 Missing camera!
 MainCamera
@@ -10895,7 +10985,6 @@ ribbon_noblephantasmup_02
 event_skill_icon_{0:D2}
 QUEST_CONFIRM_NO_CONSUME_COUNT
 SetBaseTransform
-COMMON_COUNT_OPERATOR_CROSS
 STONE_UNIT
 MANA_UNIT
 FRIEND_POINT_UNIT
@@ -11181,7 +11270,8 @@ MAIN_MENU_BAR_SELECT_SHOP
 MAIN_MENU_BAR_SELECT_FRIEND
 MAIN_MENU_BAR_SELECT_MYROOM
 icon_servant_exchange_available_{0}
-AdManager Initialize error.(Start) message=
+AdManager Initialize error.(Start - Metaps) message=
+Firebase Initialize error.(Start) message=
 CommonUI/UI Root/SystemUICamera
 MovieRoot
 AdManager Initialize error.(reboot) message=
@@ -11191,6 +11281,7 @@ Firebase.FirebaseApp
 IsNotificationStatusSend
 IsReBootCacheClearKey
 yyyy年MM月dd日HH時mm分
+AdManager Initialize error.(Start - Adjust) message=
 2pC0bIYM
 F39UThNh
 ioqrk4Om
@@ -11203,9 +11294,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.55.1
-18dbd8b019e8abe2ff4fa8d6638f9244268910afddc234862f6dc5abbdaf7dbf
-20220616_16:40
+2.56.0
+98fbf7895a96a8fef2fb8a9edfdd4d41bdecaff6b847f30cb141a1812809e379
+20220624_17:31
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11472,6 +11563,9 @@ MYROOM_PLAYABLE_LIMIT_COUNT_3
 MYROOM_PLAYABLE_MSG_AND
 MYROOM_PLAYABLE_MSG_END
 MYROOM_MATERIAL_COMFIRM_NEXT_STROY
+MAIN_SCRIPT_PLAYED_TEMPORARY_SAVE
+BRANCH_SCRIPT_PLAYED_TEMPORARY_SAVE
+MaterialPlayedBranchQuestData
 H010
 H4010
 H020
@@ -14138,6 +14232,7 @@ overwriteEnemyInfos
 overwriteEnemyInfoNames
 clearGiftItemListDisplay
 WarBoardStartMovieName
+overwriteEndScript
 movieFolder
 moviePlayType
 qev79
@@ -14356,6 +14451,8 @@ userDelete
 battle_reset
 event_digging
 event_reset_digging
+event_expedition_start
+event_expedition_finish
 02
 03
 04
@@ -14553,8 +14650,6 @@ beforeTerminalMessageIds
 QUEST_CLEAR_BEFORE_TERMINAL_MESSAGE_
 NoticeLastModified
 EVENT_INIT
-SellServant
-ServantEquipList
 VOTE_QUEST_CONFIRM_INFO
 QUEST_CONFIRM_CANCEL
 QUEST_CONFIRM_NO_BATTLE_NO_CONSUME
@@ -15297,8 +15392,6 @@ card_servant_
 Servants/Status/
 status_servant_
 card_servant_np
-not found file 
-downloadAndRelease not found file 
 Custom/SoftEdgeUnlitCutZ (SoftClip)
 joint_all_Base
 _Use_alphawidth
@@ -15419,6 +15512,7 @@ HideInAnimNode
 additionExpandImage
 coinRoomCheck
 svtBuffTurnExtend
+defaultDeadType
 svtEquip/combine
 SERVANT_EQUIP_EFFECT_FILTER_GROUP_
 COMMAND_CODE_EFFECT_FILTER_GROUP_
@@ -15475,6 +15569,7 @@ SHORT_SERVANT_COMMAND_CODE
 SHORT_SERVANT_COMMAND_CODE_SELL
 SHORT_SERVANT_QUEST
 SHORT_SERVANT_SUMMON
+SHORT_SERVANT_EXPEDITION
 SHORT_COMMAND_CODE_FRAME_QUEST
 SHORT_SERVANT_FRAME_QUEST
 FRIEND_GACHA_ADD_LIMIT
@@ -16703,8 +16798,6 @@ SAVEKEY_TerminalSelectedRecollectionWarId
 SAVEKEY_TerminalLastSelectQuestIndex
 TerminalLastPlayedFreeQuestSpotId
 TerminalLastPanelEventPoint
-story
-id_
 harvestGrowthAfterQuestId
 SAVEKEY_EventRaidDefeatedEffectInfo
 SAVEKEY_QuestRandomGroupList
@@ -17055,7 +17148,6 @@ TAKEOVER_PW_TXT
 CONTINUE_DEVICE_TAKEOVER_EXPLANATIOIN1
 CONTINUE_DEVICE_TAKEOVER_EXPLANATIOIN2
 TAKEOVER_CANCEL
-takeover
 DELETE_FINISH
 DELETE_PASSWORD
 RequestLoginFirst
@@ -17198,7 +17290,6 @@ TUTORIAL_LABEL_RAID2_BATTLE_2
 TUTORIAL_LABEL_SVT_LEAVE
 TUTORIAL_LABEL_FES
 tutorial/set
-tutorial
 [00]
 Premultiplied
 Unity Bug
@@ -17579,6 +17670,7 @@ B2550
 B3050
 B3060
 B3070
+weight
 bgChangeEffectType
 bgChangeEffectTime
 eventTowerId
@@ -17882,6 +17974,154 @@ Stop Trail2
 Stop Trail2 Smoothly
 questStartEffectSkip
 QuestStartEffect
+production
+sandbox
+com.adjust.sdk.AdjustConfig
+SUPPRESS
+com.adjust.sdk.LogLevel
+SUPRESS
+setLogLevel
+setSdkPrefix
+unity4.30.0
+setDelayStart
+setEventBufferingEnabled
+setCoppaCompliantEnabled
+setPlayStoreKidsAppEnabled
+setSendInBackground
+setNeedsCost
+setPreinstallTrackingEnabled
+setPreinstallFilePath
+setUserAgent
+setProcessName
+setDefaultTracker
+setExternalDeviceId
+china
+URL_STRATEGY_CHINA
+setUrlStrategy
+india
+URL_STRATEGY_INDIA
+data-residency-eu
+DATA_RESIDENCY_EU
+data-residency-tr
+DATA_RESIDENCY_TR
+data-residency-us
+DATA_RESIDENCY_US
+setAppSecret
+setDeviceKnown
+setOnAttributionChangedListener
+setOnEventTrackingSucceededListener
+setOnEventTrackingFailedListener
+setOnSessionTrackingSucceededListener
+setOnSessionTrackingFailedListener
+setOnDeeplinkResponseListener
+onCreate
+onResume
+com.adjust.sdk.AdjustEvent
+setRevenue
+addCallbackParameter
+addPartnerParameter
+setOrderId
+setCallbackId
+isEnabled
+setEnabled
+setOfflineMode
+sendFirstPackages
+setPushToken
+getAdid
+gdprForgetMe
+disableThirdPartySharing
+getAttribution
+com.adjust.sdk.Adjust
+addSessionPartnerParameter
+addSessionCallbackParameter
+removeSessionPartnerParameter
+removeSessionCallbackParameter
+resetSessionPartnerParameters
+resetSessionCallbackParameters
+android.net.Uri
+parse
+appWillOpenUrl
+org.json.JSONObject
+trackAdRevenue
+com.adjust.sdk.AdjustAdRevenue
+setAdImpressionsCount
+setAdRevenueNetwork
+setAdRevenueUnit
+setAdRevenuePlacement
+com.adjust.sdk.AdjustPlayStoreSubscription
+setPurchaseTime
+trackPlayStoreSubscription
+com.adjust.sdk.AdjustThirdPartySharing
+addGranularOption
+trackThirdPartySharing
+trackMeasurementConsent
+onPause
+setReferrer
+getGoogleAdId
+getAmazonAdId
+getSdkVersion
+unity4.30.0@
+setTestOptions
+com.adjust.sdk.OnAttributionChangedListener
+com.adjust.sdk.OnDeeplinkResponseListener
+com.adjust.sdk.OnDeviceIdsRead
+com.adjust.sdk.OnEventTrackingFailedListener
+com.adjust.sdk.OnEventTrackingSucceededListener
+com.adjust.sdk.OnSessionTrackingFailedListener
+com.adjust.sdk.OnSessionTrackingSucceededListener
+verbose
+warn
+assert
+suppress
+VERBOSE
+DEBUG
+INFO
+WARN
+ERROR
+ASSERT
+":"
+com.adjust.sdk.AdjustTestOptions
+baseUrl
+gdprUrl
+subscriptionUrl
+basePath
+gdprPath
+subscriptionPath
+context
+useTestConnectionOptions
+timerIntervalInMilliseconds
+timerStartInMilliseconds
+sessionIntervalInMilliseconds
+subsessionIntervalInMilliseconds
+teardown
+noBackoffWait
+adid
+network
+adgroup
+campaign
+creative
+willRetry
+callbackId
+eventToken
+clickLabel
+trackerName
+trackerToken
+jsonResponse
+costType
+costAmount
+costCurrency
+extraPath
+deleteState
+iAdFrameworkEnabled
+adServicesFrameworkEnabled
+ ]
+{ 
+" : 
+JSONNode
+JSON Parse: Too many closing brackets
+JSON Parse: Quotation marks seems to be messed up.
+Can't use compressed functions. You need include the SharpZipLib and uncomment the define at the top of SimpleJSON
+Error deserializing JSON. Unknown tag: 
 vector2
 vector3
 rect
@@ -17910,6 +18150,12 @@ _ProjectorMatrixVP
 _ProjectorPos
 Spot_Line_
 StateQaaEnd
+img_frameselect
+EXPEDITION_CONFIRM_DIALOG_COMPATIBILITY
+EXPEDITION_CONFIRM_DIALOG_ON_AN_EXPEDITION
+EXPEDITION_CONFIRM_DIALOG_TIME_REQUIRED
+[FFFF00]{0}[-]
+icon_{0}
 JNI: Unknown generic array type '
 JNI: Unknown field type '
 JNI: Unknown return type '
@@ -17926,6 +18172,9 @@ hasNext
 No IComparable or IComparable<{0}> interface found.
 [SerializeField]
 {0}の参照が切れています
+[DataEntity]
+データ名={0}、キー名={1}が存在しません
+[DataEntity] データ名={0}、キー名={1}が存在しません
 AddEventHandlerComponent: 
 comparison
 Comparison threw an exception.
