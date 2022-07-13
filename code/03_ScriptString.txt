@@ -8525,6 +8525,10 @@ SERVANT_FRAME_PURCHASE_TITLE
 SERVANT_FRAME_PURCHASE_MESSAGE_START
 InfoDialog/CloseButton
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
+ClientApi/ErrorDialog
+errorTitle
+errorMessage
+logDetail
 ClientApi/OutputLog
 msg
 code
@@ -9977,6 +9981,8 @@ commonReleaseId
 animationId
 randomMissionMaxNum
 eventUiCushion
+replaceEventRewardBtnLogoInfo
+eventLogoId
 EventServantFatigue/{0}
 event/digging
 areaNum
@@ -11282,9 +11288,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.56.2
-8e22d19e160eb6fc095270140c0a58faa428089aedac1f704bc5e04e18a1b983
-20220630_14:47
+2.57.0
+fbd30a4dff7875804106398c63e19929f76864f004e5d0f897a2e2721dee830d
+20220707_11:57
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -11296,6 +11302,7 @@ RELEASE
 map_button_{0}
 map_button_{0}_c
 btn_bg_16
+MapBtnPrefab
 EntryAnim
 MapGimmick_
 gimmick_
@@ -14441,6 +14448,7 @@ event_digging
 event_reset_digging
 event_expedition_start
 event_expedition_finish
+client_api_error_dialog
 02
 03
 04
