@@ -6684,6 +6684,8 @@ NOTIFICATION_RP_RECOVER_MESSAGE
 rp_max
 NOTIFICATION_FATIGUE_RECOVER_MESSAGE
 no_fatigue
+NOTIFICATION_COMPLETE_OPERATION_MESSAGE
+no_operation_{0}
 NOTIFICATION_COMPLETE_HARVEST_MESSAGE
 no_harvest_{0}
 NOTIFICATION_COMPLETE_EXPEDITION_MESSAGE
@@ -9402,6 +9404,7 @@ mstEventCampaignRelease
 mstEventCombineCostume
 mstEventCombine
 mstEventConquestReward
+mstEventCooltimeReward
 mstEventDetail
 mstEventDiggingBlock
 mstEventDigging
@@ -9630,6 +9633,7 @@ userDeleteReservation
 userEquip
 userEventAlloutBattle
 userEventBoardGameToken
+userEventCooltimeReward
 userEventDeck
 userEventDigging
 userEventExpedition
@@ -10038,6 +10042,29 @@ EXPEDITION_COMP_BTN_LABEL
 event/expeditionStart
 expeditionIdx
 pieceIdx
+EVENT_AREA_IMPROVE_DECIDE_BUTTON
+EVENT_AREA_IMPROVE_CONFIRM_DIALOG_MESSAGE
+EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CAUTION
+EVENT_AREA_IMPROVE_CONFIRM_DIALOG_SUBTITLE
+EVENT_AREA_IMPROVE_CONFIRM_DIALOG_CONSUME_ITEM_TITLE
+EVENT_AREA_IMPROVE_CONFIRM_DIALOG_TITLE
+EVENT_AREA_IMPROVE_RESULT_DIALOG_TITLE
+EVENT_AREA_IMPROVE_LEVEL
+EVENT_AREA_IMPROVE_GET_POINT_RATE
+EVENT_AREA_IMPROVE_REWARD_UNIT_TIME_SEC
+EVENT_AREA_IMPROVE_REWARD_UNIT_TIME
+EVENT_AREA_IMPROVE_AFTER_TIME_MESSAGE
+EVENT_AREA_IMPROVE_GET_REWARD_NUM
+EVENT_AREA_IMPROVE_MAX_REWARD_NUM
+EVENT_AREA_IMPROVE_MAX_REWARD_TIME_TEXT
+EVENT_AREA_IMPROVE_REWARD_CHANGE_COLOR
+SpotCooltime_SpotData_
+SpotCooltime_ParkData_
+event_bg_80384
+EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT
+EVENT_POINT_COMMON_FORMAT
+EndSlideDown
+EndSlideIn
 EVENT_ASSIST_SKILL_LEVEL_FORMAT
 EVENT_ASSIST_SKILL_MAX_LEVEL_FORMAT
 box_status_side_01
@@ -10052,7 +10079,6 @@ Terminal/Info/TitleInfoChronologyDialogPrefab
 CHRONOLOGY_DIALOG_TITLE
 CHRONOLOGY_DIALOG_CLOSE
 chronology_line
-EVENT_POINT_COMMON_FORMAT
 EVENT_COMMAND_BUFF_POINT_COUNT_STOP
 EVENT_CONQUEST_GET_TITLE
 EVENT_CONQUEST_GET_MESSAGE
@@ -10130,6 +10156,9 @@ EVENT_RAID_TIME_OVER_TXT
 {0:D2}:{1:D2}:{2:D2}[-]
 [FFFF00]
 [FFFFFF]
+SPOT_COOLTIME_NOTICE_BUTTON_TITLE_
+RewardButtonBlink
+SPOT_COOLTIME_REWARD_BUTTON_TEXT
 baseObject
 event_itembase
 EVENT_SUBMARINE_RESOURCE_TITLE
@@ -10227,6 +10256,7 @@ event_ranking_
 event_goal_flag
 event_ranking_reward_txt
 event_support_txt
+event/receiveCooltimeReward
 event/resetDigging
 ANOTHER_PAY_ITEM_CONFIRM_WARN_MSG
 ANOTHER_PAY_INFO_TITLE
@@ -10339,6 +10369,7 @@ RewardType_
 EventTowerState_
 EventVoicePlayCount_{0}_{1}_{2}_{3}
 RecoveryIdx
+BulletinBoardMessageState
 MstMission
 ExtraMission
 LimitedMission
@@ -10350,6 +10381,7 @@ LotteryShopSkipState
 LastViewEventId_
 CompleteMission
 DailyMission
+SpotCooltimeNotification_
 eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}
 event/scanPanelMap
 mapId
@@ -10386,6 +10418,9 @@ btn_txt_Complete_notification
 recovery{0}
 effect_prefab
 effect_prefab_2
+MapGimmickEffect_SpotCooltimeInfo
+SpotCooltimeRewardDialog
+ar192
 notClearPriority
 ui_start_quest_id
 ui_start_quest_phase
@@ -10990,6 +11025,7 @@ InfoWindow/CloseBtn
 overwritePresentboxDetail
 overwriteImageIdInfo
 playEffect
+ITEM_POSSESSION_TITLE
 listframes_shadow
 listframes{0}_bg
 listframes{0}_txt_eventbonus
@@ -11069,6 +11105,7 @@ IconSizeKind-
 ExpUpDispKind-
 ExpUpDispType-
 SvtEquipEffectFilterNew-
+SvtEventBonusFilterNew-
 ChoiceSortOrder-
 PresentBoxSortFilterNew-
 PresentBoxRaritySortFilterNew-
@@ -11323,9 +11360,9 @@ INIT_CACHE_CLEAR_CONFIRM_CANCEL
 DataServerFolderName
 NETWORK_ERROR_SERVER_PARAMETER_MESSAGE
 SYSTEM
-2.58.0
-8c699be9b9f14886f615404cb8e5649128f6ac85fc3c80ef542a11e16d4d0dbd
-20220725_15:35
+2.59.0
+a44909ab9aff8f1269ea02e2d916a30bd41cbde144adfc5aeb4091d09724894f
+20220805_18:51
 Fgo_20150511_1
 Fgo_20180629_1
 com.aniplex.fategrandorder
@@ -14263,6 +14300,7 @@ overwriteEnemyInfos
 overwriteEnemyInfoNames
 clearGiftItemListDisplay
 WarBoardStartMovieName
+areaImprovementQuest
 overwriteEndScript
 movieFolder
 moviePlayType
@@ -14485,6 +14523,7 @@ event_reset_digging
 event_expedition_start
 event_expedition_finish
 client_api_error_dialog
+event_receive_cooltime_reward
 02
 03
 04
@@ -14717,6 +14756,9 @@ MapGimmickEffect_GappolyQuestArrivalPanel
 MapGimmickEffect_GappolyStopPanel
 MapGimmickEffect_EventQuestCooltime
 EventHarvestNoticeButton
+MapGimmickEffect_EventSpotCooltime
+EventSpotCooltimeNoticeButton
+EventSpotCooltimeRewardReceiveButton
 EVENT_RACE_PATH_LENGTH
 EVENT_BOARD_GAME_MAP_POSITION
 SEND_MES_END
@@ -14931,7 +14973,6 @@ PlayRaceResult
 Play 
 TempScriptActionRednerTexture
 through
-TempScriptActionRednerTextureSub
 captureScriptActionRednerTexture
 normal
 Custom/Sprite-ScriptActionRender
@@ -15165,6 +15206,10 @@ advActorHide
 advRelease
 subCameraOn
 subCameraOff
+subCameraMove
+subCameraRoll
+subCameraRollMove
+subCameraHome
 subCameraFilter
 subRenderFadein
 subRenderFadeinFSL
@@ -15179,11 +15224,13 @@ subRenderMoveFSSideL
 subRenderMoveFSSideR
 subRenderScale
 subRenderMoveScale
+subRenderDepth
 charaLayer
 tdelay
 screen
 twt
 checkOn
+mask
  -
 rtime 
 nameInput
@@ -15201,7 +15248,6 @@ trueRoute
 badRoute
 masterMale
 masterFemale
-mask
 switchCase2
 menu2
 rtime
@@ -15237,6 +15283,7 @@ startEnd
 startFade
 startFade2
 load2
+subCamera
 x-small
 [align]
 [align center]
@@ -15246,7 +15293,9 @@ noicon
 OnCrossFadeEndScene
 Talk/bit_queststart
 EndExecuteCamera
+EndExecuteSubCamera
 EndExecuteCameraRoll
+EndExecuteSubCameraRoll
 full
 vertical
 verticalUp
@@ -15305,7 +15354,6 @@ inside
 outside
  is not found
 QuestMessageAdd
-ScriptRenderSub
 [#
 ScriptActionEncrypt/
 TalkResume
@@ -15351,6 +15399,9 @@ SCRIPT_ACTION_SKIP_CONFIRM_EXIT
 Window/NormalBase/CancelButton
 Window/ExitBase/CancelButton
 SUMMON_OPEN_FRIENDQUEST_INFO
+ScriptRenderSub
+TempRenderTexture
+#A
 [{0:D4}] {1}
 indicator
 sy1
@@ -15568,6 +15619,10 @@ SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_MAX_FRAME
 SERVANT_EQUIP_FRAME_PURCHASE_MESSAGE_INFO_NONE
 svtEquip/set
 equipInfo
+SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_TITLE
+SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_EXPLANATION
+SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY
+SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY
 img_commonbg_02
 img_frames_nodata
 img_frames_nodata3
@@ -15602,6 +15657,7 @@ SHORT_SERVANT_COMMAND_CODE_SELL
 SHORT_SERVANT_QUEST
 SHORT_SERVANT_SUMMON
 SHORT_SERVANT_EXPEDITION
+SHORT_SERVANT_AREA_IMPROVE
 SHORT_COMMAND_CODE_FRAME_QUEST
 SHORT_SERVANT_FRAME_QUEST
 FRIEND_GACHA_ADD_LIMIT
@@ -16364,6 +16420,22 @@ SPEND_LIMIT_MESSAGE
 SPEND_LIMIT_CLOSE
 EVENT_COOLTIME_REMAIN
 cooltime_base
+SPOT_COOLTIME_NONE
+SPOT_COOLTIME_REMAIN
+spot_info_window
+spot_info_gauge_base
+spot_info_gauge
+SPOT_COOLTIME_REWARD_COUNT_QP
+SPOT_COOLTIME_REWARD_COUNT_QP_MAX
+SPOT_COOLTIME_REWARD_COUNT
+SPOT_COOLTIME_REWARD_COUNT_MAX
+SPOT_COOLTIME_REWARD_VIEW_CHANGE
+SPOT_COOLTIME_REWARD_DIALOG_CLOSE
+SPOT_COOLTIME_REWARD_DIALOG_GET_QP_TITLE
+SPOT_COOLTIME_REWARD_DIALOG_TOTAL_QP_TITLE
+SPOT_COOLTIME_REWARD_DIALOG_TITLE
+SPOT_COOLTIME_REWARD_DIALOG_GET_POINT_FORMAT
+SPOT_COOLTIME_REWARD_DIALOG_TOTAL_POINT_FORMAT
 StateLargeIn_End
 StateLargeOut_End
 stopRaidDeadTime
@@ -16987,6 +17059,8 @@ img_txt_main_interlude
 img_txt_holygrailforging
 img_title_header_80382
 TitleInfoEventUIPrefab
+TitleInfoAreaImproveConfirmDialogPrefab
+TitleInfoAreaImproveResultDialogPrefab
 TitleInfoEventConquestGetPrefab
 bit_dedicate_reward
 TitleInfoHarvestCautionDialogPrefab
