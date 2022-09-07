@@ -32,22 +32,20 @@ def main(apk_path: str, il2cppdumper: str) -> None:
         string_literal = fp.readlines()
 
     date = None
-    version = None
 
     for i, line in enumerate(string_literal):
-        if line.startswith("2022"):
+        if line.startswith("2022") and ":" in line:
             date = line.strip()
             date = f"{date[:4]}_{date[4:6]}_{date[6:]}"
-            version = string_literal[i - 2].strip()
             break
 
-    if date is not None and version is not None:
+    if date is not None:
         repo = Repo(parent_folder)
         diff = repo.index.diff(None)
 
         if diff:
             repo.index.add([diff_file.a_path for diff_file in diff])
-            commit_message = f"JP {version} {date}"
+            commit_message = f"JP {date}"
             print(commit_message)
             repo.index.commit(commit_message)
             repo.remotes[0].push()

@@ -31,7 +31,9 @@ def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
                 )
                 output_lines.append(cleaned_line)
 
-    with open(output_path / "01_clean_dump.cs", "w", encoding="utf-8", newline="") as fp:
+    with open(
+        output_path / "01_clean_dump.cs", "w", encoding="utf-8", newline=""
+    ) as fp:
         fp.writelines(output_lines)
 
     with open(input_path / "stringliteral.json", "r", encoding="utf-8") as fp:
@@ -39,7 +41,13 @@ def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
     with open(
         output_path / "02_stringliteral.txt", "w", encoding="utf-8", newline=""
     ) as fp:
-        fp.writelines([item["value"] + "\n" for item in literal_lines])
+        fp.writelines(
+            [
+                item["value"] + "\n"
+                for item in literal_lines
+                if "\u0000" not in item["value"]
+            ]
+        )
 
     with open(input_path / "script.json", "r", encoding="utf-8") as fp:
         script = json.load(fp)
@@ -79,7 +87,6 @@ def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
         "GameObjectExtensions",
         "BetterList",
         "NGUITools",
-        "ContinuousGestureRecognizer",
         "UITweener",
         "CFSM",
     }
@@ -97,7 +104,11 @@ def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
         for item in script["ScriptMethod"]
         if not bad_method(item["Name"])
     ]
-    ScriptString = [item["Value"] + "\n" for item in script["ScriptString"]]
+    ScriptString = [
+        item["Value"] + "\n"
+        for item in script["ScriptString"]
+        if "\u0000" not in item["Value"]
+    ]
     ScriptMetadataMethod = [
         item["Name"].replace("Method$", "") + "\n"
         for item in script["ScriptMetadataMethod"]
