@@ -1986,7 +1986,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.62.1
+2.63.0
 2.7
 2.8
 2.9
@@ -1998,7 +1998,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20221013_14:59
+20221020_18:31
 21.1
 21.10
 21.2
@@ -2061,13 +2061,13 @@ file crc (
 350
 36DF0AAFD8B8D7597CA10520D04B
 37
-37571f5abf22664d59c6753044aaf3516dbb63d6019198ebb40e7248dfae9df3
 38
 3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CADC083E67984050B75EBAE5DD2809BD638016F723
 3EE30B568FBAB0F883CCEBD46D3F3BB8A2A73513F5EB79DA66190EB085FFA9F492F375A97D860EB4
 3FB32C9B73134D0B2E77506660EDBD484CA7B18F21EF205407F4793A1A0BA12510DBC15077BE463FFF4FED4AAC0BB555BE3A6C1B0C6B47B1BC3773BF7E8C6F62901228F8C28CBB18A55AE31341000A650196F931C77A57F2DDF463E5E9EC144B777DE62AAAB8A8628AC376D282D6ED3864E67982428EBC831D14348F6F2F9193B5045AF2767164E1DFC967C1FB3F2E55A4BD1BFFE83B9C80D052B985D182EA0ADB2A3B7313D3FE14C8484B1E052588B9B7D2BBD2DF016199ECD06E1557CD0915B3353BBB64E0EC377FD028370DF92B52C7891428CDC67EB6184B523D1DB246C32F63078490F00EF8D647D148D47954515E2327CFEF98C582664B4C0F6CC41659
 3FFFFFFF7FFFFFFFBE0024720613B5A3
 3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC98CDBA46506AB004C33A9FF5147502CC8EDA9E7A769A12694623CEF47F023ED
+3c467996c6dff09621b47fae01ef6ce344a09d628d078cf04e6671220effe127
 3d84f26c12238d7b4f3d516613c1759033b1a5800175d0b1
 3des
 3rd Attack
@@ -2944,6 +2944,7 @@ Algorithm
 Algorithm identifier of public key of trust anchor could not be read.
 Alias exists
 All
+All channels deleted: 
 All elements of list must be of type 
 All elements of set must be of type 
 All elements of set must be of type string.
@@ -3995,6 +3996,7 @@ BonusKind2Id-
 BonusKindId-
 Boolean
 Boolean(
+BoostSupportRequestMenuPrefab
 Boot already accepted
 Bosnian (Cyrillic, Bosnia and Herzegovina)
 Bosnian (Latin, Bosnia and Herzegovina)
@@ -5130,8 +5132,11 @@ Changing the IsKeepAlive property while processing the request is not supported.
 Changing the StreamFragmentSize property while processing the request is not supported.
 Channel
 Channel 
+Channel created: 
 Channel template '
+Channel was not created: 
 Channel {0} is not securable while ensureSecurity is specified as true
+Channels were not deleted: 
 ChapterClear
 ChapterProgress
 ChapterStart
@@ -6617,6 +6622,7 @@ DelayEnd
 DelayLoadStart
 Delegate
 Delete pending
+DeleteNotificationChannel
 DeleteRule
 Deleted row information cannot be accessed through the row.
 Deleted rows inaccessible.
@@ -7156,7 +7162,6 @@ EVENT_SHOP_BANNER_LOCKED_MSG
 EVENT_SHOP_RECEIVED_ITEM_AFTER
 EVENT_SHOP_RECEIVED_ITEM_BEFORE
 EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT
-EVENT_SUBMARINE_DO_SCAN_MESSAGE
 EVENT_SUBMARINE_DO_SCAN_TITLE
 EVENT_SUBMARINE_GAUGE_CURRENT
 EVENT_SUBMARINE_NEW_SCAN_ADDED_MESSAGE_LOWER
@@ -8439,6 +8444,7 @@ GENERIC_ERROR_MESSAGE
 GET
 GET_ACTIVITIES
 GET_EVENT_POINT_AFTER_DIALOG_MESSAGE
+GET_EVENT_POINT_AFTER_DIALOG_MESSAGE_PANEL_MAP
 GET_EXP_INFO
 GET_FRIEND_POINT_AT_LIMIT
 GET_FRIEND_POINT_CAPTION_EVENT
@@ -8586,6 +8592,7 @@ GetNextAvailable - activeConnections({0}) >= HTTPManager.MaxConnectionPerServer(
 GetNextAvailable - creating new connection, key: {0} 
 GetNextAvailable - returning with connection. state: {0}, CanProcessMultiple: {1}
 GetNextAvailable - waiting for protocol support message. activeConnections: {0}, ProtocolSupport: {1} 
+GetNotificationChannelIds
 GetParentRow requires a row whose Table is {0}, but the specified row's Table is {1}.
 GetProductList
 GetProperties
@@ -12935,6 +12942,7 @@ PlayEventBoardGameArrivalEffectAuto
 PlayGacha 
 PlayHpCut
 PlayHpNameAlpha
+PlayLastMapStartedAnimation
 PlayMakerGUI
 PlayMakerGlobals
 PlayMakerLegacyNetworking
@@ -13974,6 +13982,7 @@ SAME_SERVANT
 SAME_SVTEQUIP_COMBINE
 SAMPLERANGE_{0}
 SAVEKEY_
+SAVEKEY_ClearEventQuestIds
 SAVEKEY_ConnectMarkAnimationId
 SAVEKEY_ConnectMarkEventId
 SAVEKEY_EventRaidDefeatedEffectInfo
@@ -16548,6 +16557,8 @@ The actual length is not equal to the specified length.
 The added or subtracted value results in an un-representable DateTime.
 The algorithm group '{0}' is invalid.
 The algorithm name '{0}' is invalid.
+The app was resumed by clicking a notification, callback.Data = 
+The app was started by clicking a notification, callback.Data = 
 The argument cannot be converted to a string.
 The argument must be derived from {0}.
 The argument to function '{0}' in '{1}' cannot be converted to a node-set.
@@ -18976,6 +18987,7 @@ _keyPairArray
 _keyPairContainer
 _keyPairExported
 _l
+_last
 _level
 _loop
 _m
@@ -19434,7 +19446,6 @@ baseDigest
 baseDigest output not large enough to support length
 baseInputStream
 baseName: 
-baseObject
 baseOutputStream
 basePath
 baseURL
@@ -21046,6 +21057,7 @@ ef_2tab_open
 ef_3tab_open
 ef_4tab_open
 ef_additem
+ef_animation_skip
 ef_anning
 ef_anning1
 ef_anning2
@@ -21076,10 +21088,6 @@ ef_factory_flash
 ef_factory_flash1
 ef_factory_open
 ef_factory_open1
-ef_goalIcon
-ef_goalIcon_end
-ef_goalIcon_loop
-ef_goalIcon_start
 ef_hit01_M
 ef_hit_slash01_M
 ef_hit_slash02_M
@@ -21459,7 +21467,7 @@ event_progress_point
 event_progressgauge
 event_progressgauge_back
 event_progressgauge_front
-event_progressgaugebg_80305
+event_progressgaugebg_80393
 event_progressicon
 event_raid_defeat_count_back
 event_raid_defeat_count_frame
@@ -22454,6 +22462,7 @@ img_index_02
 img_index_03
 img_line_summon
 img_list_atk
+img_list_bg02
 img_list_bg04
 img_list_cost
 img_list_costume_num
