@@ -23,10 +23,6 @@
 
 <Resouce>
 
-
-※このダイアログはデバッグパネルの
-Assertion:On/Off で非表示にすることができます
-
  
 
  
@@ -481,6 +477,9 @@ Content-Type:
 "userID":"
 "{0}"
 "{0}": 
+"{0}": "{1}", 
+"{0}":{1}
+"{0}":{1},
 "}
 "}}]}
 #
@@ -1213,7 +1212,6 @@ file crc (
 /KCTR
 /Management/CommonUI/UI Root/BgCamera
 /Management/Script
-/McEffect
 /OAEPPadding
 /OCB
 /OFB
@@ -1986,7 +1984,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.63.0
+2.64.0
 2.7
 2.8
 2.9
@@ -1998,7 +1996,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20221020_18:31
+20221104_13:02
 21.1
 21.10
 21.2
@@ -2027,6 +2025,7 @@ file crc (
 2^70 byte limit per IV; Change IV
 2a
 2b
+2bba0607-14d5-4afe-b9a0-e0210bf20c40
 2nd Attack
 2pC0bIYM
 2y
@@ -2067,13 +2066,13 @@ file crc (
 3FB32C9B73134D0B2E77506660EDBD484CA7B18F21EF205407F4793A1A0BA12510DBC15077BE463FFF4FED4AAC0BB555BE3A6C1B0C6B47B1BC3773BF7E8C6F62901228F8C28CBB18A55AE31341000A650196F931C77A57F2DDF463E5E9EC144B777DE62AAAB8A8628AC376D282D6ED3864E67982428EBC831D14348F6F2F9193B5045AF2767164E1DFC967C1FB3F2E55A4BD1BFFE83B9C80D052B985D182EA0ADB2A3B7313D3FE14C8484B1E052588B9B7D2BBD2DF016199ECD06E1557CD0915B3353BBB64E0EC377FD028370DF92B52C7891428CDC67EB6184B523D1DB246C32F63078490F00EF8D647D148D47954515E2327CFEF98C582664B4C0F6CC41659
 3FFFFFFF7FFFFFFFBE0024720613B5A3
 3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC98CDBA46506AB004C33A9FF5147502CC8EDA9E7A769A12694623CEF47F023ED
-3c467996c6dff09621b47fae01ef6ce344a09d628d078cf04e6671220effe127
 3d84f26c12238d7b4f3d516613c1759033b1a5800175d0b1
 3des
 3rd Attack
 4
 4,ENCRYPTED
 4.0.1
+4.0.30319.17020
 4.1
 4.4.0
 40
@@ -2146,6 +2145,7 @@ file crc (
 6.15
 6.3
 6.9
+6.9.3
 60dcd2104c4cbc0be6eeefc2bdd610739ec34e317f9b33046c9e4788
 6127C24C05F38A0AAAF65C0EF02C
 617fab6832576cbbfed50d99f0249c3fee58b94ba0038c7ae84c8c832f2c
@@ -2750,6 +2750,7 @@ AGE_VEIFICATION_TITLE
 AGE_VEIFICATION_TYPE1
 AGE_VEIFICATION_TYPE2
 AGE_VEIFICATION_TYPE3
+ALREADY_FETCHED
 ALREADY_FOLLOWED_MESSAGE
 ALREADY_FOLLOWED_TITLE
 AM
@@ -2898,6 +2899,7 @@ Actual value was {0}.
 ActualValue
 AdManager Initialize error.(Start - Adjust) message=
 AdManager Initialize error.(Start - Metaps) message=
+AdManager Initialize error.(Start - Repro) message=
 AdManager Initialize error.(reboot) message=
 Add
 AddCustomHeader
@@ -2939,7 +2941,6 @@ AgeVerificationType
 Agreement algorithm not initialised
 Albanian
 Albanian (Albania)
-AlertDialog
 Algorithm 
 Algorithm identifier of public key of trust anchor could not be read.
 Alias exists
@@ -2950,6 +2951,7 @@ All elements of set must be of type
 All elements of set must be of type string.
 All indexes must be of type Int32.
 All nodes not available
+All notifications
 All particles in the {particles} of the base particle which are not mapped to by any particle in the {particles} of the derived particle should be emptiable - All:All,Sequence:Sequence -- Recurse Rule 2 / Choice:Choice -- RecurseLax.
 All schemas in the set should be successfully preprocessed prior to compilation.
 All the lists are null or empty.
@@ -4138,6 +4140,7 @@ CHANGE_SKILL_TITLE
 CHANGE_SUPPORT
 CHANGE_SVT
 CHANGE_TITLE
+CHANNEL_ALL
 CHANNEL_NOTIFICATION_RECOVER
 CHAPTER2_EPILOGUE_WAR_ID
 CHAPTER2_PROLOGUE_WAR_ID
@@ -4393,6 +4396,7 @@ COMMON_COUNT_OPERATOR_PLUS
 COMMON_EQUIP_USED
 COMMON_FATIGURE_RECOVERY
 COMMON_NO_ENTRY
+COMMON_NUM_FORMAT
 COMPENSATION_ITEM_MESSAGE_
 COMPLETE_MISSION_ACTION_SUCCESS
 COMPLETE_MISSION_END
@@ -5157,7 +5161,6 @@ Check the channel in your app settings!
 CheckCharacters
 CheckNum : 
 CheckOutputDeviceType
-CheckServices
 CheckedConvert
 Checkmark
 Checksum inside ciphertext is corrupted
@@ -5415,7 +5418,6 @@ Conditional sections must specify the keyword 'IGNORE' or 'INCLUDE'.
 Config
 Configuration
 Configurations
-ConfirmDialog
 ConfirmWindow/CancelButton
 ConfirmWindow/CloseButton
 ConfirmWindow/ConfirmBntInfo/CancelButton
@@ -5808,6 +5810,8 @@ Custom/Sprite-ScriptActionFigureNormal
 Custom/Sprite-ScriptActionFigureNormal2
 Custom/Sprite-ScriptActionFigureSilhouette
 Custom/Sprite-ScriptActionFigureSilhouette2
+Custom/Sprite-ScriptActionFigureSubBlur
+Custom/Sprite-ScriptActionFigureSubBlur2
 Custom/Sprite-ScriptActionFigureSummon
 Custom/Sprite-ScriptActionFigureSummon2
 Custom/Sprite-ScriptActionFigureWipe
@@ -5939,6 +5943,7 @@ DIGGING_TOTAL_EVENT_POINT_NUM
 DIN_66003
 DISABLE
 DISABLE_FRIENDSHIP_EXCEED
+DISABLE_SERVANT_EFFECT_FILTER
 DISCONNECTED FROM SERVER
 DISPLAY_REMAINING_TURN
 DISP_SKLL_LV
@@ -6672,7 +6677,6 @@ Device not partitioned
 Device reinitialization needed
 Device removed
 Device requires cleaning
-DialogManager
 DiceCounter
 Dictionary cannot be null.
 Did not get IInstallationId provider from Unity Services Core.
@@ -6725,7 +6729,6 @@ DispObject
 Display
 DisplayName
 Dispose
-DissmissDialog
 DistIndex
 Distortion
 Distribution point contains cRLIssuer field but CRL is not indirect.
@@ -7501,8 +7504,6 @@ Entity is not found. bankShopId=
 Entity replacement text must nest properly within markup declarations.
 Entry point was not found.
 EntryAnim
-EntryRegister
-EntryService
 Enum
 Enum name '{0}' already exists on enum '{1}'.
 Enum underlying type and the object must be same type or object must be a String. Type passed in was '{0}'; the enum underlying type was '{1}'.
@@ -7840,7 +7841,6 @@ F39UThNh
 F5
 F518AA8781A8DF278ABA4E7D64B7CB9D49462353
 F5CE40D95B5EB899ABBCCFF5911CB8577939804D6527378B8C108C3D2090FF9BE18E2D33E3021ED2EF32D85822423B6304F726AA854BAE07D0396E9A9ADDC40F
-FACEBOOK
 FADE_IN
 FADE_OUT
 FAILED TO CONNECT
@@ -7939,7 +7939,6 @@ FOLLOWER_REFRESH_RESET_TIME
 FOLLOWER_SELECT_BACK_TITLE
 FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME
 FOLLOWER_SELECT_BACK_TO_QUEST_NO_AP_CONSUME_AP0
-FOLLOWER_SELECT_EXPLANATION
 FOLLOWER_SELECT_EXPLANATION2
 FOLLOWER_SELECT_FRIEND_CHOCO_AVAILABLE_COLOR
 FOLLOWER_SELECT_FRIEND_CHOCO_DEFAULT_COLOR
@@ -7955,6 +7954,7 @@ FOLLOWER_SELECT_QUEST_RESTRICTION_SERVANT_NUM_MAIN_TITLE
 FOLLOWER_SELECT_QUEST_RESTRICTION_SUPPORT_ONLY_TITLE
 FOLLOWER_SELECT_QUEST_RESTRICTION_TITLE
 FOLLOWER_SELECT_QUEST_RESTRICTION_UNIEQU_SERVANT_TITLE
+FOLLOWER_SELECT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY_TITLE
 FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING
 FOLLOWER_SELECT_QUEST_RESTRICTION_WARNING2
 FOLLOWER_SELECT_RECOMMENDED_TEXT
@@ -8399,15 +8399,10 @@ FullName
 FullPath
 FullScreen/FSUtilityList
 FullTrust
-FuncA
-FuncB
-FuncC
-FuncSA
 Function '{0}' in '{1}' has an invalid number of arguments.
 Function does not accept floating point Not-a-Number values.
 Function failed
 Function not called
-FutureBattleSettings
 G
 G2
 G=
@@ -8537,6 +8532,7 @@ GameObject requires a RigidBody2D or Collider2D component!
 GameOrderId
 Gateway Timeout
 GaussianBlur
+GaussianBlurThrough
 GenGuid()
 GenUniqueId()
 Gender
@@ -8588,6 +8584,8 @@ GetMarshalledDomainObjRef
 GetMatch
 GetMember
 GetNativeParameterId failed.
+GetNewsFeeds: Arguments limit or offsetID must be a positive value.
+GetNewsFeeds: Invalid value was set for `campaignType`.
 GetNextAvailable - activeConnections({0}) >= HTTPManager.MaxConnectionPerServer({1})
 GetNextAvailable - creating new connection, key: {0} 
 GetNextAvailable - returning with connection. state: {0}, CanProcessMultiple: {1}
@@ -8599,7 +8597,6 @@ GetProperties
 GetPurchaseInfo
 GetRayIntersectionAll
 GetRayIntersectionNonAlloc
-GetRegisterId
 GetResponse
 GetRootCacheFolder
 GetRuleCache
@@ -9003,6 +9000,8 @@ IIf
 IL2CPP
 IMPOSSIBLE_LIMITUP_COLOR
 INCREMENT_SVTLEVEL
+INDIVIDUALITIE_COUNT_ABOVE
+INDIVIDUALITIE_COUNT_BELOW
 INDIVIDUALITY_IS_SUPPORT
 INF
 INFO
@@ -9274,6 +9273,7 @@ In
 InAddrErrors
 InAddrMaskReps
 InAddrMasks
+InAppMessage
 InDatagrams
 InDelivers
 InDestUnreachs
@@ -10054,7 +10054,6 @@ IsPrivateUse
 IsPrivateUseArea
 IsRankUp
 IsReBootCacheClearKey
-IsRegisterTaskBusy
 IsRunic
 IsSinhala
 IsSkipStop
@@ -10332,7 +10331,6 @@ LIMIT_MATERIAL_SHOP_MAX_ALERT
 LIMIT_OVER
 LIMIT_OVER_MATERIAL_INFO_MSG
 LIMIT_UP_MATERIAL_INFO_MSG
-LINE
 LIST
 LM cross encryption required
 LOAD COMPLETE
@@ -10418,7 +10416,6 @@ Late bound operations cannot be performed on types or methods for which Contains
 LateUpdate
 Latvian
 Latvian (Latvia)
-LaunchActivity
 LaunchGooglePlay
 Layer.
 Layout
@@ -11010,7 +11007,6 @@ Message Digest
 Message exceeds max size
 Message sync only
 Message too long
-MessageDialog
 MessageShake/LogMark/BackLogButton
 MessageType
 Meta expansion too long
@@ -11160,6 +11156,7 @@ More than one key matching '{0}' was found in the ExpandoObject.
 More than one method '{0}' on type '{1}' is compatible with the supplied arguments.
 More writes
 MotionBlur
+MotionBlurThrough
 Mouse
 Mouse ScrollWheel
 Mouse X
@@ -11281,7 +11278,6 @@ NGUI State:
 NLST
 NMTOKEN
 NMTOKENS
-NO
 NOBLEINFO_NP_PER
 NOBLE_ANIM
 NOBLE_ANIM_PLAYER
@@ -11839,11 +11835,8 @@ OPEN_EVENT_QUEST_NAME_LIMIT_UP
 OPEN_EVENT_QUEST_TITLE_LIMIT_UP
 OPEN_HERO_QUEST_TITLE
 OPEN_ITEM
-OPEN_LIMIT_UNSEALED_QUEST_NAME
 OPEN_LIMIT_UNSEALED_QUEST_NAME_LIMIT_UP
-OPEN_LIMIT_UNSEALED_QUEST_TITLE
 OPEN_LIMIT_UNSEALED_QUEST_TITLE_LIMIT_UP
-OPEN_MAIN_QUEST_TITLE
 OPEN_MAIN_QUEST_TITLE_LIMIT_UP
 OPEN_MAIN_SCENARIO_TITLE
 OPEN_PRESENT
@@ -12501,6 +12494,7 @@ PARTY_ORGANIZATION_RESTRICTION_HELP_MY_SERVANT_NUM
 PARTY_ORGANIZATION_RESTRICTION_HELP_SERVANT_NUM
 PARTY_ORGANIZATION_RESTRICTION_HELP_TITLE
 PARTY_ORGANIZATION_RESTRICTION_HELP_TOTAL_COST_TITLE
+PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_INDIVIDUALITY_TITLE
 PARTY_ORGANIZATION_RESTRICTION_HELP_UNIQUE_SVT_ONLY_TITLE
 PARTY_ORGANIZATION_SERVANT_CHANGE_EXPLANATION
 PARTY_ORGANIZATION_SERVANT_EVENT_JOIN
@@ -12518,6 +12512,7 @@ PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIEQU_SERVANT
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_UNIQUE_INDIVIDUALITY
 PARTY_ORGANIZATION_SERVANT_REMOVE_LEADER
 PARTY_ORGANIZATION_SERVANT_SAME_SERVANT
 PARTY_ORGANIZATION_SERVANT_SELECT_EXPLANATION_CHOICE
@@ -13177,6 +13172,7 @@ PurchaseResult NotFound.
 PurchaseState is UNSPECIFIED_STATE, no more details exists {M: GPUL.OPO}
 Purchasing product asychronously: '{0}'
 Purple
+PushNotification
 Q
 Q value
 QA
@@ -14105,6 +14101,8 @@ SERVANT_COMMANDCODE_SELL_MSG_START
 SERVANT_COMMAND_CODE_SELLE_MSG_ERROR
 SERVANT_COMMAND_CODE_SELL_MSG_NO_SELECT
 SERVANT_COMMAND_CODE_SELL_REQUEST_RARITY_MSG
+SERVANT_EFFECT_FILTER_GROUP_
+SERVANT_EFFECT_FILTER_TITLE
 SERVANT_EMPTY
 SERVANT_EQUIP_EFFECT_FILTER_BUTTON_DESELECT_ALL
 SERVANT_EQUIP_EFFECT_FILTER_BUTTON_SELECT_ALL
@@ -14284,6 +14282,8 @@ SERVANT_SORT_FILTER_RARITY_SSRARE
 SERVANT_SORT_FILTER_RARITY_UNCOMMON
 SERVANT_SORT_FILTER_RESULT_EMPTY
 SERVANT_SORT_FILTER_SAME_CLASS
+SERVANT_SORT_FILTER_SERVANT_EFFECT_SKILL
+SERVANT_SORT_FILTER_SERVANT_EFFECT_TREASURE_DEVICE
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_EXPLANATION
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY
@@ -14441,7 +14441,6 @@ SERVER_CERTIFICATE_ERROR_TITLE
 SERVER_SETTING_INPUT_CANCEL
 SERVER_SETTING_INPUT_OK
 SERVICE_NOT_FOUND
-SERVICE_OK
 SET
 SET-COOKIE
 SETUP_DONE
@@ -14687,9 +14686,14 @@ SHOP_ACHIEVEMENT_PAID_EXCHANGE_CONDITIONS
 SHOP_AFTER_ACTION_DIALOG_CLOSE
 SHOP_AFTER_ACTION_DIALOG_MAP
 SHOP_ALREADY_GET
+SHOP_BULK_WINDOW_AP_CARRYOVER_COLOR
 SHOP_BULK_WINDOW_AP_KIND
+SHOP_BULK_WINDOW_COMMON_CONSUME_CONFIRM_WARNING
+SHOP_BULK_WINDOW_CONNECT_WARDS_CHAR
+SHOP_BULK_WINDOW_COUNT_FORMAT
 SHOP_BULK_WINDOW_DESTINATION
 SHOP_BULK_WINDOW_DESTINATION_KIND
+SHOP_BULK_WINDOW_DISABLE_ITEM_COLOR
 SHOP_BULK_WINDOW_MAX_LABEL
 SHOP_BULK_WINDOW_MIN_LABEL
 SHOP_BULK_WINDOW_ORIGIN
@@ -15016,6 +15020,7 @@ SUBMARINE_OPEN_PANEL_CAMERA_DURATION
 SUBMARINE_SCAN_RANGE_TO_HOME_SPOT_CAMERA_DURATION
 SUBMARINE_VIEW_SCAN_RANGE_CAMERA_DURATION
 SUB_PT_BUFF_INDIVI
+SUCCESS
 SUMMON_APPEND_END
 SUMMON_AUTOSALE_BUTTON
 SUMMON_AUTOSALE_EQUIP_TXT
@@ -15303,7 +15308,6 @@ SendClientKeyExchangeMessage
 SendFinishedMessage
 SendMessage
 SendMessage: 
-SendSNSMessage
 SendSupplementalDataMessage
 Sending 
 Sending DELETE request
@@ -15436,13 +15440,11 @@ SetBannerCenter
 SetBaseTransform
 SetBasicAuthInfo
 SetClearAlpha
-SetClipBoardText
 SetDefault
 SetDirty
 SetEnableTime
 SetEventBoardQuestArrivalPanel
 SetIssuerUniqueId()
-SetLabel
 SetLength
 SetMainColor
 SetMargins
@@ -15497,11 +15499,7 @@ ShouldSerialize result for property '{0}' on {1}: {2}
 ShoveltAnimation
 ShoveltAnimation_skip
 ShowNobleInfo
-ShowSelectDialog
-ShowSelectTitleDialog
 ShowStateWarBoardEnemyEquip
-ShowSubmitDialog
-ShowSubmitTitleDialog
 Shutdown cluster
 Shutdown in progress
 Shutdown initiated!
@@ -16062,6 +16060,7 @@ THREEFISH-512
 TICKET_NUM
 TICKET_SUMMON_DETAIL
 TIGER
+TIMEOUT_REACHED
 TIME_BEFORE_DAYS
 TIME_BEFORE_HOURS
 TIME_BEFORE_MINUTES
@@ -16090,6 +16089,7 @@ TIME_REST6_TIMEOVER
 TIME_REST_ACHIVE
 TIME_REST_DAYS
 TIME_REST_EVENTREWARD
+TIME_REST_EVENT_BOARD_CAMPAIGN
 TIME_REST_HOURS
 TIME_REST_MINUTES
 TIME_REST_NONE
@@ -16236,7 +16236,6 @@ TUTORIAL_QUEST_ID4_PHASE
 TUTORIAL_SKILL
 TUTORIAL_SUPPORT_QUEST_ID
 TUTORIAL_SUPPORT_QUEST_PHASE
-TWITTER
 TWOFISH
 TYPE
 TYPE_NOT_FOUND
@@ -16364,7 +16363,6 @@ Test/card{0:d3}
 Test1
 Test2
 Test4
-TestWebView
 Text
 TextField
 TextInfo - 
@@ -17160,6 +17158,7 @@ Threefish engine not initialised
 Threefish key must be same size as block (
 Threefish tweak must be 
 Threefish-
+Through
 Throw
 Thu
 Thursday
@@ -18248,6 +18247,7 @@ We are trying to delete an Event that doesn't belong to this Timeline, from USTi
 We've requested an event that doesn't have a USEventBase component : 
 WebClient does not support concurrent I/O operations.
 WebGL
+WebMessage
 WebResponseStream.Initialize()
 WebView/
 WebView:
@@ -18435,7 +18435,6 @@ XmlTextAttribute can only be applied once in a class
 XmlWriterSettings.{0} can contain only valid XML text content characters when XmlWriterSettings.CheckCharacters is true. {1}
 XmlWriterSettings.{0} can contain only valid XML white space characters when XmlWriterSettings.CheckCharacters and XmlWriterSettings.NewLineOnAttributes are true.
 Y
-YES
 YYYYMMDD
 Yakut (Russia)
 Year must be between 1 and 9999.
@@ -18998,6 +18997,7 @@ _mod_fingerprint
 _movie
 _oneValue
 _org_
+_passRuntimeValues
 _platform
 _player
 _ptr
@@ -19064,6 +19064,7 @@ action001
 action002
 actionAfterCallback
 actionId: 
+activateFetched
 activated
 activationContext
 activeDeckId
@@ -19295,6 +19296,7 @@ arrow
 arts
 as
 as-IN
+asString
 ascensionAfterDialogId
 ascii
 asn1
@@ -19315,6 +19317,7 @@ assistIdWeight
 assistIds
 assist_icon_
 assist_icon_0
+assumedEffectId
 asyncResult
 asyncResult is null or was not obtained by calling BeginRead.
 asyncResult is null or was not obtained by calling BeginWrite.
@@ -19335,7 +19338,6 @@ attempt to get non-octet aligned data from BIT STRING
 attempt to increase counter past 2^32.
 attempt to insert non UTF8 STRING into PkiFreeText
 attempt to process message to long for cipher
-attest
 attribute
 attributeFormDefault
 attributeGroup
@@ -19371,6 +19373,7 @@ az-Latn-AZ
 az-cyrl
 az-latn
 b
+b0baaab5d7aa30eb86b62f199c4dbdb2fb38c68e4906c7b4e57db26b0db25764
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
 b8adf1378a6eb73409fa6c9c637ba7f5
@@ -19551,6 +19554,9 @@ bitCount
 bitLength
 bitLength < 2
 bitNum out of range
+bit_1stbonus_a
+bit_1stbonus_b
+bit_1stbonus_q
 bit_battlefinish01
 bit_battlefinish02_{0:D2}
 bit_battlestart_3_{0}
@@ -19563,6 +19569,8 @@ bit_board_disappear4
 bit_buddy_rankup
 bit_buddy_result
 bit_coingrail_get
+bit_com_grand_m
+bit_com_trinity_m
 bit_costume_get
 bit_dedicate_left_item_flash_1
 bit_dedicate_left_item_flash_2
@@ -20022,6 +20030,7 @@ cameraRoll
 cameraRollMove
 campaign
 campaignItemId
+campaignType
 can only use SHA-1 for generating FIPS 186-2 parameters
 can't convert extension
 can't decode certificate: 
@@ -20126,6 +20135,7 @@ card_statussync
 card_svt_flag
 card_txt_{0}
 case
+cast
 catch
 catch (
 catch({0}) [{1}->{2}]
@@ -20327,6 +20337,10 @@ cjkCHS
 cjkCHT
 cjkJA
 cjkKO
+ckIndvCountAbove
+ckIndvCountBelow
+ckOpCountIndividuality
+ckSelfCountIndividuality
 claim
 class
 class 
@@ -20592,6 +20606,7 @@ continue_promotional_purchases
 contract
 conversion
 conversionType
+convertJsonStringToMap
 converter
 converterType
 cookie
@@ -20888,6 +20903,7 @@ deleteNotificationChannel
 deleteState
 deleted
 delimiter
+deliveredAt
 dependencyComponent
 dependencyHash
 dependencyOptional
@@ -20924,12 +20940,12 @@ device.model
 device.name
 device.sdk
 device.type
+deviceID
 deviceInfo
 deviceModel
 deviceVolume
 dgram
 dialogMessage_{0}_{1}
-dialogOK
 diceType
 diceValue
 dictionary
@@ -20949,6 +20965,7 @@ digging_clear_img
 digging_txt_touchscreen
 digit
 digits
+disableInAppMessagesOnForegroundTransition
 disableSystemFadeStartBattle
 disableThirdPartySharing
 disableUniqueFieldMotion
@@ -21114,6 +21131,7 @@ ef_treasure_drop
 ef_weakarrow
 ef_whitepoint
 effect
+effect load failed. effectId = {0}
 effect/
 effect/BitEffect/
 effect/BitEffect/bit_arts{0:00}
@@ -21220,7 +21238,9 @@ en_text01
 en_waist
 en_weapon_
 enableFullScreen
+enableInAppMessagesOnForegroundTransition
 enablePendingPurchases
+enablePushNotification
 enabled
 enabledRuntimePermission
 enc
@@ -21258,6 +21278,7 @@ endPoint
 endVoiceOff
 enemyCountStartValue
 enemyCutInSvtIds
+enemyEntryMaxCountEachTurn
 enemyEntryOrder
 enemyErasure
 enemyFieldPosCount
@@ -21612,7 +21633,6 @@ fa
 fa-IR
 faceSize
 faceTalkScreen
-facebook
 facebookId
 factory_bg_rate
 factory_icon_possible
@@ -21639,6 +21659,7 @@ fault cannot be used with catch or finally clauses
 fbxevent
 fd7f53811d75122952df4a9c2eece4e7f611b7523cef4400c31e3f80b6512669455d402251fb593d8d58fabfc5f5ba30f6cb9b556cd7813b801d346ff26660b76b9950a5a49f9fe8047b1022c24fbba9d7feb7c61bf83b57e7c6a8a6150f04fb83f6d3c51ec3023554135a169132f675f3ae2b61d72aeff22203199dd14801c7
 fe0e87005b4e83761908c5131d552a850b3f58b749c37cf5b84d6768
+fetch
 fetch_store_promotion_order
 fetch_store_promotion_visibility
 ffff:
@@ -21754,10 +21775,12 @@ font
 fontSize
 fontType
 for
+forName
 forceDropItem
 forceFullScreenSize
 forceId
 forceOverwrite
+forceReset
 forcedSkillSpeed
 foreach
 form
@@ -21927,6 +21950,8 @@ genericClassDefinition
 genericInterfaceDefinition
 get
 getAdid
+getAllValues
+getAllValuesWithPrefix
 getAmazonAdId
 getApplicationContext
 getApplicationInfo
@@ -21943,6 +21968,7 @@ getDefault
 getDefaultAlgorithm
 getDeferredDeepLink
 getDescription
+getDeviceID
 getExp
 getExternalStorageState
 getExtras
@@ -21963,10 +21989,12 @@ getJoinSvts
 getLanguage
 getLength
 getList family cannot return null.
+getLocalDefaultValue
 getMatchedCampaign
 getMetapsInstallId
 getMethodID
 getName
+getNewsFeeds
 getOrderId
 getOriginalJson
 getPackageInfo
@@ -21981,6 +22009,7 @@ getProperty
 getPurchaseState
 getPurchaseToken
 getPushNotificationCustomText
+getRemoteConfig
 getResponseCode
 getSdkVersion
 getSharedPreferences
@@ -21989,15 +22018,16 @@ getSku
 getSkus
 getSpecialShadowEffectId
 getStackTraceString
-getStatusMessage
 getStreamMaxVolume
 getStreamVolume
 getString
 getSubscriptionPeriod
 getSystemService
+getTime
 getTitle
 getTotalPss
 getTrustManagers
+getUserID
 getView
 getWindow
 getWindowVisibleDisplayFrame
@@ -22076,6 +22106,7 @@ hasChanges
 hasErrors
 hasExtra
 hasFocus
+hasNext
 hash
 hashAlgorithm
 hashCipher
@@ -22386,6 +22417,7 @@ imageLimitCount
 imageSet
 imageSvtId
 imageText 
+imageUrl
 img
 img_arrow_1
 img_arrow_2
@@ -22708,6 +22740,7 @@ inLen
 inOff
 inStream
 inStream must be read-able
+in_app_message
 inapp
 inappropriate_fallback
 include
@@ -22916,6 +22949,23 @@ invalid_user
 invisibleConnectAndLoad
 invites
 io exception: 
+io.repro.android.Repro
+io.repro.android.Repro$OpenUrlCallback
+io.repro.android.UnityBridge
+io.repro.android.newsfeed.NewsFeedCampaignType
+io.repro.android.newsfeed.NewsFeedEntry
+io.repro.android.remoteconfig.RemoteConfigListener
+io.repro.android.remoteconfig.RemoteConfigListener$FetchStatus
+io.repro.android.tracking.AddPaymentInfoProperties
+io.repro.android.tracking.AddToCartProperties
+io.repro.android.tracking.AddToWishlistProperties
+io.repro.android.tracking.CompleteRegistrationProperties
+io.repro.android.tracking.InitiateCheckoutProperties
+io.repro.android.tracking.LeadProperties
+io.repro.android.tracking.PurchaseProperties
+io.repro.android.tracking.SearchProperties
+io.repro.android.tracking.ShareProperties
+io.repro.android.tracking.ViewContentProperties
 ioqrk4Om
 ipAddresses
 ipString
@@ -23032,6 +23082,7 @@ iteration count exceeds limit (
 iteration count must be at least 1.
 iteration count must be at least 100
 iterations
+iterator
 iu
 iu-Cans-CA
 iu-Latn-CA
@@ -23067,7 +23118,9 @@ java.net.SocketTimeoutException
 java.net.UnknownHostException
 java.security.cert.CertificateFactory
 java.util.ArrayList
+java.util.HashMap
 java.util.Locale
+java.util.Map
 java/lang/Object
 java/lang/Runnable
 java/lang/String
@@ -23082,12 +23135,7 @@ joint_all_Base
 joint_sideflip_
 jp.delightworks.Fgo.player.AndroidPlugin
 jp.delightworks.unityplugin.CommonServicePlugin
-jp.delightworks.unityplugin.NetworkServicePlugin
-jp.delightworks.unityplugin.SampleCallPlugin
 jp.delightworks.unityplugin.permission.PermissionRequestPlugin
-jp.delightworks.unityplugin.safetynet.SafetyNetPlugin
-jp.delightworks.unityplugin.safetynet.SafetyNetPlugin$SafetyNetDelegate
-jp.delightworks.unityplugin.webview.WebViewActivity
 jp.delightworks.unityplugin.webview.WebViewCallPlugin
 jpeg
 jpg
@@ -23162,6 +23210,7 @@ keyID
 keyLen
 keyOff
 keySelector
+keySet
 keyValue
 keyValuePair
 keypair
@@ -23274,6 +23323,7 @@ lineNumber
 linePosition
 line_whiteAlpha
 linear
+linkUrl
 linux
 list
 listcframes1_bg
@@ -23525,7 +23575,6 @@ memory.warning
 memory.warning.date
 menu
 menu2
-menu_txt_buffDefbuff
 menu_txt_remaining
 menu_txt_spend
 message
@@ -24103,6 +24152,8 @@ newPlayer
 newProxyInstance
 newSize
 news
+newsfeed_id
+next
 nextSceneId
 nextSceneParam
 nfi
@@ -24160,6 +24211,7 @@ node cannot reduce to itself or null
 nodes
 noicon
 non-empty set required
+non-loaded asset was detected. effectId = {0}
 nonNegativeInteger
 nonPositiveInteger
 nonce
@@ -24380,6 +24432,7 @@ operate_services_init
 operating_system
 operator
 operstate
+optIn
 optionValue
 optional
 options
@@ -24388,6 +24441,7 @@ or-IN
 order
 orderBitLength
 ordered
+ordinal
 org.json.JSONObject
 orienttopath
 origin
@@ -24455,6 +24509,12 @@ overwriteLimitCounts
 overwriteMapAssetId
 overwriteMoveCost
 overwritePresentboxDetail
+overwriteRewardCondCommonReleaseId
+overwriteRewardMessageCommonReleaseId
+overwriteRewardMessageId
+overwriteShopCondCommonReleaseId
+overwriteShopMessageCommonReleaseId
+overwriteShopMessageId
 overwriteSvtDetailName
 overwriteTreasureEffectId
 owner
@@ -24720,6 +24780,8 @@ purchase_and_
 purchase_by_bank
 purchase_by_stone
 purchasebybankrequestsave.dat
+push_notification
+put
 putString
 px
 q
@@ -24836,6 +24898,7 @@ raw
 rawData
 rc2
 rdn
+read
 readType
 reader
 readonly
@@ -25199,19 +25262,27 @@ setAdRevenueUnit
 setAppSecret
 setAttribute
 setCallbackId
+setContentCategory
+setContentId
+setContentName
 setCoppaCompliantEnabled
+setCurrency
 setCurrentPage
+setDateUserProfile
 setDefaultTracker
+setDefaultsFromJsonString
 setDelayStart
-setDelegate
 setDeviceKnown
 setDisp
+setDoubleUserProfile
 setEnabled
 setEventBufferingEnabled
 setExternalDeviceId
+setExtras
 setFlags
 setGdprUserAllowed
 setHandlerName
+setIntUserProfile
 setKochavaLogEnabled
 setListener
 setLocationEnabled
@@ -25220,6 +25291,7 @@ setLogLevel
 setNativeExceptionOnProxy
 setNavigationBarColor
 setNeedsCost
+setNumItems
 setObfuscatedAccountId
 setObfuscatedProfileId
 setOfflineMode
@@ -25230,6 +25302,7 @@ setOnEventTrackingFailedListener
 setOnEventTrackingSucceededListener
 setOnSessionTrackingFailedListener
 setOnSessionTrackingSucceededListener
+setOpenUrlCallback
 setOrderId
 setPlayStoreKidsAppEnabled
 setPreinstallFilePath
@@ -25238,22 +25311,31 @@ setProcessName
 setPurchaseTime
 setPurchaseToken
 setPushNotificationEnabled
+setPushRegistrationID
 setPushToken
 setReferrer
 setReplaceSkusProrationMode
 setRevenue
 setSdkPrefix
+setSearchString
 setSendInBackground
+setServiceName
+setSilverEggCookie
+setSilverEggProdKey
 setSkuDetails
 setSkusList
+setStatus
 setStatusBarColor
+setStringUserProfile
 setSubscriptionUpdateParams
 setSystemUiVisibility
 setTestOptions
 setType
 setUrlStrategy
 setUserAgent
+setUserID
 setUserProfile
+setValue
 set_Position
 set_fsm: value == null: 
 set_store_promotion_order
@@ -25310,6 +25392,7 @@ show
 showAppSpot
 showResultItem
 showTurn
+shown
 si
 si is defined for Koblitz curves only
 si-LK
@@ -25590,6 +25673,8 @@ subBgm
 subBgmStop
 subBgms
 subBgmsPriority
+subBlur
+subBlurOff
 subCamera
 subCameraFilter
 subCameraHome
@@ -25613,6 +25698,10 @@ subRenderMoveFSSideR
 subRenderMoveScale
 subRenderScale
 subTitle
+sub_sdk_bridge_version
+sub_sdk_platform
+sub_sdk_platform_version
+sub_sdk_runtime_version
 sub_title_
 subgroup factor must be >= 2
 subject
@@ -25633,6 +25722,7 @@ subtype
 successResult
 suffix
 sum
+summary
 summed-events
 summed_events
 summon
@@ -25952,14 +26042,24 @@ tower_img_title{0:00}
 tower_{0}_{1}
 tr
 tr-TR
+track
 trackAction
 trackAdRevenue
+trackAddPaymentInfo
+trackAddToCart
+trackAddToWishlist
+trackCompleteRegistration
 trackEvent
+trackInitiateCheckout
+trackLead
 trackMeasurementConsent
 trackPlayStoreSubscription
 trackPurchase
+trackSearch
+trackShare
 trackSpend
 trackThirdPartySharing
+trackViewContent
 trackViewUrl
 trackerName
 trackerToken
@@ -26041,7 +26141,6 @@ tutorial_clear
 tutorial_event_flag_set
 tutorial_set
 tvOS
-twitter
 twitterId
 twt
 txt
@@ -26140,7 +26239,6 @@ unity
 unity.PurchaseFailed
 unity.cloud_userid
 unity.player_sessionid
-unity.plugins.dialog.DialogManager
 unity.services.analytics.consent_status
 unity.services.analytics.pipl_consent_status
 unity4.30.0
@@ -26242,6 +26340,7 @@ update
 updateCreateNotificationChannel
 updateDamageGauge
 updateDeadEffect
+updateNewsFeeds
 updateNp
 updateNpGauge
 updateProfileDialogInfo
@@ -26565,6 +26664,7 @@ weaponEffect
 weaponGroup
 weapon_level_
 webHeaders
+web_message
 webview
 webview.fate-go.jp
 webview/summonDetail?userId=
@@ -26824,6 +26924,7 @@ zu-ZA
 {0:#,0} 
 {0:#,0} / {1:#,0}
 {0:#,0}/{1:#,0}
+{0:0.00}
 {0:0.0}%
 {0:0000}
 {0:00}
@@ -27194,6 +27295,7 @@ CUSTOM に変更しました
 中華民國曆
 仮
 全て
+全ての通知
 分
 大
 大正
