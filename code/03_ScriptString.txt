@@ -1927,7 +1927,7 @@ file crc (
 2.2
 2.23.136
 2.3
-2.38.28
+2.38.28h4
 2.4
 2.5
 2.5.1.1
@@ -1984,7 +1984,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.64.1
+2.65.0
 2.7
 2.8
 2.9
@@ -1996,7 +1996,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20221117_11:06
+20221130_17:00
 21.1
 21.10
 21.2
@@ -2174,7 +2174,6 @@ file crc (
 71169be7330b3038edb025f1d0f9
 7167EFC92BB2E3CE7C8AAAFF34E12A9C557003D7C73A6FAF003F99F6CC8482E540F7
 71FE1AF926CF847989EFEF8DB459F66394D90F32AD3F15E8
-73c606dcbc971fe46feb2a48fac41dab63a6106a0d63e82cbccbe96a7374b5c0
 74D59FF07F6B413D0EA14B344B20A2DB049B50C3
 7503CFE87A836AE3A61B8816E25450E6CE5E1C93ACF1ABC1778064FDCBEFA921DF1626BE4FD036E93D75E6A50E3A41E98028FE5FC235F5B889A589CB5215F2A4
 77E2B07370EB0F832A6DD5B62DFC88CD06BB84BE
@@ -2190,6 +2189,7 @@ file crc (
 7F519EADA7BDA81BD826DBA647910F8C4B9346ED8CCDC64E4B1ABD11756DCE1D2074AA263B88805CED70355A33B471EE
 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5F83B2D4EA20400EC4557D5ED3E3E7CA5B4B5C83B8E01E5FCF
 7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
+7cc6ea4ed8f98eefb8f725dee43753d925c13750ba0fafb5a2fec973f4f4066b
 7d7374168ffe3471b60a857686a19475d3bfa2ff
 7fffffffffffffffffffffff7fffff975deb41b3a6057c3c432146526551
 7fffffffffffffffffffffff7fffff9e5e9a9f5d9071fbd1522688909d0b
@@ -2899,7 +2899,6 @@ Actors/Actor
 Actual value was {0}.
 ActualValue
 AdManager Initialize error.(Start - Adjust) message=
-AdManager Initialize error.(Start - Metaps) message=
 AdManager Initialize error.(Start - Repro) message=
 AdManager Initialize error.(reboot) message=
 Add
@@ -3172,6 +3171,7 @@ AssetBundle file download time over
 AssetCaches
 AssetData 
 AssetLoadError
+AssetName : 
 AssetStorage boot load crc error : チェックサム値が不一致
 AssetStorage boot load error : 
 AssetStorage boot load error : アセットバンドルリスト作成失敗
@@ -7850,7 +7850,6 @@ FAIL_LOAD
 FALSE
 FATAL: An earlier pending exception from unmanaged code was missed and thus not thrown (
 FAVORITE_SERVANT
-FAVORITE_SVTID
 FC1217D4320A90452C760A58EDCD30C8DD069B3C34453837A34ED50CB54917E1C2112D84D164F444F8F74786046A
 FD0D693149A118F651E6DCE6802085377E5F882D1B510B44160074C1288078365A0396C8E681
 FDSize
@@ -10302,7 +10301,6 @@ LB without tabstops
 LDAP cert/CRL stores
 LEGACY_ASPECT_MOVIES
 LENGTH_SHORT
-LEVEL
 LEVEL LOADED
 LEVELUP_NOTICE_TITLE
 LEVEL_DETAIL_INFO
@@ -11013,7 +11011,6 @@ MessageType
 Meta expansion too long
 MetadataClassType
 Metafile not supported
-MetapsAnalyticsGlobalCoroutine
 Method 
 Method '{0}' declared on type '{1}' cannot be called with instance of type '{2}'
 Method '{0}' indicated by XmlSchemaProviderAttribute must have its return type as XmlQualifiedName
@@ -11898,7 +11895,6 @@ OPTS
 OR Invalid OID
 OR Invalid OXID
 OR Invalid set
-ORIGINAL_ID
 OSX
 OTHER
 OTHER_IMAGE_LIMIT_COUNT
@@ -13947,6 +13943,7 @@ Root element is missing.
 Root element name must match the DocType name.
 RootCameraPrefab
 RootFSM
+RootShadow
 Round 1 payload already created for 
 Round 1 payload must be validated prior to creating round 2 payload for 
 Round 1 payload must be validated prior to validation round 2 payload for 
@@ -19061,8 +19058,6 @@ acknowledgePurchase
 act
 actRarity
 action
-action001
-action002
 actionAfterCallback
 actionId: 
 activateFetched
@@ -20442,7 +20437,6 @@ com.aniplex.fategrandorder
 com.company.app.news
 com.crimw.crijavaclasses.CriOutputDeviceObserver
 com.hippogames.simpleandroidnotifications.Controller
-com.metaps.common.UnityWrapper
 com.unity
 com.unity.purchasing
 com.unity.purchasing.amazon.AmazonPurchasing
@@ -20899,7 +20893,6 @@ delegate
 delegateType
 delete
 deleteAccount
-deleteNotificationChannel
 deleteState
 deleted
 delimiter
@@ -20969,7 +20962,6 @@ disableInAppMessagesOnForegroundTransition
 disableSystemFadeStartBattle
 disableThirdPartySharing
 disableUniqueFieldMotion
-dismissAppSpot
 dispLimitCount
 distinguishedName
 distortion
@@ -21912,14 +21904,12 @@ g^x validation failed.  g^x should not be 1.
 ga
 ga is equal to 1.  It should not be.  The chances of this happening are on the order of 2^160 for a 160-bit q.  Try again.
 ga-IE
-gacha
 gacha/draw
 gacha/drawHistory
 gachaId
 gachaIds
 gachaSubId
 gacha_draw
-gacha_id{0}_{1}
 game.fate-go.jp
 game1_button
 game1_count_
@@ -21966,7 +21956,6 @@ getDeclaringClass
 getDecorView
 getDefault
 getDefaultAlgorithm
-getDeferredDeepLink
 getDescription
 getDeviceID
 getExp
@@ -21990,8 +21979,6 @@ getLanguage
 getLength
 getList family cannot return null.
 getLocalDefaultValue
-getMatchedCampaign
-getMetapsInstallId
 getMethodID
 getName
 getNewsFeeds
@@ -22008,7 +21995,6 @@ getProcessMemoryInfo
 getProperty
 getPurchaseState
 getPurchaseToken
-getPushNotificationCustomText
 getRemoteConfig
 getResponseCode
 getSdkVersion
@@ -22797,7 +22783,6 @@ initialMethod
 initialThreshold
 initialValue
 initialisation vector must be the same length as block size
-initialize
 initializers
 initials
 inner
@@ -22979,18 +22964,13 @@ is-IS
 isAcknowledged
 isActiveCooltimeGimmick
 isAddition
-isAppSpotLoaded
 isArray
 isChoice
 isDisableChangeRaidDownMessage
 isEnabled
 isFavorite
-isGdprCountryIncluded
-isGdprUserAllowed
-isGdprUserNeedConfirm
 isGetEffect
 isHideShadow
-isInitialized
 isInitiator
 isLocal
 isLock
@@ -23002,7 +22982,6 @@ isPlayingOrWillChangePlaymode
 isPrimitive
 isProtectedDuringEvent
 isPush
-isPushNotificationEnabled
 isResult
 isRevival
 isScriptPlayForWarBoard
@@ -23597,6 +23576,7 @@ message_prize_name
 messaging
 metadata
 metadata_token
+metaps.default
 method
 method argument length mismatch
 method arguments are incompatible
@@ -24776,7 +24756,6 @@ purchaseInfo
 purchaseResultArray is null.
 purchaseResults
 purchaseToken
-purchase_and_
 purchase_by_bank
 purchase_by_stone
 purchasebybankrequestsave.dat
@@ -25260,14 +25239,12 @@ setAdRevenueNetwork
 setAdRevenuePlacement
 setAdRevenueUnit
 setAppSecret
-setAttribute
 setCallbackId
 setContentCategory
 setContentId
 setContentName
 setCoppaCompliantEnabled
 setCurrency
-setCurrentPage
 setDateUserProfile
 setDefaultTracker
 setDefaultsFromJsonString
@@ -25280,13 +25257,8 @@ setEventBufferingEnabled
 setExternalDeviceId
 setExtras
 setFlags
-setGdprUserAllowed
-setHandlerName
 setIntUserProfile
-setKochavaLogEnabled
 setListener
-setLocationEnabled
-setLogEnabled
 setLogLevel
 setNativeExceptionOnProxy
 setNavigationBarColor
@@ -25310,7 +25282,6 @@ setPreinstallTrackingEnabled
 setProcessName
 setPurchaseTime
 setPurchaseToken
-setPushNotificationEnabled
 setPushRegistrationID
 setPushToken
 setReferrer
@@ -25334,7 +25305,6 @@ setType
 setUrlStrategy
 setUserAgent
 setUserID
-setUserProfile
 setValue
 set_Position
 set_fsm: value == null: 
@@ -25389,7 +25359,6 @@ shortValue
 should be a uint8
 shouldShowRequestPermissionRationale
 show
-showAppSpot
 showResultItem
 showTurn
 shown
@@ -25546,7 +25515,6 @@ standard length exceeded
 start
 start1
 start2
-startAppSpotLoading
 startBattleAssetId
 startBattleSkip
 startBgmOff
@@ -25613,11 +25581,9 @@ stay_dog_{0}_action
 stay_dog_{0}_loop
 step_back
 step_front
-stone
 stopAnimation
 stopMonitoring
 stopRaidDeadTime
-stopSession
 storage
 storage/takein
 storage/takeout
@@ -25635,7 +25601,6 @@ storeSpecificErrorCode
 storeSpecificId
 store_ids
 storedSurrogate
-story
 storyAdjustIds
 str
 strLocalName
@@ -25882,7 +25847,6 @@ tableNamespace
 tag
 tag length in octets must be one of {4,6,8,10,12,14,16}
 tagged
-takeover
 talkEnd
 talkName
 talkName2
@@ -26043,7 +26007,6 @@ tower_{0}_{1}
 tr
 tr-TR
 track
-trackAction
 trackAdRevenue
 trackAddPaymentInfo
 trackAddToCart
@@ -26057,7 +26020,6 @@ trackPlayStoreSubscription
 trackPurchase
 trackSearch
 trackShare
-trackSpend
 trackThirdPartySharing
 trackViewContent
 trackViewUrl
@@ -26130,7 +26092,6 @@ turnMaxDamage
 turnPageOff
 turnPageOn
 turnSituationType
-tutorial
 tutorial/clear
 tutorial/eventFlagSet
 tutorial/set
@@ -26337,7 +26298,6 @@ unwrap data must be a multiple of 8 bytes
 up
 upbutton
 update
-updateCreateNotificationChannel
 updateDamageGauge
 updateDeadEffect
 updateNewsFeeds
@@ -26473,6 +26433,7 @@ userSvtStorage
 userSvtVoicePlayed
 user_canceled
 user_formation
+user_id
 user_id_error
 user_status_flag_set
 usercommandcodecollectionsave.dat
