@@ -1984,7 +1984,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.65.0
+2.66.0
 2.7
 2.8
 2.9
@@ -1996,7 +1996,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20221130_17:00
+20221220_21:11
 21.1
 21.10
 21.2
@@ -2062,11 +2062,19 @@ file crc (
 37
 38
 3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CADC083E67984050B75EBAE5DD2809BD638016F723
+3DMap
+3DSpot
+3D_MAP_CAMERA_MOVE_EASING_TYPE
+3D_MAP_CAMERA_MOVE_TIME_COEFFICIENT
+3D_MAP_CAMERA_MOVE_TIME_CONSTANT
+3D_MAP_CAMERA_MOVE_TIME_LOGARITHM_BASE
 3EE30B568FBAB0F883CCEBD46D3F3BB8A2A73513F5EB79DA66190EB085FFA9F492F375A97D860EB4
 3FB32C9B73134D0B2E77506660EDBD484CA7B18F21EF205407F4793A1A0BA12510DBC15077BE463FFF4FED4AAC0BB555BE3A6C1B0C6B47B1BC3773BF7E8C6F62901228F8C28CBB18A55AE31341000A650196F931C77A57F2DDF463E5E9EC144B777DE62AAAB8A8628AC376D282D6ED3864E67982428EBC831D14348F6F2F9193B5045AF2767164E1DFC967C1FB3F2E55A4BD1BFFE83B9C80D052B985D182EA0ADB2A3B7313D3FE14C8484B1E052588B9B7D2BBD2DF016199ECD06E1557CD0915B3353BBB64E0EC377FD028370DF92B52C7891428CDC67EB6184B523D1DB246C32F63078490F00EF8D647D148D47954515E2327CFEF98C582664B4C0F6CC41659
 3FFFFFFF7FFFFFFFBE0024720613B5A3
 3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC98CDBA46506AB004C33A9FF5147502CC8EDA9E7A769A12694623CEF47F023ED
 3d84f26c12238d7b4f3d516613c1759033b1a5800175d0b1
+3dMapEntryAnimName
+3dModelFlag
 3des
 3rd Attack
 4
@@ -2189,7 +2197,6 @@ file crc (
 7F519EADA7BDA81BD826DBA647910F8C4B9346ED8CCDC64E4B1ABD11756DCE1D2074AA263B88805CED70355A33B471EE
 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5F83B2D4EA20400EC4557D5ED3E3E7CA5B4B5C83B8E01E5FCF
 7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
-7cc6ea4ed8f98eefb8f725dee43753d925c13750ba0fafb5a2fec973f4f4066b
 7d7374168ffe3471b60a857686a19475d3bfa2ff
 7fffffffffffffffffffffff7fffff975deb41b3a6057c3c432146526551
 7fffffffffffffffffffffff7fffff9e5e9a9f5d9071fbd1522688909d0b
@@ -3529,6 +3536,8 @@ BATTLE_EFFECT_ID_INVINCIBLE_PIERCE
 BATTLE_EFFECT_ID_SPECIAL_INVINCIBLE
 BATTLE_ELAPSED_TURN
 BATTLE_END
+BATTLE_FINISH_WAIT
+BATTLE_FINISH_WAIT_FINISH
 BATTLE_GUARD_FUNCTION
 BATTLE_HASNOT_TD
 BATTLE_INVALID_SELECT_TARGET
@@ -4085,6 +4094,7 @@ CAMELLIA128
 CAMELLIA192
 CAMELLIA256
 CAMELLIAWRAP
+CAMERA_2D_RESET_DURATION
 CAMERA_END
 CAMPAIGN_BONUS_ITEM
 CAMPAIGN_COST_COLOR
@@ -4326,6 +4336,7 @@ COMBINE_NP_ADD_TITLE
 COMBINE_RES_INFO
 COMBINE_SCENE_VOICE_RETURN
 COMBINE_SCENE_VOICE_WELCOME
+COMBINE_SERVANT_SKILL_IDS
 COMBINE_SPEND_QP
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON
@@ -5399,6 +5410,7 @@ CompareInfo -
 CompareOption.Ordinal cannot be used with other options.
 Comparer
 Compile
+ComplateUpdateShiftHplabel
 Complete CRL issuer does not match delta CRL issuer.
 CompleteDefenceTargetDamageGauge
 CompleteHandshake mAppDataSplitEnabled: {0}
@@ -7321,9 +7333,7 @@ Effect/Tower
 Effect/TreasureBox
 Effect/Vs
 Effect/WarBoard
-Effect/weapon
 Effect/weapon/
-Effect/weapon/31
 Effect/weapon/{0}
 Effect/weapon/{0}/{1}
 EffectAttackMasterPiece
@@ -8331,8 +8341,10 @@ Forbidden
 ForceReadNewProfiles
 ForceResetTimeAcceleration
 ForceSetNormalEnemyStatusUI
+ForcedActionSpeedAnyTime
 ForcedOnlyFirstOneSpeed
 ForcedSkillSpeed
+ForcedStepInSpeedAnyTime
 ForeignKeyConstraint {0} requires the child key values ({1}) to exist in the parent table.
 Form
 Form/{0}/
@@ -10740,6 +10752,7 @@ MOTION_CALL
 MOTION_CHANGE
 MOTION_DAMAGE
 MOTION_DEAD
+MOTION_DEAD_CRYSTAL
 MOTION_DEAD_ENERGY
 MOTION_EFFECT_DEAD
 MOTION_ENEMY_TURN_END
@@ -11362,6 +11375,7 @@ NP_MAX_COLOR_NAME
 NP_NAME
 NP_NAME_LEVEL
 NP_START_1
+NP_UNKNOWN
 NS_4551-1
 NT cross encryption required
 NTLM
@@ -11616,6 +11630,7 @@ No volume label
 No wildcard characters
 No {0} found in {1}.
 NoAutoSkipDead
+NoBackStepNpc
 NoEntryIds
 NoFlags
 NoPadding
@@ -11623,11 +11638,8 @@ NoPorts
 NoSelectMove
 NoSkipDead
 NobleLevel
-NoblePhantasm
 NoblePhantasm/
-NoblePhantasm/100100
 NoblePhantasm/CutIns
-NoblePhantasm/Sequence
 NoblePhantasm/Sequence/
 NoblePhantasm_
 NobleStartPos_enemy
@@ -12504,7 +12516,10 @@ PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FIXED
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SERVANT_NUM_FREE
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SUPPORT_ONLY
@@ -12520,6 +12535,7 @@ PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MESSAGE
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE
+PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION_MAIN
@@ -13220,10 +13236,12 @@ QUEST_BOARD_KNOCKDOWN_COUNT
 QUEST_BOARD_KNOCKDOWN_DAMAGE
 QUEST_BOARD_KNOCKDOWN_DAMAGE_NAME
 QUEST_BOARD_KNOCKDOWN_PLUS
+QUEST_BOARD_NT_BOARD_OPEN_MESSAGE
 QUEST_BOSS
 QUEST_CALDEA_NONE
 QUEST_CHAPTER_CLOSED
 QUEST_CHAPTER_CLOSED_SPECIAL_311
+QUEST_CHAPTER_CLOSED_SPECIAL_311_2
 QUEST_CLEAR_BEFORE_TERMINAL_MESSAGE_
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION
 QUEST_CLEAR_CHANGE_ACTION_COLLECTION_CLOSE
@@ -13982,6 +14000,7 @@ SAVEKEY_ConnectMarkEventId
 SAVEKEY_EventRaidDefeatedEffectInfo
 SAVEKEY_LastPlayBgmName
 SAVEKEY_LastPlayQuestConsumeType
+SAVEKEY_MapModelClearQuestInfo
 SAVEKEY_PlayTerminalEffectDisappear
 SAVEKEY_PlayTerminalEffectDisappearWarId
 SAVEKEY_PlayedTerminalEffects
@@ -15372,16 +15391,11 @@ Servant_get_prefab
 Servant_get_prefab_for_battle
 Servants
 Servants/
-Servants/100100
-Servants/Camera
 Servants/Camera/
 Servants/Camera/{0}
-Servants/Commands
 Servants/Commands/
-Servants/Motion
 Servants/Motion/
 Servants/Motion/{0}
-Servants/Status
 Servants/Status/
 Servants_
 Servants_{0}
@@ -15726,6 +15740,7 @@ State not in FSM!
 StateLargeIn_End
 StateLargeOut_End
 StateQaaEnd
+StateQuestAfterActionEnd
 Static and ephemeral private keys have different domain parameters
 Static and ephemeral public keys have different domain parameters
 Static field requires null instance, non-static field requires non-null instance.
@@ -16316,6 +16331,7 @@ Terminal/Effect
 Terminal/Info
 Terminal/Info/TitleInfoChronologyDialogPrefab
 Terminal/MapImgs/
+Terminal/MapModels/{0:D4}_{1}
 Terminal/QuestMap/Capter{0:D4}
 Terminal/QuestMap/Capter{0:D4}_{1:D4}
 TerminalBaseMap
@@ -16840,6 +16856,7 @@ The required attribute '{0}' is missing.
 The required attribute must have a value of yes or no.
 The required consent flow cannot be determined. Make sure GeoIP was successfully called.
 The response string '{0}' has invalid format.
+The result normals list cannot be null.
 The result of the dynamic binding produced by the object with type '{0}' for the binder '{1}' needs at least one restriction.
 The result type '{0}' of the binder '{1}' is not compatible with the result type '{2}' expected by the call site.
 The result type '{0}' of the dynamic binding produced by binder '{1}' is not compatible with the result type '{2}' expected by the call site.
@@ -18239,6 +18256,7 @@ Security設定は変更できません(常にHTTPS通信)
 Warning : 
 Server Number is not registered.
 Warning: SIC-Mode can become a twotime-pad if the blocksize of the cipher is too small. Use a cipher with a block size of at least 128 bits (e.g. AES)
+Water
 We
 We are trying to CreatePropertyInfo, but it will be an overwrite!
 We are trying to delete an Event that doesn't belong to this Timeline, from USTimelineEvent::RemoveAndDestroyEvent
@@ -18617,7 +18635,6 @@ Zs
 [enter]
 [equals]
 [esc]
-[ff0000]{0:F2}[-]
 [ff730f]
 [ffb505]
 [g]
@@ -18817,6 +18834,7 @@ _DstBlendMode
 _ENEMY
 _EdgeColor
 _EdgeWidth
+_FADE_CLIP
 _FLAVOR
 _FLAVOR2
 _FaceAlphaTex
@@ -18828,12 +18846,16 @@ _FaceTex2
 _FaceTexOffset
 _FaceTexOffset2
 _Factor
+_FadeDegreeFrom
+_FadeDegreeTo
 _FadeFactor
+_FadeParam
 _FarCorner
 _FarMinLength
 _FarRangeLength
 _FilterColor
 _Flags
+_FogColor
 _FourTex
 _GameCam_VP
 _Gradation
@@ -18930,6 +18952,7 @@ _TransmissionCoefficient
 _TransmissionRatioRange
 _UseDefaultCredentials
 _UseRegistry
+_UseSubtex
 _UseUIAlphaClip
 _Use_alphawidth
 _Version
@@ -18941,6 +18964,7 @@ _WipeTex
 _WipeX
 _WipeY
 _XWeaponTrailMesh: 
+_Xscale
 _ZWriteMode
 _ZZ
 _[Xx]([0-9a-fA-F]{4}|[0-9a-fA-F]{8})_
@@ -18974,6 +18998,7 @@ _anim
 _battle
 _blurOnOff
 _bright
+_crystal
 _customColor0
 _encryption_check
 _end
@@ -19032,6 +19057,7 @@ _xmlD
 _xmlI
 _xmlW
 _xscale
+_xxxColor
 _y0
 _{0:00}
 _{0}
@@ -19162,6 +19188,7 @@ animCam_aim
 animCam_root
 anim_commandfloat
 anim_draw
+anim_erroraction
 anim_giveout
 anim_wait
 animalName
@@ -19322,6 +19349,7 @@ at
 atkPriority
 attachedUserCommandCodeId
 attachment_
+attackNpRate
 attackUserSvtIds
 attempt to Verify signature on unsigned object
 attempt to absorb while squeezing
@@ -19371,6 +19399,7 @@ az-latn
 b
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
+b7c29a7ea5620ce9e9b56e198761f8adabda3b019c32b714a3696ea87464c255
 b8adf1378a6eb73409fa6c9c637ba7f5
 ba
 ba-RU
@@ -19475,6 +19504,7 @@ battleEffectId
 battleEndNotReduceTurnFlag
 battleFinishCameraTargetAll
 battleFinishMovie
+battleFinishWaitTime
 battleHeight
 battleId
 battleMasterImageId
@@ -19526,6 +19556,7 @@ bg-BG
 bg0
 bgChangeEffectTime
 bgChangeEffectType
+bg_map
 bg_white
 bg_{0}
 bgm
@@ -19561,6 +19592,7 @@ bit_board_disappear
 bit_board_disappear2
 bit_board_disappear3
 bit_board_disappear4
+bit_board_disappear5
 bit_buddy_rankup
 bit_buddy_result
 bit_coingrail_get
@@ -20746,6 +20778,7 @@ csShiftJIS
 csUnicode11UTF7
 csWindows31J
 cs_
+cs_txt_disable
 csbig5
 csharp
 ctx
@@ -20792,6 +20825,7 @@ dQ
 da
 da-DK
 damageData:
+damageRate
 darkEnemyErasure
 darkWipe
 data
@@ -20879,6 +20913,7 @@ default_clearance
 default_font_size
 default_text_color
 defence_target_loss_hp_01
+defenseNpRate
 defenseUserSvtIds
 deflate
 deflater
@@ -20986,6 +21021,7 @@ doubleValue
 down
 downbutton
 drawShadowDespiteBattleCharaInvisible
+dropStarRate
 dropped_events
 ds_sqlXmlWraPPeR
 dsa
@@ -21782,6 +21818,7 @@ format=json
 format=minidump
 format=plcrash
 format=symbols
+formationBgmId
 formation_blank_01
 formation_blank_small
 formation_fixing_bg
@@ -21797,12 +21834,15 @@ formation_frame_support2
 formation_frame_support3
 formation_frame_support4
 formation_frame_support5
+formation_frame_support{0}
+formation_frame_{0}
 formation_framebg_0
 formation_framebg_1
 formation_framebg_2
 formation_framebg_3
 formation_framebg_4
 formation_framebg_5
+formation_framebg_{0}
 formation_limit
 formation_member_bg
 formation_support
@@ -21840,6 +21880,8 @@ frame5
 frame6
 frame7
 frame_cs_bg_disable
+frame_enemymaster_bg
+frame_enemymaster_bg_{0}
 frame_master_bg
 frame_master_bg1
 frame_master_bg_disable
@@ -22155,6 +22197,7 @@ hostname
 hours
 hpBarType
 hp_break_
+hp_crystaleffect_1_1
 hp_damage_
 hp_frame_
 hp_gauge_
@@ -22308,6 +22351,7 @@ icon_drop_item_{0:00}
 icon_equip
 icon_equip_cc
 icon_equip_fixation
+icon_error
 icon_event_
 icon_event_1
 icon_event_1_{0}
@@ -22968,10 +23012,12 @@ isArray
 isChoice
 isDisableChangeRaidDownMessage
 isEnabled
+isEnabledBillBoard
 isFavorite
 isGetEffect
 isHideShadow
 isInitiator
+isLateUpdatePopup
 isLocal
 isLock
 isMaterial
@@ -23314,8 +23360,6 @@ listframes00_bg
 listframes1
 listframes1_bg
 listframes2
-listframes20
-listframes20_bg
 listframes2_bg
 listframes3
 listframes3_bg
@@ -23325,6 +23369,7 @@ listframes5
 listframes5_bg
 listframes6_bg
 listframes_shadow
+listframes{0}
 listframes{0}_bg
 listframes{0}_txt_costume
 listframes{0}_txt_eventbonus
@@ -23485,6 +23530,7 @@ masterInfo
 masterMale
 masterMissionResetKey
 masterName
+masterNameWidth
 masterScene
 masterSceneLoad
 masterSecret
@@ -23509,6 +23555,7 @@ masterfigure
 masterverticalImageSet
 match
 matchTimeout
+materialPlayUseUserQuestRoute
 materialUserSvtIds
 materialbranchroutesave.dat
 materialgroupclearhistorysave.dat
@@ -23869,7 +23916,9 @@ mstMap
 mstMapButton
 mstMapCond
 mstMapGimmick
+mstMapGimmickLayer
 mstMapGimmickRelease
+mstMapLayer
 mstMasterMission
 mstMasterMissionDisplayInfo
 mstMaterialFolder
@@ -23918,6 +23967,7 @@ mstSkillLv
 mstSpot
 mstSpotAdd
 mstSpotImage
+mstSpotLayer
 mstSpotPath
 mstSpotRoad
 mstStage
@@ -23931,6 +23981,7 @@ mstSvtAnimationOverwrite
 mstSvtAppendPassiveSkill
 mstSvtAppendPassiveSkillUnlock
 mstSvtCard
+mstSvtCardAdd
 mstSvtChange
 mstSvtCoin
 mstSvtCollection
@@ -24204,6 +24255,7 @@ nonvoluntary_ctxt_switches
 normal
 normalize-space
 normalizedString
+normals
 not
 not 
 not Signing Key type of proof of possession
@@ -24476,11 +24528,14 @@ oversubscribed literal/length tree
 overwrite
 overwriteAttackCost
 overwriteBaseActionPoint
+overwriteCommandSpellContinue
+overwriteCommandSpellIcons
 overwriteCv
 overwriteDetailText
 overwriteEndScript
 overwriteEnemyInfoNames
 overwriteEnemyInfos
+overwriteEnemyMasterBackgroundId
 overwriteEquipSkills
 overwriteImageIdInfo
 overwriteLimitCountIconIds
@@ -24599,6 +24654,7 @@ pickupUserFollower
 pictureFrame
 pictureFrameLoad
 pictureFrameTop
+piece
 pieceIdx
 pieceIndex
 pingPong
@@ -24784,8 +24840,6 @@ querySkuDetailsAsync
 questId
 questMessageOverwrite
 questPhase
-questPhaseScript_1
-questPhaseScript_2
 questSelect
 questStartEffectSkip
 quest_Interlude
@@ -25118,6 +25172,7 @@ screenWidth
 scripting.backend
 scriptsave.dat
 scroll
+scrollStop
 scrollView
 scrollview
 sdkMethod
@@ -25131,6 +25186,8 @@ se-SE
 seLoop
 seStop
 seVolume
+se_
+se_ba41
 sealed
 searchOption
 searchPattern
@@ -25414,6 +25471,7 @@ skill_partition
 skill_{0:D5}
 skills
 skip
+skipBattleFinish
 skipFrames
 skipSkill
 skipStop
@@ -25891,6 +25949,7 @@ tempArg
 tempObj
 tempValue
 template
+temporaryCommandSpell
 terminalDialogMessages
 terms
 test
@@ -26050,6 +26109,8 @@ treasure
 treasureArms1_a
 treasureBox/draw
 treasureBoxId
+treasureDeviceErrorCardSelectVoiceSe
+treasureDeviceErrorStatusVoiceSeList
 treasureDeviceId
 treasureDeviceName
 treasureDeviceRuby
@@ -26346,8 +26407,10 @@ useDiceSpotId
 useEventDeckNo
 useItemId
 useItemNum
+useNoSkillSpriteMessage
 useQp
 useSrtpData
+useTemporaryCommandSpell
 useTestConnectionOptions
 usedEquipSkillList
 usedTurnList
@@ -26473,6 +26536,7 @@ v
 v1
 v1/record
 v2
+v_
 val
 value
 value can not be null
@@ -26572,6 +26636,7 @@ vm.vma.peak
 vm.vma.size
 voice
 voiceCancel
+voiceOffMySvtIds
 voicePlay
 voicePlayedList
 voiceStop
@@ -26623,6 +26688,7 @@ wbits
 weapon
 weaponEffect
 weaponGroup
+weapon_
 weapon_level_
 webHeaders
 web_message
@@ -26919,7 +26985,6 @@ zu-ZA
 {0:D}/{1:D2}/{2:D2} {3:D2}:{4:D2}
 {0:D}/{1:D2}/{2:D2}({3}) {4:D2}:{5:D2}
 {0:D}:{1:D2}
-{0:F2}
 {0:N0}
 {0:N0}/{1:N0}
 {0:X2}
@@ -26998,8 +27063,6 @@ i:{2}
 {0}, {1}
 {0},{1}
 {0},{1},{2}
-{0},{1},{2},{3}
-{0},{2},{1}
 {0}-attachment.json
 {0}-dump.dmp
 {0}-lg.log
@@ -27016,7 +27079,6 @@ i:{2}
 {0}.version
 {0}.{1}
 {0}.{1}()
-{0}/RegulationCheck
 {0}/SplitFile
 {0}/s{1:D04}.png
 {0}/{1:D2}/{2:D2} {3:D2}:{4:D2}
@@ -27055,6 +27117,7 @@ i:{2}
 {0}AuthState [{1}:{2}]
 {0}Changed
 {0}[{1}]
+{0}_{1:D0}_{2}
 {0}_{1}
 {0}_{1}_{2}
 {0}as well as
@@ -27214,9 +27277,6 @@ i:{2}
 そのサウンドはcpkリスト内に存在しません
 そのサウンドはcpk内に存在しません
 ゠㄀
-アセット名,CPUスコア,メモリスコア,ロードスコア
-アセット名,ファイルサイズ(byte),ダウンロード時間(ミリ秒),ロード時間(ミリ秒),使用メモリ量(MB),内包Prefabの最大負荷(ミリ秒)
-アセット名,プレファブ名,描画負荷(ミリ秒),アニメーション負荷(ミリ秒),メモリ使用量(MB)
 アルトリア
 アーツ
 イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。
@@ -27228,7 +27288,6 @@ i:{2}
 クラス：
 サーバアドレスが手動で変更されたので、
 CUSTOM に変更しました
-チェック結果
 データ更新
 データ更新開始
 バスター
