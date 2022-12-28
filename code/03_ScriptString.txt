@@ -1984,7 +1984,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.66.0
+2.66.5
 2.7
 2.8
 2.9
@@ -1996,7 +1996,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20221220_21:11
+20221226_22:26
 21.1
 21.10
 21.2
@@ -18533,6 +18533,7 @@ Zs
 [BGM]
 
 [Backtrace]::Reponse code: {0}, Response text: {1}
+[BattleServantData.getMaxHp] buffData is null
 [BattleSkillInfoData]type:{0},index:{1},svtUniqueId:{2},isPassive:{3},isCharge:{4},skillId:{5},skilllv:{6},chargeTurn:{7},priority:{8}isUseSkill:{9},strengthStatus:{10},itemImageId:{11},changeTDCommandType:{12}
 [BufferDesc Size: {0}, Released: {1}]
 [BufferOffsetSize: {0} {1}]
@@ -19069,6 +19070,7 @@ a
 a date can have multiple adjustment rules applied to it
 a hexadecimal encoding must have an even number of characters
 a77d
+a862ad872620efdc3af084cad9da6352b56b85855f11fb0eb464ece579487dcf
 aACompromise
 aa
 absoluteUri
@@ -19399,7 +19401,6 @@ az-latn
 b
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
-b7c29a7ea5620ce9e9b56e198761f8adabda3b019c32b714a3696ea87464c255
 b8adf1378a6eb73409fa6c9c637ba7f5
 ba
 ba-RU
@@ -22160,6 +22161,7 @@ hi
 hi-IN
 hidden
 hideAssistConfButton
+hideClassSkill
 hideUserIds
 highSurrogate
 highlightLine
