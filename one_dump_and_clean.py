@@ -34,7 +34,7 @@ def main(apk_path: str, il2cppdumper: str) -> None:
     date = None
 
     for i, line in enumerate(string_literal):
-        if line.startswith("2022") and ":" in line:
+        if line.startswith("2023") and ":" in line:
             date = line.strip()
             date = f"{date[:4]}_{date[4:6]}_{date[6:]}"
             break
