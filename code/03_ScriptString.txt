@@ -523,6 +523,7 @@ Content-Type:
 #494949
 #4C4C4C
 #6B6B6B
+#808080
 #A
 #E1A545
 #E6FF00
@@ -1987,7 +1988,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.66.8
+2.67.0
 2.7
 2.8
 2.9
@@ -1999,7 +2000,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230110_18:13
+20230125_16:47
 21.1
 21.10
 21.2
@@ -2106,7 +2107,6 @@ file crc (
 437
 4441
 460
-461f1c4ecc9e58f4bb5f32998bf5c01c11d797a692b0f76e53b239c3750dec67
 469A28EF7C28CCA3DC721D044F4496BCCA7EF4146FBF25C9
 4B337D934104CD7BEF271BF60CED1ED20DA14C08B3BB64F18A60888D
 4D696E676875615175985BD3ADBADA21B43A97E2
@@ -2135,6 +2135,7 @@ file crc (
 505
 506
 507
+50b8c9a94e546f2dd27665d535db9782d7f765ae0073e5a9d576de9ba14850b3
 51DEF1815DB5ED74FCC34C85D709
 520
 520883949DFDBC42D3AD198640688A6FE13F41349554B49ACC31DCCD884539816F5EB4AC8FB1F1A6
@@ -2197,7 +2198,6 @@ file crc (
 7BC382C63D8C150C3C72080ACE05AFA0C2BEA28E4FB22787139165EFBA91F90F8AA5814A503AD4EB04A8C7DD22CE2826
 7CBBBCF9441CFAB76E1890E46884EAE321F70C0BCB4981527897504BEC3E36A62BCDFA2304976540F6450085F2DAE145C22553B465763689180EA2571867423E
 7D5A0975FC2C3057EEF67530417AFFE7FB8055C126DC5C6CE94A4B44F330B5D9
-7DLkup0msw1dZtefVQAeC8LuNliXNffWmE4CCGB2M1o=
 7F519EADA7BDA81BD826DBA647910F8C4B9346ED8CCDC64E4B1ABD11756DCE1D2074AA263B88805CED70355A33B471EE
 7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE5F83B2D4EA20400EC4557D5ED3E3E7CA5B4B5C83B8E01E5FCF
 7ae96a2b657c07106e64479eac3434e99cf0497512f58995c1396c28719501ee
@@ -3919,6 +3919,7 @@ Battle/Textures/shadow_
 Battle/Textures/shadow_1
 Battle/TurnEffect/
 Battle/TurnSituation/
+Battle/UniqueCamera/
 Battle2D
 BattleAssetUIAtlas
 BattleBG
@@ -5151,6 +5152,7 @@ Chain instance is empty.
 Challenge
 ChangeBoardGameDiceButttonActive
 ChangeFaceFade
+ChangeNpCountPlayer
 ChangeType operation is not supported.
 ChangeUserName
 Changing the CacheOnly property while processing the request is not supported.
@@ -6738,6 +6740,7 @@ DirectoryCreate path: '{0}'
 DirectoryExists path: '{0}' exists: {1}
 Dirty
 Disable
+DisableForciblyAddState
 Disabled
 Disallowed
 Discard
@@ -6815,6 +6818,7 @@ DownloadFaceBattleAtlas
 DownloadItemAtlas
 DownloadMyRoomAtlas
 DownloadMyRoomSoundAtlas
+DownloadPartyOrganizationAtlas
 DownloadShopBannerAtlas
 DownloadSkillIconAtlas
 DragDrop
@@ -7100,6 +7104,19 @@ EVENT_CONQUEST_UP_TITLE
 EVENT_COOLTIME_REMAIN
 EVENT_CUSHION_VALUE
 EVENT_DAILY_POINT_RESET_AT
+EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_BUTTON
+EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_MESSAGE
+EVENT_DATA_LOST_BATTLE_RESET_BATTLE_RESULT_TITLE
+EVENT_DATA_LOST_BATTLE_RESET_BUTTON
+EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_BACK
+EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_CANCEL
+EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_DECIDE
+EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_MESSAGE_
+EVENT_DATA_LOST_BATTLE_RESET_CONFIRM_TITLE
+EVENT_DATA_LOST_BATTLE_RESET_SELECT_CANCEL
+EVENT_DATA_LOST_BATTLE_RESET_SELECT_DECIDE
+EVENT_DATA_LOST_BATTLE_RESET_SELECT_MESSAGE_
+EVENT_DATA_LOST_BATTLE_RESET_SELECT_TITLE
 EVENT_DAY_TXT
 EVENT_DEFEAT_COUNT_TXT
 EVENT_ENDBATTLE
@@ -7298,6 +7315,7 @@ Effect Default
 Effect Parent
 Effect(
 Effect/
+Effect/BattleCommon/NameEffect/
 Effect/BattleCommon/{0}
 Effect/BattleResult/{0}
 Effect/BattleResult/{0}/{1}
@@ -7925,6 +7943,7 @@ FGO.acf
 FGOActorDelete サーヴァント位置Index取得エラー
 SvtId:【{0}】UniqueID:【{1}】IsEnemy:【{2}】
 FGOSequenceManager
+FGO_Battle/Ken/Base
 FGO_Battle/Particle/Base
 FGO_Battle/Particle/Base-Stencil
 FGO_CH/AlphaBlendSingle
@@ -8899,10 +8918,18 @@ HexBinary
 Hidden/
 Hidden/ACTk/WallHackTexture
 Hidden/Grayscale Effect
+Hidden/Ken/Distortion
+Hidden/Ken/GradationMap
+Hidden/Ken/MultiplyAdd
+Hidden/Particle/Base-Stencil
 Hidden/Particle/MultiplyAdd
 Hidden/Particle/MultiplyAdd-Stencil
 Hidden/Particle/MultiplyAdd1Pass
 Hidden/Particle/MultiplyAdd1Pass-Stencil
+Hidden/Particle/dissolve
+Hidden/Particle/distortion
+Hidden/Particle/distortion-GrabPass
+Hidden/Particle/distortion-Stencil
 HideInAnimNode
 Highlighted
 Hindi
@@ -10570,6 +10597,7 @@ LvUpIconCreate
 M
 MAC size must be less or equal to 
 MAC size must be multiple of 8
+MAIN_CHAPTERS_WITH_EVENT_ID
 MAIN_INTERLUDE_CLOSED_MESSAGE
 MAIN_INTERLUDE_WAR_ID
 MAIN_MENU_BAR_SELECT
@@ -11370,6 +11398,7 @@ NPButton
 NPC_
 NPC_BACKSTEP
 NPC_FRIEND_POINT
+NPC_PRE_LOAD
 NPC_STEPIN
 NPUP_BASE
 NPUP_CONFIRM_TXT
@@ -11824,6 +11853,7 @@ NumberFormat
 Numbers not relatively prime.
 Numeric arithmetic causes truncation.
 NumericConvert
+NxQlxqlc+0d6LiE0Ip2lngGjImSa+HKbdAWvEmJ9YUM=
 O
 O=
 OBERON_CHOCO_SVT_ID
@@ -11920,6 +11950,13 @@ OPTS
 OR Invalid OID
 OR Invalid OXID
 OR Invalid set
+ORT_FIRST_QUEST_ID
+ORT_LATE_PHASE_BREAK
+ORT_LATE_PHASE_DEAD
+ORT_LATE_PHASE_SECOND_FORM
+ORT_LATE_QUEST_ID
+ORT_SECONDE_FORM_ID
+ORT_THIRD_FORM_ID
 OSX
 OTHER
 OTHER_IMAGE_LIMIT_COUNT
@@ -12333,10 +12370,13 @@ Output buffer too short
 Output buffer too short.
 Output size must be a multiple of 8 bits. :
 OutputBuffer is full (AvailableBytesOut == 0)
+OverWriteSkillInfoId
 Overflow
 Overflow or underflow in the arithmetic operation.
 Override no changes
 OverwriteMotion_{0}
+OverwritePopupColor
+OverwritePopupText
 OverwriteShadowServantEffectNodes
 OverwriteUIVersion
 Owner
@@ -12436,6 +12476,9 @@ PARTY_ORGANIZATION_CONFIRM_START_ALLOUT_BATTLE_SERVANT_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_CLOSE
 PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_COST_OVER_TITLE
+PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_CLOSE
+PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_MESSAGE
+PARTY_ORGANIZATION_CONFIRM_START_DATA_LOST_SERVANT_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_CLOSE
 PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_FATIGURE_SERVANT_TITLE
@@ -12457,6 +12500,9 @@ PARTY_ORGANIZATION_CONFIRM_START_RESTRICTION_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_CLOSE
 PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_SHORTAGE_DECK_MEMBER_TITLE
+PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_CLOSE
+PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_MESSAGE
+PARTY_ORGANIZATION_CONFIRM_START_SINGLE_SUPPORT_TITLE
 PARTY_ORGANIZATION_COST_COLOR
 PARTY_ORGANIZATION_COST_OVER_COLOR
 PARTY_ORGANIZATION_COST_RESTRICTION_COLOR
@@ -12500,6 +12546,7 @@ PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING2
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING3
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING4
+PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING_SINGLE_SUPPORT
 PARTY_ORGANIZATION_REMOVE_SELECT_CANCEL
 PARTY_ORGANIZATION_REMOVE_SELECT_CHANGE_NAME
 PARTY_ORGANIZATION_REMOVE_SELECT_COPY
@@ -12530,6 +12577,7 @@ PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_SUPPORT_NOT_SINGLE_SUPPORT
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_SUPPORT_ONLY
@@ -12549,6 +12597,7 @@ PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_MY_SERVANT_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_NPC_BUTTON
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_NPC_DAIALOG_TITLE
 PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_DIALOG_MESSAGE
+PARTY_ORGANIZATION_SERVANT_SELECT_MY_SERVANT_OR_SUPPORT_FREE_DIALOG_MESSAGE
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION
 PARTY_ORGANIZATION_SERVANT_SWAP_EXPLANATION_FIXED_MY_SERVANT_POSITION_MAIN
@@ -12863,6 +12912,7 @@ Particle cannot exist along with 'ContentModel'.
 Partition failure
 Partner MacTag validation failed. Therefore, the password, MAC, or digest algorithm of each participant does not match.
 PartyBuffHelpUI
+PartyOrganization/DownloadPartyOrganization
 PartyOrganization/PartyServantSelectMenu
 PartyOrganizationScene
 PartyServant
@@ -13894,7 +13944,10 @@ Reset Content
 Reset action must be initialized with index -1.
 Reset action must be initialized with no changed items.
 Reset called!
+ResetConfirmDialog
 ResetGachaLIst
+ResetNpCountPlayer
+ResetSelectDialog
 ResidentSE
 ResidentSE/
 Resmon create failed
@@ -14011,12 +14064,14 @@ SAVEKEY_
 SAVEKEY_ClearEventQuestIds
 SAVEKEY_ConnectMarkAnimationId
 SAVEKEY_ConnectMarkEventId
+SAVEKEY_DataLostBattleAutoReset
 SAVEKEY_EventRaidDefeatedEffectInfo
 SAVEKEY_LastPlayBgmName
 SAVEKEY_LastPlayQuestConsumeType
 SAVEKEY_MapModelClearQuestInfo
 SAVEKEY_PlayTerminalEffectDisappear
 SAVEKEY_PlayTerminalEffectDisappearWarId
+SAVEKEY_PlayTerminalEffectNt2AfterAction
 SAVEKEY_PlayedTerminalEffects
 SAVEKEY_QuestRandomGroupList
 SAVEKEY_TerminalConquestInfoDisp
@@ -14088,6 +14143,7 @@ SELECT_NO_SORTIE_FATIGURE_NARROW_FIGURE
 SELECT_NO_SORTIE_FATIGURE_RECOVER
 SELECT_NO_SORTIE_FATIGURE_RECOVER_NARROW_FIGURE
 SELECT_NO_SORTIE_REASON_FATIGUE
+SELECT_NO_SORTIE_TIMES_TO_RESTART
 SELECT_NO_SORTIE_TITLE
 SELECT_PARTY
 SELECT_PARTY_EQUIP
@@ -15309,6 +15365,7 @@ Seek not supported
 Seek on device
 Seeking is not supported on this stream.
 Select Response
+SelectAddInfo
 SelectAll
 SelectAnimation
 SelectCore
@@ -15576,6 +15633,7 @@ SkillIcons/DownloadSkillIcon
 SkillItemNodeName
 SkillNameInfo
 SkillRankUp
+SkillSelectAddFuncConfWindow
 SkipDead
 SkipDiggingConfirmCheckBoxState
 SkipToEndElement
@@ -16175,6 +16233,7 @@ TREASURE_BOX_EVENT_POINT_REWARD_GET_DIALOG_TITLE
 TREASURE_BOX_EVENT_TOTAL_POINT_NUM
 TREASURE_BOX_PAY_EVENT_ITEM
 TREASURE_BOX_USER_EVENT_ITEM
+TREASURE_DEVICES_FORCED_OPEN_EFFECT
 TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON
 TREASURE_DEVICE_COMBINE_EFFECT_UNSUMMON_DETAIL
 TREASURE_DEVICE_DISP_STATUS_EFFECT_FLAG
@@ -17241,6 +17300,7 @@ TitleInfoEventRaidStatusJumblePrefab
 TitleInfoEventRaidStatusPrefab
 TitleInfoEventSideItemPrefab
 TitleInfoEventSubmarineStatusPrefab
+TitleInfoEventSuperBossEffect_Break
 TitleInfoEventSuperBossEffect_Dead
 TitleInfoEventSuperBossEffect_Split
 TitleInfoEventTimeStatusPrefab
@@ -17724,6 +17784,7 @@ Uninitialized JsonData
 Union
 Union fields must been an array.
 Unique
+UniqueCameraPrefab
 UniqueIdentifier
 Unit_Enemy2
 Unit_Player2
@@ -18323,6 +18384,7 @@ Window/CloseButton
 Window/ExitBase/CancelButton
 Window/ExitButton
 Window/FilterList/CancelButton
+Window/LeftButton
 Window/NormalBase/CancelButton
 Window/Objects/Buttons/CancelButton
 Window/Objects/CancelButton
@@ -18824,6 +18886,7 @@ _Center
 _CenterRadius
 _CenterX
 _CenterY
+_Choco
 _ChocoTex
 _ChromaticAberration
 _ClipArgs0
@@ -18870,6 +18933,7 @@ _FadeDegreeFrom
 _FadeDegreeTo
 _FadeFactor
 _FadeParam
+_FadeTime
 _FarCorner
 _FarMinLength
 _FarRangeLength
@@ -18906,6 +18970,7 @@ _MovieChromaTexture_ST
 _MovieTexture_ST
 _MultiplySyntheticColor
 _NGUI Debug
+_NO_CANCEL
 _Name
 _NearMinLength
 _NearRangeLength
@@ -18940,9 +19005,11 @@ _Scaling
 _ScratchOffsetScale
 _ScratchTex
 _SecondTex
+_Shadow
 _Sigma
 _Spread
 _SrcBlendMode
+_StartTime
 _Stencil
 _StencilComp
 _StencilOp
@@ -19082,6 +19149,7 @@ _y0
 _{0:00}
 _{0}
 _{0}_{1}
+_{0}{1:D2}
 `
 ` occured in update loop.
 ` registered. Are you missing a package?
@@ -19156,6 +19224,7 @@ aiActTypeAttackCommandCard
 aiAllocations
 aiFieldIds
 aiIds
+aiMultiNpc
 aiNpc
 ai_quest_event
 ai_quest_free
@@ -19304,6 +19373,7 @@ ar173
 ar192
 ar2
 ar200
+ar210
 ar60
 ar93
 arabic
@@ -19536,6 +19606,7 @@ battleStatus
 battleVoice
 battle_command_spell
 battle_message_{0}
+battle_name
 battle_quest_route
 battle_reset
 battle_result
@@ -19562,6 +19633,7 @@ be
 be-BY
 befSquareIndex
 before
+beforeBattleSkillActor
 beforeBirthDay
 beforeClearBgmId
 beforeTerminalMessageIds
@@ -19607,6 +19679,7 @@ bit_battlefinish02_{0:D2}
 bit_battlestart_3_{0}
 bit_board_appear
 bit_board_appear2
+bit_board_appear3
 bit_board_disappear
 bit_board_disappear2
 bit_board_disappear3
@@ -19635,10 +19708,14 @@ bit_expedition_start_dog_{0}
 bit_fade_black
 bit_fade_black2
 bit_fade_black3
+bit_fade_black4
 bit_floor_reward
 bit_gauge_change
 bit_grail_get
 bit_harvest_get{0}
+bit_incoming
+bit_incoming_end
+bit_incoming_start
 bit_item_get01
 bit_item_get01_2
 bit_item_get01_3
@@ -19651,6 +19728,7 @@ bit_present_get{0}
 bit_raid_battlereport
 bit_raid_turnstart
 bit_raid_turnstart_
+bit_raidreset
 bit_ramification01
 bit_ramification04
 bit_ramification07
@@ -19801,6 +19879,7 @@ branchRouteSelect
 branchRouteSelectCount
 breadcrumbs.lastId
 break
+breakGaugeHp
 breakOnBattleWin
 breakOnBattleWinFadeColorBlack
 breakOnBattleWinWaitMSec
@@ -19818,9 +19897,11 @@ bs-latn
 bt-breadcrumbs
 bt-breadcrumbs-0
 btime
+btn
 btn_atk_
 btn_auto_off
 btn_auto_on
+btn_bg_01
 btn_bg_02_off
 btn_bg_02_on
 btn_bg_03
@@ -19868,6 +19949,7 @@ btn_master_skill
 btn_master_skill_disable
 btn_message_off
 btn_message_on
+btn_mission_bg
 btn_mission_cancel
 btn_off
 btn_on
@@ -20067,6 +20149,7 @@ callback
 callbackId
 calledEnemyUniqueIds
 camera
+camera2DResetDuration
 cameraAction
 cameraActionId
 cameraFilter
@@ -20859,6 +20942,8 @@ data-residency-eu
 data-residency-tr
 data-residency-us
 dataItem
+dataLostBattleId
+dataLostUniqueIds
 dataOutputStream
 dataSet
 dataType
@@ -20867,6 +20952,8 @@ dataViewManager
 data_update
 database
 datagram
+datalost_party_edit
+datalost_svt_select
 datatype
 date
 dateData
@@ -20995,6 +21082,7 @@ deviceModel
 deviceVolume
 dgram
 dialogMessage_{0}_{1}
+dialog_title
 diceType
 diceValue
 dictionary
@@ -21018,6 +21106,7 @@ disableInAppMessagesOnForegroundTransition
 disableSystemFadeStartBattle
 disableThirdPartySharing
 disableUniqueFieldMotion
+dispBreakShift
 dispLimitCount
 distinguishedName
 distortion
@@ -21335,6 +21424,7 @@ enemyMasterBattleId
 enemyMasterBattleIdByPlayerGender
 enemyMasterEffectType
 enemyMstFace{0:d5}
+enemyNameEffect
 enemySelect
 enemy_icon_
 enemy_icon_leader
@@ -21457,6 +21547,7 @@ event/fortification
 event/location
 event/receiveCooltimeReward
 event/recoverySync
+event/resetDataLostBattle
 event/resetDigging
 event/scanPanelMap
 event/scriptFlag
@@ -21564,6 +21655,7 @@ event_ranking_rewardget_
 event_receive_cooltime_reward
 event_recoverySync
 event_recvoer_servant_bg02
+event_reset_data_lost_battle
 event_reset_digging
 event_rewardframe_{0}
 event_rewardgacha_
@@ -21578,10 +21670,15 @@ event_skill_btn_{0}
 event_skill_icon_{0:D2}
 event_skill_icon_{0}{1:D2}
 event_status_point
+event_superboss_hp_icon_
+event_superboss_hp_icon_0
+event_superboss_hp_icon_11
 event_superboss_hp_lower
+event_superboss_hp_lower_
 event_superboss_hp_split
 event_superboss_hp_split_frame
 event_superboss_hp_upper
+event_superboss_hp_upper_
 event_superboss_hp_white
 event_superboss_icon_
 event_superboss_status_battle_
@@ -22139,7 +22236,6 @@ gzip, deflate
 gzip, identity
 h (Cofactor) must be 2 or 4
 h:mm tt
-hMTjJKbSxkOe6YYfgjp1dSz+5wed2BKGvkW21gmouX0=
 ha
 ha-Latn-NG
 ha-latn
@@ -22221,6 +22317,7 @@ hours
 hpBarType
 hp_break_
 hp_crystaleffect_1_1
+hp_crystaleffect_superboss_1_1
 hp_damage_
 hp_frame_
 hp_gauge_
@@ -22449,6 +22546,7 @@ ifTrue
 ifindex
 ig
 ig-NG
+ignoreBattleLoseDialog
 ignoreWhiteFade
 ignoretimescale
 ii
@@ -22532,6 +22630,7 @@ img_frames_mask01
 img_frames_mask02
 img_frames_mask03
 img_frames_mask04
+img_frames_mask05
 img_frames_mask08
 img_frames_mask11
 img_frames_mask12
@@ -22799,6 +22898,9 @@ inappropriate_fallback
 include
 includeUnsubState
 includechildren
+incomingCallDispTime
+incomingCallMessage
+incomingCallTitle
 incompatible version
 incomplete distance tree
 incomplete dynamic bit lengths tree
@@ -22835,6 +22937,7 @@ indices
 indirectCRL
 individuality
 indv
+infinite_sprite
 inflater
 inflating: 
 info
@@ -23047,6 +23150,7 @@ isLock
 isMaterial
 isNew
 isNotMaterial
+isPersonalRaid
 isPlaying
 isPlayingOrWillChangePlaymode
 isPrimitive
@@ -23522,6 +23626,10 @@ malformed sequence in RSA private key
 malformed signature
 malformed timestamp response: 
 many
+mapCameraMoveEasingType
+mapCameraMoveTimeCoefficient
+mapCameraMoveTimeConstant
+mapCameraMoveTimeLogarithmBase
 mapGimmickEffectId
 mapGimmickId
 mapId
@@ -23788,6 +23896,7 @@ mstBoxGachaBase
 mstBoxGachaBaseDetail
 mstBoxGachaTalk
 mstBuff
+mstBuffConvert
 mstBuffTypeDetail
 mstCampaignInfo
 mstCard
@@ -23846,6 +23955,8 @@ mstEventCombine
 mstEventCombineCostume
 mstEventConquestReward
 mstEventCooltimeReward
+mstEventDataLostBattle
+mstEventDataLostBattleReset
 mstEventDetail
 mstEventDigging
 mstEventDiggingBlock
@@ -23918,6 +24029,7 @@ mstFriendship
 mstFunc
 mstFuncCategory
 mstFuncGroup
+mstFuncTypeDetail
 mstGacha
 mstGachaAppend
 mstGachaBehavior
@@ -23940,7 +24052,9 @@ mstMap
 mstMapButton
 mstMapCond
 mstMapGimmick
+mstMapGimmick: mapGimmickId: {0}, x: {1}, y: {2}
 mstMapGimmickLayer
+mstMapGimmickLayer: mapGimmickId: {0}, z: {1}
 mstMapGimmickRelease
 mstMapLayer
 mstMasterMission
@@ -23957,6 +24071,7 @@ mstQuestBehavior
 mstQuestConsumeItem
 mstQuestDateRange
 mstQuestGroup
+mstQuestHint
 mstQuestMessage
 mstQuestPhase
 mstQuestPhaseDetail
@@ -24875,6 +24990,7 @@ quest_board_mask_
 quest_event
 quest_free
 quest_heroic
+quest_info
 quest_main
 questboard_ap_
 questboard_ap_free
@@ -24883,6 +24999,7 @@ questboard_ap_story
 questboard_cap_closed
 questboard_cap_closed_special
 questboard_cap_closed_special_2
+questboard_cap_closed_special_3
 questboard_cap_closed_{0}
 questboard_cap{0:D3}
 questboard_challenge
@@ -25271,6 +25388,7 @@ sellCommandCode
 sellData
 sell_svt
 sendChunked
+sendDamageForSuperBossId
 sendFirstPackages
 sendFsmEvent
 sendPermissionRequest
@@ -25501,9 +25619,12 @@ skipBattleFinish
 skipFrames
 skipSkill
 skipStop
+skipWaveStartFadeInSe
 skuDetails
 sl
 sl-SI
+slash
+slash_s
 sm2p256v1
 sma
 sma-NO
@@ -25557,6 +25678,7 @@ speed1_treasure_device
 spinCount
 spiral
 sponsorshipTimeout
+spotScale
 spot_
 spot_info_gauge
 spot_info_gauge_base
@@ -25790,6 +25912,7 @@ sun-cmd
 sup
 superBoss
 superBossResult
+superBossUi
 superseded
 supportDeckId
 supportName
@@ -26282,6 +26405,7 @@ unicodeFFFE
 union
 unique
 unique-events
+uniqueCameraId
 uniqueId
 unique_events
 uniqueidentifier
@@ -26466,6 +26590,7 @@ userEvent
 userEventAlloutBattle
 userEventBoardGameToken
 userEventCooltimeReward
+userEventDataLost
 userEventDeck
 userEventDigging
 userEventExpedition
@@ -26712,6 +26837,7 @@ warboardmoviehistorysave.dat
 warn
 warning
 wav
+waveCountInfinity
 waveStartMovie
 wbits
 weapon
