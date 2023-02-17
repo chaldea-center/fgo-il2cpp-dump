@@ -1988,7 +1988,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.68.0
+2.69.0
 2.7
 2.8
 2.9
@@ -2000,14 +2000,13 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230203_12:50
+20230213_15:28
 21.1
 21.10
 21.2
 21.4
 21.7
 22123dc2395a05caa7423daeccc94760a7d462256bd56916
-22658c203ebfe0e7eb2d1a6bf1352affeed8d70b10baf6ec767605e0d06d01ab
 2472E2D0197C49363F1FE7F5B6DB075D52B6947D135D8CA445805D39BC345626089687742B6329E70680231988
 24B7B137C8A14D696E6768756151756FD0DA2E5C
 255705fa2a306654b1f4cb03d6a750a30c250102d4988717d9ba15ab6d3e
@@ -2219,6 +2218,7 @@ file crc (
 80341001
 809e77d5-56cc-4da8-b9f0-45e65ba9cceb
 8138e8a0fcf3a4e84a771d40fd305d7f4aa59306d7251de54d98af8fe95729a1f73d893fa424cd2edc8636a6c3285e022b0e3866a565ae8108eed8591cd4fe8d2ce86165a978d719ebf647f362d33fca29cd179fb42401cbaf3df0c614056f9c8f3cfd51e474afb6bc6974f78db8aba8e9e517fded658591ab7502bd41849462f
+83eeffcadd9c998ee203622a094a146864dd9632de716dd5af03a6f7b9e72d05
 854
 85E25BFE5C86226CDB12016F7553F9D0E693A268
 87A8E61DB4B6663CFFBBD19C651959998CEEF608660DD0F25D2CEED4435E3B00E00DF8F1D61957D4FAF7DF4561B2AA3016C3D91134096FAA3BF4296D830E9A7C209E0C6497517ABD5A8A9D306BCF67ED91F9E6725B4758C022E0B1EF4275BF7B6C5BFC11D45F9088B941F54EB1E59BB8BC39A0BF12307F5C4FDB70C581B23F76B63ACAE1CAA6B7902D52526735488A0EF13C6D9A51BFA4AB3AD8347796524D8EF6A167B5A41825D967E144E5140564251CCACB83E6B486F6B3CA3F7971506026C0B857F689962856DED4010ABD0BE621C3A3960A54E710C375F26375D7014103A4B54330C198AF126116D2276E11715F693877FAD7EF09CADB094AE91E1A1597
@@ -7149,6 +7149,7 @@ EVENT_POINT_GIFT_ADD
 EVENT_POINT_GIFT_ADD_COMMAND_CODE
 EVENT_POINT_GIFT_ADD_COUNT
 EVENT_POINT_ITEM_REQUIRED_POINT
+EVENT_POINT_MAX_INFO
 EVENT_POINT_NEXT_NUM
 EVENT_POINT_NEXT_TITLE
 EVENT_POINT_NONE_INFO
@@ -9410,6 +9411,7 @@ Indigenous type
 Indirect Reference: 
 Indonesian
 Indonesian (Indonesia)
+IndvAddBuffPassive
 Inference can only handle simple built-in types for 'SchemaType'.
 Inference cannot handle entity references. Pass in an 'XmlReader' that expands entities.
 Infinite loop detected from error handling.
@@ -10081,6 +10083,8 @@ IsLatinExtended-B
 IsLatinExtendedAdditional
 IsLetterlikeSymbols
 IsLimbu
+IsListActive
+IsLoop
 IsLowSurrogates
 IsMalayalam
 IsMathematicalOperators
@@ -10979,6 +10983,8 @@ Material
 MaterialCollectionServant1
 MaterialCollectionServant2
 MaterialCollectionServant4
+MaterialCollectionServant5
+MaterialCollectionServant6
 MaterialCostumeServant1
 MaterialCostumeServant2
 MaterialFinishReadQuestList
@@ -11060,6 +11066,11 @@ Message Digest
 Message exceeds max size
 Message sync only
 Message too long
+Message:
+{0}
+StackTrace:
+{1}
+
 MessageShake/LogMark/BackLogButton
 MessageType
 Meta expansion too long
@@ -12149,7 +12160,6 @@ OnDragOver
 OnDragStart
 OnDrop
 OnDropItem
-OnEnd
 OnEndAnimation
 OnEndCutinEffect
 OnEndCutoutEffect
@@ -13488,6 +13498,7 @@ RENAME
 REPRINT_LAST_WAR_RAID_EVENT_ID_LIST
 REQUEST_DO_SIGNUP
 REQUEST_NG
+REQUEST_NG_RESULT
 REQUEST_OK
 REQUEST_RAID_UPDATE_EVENT_MAP
 REQUEST_TOP_HOME_EXPIRATION_DATE_SEC_UPDATE_EVENT_MAP
@@ -14368,6 +14379,7 @@ SERVANT_SORT_FILTER_RARITY_SRARE
 SERVANT_SORT_FILTER_RARITY_SSRARE
 SERVANT_SORT_FILTER_RARITY_UNCOMMON
 SERVANT_SORT_FILTER_RESULT_EMPTY
+SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE
 SERVANT_SORT_FILTER_SAME_CLASS
 SERVANT_SORT_FILTER_SERVANT_EFFECT_SKILL
 SERVANT_SORT_FILTER_SERVANT_EFFECT_TREASURE_DEVICE
@@ -14541,6 +14553,7 @@ SET_ITEM_GET_SERVANT_MSG
 SET_ITEM_INDIVIDUAL
 SE_21
 SE_22
+SE_23
 SE_IGNORE_PRE_DELAY
 SE_PRE_DELAY_TIME_FOR_MEMORY
 SE_PRE_DELAY_TIME_FOR_STREAM
@@ -15529,6 +15542,7 @@ SetDirty
 SetEnableTime
 SetEventBoardQuestArrivalPanel
 SetIssuerUniqueId()
+SetLabelUpdate
 SetLength
 SetMainColor
 SetMargins
@@ -15570,6 +15584,8 @@ Shop/Atlas/ShopAtlas
 ShopBanners/DownloadShopBanner
 ShopHelpItem 
 ShopHelpListPanel/BaseWindow/UpperCloseButton
+ShopItemFilter
+ShopItemFilter_
 ShopScene
 Short
 Short read
@@ -19287,6 +19303,7 @@ annotations
 anonymous
 anotherItemIds
 anotherPayFlag
+anotherPayName
 anotherPayType
 anp_
 any
@@ -20035,6 +20052,8 @@ btn_txt_set0_1
 btn_txt_set{0}_1
 btn_txt_status_off
 btn_txt_status_on
+btn_txt_stock
+btn_txt_stock_02
 btn_txt_summon0
 btn_txt_summon01
 btn_txt_summon02
@@ -22413,6 +22432,7 @@ ibm852
 ibm857
 ibm861
 ibm869
+iconDetailText
 iconId
 iconLimitCount
 icon_append_mini
@@ -22768,7 +22788,6 @@ img_soundplayer_listoff02
 img_spotname_bg
 img_sq
 img_summon_
-img_summon_maintenance
 img_summon_mini_
 img_summon_mini_236
 img_talk_namebg
@@ -23439,6 +23458,7 @@ layer
 layerNames
 lb
 lb-LU
+lblLoop
 lc
 ldap
 ldap://
@@ -24102,6 +24122,8 @@ mstShopScript
 mstSkill
 mstSkillAdd
 mstSkillDetail
+mstSkillGroup
+mstSkillGroupOverwrite
 mstSkillLv
 mstSpot
 mstSpotAdd
@@ -26049,6 +26071,7 @@ ta-IN
 tab
 tabClasses must have the same number of items as tabScopes
 tabScope
+tabTypeImage
 table
 tableName
 tableNamespace
