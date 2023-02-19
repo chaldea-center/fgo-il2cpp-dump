@@ -1,11 +1,13 @@
 import argparse
 import json
+import re
 from pathlib import Path
 from typing import Dict, Union
 
 
 bad_line_starts = ("/*", "//", "|", "*/")
 bad_line_contains = ("PrivateImplementationDetails", "{}")
+enum_re = re.compile(r"\tpublic const [\w\.]+ (\w+) = (\d+);")
 
 
 def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
@@ -35,6 +37,29 @@ def main(input_dump: Union[str, Path], output_dump: Union[str, Path]) -> None:
         output_path / "01_clean_dump.cs", "w", encoding="utf-8", newline=""
     ) as fp:
         fp.writelines(output_lines)
+
+    enum_lines = []
+    is_enum_field = False
+    for line in output_lines:
+        if is_enum_field:
+            if line.startswith("}"):
+                enum_lines.append(line + "\n")
+                is_enum_field = False
+            elif line == "{\n":
+                enum_lines.append("{\n")
+            elif "public int value__;" not in line:
+                matched = enum_re.match(line)
+                if matched:
+                    name, value = matched.groups()
+                    enum_lines.append(f"\t{name} = {value},\n")
+        elif " enum " in line:
+            enum_lines.append(line)
+            is_enum_field = True
+
+    with open(
+        output_path / "07_clean_dump_enum.cs", "w", encoding="utf-8", newline=""
+    ) as fp:
+        fp.writelines(enum_lines)
 
     with open(input_path / "stringliteral.json", "r", encoding="utf-8") as fp:
         literal_lines = json.load(fp)
