@@ -1038,6 +1038,7 @@ file crc (
 -_.!~*'()
 -b3fb3400dec5c4adceb8655c
 -b8adf1378a6eb73409fa6c9c637d
+-buildsrc
 -e4437ed6010e88286f547fa90abfe4c3
 -q -n -c {0} -t {1} -o -m {2} 
 -q -n -c {0} -w {1} -t {2} -M 
@@ -1152,8 +1153,10 @@ file crc (
 .exe
 .exe.licenses
 .fonts
+.java
 .jpg
 .json
+.kt
 .lic
 .licenses
 .local
@@ -1295,6 +1298,7 @@ file crc (
 00000
 000000
 0000000
+00000000-0000-0000-0000-000000000000
 0000000000000000000000000000000000000000000000000000000000000000
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002
 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003
@@ -1809,6 +1813,7 @@ file crc (
 1.6
 1.8
 10
+10.3.0
 100
 100-Continue cannot be set with this property.
 100-continue
@@ -1988,7 +1993,7 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.69.0
+2.69.5
 2.7
 2.8
 2.9
@@ -2000,7 +2005,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230213_15:28
+20230222_13:18
 21.1
 21.10
 21.2
@@ -2038,7 +2043,7 @@ file crc (
 3.2
 3.3
 3.6BossBattle
-3.7.3
+3.7.8
 301
 301.1
 301.101
@@ -2177,7 +2182,6 @@ file crc (
 6b8cf07d4ca75c88957d9d67059037a4
 6b8cf07d4ca75c88957d9d670591
 7
-7.2.0
 70390085352083305199547718019018437840920882647164081035322601458352298396601
 70390085352083305199547718019018437841079516630045180471284346843705633502616
 70390085352083305199547718019018437841079516630045180471284346843705633502619
@@ -2218,7 +2222,6 @@ file crc (
 80341001
 809e77d5-56cc-4da8-b9f0-45e65ba9cceb
 8138e8a0fcf3a4e84a771d40fd305d7f4aa59306d7251de54d98af8fe95729a1f73d893fa424cd2edc8636a6c3285e022b0e3866a565ae8108eed8591cd4fe8d2ce86165a978d719ebf647f362d33fca29cd179fb42401cbaf3df0c614056f9c8f3cfd51e474afb6bc6974f78db8aba8e9e517fded658591ab7502bd41849462f
-83eeffcadd9c998ee203622a094a146864dd9632de716dd5af03a6f7b9e72d05
 854
 85E25BFE5C86226CDB12016F7553F9D0E693A268
 87A8E61DB4B6663CFFBBD19C651959998CEEF608660DD0F25D2CEED4435E3B00E00DF8F1D61957D4FAF7DF4561B2AA3016C3D91134096FAA3BF4296D830E9A7C209E0C6497517ABD5A8A9D306BCF67ED91F9E6725B4758C022E0B1EF4275BF7B6C5BFC11D45F9088B941F54EB1E59BB8BC39A0BF12307F5C4FDB70C581B23F76B63ACAE1CAA6B7902D52526735488A0EF13C6D9A51BFA4AB3AD8347796524D8EF6A167B5A41825D967E144E5140564251CCACB83E6B486F6B3CA3F7971506026C0B857F689962856DED4010ABD0BE621C3A3960A54E710C375F26375D7014103A4B54330C198AF126116D2276E11715F693877FAD7EF09CADB094AE91E1A1597
@@ -4921,6 +4924,7 @@ Cannot import nodes of type '{0}'.
 Cannot include class \{0} in character range.
 Cannot initialize ANR watchdog - reason: {0}
 Cannot initialize database - invalid path to database. Database is disabled
+Cannot initialize event aggregation - Unknown Backtrace URL.
 Cannot initialize for deflate.
 Cannot initialize for inflate.
 Cannot initialize unhandled exception watcher - reason: {0}
@@ -7654,7 +7658,6 @@ Error writing request
 Error writing {0} value. BSON must start with an Object or Array.
 Error! No Dropdown options set!
 Error: 
-Error: called non-existent method System.Void System.Threading.Tasks.TaskCompletionSource`1<T>::SetException(System.AggregateException)
 Error: {0}
 Error: {0} ({1})
 ErrorCount : 
@@ -7767,6 +7770,7 @@ Exception reading IssuingDistributionPoint
 Exception searching in X.509 CRL store.
 Exception thrown
 Exception while encoding certificate
+Exception:
 ExceptionMethod
 Exceptions
 ExcludeSchema
@@ -8330,7 +8334,6 @@ Firebase.DynamicLinks.DynamicLinks, Firebase.DynamicLinks
 Firebase.FirebaseApp
 Firebase.Functions.FirebaseFunctions, Firebase.Functions
 Firebase.Installations.FirebaseInstallations, Firebase.Installations
-Firebase.InstanceId.FirebaseInstanceId, Firebase.InstanceId
 Firebase.Invites.FirebaseInvites, Firebase.Invites
 Firebase.Messaging.FirebaseMessaging, Firebase.Messaging
 Firebase.Performance.FirebasePerformance, Firebase.Performance
@@ -9577,7 +9580,6 @@ Invalid AuthEnvelopedData:
 Invalid AuthenticatedData: 
 Invalid AuthorityKeyIdentifier extension
 Invalid Backtrace URL
-Invalid Backtrace url
 Invalid Base.
 Invalid BasicConstraints extension
 Invalid Bcrypt String format.
@@ -10589,6 +10591,7 @@ LongPolling
 LongPollingTransport
 LongPress
 Lookup failed
+Loop
 Loop count exceeded maximum: 
 LotteryShopSkipState
 Lower
@@ -12075,7 +12078,7 @@ Do the following to enable the Android Resolver in Unity:
   dependency resolution.
 * Rebuild your APK and deploy.
 
-On iOS, Firebase requires native (C/C++) and Cocoapod components
+On iOS+ Firebase requires native (C/C++) and Cocoapod components
 that are distributed with the Firebase SDK and via Cocoapods.
 
 It's likely that you did not include the require Cocoapod
@@ -19196,6 +19199,7 @@ activationContext
 activeDeckId
 activeInHierarchy
 activeSelf
+activity
 actualUri
 adServicesFrameworkEnabled
 add
@@ -19274,6 +19278,7 @@ analytics
 ancestor
 ancestor-or-self
 and
+android.app.ActivityManager$MemoryInfo
 android.content.Context
 android.content.pm.PackageManager
 android.graphics.Rect
@@ -19344,6 +19349,7 @@ application.id
 application.installer.name
 application.internet_reachability
 application.mobile
+application.package
 application.playing
 application.sandboxType
 application.session
@@ -19494,6 +19500,7 @@ authenticationType
 authsave.dat
 authsave2.dat
 auto_sel_support_type
+availMem
 availableTransports
 available_0
 avoidanceText
@@ -19540,6 +19547,7 @@ backEffectStop
 background cancel
 backlog
 backspace
+backtrace-machine-id
 backtrace-unity
 backtrace.io
 backtrace.io.backtrace_unity_android_plugin
@@ -20921,6 +20929,7 @@ curve
 curve25519
 custom styles is null
 customErrors
+custom_built
 cut
 cutInCamPlayerAll
 cutInId
@@ -21090,6 +21099,7 @@ destinationIndex
 destinationTimeZone
 destinationType
 detail
+device.machine
 device.manufacturer
 device.model
 device.name
@@ -21782,6 +21792,7 @@ f15
 f2
 f3
 f4
+f495fb59181dfb628734c8825f71e916ddeb0d9398c01f5302f27373ce11da3b
 f5
 f6
 f7
@@ -22159,6 +22170,7 @@ getLanguage
 getLength
 getList family cannot return null.
 getLocalDefaultValue
+getMemoryInfo
 getMethodID
 getName
 getNewsFeeds
@@ -23010,7 +23022,6 @@ installations
 instance
 instanceDocument
 instanceId
-instance_id
 instantiation
 insufficient memory
 insufficient_security
@@ -23267,6 +23278,7 @@ ja
 ja-JP
 jar
 jar:
+java.
 java.io.ByteArrayInputStream
 java.io.EOFException
 java.io.IOException
@@ -23458,7 +23470,6 @@ layer
 layerNames
 lb
 lb-LU
-lblLoop
 lc
 ldap
 ldap://
@@ -24295,6 +24306,7 @@ namespaceUri
 nametable
 namingStrategyType
 nanoseconds
+native
 native handle can not be null
 nativeLibraryDir
 nativeTex can not be null
@@ -27241,6 +27253,7 @@ i:{2}
 {0}, {1}
 {0},{1}
 {0},{1},{2}
+{0}-1
 {0}-attachment.json
 {0}-dump.dmp
 {0}-lg.log

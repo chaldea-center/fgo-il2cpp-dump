@@ -10681,18 +10681,45 @@ public enum MoveDirection
 	None = 4,
 }
 
-public enum Variant.Type
+public enum DependencyStatus
 {
-	Null = 0,
-	Int64 = 1,
-	Double = 2,
-	Bool = 3,
-	StaticString = 4,
-	MutableString = 5,
-	Vector = 6,
-	Map = 7,
-	StaticBlob = 8,
-	MutableBlob = 9,
+	Available = 0,
+	UnavailableDisabled = 1,
+	UnavailableInvalid = 2,
+	UnavilableMissing = 3,
+	UnavailablePermission = 4,
+	UnavailableUpdaterequired = 5,
+	UnavailableUpdating = 6,
+	UnavailableOther = 7,
+}
+
+internal enum VariantExtension.KeyOptions
+{
+	UseObjectKeys = 0,
+	UseStringKeys = 1,
+}
+
+internal enum FutureStatus
+{
+	Complete = 0,
+	Pending = 1,
+	Invalid = 2,
+}
+
+public enum InitResult
+{
+	Success = 0,
+	FailedMissingDependency = 1,
+}
+
+public enum LogLevel
+{
+	Verbose = 0,
+	Debug = 1,
+	Info = 2,
+	Warning = 3,
+	Error = 4,
+	Assert = 5,
 }
 
 internal enum GooglePlayServicesAvailability
@@ -10707,45 +10734,18 @@ internal enum GooglePlayServicesAvailability
 	AvailabilityUnavailableOther = 7,
 }
 
-public enum LogLevel
+public enum Variant.Type
 {
-	Verbose = 0,
-	Debug = 1,
-	Info = 2,
-	Warning = 3,
-	Error = 4,
-	Assert = 5,
-}
-
-public enum InitResult
-{
-	Success = 0,
-	FailedMissingDependency = 1,
-}
-
-internal enum FutureStatus
-{
-	Complete = 0,
-	Pending = 1,
-	Invalid = 2,
-}
-
-internal enum VariantExtension.KeyOptions
-{
-	UseObjectKeys = 0,
-	UseStringKeys = 1,
-}
-
-public enum DependencyStatus
-{
-	Available = 0,
-	UnavailableDisabled = 1,
-	UnavailableInvalid = 2,
-	UnavilableMissing = 3,
-	UnavailablePermission = 4,
-	UnavailableUpdaterequired = 5,
-	UnavailableUpdating = 6,
-	UnavailableOther = 7,
+	Null = 0,
+	Int64 = 1,
+	Double = 2,
+	Bool = 3,
+	StaticString = 4,
+	MutableString = 5,
+	Vector = 6,
+	Map = 7,
+	StaticBlob = 8,
+	MutableBlob = 9,
 }
 
 public enum CollisionType
