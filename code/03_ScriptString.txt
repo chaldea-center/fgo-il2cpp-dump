@@ -1993,8 +1993,8 @@ file crc (
 2.5.4.97
 2.5.8.1.1
 2.6
-2.69.6
 2.7
+2.70.0
 2.8
 2.9
 20
@@ -2005,7 +2005,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230227_20:31
+20230307_19:43
 21.1
 21.10
 21.2
@@ -2252,6 +2252,7 @@ file crc (
 99999999999999999999999999999999999999
 99:99:99
 9DEF3CAFB939277AB1F12A8617A47BBBDBA51DF499AC4C80BEEEA9614B19CC4D5F4F5F556E27CBDE51C6A94BE4607A291558903BA0D0F84380B655BB9A22E8DCDF028A7CEC67F0D08134B1C8B97989149B609E0BE3BAB63D47548381DBC5B1FC764E3F4B53DD9DA1158BFD3E2B9C8CF56EDF019539349627DB2FD53D24B7C48665772E437D6C7F8CE442734AF7CCB7AE837C264AE3A9BEB87F8A2FE9B8B5292E5A021FFF5E91479E8CE7A28C2442C6F315180F93499A234DCF76E3FED135F9BB
+9b6b282e2196826dcc63c1a155e9e2ae72402ef5f243efdcbeb330d1b7c4a6c0
 9ba48cba5ebcb9b6bd33b92830b2a2e0e192f10a
 :
 : 
@@ -2888,6 +2889,7 @@ Account expired
 Account locked out
 Account restriction
 Acos
+ActSelectIndex
 Action
 Action : 
 Action has changed since FSM was saved. Could not recover parameters. Parameters reset to default values.
@@ -8298,8 +8300,11 @@ Finished deserializing {0} with converter {1}.
 Finished in
 Finished serializing {0}
 Finished serializing {0} with converter {1}.
+FinishedCloseFullScreenPhotoCampaign
 FinishedCloseMultiServant
+FinishedClosePhotoCampaignServant
 FinishedFadeMultipleServant
+FinishedFadePhotoServant
 FinishedSvtSlideIn
 Finishing request. Timings: 
 Finnish
@@ -8731,6 +8736,8 @@ HEADER_MSG_MULTIPLE_SERVANT_
 HEADER_MSG_MULTIPLE_SERVANT_SELECTED
 HEADER_MSG_NPUP_BASE
 HEADER_MSG_NPUP_MATERIAL
+HEADER_MSG_PHOTO_SERVANT
+HEADER_MSG_PHOTO_SERVANT_SELECTED
 HEADER_MSG_SKILLUP
 HEADER_MSG_SPECIAL_ASCENSION
 HEADER_MSG_SVTCOMBINE_BASE
@@ -10861,7 +10868,6 @@ MULTIPLE_SERVANT_SELECTED_SERVANT_
 MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_TITLE_
 MULTIPLE_SERVANT_SELECT_IMAGE_DIALOG_WARNING_
 MULTIPLE_VIEW_BUTTON_TEXT
-MULTIPLE_VIEW_BUTTON_TITLE_TEXT
 MUST NOT be "anonymous"
 MY
 MYROOM_FAVORITE_STATUS
@@ -12501,6 +12507,9 @@ PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_POSITION_RESTRICTION_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_CLOSE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_MY_SERVANT_SINGLE_RESTRICTION_TITLE
+PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_CLOSE
+PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_MESSAGE
+PARTY_ORGANIZATION_CONFIRM_START_FIXED_SERVANT_POSITION_RESTRICTION_TITLE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_SUPPORT_POSITION_RESTRICTION_CLOSE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_SUPPORT_POSITION_RESTRICTION_MESSAGE
 PARTY_ORGANIZATION_CONFIRM_START_FIXED_SUPPORT_POSITION_RESTRICTION_TITLE
@@ -12737,6 +12746,10 @@ PEM
 PENDING
 PER_SAME_COMMAND
 PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4
+PHOTO_CAMPAIGN_BUTTON_TEXT
+PHOTO_SERVANT_SELECTED_SERVANT
+PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE
+PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING
 PI
 PIPL_CONSENT
 PIPL_EXPORT
@@ -12984,6 +12997,9 @@ Persist
 Personalization length must be exactly 8 bytes
 Pf
 PgenCounter
+PhotoCampaign1
+PhotoCampaignSelectImageLimit
+PhotoCampaignSelectedUsrSvtId
 Pi
 PickaxetAnimation
 PickaxetAnimation_skip
@@ -13062,6 +13078,8 @@ Point must be on the same curve
 Point not found
 Point not on curve
 Pointer startIndex and length do not refer to a valid string.
+Polaroid_btn_shutter
+Polaroid_img_frame
 Policy constraints could not be decoded.
 Policy constraints extension cannot be decoded.
 Policy constraints extension contents cannot be decoded.
@@ -16141,6 +16159,8 @@ TEA
 TEMP
 TEMPORARY_IGNORE_SLEEP_MODE_FOR_TREASURE_DEVICE_SVT_ID_
 TERM
+TERMINAL_BANNER_ERROR_DIALOG_MESSAGE_TO_SUMMON
+TERMINAL_BANNER_ERROR_DIALOG_TITLE
 TERMINAL_CLEAR_REWARD_DISP
 TERMINAL_NETWORK_ERROR_DIALOG_MESSAGE
 TERMINAL_NETWORK_ERROR_DIALOG_TITLE
@@ -19511,7 +19531,6 @@ az-Latn-AZ
 az-cyrl
 az-latn
 b
-b0afab422647a20c685e0194bbc12c78cfb4e11671cbd3f807475631dbdbe6f7
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
 b8adf1378a6eb73409fa6c9c637ba7f5
@@ -19713,6 +19732,8 @@ bit_board_disappear4
 bit_board_disappear5
 bit_buddy_rankup
 bit_buddy_result
+bit_camera_iconblink
+bit_camera_shutter
 bit_coingrail_get
 bit_com_grand_m
 bit_com_trinity_m
@@ -22623,6 +22644,7 @@ img_bg_quick
 img_bg_rp
 img_bg_saintquartzuse3
 img_bg_seed
+img_bg_shutter
 img_bg_spsummon
 img_bg_total_dp
 img_bg_total_ep
@@ -22927,6 +22949,7 @@ in_app_message
 inapp
 inappropriate_fallback
 include
+includeDeathSvt
 includeUnsubState
 includechildren
 incomingCallDispTime
@@ -24123,6 +24146,11 @@ mstQuestScriptRelease
 mstQuestSpotRelease
 mstRecover
 mstRestriction
+mstRestrictionBase
+mstRestrictionMessage
+mstRestrictionSlot
+mstRestrictionSlotDetail
+mstRestrictionWhole
 mstSetItem
 mstShop
 mstShopAction
@@ -24135,6 +24163,7 @@ mstSkillAdd
 mstSkillDetail
 mstSkillGroup
 mstSkillGroupOverwrite
+mstSkillIndividuality
 mstSkillLv
 mstSpot
 mstSpotAdd
@@ -24825,6 +24854,8 @@ ph
 phase
 phaseRewardImageId
 phaseRouteSelect
+photoSvtPosition
+photoSvtScale
 pickupUserFollower
 pictureFrame
 pictureFrameLoad

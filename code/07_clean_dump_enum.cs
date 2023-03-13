@@ -15075,7 +15075,7 @@ public enum BuffList.TYPE
 	SELFTURNEND_FUNCTION = 85,
 	UP_GIVEGAIN_HP = 87,
 	DOWN_GIVEGAIN_HP = 88,
-	COMMANDATTACK_FUNCTION = 89,
+	COMMANDATTACK_AFTER_FUNCTION = 89,
 	DEADATTACK_FUNCTION = 90,
 	UP_SPECIALDEFENCE = 91,
 	DOWN_SPECIALDEFENCE = 92,
@@ -15115,8 +15115,8 @@ public enum BuffList.TYPE
 	DOWN_FUNCGAIN_NP = 125,
 	UP_FUNC_HP_REDUCE = 126,
 	DOWN_FUNC_HP_REDUCE = 127,
-	UP_DEFENCECOMMAN_DAMAGE = 128,
-	DOWN_DEFENCECOMMAN_DAMAGE = 129,
+	UP_DEFENCE_COMMANDDAMAGE = 128,
+	DOWN_DEFENCE_COMMANDDAMAGE = 129,
 	NPATTACK_PREV_BUFF = 130,
 	FIX_COMMANDCARD = 131,
 	DONOT_GAINNP = 132,
@@ -15124,8 +15124,8 @@ public enum BuffList.TYPE
 	DONOT_ACT_COMMANDTYPE = 134,
 	UP_DAMAGE_EVENT_POINT = 135,
 	UP_DAMAGE_SPECIAL = 136,
-	ATTACK_FUNCTION = 137,
-	COMMANDCODEATTACK_FUNCTION = 138,
+	ATTACK_AFTER_FUNCTION = 137,
+	COMMANDCODEATTACK_BEFORE_FUNCTION = 138,
 	DONOT_NOBLE_COND_MISMATCH = 139,
 	DONOT_SELECT_COMMANDCARD = 140,
 	DONOT_REPLACE = 141,
@@ -15163,6 +15163,12 @@ public enum BuffList.TYPE
 	MASTER_SKILL_VALUE_UP = 174,
 	BUFF_CONVERT = 175,
 	SUB_FIELD_INDIVIDUALITY = 176,
+	COMMANDCODEATTACK_BEFORE_FUNCTION_MAIN_ONLY = 177,
+	COMMANDCODEATTACK_AFTER_FUNCTION_MAIN_ONLY = 178,
+	COMMANDATTACK_BEFORE_FUNCTION_MAIN_ONLY = 179,
+	COMMANDATTACK_AFTER_FUNCTION_MAIN_ONLY = 180,
+	ATTACK_BEFORE_FUNCTION_MAIN_ONLY = 181,
+	ATTACK_AFTER_FUNCTION_MAIN_ONLY = 182,
 	TO_FIELD_CHANGE_FIELD = 10001,
 	TO_FIELD_AVOID_BUFF = 10002,
 	TO_FIELD_SUB_INDIVIDUALITY_FIELD = 10003,
@@ -15235,7 +15241,7 @@ public enum BuffList.ACTION
 	FUNCTION_WAVESTART = 54,
 	FUNCTION_SELFTURNEND = 55,
 	GIVE_GAIN_HP = 56,
-	FUNCTION_COMMANDATTACK = 57,
+	FUNCTION_COMMANDATTACK_AFTER = 57,
 	FUNCTION_DEADATTACK = 58,
 	FUNCTION_ENTRY = 59,
 	CHAGETD = 60,
@@ -15258,8 +15264,8 @@ public enum BuffList.ACTION
 	DONOT_ACT_COMMANDTYPE = 77,
 	DAMAGE_EVENT_POINT = 78,
 	DAMAGE_SPECIAL = 79,
-	FUNCTION_ATTACK = 80,
-	FUNCTION_COMMANDCODEATTACK = 81,
+	FUNCTION_ATTACK_AFTER = 80,
+	FUNCTION_COMMANDCODEATTACK_BEFORE = 81,
 	DONOT_NOBLE_COND_MISMATCH = 82,
 	DONOT_SELECT_COMMANDCARD = 83,
 	DONOT_REPLACE = 84,
@@ -15294,6 +15300,12 @@ public enum BuffList.ACTION
 	MASTER_SKILL_VALUE_UP = 113,
 	BUFF_CONVERT = 114,
 	SUB_FIELD_INDIVIDUALITY = 115,
+	FUNCTION_COMMANDCODEATTACK_BEFORE_MAIN_ONLY = 116,
+	FUNCTION_COMMANDCODEATTACK_AFTER_MAIN_ONLY = 117,
+	FUNCTION_COMMANDATTACK_BEFORE_MAIN_ONLY = 118,
+	FUNCTION_COMMANDATTACK_AFTER_MAIN_ONLY = 119,
+	FUNCTION_ATTACK_BEFORE_MAIN_ONLY = 120,
+	FUNCTION_ATTACK_AFTER_MAIN_ONLY = 121,
 }
 
 public enum BuffList.DEL_AFTER_TYPE
@@ -16132,6 +16144,12 @@ public enum DataNameKind.Kind
 	BUFF_CONVERT = 426,
 	SKILL_GROUP = 427,
 	SKILL_GROUP_OVERWRITE = 428,
+	SKILL_INDIVIDUALITY = 429,
+	RESTRICTION_BASE = 430,
+	RESTRICTION_SLOT = 431,
+	RESTRICTION_SLOT_DETAIL = 432,
+	RESTRICTION_MESSAGE = 433,
+	RESTRICTION_WHOLE = 434,
 }
 
 public enum Device.Type
@@ -16520,6 +16538,7 @@ public enum GameEventType.TYPE
 	COMBINE_COSUTUME_ITEM = 23,
 	MYROOM_MULTIPLE_VIEW_CAMPAIGN = 24,
 	INTERLUDE_CAMPAIGN = 25,
+	MYROOM_PHOTO_CAMPAIGN = 26,
 }
 
 public enum GamePurchase.Type
@@ -18180,6 +18199,8 @@ public enum DataVals.TYPE
 	ActNoDamageBuff = 124,
 	ActSelectIndex = 125,
 	CopyTargetBuffType = 126,
+	NotSkillCopyTargetFuncIds = 127,
+	NotSkillCopyTargetIndividualities = 128,
 }
 
 public enum DataVals.OverChargeState
@@ -18219,6 +18240,7 @@ public enum BannerAddEntity.DispType
 
 public enum BannerEntity.LinkType
 {
+	NONE = 0,
 	WEBVIEW = 1,
 	APPLI = 2,
 	DIALOG = 3,
@@ -19081,6 +19103,43 @@ public enum RecoverEntity.RecoverTarget
 	RP = 2,
 }
 
+public enum RestrictionBaseEntity.RestrictionBaseFlag
+{
+	NO_SUPPORT_LIST = 2,
+	USER_EVENT_DECK = 4,
+	NOT_STARTING_MEMBER = 8,
+	UNIQUE_SVT = 16,
+	NOT_SINGLE_SUPPORT_ONLY = 32,
+}
+
+public enum RestrictionSlotDetailEntity.RestrictionSlotDetailType
+{
+	INDIVIDUALITY = 1,
+	FIXED_POSITION = 2,
+}
+
+public enum RestrictionSlotEntity.RestrictionSlotType
+{
+	MY_SVT = 1,
+	SUPPORT_SVT = 2,
+	NPC_SVT = 3,
+}
+
+public enum RestrictionWholeEntity.RestrictionWholeType
+{
+	NONE = 0,
+	INDIVIDUALITY = 1,
+	ALL_OUT_BATTLE_UNIQUE_SVT = 2,
+	IMPOSSIBLE_POS = 3,
+	INDIVIDUALITY_POS = 4,
+	MY_SVT_INDIVIDUALITY_POS = 5,
+	SUPPORT_SVT_INDIVIDUALITY_POS = 6,
+	NPC_SVT_INDIVIDUALITY_POS = 7,
+	INDIVIDUALITY_STARTING_MEMBER = 8,
+	UNIQUE_SVT = 9,
+	DATA_LOST_BATTLE_UNIQUE_SVT = 10,
+}
+
 public enum ServantAnimationOverwriteEntity.PhaseType
 {
 	NONE = 0,
@@ -19770,6 +19829,16 @@ public enum WarEntity.StartType
 	NONE = 0,
 	SCRIPT = 1,
 	QUEST = 2,
+}
+
+public enum QuestRestrictionInfo.SlotInfo.SlotType
+{
+	MY_SVT = 0,
+	NPC = 1,
+	SUPPORT = 2,
+	MY_SVT_OR_NPC = 3,
+	MY_SVT_OR_SUPPORT = 4,
+	NOT_SET = 5,
 }
 
 private enum ServantLeaderInfo.RandomLimitCountKind
@@ -21078,12 +21147,13 @@ public enum AiLogic.PROC_STATE
 	TURN_ENEMY_END = 11,
 	TURN_PLAYER_START = 12,
 	TURN_PLAYER_END = 13,
-	SHIFT_SERVANT_AFTER = 14,
+	AFTER_TURN_PLAYER_END = 14,
 	ENTRY_UNIT = 15,
 	TURN_START_PREV = 16,
 	BEFORE_DEAD = 17,
 	BEFORE_RESURRECTION = 18,
 	PLAYER_SKILL_AFTER = 19,
+	SHIFT_SERVANT_AFTER = 20,
 }
 
 public enum AiLogic.AiInfo.AITYPE
@@ -21235,7 +21305,7 @@ public enum BattleLogic.LOGICTYPE
 	RESET_ENEMYACTLIST = 54,
 	UPDATE_SHIFTSERVANT = 55,
 	ACT_SHIFTSERVANT = 56,
-	AFTER_SHIFTSERVANT = 57,
+	AFTER_END_PLAYERTURN = 57,
 	PLAYER_ATTACK_TERM = 58,
 	ENEMY_ATTACK_TERM = 59,
 	NPCAI_START_WAVE = 60,
@@ -21251,7 +21321,8 @@ public enum BattleLogic.LOGICTYPE
 	ENEMY_ATTACK_AI_END = 70,
 	ENEMY_ATTACK_AI_PRECHECK = 71,
 	REACTION_PLAYER_ACTION_START = 72,
-	LOGIC_TERM = 73,
+	AFTER_SHIFTSERVANT = 73,
+	LOGIC_TERM = 74,
 }
 
 public enum BattleLogic.ClassRelationBuffShowState
@@ -21390,7 +21461,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	CHECK_SHIFTSERVANT = 36,
 	SHIFT_SERVANT = 37,
 	WITHDRAW = 38,
-	SHIFT_SERVANT_AFTER = 39,
+	TURN_PLAYER_END_AFTER = 39,
 	CHANGE_APP = 40,
 	ENEMY_MASTER_CUTIN = 41,
 	LOAD_IMMEDIATE_ENTRY_SERVANT = 42,
@@ -21414,6 +21485,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	LOGIC_NPC_AI_REACTION = 60,
 	PLAY_FIELD_MOTION_NPC = 61,
 	SHIFT_GUTS = 62,
+	SHIFT_SERVANT_AFTER = 63,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
@@ -23905,6 +23977,15 @@ public enum MyRoomControl.MULTIPLEVIEWSTATE
 	SERVANT = 3,
 }
 
+public enum MyRoomControl.PHOTOCAMPAIGNSTATE
+{
+	INIT = 0,
+	SELECT_SERVANT = 1,
+	SERVANT_AND_UI = 2,
+	SERVANT = 3,
+	FULL_DISP_SERVANT = 4,
+}
+
 public enum MyRoomListControl.ActionType
 {
 	FSM = 0,
@@ -23937,6 +24018,66 @@ public enum MyRoomStateMaterial.SCENARIO
 {
 	STORY = 0,
 	INDIVIDUAL = 1,
+}
+
+public enum PhotoCampaignComponent.ModeKind
+{
+	NORMAL = 0,
+	LOCK = 1,
+	CHOICE = 2,
+	PUSH = 3,
+	SUM = 4,
+}
+
+protected enum PhotoCampaignComponent.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+	SHOW_STATUS = 5,
+	WARNING = 6,
+}
+
+public enum PhotoCampaignListViewItemDraw.DispMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+}
+
+public enum PhotoCampaignListViewManager.InitMode
+{
+	NONE = 0,
+	VALID = 1,
+	INPUT = 2,
+	MODIFY = 3,
+}
+
+public enum PhotoCampaignListViewManager.ResultKind
+{
+	CANCEL = 0,
+	SHOW_STATUS = 1,
+	SELECT = 2,
+}
+
+public enum PhotoCampaignListViewObject.InitMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+	MODIFY = 4,
+}
+
+protected enum PhotoCampaignListViewObject.State
+{
+	INIT = 0,
+	IDLE = 1,
+	MOVE = 2,
+	INPUT = 3,
 }
 
 public enum UserServantCoinListViewItemDraw.DispMode
@@ -24417,6 +24558,7 @@ public enum PartyListViewItem.DeckCondition
 	DATA_LOST_SERVANT = 20,
 	TIME_TO_RESTART = 21,
 	SINGLE_SUPPORT = 22,
+	NEED_INDIVIDUALITY = 23,
 }
 
 public enum PartyListViewItemDraw.DispMode
@@ -26461,6 +26603,9 @@ public enum QuestAfterAction.COMMAND
 	ROAD_HIDE = 200,
 	ROAD_GRAY = 201,
 	ROAD_DISP = 202,
+	ROAD_HIDE_QUICK = 203,
+	ROAD_GRAY_QUICK = 204,
+	ROAD_DISP_QUICK = 205,
 	CAM_MV_SPOT = 300,
 	CAM_MV_ROAD = 301,
 	CAM_MV_GIMMICK = 302,
@@ -26580,6 +26725,13 @@ public enum QuestBoardListViewItemDraw.enStatus
 	enPickup = 4,
 	enMAX = 5,
 	enNotice = 6,
+}
+
+public enum QuestBoardListViewItemDraw.BannerState
+{
+	NONE = 0,
+	READY = 1,
+	PLAY_SLIDE = 2,
 }
 
 public enum QuestBoardListViewManager.InitMode
@@ -28283,6 +28435,18 @@ public enum UITweener.Method
 	BounceIn = 4,
 	BounceOut = 5,
 	EaseOutQuad = 6,
+	QuadraticIn = 7,
+	QuadraticOut = 8,
+	QuadraticInOut = 9,
+	CubicIn = 10,
+	CubicOut = 11,
+	CubicInOut = 12,
+	QuarticIn = 13,
+	QuarticOut = 14,
+	QuarticInOut = 15,
+	QuinticIn = 16,
+	QuinticOut = 17,
+	QuinticInOut = 18,
 }
 
 public enum UITweener.Style
