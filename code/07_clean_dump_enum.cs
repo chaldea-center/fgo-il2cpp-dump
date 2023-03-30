@@ -15584,6 +15584,7 @@ public enum CondType.Kind
 	ALL_SVT_TARGET_SKILL_LV_NUM = 174,
 	SUPER_BOSS_DAMAGE_ABOVE = 175,
 	SUPER_BOSS_DAMAGE_BELOW = 176,
+	NOT_WAR_CLEAR = 179,
 }
 
 public enum CondType.CheckType
@@ -16637,6 +16638,7 @@ public enum ItemType.Type
 	FRIENDSHIP_UP_ITEM = 30,
 	PP = 31,
 	TRADE_AP = 32,
+	RI = 33,
 }
 
 public enum MissionProgressType.Type
@@ -17016,6 +17018,7 @@ public enum ShopType.Type
 	START_UP_SUMMON = 12,
 	SHOP13 = 13,
 	TRADE_AP = 14,
+	SHOP15 = 15,
 }
 
 public enum StatusRank.Kind
@@ -17333,6 +17336,7 @@ public enum TutorialFlag.ImageId
 	SPECIAL_ITEM_HELP = 47,
 	COIN_ROOM = 57,
 	DECK2_1 = 644,
+	SHOP15_HELP = 1029,
 }
 
 public enum UserShopFlag.FlagKind
@@ -25606,6 +25610,7 @@ public enum ShopBuyItemListViewManager.Kind
 	SHOP13 = 16,
 	TRADE_AP = 17,
 	AP = 18,
+	SHOP15 = 19,
 }
 
 public enum ShopBuyItemListViewManager.InitMode
@@ -25712,7 +25717,8 @@ public enum ShopHelpItemInfo.ItemKind
 	SHOP_HELP_COIN_ROOM = 17,
 	SHOP_HELP_SHOP13 = 18,
 	SHOP_HELP_TRADE_AP = 19,
-	SHOP_BLANK = 20,
+	SHOP_HELP_SHOP15 = 20,
+	SHOP_BLANK = 21,
 }
 
 public enum ShopHelpListViewItemDraw.DispMode
@@ -25786,6 +25792,7 @@ protected enum ShopPlayVoiceConstants.VoiceKind
 	ENTER_START_UP_SUMMON_SHOP = 17,
 	ENTER_SHOP13_SHOP = 18,
 	ENTER_TRADE_AP_SHOP = 19,
+	ENTER_SHOP15_SHOP = 20,
 }
 
 public enum ShopPlayVoiceConstants.VoiceFlag
@@ -25809,6 +25816,7 @@ public enum ShopPlayVoiceConstants.VoiceFlag
 	ENTER_START_UP_SUMMON_SHOP = 131072,
 	ENTER_SHOP13_SHOP = 262144,
 	ENTER_TRADE_AP_SHOP = 524288,
+	ENTER_SHOP15_SHOP = 1048576,
 }
 
 public enum ShopRootConstants.State
@@ -25833,6 +25841,7 @@ public enum ShopRootConstants.State
 	COIN_ROOM = 17,
 	SHOP13 = 18,
 	TRADE_AP = 19,
+	SHOP15 = 20,
 }
 
 public enum ShopRootConstants.InputState
@@ -25875,6 +25884,7 @@ public enum ShopTopItemInfo.ItemKind
 	SHOP13 = 19,
 	SHOP_TRADE_AP = 20,
 	SHOP_BLANK = 21,
+	SHOP15 = 22,
 }
 
 public enum ShopTopListViewItemDraw.DispMode
