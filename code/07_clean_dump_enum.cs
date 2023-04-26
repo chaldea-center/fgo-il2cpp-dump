@@ -10403,42 +10403,6 @@ public enum Image.FillMethod
 	Radial360 = 4,
 }
 
-public enum Image.OriginHorizontal
-{
-	Left = 0,
-	Right = 1,
-}
-
-public enum Image.OriginVertical
-{
-	Bottom = 0,
-	Top = 1,
-}
-
-public enum Image.Origin90
-{
-	BottomLeft = 0,
-	TopLeft = 1,
-	TopRight = 2,
-	BottomRight = 3,
-}
-
-public enum Image.Origin180
-{
-	Bottom = 0,
-	Left = 1,
-	Top = 2,
-	Right = 3,
-}
-
-public enum Image.Origin360
-{
-	Bottom = 0,
-	Right = 1,
-	Top = 2,
-	Left = 3,
-}
-
 public enum InputField.ContentType
 {
 	Standard = 0,
@@ -10637,12 +10601,6 @@ public enum PointerEventData.FramePressState
 	Released = 1,
 	PressedAndReleased = 2,
 	NotChanged = 3,
-}
-
-public enum EventHandle
-{
-	Unused = 0,
-	Used = 1,
 }
 
 public enum EventTriggerType
@@ -13220,6 +13178,15 @@ protected enum ClassCompatibilityMenu.State
 	CLOSE = 3,
 }
 
+private enum CommandAssistConfirmDialogComponent.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
 public enum CompleteMissionComponent.Type
 {
 	COMPLETE = 0,
@@ -14980,6 +14947,12 @@ public enum Bank.Type
 	APP_STORE = 3,
 }
 
+public enum BattleActionCondType.Kind
+{
+	NONE = 0,
+	FUNC_TARGET_ALL_DEAD = 1,
+}
+
 public enum BattleCommand.TYPE
 {
 	NONE = 0,
@@ -15584,6 +15557,7 @@ public enum CondType.Kind
 	ALL_SVT_TARGET_SKILL_LV_NUM = 174,
 	SUPER_BOSS_DAMAGE_ABOVE = 175,
 	SUPER_BOSS_DAMAGE_BELOW = 176,
+	EVENT_MISSION_GROUP_ACHIEVE = 177,
 	NOT_WAR_CLEAR = 179,
 }
 
@@ -16151,6 +16125,8 @@ public enum DataNameKind.Kind
 	RESTRICTION_SLOT_DETAIL = 432,
 	RESTRICTION_MESSAGE = 433,
 	RESTRICTION_WHOLE = 434,
+	EVENT_COMMAND_ASSIST = 435,
+	EVENT_MISSION_GROUP = 436,
 }
 
 public enum Device.Type
@@ -16591,6 +16567,7 @@ public enum Gift.Type
 	COMMAND_CODE = 11,
 	EVENT_POINT_BUFF = 12,
 	EVENT_BOARD_GAME_TOKEN = 13,
+	EVENT_COMMAND_ASSIST = 14,
 }
 
 public enum Grade.Kind
@@ -16932,9 +16909,11 @@ public enum SceneList.Type
 	EventReward = 72,
 	WarBoard = 80,
 	CoinRoom = 90,
+	MasterMission = 100,
 	Empty = 1000,
 	SummonEffect = 1001,
 	RegulationChecker = 1002,
+	BattleCharaViewScene = 1003,
 }
 
 public enum ScriptSceneType.Kind
@@ -21052,6 +21031,7 @@ public enum BattleSkillInfoData.TYPE
 	TEMP = 20,
 	BOOST = 21,
 	COMMAND_CODE = 22,
+	COMMAND_ASSIST = 23,
 	TEMP_EFFECT_SQUARE = 100,
 	WARBOARD_PARTY_SKILL = 101,
 }
@@ -22839,6 +22819,15 @@ private enum RecipeRewardDialogComponent.State
 	OPEN = 1,
 	INPUT = 2,
 	CLOSE = 3,
+}
+
+private enum CommandAssistLvUpDialogComponent.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
 }
 
 private enum AutoDiggingDialogComponent.State
@@ -26010,6 +25999,7 @@ public enum SummonEffectComponent.CardType
 	CANCER = 1,
 	SERVANT = 2,
 	COMMAND_CODE = 3,
+	SPECIAL = 4,
 }
 
 public enum SummonEffectComponent.NoticeEffect
@@ -26017,6 +26007,7 @@ public enum SummonEffectComponent.NoticeEffect
 	NONE = 0,
 	SR = 1,
 	SSR = 2,
+	SPECIAL = 3,
 }
 
 private enum SummonEffectComponent.RankUp
@@ -28925,6 +28916,13 @@ public enum USFGOResetCharacterPositionEvent.CharacterPosition
 	ResetAll = 0,
 	ResetPlayers = 1,
 	ResetEnemies = 2,
+}
+
+public enum USFGOSetAudioGroupIndexConditional.AudioGroupData.ApplySide
+{
+	ALL = 0,
+	PLAYER = 1,
+	ENEMY = 2,
 }
 
 public enum USFGOTargetEffectSwitchEvent.EffectSwitch

@@ -1994,7 +1994,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.70.5
+2.71.0
 2.8
 2.9
 20
@@ -2005,7 +2005,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230324_17:19
+20230422_00:01
 21.1
 21.10
 21.2
@@ -2113,7 +2113,6 @@ file crc (
 4441
 460
 469A28EF7C28CCA3DC721D044F4496BCCA7EF4146FBF25C9
-4878a00c78f5038ebbeda33c196d18d77743e177b7e1fe85b737266f77770538
 4B337D934104CD7BEF271BF60CED1ED20DA14C08B3BB64F18A60888D
 4D696E676875615175985BD3ADBADA21B43A97E2
 4E13CA542744D696E67687561517552F279A8C84
@@ -2241,6 +2240,7 @@ file crc (
 91771529896554605945588149018382750217296858393520724172743325725474374979801
 91A091F03B5FBA4AB2CCF49C4EDD220FB028712D42BE752B2C40094DBACDB586FB20
 91E38443A5E82C0D880923425712B2BB658B9196932E02C78B2582FE742DAA28
+928ecbd10fa18cef3828039378eaa0bb0962f0661525f95d5dc3a1f85d9938cf
 94
 94053407
 96341f1138933bc2f503fd44
@@ -3179,7 +3179,6 @@ ArrayOfChoice
 Arrays larger than 2GB are not supported.
 Arrays must be of same size.
 Arrays must contain >= 1 elements.
-Arrow
 Arts!
 Ascii
 Asia
@@ -3788,7 +3787,6 @@ Back/back
 Back/back{0:D5}
 Back/back{0}
 BackAnchor/BtnBg
-Background
 Backtrace
 Backtrace - minidump send time: {0}μs
 Backtrace API doesn't exist. Please validate client token or server url!
@@ -4355,6 +4353,7 @@ COMBINE_SCENE_VOICE_RETURN
 COMBINE_SCENE_VOICE_WELCOME
 COMBINE_SERVANT_SKILL_IDS
 COMBINE_SPEND_QP
+COMMAND_ASSIST_NAME
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_CANCEL_BUTTON
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_DECIDE_BUTTON
 COMMAND_CARD_EXCEED_CONFIRM_DIALOG_EXCEED_AFTER
@@ -5193,7 +5192,6 @@ CheckCharacters
 CheckNum : 
 CheckOutputDeviceType
 CheckedConvert
-Checkmark
 Checksum inside ciphertext is corrupted
 Check{0}BuffTypes
 Child
@@ -6838,7 +6836,6 @@ Drive media mismatch
 Driver blocked
 Drop-down List
 DropItemIconsAtlas
-Dropdown
 Dropdown List
 Dropdown.value
 DspBusSetting_0
@@ -7092,6 +7089,13 @@ EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_TITLE
 EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_EVENT_ITEM
 EVENT_COMBINE_COSTUME_ITEM_OR_NEED_ITEM_CONFIRM_DIALOG_USE_NEED_ITEM
 EVENT_COMBINE_COSTUME_LF
+EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_MESSAGE
+EVENT_COMMAND_ASSIST_CONFIRM_DIALOG_TITLE
+EVENT_COMMAND_ASSIST_DIALOG_LEVEL_FORMAT
+EVENT_COMMAND_ASSIST_DIALOG_MAX_LEVEL_FORMAT
+EVENT_COMMAND_ASSIST_DO_NOT
+EVENT_COMMAND_ASSIST_LEVEL_UP_DIALOG_TITLE
+EVENT_COMMAND_ASSIST_LEVEL_UP_FORMAT
 EVENT_COMMAND_BUFF_POINT_COUNT_STOP
 EVENT_CONQUEST_ARMAMENT_LABEL
 EVENT_CONQUEST_GET_COUNT_LABEL
@@ -7213,6 +7217,7 @@ EVENT_SHOP_BANNER_FINISHED_MSG
 EVENT_SHOP_BANNER_LOCKED_MSG
 EVENT_SHOP_RECEIVED_ITEM_AFTER
 EVENT_SHOP_RECEIVED_ITEM_BEFORE
+EVENT_SKIP
 EVENT_SPOT_COOLTIME_CUSTOMER_RATE_FORMAT
 EVENT_SUBMARINE_DO_SCAN_TITLE
 EVENT_SUBMARINE_GAUGE_CURRENT
@@ -7536,7 +7541,6 @@ English (United Kingdom)
 English (United States)
 English (Zimbabwe)
 Enhanced Key Usage
-Enter text...
 EnterExceptionFilter
 EnterExceptionHandler
 EnterFault
@@ -8281,8 +8285,6 @@ FileNotFound_FusionLog
 Filemark detected
 Filename exceeds range
 Filipino (Philippines)
-Fill
-Fill Area
 Fill offline
 Filter expression '{0}' does not evaluate to a Boolean term.
 Find finds a row based on a Sort order, and no Sort order is specified.
@@ -8612,6 +8614,8 @@ German (Luxembourg)
 German (Switzerland)
 Get
 Get Method not found for '
+GetAnimation
+GetAnimationName
 GetArrayItem
 GetAttributes
 GetBoxGachaEventEnableTime
@@ -8871,9 +8875,7 @@ HYDE_SVT_ID
 Half-trace only defined for odd m
 HammertAnimation
 HammertAnimation_skip
-Handle
 Handle EOF
-Handle Slide Area
 Handle collector count overflows or underflows.
 Handle disk full
 Handle is not allocated
@@ -9081,6 +9083,7 @@ INFO_MSG_SPECIAL_ASCENSION
 INFO_MSG_SVTCOMBINE_BASE
 INFO_MSG_SVTEQ_BASE
 INFO_MSG_SVTEQ_MATERIAL
+INITIALIZE_ANIMATION
 INITIALS
 INIT_CACHE_CLEAR_CONFIRM_CANCEL
 INIT_CACHE_CLEAR_CONFIRM_DECIDE
@@ -9460,6 +9463,8 @@ InitScene
 Initial
 InitialCapacity
 Initialize
+InitializeAnimation
+InitializeAnimationName
 InitiatePurchase: FAIL. Not purchasing product, either is not found or is not available for purchase
 InitiatePurchase: FAIL. PurchasingFramework not initialized.
 InitiatePurchase: FAIL. StoreController is null.
@@ -9488,7 +9493,6 @@ Input.Touches:
 Input: Faked
 Input: Touch
 InputBuffer is null. 
-InputField
 InputField.onSubmit
 InputField.value
 Insertion index was out of range. Must be non-negative and less than or equal to size.
@@ -10197,9 +10201,6 @@ Italian (Italy)
 Italian (Switzerland)
 Item
 Item 
-Item Background
-Item Checkmark
-Item Label
 Item already owned
 Item has already been added. Key in dictionary: '{0}'  Key being added: '{1}'
 ItemArray
@@ -10438,6 +10439,7 @@ LOGIN_DAY
 LOGIN_RESET_AT
 LONGPRESS_ENEMY
 LONG_PRESS
+LONG_PRESS_COMMAND_ASSIST
 LOSE_PERFORMANCE
 LOSE_RETIRE_CLEAR
 LOSS_COMMAND_SPELL
@@ -10454,7 +10456,6 @@ LUIDs exhausted
 LVEXCEED_COMBINE_SPEND_ITEM
 LVEXCEED_COMBINE_SPEND_QP
 LVEXCEED_EXE_CONFIRM
-Label
 Label too long
 Label type must be System.Void if an expression is not supplied
 Label_donominator
@@ -10486,6 +10487,7 @@ Layer.
 Layout
 LayoutType
 LayoutType needs to be of type GUILayoutGroup
+LeafExchange
 LeaveExceptionFilter
 LeaveExceptionHandler
 LeaveFault
@@ -10957,6 +10959,7 @@ MapGimmickEffect_SpotCooltime
 MapGimmickEffect_SpotCooltimeInfo
 MapGimmickEffect_StopPiece
 MapGimmick_
+MapGimmick_{0:0000}
 MapGimmick_{0:D4}
 MapSpotEffect_{0}
 MapSpotPath_{0}
@@ -10985,6 +10988,7 @@ MasterFace/statusMask
 MasterFigure/equip{0:D5}
 MasterFormationScene
 MasterFullFigure/equip{0:D5}
+MasterMissionScene
 MasterPiece
 MasterPoint_effect_{0}
 MasterProfileInfo
@@ -11527,7 +11531,6 @@ NetworkInformationAccess
 Neutral region info
 New
 New 
-New Text
 New capacity cannot be negative or less than the current capacity 
 New item to be added to collection must be compatible with {0}.
 New parameter: 
@@ -12310,9 +12313,6 @@ Operation {0} is not implemented
 Operator '{0}' is ambiguous on operands of type '{1}' and '{2}'. Cannot mix signed and unsigned types. Please use explicit Convert() function.
 Oplock not granted
 Opponent
-Option A
-Option B
-Option C
 OptionAutoSelectParty
 OptionBattle20220729
 OptionBgmVolume
@@ -12895,7 +12895,6 @@ Padding is invalid and cannot be removed.
 Padding not supported
 Paged system resources
 Pagefile quota
-Panel
 Parallelisation parameter p must be >= 1 and <= 
 ParamName
 Param_
@@ -13020,7 +13019,6 @@ PkiFailureInfo: 0x
 PkiPath
 PkixBuilderParameters [
 PlaceOfBirth
-Placeholder
 Platform doesn't support open commands, try to call OpenFactory.PlatformCanOpen
 Play
 Play 
@@ -13774,10 +13772,11 @@ RareTreasureGet
 RareTreasureGetPlus
 RareTreasureGetPlus2
 Rarity
+RarityAnimation
+RarityAnimationName
 RateChange
 Raw Agreement 
 RawData
-RawImage
 RawReceipt Decode Error. 
 Ray Distance should be greater than zero!
 
@@ -15354,15 +15353,11 @@ ScriptManagerAutoMessage
 ScriptManagerSelectBranch
 ScriptRenderSub
 Scroll Bar/item_list_close
-Scroll View
 ScrollBarMotionCompleteValue
 ScrollBarMotionUpdateValue
 ScrollBarValue-
 ScrollRect.value
 ScrollViewEnabled
-Scrollbar
-Scrollbar Horizontal
-Scrollbar Vertical
 Scrollbar.value
 Se/
 SePlayerObject
@@ -15686,7 +15681,6 @@ Slab
 Slider
 Slider.value
 SliderMixed
-Sliding Area
 Slovak
 Slovak (Slovakia)
 Slovenian
@@ -16439,7 +16433,6 @@ Telugu (India)
 TempRenderTexture
 TempScriptActionRednerTexture
 TempStandFigurenRednerTexture
-Template
 Template: 
 Templates
 Temporary Redirect
@@ -18177,7 +18170,6 @@ VideotexString(
 Vietnamese
 Vietnamese (Vietnam)
 ViewEventBoardGameQuestListAuto
-Viewport
 Virtual Method '{0}' of type '{1}' cannot be marked with '{2}' attribute.
 VisibleString(
 VisitBinary
@@ -18762,6 +18754,7 @@ Zs
 [esc]
 [ff730f]
 [ffb505]
+[ffff00]
 [g]
 [h]C1 at infinity
 [i]
@@ -19587,6 +19580,7 @@ bad_certificate
 bad_certificate_hash_value
 bad_certificate_status_response
 bad_record_mac
+badge_lock
 badly formated directory string
 badly sized pair
 balance
@@ -19953,6 +19947,7 @@ btn
 btn_atk_
 btn_auto_off
 btn_auto_on
+btn_badge_organization
 btn_bg_01
 btn_bg_02_off
 btn_bg_02_on
@@ -20557,6 +20552,7 @@ clientVersion
 client_api_error_dialog
 clip
 close
+closeBtn
 closeMenuStateImg
 close_notify
 closed
@@ -22247,6 +22243,7 @@ gimmick
 gimmickAnimType
 gimmickId
 gimmickSvtId
+gimmickType
 gimmick_
 givenname
 gizmos
@@ -22605,6 +22602,7 @@ ifindex
 ig
 ig-NG
 ignoreBattleLoseDialog
+ignoreCommandAssistQuestIds
 ignoreWhiteFade
 ignoretimescale
 ii
@@ -23199,6 +23197,7 @@ isChoice
 isDisableChangeRaidDownMessage
 isEnabled
 isEnabledBillBoard
+isEventCommandAssist
 isFamilyShareable
 isFavorite
 isGetEffect
@@ -23904,6 +23903,7 @@ motionName
 mounted
 move
 moveDown
+moveSceneInfo
 movetopath
 movie
 movieAfterCrossFadeStartFrame
@@ -24014,6 +24014,7 @@ mstEventCampaign
 mstEventCampaignRelease
 mstEventCombine
 mstEventCombineCostume
+mstEventCommandAssist
 mstEventConquestReward
 mstEventCooltimeReward
 mstEventDataLostBattle
@@ -24042,6 +24043,7 @@ mstEventMissionActionAdd
 mstEventMissionAdd
 mstEventMissionCondition
 mstEventMissionConditionDetail
+mstEventMissionGroup
 mstEventPanelMap
 mstEventPanelMapDetail
 mstEventPanelScan
@@ -25971,6 +25973,7 @@ summed-events
 summed_events
 summon
 summonDetail
+summon_rarity_0
 summon_txt_done
 summon_txt_f0
 summon_txt_f01
