@@ -14831,6 +14831,7 @@ public enum Ai.TIMING
 	TURN_ENEMY_START = 5,
 	TURN_ENEMY_END = 6,
 	ENTRY_UNIT = 7,
+	BEFORE_MOVE_WAVE = 8,
 }
 
 public enum AiAct.TYPE
@@ -16459,6 +16460,8 @@ public enum FuncList.TYPE
 	BREAK_GAUGE_UP = 59,
 	BREAK_GAUGE_DOWN = 60,
 	MOVE_TO_LAST_SUBMEMBER = 61,
+	EXTEND_USER_EQUIP_SKILL = 62,
+	UPDATE_ENEMY_ENTRY_MAX_COUNT_EACH_TURN = 63,
 	GET_REWARD_GIFT = 117,
 	SEND_SUPPORT_FRIEND_POINT = 118,
 	MOVE_POSITION = 119,
@@ -17171,6 +17174,7 @@ public enum Target.TYPE
 	ENEMY_ONE_NO_TARGET_NO_ACTION = 27,
 	PT_ONE_HP_LOWEST_VALUE = 28,
 	PT_ONE_HP_LOWEST_RATE = 29,
+	ENEMY_RANGE = 30,
 }
 
 public enum TutorialFlag.Progress
@@ -18184,6 +18188,9 @@ public enum DataVals.TYPE
 	CopyTargetBuffType = 126,
 	NotSkillCopyTargetFuncIds = 127,
 	NotSkillCopyTargetIndividualities = 128,
+	IntervalTurn = 129,
+	IntervalCount = 130,
+	TargetEnemyRange = 131,
 }
 
 public enum DataVals.OverChargeState
@@ -18892,6 +18899,11 @@ public enum NpcServantFollowerEntity.FlagField
 	HIDE_TREASURE_DEVICE_DETAIL = 512,
 	HIDE_RARITY = 1024,
 	NPC = 1,
+}
+
+public enum OpeningMovieEntity.Flag
+{
+	DISPLAY_SEEK_BAR = 1,
 }
 
 public enum OpeningMovieEntity.MaterialPosType
@@ -20792,6 +20804,13 @@ public enum BattleBoostItemInfoData.EFFECT_TIMING
 	BATTLE_START = 1,
 }
 
+public enum BattleBuffData.IntervalData.UpdateTiming
+{
+	NONE = 0,
+	CURRENT_ACTION = 1,
+	OTHER_ACTION = 2,
+}
+
 public enum BattleBuffData.BuffData.STATEENUM
 {
 	NOFIELD = 1,
@@ -20884,6 +20903,8 @@ public enum BattleData.PROGRESS
 	PRECHECK_END_BATTLE = 2048,
 	SERVANT_AI_TURN_START = 4096,
 	TURN_START_FUNCTION = 8192,
+	SERVANT_AI_BEFORE_MOVE_WAVE = 16384,
+	FIELDAI_BEFORE_MOVE_WAVE = 32768,
 }
 
 public enum BattleDataDefine.FieldActorPosition
@@ -21138,6 +21159,7 @@ public enum AiLogic.PROC_STATE
 	BEFORE_RESURRECTION = 18,
 	PLAYER_SKILL_AFTER = 19,
 	SHIFT_SERVANT_AFTER = 20,
+	BEFORE_MOVE_WAVE = 21,
 }
 
 public enum AiLogic.AiInfo.AITYPE
@@ -21306,7 +21328,9 @@ public enum BattleLogic.LOGICTYPE
 	ENEMY_ATTACK_AI_PRECHECK = 71,
 	REACTION_PLAYER_ACTION_START = 72,
 	AFTER_SHIFTSERVANT = 73,
-	LOGIC_TERM = 74,
+	BEFORE_MOVE_WAVE = 74,
+	FIELDAI_BEFORE_MOVE_WAVE = 75,
+	LOGIC_TERM = 76,
 }
 
 public enum BattleLogic.ClassRelationBuffShowState
@@ -21470,6 +21494,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	PLAY_FIELD_MOTION_NPC = 61,
 	SHIFT_GUTS = 62,
 	SHIFT_SERVANT_AFTER = 63,
+	FIELDAI_BEFORE_MOVE_WAVE = 64,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
@@ -27645,11 +27670,13 @@ private enum SoundTestMenu.PrefixList
 	NOBLE_PHANTASM = 1,
 	SERVANTS = 2,
 	VAL_VOICE = 3,
-	RESIDENT_SE = 4,
-	SE = 5,
-	BATTLE = 6,
-	NONE = 7,
-	MAX = 8,
+	SE_SPLIT = 4,
+	RESIDENT_SE = 5,
+	SE = 6,
+	BATTLE = 7,
+	RESOURCE_SOUND = 8,
+	NONE = 9,
+	MAX = 10,
 }
 
 protected enum WebConnectMenu.State
@@ -29262,6 +29289,8 @@ public enum FGOLogic.PROC
 	SERVANT_AI_WAVE = 49,
 	SERVANT_AI_TURN_START = 50,
 	TURN_START_FUNCTION = 51,
+	SERVANT_AI_BEFORE_MOVE_WAVE = 52,
+	FIELDAI_BEFORE_MOVE_WAVE = 53,
 }
 
 public enum FGOPerformance.Effect
