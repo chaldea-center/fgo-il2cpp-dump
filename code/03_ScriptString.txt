@@ -98,6 +98,8 @@ target : Battle
 worldNormal: 
 
 worldPosition: 
+
+・
 
 
 
@@ -1998,7 +2000,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.73.0
+2.74.0
 2.8
 2.9
 20
@@ -2009,7 +2011,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230603_00:54
+20230609_22:06
 21.1
 21.10
 21.2
@@ -2198,7 +2200,6 @@ file crc (
 7503CFE87A836AE3A61B8816E25450E6CE5E1C93ACF1ABC1778064FDCBEFA921DF1626BE4FD036E93D75E6A50E3A41E98028FE5FC235F5B889A589CB5215F2A4
 77E2B07370EB0F832A6DD5B62DFC88CD06BB84BE
 7830A3318B603B89E2327145AC234CC594CBDD8D3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CA
-78469a9ed3a71b234d8da35fba3919eefc76e9c394ec4043aa7f184d3aa34a53
 790408F2EEDAF392B012EDEFB3392F30F4327C0CA3F31FC383C422AA8C16
 79885141663410976897627118935756323747307951916507639758300472692338873533959
 7A556B6DAE535B7B51ED2C4D7DAA7A0B5C55F380
@@ -2237,6 +2238,7 @@ file crc (
 8CB91E82A3386D280F5D6F7E50E641DF152F7109ED5456B412B1DA197FB71123ACD3A729901D1A71874700133107EC50
 8CB91E82A3386D280F5D6F7E50E641DF152F7109ED5456B412B1DA197FB71123ACD3A729901D1A71874700133107EC53
 8CF83642A709A097B447997640129DA299B1A47D1EB3750BA308B0FE64F5FBD3
+8e1abd7dd258446e46fdd1d8f22f6f027bbffda53c693a051ec7b5145b9886f0
 9
 90066455B5CFC38F9CAA4A48B4281F292C260FEEF01FD61037E56258A7795A1C7AD46076982CE6BB956936C6AB4DCFE05E6784586940CA544B9B2140E1EB523F009D20A7E7880E4E5BFA690F1B9004A27811CD9904AF70420EEFD6EA11EF7DA129F58835FF56B89FAA637BC9AC2EFAAB903402229F491D8D3485261CD068699B6BA58A1DDBBEF6DB51E8FE34E8A78E542D7BA351C21EA8D8F1D29F5D5D15939487E27F4416B0CA632C59EFD1B1EB66511A5A0FBF615B766C5862D0BD8A3FE7A0E0DA0FB2FE1FCB19E8F9996A8EA0FCCDE538175238FC8B0EE6F29AF7F642773EBE8CD5402415A01451A840476B2FCEB0E388D30D4B376C37FE401C2A2C2F941DAD179C540C1C8CE030D460C4D983BE9AB0B20F69144C1AE13F9383EA1C08504FB0BF321503EFE43488310DD8DC77EC5B8349B8BFE97C2C560EA878DE87C11E3D597F1FEA742D73EEC7F37BE43949EF1A0D15C3F3E3FC0A8335617055AC91328EC22B50FC15B941D3D1624CD88BC25F3E941FDDC6200689581BFEC416B4B2CB73
 90EAF4D1AF0708B1B612FF35E0A2997EB9E9D263C9CE659528945C0D
@@ -2966,7 +2968,6 @@ Algorithm
 Algorithm identifier of public key of trust anchor could not be read.
 Alias exists
 All
-All channels deleted: 
 All elements of list must be of type 
 All elements of set must be of type 
 All elements of set must be of type string.
@@ -3067,6 +3068,7 @@ AndroidJNIHelper.GetSignature: using Byte parameters is obsolete, use SByte para
 AndroidJNIHelper: converting Byte array is obsolete, use SByte array instead
 AndroidJNIHelper: converting from Byte array is obsolete, use SByte array instead
 AndroidJavaException
+AndroidReceivedNotificationMainThreadDispatcher
 AnimCameraObject
 AnimFrameOutEnd
 Animation clip {0} in state {1} is Legacy. Set clip.legacy to false, or reimport as Generic to use it with SimpleAnimationComponent
@@ -3720,6 +3722,7 @@ BLAKE2b digest bit length must be a multiple of 8 and not greater than 512
 BLAKE2s
 BLAKE2s digest bit length must be a multiple of 8 and not greater than 256
 BLANKEARTH WAIT
+BLANK_EARTH_SPOT_ANIM_STATE
 BLOWFISH
 BLOWFISH/CBC
 BMP STRING
@@ -4216,6 +4219,8 @@ CHRONOLOGY_DIALOG_CLOSE
 CHRONOLOGY_DIALOG_TITLE
 CHRONOLOGY_OPEN_BUTTON
 CLASS_BOARD_2D_CAMERA_DEFAULT_SIZE
+CLASS_BOARD_ADD_CLASS_DIALOG_CONTENT_FORMAT
+CLASS_BOARD_ADD_CLASS_DIALOG_TITLE
 CLASS_BOARD_BASE_UNRELEASED
 CLASS_BOARD_CAMERA_SELECT_EASING_TYPE
 CLASS_BOARD_CAMERA_SELECT_MOVE_MAX_DISTANCE
@@ -4253,6 +4258,8 @@ CLASS_BOARD_LOCK_RELEASE_CONDITION_PROG
 CLASS_BOARD_LOCK_RELEASE_CONDITION_TITLE
 CLASS_BOARD_MISSION_CLEAR_MESSAGE
 CLASS_BOARD_OPEND_MISSION_CLEAR_KEY
+CLASS_BOARD_RELEASE_DIALOG_CONTENT
+CLASS_BOARD_RELEASE_DIALOG_TITLE
 CLASS_BOARD_RELEASE_QUEST_ID
 CLASS_BOARD_SELECT_HEADER_MESSAGE
 CLASS_BOARD_SQUARE_DETAIL_DIALOG_TITLE
@@ -4821,12 +4828,9 @@ CanNotSkip
 Canada
 Cancel
 Cancel violation
-CancelAllDisplayedNotifications
-CancelAllNotifications
 CancelButton
 CancelDragEnd
 CancelInput
-CancelNotification
 Cancelled
 Cannot Add a field that we already have
 Cannot Add a property that we already have
@@ -5061,6 +5065,9 @@ Cannot redefine a complex type as simple type.
 Cannot redefine a simple type as complex type.
 Cannot redefine label '{0}' in an inner block.
 Cannot register new digest OIDs after the data stream is opened
+Cannot register notification channel, the channel ID is not specified.
+Cannot register notification channel: {0} , the channel Description is not set.
+Cannot register notification channel: {0} , the channel Name is not set.
 Cannot remove 
 Cannot remove a column that doesn't belong to this table.
 Cannot remove a constraint that doesn't belong to this table.
@@ -5246,11 +5253,8 @@ Changing the IsKeepAlive property while processing the request is not supported.
 Changing the StreamFragmentSize property while processing the request is not supported.
 Channel
 Channel 
-Channel created: 
 Channel template '
-Channel was not created: 
 Channel {0} is not securable while ensureSecurity is specified as true
-Channels were not deleted: 
 ChapterClear
 ChapterProgress
 ChapterStart
@@ -5267,7 +5271,6 @@ CharaGraph/9400010
 CharaGraph/CharaGraphEx/
 CharaGraphOption/CharaGraphOption
 CharaGraphOptionAtlas
-Check the channel in your app settings!
 CheckCharacters
 CheckNum : 
 CheckOutputDeviceType
@@ -5610,7 +5613,6 @@ Connection: Keep-Alive
 ConnectionEventHelper
 ConnectionHelper
 Connector.Connect
-Console
 Console key values must be between 0 and 255.
 Constant-time lookup not supported
 Constraint
@@ -6771,7 +6773,6 @@ DelayEnd
 DelayLoadStart
 Delegate
 Delete pending
-DeleteNotificationChannel
 DeleteRule
 Deleted row information cannot be accessed through the row.
 Deleted rows inaccessible.
@@ -6931,6 +6932,7 @@ DownloadEventUIAtlas
 DownloadEventUIAtlas8028500
 DownloadEventUIAtlas{0}01
 DownloadEventUIAtlas{0}{1}
+DownloadEventUIAtlas{0}{1}{2}
 DownloadFaceAtlas
 DownloadFaceBattleAtlas
 DownloadItemAtlas
@@ -7420,6 +7422,7 @@ E_CANCELLED
 E_NO_MORE
 Each value has to be >= 0.
 EarthPoint_
+EarthPoint_{0:00000}
 Easing type not implemented
 Ed
 Ed25519
@@ -8266,6 +8269,7 @@ FULLDOWNLOAD_INFO_TXT
 FULL_SCREEN_NP_CHRS
 FULL_SCREEN_NP_SEQ_IDS
 FULL_TD_POINT
+FUNC_VALUE_PERCENT
 FaceBattle/DownloadFaceBattle
 Faces/DownloadFace
 Facet should go before 'attribute', 'attributeGroup', or 'anyAttribute'.
@@ -8307,6 +8311,7 @@ Failed to read certificate
 Failed to read data to TLS context
 Failed to read record
 Failed to retrieve certificates on request.
+Failed to schedule notification, it did not contain a valid FireTime
 Failed to set list of supported ciphers
 Failed to sort tree! It is likely there is a missing required dependency:
 
@@ -8365,6 +8370,7 @@ Fgo_20211029
 Fgo_20220404
 Fgo_20220427
 Fgo_20220601
+Fgo_20230514_1
 Field '{0}' defined on type '{1}' is not a field on the target object which is of type '{2}'.
 Field '{0}' not found.
 Field '{0}.{1}' is not defined for type '{2}'
@@ -8769,7 +8775,6 @@ GetNextAvailable - activeConnections({0}) >= HTTPManager.MaxConnectionPerServer(
 GetNextAvailable - creating new connection, key: {0} 
 GetNextAvailable - returning with connection. state: {0}, CanProcessMultiple: {1}
 GetNextAvailable - waiting for protocol support message. activeConnections: {0}, ProtocolSupport: {1} 
-GetNotificationChannelIds
 GetParentRow requires a row whose Table is {0}, but the specified row's Table is {1}.
 GetProductList
 GetProperties
@@ -8829,12 +8834,10 @@ Greenlandic (Greenland)
 Gregorian Calendar
 GregorianCalendar
 Ground/Field/bg(Clone)
-Group
 Group exists
 Group not available
 Group not found
 Group not online
-Grouped notification
 Guid
 Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 Guid string should only contain hexadecimal characters.
@@ -9548,6 +9551,7 @@ Indian
 Indices length does not match the array rank.
 Indigenous type
 Indirect Reference: 
+Individuality
 Indonesian
 Indonesian (Indonesia)
 IndvAddBuffPassive
@@ -10652,10 +10656,6 @@ LimitUpBaseSvtNodeName
 LimitUpResSvtNodeName
 LimitedMission
 LimitedPeriod
-Line#1
-Line#2
-Line#3
-Line#4
 LineNumberOffset
 LinePositionOffset
 Linux
@@ -11206,7 +11206,6 @@ Mesh indices array start can't be negative.
 Mesh indices array start is outside of array size.
 Mesh indices array start+count is outside of array size.
 Message
-Message 
 Message Digest
 Message exceeds max size
 Message sync only
@@ -11389,7 +11388,6 @@ Multi dimension array is not supported on this operation.
 Multi dimensional array.
 Multi-Status
 Multicast family is not the same as the family of the '{0}' Client.
-Multiline notification
 Multiple Choices
 Multiple buffers cannot be used with this method.
 Multiple constructors with the JsonConstructorAttribute.
@@ -11540,6 +11538,7 @@ NOT_SELECT_COSTUME
 NOT_SELECT_EQUIPED
 NOT_SELECT_LET_GO
 NOT_SELECT_MAX_EQUIP
+NOT_UI_CHANGE_MAP_IDS
 NOW_LOADING
 NO_CHANGE_EQUIP
 NO_ENTRY_NAME
@@ -11671,7 +11670,6 @@ NewArrayBounds
 NewArrayInit
 NewDataSet
 NewLineChars
-News
 Next reconnect attempt after 
 Next working key could not be retrieved.
 Nl
@@ -11962,14 +11960,7 @@ NotSupported_WriteEntityRef
 Notation
 NoticeLastModified
 NoticeRarity
-Notification
-Notification with app icon
-Notification with callback
-Notification with news channel
-Notification.CallbackData
-Notification.Id
 Notification/DownloadNotification
-NotificationHelper.Scheduled
 Notify enum dir
 Nov
 Novell.Zenworks.Zmd.Public.UnixChannel
@@ -12425,7 +12416,6 @@ Only trinomial and pentomial curves are supported
 Only white space characters should be used.
 Ooops! key size 512 or 1024 bit.
 OpaqueTransport
-Open app and check the checkbox!
 Open failed
 Open files
 OpenResult
@@ -13205,7 +13195,6 @@ Playing
 PlaymakerIcon.tiff
 Please call the BestHTTP.HTTPManager.Setup() from one of Unity's event(eg. awake, start) before you send any request!
 Please enable BacktraceClient first.
-Please rate the asset on the Asset Store!
 Please verify the AAR
 Please, call AddPrefix before using this method.
 Please, call Start before using this method.
@@ -13692,6 +13681,12 @@ RESET_DIGGING_CONFIRM_DIALOG_DECIDE
 RESET_DIGGING_CONFIRM_DIALOG_MESSAGE
 RESET_DIGGING_CONFIRM_DIALOG_TITLE
 REST
+RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE
+RESTRICTION_NOT_SATISFY_DIALOG_NONE_RESTRICTION
+RESTRICTION_NOT_SATISFY_DIALOG_TITLE
+RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE
+RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX
+RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_TITLE
 RESULT_BOUNDS_GETVOICE
 RESULT_BOUNDS_GET_COIN_COUNT
 RESULT_BOUNDS_GET_COIN_NAME
@@ -14085,7 +14080,6 @@ Renegotiation not supported
 Reparse attribute conflict
 Reparse tag invalid
 Reparse tag mismatch
-Repeated notification
 Replacement pattern error.
 Replicate
 Req not accep
@@ -14249,6 +14243,7 @@ SAME_SERVANT
 SAME_SVTEQUIP_COMBINE
 SAMPLERANGE_{0}
 SAVEKEY_
+SAVEKEY_BlankEarthRank
 SAVEKEY_BlankEarthSpotId
 SAVEKEY_CampaignDirectBonus
 SAVEKEY_ClearEventQuestIds
@@ -14309,6 +14304,7 @@ SDK_INT
 SE
 SE Count : 
 SE Play (not found) for debug : [
+SEAL_COMBINE_LIMIT_TEXT_{0}
 SEED
 SEED engine not initialised
 SEED/CBC/PKCS7PADDING
@@ -15476,6 +15472,7 @@ Save and load Disabled!
 SaveCookies
 SaveDataVer
 SaveLibrary
+SavePlayedClassBoardBaseRelease
 Sc
 Scalar cannot be null
 Scalar is not in the interval [1, n - 1]
@@ -15722,11 +15719,9 @@ SetIssuerUniqueId()
 SetLabelUpdate
 SetLength
 SetMainColor
-SetMainState
 SetMargins
 SetMember
 SetNotMatched
-SetNotification
 SetNull
 SetParentRow requires a child row whose Table is {0}, but the specified row's Table is {1}.
 SetState - ConnectionStates.Reconnecting
@@ -15798,7 +15793,6 @@ Signing Requires Private Key.
 Signing Time
 Signing requires private key.
 Simple content restriction must have a simple type child if the content type of the base type is not a simple type definition.
-Simple notification
 Simple type '{0}' has already be declared with different '{1}'.
 SimplePKIXCertPathBuilderResult: [
 
@@ -15825,6 +15819,7 @@ Skein key must be at least 128 bits.
 Skein-
 Skein-MAC-
 SkillIcons/DownloadSkillIcon
+SkillId({0}),Lv({1}),DetailId({2})
 SkillItemNodeName
 SkillNameInfo
 SkillRankUp
@@ -16843,8 +16838,6 @@ The actual length is not equal to the specified length.
 The added or subtracted value results in an un-representable DateTime.
 The algorithm group '{0}' is invalid.
 The algorithm name '{0}' is invalid.
-The app was resumed by clicking a notification, callback.Data = 
-The app was started by clicking a notification, callback.Data = 
 The argument cannot be converted to a string.
 The argument must be derived from {0}.
 The argument to function '{0}' in '{1}' cannot be converted to a node-set.
@@ -17387,8 +17380,6 @@ This is an invalid xsi:type '{0}'.
 This is an unclosed string.
 This is an unexpected token. The expected token is '{0}'.
 This is an unknown facet.
-This is multiline message ticker!
-This is repeated message ticker!
 This method is not implemented by this class.
 This method is not supported by this class.
 This method is only valid for addresses in the InterNetwork or InterNetworkV6 families
@@ -17480,6 +17471,7 @@ Timeouts are not supported on this stream.
 Timer-Scheduler
 Timestamp could not be parsed
 Timestamp token received cannot be converted to ContentInfo
+TipsArchiveDialog
 Title
 Title/Prefabs/title_effect00
 TitleInfoAreaImproveConfirmDialogPrefab
@@ -19028,6 +19020,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 [{0}]{1:N0}[-]
 [~
 [~1]
+[​
 \
 \"
 \#
@@ -19061,6 +19054,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 \u2029
 \u{0}{1}{2}{3}
 \x{0:X2}
+\{\{([0-9_]{1,5}):(\w+):(\w{1,2})\}\}
 ]
 ]
 
@@ -19079,6 +19073,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 ]]
 ]]>
 ]}
+]が取れませんでした
 ^
 ^(?<scheme>.*://)?(?<host>[^:]*)(?<port>:[0-9]{1,5})?$
 ^([a-zA-Z]{1,8})(-[a-zA-Z0-9]{1,8})*$
@@ -19507,6 +19502,7 @@ ancestor-or-self
 and
 android.app.ActivityManager$MemoryInfo
 android.content.Context
+android.content.Intent
 android.content.pm.PackageManager
 android.graphics.Rect
 android.net.Uri
@@ -19537,7 +19533,6 @@ anotherItemIds
 anotherPayFlag
 anotherPayName
 anotherPayType
-anp_
 any
 any element
 any element in namespace '{0}'
@@ -19557,7 +19552,6 @@ appDataSplitMode
 appStore
 appVer
 appWillOpenUrl
-app_icon
 app_version_up
 appear
 appearance
@@ -19628,6 +19622,7 @@ ar223
 ar60
 ar93
 arabic
+archive_button
 areaImprovementQuest
 areaNum
 ares
@@ -19727,6 +19722,7 @@ authenticationScheme
 authenticationType
 authsave.dat
 authsave2.dat
+autoCancel
 auto_sel_support_type
 availMem
 availableTransports
@@ -19908,6 +19904,7 @@ bg_{0}
 bgm
 bgmId
 bgmStop
+bgmStopEnd
 bi1 out of range
 bi2 out of range
 big
@@ -19980,6 +19977,8 @@ bit_item_get01_4
 bit_item_get{0}
 bit_mastercutin01
 bit_order_grade_get
+bit_orderrank_change
+bit_orderrank_change_{0:00}
 bit_present_get
 bit_present_get{0}
 bit_raid_battlereport
@@ -20057,6 +20056,7 @@ blacklist/top
 blacklist_regist
 blacklist_remove
 blacklist_top
+blankEarthRotateKey
 blink
 blit to Back buffer
 blob
@@ -20448,9 +20448,15 @@ can't re-encode certificate!
 can't recode value for oid 
 can't setup the CertStore
 can't setup the X509Store
+canBypassDnd
 canGoBack
 canGoForward
+canShowBadge
 cancel
+cancelAllNotifications
+cancelAllPendingNotificationIntents
+cancelDisplayedNotification
+cancelPendingNotificationIntent
 canceled_purchase_error
 cancellationToken
 candidate
@@ -20587,6 +20593,7 @@ changeUpdateStatus
 changeUserSvtIds
 changedItems
 channel
+channelID
 channelInfo
 channelSinkProviders
 channelSinkProviders/clientProviders
@@ -20844,10 +20851,10 @@ com.android.billingclient.api.PurchasesUpdatedListener
 com.android.billingclient.api.SkuDetailsParams
 com.android.billingclient.api.SkuDetailsResponseListener
 com.aniplex.fategrandorder
-com.company.app.news
 com.crimw.crijavaclasses.CriOutputDeviceObserver
-com.hippogames.simpleandroidnotifications.Controller
 com.unity
+com.unity.androidnotifications.NotificationCallback
+com.unity.androidnotifications.UnityNotificationManager
 com.unity.purchasing
 com.unity.purchasing.amazon.AmazonPurchasing
 com.unity.purchasing.common.IUnityCallback
@@ -21189,6 +21196,7 @@ cutInPrefabSizes
 cutInView
 cutInVoices
 cutin
+cutinAdditionalTime
 cutinId
 cutting
 cy
@@ -21313,6 +21321,7 @@ delegate
 delegateType
 delete
 deleteAccount
+deleteNotificationChannel
 deleteState
 deleted
 delimiter
@@ -21656,8 +21665,10 @@ en_waist
 en_weapon_
 enableFullScreen
 enableInAppMessagesOnForegroundTransition
+enableLights
 enablePendingPurchases
 enablePushNotification
+enableVibration
 enabled
 enabledRuntimePermission
 enc
@@ -21812,6 +21823,7 @@ evGO_SELECT
 evGO_SELECT_SHORTCUT
 evGoBack_Earth
 evMap2D_Mark_Create_Finish
+evRETURN_SPOT
 evSPOT_CREATE_FINISH
 evSpotSelect_GoQuestSelect
 evSpotSet_Finish
@@ -22147,6 +22159,7 @@ finish
 finishEffectId
 finishUpdateValue
 fire-
+fireTime
 first
 firstByte
 firstEffectTime
@@ -22338,6 +22351,7 @@ functionInstantDeath>>:
 functions
 fy
 fy-NL
+f{0}
 g
 g must be in [2, p-1]
 gDay
@@ -22393,6 +22407,7 @@ getApplicationContext
 getApplicationInfo
 getAssetPackStates
 getAttribution
+getBooleanExtra
 getClass
 getComponentType
 getConnectionState
@@ -22406,7 +22421,6 @@ getDescription
 getDeviceID
 getExp
 getExternalStorageState
-getExtras
 getFieldID
 getFieldSignature
 getFilesDir
@@ -22414,8 +22428,7 @@ getFreeTrialPeriod
 getGoogleAdId
 getHeight
 getInstance
-getInt
-getIntent
+getIntExtra
 getIntroductoryPrice
 getIntroductoryPriceCycles
 getIntroductoryPricePeriod
@@ -22425,10 +22438,13 @@ getLanguage
 getLength
 getList family cannot return null.
 getLocalDefaultValue
+getLongExtra
 getMemoryInfo
 getMethodID
 getName
 getNewsFeeds
+getNotificationChannels
+getNotificationManagerImpl
 getOrderId
 getOriginalJson
 getPackageInfo
@@ -22454,6 +22470,7 @@ getStackTraceString
 getStreamMaxVolume
 getStreamVolume
 getString
+getStringExtra
 getSubscriptionPeriod
 getSystemService
 getTime
@@ -22504,8 +22521,10 @@ graphic.vendor.id
 greek
 greek8
 group
+groupAlertBehaviour
 groupId
 groupSeqIDs
+groupSummary
 growFactor
 gsw
 gsw-FR
@@ -22537,7 +22556,6 @@ harvestGrowthBeforeQuestId
 harvestGrowthTitle
 hasChanges
 hasErrors
-hasExtra
 hasFocus
 hasNext
 hash
@@ -22636,7 +22654,6 @@ http://schemas.xmlsoap.org/soap/encoding/
 http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name
 http://schemas.xmlsoap.org/wsdl/
 http://someone.is.screwing.with.the.headers.com/
-http://u3d.as/A6d
 http://www.w3.org/
 http://www.w3.org/1999/XMLSchema-instance
 http://www.w3.org/2000/09/xmldsig#dsa-sha1
@@ -22667,7 +22684,6 @@ https://
 https://cdn.data.fate-go.jp/AssetStorages
 https://collect.analytics.unity3d.com/api/analytics/collect/v1/projects/{0}/environments/{1}
 https://events.backtrace.io/api/
-https://github.com/hippogamesunity/SimpleAndroidNotificationsPublic/wiki
 https://itunes.apple.com/lookup?id=
 https://operate-sdk-telemetry.unity3d.com
 https://play.google.com/store/apps/details?id=
@@ -22982,9 +22998,15 @@ img_parameter_C
 img_parameter_D
 img_parameter_E
 img_parameter_EX
+img_parameter_endurance
+img_parameter_luck
+img_parameter_magic
 img_parameter_minus
+img_parameter_np
 img_parameter_plus
 img_parameter_question
+img_parameter_speed
+img_parameter_strength
 img_parametergage_bar
 img_parametergage_bar_ex
 img_parametergage_edge
@@ -23181,6 +23203,7 @@ implicit tagging for tag:
 implicit tagging not implemented
 implicitly tagged tagged object
 import
+importance
 imprint digest the wrong length
 in
 in closure
@@ -23589,7 +23612,6 @@ jingle
 jingleStop
 joint_all_Base
 joint_sideflip_
-jp.delightworks.Fgo.player.AndroidPlugin
 jp.delightworks.unityplugin.CommonServicePlugin
 jp.delightworks.unityplugin.permission.PermissionRequestPlugin
 jp.delightworks.unityplugin.webview.WebViewCallPlugin
@@ -23720,6 +23742,7 @@ lang
 langVersion
 language
 large
+largeIconStr
 last
 last block incomplete in decryption
 last-btime
@@ -23853,6 +23876,7 @@ lock_off_{0}
 lock_on_{0}
 lock_stopper
 lock_{0}
+lockscreenVisibility
 logDetail
 logical
 login
@@ -23882,6 +23906,7 @@ lv-LV
 m
 m value must be < bitlength of p
 m7bYe+BXpb5KiNoaej//MFHrZO5G6lLY+wGHsdjx9zA=
+mContext
 mUnityPlayer
 m_MaxCapacity
 m_StringValue
@@ -24227,6 +24252,7 @@ mstCombineAppendPassiveSkill
 mstCombineCostume
 mstCombineLimit
 mstCombineLimitGift
+mstCombineLimitRelease
 mstCombineMaterial
 mstCombineQp
 mstCombineQpSvtEquip
@@ -24497,6 +24523,7 @@ mstTreasureBoxTalk
 mstTreasureDevice
 mstTreasureDeviceDetail
 mstTreasureDeviceLv
+mstTreasureDeviceSequenceWeight
 mstUserExp
 mstVoice
 mstVoiceClosedMessage
@@ -24714,6 +24741,7 @@ non-empty set required
 non-loaded asset was detected. effectId = {0}
 nonNegativeInteger
 nonPositiveInteger
+nonStopEndBgm
 nonce
 nonce must have length from 7 to 13 octets
 nonce="{0}", 
@@ -24759,9 +24787,9 @@ notEndEventMissionFix
 notHavingQuest
 notMeets
 notResetResultDispFlag
+notUseRestrictionDialog
 notation
 notification
-notification created at 
 notification/regist
 notification2
 notification3
@@ -25292,6 +25320,7 @@ purchase_by_stone
 purchasebybankrequestsave.dat
 push_notification
 put
+putExtra
 putString
 px
 q
@@ -25455,6 +25484,7 @@ regexPattern
 regexString
 registPushKey
 regist_account
+registerNotificationChannel
 registry
 rel_
 relation
@@ -25474,6 +25504,7 @@ removeSessionPartnerParameter
 renewOnCallTime
 repeatButton
 repeatCount
+repeatInterval
 repeatReward
 repeated extension found: 
 replace
@@ -25634,6 +25665,7 @@ sceneLoad
 sceneSet
 sched.cs.involuntary
 sched.cs.voluntary
+scheduleNotificationIntent
 scheduler
 schema
 schemaLocation
@@ -25800,6 +25832,7 @@ setLogLevel
 setNativeExceptionOnProxy
 setNavigationBarColor
 setNeedsCost
+setNotificationCallback
 setNumItems
 setObfuscatedAccountId
 setObfuscatedProfileId
@@ -25897,6 +25930,7 @@ should be a uint8
 shouldShowRequestPermissionRationale
 show
 showResultItem
+showTimestamp
 showTurn
 shown
 si
@@ -25966,6 +26000,7 @@ sma
 sma-NO
 sma-SE
 small
+smallIconStr
 smfSpotBtn_Click
 smj
 smj-NO
@@ -25981,10 +26016,12 @@ software
 solo_bg
 some adjustment rules in the adjustmentRules parameter overlap
 sorry, this method is only for decryption, not for signing
+sortKey
 sortkey1
 sortkey2
 sorts
 soundStopAll
+soundStopAllEnd
 soundStopAllFade
 soundlogo_
 source
@@ -26262,6 +26299,7 @@ surrogateChar
 sv
 sv-FI
 sv-SE
+svalsから[
 svtBgmChange
 svtBuffTurnExtend
 svtCommonFlag
@@ -26453,8 +26491,10 @@ text/html
 text/plain
 text/plain; charset=
 text/plain; charset="
+textContent
 textInfo
 textOnly
+textTitle
 textWriter
 text_effect_color
 textarea
@@ -26504,6 +26544,7 @@ timeoutTicks
 timerIntervalInMilliseconds
 timerStartInMilliseconds
 timestamp
+tipsarchivestatesave_{0}.dat
 title
 title2_2
 titleOffset
@@ -27005,6 +27046,7 @@ userservantcombinevoicesave.dat
 userservantcommentsave.dat
 userservantlocksave.dat
 userservantnewsave.dat
+usesChronometer
 ushort
 using
 utf-16
@@ -27102,6 +27144,7 @@ verticalsliderthumb
 verticalsliderthumbextent
 vi
 vi-VN
+vibrationPattern
 view
 viewEnemy
 viewQuestEnemyInfo
@@ -27371,6 +27414,7 @@ yyMMdd
 yyMMddHHmmZ
 yyMMddHHmmss
 yyMMddHHmmss'GMT'zzz
+yyMMddHHmmssffffff
 yyyy
 yyyy MMMM
 yyyy'-'MM'-'dd HH':'mm':'ss'Z'
@@ -27453,7 +27497,6 @@ zu-ZA
 {0:#,0}/{1:#,0}
 {0:0.00}
 {0:0.0}%
-{0:00000}
 {0:0000}
 {0:00}
 {0:00}:{1:00}
@@ -27543,8 +27586,6 @@ i:{2}
 {0} module '{1}' for '{2}'
 {0} moving:{1}
 {0} must be greater than or equal to {1}
-{0} new messages
-{0} new notifications
 {0} on {1}
 {0} x {1} @ {2}Hz
 {0} {1}
@@ -27622,6 +27663,7 @@ i:{2}
 {0}[{1}]
 {0}_{1:D0}_{2}
 {0}_{1}
+{0}_{1})に該当する効果が存在しません
 {0}_{1}_{2}
 {0}as well as
 {0}flating:  rc={1}  msg={2}
@@ -27645,6 +27687,7 @@ i:{2}
 {0}×{1}
 {0}、
 {0}分{1}秒
+{0}番目の効果が存在しません
 {0}秒
 {0}（＋{1}）
 {1:D2}h:{2:D2}m:{3:D2}s:{10}ms
@@ -27656,6 +27699,7 @@ i:{2}
 {xx
 {xxx
 {xxxx
+{{
 {{ path = {0}, args = {1} }}
 {{"ProductId":"{0}"}}
 {{"protocol":"{0}", "version": 1}}
@@ -27797,6 +27841,7 @@ i:{2}
 クラス：
 サーバアドレスが手動で変更されたので、
 CUSTOM に変更しました
+サーヴァント未編成
 データ更新
 データ更新開始
 バスター
@@ -27825,6 +27870,7 @@ CUSTOM に変更しました
 仮
 全て
 全ての通知
+再臨封印中
 分
 大
 大正
@@ -27835,6 +27881,7 @@ CUSTOM に変更しました
 必要
 所持
 指定されたプロダクトデータが取得できませんでした
+指定可能な少数点以下の桁数は({0}～{1})です
 既に表明違反時の処理が設定されています
 日
 时
@@ -27846,6 +27893,9 @@ CUSTOM に変更しました
 時
 曲数 : 
 月
+未定義フォーマット[{0}]
+指定可能なフォーマットは[{1}]です
+未達成
 残り{0:#,0}体
 秒
 表明違反時処理が設定されていません

@@ -12109,46 +12109,31 @@ private enum GZipOutputStream.OutputState
 	Closed = 3,
 }
 
-public enum NotificationExecuteMode
-{
-	Inexact = 0,
-	Exact = 1,
-	ExactAndAllowWhileIdle = 2,
-}
-
-public enum NotificationIcon
-{
-	Bell = 0,
-	Biohazard = 1,
-	Clock = 2,
-	Cloud = 3,
-	Coin = 4,
-	Crown = 5,
-	Diamond = 6,
-	Dollar = 7,
-	Event = 8,
-	Gear = 9,
-	Heart = 10,
-	Message = 11,
-	Power = 12,
-	Return = 13,
-	Save = 14,
-	Search = 15,
-	Skull = 16,
-	Star = 17,
-	Sync = 18,
-	Wrench = 19,
-	Custom = 20,
-}
-
-public enum NotificationImportance
+public enum NotificationStyle
 {
 	None = 0,
-	Min = 1,
+	BigTextStyle = 2,
+}
+
+public enum GroupAlertBehaviours
+{
+	GroupAlertAll = 0,
+	GroupAlertSummary = 1,
+	GroupAlertChildren = 2,
+}
+
+public enum Importance
+{
+	None = 0,
 	Low = 2,
 	Default = 3,
 	High = 4,
-	Max = 5,
+}
+
+public enum LockScreenVisibility
+{
+	Private = 0,
+	Public = 1,
 }
 
 internal enum MetricType
@@ -13435,6 +13420,65 @@ public enum EventInfoSpotCooltimeRewardReceiveButton.Mode
 {
 	MAP = 0,
 	EventReward = 1,
+}
+
+public enum EventInfoTipsArchiveDialog.TabKind
+{
+	CHARACTER = 0,
+	TERMS = 1,
+	WORLD = 2,
+	SUM = 3,
+}
+
+private enum EventInfoTipsArchiveDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	CLOSE = 3,
+}
+
+public enum EventInfoTipsArchiveListViewItemDraw.Kind
+{
+	NONE = 0,
+}
+
+public enum EventInfoTipsArchiveListViewItemDraw.DispMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+}
+
+public enum EventInfoTipsArchiveListViewManager.InitMode
+{
+	NONE = 0,
+	INPUT = 1,
+	VALID = 2,
+	MODIFY = 3,
+}
+
+public enum EventInfoTipsArchiveListViewManager.ResultKind
+{
+	SELECT = 0,
+}
+
+public enum EventInfoTipsArchiveListViewObject.InitMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+	MODIFY = 4,
+}
+
+protected enum EventInfoTipsArchiveListViewObject.State
+{
+	INIT = 0,
+	IDLE = 1,
+	MOVE = 2,
+	INPUT = 3,
 }
 
 public enum EventInfoUIBase.ValueType
@@ -14956,6 +15000,7 @@ public enum AiAct.TYPE
 	SKILL_ID = 40,
 	BATTLE_END = 90,
 	LOSE_END = 91,
+	BATTLE_END_NOT_RELATED_SURVIVAL_STATUS = 92,
 	ATTACK_A = 14,
 	ATTACK_B = 15,
 	ATTACK_Q = 16,
@@ -15798,7 +15843,8 @@ public enum DatFileName.FILE_NAME
 	MATERIAL_GROUP_CLEAR_HISTORY_SAVE = 37,
 	WARBOARD_MESSAGE_HISTORY_SAVE = 38,
 	WARBOARD_MOVIE_HISTORY_SAVE = 39,
-	SUM = 40,
+	TIPS_ARCHIVE_STATE_SAVE = 40,
+	SUM = 41,
 }
 
 public enum DataNameKind.Kind
@@ -16249,6 +16295,8 @@ public enum DataNameKind.Kind
 	FUNC_DISP = 443,
 	EVENT_COMMAND_ASSIST = 444,
 	EVENT_MISSION_GROUP = 445,
+	COMBINE_LIMIT_RELEASE = 446,
+	TREASURE_DEVICE_SEQUENCE_WEIGHT = 447,
 }
 
 public enum Device.Type
@@ -16601,6 +16649,7 @@ public enum FuncList.TYPE
 	GAIN_NP_INDIVIDUAL_SUM = 133,
 	SET_QUEST_ROUTE_FLAG = 134,
 	LAST_USE_PLAYER_SKILL_COPY = 135,
+	CHANGE_ENEMY_MASTER_FACE = 136,
 }
 
 public enum FuncList.COND
@@ -17176,7 +17225,7 @@ public enum StrengthStatus.Kind
 {
 	NONE = 0,
 	POSSIBLE = 1,
-	MAXIMUM = 2,
+	MAXIMUM = 99,
 }
 
 public enum SvtAttri.TYPE
@@ -17446,6 +17495,11 @@ public enum TutorialFlag.ImageId
 	COIN_ROOM = 57,
 	DECK2_1 = 644,
 	SHOP15_HELP = 1029,
+}
+
+public enum TutorialFlag.EventTutorialFlag
+{
+	FORCE_SAVE = 1,
 }
 
 public enum UserShopFlag.FlagKind
@@ -19987,6 +20041,12 @@ private enum ServantLeaderInfo.RandomLimitCountKind
 	COMMANDCARD_LIMIT_COUNT = 2,
 	ICON_LIMIT_COUNT = 3,
 	PORTRAIT_LIMIT_COUNT = 4,
+}
+
+private enum SkillDetailParamFormatResolver.SuffixType
+{
+	None = 0,
+	Percent = 1,
 }
 
 public enum UserMissionProgressInfo.ProgStatus
@@ -23459,6 +23519,11 @@ public enum FriendOperationItemListViewManager.ResultKind
 	BLACKLIST_REMOVE = 10,
 	MESSAGE_DISP = 11,
 	SERVANT_EQUIP_STATUS = 12,
+	SERVANT_APPEND_SKILL1_STATUS = 13,
+	SERVANT_APPEND_SKILL2_STATUS = 14,
+	SERVANT_APPEND_SKILL3_STATUS = 15,
+	SERVANT_APPEND_SKILL4_STATUS = 16,
+	SERVANT_APPEND_SKILL5_STATUS = 17,
 }
 
 public enum FriendOperationItemListViewObject.InitMode
@@ -24676,7 +24741,6 @@ protected enum PartyEventPointIndicator.DispKind
 	NONE = 0,
 	TREND = 1,
 	RESTRICTION = 2,
-	MARGE_UP_VAL = 3,
 }
 
 public enum PartyListMenu.TutorialMode
@@ -26591,7 +26655,8 @@ public enum BlankEarth.STATE
 	MAIN = 2,
 	ZOOM_IN = 3,
 	ZOOM_OUT = 4,
-	SIZEOF = 5,
+	QAA_ROTATE = 5,
+	SIZEOF = 6,
 }
 
 private enum SubmarineScanConfirmDialog.State
@@ -26817,6 +26882,7 @@ public enum QuestAfterAction.COMMAND
 	SPOT_GRAY = 101,
 	SPOT_DISP = 102,
 	SPOT_CHANGE = 103,
+	SPOT_ANIM = 104,
 	SPOT_HIDE_QUICK = 110,
 	SPOT_GRAY_QUICK = 111,
 	SPOT_DISP_QUICK = 112,
@@ -26884,6 +26950,21 @@ public enum QuestAfterAction.STATE
 	NONE = 0,
 	MAIN = 1,
 	SIZEOF = 2,
+}
+
+public enum QAASpotStateController.STATE
+{
+	NONE = 0,
+	MAP_MAIN = 1,
+	QAA_HIDE = 2,
+	QAA_GRAY = 3,
+	QAA_DISP = 4,
+	QAA_HIDE_QUICK = 5,
+	QAA_GRAY_QUICK = 6,
+	QAA_DISP_QUICK = 7,
+	QAA_CHANGE = 8,
+	QAA_ANIM = 9,
+	SIZEOF = 10,
 }
 
 public enum QuestBoardListEffectComponent.STATE
@@ -27153,6 +27234,13 @@ public enum ScrTerminalListTop.AdditionalDlgMessage.TYPE
 	SERVANT_COSTUME = 3,
 	QUEST_STORY = 4,
 	SERVANT_MATERIAL_SG = 5,
+}
+
+public enum ScrTerminalMap.STATE
+{
+	ALL_DISP = 0,
+	SPOT_ONLY = 1,
+	ALL_HIDE = 2,
 }
 
 public enum ServantRewardAction.PLAY_FLAG
@@ -29097,6 +29185,14 @@ public enum USFGOResetCharacterPositionEvent.CharacterPosition
 	ResetAll = 0,
 	ResetPlayers = 1,
 	ResetEnemies = 2,
+}
+
+public enum USFGOSetAudioGroupIndexConditional.WeightIndex.VoiceStrParam
+{
+	SVT_ID = 0,
+	VOICE_PREFIX = 1,
+	VOICE_ID = 2,
+	TERM = 3,
 }
 
 public enum USFGOSetAudioGroupIndexConditional.AudioGroupData.ApplySide
