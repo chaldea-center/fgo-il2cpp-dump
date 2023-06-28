@@ -20229,7 +20229,10 @@ public enum ListViewSort.FilterKind
 	SERVANT_EFFECT_SKILL = 51,
 	ITEM_HAVE = 52,
 	ITEM_NOT_HAVE = 53,
-	SUM = 54,
+	SERVANT_EQUIP_TYPE_NORMAL = 54,
+	SERVANT_EQUIP_TYPE_FRIENDSHIP = 55,
+	SERVANT_EQUIP_TYPE_CHOCOLATE = 56,
+	SUM = 57,
 }
 
 public enum ListViewSort.FilterCategoryKind
@@ -20246,6 +20249,7 @@ public enum ListViewSort.FilterCategoryKind
 	EXPLANATION = 9,
 	EXPLANATION_PRESENT_BOX = 10,
 	SERVANT_EVENT_BONUS = 11,
+	EQUIP_TYPE = 12,
 	EQUIP_EFFECT = 998,
 	NONE = 999,
 }
@@ -21109,6 +21113,7 @@ public enum BattleData.PROGRESS
 	TURN_START_FUNCTION = 8192,
 	SERVANT_AI_BEFORE_MOVE_WAVE = 16384,
 	FIELDAI_BEFORE_MOVE_WAVE = 32768,
+	PROGRESS_INTERVAL_TURN = 65536,
 }
 
 public enum BattleDataDefine.FieldActorPosition
@@ -21699,6 +21704,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	SHIFT_GUTS = 62,
 	SHIFT_SERVANT_AFTER = 63,
 	FIELDAI_BEFORE_MOVE_WAVE = 64,
+	PROGRESS_INTERVAL_TURN = 65,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
@@ -26021,17 +26027,25 @@ public enum ShopListNotice.ShopLimitedType
 	Monthly = 2,
 	ExchangeServant = 3,
 	StartUpSummon = 4,
-	PeriodAndMonthly = 5,
-	PeriodAndExchangeServant = 6,
-	PeriodAndStartUpSummon = 7,
-	MonthlyAndExchangeServant = 8,
-	MonthlyAndStartUpSummon = 9,
-	ExchangeServantAndStartUpSummon = 10,
-	MonthlyAndExchangeServantAndStartUpSummon = 11,
-	PeriodAndExchangeServantAndStartUpSummon = 12,
-	PeriodAndMonthlyAndStartUpSummon = 13,
+	PeriodAndMonthly = 6,
+	PeriodAndExchangeServant = 10,
+	PeriodAndStartUpSummon = 18,
+	MonthlyAndExchangeServant = 12,
+	MonthlyAndStartUpSummon = 20,
+	ExchangeServantAndStartUpSummon = 24,
+	MonthlyAndExchangeServantAndStartUpSummon = 28,
+	PeriodAndExchangeServantAndStartUpSummon = 26,
+	PeriodAndMonthlyAndStartUpSummon = 22,
 	PeriodAndMonthlyAndExchangeServant = 14,
-	PeriodAndMonthlyAndExchangeServantAndSpecialSummonable = 15,
+	PeriodAndMonthlyAndExchangeServantAndSpecialSummonable = 30,
+}
+
+public enum ShopListNotice.ShopLimitedTypeFlag
+{
+	PERIOD = 2,
+	MONTHLY = 4,
+	EXCHANGE_SERVANT = 8,
+	START_UP_SUMMON = 16,
 }
 
 protected enum ShopPlayVoiceConstants.VoiceKind
@@ -29541,6 +29555,7 @@ public enum FGOLogic.PROC
 	TURN_START_FUNCTION = 51,
 	SERVANT_AI_BEFORE_MOVE_WAVE = 52,
 	FIELDAI_BEFORE_MOVE_WAVE = 53,
+	PROGRESS_INTERVAL_TURN = 54,
 }
 
 public enum FGOPerformance.Effect
