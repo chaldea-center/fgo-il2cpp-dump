@@ -15029,6 +15029,14 @@ public enum AiAct.TARGET
 	BACK = 17,
 }
 
+public enum AiAct.NO_TARGET_NO_ACTION_TYPE
+{
+	NONE = 0,
+	OPPONENT = 1,
+	PARTY = 2,
+	BOTH = 3,
+}
+
 public enum AnimationList.NAME
 {
 	attack_a = 0,
@@ -15717,6 +15725,8 @@ public enum CondType.Kind
 	SVT_CLASS_SKILL_LV_UP_COUNT = 182,
 	SVT_CLASS_LIMIT_UP_COUNT = 183,
 	SVT_CLASS_FRIENDSHIP_COUNT = 184,
+	COMPLETE_HEEL_PORTRAIT = 185,
+	NOT_COMPLETE_HEEL_PORTRAIT = 186,
 }
 
 public enum CondType.CheckType
@@ -16297,6 +16307,9 @@ public enum DataNameKind.Kind
 	EVENT_MISSION_GROUP = 445,
 	COMBINE_LIMIT_RELEASE = 446,
 	TREASURE_DEVICE_SEQUENCE_WEIGHT = 447,
+	HEEL_PORTRAIT = 448,
+	USER_HEEL_PORTRAIT = 449,
+	NPC_SERVANT_FOLLOWER_INDIVIDUALITY = 450,
 }
 
 public enum Device.Type
@@ -16741,6 +16754,7 @@ public enum Gift.Type
 	EVENT_POINT_BUFF = 12,
 	EVENT_BOARD_GAME_TOKEN = 13,
 	EVENT_COMMAND_ASSIST = 14,
+	EVENT_HEEL_PORTRAIT = 15,
 }
 
 public enum Grade.Kind
@@ -18772,6 +18786,7 @@ public enum EventRewardSceneEntity.eventType
 	EVENT_EXPEDITION = 13,
 	EVENT_RECIPE = 14,
 	EVENT_FORTIFICATION = 15,
+	EVENT_HEEL_PORTRAIT = 16,
 }
 
 public enum EventRewardSceneEntity.RewardSceneFlag
@@ -20282,6 +20297,24 @@ public enum ListViewSort.PresentBoxRarityFilterKind
 	CARD_RARITY_SRARE = 3,
 	CARD_RARITY_SSRARE = 4,
 	SUM = 5,
+}
+
+public enum ListViewSort.AutoOrganizationCategoryFilterKind
+{
+	SERVANT = 0,
+	SERVANT_EQUIP = 1,
+	SERVANT_RARIRY_COMMON = 2,
+	SERVANT_RARIRY_UNCOMMON = 3,
+	SERVANT_RARIRY_RARE = 4,
+	SERVANT_RARIRY_SRARE = 5,
+	SERVANT_RARIRY_SSRARE = 6,
+	UNIT_1 = 7,
+	UNIT_2 = 8,
+	UNIT_3 = 9,
+	UNIT_4 = 10,
+	UNIT_5 = 11,
+	UNIT_6 = 12,
+	SUM = 13,
 }
 
 public enum ListViewSort.Filter2Type
@@ -22999,6 +23032,15 @@ private enum ResultListWindow.State
 	INIT = 0,
 }
 
+private enum HeelPortraitDetailDialogComponent.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
 public enum EventRandomMissionListViewManager.FilterStatus
 {
 	INIT = 0,
@@ -23204,6 +23246,7 @@ public enum EventRewardRootComponent.StateType
 	EVENT_EXPEDITION = 14,
 	EVENT_RECIPE = 15,
 	EVENT_FORTIFICATION = 16,
+	EVENT_HEEL_PORTRAIT = 17,
 }
 
 private enum EventRewardRootComponent.VoiceIndexEnum
@@ -24586,6 +24629,16 @@ protected enum OrganizationTopListViewObject.State
 	INPUT = 3,
 }
 
+private enum AutoOrganizationManager.RarityBit
+{
+	COMMON = 1,
+	UNCOMMON = 2,
+	RARE = 4,
+	SRARE = 8,
+	SSRARE = 16,
+	ALL = 31,
+}
+
 public enum BoostFunctionUtility.BoostResultKind
 {
 	CANCEL = 0,
@@ -24778,6 +24831,7 @@ public enum PartyListMenu.ResultKind
 	DETAIL_SERVANT = 16,
 	TUTORIAL_CHANGE_SERVANT = 17,
 	QUEST_INFORMATION = 18,
+	AUTO_ORGANIZATION = 19,
 }
 
 protected enum PartyListMenu.State
@@ -24875,6 +24929,24 @@ protected enum PartyListViewObject.State
 	IDLE = 1,
 	MOVE = 2,
 	INPUT = 3,
+}
+
+private enum PartyOrganizationAutoOrganizationConfirmDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
+private enum PartyOrganizationAutoOrganizationSettingDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
 }
 
 public enum PartyOrganizationChangeMenu.Mode
@@ -27190,6 +27262,13 @@ public enum QuestRewardHarvestAction.STATE
 	ITEM_LABEL = 2,
 	TOUCH_WAIT = 3,
 	SIZEOF = 4,
+}
+
+private enum QuestRewardHeelPortraitAction.STATE
+{
+	NONE = 0,
+	PLAY = 1,
+	TOUCH_WAIT = 2,
 }
 
 public enum QuestRewardItemAction.STATE

@@ -2000,7 +2000,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.75.0
+2.76.0
 2.8
 2.9
 20
@@ -2011,7 +2011,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230623_20:04
+20230701_14:05
 21.1
 21.10
 21.2
@@ -2087,6 +2087,7 @@ file crc (
 3FB32C9B73134D0B2E77506660EDBD484CA7B18F21EF205407F4793A1A0BA12510DBC15077BE463FFF4FED4AAC0BB555BE3A6C1B0C6B47B1BC3773BF7E8C6F62901228F8C28CBB18A55AE31341000A650196F931C77A57F2DDF463E5E9EC144B777DE62AAAB8A8628AC376D282D6ED3864E67982428EBC831D14348F6F2F9193B5045AF2767164E1DFC967C1FB3F2E55A4BD1BFFE83B9C80D052B985D182EA0ADB2A3B7313D3FE14C8484B1E052588B9B7D2BBD2DF016199ECD06E1557CD0915B3353BBB64E0EC377FD028370DF92B52C7891428CDC67EB6184B523D1DB246C32F63078490F00EF8D647D148D47954515E2327CFEF98C582664B4C0F6CC41659
 3FFFFFFF7FFFFFFFBE0024720613B5A3
 3FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC98CDBA46506AB004C33A9FF5147502CC8EDA9E7A769A12694623CEF47F023ED
+3aac7b1116818c8ea9d6a0cb2b586cf24f3a4cd66b899b05a1b81f3555142830
 3d84f26c12238d7b4f3d516613c1759033b1a5800175d0b1
 3dMapEntryAnimName
 3dModelFlag
@@ -2861,6 +2862,24 @@ AUTO_DIGGING_CONFIRM_DIALOG_SUB_TITLE
 AUTO_DIGGING_CONFIRM_DIALOG_TITLE
 AUTO_DIGGING_CONFIRM_DIALOG_WARNING_MESSAGE
 AUTO_ORGANIZATION_BTN_LABEL
+AUTO_ORGANIZATION_CONFIRM_CANCEL
+AUTO_ORGANIZATION_CONFIRM_DECIDE
+AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER
+AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP
+AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT
+AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT
+AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE
+AUTO_ORGANIZATION_CONFIRM_MESSAGE
+AUTO_ORGANIZATION_CONFIRM_SETTING
+AUTO_ORGANIZATION_CONFIRM_TITLE
+AUTO_ORGANIZATION_SETTING_EVENT_BONUS
+AUTO_ORGANIZATION_SETTING_EVENT_BONUS_EXPLATION
+AUTO_ORGANIZATION_SETTING_EXPLATION
+AUTO_ORGANIZATION_SETTING_KIND
+AUTO_ORGANIZATION_SETTING_RARITY
+AUTO_ORGANIZATION_SETTING_TITLE
+AUTO_ORGANIZATION_SETTING_UNIT
+AUTO_ORGANIZATION_SETTING_UNIT_EXPLATION
 AZ__azÀÖØöøıĴľŁňŊžƀǃǍǰǴǵǺȗɐʨʻˁΆΆΈΊΌΌΎΡΣώϐϖϚϚϜϜϞϞϠϠϢϳЁЌЎяёќўҁҐӄӇӈӋӌӐӫӮӵӸӹԱՖՙՙաֆאתװײءغفيٱڷںھۀێېۓەەۥۦअहऽऽक़ॡঅঌএঐওনপরললশহড়ঢ়য়ৡৰৱਅਊਏਐਓਨਪਰਲਲ਼ਵਸ਼ਸਹਖ਼ੜਫ਼ਫ਼ੲੴઅઋઍઍએઑઓનપરલળવહઽઽૠૠଅଌଏଐଓନପରଲଳଶହଽଽଡ଼ଢ଼ୟୡஅஊஎஐஒகஙசஜஜஞடணதநபமவஷஹఅఌఎఐఒనపళవహౠౡಅಌಎಐಒನಪಳವಹೞೞೠೡഅഌഎഐഒനപഹൠൡกฮะะาำเๅກຂຄຄງຈຊຊຍຍດທນຟມຣລລວວສຫອຮະະາຳຽຽເໄཀཇཉཀྵႠჅაჶᄀᄀᄂᄃᄅᄇᄉᄉᄋᄌᄎᄒᄼᄼᄾᄾᅀᅀᅌᅌᅎᅎᅐᅐᅔᅕᅙᅙᅟᅡᅣᅣᅥᅥᅧᅧᅩᅩᅭᅮᅲᅳᅵᅵᆞᆞᆨᆨᆫᆫᆮᆯᆷᆸᆺᆺᆼᇂᇫᇫᇰᇰᇹᇹḀẛẠỹἀἕἘἝἠὅὈὍὐὗὙὙὛὛὝὝὟώᾀᾴᾶᾼιιῂῄῆῌῐΐῖΊῠῬῲῴῶῼΩΩKÅ℮℮ↀↂ〇〇〡〩ぁゔァヺㄅㄬ一龥가힣
 AZazÀÖØöøıĴľŁňŊžƀǃǍǰǴǵǺȗɐʨʻˁΆΆΈΊΌΌΎΡΣώϐϖϚϚϜϜϞϞϠϠϢϳЁЌЎяёќўҁҐӄӇӈӋӌӐӫӮӵӸӹԱՖՙՙաֆאתװײءغفيٱڷںھۀێېۓەەۥۦअहऽऽक़ॡঅঌএঐওনপরললশহড়ঢ়য়ৡৰৱਅਊਏਐਓਨਪਰਲਲ਼ਵਸ਼ਸਹਖ਼ੜਫ਼ਫ਼ੲੴઅઋઍઍએઑઓનપરલળવહઽઽૠૠଅଌଏଐଓନପରଲଳଶହଽଽଡ଼ଢ଼ୟୡஅஊஎஐஒகஙசஜஜஞடணதநபமவஷஹఅఌఎఐఒనపళవహౠౡಅಌಎಐಒನಪಳವಹೞೞೠೡഅഌഎഐഒനപഹൠൡกฮะะาำเๅກຂຄຄງຈຊຊຍຍດທນຟມຣລລວວສຫອຮະະາຳຽຽເໄཀཇཉཀྵႠჅაჶᄀᄀᄂᄃᄅᄇᄉᄉᄋᄌᄎᄒᄼᄼᄾᄾᅀᅀᅌᅌᅎᅎᅐᅐᅔᅕᅙᅙᅟᅡᅣᅣᅥᅥᅧᅧᅩᅩᅭᅮᅲᅳᅵᅵᆞᆞᆨᆨᆫᆫᆮᆯᆷᆸᆺᆺᆼᇂᇫᇫᇰᇰᇹᇹḀẛẠỹἀἕἘἝἠὅὈὍὐὗὙὙὛὛὝὝὟώᾀᾴᾶᾼιιῂῄῆῌῐΐῖΊῠῬῲῴῶῼΩΩKÅ℮℮ↀↂ〇〇〡〩ぁゔァヺㄅㄬ一龥가힣
 Abort request!
@@ -3322,6 +3341,11 @@ AutoIncrement
 AutoIncrementSeed
 AutoIncrementStep
 AutoIncrementStep must be a non-zero value.
+AutoOrganization
+AutoOrganizationBonusFilterEquipId
+AutoOrganizationBonusFilterEventId
+AutoOrganizationBonusFilterGroupId
+AutoOrganizationFilterNew-
 Autodataseg exceeds 64k
 Avg
 Azeri
@@ -4511,6 +4535,8 @@ COMMON_EQUIP_USED
 COMMON_FATIGURE_RECOVERY
 COMMON_NO_ENTRY
 COMMON_NUM_FORMAT
+COMMON_OFF
+COMMON_ON
 COMPENSATION_ITEM_MESSAGE_
 COMPLETE_MISSION_ACTION_SUCCESS
 COMPLETE_MISSION_END
@@ -7489,6 +7515,7 @@ Effect/Soundplayer
 Effect/Summon
 Effect/Talk/
 Effect/Talk/bit_harvest_get{0}
+Effect/Talk/bit_heel_portrait_get
 Effect/Talk/bit_item_get{0}
 Effect/Talk/bit_order_grade_get
 Effect/Talk/bit_present_get{0}
@@ -9056,6 +9083,8 @@ Headers
 Heap invariant violated
 Hebrew
 Hebrew (Israel)
+HeelPortraitDetailDialog
+HeelPortraitDetailDialogState
 Help
 HelpURL
 HexBinary
@@ -13656,6 +13685,7 @@ RECOMMENDED_RARITY_
 RECOMMENDED_RARITY_TITLE
 RECOMMENDED_RESET
 RECOVERY_DIRECTION
+RECOVERY_FATIGUE_DELAYED_CHANGE_BG_EVENTS
 REFRESH_DIRECTION
 REGEX_DEFAULT_MATCH_TIMEOUT
 REJECT_ALL_TXT
@@ -17780,6 +17810,7 @@ UNKNOWN_NAME_ILLUST
 UNLOCK
 UPDATE_FRIENDPOINT_GACHA_ERROR
 UPDATE_FRIENDPOINT_GACHA_ERROR_TITLE
+UPDATE_NEXT_ACTION_BATTLE_SPEED
 URI
 URI is from an excluded subtree.
 URI is not from a permitted subtree.
@@ -19634,6 +19665,7 @@ ar2
 ar200
 ar210
 ar223
+ar236
 ar60
 ar93
 arabic
@@ -19753,7 +19785,6 @@ b
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
 b8adf1378a6eb73409fa6c9c637ba7f5
-b90943050163d1d9a810acb775618dd6c266ed725089b8cec3e04420493b9b8b
 ba
 ba-RU
 ba1
@@ -19983,6 +20014,7 @@ bit_floor_reward
 bit_gauge_change
 bit_grail_get
 bit_harvest_get{0}
+bit_heel_portrait_get
 bit_incoming
 bit_incoming_end
 bit_incoming_start
@@ -24409,6 +24441,7 @@ mstGift
 mstGiftAdd
 mstGiftDetail
 mstGuide
+mstHeelPortrait
 mstIllustrator
 mstItem
 mstItemSelect
@@ -24744,6 +24777,7 @@ noBackoffWait
 noNamespaceSchemaLocation
 noResult
 noSkipDeadFirstIdListKey
+noTargetNoActionType
 noTargetSkipSkill
 noVoice
 no_certificate
@@ -24823,6 +24857,7 @@ npcId
 npcServantId
 npcSvtEquip
 npcSvtFollower
+npcSvtFollowerIndividuality
 ns
 nsmgr
 nso
@@ -25047,6 +25082,9 @@ overwriteAttackCost
 overwriteBaseActionPoint
 overwriteCommandSpellContinue
 overwriteCommandSpellIcons
+overwriteCondNum
+overwriteCondTargetId
+overwriteCondType
 overwriteCv
 overwriteDetailText
 overwriteEndScript
@@ -25054,12 +25092,14 @@ overwriteEnemyInfoNames
 overwriteEnemyInfos
 overwriteEnemyMasterBackgroundId
 overwriteEquipSkills
+overwriteImageId
 overwriteImageIdInfo
 overwriteLimitCountIconIds
 overwriteLimitCountSvtIds
 overwriteLimitCounts
 overwriteMapAssetId
 overwriteMoveCost
+overwriteName
 overwritePresentboxDetail
 overwriteRewardCondCommonReleaseId
 overwriteRewardMessageCommonReleaseId
@@ -25217,6 +25257,8 @@ poly1305
 pooledStream
 port
 portraitLimitCount
+portrait_back
+portrait_unknown
 pos
 position
 positiveInteger
@@ -27017,6 +27059,7 @@ userGachaDrawHistory
 userGachaDrawLog
 userGachaExtraCount
 userGame
+userHeelPortrait
 userId
 userItem
 userLocale
