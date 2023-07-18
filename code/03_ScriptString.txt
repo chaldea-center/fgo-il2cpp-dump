@@ -486,6 +486,7 @@ Content-Type:
 "{0}":{1},
 "}
 "}}]}
+"クエストID": "
 #
 # $
 # $-
@@ -975,6 +976,7 @@ file crc (
 ,"t":{0},"ll":"{1}",
 ,"userSvtEquipId":
 ,"userSvtId":
+,"進行度": "
 ,:{}"[]
 ,Assembly-CSharp
 ,Assembly-CSharp-firstpass
@@ -2000,7 +2002,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.76.1
+2.76.5
 2.8
 2.9
 20
@@ -2011,7 +2013,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230707_18:54
+20230714_14:42
 21.1
 21.10
 21.2
@@ -2191,7 +2193,6 @@ file crc (
 70390085352083305199547718019018437840920882647164081035322601458352298396601
 70390085352083305199547718019018437841079516630045180471284346843705633502616
 70390085352083305199547718019018437841079516630045180471284346843705633502619
-70ab50fb5d7d1545d4cdc6d8a5b4a0a0e1f1743b6f55433b05ff26d457f940d0
 71
 71169be7330b3038edb025f1
 71169be7330b3038edb025f1d0f9
@@ -11099,6 +11100,7 @@ Maltese (Malta)
 ManagedStream object must be non-null
 ManagedStream object must be readable (stream.CanRead must return true)
 ManagedStream object must be seekable (stream.CanSeek must return true)
+Management
 Maori (New Zealand)
 Map Touch Disable
 Map Touch Enable
@@ -11568,10 +11570,12 @@ NOT_HAVING_SHOP_ITEM_RECEIVABLE
 NOT_HAVING_SHOP_ITEM_RECEIVE
 NOT_REDUCE_COUNT_WITH_NO_DAMAGE_BUFF
 NOT_RELEASE_COSTUME
+NOT_REQUIRED_WAR_IDS
 NOT_SELECT_COSTUME
 NOT_SELECT_EQUIPED
 NOT_SELECT_LET_GO
 NOT_SELECT_MAX_EQUIP
+NOT_SEND_TRACK_EVENT_AT_WAR_IDS
 NOT_UI_CHANGE_MAP_IDS
 NOW_LOADING
 NO_CHANGE_EQUIP
@@ -11997,6 +12001,7 @@ NoticeLastModified
 NoticeRarity
 Notification/DownloadNotification
 Notify enum dir
+NotifyRequestPermissionsResultFromPlugin
 Nov
 Novell.Zenworks.Zmd.Public.UnixChannel
 Novell.Zenworks.Zmd.Public.UnixServerChannel
@@ -19556,6 +19561,7 @@ android.os.Build
 android.os.Build$VERSION
 android.os.Environment
 android.permission.ACCESS_FINE_LOCATION
+android.permission.POST_NOTIFICATIONS
 android.permission.WRITE_EXTERNAL_STORAGE
 android.widget.Toast
 android/util/Log
@@ -21504,6 +21510,7 @@ e806f6
 e8b4011604095303ca3b8099982be09fcb9ae616
 eQBoardL1Type
 e_svlist
+ea784248965d4be94aa1c86532c745498476ca35b9934a754623660018a54f81
 easeInQuad
 easeOutCirc
 easeType
@@ -27542,6 +27549,7 @@ zu-ZA
 {"id":
 {"msg": "
 {"supportDeckId":
+{"ミッションID": "
 {... { ... 0xdd, ...}}
 {0,
 {0,0:x2}
@@ -27894,6 +27902,8 @@ i:{2}
 ゠㄀
 アルトリア
 アーツ
+イベントクエストクリア【完了】クエスト
+イベントクエスト開始【完了】クエスト
 イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。
 エクストラ
 エネミー
@@ -27901,9 +27911,18 @@ i:{2}
 キュー順
 クイック
 クラス：
+クリア【完了】チュートリアル
 サーバアドレスが手動で変更されたので、
 CUSTOM に変更しました
+サーヴァントスキル強化【完了】強化
+サーヴァント強化【完了】強化
 サーヴァント未編成
+ストーリークエストクリア【完了】クエスト
+ストーリークエストコンテニュー【完了】クエスト
+ストーリークエスト敗北【画面】クエスト
+ストーリークエスト開始【完了】クエスト
+ストーリークエスト開放状況
+デイリーミッション達成【完了】ミッション
 データ更新
 データ更新開始
 バスター
@@ -27933,6 +27952,7 @@ CUSTOM に変更しました
 全て
 全ての通知
 分
+効果測定フラグ
 大
 大正
 存在しないバフIDです
@@ -27971,6 +27991,7 @@ CUSTOM に変更しました
 通信に失敗したので再度通信を行います
 通信失敗
 降順
+霊基再臨【完了】強化
 ꀀ꒐
 ꒐ꓐ
 가ힰ

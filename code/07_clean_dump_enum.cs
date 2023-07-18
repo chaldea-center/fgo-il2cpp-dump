@@ -17974,8 +17974,9 @@ public enum ServantClassCompatibilityIconComponent.DispMode
 public enum AdManager.AdLibrary
 {
 	ADJUST = 0,
-	ALL = 1,
-	SIZE = 2,
+	REPRO = 1,
+	ALL = 2,
+	SIZE = 3,
 }
 
 public enum AdManager.Category
@@ -17988,6 +17989,12 @@ public enum AdManager.Category
 	QUEST_CLEAR = 5,
 	WAR_CLEAR = 6,
 	LOGIN = 7,
+	MASTER_MISSION = 8,
+	EVENT_QUEST = 9,
+	STORY_QUEST = 10,
+	SERVANT_COMBINE = 11,
+	SKILL_COMBINE = 12,
+	LIMIT_COMBINE = 13,
 }
 
 public enum AdManager.CheckPoint
@@ -17999,6 +18006,12 @@ public enum AdManager.CheckPoint
 	finish_first_battle = 4,
 	start_gacha = 5,
 	first_login_of_the_day = 6,
+	complete_tutorial = 7,
+	complete_daily_mission = 8,
+	start_quest = 9,
+	clear_quest = 10,
+	lose_quest = 11,
+	continue_quest = 12,
 }
 
 public enum AvalonSceneManager.FadeType
