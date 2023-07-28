@@ -569,6 +569,7 @@ $ description needs a type specified
 $#
 $#-
 $%+,0:<?A[^_`{|}~¢«¬­®·¸»¼¿ÀȡȢȴɐʮʰ˯̀͐͠ͰʹͶͺͻ΄·Έ΋Ό΍Ύ΢ΣϏϐϷЀ҇҈ӏӐӶӸӺԀԐԱ՗ՙ՚աֈֺֻ֑֢֣־ֿ׀ׁ׃ׅׄא׫װ׳ءػـٖ٠٪ٮ۔ە۝۞ۮ۰ۿܐܭܰ݋ހ޲ँऄअऺ़ॎॐॕक़।०॰ঁ঄অ঍এ঑ও঩প঱ল঳শ঺়ঽা৅ে৉োৎৗ৘ড়৞য়৤০৻ਂਃਅ਋ਏ਑ਓ਩ਪ਱ਲ਴ਵ਷ਸ਺਼਽ਾ੃ੇ੉ੋ੎ਖ਼੝ਫ਼੟੦ੵઁ઄અઌઍ઎એ઒ઓ઩પ઱લ઴વ઺઼૆ે૊ો૎ૐ૑ૠૡ૦૰ଁ଄ଅ଍ଏ଑ଓ଩ପ଱ଲ଴ଶ଺଼ୄେ୉ୋ୎ୖ୘ଡ଼୞ୟୢ୦ୱஂ஄அ஋எ஑ஒ஖ங஛ஜ஝ஞ஠ண஥ந஫மஶஷ஺ா௃ெ௉ொ௎ௗ௘௧௳ఁఄఅ఍ఎ఑ఒ఩పఴవ఺ా౅ె౉ొ౎ౕ౗ౠౢ౦౰ಂ಄ಅ಍ಎ಑ಒ಩ಪ಴ವ಺ಾ೅ೆ೉ೊ೎ೕ೗ೞ೟ೠೢ೦೰ംഄഅ഍എ഑ഒഩപഺാൄെ൉ൊൎൗ൘ൠൢ൦൰ං඄අ඗ක඲ඳ඼ල඾ව෇්෋ා෕ූ෗ෘ෠ෲ෴ก฻฿๏๐๚ກ຃ຄ຅ງຉຊ຋ຍຎດຘນຠມ຤ລ຦ວຨສຬອ຺ົ຾ເ໅ໆ໇່໎໐໚ໜໞༀ༄༓༺༾཈ཉཫཱ྅྆ྌྐ྘ྙ྽྾࿍࿏࿐ကဢဣဨဩါာဳံ်၀၊ၐၚႠ჆აჹᄀᅚᅟᆣᆨᇺሀሇለቇቈ቉ቊ቎ቐ቗ቘ቙ቚ቞በኇኈ኉ኊ኎ነኯኰ኱ኲ኶ኸ኿ዀ዁ዂ዆ወዏዐ዗ዘዯደጏጐ጑ጒ጖ጘጟጠፇፈ፛፩፽ᎠᏵᐁ᙭ᙯᙷᚁ᚛ᚠ᛫ᛮᛱᜀᜍᜎ᜕ᜠ᜵ᝀ᝔ᝠ᝭ᝮ᝱ᝲ᝴ក។ៗ៘៛៝០៪᠋᠎᠐᠚ᠠᡸᢀᢪḀẜẠỺἀ἖Ἐ἞ἠ὆Ὀ὎ὐ὘Ὑ὚Ὓ὜Ὕ὞Ὗ὾ᾀ᾵ᾶ῅ῆ῔ῖ῜῝῰ῲ῵ῶ῿⁄⁅⁒⁓⁰⁲⁴⁽ⁿ₍₠₲⃫⃐℀℻ℽ⅌⅓ↄ←〈⌫⎴⎷⏏␀␧⑀⑋①⓿─☔☖☘☙♾⚀⚊✁✅✆✊✌✨✩❌❍❎❏❓❖❗❘❟❡❨❶➕➘➰➱➿⟐⟦⟰⦃⦙⧘⧜⧼⧾⬀⺀⺚⺛⻴⼀⿖⿰⿼〄〈〒〔〠〰〱〽〾぀ぁ゗゙゠ァ・ー㄀ㄅㄭㄱ㆏㆐ㆸㇰ㈝㈠㉄㉑㉼㉿㋌㋐㋿㌀㍷㍻㏞㏠㏿㐀䶶一龦ꀀ꒍꒐꓇가힤豈郞侮恵ﬀ﬇ﬓ﬘יִ﬷טּ﬽מּ﬿נּ﭂ףּ﭅צּ﮲ﯓ﴾ﵐ﶐ﶒ﷈ﷰ﷽︀︐︠︤﹢﹣﹤﹧﹩﹪ﹰ﹵ﹶ﻽＄％＋，０：＜？Ａ［＾＿｀｛｜｝～｟ｦ﾿ￂ￈ￊ￐ￒ￘ￚ￝￠￧￨￯￼￾
+$)
 $-#
 $0.01
 $Domain
@@ -837,6 +838,7 @@ ${application.persistentdatapath}
 (UnityUpgradable) -> 
 ([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
 (\d+)_(\d)_(.+)
+(^
 (at
 (motion)
 (no scene)
@@ -1354,6 +1356,7 @@ file crc (
 0123456789abcdef
 01238774666A67766D6676F778E676B66999176666E687666D8766C66A9F
 0163F35A5137C2CE3EA6ED8667190B0BC43ECD69977702709B
+0181d0ab6e5b350c0d49fcb36ca28aa4f8367cab1ce61e2030f16257bfcaa6b9
 01AF286BCA1AF286BCA1AF286BCA1AF286BCA1AF286BC9FB8F6B85C556892C20A7EB964FE7719E74F490758D3B
 01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE9AE2ED07577265DFF7F94451E061E163C61
 01FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA51868783BF2F966B7FCC0148F709A5D03BB5C9B8899C47AEBB6FB71E91386409
@@ -2002,7 +2005,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.76.5
+2.77.0
 2.8
 2.9
 20
@@ -2013,7 +2016,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230714_14:42
+20230723_17:13
 21.1
 21.10
 21.2
@@ -2204,6 +2207,7 @@ file crc (
 7830A3318B603B89E2327145AC234CC594CBDD8D3DF91610A83441CAEA9863BC2DED5D5AA8253AA10A2EF1C98B9AC8B57F1117A72BF2C7B9E7C1AC4D77FC94CA
 790408F2EEDAF392B012EDEFB3392F30F4327C0CA3F31FC383C422AA8C16
 79885141663410976897627118935756323747307951916507639758300472692338873533959
+7999
 7A556B6DAE535B7B51ED2C4D7DAA7A0B5C55F380
 7B425ED097B425ED097B425ED097B425ED097B425ED097B4260B5E9C7710C864
 7BC382C63D8C150C3C72080ACE05AFA0C2BEA28E4FB22787139165EFBA91F90F8AA5814A503AD4EB04A8C7DD22CE2826
@@ -4063,6 +4067,13 @@ BonusKind-
 BonusKind2-
 BonusKind2Id-
 BonusKindId-
+BonusSelectSummonConfirmDialog
+BonusSelectSummonMsgInfo
+BonusSelectSummonMsgInfoMenber
+BonusSelectSummonPartyListViewItemMemberPrefab
+BonusSelectSummonPartyServant
+BonusSelectSummonPartyServantSelectMenu
+BonusSelectSummonSaveKey
 Boolean
 Boolean(
 BoostSupportRequestMenuPrefab
@@ -4564,6 +4575,11 @@ COND_TYPE_SERVANT_GROUP
 COND_TYPE_SERVANT_LEVEL
 COND_TYPE_SERVANT_LIMIT_COUNT
 COND_TYPE_TITLE
+CONFIRM_BONUS_SELECT_SUMMON_INFO
+CONFIRM_BONUS_SELECT_SUMMON_LOW_MSG
+CONFIRM_BONUS_SELECT_SUMMON_MSG
+CONFIRM_BONUS_SELECT_SUMMON_STONE_NUM
+CONFIRM_BONUS_SELECT_SUMMON_TITLE_{0}
 CONFIRM_CHARGESUMMON_MSG
 CONFIRM_CHARGESUMMON_PREFE_MSG
 CONFIRM_COMBINE_MSG
@@ -5379,6 +5395,7 @@ ClassBoardSquareDetailDialog
 ClassBoardSquareOpenConfirmDialog
 ClassBoardUI
 ClassCard/
+ClassIconEx2
 ClassIcons/DownloadClassIcons
 ClassIcon{0}
 ClassImageId
@@ -8127,6 +8144,7 @@ FLAG_20220119
 FLAG_20220511
 FLAG_20220730
 FLAG_20230402
+FLAG_20230730
 FLAG_BATTLE_RETRY_UNAVAILABLE
 FLAG_EQUAL
 FLAG_OFF
@@ -10207,6 +10225,7 @@ IsCJKUnifiedIdeographsExtensionA
 IsCachedEntityExpiresInTheFuture check returned true! CurrentUri: 
 IsCancellationRequested
 IsCherokee
+IsClearFilterServantClass-
 IsCombiningDiacriticalMarks
 IsCombiningDiacriticalMarksforSymbols
 IsCombiningHalfMarks
@@ -14555,7 +14574,10 @@ SERVANT_SORT_FILTER_ATK_FIRST
 SERVANT_SORT_FILTER_ATK_SECOND
 SERVANT_SORT_FILTER_CAN_SELECT
 SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS
+SERVANT_SORT_FILTER_CATEGORY_TITLE_CLASS_GROUP
+SERVANT_SORT_FILTER_CATEGORY_TITLE_COLLECTION_STATUS
 SERVANT_SORT_FILTER_CATEGORY_TITLE_COSTUME
+SERVANT_SORT_FILTER_CATEGORY_TITLE_HAVE_STATUS
 SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_EFFECT
 SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE
 SERVANT_SORT_FILTER_CATEGORY_TITLE_OTHER
@@ -14563,6 +14585,7 @@ SERVANT_SORT_FILTER_CATEGORY_TITLE_RARITY
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_COMBINE_BASE
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_TYPE
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_KIND
+SERVANT_SORT_FILTER_CATEGORY_TITLE_SUMMON_CATEGORY
 SERVANT_SORT_FILTER_CHOICE
 SERVANT_SORT_FILTER_EXIST_NOT_OPEN_COSTUME
 SERVANT_SORT_FILTER_HPMAX
@@ -14580,10 +14603,24 @@ SERVANT_SORT_FILTER_KIND_6
 SERVANT_SORT_FILTER_KIND_7
 SERVANT_SORT_FILTER_KIND_8
 SERVANT_SORT_FILTER_KIND_9
+SERVANT_SORT_FILTER_KIND_CLASS_10
+SERVANT_SORT_FILTER_KIND_CLASS_11
+SERVANT_SORT_FILTER_KIND_CLASS_23
+SERVANT_SORT_FILTER_KIND_CLASS_25
+SERVANT_SORT_FILTER_KIND_CLASS_28
+SERVANT_SORT_FILTER_KIND_CLASS_33
+SERVANT_SORT_FILTER_KIND_CLASS_8
+SERVANT_SORT_FILTER_KIND_CLASS_9
+SERVANT_SORT_FILTER_KIND_CLASS_GROUP_EXTRA1
+SERVANT_SORT_FILTER_KIND_CLASS_GROUP_EXTRA2
+SERVANT_SORT_FILTER_KIND_CLASS_GROUP_FOUR_CAVALRY
+SERVANT_SORT_FILTER_KIND_CLASS_GROUP_THREE_KNIGHT
 SERVANT_SORT_FILTER_KIND_COLLECTION_ENCOUNT
 SERVANT_SORT_FILTER_KIND_COLLECTION_FIND
 SERVANT_SORT_FILTER_KIND_COLLECTION_GET
 SERVANT_SORT_FILTER_KIND_COLLECTION_NOT_GET
+SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_FIND
+SERVANT_SORT_FILTER_KIND_COLLECTION_SUMMON_GET
 SERVANT_SORT_FILTER_KIND_SERVANT
 SERVANT_SORT_FILTER_LV_NOTMAX
 SERVANT_SORT_FILTER_NOT_HAVE_ITEM
@@ -14606,10 +14643,15 @@ SERVANT_SORT_FILTER_SERVANT_EFFECT_TREASURE_DEVICE
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_CHOCOLATE
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_FRIENDSHIP
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_NORMAL
+SERVANT_SORT_FILTER_SERVANT_HAVE
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_EXPLANATION
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_NOT_DISPLAY
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_TITLE
+SERVANT_SORT_FILTER_SERVANT_NOT_HAVE
+SERVANT_SORT_FILTER_SERVANT_NOT_LIMITED
+SERVANT_SORT_FILTER_SERVANT_PERIOD_LIMITED
+SERVANT_SORT_FILTER_SERVANT_STORY_LIMITED
 SERVANT_SORT_INDIVIDUAL_CLEAR
 SERVANT_SORT_INDIVIDUAL_DISPLAY
 SERVANT_SORT_INDIVIDUAL_NOT_DISPLAY
@@ -15273,6 +15315,8 @@ STAGING
 STAND_FIGURE_R_OFFSET_EFFECT_IMAGES
 STAND_FIGURE_R_OFFSET_EFFECT_NAMES
 START
+STARTING_MEMBER_FRIENDSHIP_RATE
+STARTING_MEMBER_FRIENDSHIP_UP_TITLE
 STARTUP
 START_ANIMATION
 START_Begin
@@ -15355,15 +15399,33 @@ SUMMON_AUTOSALE_EXP_TXT
 SUMMON_AUTOSALE_FOU_TXT
 SUMMON_AUTOSALE_MSG
 SUMMON_AUTOSALE_TITLE
+SUMMON_BONUS_SELECT_BTN_MSG
+SUMMON_BONUS_SELECT_DIALOG_MESSAGE
+SUMMON_BONUS_SELECT_DIALOG_SUMMON
+SUMMON_BONUS_SELECT_DIALOG_TITLE
+SUMMON_BONUS_SELECT_MENU_GUIDE_MESSAGE
+SUMMON_BONUS_SELECT_MENU_MASK_MESSAGE
+SUMMON_BONUS_SELECT_WARNING_MSG
+SUMMON_BOUNS_ITEMS_GIFTS_MAX_MSG
+SUMMON_BOUNS_ITEMS_GIFTS_MSG
+SUMMON_BOUNS_ITEM_GIFTS_MAX_TITLE
+SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_MSG
+SUMMON_BOUNS_ITEM_GIFTS_SEND_BOX_TITLE
+SUMMON_BOUNS_ITEM_GIFTS_TITLE
+SUMMON_CONFIRM_DLG_BONUS_MESSAGE
+SUMMON_CONFIRM_DLG_BONUS_TITLE
+SUMMON_CONFIRM_DLG_EXTRA_TITLE
+SUMMON_CONFIRM_DLG_NOT_GET_MSG
+SUMMON_CONFIRM_DLG_NOT_GET_TITLE
 SUMMON_EVENT_SERVANT_DIRECT_GET_TITLE
 SUMMON_EVENT_SERVANT_TITLE_GET
 SUMMON_EVENT_SERVANT_TITLE_JOIN
-SUMMON_EXTRA_ITEMS_GIFT_MSG
 SUMMON_EXTRA_ITEM_GIFTS_MSG
-SUMMON_EXTRA_ITEM_GIFT_MSG
+SUMMON_EXTRA_ITEM_GIFTS_TITLE
 SUMMON_FREE_10_BTN
 SUMMON_GROUP_STONEPAY_WARNING_MSG
 SUMMON_HELP_MESSAGE
+SUMMON_HISTORY_BOUNS_ITEMS_GIFT_MSG
 SUMMON_LIMIT_OVER_BTN
 SUMMON_LIMIT_WARNING_CANCEL
 SUMMON_MANA_LIMIT_WARNING_DECIDE
@@ -16175,6 +16237,7 @@ SummonEndFlag
 SummonMasterObject
 SummonRoot
 SummonScene
+SummonScene/BonusSelectSummon
 Sun
 Sunday
 Superseded
@@ -16185,6 +16248,7 @@ SupportServantEquip
 SupportServantEquipListMenuPrefab(Clone)
 SupportServantSelect
 SupportServantSelectAll
+SupportServantSelectEXTRA
 SupportsDaylightSavingTime
 SvtEqCardScale
 SvtEqCombine
@@ -19089,6 +19153,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 \\u(?<Value>[a-zA-Z0-9]{4})
 \b
 \b(?:\d{1,3}\.){3}\d{1,3}\b
+\d+$|^\d+
 \f
 \n
 \p{_xmlC}
@@ -19397,7 +19462,9 @@ _mod_duplicate
 _mod_factor
 _mod_fingerprint
 _movie
+_off{0}
 _oneValue
+_on{0}
 _org_
 _passRuntimeValues
 _platform
@@ -19902,6 +19969,7 @@ battleId
 battleMasterImageId
 battleResult
 battleStartFadeType
+battleStartRemainingTurn
 battleStartVoiceIds
 battleStartVoiceSvtId
 battleStartVoiceSvtLimit
@@ -20131,6 +20199,7 @@ bo-CN
 body
 body_level
 body_level_
+bonus_select_frame_{0}
 bool
 boolean
 booleanValue
@@ -20299,7 +20368,7 @@ btn_txt_blacklist_on
 btn_txt_bonus_10plus1
 btn_txt_bonus_10times_plus1
 btn_txt_bonus_1plus1
-btn_txt_bonus_count_
+btn_txt_bonus_count_{0}
 btn_txt_cardtoarchive_off
 btn_txt_cardtoarchive_on
 btn_txt_cc_off
@@ -20357,11 +20426,7 @@ btn_txt_status_off
 btn_txt_status_on
 btn_txt_stock
 btn_txt_stock_02
-btn_txt_summon0
 btn_txt_summon01
-btn_txt_summon02
-btn_txt_summon10
-btn_txt_summon11
 btn_txt_summon{0:00}
 btn_txt_synthesis_reselect
 btn_txt_trade
@@ -20810,6 +20875,7 @@ class2_{0}
 classBoard/releaseLock
 classBoard/releaseSquare
 classBoardBaseId
+classId
 class_b_
 class_board_release_lock
 class_board_release_square
@@ -21035,6 +21101,7 @@ connectionGroupName
 connectionId
 connectionToken
 const
+constant
 constraint
 constructed invalid certificate
 consumeAsync
@@ -21510,7 +21577,6 @@ e806f6
 e8b4011604095303ca3b8099982be09fcb9ae616
 eQBoardL1Type
 e_svlist
-ea784248965d4be94aa1c86532c745498476ca35b9934a754623660018a54f81
 easeInQuad
 easeOutCirc
 easeType
@@ -22399,6 +22465,8 @@ funcName
 funcPositionForSplitFuncSequence
 func_group_icon_
 func_group_icon_1009
+func_group_icon_1009_starting
+func_group_icon_1023_starting
 func_group_icon_1028
 function
 functionAddState=>
@@ -22814,6 +22882,7 @@ icon_class_on007
 icon_class_on1001
 icon_class_on1002
 icon_class_{0:D3}
+icon_class{0}
 icon_commandcard_arts
 icon_commandcard_buster
 icon_commandcard_level_
@@ -23009,6 +23078,8 @@ img_friend_skill
 img_gachatxt_
 img_gachatxt_{0:D2}
 img_icon_acquired
+img_icon_not_summoned
+img_icon_summoned
 img_index_02
 img_index_03
 img_item_bg
@@ -23110,6 +23181,7 @@ img_return_modoru
 img_return_modoru2
 img_return_terminal
 img_ribbon_noblephantasmup
+img_ribbon_{0}
 img_road{0:D4}_{1:D2}
 img_rp
 img_servant
@@ -23152,6 +23224,7 @@ img_talk_textbg
 img_terminal_itembg
 img_title_header_80382
 img_title_header_{0}
+img_title_servant_selection
 img_title_summon
 img_titlebg_
 img_titlebg_clear
@@ -23850,6 +23923,7 @@ limitCountGiftIdDic
 limitCountSupport
 limitCountUpResultServantLimitCount
 limitSeqId_{0}
+limited
 limited_bg
 line
 line-feed (#xA) or tab (#x9) characters, leading or trailing spaces and sequences of one or more spaces (#x20) are not allowed in 'xs:token'.
@@ -24437,7 +24511,10 @@ mstFuncTypeDetail
 mstGacha
 mstGachaAppend
 mstGachaBehavior
+mstGachaBonusSelect
+mstGachaBonusSelectLineup
 mstGachaDetail
+mstGachaExtraGift
 mstGachaGroup
 mstGachaImage
 mstGachaRelease
@@ -25812,6 +25889,7 @@ secureRandom
 securityElement
 seed
 segment
+selectBonusList
 selectBranch
 selectBranch2
 selectBranch3
@@ -26250,6 +26328,7 @@ storeSpecificErrorCode
 storeSpecificId
 store_ids
 storedSurrogate
+story
 storyAdjustIds
 str
 strLocalName
@@ -26340,6 +26419,7 @@ summary
 summed-events
 summed_events
 summon
+summonCategoryId
 summonDetail
 summon_rarity_0
 summon_txt_done
