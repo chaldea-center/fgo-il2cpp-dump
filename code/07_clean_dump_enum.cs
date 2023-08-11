@@ -13387,6 +13387,26 @@ private enum EventInfoChronologyDialog.State
 	CLOSE = 3,
 }
 
+public enum EventInfoCircleProgressControl.DispState
+{
+	FRONT = 0,
+	BACK = 1,
+}
+
+public enum EventInfoCircleProgressControl.VoiceType
+{
+	NONE = 0,
+	PROGRESS_UP = 1,
+	COMPLETED = 2,
+}
+
+public enum EventInfoCircleProgressControl.ExCiarcleState
+{
+	HIDE = 0,
+	INSERT = 1,
+	DISP = 2,
+}
+
 public enum EventInfoDetectiveRankControl.DetectiveRank
 {
 	RANK_E = 0,
@@ -13507,6 +13527,12 @@ public enum EventInfoUIBase.AnimType
 {
 	None = 0,
 	CountUp = 1,
+}
+
+public enum EventInfoUIVoicePlayer.State
+{
+	READY = 0,
+	PLAY = 1,
 }
 
 private enum FriendCodeComponent.DispState
@@ -16319,6 +16345,7 @@ public enum DataNameKind.Kind
 	USER_HEEL_PORTRAIT = 451,
 	NPC_SERVANT_FOLLOWER_INDIVIDUALITY = 452,
 	GACHA_EXTRA_GIFT = 453,
+	EVENT_MURAL = 454,
 }
 
 public enum Device.Type
@@ -17491,7 +17518,26 @@ public enum TutorialFlag.EventId
 	WAR_BOARD_MAP_SETUP = 62,
 	LOGIN_BONUS = 63,
 	OPEN_SPECIFIC_QUEST = 64,
-	QUEST4 = 65,
+	EVENT_FUNCTION01 = 65,
+	EVENT_FUNCTION02 = 66,
+	EVENT_FUNCTION03 = 67,
+	EVENT_FUNCTION04 = 68,
+	EVENT_FUNCTION05 = 69,
+	EVENT_FUNCTION06 = 70,
+	EVENT_FUNCTION07 = 71,
+	EVENT_FUNCTION08 = 72,
+	EVENT_FUNCTION09 = 73,
+	EVENT_FUNCTION10 = 74,
+	EVENT_FUNCTION11 = 75,
+	EVENT_FUNCTION12 = 76,
+	EVENT_FUNCTION13 = 77,
+	EVENT_FUNCTION14 = 78,
+	EVENT_FUNCTION15 = 79,
+	EVENT_FUNCTION16 = 80,
+	EVENT_FUNCTION17 = 81,
+	EVENT_FUNCTION18 = 82,
+	EVENT_FUNCTION19 = 83,
+	EVENT_FUNCTION20 = 84,
 }
 
 public enum TutorialFlag.ImageId
@@ -20998,6 +21044,12 @@ public enum TitleRootComponent.StoryProgress
 	COSMOS_IN_THE_LOSTBELT_VER2 = 3,
 }
 
+public enum ParticleSystemPropertyChange.UpdateTiming
+{
+	Update = 0,
+	LateUpdate = 1,
+}
+
 public enum ShaderCutoutDisplayProgress.DisplayStartPosition
 {
 	Left = 0,
@@ -21833,6 +21885,18 @@ public enum MultiplyTargetMatrix.MaterialType
 {
 	ShareMaterial = 0,
 	NormalMaterial = 1,
+}
+
+public enum MultiplyTargetMatrixChr.MaterialType
+{
+	ShareMaterial = 0,
+	NormalMaterial = 1,
+}
+
+public enum MultiplyTargetMatrixChr.TargetObjPathRootType
+{
+	Own = 0,
+	Chr = 1,
 }
 
 public enum BattleActorAnimationEffect.ScaleFlipType
@@ -26905,6 +26969,14 @@ private enum SubmarineSelectScannerDialog.State
 	INPUT = 2,
 	SELECTED = 3,
 	CLOSE = 4,
+}
+
+public enum EventMuralUpdateAction.STATE
+{
+	NONE = 0,
+	PLAY = 1,
+	TOUCH_WAIT = 2,
+	SIZEOF = 3,
 }
 
 public enum EventPointVsResultAction.STATE

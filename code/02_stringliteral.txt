@@ -430,6 +430,7 @@ You specified
  }
  ~ 
  ×{0}
+ ……
  ゲームデータの更新を行います。
 
 {0}
@@ -1491,7 +1492,6 @@ file crc (
 0_B191
 0_B201
 0_M040
-0e8dceddf75ed260b17bccf455c12d4fe529c7f000dfa0846e925f9493773009
 0x
 0x{0:X2}
 0x{0:X}
@@ -2005,7 +2005,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.77.1
+2.78.0
 2.8
 2.9
 20
@@ -2016,7 +2016,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230731_16:08
+20230806_20:42
 21.1
 21.10
 21.2
@@ -3831,6 +3831,7 @@ Back/back
 Back/back{0:D5}
 Back/back{0}
 BackAnchor/BtnBg
+BackCamera
 Backtrace
 Backtrace - minidump send time: {0}μs
 Backtrace API doesn't exist. Please validate client token or server url!
@@ -5348,6 +5349,9 @@ Chunked
 Chunked encoding must be set with the SendChunked property
 Cipher 
 Ciphertext not multiple of 
+CircleProgressData_
+CircleProgressExtraData_
+CircleProgressTitleState_
 Circular attribute group reference.
 Circular attribute reference.
 Circular dependency
@@ -6919,6 +6923,7 @@ Disk reset failed
 Disk too fragmented
 DispObject
 Display
+DisplayCardBottomImageName
 DisplayName
 Dispose
 DistIndex
@@ -7303,6 +7308,7 @@ EVENT_HARVEST_GROWTH_ITEM_GRADEUP
 EVENT_HARVEST_GROWTH_ITEM_NEW
 EVENT_HARVEST_GROWTH_MESSAGE
 EVENT_ID_RAID_1
+EVENT_INFO_MURAL_DIALOG_DETAIL
 EVENT_INFO_TXT
 EVENT_INIT
 EVENT_ITEM_NEED_INFO
@@ -7864,6 +7870,7 @@ EventHarvestNoticeButton
 EventId
 EventInfoPointGaugeControl
 EventInfoPointGaugePrefab
+EventInfoUiVoiceHistory_
 EventIntoMove
 EventIntoMove2
 EventItem
@@ -8663,6 +8670,7 @@ GCM cipher cannot be reused for encryption
 GCM cipher needs to be initialised
 GCTR only for 64 bit block ciphers
 GDay
+GENDER_TYPE_IMAGE_EXPLANATION
 GENERAL STRING
 GENERALIZED TIME
 GENERATION
@@ -11454,6 +11462,7 @@ Multiple self-reference within an attribute group is redefined.
 MultipleView1
 MultipleViewSelectImageLimit
 MultipleViewSelectedUsrSvtId
+MuralButton_in
 Music
 Must be 1.0 or 1.1
 Must be > 0
@@ -12749,6 +12758,7 @@ PARTY_ORGANIZATION_NAME
 PARTY_ORGANIZATION_NAME_BASE
 PARTY_ORGANIZATION_NAME_CLEAR
 PARTY_ORGANIZATION_NAME_INIT
+PARTY_ORGANIZATION_NOT_CLASS_BOARD
 PARTY_ORGANIZATION_PARTY_SELECT_EXPLANATION
 PARTY_ORGANIZATION_QUEST_RESTRICTION_EXPLANATION_COLOR
 PARTY_ORGANIZATION_QUEST_RESTRICTION_WARNING
@@ -14130,6 +14140,7 @@ RemoveOn
 RemoveTempBG
 RenameTo
 RenameTo value can't be null or empty
+RenderCaptureCamera
 RenderTextureDesc depthBufferBits must be 0, 16, or 24.
 RenderTextureDesc graphicsFormat must be a supported GraphicsFormat. 
 RenderTextureDesc height must be greater than zero.
@@ -14354,6 +14365,7 @@ SCRIPT_ACTION_CODE_VOICE
 SCRIPT_ACTION_LOG_SELECT_COLOR
 SCRIPT_ACTION_LOG_SELECT_MESSAGE
 SCRIPT_ACTION_LOG_SELECT_MESSAGE2
+SCRIPT_ACTION_LOG_SELECT_TIME_OVER_COLOR
 SCRIPT_ACTION_SELECT_COLOR
 SCRIPT_ACTION_SKIP_CONFIRM_DETAIL
 SCRIPT_ACTION_SKIP_CONFIRM_EXIT
@@ -15455,6 +15467,8 @@ SUPPORTMAIL_ADDRESS
 SUPPORTMAIL_BODY
 SUPPORTMAIL_SUBJECT_INQUIRY
 SUPPORTMAIL_SUBJECT_SUGGEST
+SUPPORT_CLASS_BOARD_EFFECT_DISP_BUTTON
+SUPPORT_CLASS_BOARD_EFFECT_NOT_BUTTON
 SUPPORT_CURRENT_DECKID
 SUPPORT_DECKID_FREE
 SUPPORT_DECKID_QUESTION
@@ -19269,7 +19283,9 @@ _CullMode
 _CultureInfo
 _CurTex
 _DepthLimit
+_DisplayColor
 _DisplayProgress
+_Divedenum
 _DstBlendMode
 _ENEMY
 _EdgeColor
@@ -19340,6 +19356,7 @@ _PanelSpaceMatrix
 _ParallelProjectionMatrix
 _ParallelViewMatrix
 _Params
+_PetternNumber
 _Position
 _PositionOffset
 _PrevPosition
@@ -19447,6 +19464,7 @@ _customColor0
 _encryption_check
 _end
 _enemy
+_f
 _fade
 _invrootMatrix
 _keyPairArray
@@ -19457,6 +19475,7 @@ _last
 _level
 _loop
 _m
+_mainTex
 _mapIdVal
 _mod_duplicate
 _mod_factor
@@ -19483,7 +19502,13 @@ _text
 _thick
 _threeValue0
 _threeValue1
+_threeValue1_0
+_threeValue1_1
+_threeValue1_2
 _threeValue2
+_threeValue2_0
+_threeValue2_1
+_threeValue2_2
 _twoValue0
 _twoValue1
 _txt_
@@ -19545,8 +19570,12 @@ adServicesFrameworkEnabled
 add
 addCallbackParameter
 addEquipSkills
+addGetMessage
 addGranularOption
+addJoinMessage
+addLeaveMessage
 addMessage
+addMessageCommonReleaseId
 addPartnerParameter
 addSessionCallbackParameter
 addSessionPartnerParameter
@@ -19858,6 +19887,8 @@ b
 b3fb3400dec5c4adceb8655d4c94
 b5nHjsMrqaeNliSs3jyOzgpD
 b8adf1378a6eb73409fa6c9c637ba7f5
+bScene
+bSceneLoad
 ba
 ba-RU
 ba1
@@ -20062,6 +20093,9 @@ bit_buddy_rankup
 bit_buddy_result
 bit_camera_iconblink
 bit_camera_shutter
+bit_circlemeter_comptext
+bit_circlemeter_gain
+bit_circlemeter_rotate
 bit_coingrail_get
 bit_com_grand_m
 bit_com_trinity_m
@@ -20098,6 +20132,8 @@ bit_item_get01_3
 bit_item_get01_4
 bit_item_get{0}
 bit_mastercutin01
+bit_mural_update
+bit_mural_update{0}
 bit_order_grade_get
 bit_orderrank_change
 bit_orderrank_change_{0:00}
@@ -20434,6 +20470,7 @@ btn_txt_unlockcc
 btn_txt_up
 btn_txt_voice_off
 btn_txt_voice_on
+btn_wallpainting
 buddy_bg_at
 buf
 buffer
@@ -20447,6 +20484,7 @@ bufferSize
 buffers
 bufficon_300
 bufficon_{0:000}
+bufficon_{0:D2}
 build
 buildGUUID
 businesscategory
@@ -20543,6 +20581,7 @@ cameraActionId
 cameraFilter
 cameraHome
 cameraMove
+cameraMoveEase
 cameraRoll
 cameraRollMove
 campaign
@@ -20771,6 +20810,7 @@ charaFilter
 charaLayer
 charaMask
 charaMove
+charaMoveEase
 charaMoveFSL
 charaMoveFSR
 charaMoveFSSideL
@@ -20902,6 +20942,7 @@ clientDevice
 clientProviders
 clientVersion
 client_api_error_dialog
+clientdebug/battlesetup
 clip
 close
 closeBtn
@@ -21331,6 +21372,7 @@ d MMM yyyy hh:mm:ss:fff
 d MMM yyyy hh:mm:ss:ffftt
 d':'h':'mm':'ss'
 d713
+d740d53a851cb53e7d18dcd2f9870452244e3a0036f5b7707ee8f3118fe9f35b
 dBanner
 dP
 dQ
@@ -22852,6 +22894,7 @@ icon_cardfixation
 icon_cardsealed_arts
 icon_cardsealed_buster
 icon_cardsealed_quick
+icon_cardtypechange
 icon_center_bg
 icon_class
 icon_class001
@@ -23001,6 +23044,7 @@ imageSvtId
 imageText 
 imageUrl
 img
+img_LeaderIcon{0:D2}
 img_arrow_1
 img_arrow_2
 img_arrow_3
@@ -23222,6 +23266,9 @@ img_summon_mini_236
 img_talk_namebg
 img_talk_textbg
 img_terminal_itembg
+img_timer_meter_blue
+img_timer_meter_red
+img_timer_meter_yellow
 img_title_header_80382
 img_title_header_{0}
 img_title_servant_selection
@@ -23592,6 +23639,7 @@ isDeadToEnableUpHate
 isDisableChangeRaidDownMessage
 isEnabled
 isEnabledBillBoard
+isEventCircleProgress
 isEventCommandAssist
 isFamilyShareable
 isFavorite
@@ -24066,6 +24114,7 @@ mail
 mailto
 mailto:
 main
+main.simulationSpeed
 mainCipher
 mainLabel
 mainText 
@@ -24074,6 +24123,7 @@ maint
 maintananceParams == null
 major
 makeText
+maleImageId
 malformed BMPString encoding encountered
 malformed PEM data encountered
 malformed RSA signature
@@ -24458,6 +24508,7 @@ mstEventMissionAdd
 mstEventMissionCondition
 mstEventMissionConditionDetail
 mstEventMissionGroup
+mstEventMural
 mstEventPanelMap
 mstEventPanelMapDetail
 mstEventPanelScan
@@ -24919,6 +24970,7 @@ not null
 not set for unwrapping
 not set for wrapping
 not valid for affine coordinates
+notClassBoard
 notClearPriority
 notEndEventMissionFix
 notHavingQuest
@@ -25761,6 +25813,7 @@ rtime
 rtime 
 ru
 ru-RU
+ruby
 rubyLabel
 rule
 runOnUiThread
@@ -26384,6 +26437,7 @@ subRenderFadeinFSSideL
 subRenderFadeinFSSideR
 subRenderFadeout
 subRenderMove
+subRenderMoveEase
 subRenderMoveFSL
 subRenderMoveFSR
 subRenderMoveFSSideL
@@ -26565,6 +26619,8 @@ system.security.cryptography.tripledescryptoserviceprovider
 t
 t68aZyLxlMWVjw8lWgdZ
 tBanner
+tFlag
+tRoute
 tVoice
 tVoiceRTimeWait
 tVoiceUser
