@@ -29888,6 +29888,7 @@ public enum FGOPerformance.Effect
 	FORCE_RESET_TIMEACCELERATION = 30,
 	PREV_TACTICAL = 31,
 	LOSS_COMMAND_SPELL = 32,
+	MOVE_TO_SUBMEMBER = 33,
 }
 
 public enum FGOPlayStarDirection.DirectionType
