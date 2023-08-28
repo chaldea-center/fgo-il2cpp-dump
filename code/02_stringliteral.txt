@@ -2005,7 +2005,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.78.2
+2.78.5
 2.8
 2.9
 20
@@ -2016,7 +2016,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230818_14:08
+20230822_13:03
 21.1
 21.10
 21.2
@@ -2201,7 +2201,6 @@ file crc (
 71169be7330b3038edb025f1d0f9
 7167EFC92BB2E3CE7C8AAAFF34E12A9C557003D7C73A6FAF003F99F6CC8482E540F7
 71FE1AF926CF847989EFEF8DB459F66394D90F32AD3F15E8
-71b4d5311982e0a2f42e8f06778d1963d4c755c09429903d789e7aaa4e94efc9
 74D59FF07F6B413D0EA14B344B20A2DB049B50C3
 7503CFE87A836AE3A61B8816E25450E6CE5E1C93ACF1ABC1778064FDCBEFA921DF1626BE4FD036E93D75E6A50E3A41E98028FE5FC235F5B889A589CB5215F2A4
 77E2B07370EB0F832A6DD5B62DFC88CD06BB84BE
@@ -19541,6 +19540,7 @@ _{0}{1:D2}
 a
 a date can have multiple adjustment rules applied to it
 a hexadecimal encoding must have an even number of characters
+a5770ea1f7f45fc0261933ea3376e9e46704fa2aee62fab757e848fd676d495c
 a77d
 aACompromise
 aa
@@ -20406,6 +20406,8 @@ btn_txt_bonus_10plus1
 btn_txt_bonus_10times_plus1
 btn_txt_bonus_1plus1
 btn_txt_bonus_count_{0}
+btn_txt_bonus_{0}
+btn_txt_bonus_{0}_glow
 btn_txt_cardtoarchive_off
 btn_txt_cardtoarchive_on
 btn_txt_cc_off
@@ -25004,6 +25006,10 @@ null or empty sequence passed.
 null texture passed to GUI.DrawTexture
 nullableType
 num
+num1
+num1_glow
+num2
+num2_glow
 numBytes
 number
 numberOfUnits
