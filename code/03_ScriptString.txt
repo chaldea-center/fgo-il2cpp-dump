@@ -26,6 +26,9 @@
  
 
  
+
+
+ 
  
 
   Expected: 
@@ -2005,7 +2008,7 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.78.5
+2.79.0
 2.8
 2.9
 20
@@ -2016,7 +2019,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230822_13:03
+20230901_15:06
 21.1
 21.10
 21.2
@@ -3351,6 +3354,7 @@ AutoOrganizationBonusFilterEquipId
 AutoOrganizationBonusFilterEventId
 AutoOrganizationBonusFilterGroupId
 AutoOrganizationFilterNew-
+AutoOrganizationWaveBattle
 Autodataseg exceeds 64k
 Avg
 Azeri
@@ -3637,6 +3641,7 @@ BATTLE_RESULTEXP_FULLAP_FULLBP
 BATTLE_RESULTEXP_MASTERLV
 BATTLE_RESULTEXP_MASTERTITLE
 BATTLE_RESULTITEM_TITLECONF
+BATTLE_RESULT_BONDS_WAVE_COUNT
 BATTLE_RESULT_EVENTDAMAGEITEM_AT_ITEM
 BATTLE_RESULT_EVENTDAMAGEITEM_AT_POINT
 BATTLE_RESULT_FORTIFICATION_GAUGE_BG_COLOR_{0}_{1}
@@ -4043,6 +4048,7 @@ Bit vector is full.
 BitVector32{
 BlackOutTransition
 BlankEarthPoint_
+BlankEarthShortcutListPanel
 Block size must be either 64 or 128 bits
 Block size r must be >= 1.
 BlockForHandshake mConnectionState: {0}
@@ -4357,6 +4363,7 @@ CLICK_USER_SERVANT_COIN
 CLICK_USESPELL
 CLOSE
 CLOSE_BLACKLIST
+CLOSE_BOND_UP_ROOT
 CLOSE_CHANGE_PROFILE
 CLOSE_COMMAND
 CLOSE_CONF
@@ -6986,6 +6993,7 @@ DownloadEventUIAtlas{0}{1}{2}
 DownloadFaceAtlas
 DownloadFaceBattleAtlas
 DownloadItemAtlas
+DownloadMapShortcutAtlas
 DownloadMyRoomAtlas
 DownloadMyRoomSoundAtlas
 DownloadNotificationAtlas
@@ -7012,6 +7020,7 @@ Dstu7624WrapEngine
 DtdProcessing
 Due time too large
 Dummy
+DummyFolderHistory
 DumpBuffer
 Dup
 Dup domain name
@@ -10660,6 +10669,7 @@ Last collect delta
 Last-Modified
 LastEntry
 LastFrameCount: 
+LastPlayMovedQuestId
 LastPlayedEventId
 LastPlayedQuestId
 LastPlayedTitle
@@ -10964,11 +10974,13 @@ MISSION_ACTION_SUCCESS_SEND_PRESENT_BOX2
 MISSION_EMPTY_TXT
 MISSION_PERIOD_END
 MISSION_PEWARD_DETAIL_SVT_COSTUME
-MISSION_PEWARD_QP_MAX_ALERT_MESSAGE
-MISSION_PEWARD_QP_WILL_BE_MAX_ALERT_MESSAGE
 MISSION_REWARD
 MISSION_REWARD_FOMAT_COMMANDCODE
 MISSION_REWARD_FOMAT_COSTUME_RELEASE
+MISSION_REWARD_QP_MAX_ALERT_MESSAGE
+MISSION_REWARD_QP_NOT_GET_MESSAGE
+MISSION_REWARD_QP_PART_NOT_GET_MESSAGE
+MISSION_REWARD_QP_WILL_BE_MAX_ALERT_MESSAGE
 MKCOL
 MKD
 MM
@@ -11155,6 +11167,7 @@ MapGimmickEffect_StopPiece
 MapGimmick_
 MapGimmick_{0:0000}
 MapGimmick_{0:D4}
+MapShortcut/DownloadMapShortcut
 MapSpotEffect_{0}
 MapSpotPath_{0}
 MapTouchEnableAuto
@@ -11562,6 +11575,7 @@ NONEWITHPLAIN-ECDSA
 NONEWITHRSA
 NONEWITHRSAPSS
 NONEWITHRSASSA-PSS
+NONE_DISPLAY_FREE_QUEST_MATERIAL
 NONEwithCVC-ECDSA
 NONEwithDSA
 NONEwithECDSA
@@ -15154,6 +15168,7 @@ SHOP_SCENE_VOICE_EVENT
 SHOP_SCENE_VOICE_FRAGMENT
 SHOP_SCENE_VOICE_GRAIL_FRAGMENTS
 SHOP_SCENE_VOICE_MANA
+SHOP_SCENE_VOICE_PURE_PRI
 SHOP_SCENE_VOICE_RARE_PRI
 SHOP_SCENE_VOICE_SELL
 SHOP_SCENE_VOICE_SHOP04
@@ -18593,6 +18608,27 @@ WAR_BOARD_PROGRESS_SELF_BUFF_TYPES
 WAR_CLEAR_CLOSED_
 WAR_CLEAR_MOVIE_
 WAR_CLEAR_REWARD_GET
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL
+WAVE_BATTLE_COST_OVER_MESSAGE
+WAVE_BATTLE_COST_OVER_TITLE
+WAVE_BATTLE_EQUIP_MOVE_MESSAGE
+WAVE_BATTLE_EQUIP_REMOVE_MESSAGE
+WAVE_BATTLE_EQUIP_REMOVE_TITLE
+WAVE_BATTLE_EQUIP_SWAP_MESSAGE
+WAVE_BATTLE_EQUIP_SWAP_TITLE
+WAVE_BATTLE_EQUIP_UNIQUE
+WAVE_BATTLE_EQUIP_WAVE
+WAVE_BATTLE_PARTY_REMOVE_MESSAGE
+WAVE_BATTLE_PARTY_REMOVE_TITLE
+WAVE_BATTLE_RESTRICTION_NOT_SATISFY_MESSAGE
+WAVE_BATTLE_RESTRICTION_NOT_SATISFY_TITLE
+WAVE_BATTLE_SERVANT_SWAP_MESSAGE
+WAVE_BATTLE_SERVANT_SWAP_TITLE
+WAVE_BATTLE_SERVANT_WAVE
+WAVE_BATTLE_WAVE_INFO
 WEB_VIEW_TITLE_BOXGACHA
 WEB_VIEW_TITLE_CONTACT_US
 WEB_VIEW_TITLE_CREDIT
@@ -18660,6 +18696,7 @@ Warning :
 Server Number is not registered.
 Warning: SIC-Mode can become a twotime-pad if the blocksize of the cipher is too small. Use a cipher with a block size of at least 128 bits (e.g. AES)
 Water
+WaveBattleAutoOrganizationFilterNew-
 We
 We are trying to CreatePropertyInfo, but it will be an overwrite!
 We are trying to delete an Event that doesn't belong to this Timeline, from USTimelineEvent::RemoveAndDestroyEvent
@@ -19161,6 +19198,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 \P{_xmlI}
 \P{_xmlW}
 \Z
+\[#[^:]+:[^:]+\]
 \\
 \\?\
 \\[
@@ -19466,6 +19504,7 @@ _end
 _enemy
 _f
 _fade
+_glow
 _invrootMatrix
 _keyPairArray
 _keyPairContainer
@@ -19540,7 +19579,6 @@ _{0}{1:D2}
 a
 a date can have multiple adjustment rules applied to it
 a hexadecimal encoding must have an even number of characters
-a5770ea1f7f45fc0261933ea3376e9e46704fa2aee62fab757e848fd676d495c
 a77d
 aACompromise
 aa
@@ -20007,9 +20045,13 @@ battleStartVoiceSvtId
 battleStartVoiceSvtLimit
 battleStatus
 battleVoice
+battle_bg
 battle_command_spell
 battle_message_{0}
 battle_name
+battle_num_
+battle_num_slash
+battle_num_slash_glow
 battle_quest_route
 battle_reset
 battle_result
@@ -20036,6 +20078,8 @@ be
 be-BY
 befSquareIndex
 before
+beforeActionSetup
+beforeActionVals
 beforeBattleSkillActor
 beforeBirthDay
 beforeClearBgmId
@@ -20382,6 +20426,7 @@ btn_rotation_r
 btn_rotation_t
 btn_sefilter_2
 btn_sefilter_2_on
+btn_shortcut
 btn_skill_off
 btn_skill_on
 btn_sort_down
@@ -20515,6 +20560,7 @@ button_select_unreg
 button_storage
 button_total
 buttontxt_battlestart
+buttontxt_formation_05
 buttontxt_formation_19
 buttontxt_formation_20
 buttontxt_notsynthesis
@@ -21617,6 +21663,7 @@ e.Count
 e2lqXA53saO8M8WZZW4klDiP8mz9TQddpljBZZMofDs=
 e43bb460f0b80cc0c0b075798e948060f8321b7d
 e4437ed6010e88286f547fa90abfe4c42212
+e5e8a1680d5aabbfbdeef2fdc87b29a662d978e6b9cbff173433bfee1dfc183d
 e806f6
 e8b4011604095303ca3b8099982be09fcb9ae616
 eQBoardL1Type
@@ -21707,6 +21754,7 @@ ef_masterskill_flash
 ef_mission_extric01
 ef_overgauge01
 ef_pig_return01
+ef_point_show_02
 ef_presenter
 ef_raid_damage
 ef_resistarrow
@@ -22075,6 +22123,7 @@ event_location
 event_logo_
 event_logo_mini_
 event_logo_mini_80368
+event_logo_shortcut_
 event_mission_notify
 event_mission_random_cancel
 event_mission_receive
@@ -22429,6 +22478,7 @@ formation_framebg_5
 formation_framebg_{0}
 formation_limit
 formation_member_bg
+formation_select_small
 formation_support
 formation_support_bg
 formation_support_small
@@ -23279,6 +23329,9 @@ img_titlebg_
 img_titlebg_clear
 img_tutorial_txtbg
 img_tutorial_txtbg_sq
+img_txt_Enemy
+img_txt_Member
+img_txt_Starting
 img_txt_advanced
 img_txt_archivespace
 img_txt_battle
@@ -24408,6 +24461,7 @@ mstBattleMessageGroup
 mstBgm
 mstBgmRelease
 mstBlankEarthSpot
+mstBlankEarthSpotNavimenu
 mstBoardMessage
 mstBoardMessageRelease
 mstBoost
@@ -27150,7 +27204,6 @@ useDiceSpotId
 useEventDeckNo
 useItemId
 useItemNum
-useNoSkillSpriteMessage
 useQp
 useSrtpData
 useTemporaryCommandSpell
@@ -27360,6 +27413,8 @@ view
 viewEnemy
 viewQuestEnemyInfo
 viewQuestInfo
+viewWaveEnemy
+viewWaveEnemyDispDanger
 virtual
 virtualCurrencies
 virtualCurrency
@@ -27432,6 +27487,7 @@ warn
 warning
 wav
 waveCountInfinity
+waveSetup
 waveStartMovie
 wbits
 weapon

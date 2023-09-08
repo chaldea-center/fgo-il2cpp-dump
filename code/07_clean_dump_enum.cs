@@ -16346,6 +16346,8 @@ public enum DataNameKind.Kind
 	NPC_SERVANT_FOLLOWER_INDIVIDUALITY = 452,
 	GACHA_EXTRA_GIFT = 453,
 	EVENT_MURAL = 454,
+	VIEW_WAVE_ENEMY = 455,
+	BLANK_EARTH_SPOT_NAVIMENU = 456,
 }
 
 public enum Device.Type
@@ -19404,6 +19406,7 @@ public enum QuestScriptEntity.FolderType
 	MATERIAL_FOLDER = 1,
 	EVENT = 2,
 	SVT = 3,
+	NEW_FOLDER = 4,
 }
 
 public enum QuestScriptMaterialNextMaster.MaterialNextType
@@ -20444,6 +20447,18 @@ public enum ListViewSort.AutoOrganizationCategoryFilterKind
 	UNIT_5 = 11,
 	UNIT_6 = 12,
 	SUM = 13,
+}
+
+public enum ListViewSort.WaveBattleAutoOrganizationCategoryFilterKind
+{
+	SERVANT = 0,
+	SERVANT_EQUIP = 1,
+	SERVANT_RARIRY_COMMON = 2,
+	SERVANT_RARIRY_UNCOMMON = 3,
+	SERVANT_RARIRY_RARE = 4,
+	SERVANT_RARIRY_SRARE = 5,
+	SERVANT_RARIRY_SSRARE = 6,
+	SUM = 7,
 }
 
 public enum ListViewSort.Filter2Type
@@ -21537,6 +21552,7 @@ public enum AiLogic.PROC_STATE
 	PLAYER_SKILL_AFTER = 19,
 	SHIFT_SERVANT_AFTER = 20,
 	BEFORE_MOVE_WAVE = 21,
+	PLAYER_SKILL_AFTER_PRIOR = 22,
 }
 
 public enum AiLogic.AiInfo.AITYPE
@@ -21873,12 +21889,15 @@ public enum BattleLogicTask.ACTIONTYPE
 	SHIFT_SERVANT_AFTER = 63,
 	FIELDAI_BEFORE_MOVE_WAVE = 64,
 	PROGRESS_INTERVAL_TURN = 65,
+	FIELD_AI_PLAYER_SKILL_AFTER = 66,
+	FIELD_AI_PLAYER_SKILL_AFTER_PRIOR = 67,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
 {
 	NONE = 0,
 	SUB_ENTRY = 1,
+	ACTOR_SIDE = 2,
 }
 
 public enum MultiplyTargetMatrix.MaterialType
@@ -24469,7 +24488,17 @@ public enum MyRoomStateMaterial.STATE
 	EVENT_SUB = 8,
 	MAIN_INTERLUDE = 9,
 	MAIN_INTERLUDE_SUB = 10,
-	SIZEOF = 11,
+	DUMMY_FOLDER = 11,
+	SIZEOF = 12,
+}
+
+public enum MyRoomStateMaterial.FIXED_PARENT_WAR_ID
+{
+	NONE = 0,
+	MAIN_STORY = 1,
+	MAIN_INTERLUDE = 2,
+	EVENT = 3,
+	FREE = 4,
 }
 
 public enum MyRoomStateMaterial.SERVANTFACEICONTYPE
@@ -25005,6 +25034,7 @@ public enum PartyListViewItem.MenuKind
 	FIX_SUPPORT_ONLY_QUEST_START = 6,
 	FIX_SUPPORT_QUEST_START = 7,
 	SELECT_PARTY = 8,
+	WAVE_BATTLE = 9,
 }
 
 public enum PartyListViewItem.DeckCondition
@@ -25528,9 +25558,10 @@ protected enum PartyOrganizationRootComponent.MenuMode
 	NUM_AND_POSITION_RESTRICTION_QUEST_START = 5,
 	FIX_SUPPORT_ONLY_QUEST_START = 6,
 	FIX_SUPPORT_QUEST_START = 7,
-	SELECT_PARTY = 8,
-	ORGANIZATION_CHANGE = 9,
-	ORGANIZATION_SWAP = 10,
+	WAVE_BATTLE = 8,
+	SELECT_PARTY = 9,
+	ORGANIZATION_CHANGE = 10,
+	ORGANIZATION_SWAP = 11,
 }
 
 protected enum PartyOrganizationRootComponent.State
@@ -25556,16 +25587,19 @@ protected enum PartyOrganizationRootComponent.State
 	INPUT_ORGANIZATION_SWAP_SERVANT_SELECT = 18,
 	INPUT_ORGANIZATION_CHANGE_EQUIP_SELECT = 19,
 	INPUT_ORGANIZATION_SWAP_EQUIP_SELECT = 20,
-	INPUT_INFOMATION = 21,
+	INPUT_INFORMATION = 21,
 	INPUT_EVENT_POINT = 22,
 	INPUT_CHARA_GRAPH = 23,
 	INPUT_DECK_NAME = 24,
 	INPUT_DECK_COPY = 25,
-	INPUT_QUEST_START_TUROTIAL = 26,
+	INPUT_QUEST_START_TUTORIAL = 26,
 	INPUT_BOOST_ITEM = 27,
 	QUIT_SCENE = 28,
 	MASTER_FORMATION_SCENE = 29,
 	QUEST_INFORMATION = 30,
+	INIT_WAVE_QUEST_START = 31,
+	INPUT_WAVE_QUEST_START = 32,
+	QUIT_WAVE_QUEST_START = 33,
 }
 
 public enum PartyServantListViewItemDraw.DispMode
@@ -25663,6 +25697,53 @@ public enum SelectMyServantOrNpcDialog.ResultClicked
 	MY_SERVANT = 0,
 	NPC = 1,
 	CANCEL = 2,
+}
+
+private enum WaveBattlePartyOrganizationAutoOrganizationConfirmDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
+private enum WaveBattlePartyOrganizationAutoOrganizationSettingDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
+public enum WaveBattlePartyOrganizationMenu.ResultKind
+{
+	DECIDE = 0,
+	MASTER_FORMATION = 1,
+	AUTO_ORGANIZATION = 2,
+	PARTY_EDIT = 3,
+	CLASS_INFO = 4,
+	AUTO_SELL = 5,
+	BATTLE_START = 6,
+	DETAIL_SERVANT = 7,
+}
+
+protected enum WaveBattlePartyOrganizationMenu.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
+public enum WaveBattleWaveEnemyInfoItem.DispMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
 }
 
 protected enum ServantCheckEquipDialog.State
@@ -26950,7 +27031,15 @@ public enum BlankEarth.STATE
 	ZOOM_IN = 3,
 	ZOOM_OUT = 4,
 	QAA_ROTATE = 5,
-	SIZEOF = 6,
+	SHORTCUT_ROTATE = 6,
+	SIZEOF = 7,
+}
+
+private enum BlankEarthShortcutUIButton.WaitState
+{
+	NONE = 0,
+	ENABLE = 1,
+	DISABLE = 2,
 }
 
 private enum SubmarineScanConfirmDialog.State
@@ -27189,6 +27278,7 @@ public enum QuestAfterAction.COMMAND
 	SPOT_GRAY_QUICK = 111,
 	SPOT_DISP_QUICK = 112,
 	SPOT_CHANGE_QUICK = 113,
+	SPOT_ANIM_QUICK = 114,
 	ROAD_HIDE = 200,
 	ROAD_GRAY = 201,
 	ROAD_DISP = 202,
@@ -27251,7 +27341,9 @@ public enum QuestAfterAction.STATE
 {
 	NONE = 0,
 	MAIN = 1,
-	SIZEOF = 2,
+	ADDITIONAL = 2,
+	INSTANT = 3,
+	SIZEOF = 4,
 }
 
 public enum QAASpotStateController.STATE
@@ -29851,6 +29943,7 @@ public enum FGOLogic.PROC
 	SERVANT_AI_BEFORE_MOVE_WAVE = 52,
 	FIELDAI_BEFORE_MOVE_WAVE = 53,
 	PROGRESS_INTERVAL_TURN = 54,
+	LOAD_N_STAGE_PLAYER = 55,
 }
 
 public enum FGOPerformance.Effect
