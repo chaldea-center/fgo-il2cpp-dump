@@ -14995,6 +14995,9 @@ public enum Ai.COND
 	COUNT_PLAYER_SKILL_HIGHER_INCLUDE_MASTER_SKILL = 188,
 	COUNT_PLAYER_SKILL_LOWER_INCLUDE_MASTER_SKILL = 189,
 	COUNT_PLAYER_SKILL_EQUAL_INCLUDE_MASTER_SKILL = 190,
+	TOTAL_TURN_HIGHER = 191,
+	TOTAL_TURN_LOWER = 192,
+	TOTAL_TURN_EQUAL = 193,
 }
 
 public enum Ai.ACT_NUM
@@ -16348,6 +16351,7 @@ public enum DataNameKind.Kind
 	EVENT_MURAL = 454,
 	VIEW_WAVE_ENEMY = 455,
 	BLANK_EARTH_SPOT_NAVIMENU = 456,
+	TERMINAL_OVERWRITE = 457,
 }
 
 public enum Device.Type
@@ -17873,12 +17877,13 @@ public enum AtlasManager.CARD_ICON_TYPE
 public enum AtlasManager.SkinType
 {
 	DIALOG = 0,
-	TERMINAL = 1,
+	TERMINAL_UI = 1,
 	COMMON_BG_01 = 2,
 	TEX_BACK_BG = 3,
 	COMMON_BG_02 = 4,
 	MINI_DIALOG = 5,
 	MID_DIALOG = 6,
+	TERMINAL_BG = 7,
 }
 
 public enum AtlasManager.FrameType
@@ -18480,6 +18485,7 @@ public enum DataVals.TYPE
 	TriggeredFuncPositionAll = 137,
 	TriggeredTargetHpRange = 138,
 	TriggeredTargetHpRateRange = 139,
+	ExcludeUnSubStateIndiv = 140,
 }
 
 public enum DataVals.OverChargeState
@@ -19679,6 +19685,18 @@ public enum TblFriendEntity.Flag
 	USER_ID_MES_HIDE = 4,
 	TO_FRIENDID_LOCK = 8,
 	TO_USERID_LOCK = 16,
+}
+
+public enum TerminalOverwriteEntity.OverwriteType
+{
+	BGM = 1,
+	TERMINAL_BG = 2,
+	COMMON_BG_TYPE1 = 3,
+	COMMON_BG_TYPE2 = 4,
+	TERMINAL_SPRITE = 5,
+	TERMINAL_EFFECT = 6,
+	COMMON_EFFECT_TYPE1 = 7,
+	COMMON_EFFECT_TYPE2 = 8,
 }
 
 public enum TreasureDvcEntity.EffectFlagKind
@@ -21623,6 +21641,7 @@ public enum ConditionsInformation.PARAMATER
 	COUNT_PLAYER_NP = 36,
 	COUNT_PLAYER_SKILL = 37,
 	COUNT_PLAYER_SKILL_INCLUDE_MASTER_SKILL = 38,
+	TOTAL_TURN = 39,
 }
 
 public enum ConditionsInformation.REFINE

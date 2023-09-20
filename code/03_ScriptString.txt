@@ -101,8 +101,6 @@ target : Battle
 worldNormal: 
 
 worldPosition: 
-
-・
 
 
 
@@ -1920,6 +1918,7 @@ file crc (
 1B2FA5
 1C97BEFC54BD7A8B65ACF89F81D4D4ADC565FA45
 1E589A8595423412134FAA2DBDEC95C8D8675E58
+1d9b95d633e2af720c849aa60c09208e8d07ab148c207048fd9c9d2525f5ec4d
 1st Attack
 2
 2 CR found
@@ -2008,8 +2007,8 @@ file crc (
 2.5.8.1.1
 2.6
 2.7
-2.79.1
 2.8
+2.80.0
 2.9
 20
 20.2
@@ -2019,7 +2018,7 @@ file crc (
 20000000000000000000000050508CB89F652824E06B8173
 201
 20220731_BOOST_RATE_1
-20230908_14:16
+20230913_16:44
 21.1
 21.10
 21.2
@@ -2032,7 +2031,6 @@ file crc (
 2580F63CCFE44138870713B1A92369E33E2135D266DBB372386C400B
 264
 26DC5C6CE94A4B44F330B5D9BBD77CBF958416295CF7E1CE6BCCDC18FF8C07B6
-27d16675a7d820091bc34e94249de14f57eb8008a6a070e2134aba49bbb17c61
 28091019353058090096996979000309560759124368558014865957655842872397301267595
 2841AE
 2866537B676752636A68F56554E12640276B649EF7526267
@@ -7675,6 +7673,7 @@ EndMove
 EndMoveAlpha
 EndMoveAttack
 EndMoveReturn
+EndMoveReturnEaseHalf
 EndMoveReturnHalf
 EndMoveScale
 EndOpen
@@ -7964,6 +7963,7 @@ Exception:
 ExceptionMethod
 Exceptions
 ExcludeSchema
+ExcludeUnSubStateIndiv
 Excluded subtrees cannot be build from name constraints extension.
 Exclusive semaphore already owned
 ExclusiveOr
@@ -11620,6 +11620,7 @@ NOT_SELECT_LET_GO
 NOT_SELECT_MAX_EQUIP
 NOT_SEND_TRACK_EVENT_AT_WAR_IDS
 NOT_UI_CHANGE_MAP_IDS
+NOT_USE_RESTRICTION_DIALOG
 NOW_LOADING
 NO_CHANGE_EQUIP
 NO_ENTRY_NAME
@@ -12604,6 +12605,8 @@ OverWriteSkillInfoId
 Overflow
 Overflow or underflow in the arithmetic operation.
 Override no changes
+OverwriteCommonBG1
+OverwriteCommonBG2
 OverwriteMotion_{0}
 OverwritePopupColor
 OverwritePopupText
@@ -12807,6 +12810,7 @@ PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_POSITION
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_MY_SERVANT_SINGLE
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_NPC_ONLY
+PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_POSITION
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_FIXED_SUPPORT_POSITION
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_MY_SERVANT_OR_NPC
 PARTY_ORGANIZATION_SERVANT_QUEST_RESTRICTION_SELECT_MY_SERVANT_OR_NPC
@@ -13768,7 +13772,7 @@ RESET_DIGGING_CONFIRM_DIALOG_MESSAGE
 RESET_DIGGING_CONFIRM_DIALOG_TITLE
 REST
 RESTRICTION_NOT_SATISFY_DIALOG_FATIGUE
-RESTRICTION_NOT_SATISFY_DIALOG_NONE_RESTRICTION
+RESTRICTION_NOT_SATISFY_DIALOG_REQUIRED
 RESTRICTION_NOT_SATISFY_DIALOG_TITLE
 RESTRICTION_NOT_SATISFY_DIALOG_UNIQUE
 RESTRICTION_NOT_SATISFY_DIALOG_WHOLE_SUFFIX
@@ -16286,7 +16290,6 @@ SvtEqCombine
 SvtEqScrollBarValue
 SvtEquipEffectFilterNew-
 SvtEventBonusFilterNew-
-SvtVoiceマスタが適切に設定されていません。
 SvtW_StartClose
 Swap error
 SwapCached
@@ -17877,15 +17880,19 @@ UIMasterFigureOld-Enemy(
 UIMasterFullFigure
 UIMasterFullFigure(
 UIRootPanel
+UISkin/
 UISkin/UISkin01CommonBG1Atlas
 UISkin/UISkin01MiniDialogAtlas
 UISkin/UISkin01TerminalAtlas
+UISkin/UISkin01TerminalBG1Atlas
 UISkin/UISkin02CommonBG1Atlas
 UISkin/UISkin02CommonBG2Atlas
 UISkin/UISkin02CommonBG3Atlas
 UISkin/UISkin02CommonBG4Atlas
 UISkin/UISkin02MiniDialogAtlas
 UISkin/UISkin02TerminalAtlas
+UISkin/UISkin02TerminalBG1Atlas
+UISkin/UISkin02TerminalBG2Atlas
 UISkin02DialogAtlas
 UInt16
 UInt32
@@ -19088,6 +19095,8 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 [Unknown]
 [Version]{0}  V{1}{0}{0}
 [WH Detector Service]
+[[]-[\]]
+[[][0-9A-F]{6}[\]]
 []
 [^
 [^0-9]
@@ -19962,6 +19971,8 @@ backEffectStart
 backEffectStop
 background cancel
 backlog
+backlogEnd
+backlogStart
 backspace
 backtrace-machine-id
 backtrace-unity
@@ -20862,18 +20873,30 @@ charaLayer
 charaMask
 charaMove
 charaMoveEase
+charaMoveEaseFSL
+charaMoveEaseFSR
+charaMoveEaseFSSideL
+charaMoveEaseFSSideR
 charaMoveFSL
 charaMoveFSR
 charaMoveFSSideL
 charaMoveFSSideR
+charaMoveREturnEaseFSR
+charaMoveREturnEaseFSSideR
 charaMoveREturnFSR
 charaMoveREturnFSSideR
 charaMoveReturn
+charaMoveReturnEase
+charaMoveReturnEaseFSL
+charaMoveReturnEaseFSR
+charaMoveReturnEaseFSSideL
+charaMoveReturnEaseFSSideR
 charaMoveReturnFSL
 charaMoveReturnFSR
 charaMoveReturnFSSideL
 charaMoveReturnFSSideR
 charaMoveScale
+charaMoveScaleEase
 charaPut
 charaPutFSL
 charaPutFSR
@@ -24758,6 +24781,7 @@ mstSvtTreasureDeviceRelease
 mstSvtVoice
 mstSvtVoiceRelation
 mstTelop
+mstTerminalOverwrite
 mstTips
 mstTotalLogin
 mstTreasureBox
@@ -26499,11 +26523,16 @@ subRenderFadeinFSSideR
 subRenderFadeout
 subRenderMove
 subRenderMoveEase
+subRenderMoveEaseFSL
+subRenderMoveEaseFSR
+subRenderMoveEaseFSSideL
+subRenderMoveEaseFSSideR
 subRenderMoveFSL
 subRenderMoveFSR
 subRenderMoveFSSideL
 subRenderMoveFSSideR
 subRenderMoveScale
+subRenderMoveScaleEase
 subRenderScale
 subTitle
 sub_sdk_bridge_version
@@ -28115,7 +28144,6 @@ i:{2}
 CUSTOM に変更しました
 サーヴァントスキル強化【完了】強化
 サーヴァント強化【完了】強化
-サーヴァント未編成
 ストーリークエストクリア【完了】クエスト
 ストーリークエストコンテニュー【完了】クエスト
 ストーリークエスト敗北【画面】クエスト
@@ -28175,7 +28203,6 @@ CUSTOM に変更しました
 月
 未定義フォーマット[{0}]
 指定可能なフォーマットは[{1}]です
-未達成
 残り{0:#,0}体
 秒
 表明違反時処理が設定されていません
