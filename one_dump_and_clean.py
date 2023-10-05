@@ -1,17 +1,53 @@
 import argparse
+import re
 import subprocess
+import urllib.parse
+from datetime import datetime
 from pathlib import Path
 
-import extract_apk
-import clean_dump
-
+import httpx
 from git import Repo
+
+import clean_dump
+import extract_apk
+
+
+def get_play_store_ver() -> str:
+    return httpx.get(
+        "https://gplay-ver.atlasacademy.workers.dev/?id=com.aniplex.fategrandorder"
+    ).text
+
+
+def get_literal_lines(code_folder: Path) -> set[str]:
+    with open(code_folder / "02_stringliteral.txt", "r", encoding="utf-8") as fp:
+        return {line.strip() for line in fp.readlines()}
+
+
+def find_correct_verCode(code_folder: Path, old_literal_lines: set[str]) -> str:
+    lines = get_literal_lines(code_folder)
+    diff_lines = lines - old_literal_lines
+    for line in diff_lines:
+        if re.match(r"^[a-z0-9]{64}$", line) is not None:
+            return line
+
+    raise Exception("Can't find correct verCode")
+
+
+def write_verCode(code_folder: Path, old_literal_lines: set[str]) -> None:
+    current_version = get_play_store_ver()
+    correct_verCode = find_correct_verCode(code_folder, old_literal_lines)
+    with open(code_folder / "00_verCode.txt", "w", encoding="utf-8") as fp:
+        data = {"appVer": current_version, "verCode": correct_verCode}
+        urlencoded = urllib.parse.urlencode(data)
+        fp.write(urlencoded)
 
 
 def main(apk_path: str, il2cppdumper: str) -> None:
     parent_folder = Path(__file__).resolve().parent
     code_folder = parent_folder / "code"
     apk_folder = parent_folder / "play_fgo"
+
+    old_literal_lines = get_literal_lines(code_folder)
 
     extract_apk.main(apk_path, apk_folder)
 
@@ -33,11 +69,13 @@ def main(apk_path: str, il2cppdumper: str) -> None:
 
     date = None
 
-    for i, line in enumerate(string_literal):
-        if line.startswith("2023") and ":" in line:
+    for line in string_literal:
+        if line.startswith(str(datetime.now().year)) and ":" in line:
             date = line.strip()
             date = f"{date[:4]}_{date[4:6]}_{date[6:]}"
             break
+
+    write_verCode(code_folder, old_literal_lines)
 
     if date is not None:
         repo = Repo(parent_folder)
