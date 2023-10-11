@@ -7107,13 +7107,6 @@ internal enum StaticAccessorType
 	ArrowWithDefaultReturnIfNull = 3,
 }
 
-private enum BigInteger.GetBytesMode
-{
-	AllocateArray = 0,
-	Count = 1,
-	Span = 2,
-}
-
 internal enum LightmapType
 {
 	StaticLightmap = 0,
@@ -8734,6 +8727,188 @@ public enum GraphicsFormat
 	RGBA_ASTC12X12_UFloat = 150,
 }
 
+private enum BigInteger.GetBytesMode
+{
+	AllocateArray = 0,
+	Count = 1,
+	Span = 2,
+}
+
+public enum TouchPhase
+{
+	Began = 0,
+	Moved = 1,
+	Stationary = 2,
+	Ended = 3,
+	Canceled = 4,
+}
+
+public enum IMECompositionMode
+{
+	Auto = 0,
+	On = 1,
+	Off = 2,
+}
+
+public enum TouchType
+{
+	Direct = 0,
+	Indirect = 1,
+	Stylus = 2,
+}
+
+public enum DeviceOrientation
+{
+	Unknown = 0,
+	Portrait = 1,
+	PortraitUpsideDown = 2,
+	LandscapeLeft = 3,
+	LandscapeRight = 4,
+	FaceUp = 5,
+	FaceDown = 6,
+}
+
+public enum RigidbodyConstraints2D
+{
+	None = 0,
+	FreezePositionX = 1,
+	FreezePositionY = 2,
+	FreezeRotation = 4,
+	FreezePosition = 3,
+	FreezeAll = 7,
+}
+
+public enum RigidbodyType2D
+{
+	Dynamic = 0,
+	Kinematic = 1,
+	Static = 2,
+}
+
+public enum ForceMode2D
+{
+	Force = 0,
+	Impulse = 1,
+}
+
+public enum ForceMode
+{
+	Force = 0,
+	Acceleration = 5,
+	Impulse = 1,
+	VelocityChange = 2,
+}
+
+public enum CollisionFlags
+{
+	None = 0,
+	Sides = 1,
+	Above = 2,
+	Below = 4,
+	CollidedSides = 1,
+	CollidedAbove = 2,
+	CollidedBelow = 4,
+}
+
+public enum QueryTriggerInteraction
+{
+	UseGlobal = 0,
+	Ignore = 1,
+	Collide = 2,
+}
+
+public enum FontStyle
+{
+	Normal = 0,
+	Bold = 1,
+	Italic = 2,
+	BoldAndItalic = 3,
+}
+
+internal enum TextGenerationError
+{
+	None = 0,
+	CustomSizeOnNonDynamicFont = 1,
+	CustomStyleOnNonDynamicFont = 2,
+	NoFont = 4,
+}
+
+public enum TextAnchor
+{
+	UpperLeft = 0,
+	UpperCenter = 1,
+	UpperRight = 2,
+	MiddleLeft = 3,
+	MiddleCenter = 4,
+	MiddleRight = 5,
+	LowerLeft = 6,
+	LowerCenter = 7,
+	LowerRight = 8,
+}
+
+public enum HorizontalWrapMode
+{
+	Wrap = 0,
+	Overflow = 1,
+}
+
+public enum VerticalWrapMode
+{
+	Truncate = 0,
+	Overflow = 1,
+}
+
+internal enum UnityWebRequest.UnityWebRequestMethod
+{
+	Get = 0,
+	Post = 1,
+	Put = 2,
+	Head = 3,
+	Custom = 4,
+}
+
+internal enum UnityWebRequest.UnityWebRequestError
+{
+	OK = 0,
+	Unknown = 1,
+	SDKError = 2,
+	UnsupportedProtocol = 3,
+	MalformattedUrl = 4,
+	CannotResolveProxy = 5,
+	CannotResolveHost = 6,
+	CannotConnectToHost = 7,
+	AccessDenied = 8,
+	GenericHttpError = 9,
+	WriteError = 10,
+	ReadError = 11,
+	OutOfMemory = 12,
+	Timeout = 13,
+	HTTPPostError = 14,
+	SSLCannotConnect = 15,
+	Aborted = 16,
+	TooManyRedirects = 17,
+	ReceivedNoData = 18,
+	SSLNotSupported = 19,
+	FailedToSendData = 20,
+	FailedToReceiveData = 21,
+	SSLCertificateError = 22,
+	SSLCipherNotAvailable = 23,
+	SSLCACertError = 24,
+	UnrecognizedContentEncoding = 25,
+	LoginFailed = 26,
+	SSLShutdownFailed = 27,
+	NoInternetConnection = 28,
+}
+
+public enum UnityWebRequest.Result
+{
+	InProgress = 0,
+	Success = 1,
+	ConnectionError = 2,
+	ProtocolError = 3,
+	DataProcessingError = 4,
+}
+
 public enum AcceptRejectRule
 {
 	None = 0,
@@ -9131,568 +9306,6 @@ public enum SaveOptions
 	None = 0,
 	DisableFormatting = 1,
 	OmitDuplicateNamespaces = 2,
-}
-
-public enum TouchPhase
-{
-	Began = 0,
-	Moved = 1,
-	Stationary = 2,
-	Ended = 3,
-	Canceled = 4,
-}
-
-public enum IMECompositionMode
-{
-	Auto = 0,
-	On = 1,
-	Off = 2,
-}
-
-public enum TouchType
-{
-	Direct = 0,
-	Indirect = 1,
-	Stylus = 2,
-}
-
-public enum DeviceOrientation
-{
-	Unknown = 0,
-	Portrait = 1,
-	PortraitUpsideDown = 2,
-	LandscapeLeft = 3,
-	LandscapeRight = 4,
-	FaceUp = 5,
-	FaceDown = 6,
-}
-
-public enum RigidbodyConstraints2D
-{
-	None = 0,
-	FreezePositionX = 1,
-	FreezePositionY = 2,
-	FreezeRotation = 4,
-	FreezePosition = 3,
-	FreezeAll = 7,
-}
-
-public enum RigidbodyType2D
-{
-	Dynamic = 0,
-	Kinematic = 1,
-	Static = 2,
-}
-
-public enum ForceMode2D
-{
-	Force = 0,
-	Impulse = 1,
-}
-
-public enum ForceMode
-{
-	Force = 0,
-	Acceleration = 5,
-	Impulse = 1,
-	VelocityChange = 2,
-}
-
-public enum CollisionFlags
-{
-	None = 0,
-	Sides = 1,
-	Above = 2,
-	Below = 4,
-	CollidedSides = 1,
-	CollidedAbove = 2,
-	CollidedBelow = 4,
-}
-
-public enum QueryTriggerInteraction
-{
-	UseGlobal = 0,
-	Ignore = 1,
-	Collide = 2,
-}
-
-public enum FontStyle
-{
-	Normal = 0,
-	Bold = 1,
-	Italic = 2,
-	BoldAndItalic = 3,
-}
-
-internal enum TextGenerationError
-{
-	None = 0,
-	CustomSizeOnNonDynamicFont = 1,
-	CustomStyleOnNonDynamicFont = 2,
-	NoFont = 4,
-}
-
-public enum TextAnchor
-{
-	UpperLeft = 0,
-	UpperCenter = 1,
-	UpperRight = 2,
-	MiddleLeft = 3,
-	MiddleCenter = 4,
-	MiddleRight = 5,
-	LowerLeft = 6,
-	LowerCenter = 7,
-	LowerRight = 8,
-}
-
-public enum HorizontalWrapMode
-{
-	Wrap = 0,
-	Overflow = 1,
-}
-
-public enum VerticalWrapMode
-{
-	Truncate = 0,
-	Overflow = 1,
-}
-
-internal enum UnityWebRequest.UnityWebRequestMethod
-{
-	Get = 0,
-	Post = 1,
-	Put = 2,
-	Head = 3,
-	Custom = 4,
-}
-
-internal enum UnityWebRequest.UnityWebRequestError
-{
-	OK = 0,
-	Unknown = 1,
-	SDKError = 2,
-	UnsupportedProtocol = 3,
-	MalformattedUrl = 4,
-	CannotResolveProxy = 5,
-	CannotResolveHost = 6,
-	CannotConnectToHost = 7,
-	AccessDenied = 8,
-	GenericHttpError = 9,
-	WriteError = 10,
-	ReadError = 11,
-	OutOfMemory = 12,
-	Timeout = 13,
-	HTTPPostError = 14,
-	SSLCannotConnect = 15,
-	Aborted = 16,
-	TooManyRedirects = 17,
-	ReceivedNoData = 18,
-	SSLNotSupported = 19,
-	FailedToSendData = 20,
-	FailedToReceiveData = 21,
-	SSLCertificateError = 22,
-	SSLCipherNotAvailable = 23,
-	SSLCACertError = 24,
-	UnrecognizedContentEncoding = 25,
-	LoginFailed = 26,
-	SSLShutdownFailed = 27,
-	NoInternetConnection = 28,
-}
-
-public enum UnityWebRequest.Result
-{
-	InProgress = 0,
-	Success = 1,
-	ConnectionError = 2,
-	ProtocolError = 3,
-	DataProcessingError = 4,
-}
-
-public enum ConstructorHandling
-{
-	Default = 0,
-	AllowNonPublicDefaultConstructor = 1,
-}
-
-public enum DateFormatHandling
-{
-	IsoDateFormat = 0,
-	MicrosoftDateFormat = 1,
-}
-
-public enum DateParseHandling
-{
-	None = 0,
-	DateTime = 1,
-	DateTimeOffset = 2,
-}
-
-public enum DateTimeZoneHandling
-{
-	Local = 0,
-	Utc = 1,
-	Unspecified = 2,
-	RoundtripKind = 3,
-}
-
-public enum DefaultValueHandling
-{
-	Include = 0,
-	Ignore = 1,
-	Populate = 2,
-	IgnoreAndPopulate = 3,
-}
-
-public enum FloatFormatHandling
-{
-	String = 0,
-	Symbol = 1,
-	DefaultValue = 2,
-}
-
-public enum FloatParseHandling
-{
-	Double = 0,
-	Decimal = 1,
-}
-
-public enum Formatting
-{
-	None = 0,
-	Indented = 1,
-}
-
-internal enum JsonContainerType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Constructor = 3,
-}
-
-protected internal enum JsonReader.State
-{
-	Start = 0,
-	Complete = 1,
-	Property = 2,
-	ObjectStart = 3,
-	Object = 4,
-	ArrayStart = 5,
-	Array = 6,
-	Closed = 7,
-	PostValue = 8,
-	ConstructorStart = 9,
-	Constructor = 10,
-	Error = 11,
-	Finished = 12,
-}
-
-internal enum ReadType
-{
-	Read = 0,
-	ReadAsInt32 = 1,
-	ReadAsInt64 = 2,
-	ReadAsBytes = 3,
-	ReadAsString = 4,
-	ReadAsDecimal = 5,
-	ReadAsDateTime = 6,
-	ReadAsDateTimeOffset = 7,
-	ReadAsDouble = 8,
-	ReadAsBoolean = 9,
-}
-
-public enum JsonToken
-{
-	None = 0,
-	StartObject = 1,
-	StartArray = 2,
-	StartConstructor = 3,
-	PropertyName = 4,
-	Comment = 5,
-	Raw = 6,
-	Integer = 7,
-	Float = 8,
-	String = 9,
-	Boolean = 10,
-	Null = 11,
-	Undefined = 12,
-	EndObject = 13,
-	EndArray = 14,
-	EndConstructor = 15,
-	Date = 16,
-	Bytes = 17,
-}
-
-internal enum JsonWriter.State
-{
-	Start = 0,
-	Property = 1,
-	ObjectStart = 2,
-	Object = 3,
-	ArrayStart = 4,
-	Array = 5,
-	ConstructorStart = 6,
-	Constructor = 7,
-	Closed = 8,
-	Error = 9,
-}
-
-public enum MemberSerialization
-{
-	OptOut = 0,
-	OptIn = 1,
-	Fields = 2,
-}
-
-public enum MetadataPropertyHandling
-{
-	Default = 0,
-	ReadAhead = 1,
-	Ignore = 2,
-}
-
-public enum MissingMemberHandling
-{
-	Ignore = 0,
-	Error = 1,
-}
-
-public enum NullValueHandling
-{
-	Include = 0,
-	Ignore = 1,
-}
-
-public enum ObjectCreationHandling
-{
-	Auto = 0,
-	Reuse = 1,
-	Replace = 2,
-}
-
-public enum PreserveReferencesHandling
-{
-	None = 0,
-	Objects = 1,
-	Arrays = 2,
-	All = 3,
-}
-
-public enum ReferenceLoopHandling
-{
-	Error = 0,
-	Ignore = 1,
-	Serialize = 2,
-}
-
-public enum Required
-{
-	Default = 0,
-	AllowNull = 1,
-	Always = 2,
-	DisallowNull = 3,
-}
-
-public enum StringEscapeHandling
-{
-	Default = 0,
-	EscapeNonAscii = 1,
-	EscapeHtml = 2,
-}
-
-public enum TypeNameAssemblyFormatHandling
-{
-	Simple = 0,
-	Full = 1,
-}
-
-public enum TypeNameHandling
-{
-	None = 0,
-	Objects = 1,
-	Arrays = 2,
-	All = 3,
-	Auto = 4,
-}
-
-public enum WriteState
-{
-	Error = 0,
-	Closed = 1,
-	Object = 2,
-	Array = 3,
-	Constructor = 4,
-	Property = 5,
-	Start = 6,
-}
-
-internal enum PrimitiveTypeCode
-{
-	Empty = 0,
-	Object = 1,
-	Char = 2,
-	CharNullable = 3,
-	Boolean = 4,
-	BooleanNullable = 5,
-	SByte = 6,
-	SByteNullable = 7,
-	Int16 = 8,
-	Int16Nullable = 9,
-	UInt16 = 10,
-	UInt16Nullable = 11,
-	Int32 = 12,
-	Int32Nullable = 13,
-	Byte = 14,
-	ByteNullable = 15,
-	UInt32 = 16,
-	UInt32Nullable = 17,
-	Int64 = 18,
-	Int64Nullable = 19,
-	UInt64 = 20,
-	UInt64Nullable = 21,
-	Single = 22,
-	SingleNullable = 23,
-	Double = 24,
-	DoubleNullable = 25,
-	DateTime = 26,
-	DateTimeNullable = 27,
-	DateTimeOffset = 28,
-	DateTimeOffsetNullable = 29,
-	Decimal = 30,
-	DecimalNullable = 31,
-	Guid = 32,
-	GuidNullable = 33,
-	TimeSpan = 34,
-	TimeSpanNullable = 35,
-	BigInteger = 36,
-	BigIntegerNullable = 37,
-	Uri = 38,
-	String = 39,
-	Bytes = 40,
-	DBNull = 41,
-}
-
-internal enum ParseResult
-{
-	None = 0,
-	Success = 1,
-	Overflow = 2,
-	Invalid = 3,
-}
-
-internal enum ConvertUtils.ConvertResult
-{
-	Success = 0,
-	CannotConvertNull = 1,
-	NotInstantiableType = 2,
-	NoValidConversion = 3,
-}
-
-internal enum ParserTimeZone
-{
-	Unspecified = 0,
-	Utc = 1,
-	LocalWestOfUtc = 2,
-	LocalEastOfUtc = 3,
-}
-
-private enum StringUtils.SeparatedCaseState
-{
-	Start = 0,
-	Lower = 1,
-	Upper = 2,
-	NewWord = 3,
-}
-
-internal enum JsonContractType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Primitive = 3,
-	String = 4,
-	Dictionary = 5,
-	Dynamic = 6,
-	Serializable = 7,
-	Linq = 8,
-}
-
-internal enum JsonSerializerInternalReader.PropertyPresence
-{
-	None = 0,
-	Null = 1,
-	Value = 2,
-}
-
-public enum CommentHandling
-{
-	Ignore = 0,
-	Load = 1,
-}
-
-public enum DuplicatePropertyNameHandling
-{
-	Replace = 0,
-	Ignore = 1,
-	Error = 2,
-}
-
-public enum JTokenType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Constructor = 3,
-	Property = 4,
-	Comment = 5,
-	Integer = 6,
-	Float = 7,
-	String = 8,
-	Boolean = 9,
-	Null = 10,
-	Undefined = 11,
-	Date = 12,
-	Raw = 13,
-	Bytes = 14,
-	Guid = 15,
-	Uri = 16,
-	TimeSpan = 17,
-}
-
-public enum LineInfoHandling
-{
-	Ignore = 0,
-	Load = 1,
-}
-
-internal enum BsonType
-{
-	Number = 1,
-	String = 2,
-	Object = 3,
-	Array = 4,
-	Binary = 5,
-	Undefined = 6,
-	Oid = 7,
-	Boolean = 8,
-	Date = 9,
-	Null = 10,
-	Regex = 11,
-	Reference = 12,
-	Code = 13,
-	Symbol = 14,
-	CodeWScope = 15,
-	Integer = 16,
-	TimeStamp = 17,
-	Long = 18,
-	MaxKey = 127,
-}
-
-public enum ServicesInitializationState
-{
-	Uninitialized = 0,
-	Initializing = 1,
-	Initialized = 2,
 }
 
 public enum AndroidAssetPackStatus
@@ -10134,18 +9747,6 @@ public enum AnalyticsSessionState
 	kSessionResumed = 3,
 }
 
-public enum AnalyticsResult
-{
-	Ok = 0,
-	NotInitialized = 1,
-	AnalyticsDisabled = 2,
-	TooManyItems = 3,
-	SizeLimitReached = 4,
-	TooManyRequests = 5,
-	InvalidData = 6,
-	UnsupportedPlatform = 7,
-}
-
 public enum VideoRenderMode
 {
 	CameraFarPlane = 0,
@@ -10205,6 +9806,386 @@ public enum WindZoneMode
 	Spherical = 1,
 }
 
+public enum ConstructorHandling
+{
+	Default = 0,
+	AllowNonPublicDefaultConstructor = 1,
+}
+
+public enum DateFormatHandling
+{
+	IsoDateFormat = 0,
+	MicrosoftDateFormat = 1,
+}
+
+public enum DateParseHandling
+{
+	None = 0,
+	DateTime = 1,
+	DateTimeOffset = 2,
+}
+
+public enum DateTimeZoneHandling
+{
+	Local = 0,
+	Utc = 1,
+	Unspecified = 2,
+	RoundtripKind = 3,
+}
+
+public enum DefaultValueHandling
+{
+	Include = 0,
+	Ignore = 1,
+	Populate = 2,
+	IgnoreAndPopulate = 3,
+}
+
+public enum FloatFormatHandling
+{
+	String = 0,
+	Symbol = 1,
+	DefaultValue = 2,
+}
+
+public enum FloatParseHandling
+{
+	Double = 0,
+	Decimal = 1,
+}
+
+public enum Formatting
+{
+	None = 0,
+	Indented = 1,
+}
+
+internal enum JsonContainerType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Constructor = 3,
+}
+
+protected internal enum JsonReader.State
+{
+	Start = 0,
+	Complete = 1,
+	Property = 2,
+	ObjectStart = 3,
+	Object = 4,
+	ArrayStart = 5,
+	Array = 6,
+	Closed = 7,
+	PostValue = 8,
+	ConstructorStart = 9,
+	Constructor = 10,
+	Error = 11,
+	Finished = 12,
+}
+
+internal enum ReadType
+{
+	Read = 0,
+	ReadAsInt32 = 1,
+	ReadAsInt64 = 2,
+	ReadAsBytes = 3,
+	ReadAsString = 4,
+	ReadAsDecimal = 5,
+	ReadAsDateTime = 6,
+	ReadAsDateTimeOffset = 7,
+	ReadAsDouble = 8,
+	ReadAsBoolean = 9,
+}
+
+public enum JsonToken
+{
+	None = 0,
+	StartObject = 1,
+	StartArray = 2,
+	StartConstructor = 3,
+	PropertyName = 4,
+	Comment = 5,
+	Raw = 6,
+	Integer = 7,
+	Float = 8,
+	String = 9,
+	Boolean = 10,
+	Null = 11,
+	Undefined = 12,
+	EndObject = 13,
+	EndArray = 14,
+	EndConstructor = 15,
+	Date = 16,
+	Bytes = 17,
+}
+
+internal enum JsonWriter.State
+{
+	Start = 0,
+	Property = 1,
+	ObjectStart = 2,
+	Object = 3,
+	ArrayStart = 4,
+	Array = 5,
+	ConstructorStart = 6,
+	Constructor = 7,
+	Closed = 8,
+	Error = 9,
+}
+
+public enum MemberSerialization
+{
+	OptOut = 0,
+	OptIn = 1,
+	Fields = 2,
+}
+
+public enum MetadataPropertyHandling
+{
+	Default = 0,
+	ReadAhead = 1,
+	Ignore = 2,
+}
+
+public enum MissingMemberHandling
+{
+	Ignore = 0,
+	Error = 1,
+}
+
+public enum NullValueHandling
+{
+	Include = 0,
+	Ignore = 1,
+}
+
+public enum ObjectCreationHandling
+{
+	Auto = 0,
+	Reuse = 1,
+	Replace = 2,
+}
+
+public enum PreserveReferencesHandling
+{
+	None = 0,
+	Objects = 1,
+	Arrays = 2,
+	All = 3,
+}
+
+public enum ReferenceLoopHandling
+{
+	Error = 0,
+	Ignore = 1,
+	Serialize = 2,
+}
+
+public enum Required
+{
+	Default = 0,
+	AllowNull = 1,
+	Always = 2,
+	DisallowNull = 3,
+}
+
+public enum StringEscapeHandling
+{
+	Default = 0,
+	EscapeNonAscii = 1,
+	EscapeHtml = 2,
+}
+
+public enum TypeNameAssemblyFormatHandling
+{
+	Simple = 0,
+	Full = 1,
+}
+
+public enum TypeNameHandling
+{
+	None = 0,
+	Objects = 1,
+	Arrays = 2,
+	All = 3,
+	Auto = 4,
+}
+
+public enum WriteState
+{
+	Error = 0,
+	Closed = 1,
+	Object = 2,
+	Array = 3,
+	Constructor = 4,
+	Property = 5,
+	Start = 6,
+}
+
+internal enum PrimitiveTypeCode
+{
+	Empty = 0,
+	Object = 1,
+	Char = 2,
+	CharNullable = 3,
+	Boolean = 4,
+	BooleanNullable = 5,
+	SByte = 6,
+	SByteNullable = 7,
+	Int16 = 8,
+	Int16Nullable = 9,
+	UInt16 = 10,
+	UInt16Nullable = 11,
+	Int32 = 12,
+	Int32Nullable = 13,
+	Byte = 14,
+	ByteNullable = 15,
+	UInt32 = 16,
+	UInt32Nullable = 17,
+	Int64 = 18,
+	Int64Nullable = 19,
+	UInt64 = 20,
+	UInt64Nullable = 21,
+	Single = 22,
+	SingleNullable = 23,
+	Double = 24,
+	DoubleNullable = 25,
+	DateTime = 26,
+	DateTimeNullable = 27,
+	DateTimeOffset = 28,
+	DateTimeOffsetNullable = 29,
+	Decimal = 30,
+	DecimalNullable = 31,
+	Guid = 32,
+	GuidNullable = 33,
+	TimeSpan = 34,
+	TimeSpanNullable = 35,
+	BigInteger = 36,
+	BigIntegerNullable = 37,
+	Uri = 38,
+	String = 39,
+	Bytes = 40,
+	DBNull = 41,
+}
+
+internal enum ParseResult
+{
+	None = 0,
+	Success = 1,
+	Overflow = 2,
+	Invalid = 3,
+}
+
+internal enum ConvertUtils.ConvertResult
+{
+	Success = 0,
+	CannotConvertNull = 1,
+	NotInstantiableType = 2,
+	NoValidConversion = 3,
+}
+
+internal enum ParserTimeZone
+{
+	Unspecified = 0,
+	Utc = 1,
+	LocalWestOfUtc = 2,
+	LocalEastOfUtc = 3,
+}
+
+private enum StringUtils.SeparatedCaseState
+{
+	Start = 0,
+	Lower = 1,
+	Upper = 2,
+	NewWord = 3,
+}
+
+internal enum JsonContractType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Primitive = 3,
+	String = 4,
+	Dictionary = 5,
+	Dynamic = 6,
+	Serializable = 7,
+	Linq = 8,
+}
+
+internal enum JsonSerializerInternalReader.PropertyPresence
+{
+	None = 0,
+	Null = 1,
+	Value = 2,
+}
+
+public enum CommentHandling
+{
+	Ignore = 0,
+	Load = 1,
+}
+
+public enum DuplicatePropertyNameHandling
+{
+	Replace = 0,
+	Ignore = 1,
+	Error = 2,
+}
+
+public enum JTokenType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Constructor = 3,
+	Property = 4,
+	Comment = 5,
+	Integer = 6,
+	Float = 7,
+	String = 8,
+	Boolean = 9,
+	Null = 10,
+	Undefined = 11,
+	Date = 12,
+	Raw = 13,
+	Bytes = 14,
+	Guid = 15,
+	Uri = 16,
+	TimeSpan = 17,
+}
+
+public enum LineInfoHandling
+{
+	Ignore = 0,
+	Load = 1,
+}
+
+internal enum BsonType
+{
+	Number = 1,
+	String = 2,
+	Object = 3,
+	Array = 4,
+	Binary = 5,
+	Undefined = 6,
+	Oid = 7,
+	Boolean = 8,
+	Date = 9,
+	Null = 10,
+	Regex = 11,
+	Reference = 12,
+	Code = 13,
+	Symbol = 14,
+	CodeWScope = 15,
+	Integer = 16,
+	TimeStamp = 17,
+	Long = 18,
+	MaxKey = 127,
+}
+
 private enum Json.Parser.TOKEN
 {
 	NONE = 0,
@@ -10221,20 +10202,11 @@ private enum Json.Parser.TOKEN
 	NULL = 11,
 }
 
-internal enum AsyncOperationStatus
+public enum ServicesInitializationState
 {
-	None = 0,
-	InProgress = 1,
-	Succeeded = 2,
-	Failed = 3,
-	Cancelled = 4,
-}
-
-private enum DependencyTreeInitializeOrderSorter.ExplorationMark
-{
-	None = 0,
-	Viewed = 1,
-	Sorted = 2,
+	Uninitialized = 0,
+	Initializing = 1,
+	Initialized = 2,
 }
 
 internal enum PlatformLogLevel
@@ -10254,101 +10226,20 @@ internal enum ArrayPoolEventSource.BufferAllocatedReason
 	PoolExhausted = 2,
 }
 
-public enum TransactionServer
+internal enum AsyncOperationStatus
 {
-	APPLE = 0,
-	AMAZON = 1,
-	GOOGLE = 2,
+	None = 0,
+	InProgress = 1,
+	Succeeded = 2,
+	Failed = 3,
+	Cancelled = 4,
 }
 
-public enum TransactionType
+private enum DependencyTreeInitializeOrderSorter.ExplorationMark
 {
-	INVALID = 0,
-	SALE = 1,
-	PURCHASE = 2,
-	TRADE = 3,
-}
-
-public enum VirtualCurrencyType
-{
-	GRIND = 0,
-	PREMIUM = 1,
-	PREMIUM_GRIND = 2,
-}
-
-public enum ConsentCheckExceptionReason
-{
-	Unknown = 0,
-	DeserializationIssue = 1,
-	NoInternetConnection = 2,
-	InvalidConsentFlow = 3,
-	ConsentFlowNotKnown = 4,
-}
-
-internal enum Buffer.TokenType
-{
-	EventStart = 0,
-	EventEnd = 1,
-	EventParamsStart = 2,
-	EventParamsEnd = 3,
-	EventObjectStart = 4,
-	EventObjectEnd = 5,
-	EventArrayStart = 6,
-	EventArrayEnd = 7,
-	Boolean = 8,
-	Float64 = 9,
-	String = 10,
-	Int64 = 11,
-	Timestamp = 12,
-	EventTimestamp = 13,
-	StandardEventIds = 14,
-}
-
-internal enum ConsentStatus
-{
-	Unknown = 0,
-	Forgetting = 1,
-	OptedOut = 2,
-	NotRequired = 3,
-	RequiredButUnchecked = 4,
-	ConsentGiven = 5,
-	ConsentDenied = 6,
-}
-
-internal enum UA2PlatformCode
-{
-	UNKNOWN = 0,
-	IOS = 1,
-	IOS_MOBILE = 2,
-	IOS_TABLET = 3,
-	IOS_TV = 4,
-	ANDROID = 5,
-	ANDROID_MOBILE = 6,
-	ANDROID_CONSOLE = 7,
-	WINDOWS_MOBILE = 8,
-	WINDOWS_TABLET = 9,
-	BLACKBERRY_MOBILE = 10,
-	BLACKBERRY_TABLET = 11,
-	FACEBOOK = 12,
-	AMAZON = 13,
-	WEB = 14,
-	PC_CLIENT = 15,
-	MAC_CLIENT = 16,
-	PS3 = 17,
-	PS4 = 18,
-	PSVITA = 19,
-	XBOX360 = 20,
-	XBOXONE = 21,
-	WIIU = 22,
-	SWITCH = 23,
-}
-
-internal enum DataGenerator.SessionEndState
-{
-	PAUSED = 0,
-	KILLEDINBACKGROUND = 1,
-	KILLEDINFOREGROUND = 2,
-	QUIT = 3,
+	None = 0,
+	Viewed = 1,
+	Sorted = 2,
 }
 
 public enum CanvasUpdate
@@ -11179,6 +11070,14 @@ public enum Asn1EndOfIndefiniteLengthNodeType
 	NotEnd = 2,
 }
 
+public enum GooglePurchaseState
+{
+	Purchased = 0,
+	Cancelled = 1,
+	Refunded = 2,
+	Deferred = 4,
+}
+
 public enum Easing.EasingType
 {
 	Linear = 0,
@@ -11649,9 +11548,12 @@ internal enum GoogleBillingResponseCode
 	Ok = 0,
 	UserCanceled = 1,
 	ServiceUnavailable = 2,
+	BillingUnavailable = 3,
+	ItemUnavailable = 4,
 	DeveloperError = 5,
 	FatalError = 6,
 	ItemAlreadyOwned = 7,
+	ItemNotOwned = 8,
 }
 
 internal enum Number.NumberBufferKind
@@ -14904,6 +14806,7 @@ public enum CombineAdjustTarget.TYPE
 	QUEST_FRIENDSHIP = 31,
 	LARGE_SUCCESS_BY_CLASS = 32,
 	SUPER_SUCCESS_BY_CLASS = 33,
+	EXCHANGE_SVT = 34,
 }
 
 public enum CondType.Kind
@@ -15093,6 +14996,11 @@ public enum CondType.Kind
 	COMPLETE_HEEL_PORTRAIT = 185,
 	NOT_COMPLETE_HEEL_PORTRAIT = 186,
 	CLASS_BOARD_SQUARE_RELEASED = 187,
+	SVT_LEVEL_EXCHANGE_SVT = 188,
+	SVT_LIMIT_EXCHANGE_SVT = 189,
+	SKILL_LV_EXCHANGE_SVT = 190,
+	SVT_FRIENDSHIP_EXCHANGE_SVT = 191,
+	EXCHANGE_SVT = 192,
 }
 
 public enum CondType.CheckType
@@ -15683,6 +15591,7 @@ public enum DataNameKind.Kind
 	VIEW_WAVE_ENEMY = 455,
 	BLANK_EARTH_SPOT_NAVIMENU = 456,
 	TERMINAL_OVERWRITE = 457,
+	USER_EXCHANGE_SVT = 458,
 }
 
 public enum Device.Type
@@ -18164,6 +18073,54 @@ public enum EventItemDisplayEntity.DisplayPoinstType
 	MISSION = 4,
 }
 
+public enum EventMissionCondDetailEntity.MissionCondType
+{
+	ENEMY_KILL_NUM = 1,
+	ENEMY_INDIVIDUALITY_KILL_NUM = 2,
+	ITEM_GET_TOTAL = 3,
+	BATTLE_SVT_IN_DECK = 4,
+	BATTLE_SVT_EQUIP_IN_DECK = 5,
+	TARGET_QUEST_ENEMY_KILL_NUM = 6,
+	TARGET_QUEST_ENEMY_INDIVIDUALITY_KILL_NUM = 7,
+	TARGET_QUEST_ITEM_GET_TOTAL = 8,
+	QUEST_CLEAR = 9,
+	QUEST_CLEAR_NUM = 10,
+	SVT_GET_NUM = 11,
+	ALL_QUEST_ITEM_GET_TOTAL = 12,
+	ALL_INDIVIDUALITY_IN_ENEMY_KILL_NUM = 13,
+	TARGET_ENEMY_CLASS_KILL_NUM = 14,
+	TARGET_SVT_ENEMY_CLASS_KILL_NUM = 15,
+	TARGET_ENEMY_INDIVIDUALITY_CLASS_KILL_NUM = 16,
+	BATTLE_SVT_INDIVIDUALITY_SPECIFIC_NUM = 17,
+	BATTLE_SVT_CLASS_SPECIFIC_NUM = 18,
+	ALL_QUEST_SVT_GET_TOTAL = 19,
+	QUEST_GROUP_CLEAR_NUM = 20,
+	GACHA_DRAW_NUM = 21,
+	QUEST_CLEAR_WITH_SVT_IN_DEC = 22,
+	QUEST_CLEAR_WITH_SVT_IN_DECK_NONE_FOLLOWER = 23,
+	QUEST_PHASE_CLEAR_NUM = 24,
+	EVENT_ITEM_USE_NUM = 25,
+	EVENT_BOARD_GAME_CELL_NUM = 26,
+	FRIEND_AND_FOLLOW_NUM = 27,
+	QUEST_PHASE_CLEAR_NUM_QUEST_TYPE = 28,
+	QUEST_PHASE_CLEAR_NUM_QUEST_GROUP = 29,
+	QUEST_PHASE_CLEAR_NUM_WAR_ID = 30,
+	QUEST_PHASE_CLEAR_NUM_WITH_WAR_BOARD = 31,
+	QUEST_CLEAR_WITH_SVT_IN_DECK_ONLY_STARTING_MEMBER = 34,
+	QUEST_CLEAR_WITH_SVT_IN_DECK_NONE_FOLLOWER_ONLY_STARTING_MEMBER = 35,
+	BATTLE_EXCHANGE_SVT_IN_DECK = 37,
+	USE_TREASURE_DEVICE_EXCHANGE_SVT = 38,
+	PLAY_VOICE_EXCHANGE_SVT = 39,
+}
+
+public enum EventMissionCondDetailEntity.MissionConditionLinkType
+{
+	EVENT_START = 1,
+	MISSION_START = 2,
+	MASTER_MISSION_START = 3,
+	RANDOM_MISSION_START = 4,
+}
+
 public enum EventMissionConditionEntity.Flag
 {
 	NONE = 1,
@@ -18904,6 +18861,8 @@ public enum ServantTreasureDvcEntity.Flag
 	NONE_TREASURE_DEVICE_EFFECT = 4,
 	SECRET_TREASURE_DEVICE = 8,
 	NOT_DISPLAY_SKILL_ICON = 16,
+	NOT_TREASURE_DEVICE_GRADE_UP = 32,
+	ONLY_MY_SVT = 64,
 }
 
 public enum ShopDetailEntity.FrequencyType

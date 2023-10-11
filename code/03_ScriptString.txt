@@ -165,6 +165,7 @@ Proxy-Connection: keep-alive
  -
  - 
  - 1
+ - Google BillingResponseCode = 
  ---> 
  -> 
  ...
@@ -222,6 +223,7 @@ Proxy-Connection: keep-alive
  ]:[ 
  actorId: 
  already registered
+ and purchase token: 
  at 
  attribute is required
  avoid buff 
@@ -274,7 +276,6 @@ Proxy-Connection: keep-alive
  is not a valid channel type
  is not found
  is not supported.
- is null. Were you trying to purchase an unavailable product? The price will be recorded as 0.
  is required to be a subclass of RendererResourceFactory.
  isActors 
  isField 
@@ -305,6 +306,7 @@ You specified
  requires m_CurrentDialog. Not showing dialog.
  standalone=
  standalone="
+ storeSpecificErrorCode: 
  to 
  transactionId: 
  version="
@@ -320,7 +322,7 @@ You specified
 
  {0}
  {0} isn't a valid Sort string entry.
- {M: GPUL.HEC} - Response Code = 
+ {M: GPUL.HEC} - Google BillingResponseCode = 
  {M: GPUL.OPF}
  {code: 
  }
@@ -349,11 +351,6 @@ Content-Type:
 " standalone="
 " which is readonly at runtime and can be modified only through Project Settings. The value provided as initialization option will be ignored. Please update InitializationOptions in order to remove this warning.
 ""
-",
-","eventTimestamp":"
-","eventUUID":"
-","eventVersion":1,"eventParams":{"clientVersion":"
-","sdkMethod":"
 ". The tile size will be increased. To remove the limit on the number of tiles, set the Wrap mode to Repeat in the Image Import Settings
 ":
 ":"
@@ -363,21 +360,12 @@ Content-Type:
 "ComponentType": "{0}"
 "data":
 "dt":
-"eventName":"
-"eventParams":{
-"eventTimestamp":"
-"eventUUID":"
 "hd":
 "logs":
-"sessionID":"
-"unityInstallationID":"
-"unityPlayerID":"
-"userID":"
 "{0}": "{1}", 
 "{0}":{1}
 "{0}":{1},
 "}
-"}}]}
 "クエストID": "
 #
 # $
@@ -890,7 +878,6 @@ file crc (
 . Please verify your Google Play Store in-app product settings.
 . Serializing self referenced value.
 . Skipping serializing self referenced value.
-. The price will be recorded as 0.
 .'
 .*
 ..
@@ -998,7 +985,6 @@ file crc (
 /etc/localtime
 /etc/resolv.conf
 /etc/terminfo
-/eventcache
 /extend-data/movie
 /fbxevent
 /forwarding
@@ -1220,16 +1206,15 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.80.5
+2.81.0
 20
 200
 20220731_BOOST_RATE_1
-20230922_15:40
+20231005_14:19
 264
 2841AE
 2D UI
 2DUI
-2a9378d6ddb4147d02246e97d9335a4b98d3076f87c8fad2a8b9db1a59e3e237
 2bba0607-14d5-4afe-b9a0-e0210bf20c40
 2nd Attack
 2pC0bIYM
@@ -1252,9 +1237,8 @@ file crc (
 3des
 3rd Attack
 4
-4.0.1
 4.0.30319.17020
-4.5.2
+4.9.4
 400
 400: Bad Request
 401
@@ -2055,8 +2039,6 @@ An undefined DateTimeStyles value is being used.
 An undefined NumberStyles value is being used.
 An undefined prefix is in use.
 An undefined token is not a valid {0}.
-Analytics Dispatcher has reached limit of pending requests.
-AnalyticsContainer
 And
 AndAlso
 Android
@@ -3828,6 +3810,7 @@ Cannot mix synchronous and asynchronous operation on process stream.
 Cannot open passive data connection
 Cannot open profile
 Cannot parse Backtrace JSON response. Error: {0}. Content: {1}
+Cannot parse Google receipt for transaction 
 Cannot parse WSDL array type: 
 Cannot parse chunk size.
 Cannot pass a null context to the LevelInitialiser
@@ -3915,12 +3898,9 @@ Cannot set a constant field
 Cannot set a value on node type '{0}'.
 Cannot set an object into this list.
 Cannot set column '{0}'. The value violates the MaxLength limit of this column.
-Cannot set currency to an empty or null string
-Cannot set custom event name to an empty or null string
 Cannot set expression because column cannot be made ReadOnly.
 Cannot set method if configuration contain invalid url to Backtrace server or client is disabled
 Cannot set null or blank methods on request.
-Cannot set productId to an empty or null string
 Cannot set sub-classed {0} object to {1} object.
 Cannot set the 'InnerXml' for the current node because it is either read-only or cannot have children.
 Cannot set the 'Nested' property to false for this relation.
@@ -4404,7 +4384,6 @@ Could not abort registered blocking threads before closing socket.
 Could not cast or convert from {0} to {1}.
 Could not clear error context. Error context is already null.
 Could not convert '{0}' to {1}.
-Could not convert real currency amount payable for product ID 
 Could not convert string '{0}' to dictionary key type '{1}'. Create a TypeConverter to convert from the string to the key type object.
 Could not convert string to DateTime: {0}.
 Could not convert string to DateTimeOffset: {0}.
@@ -5364,7 +5343,6 @@ Device reinitialization needed
 Device removed
 Device requires cleaning
 DiceCounter
-Did not get IInstallationId provider from Unity Services Core.
 Difference
 Different schema types cannot be mixed.
 Different service account
@@ -6163,8 +6141,6 @@ Error in ReadConsoleInput
 Error in element 
 Error in the application.
 Error loading '
-Error loading cached events: file was corrupt (probably due to improper app/system shutdown). Cached events have been discarded and other operations will continue as normal. Error was 
-Error loading currency definitions, no conversions will be performed.
 Error netlogon not started
 Error occurred during a cryptographic operation.
 Error occurred while decoding OAEP padding.
@@ -6303,6 +6279,7 @@ Exception in service
 Exception of type '{0}' was thrown.
 Exception on process queue Thread: 
 Exception properties
+Exception while getting UnityServices.State: 
 Exception:
 ExceptionMethod
 Exceptions
@@ -6639,7 +6616,6 @@ Failed to create UnityTls context
 Failed to create cubemap array texture because of invalid parameters.
 Failed to create texture because of invalid parameters.
 Failed to decode OID value: 
-Failed to deserialize JSON for currency conversion, no conversions will be performed
 Failed to enable constraints. One or more rows contain values violating non-null, unique, or foreign-key constraints.
 Failed to initialize zlib. You probably have an old zlib installed. Version 1.2.0.4 or later is required.
 Failed to load data.
@@ -6816,7 +6792,6 @@ Floppy unknown error
 Floppy wrong cylinder
 Flush
 FlushFinalBlock() method was called twice on a CryptoStream. It can only be called once.
-Flushed up to token index {0}, cache file is {1}B
 Focus
 FollowerScene
 FollowerSelect
@@ -7075,6 +7050,7 @@ Gone
 Google
 Google Play canceled on restore purchase
 Google Play pending on restore purchase
+GoogleBillingResponseCode: 
 GooglePlay
 GooglePlayStoreService state ({0}) unrecognized, cannot process ProductDescriptionQuery
 GotNewServantTrigger
@@ -8112,7 +8088,6 @@ Invalid type for the {0} event.
 Invalid type for the {0} property.
 Invalid type name '{0}'.
 Invalid type: 
-Invalid type: {0} passed
 Invalid type: {0} passed to event expecting {1}
 Invalid url: 
 Invalid usage of aggregate function {0}() and Type: {1}.
@@ -8269,6 +8244,7 @@ IsOriya
 IsPhoneticExtensions
 IsPrivateUse
 IsPrivateUseArea
+IsPurchasedProductDeferred: the product is null.
 IsRankUp
 IsReBootCacheClearKey
 IsRunic
@@ -9548,7 +9524,6 @@ NmToken
 No
 No '{0}' property with union fields found.
 No '{0}' property with union name found.
-No Cloud ProjectID Found for Analytics
 No Content
 No DTD found.
 No EFS
@@ -9616,6 +9591,7 @@ No path specified.
 No permission class is specified.
 No proc slots
 No process is associated with this object.
+No products were found when fetching from the store
 No promotion active
 No public key available.
 No quotas for account
@@ -10300,7 +10276,12 @@ OverwriteShadowServantEffectNodes
 OverwriteUIVersion
 Owner
 P
+P1M
+P1W
+P1Y
+P3M
 P3P
+P6M
 PARTICLE COLLISION
 PARTY_MEMBER_TXT
 PARTY_ORGANIZATION
@@ -10537,8 +10518,6 @@ PHOTO_SERVANT_SELECTED_SERVANT
 PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE
 PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING
 PI
-PIPL_CONSENT
-PIPL_EXPORT
 PK init client failure
 PK init failure
 PKCS 7 Data
@@ -11532,14 +11511,10 @@ Requested number of bytes exceeds the maximum.
 Requested registry access is not allowed.
 Requested service not found
 Requested value '{0}' was not found.
-Required consent wasn't checked and given when trying to dispatch events, the events cannot be sent.
 Required object identifier (OID) cannot be found.
 Required property '{0}' expects a non-null value.
 Required property '{0}' expects a value but got null.
 Required property '{0}' not found in JSON.
-Required to have a failure reason in transactionFailed event
-Required to have a value for transactionName
-Required to have a value for transactionType
 Requires interactive windowstation
 ResMaxLvExceedNodeName
 ResMaxLvNodeName
@@ -13148,10 +13123,12 @@ Stop Trail1
 Stop Trail1 Smoothly
 Stop Trail2
 Stop Trail2 Smoothly
+Store
 Store Result is of the wrong type.
 It should be of type: 
 Store is read-only.
 Store isn't opened.
+Store not supported: 
 Store {0} doesn't exists.
 StoreField
 StoreLocal
@@ -13804,7 +13781,6 @@ The Form property may not be 'Unqualified' when an explicit Namespace property i
 The FractionDigits constraining facet is invalid - {0}
 The FractionDigits constraining facet is prohibited for '{0}'.
 The FractionDigits constraint failed.
-The GeoIP request has failed - make sure you're connected to an internet connection and try again.
 The IAsyncResult object was not returned from the corresponding asynchronous method on this class.
 The ID of the containing object cannot be the same as the object ID.
 The JsonReader should not be on a token of type {0}.
@@ -13867,6 +13843,7 @@ The Stream is closed.
 The String '{0}' cannot be represented as an XmlQualifiedName.  A namespace for prefix '{1}' cannot be found.
 The SyncRoot property may not be used for the synchronization of concurrent collections.
 The TcpListener must not be listening before performing this operation.
+The ThreadLocal object has been disposed.
 The TimeSpan could not be parsed because at least one of the numeric components is out of range or contains too many digits.
 The TimeSpan parameter cannot be specified more precisely than whole minutes.
 The TimeSpan parameter must be within plus or minus 14.0 hours.
@@ -13908,6 +13885,7 @@ The argument cannot be converted to a string.
 The argument must be derived from {0}.
 The argument to function '{0}' in '{1}' cannot be converted to a node-set.
 The argument type, '{0}', is not the same as the enum type '{1}'.
+The array argument is null.
 The array is multidimensional, or the type parameter for the set cannot be cast automatically to the type of the destination array.
 The array type must be exactly {0}.
 The arrays' lower bounds must be identical.
@@ -14014,8 +13992,6 @@ The empty string '' is not a valid local name.
 The empty string '' is not a valid name.
 The enclosing <schema> must have a targetNamespace, if the Namespace attribute is absent on the import element.
 The enumerator is positioned before the first element of the collection or after the last element
-The error occurred while deserializing the privacy GeoIP reseponse. Please try again later.
-The error occurred while performing the privacy GeoIP request. Please try again later.
 The event handle and the type handle are incompatible.
 The event has been disposed.
 The expression contains an invalid string constant: {0}.
@@ -14071,7 +14047,6 @@ The input string must not start with ACE (xn--), at {0}
 The input type cannot be null.
 The input wasn't in a correct format.
 The internal array cannot expand to greater than Int32.MaxValue elements.
-The isoCurrencyCode for product ID 
 The key already existed in the dictionary.
 The key blob format '{0}' is invalid.
 The key is a null reference
@@ -14179,7 +14154,6 @@ The requested operation is invalid in the ReflectionOnly context.
 The requested security protocol is not supported.
 The required attribute '{0}' is missing.
 The required attribute must have a value of yes or no.
-The required consent flow cannot be determined. Make sure GeoIP was successfully called.
 The response string '{0}' has invalid format.
 The result normals list cannot be null.
 The result of the dynamic binding produced by the object with type '{0}' for the binder '{1}' needs at least one restriction.
@@ -14470,8 +14444,6 @@ This stream does not support reading
 This stream does not support seek operations.
 This stream does not support writing
 This terminal does not suport setting the cursor position.
-This user has opted out and is in the process of being forgotten...
-This user has opted out. Any cached events have been discarded and no more will be collected.
 ThisIsFakeReceiptData
 ThrdFeedNodeName
 ThrdItemNodeName
@@ -14878,10 +14850,11 @@ Unable to load type {0} required for deserialization.
 Unable to lock media
 Unable to move replacement
 Unable to move replacement 2
+Unable to parse Apple receipt
 Unable to parse data as SQL_DECIMAL.
 Unable to parse introductory period cycles and duration, this product does not have configuration of introductory price period
 Unable to proceed with deserialization. Data does not implement IXMLSerializable, therefore polymorphism is not supported.
-Unable to process purchase with transaction id: 
+Unable to process purchase with order id: 
 Unable to read beyond the end of the stream.
 Unable to read data
 Unable to read data from the transport connection: {0}.
@@ -15000,13 +14973,12 @@ UniqueCameraPrefab
 Unit_Enemy2
 Unit_Player2
 Unity
-Unity Analytics cache is not supported on this platform, data will not be locally persisted.
 Unity Bug
 Unity Gaming Services Initialize Error: 
 Unity Gaming Services Initialize error.(Start) message=
 Unity Gaming Services RequestFailedException: 
 Unity IAP
-UnityAnalyticsInstallationId
+Unity IAP - QueryAsyncSkuWithRetries: {0}
 UnityEditor
 UnityEditor.EditorApplication, UnityEditor
 UnityEditor.PlayModeStateChange, UnityEditor
@@ -15014,7 +14986,6 @@ UnityEditor.PlayModeView,UnityEditor
 UnityEngine
 UnityEngine.
 UnityEngine.Assertions
-UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 UnityEngine.UDP.Inventory
 UnityEngine.UDP.ProductInfo
 UnityEngine.UDP.StoreService
@@ -15055,7 +15026,6 @@ Unknown calendar type:
 Unknown cert type
 Unknown client handshake message type: 
 Unknown component
-Unknown currency provided to convert method, no conversion will be performed and returned value will be 0.
 Unknown enum type.
 Unknown error
 Unknown error in DuplicateHandle
@@ -15231,6 +15201,7 @@ Value was either too large or too small for an unsigned byte.
 Value was invalid.
 Value, startIndex and length do not refer to a valid string.
 Value: 
+ValueFactory attempted to access the Value property of this instance.
 ValueFactory returned null.
 ValueLabel
 ValueType Fixup Stack
@@ -15953,7 +15924,6 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 ]\
 ]]
 ]]>
-]}
 ]が取れませんでした
 ^
 ^(?<scheme>.*://)?(?<host>[^:]*)(?<port>:[0-9]{1,5})?$
@@ -16178,7 +16148,6 @@ _WipeY
 _XWeaponTrailMesh: 
 _Xscale
 _ZWriteMode
-_ZZ
 _[Xx]([0-9a-fA-F]{4}|[0-9a-fA-F]{8})_
 __<
 __ActivationType
@@ -16317,6 +16286,7 @@ actualUri
 adServicesFrameworkEnabled
 add
 addCallbackParameter
+addCount
 addEquipSkills
 addGetMessage
 addGranularOption
@@ -16380,8 +16350,6 @@ alpha
 altitude
 am
 am-ET
-amazon
-amazonUserID
 amount
 amp
 analytics
@@ -16599,6 +16567,7 @@ authenticationType
 authsave.dat
 authsave2.dat
 autoCancel
+autoRenewing
 auto_sel_support_type
 availMem
 available_0
@@ -16690,7 +16659,6 @@ baseVals.GetValue:
 basic
 battery.level
 battery.status
-batteryLoad
 battle
 battle/commandSpell
 battle/reset
@@ -17175,7 +17143,6 @@ bufficon_300
 bufficon_{0:000}
 bufficon_{0:D2}
 build
-buildGUUID
 buster
 button
 buttonOffset
@@ -17217,6 +17184,7 @@ bytearray
 bytes
 bytesUnknown
 c
+c696bda722cfd8558e389d532352b29b2729c64cc63020c072add3904cd890f3
 cBool
 cDate
 cDbl
@@ -17526,9 +17494,7 @@ click
 clickLabel
 client
 client finished
-clientDevice
 clientProviders
-clientVersion
 client_api_error_dialog
 clientdebug/battlesetup
 clip
@@ -17605,13 +17571,6 @@ com.unity.androidnotifications.UnityNotificationManager
 com.unity.purchasing
 com.unity.purchasing.amazon.AmazonPurchasing
 com.unity.purchasing.common.IUnityCallback
-com.unity.services.analytics
-com.unity.services.analytics.Events.InternalTick
-com.unity.services.analytics.Events.OptOut
-com.unity.services.analytics.Events.Shutdown
-com.unity.services.analytics.Events.Startup
-com.unity.services.analytics.events.TransactionFailed
-com.unity.services.analytics.events.transaction
 com.unity.services.core
 com.unity.services.core.all-package-names
 com.unity.services.core.analytics-user-id
@@ -17814,8 +17773,6 @@ cpu.boottime
 cpu.brand
 cpu.count
 cpu.frequency
-cpuCores
-cpuType
 crashlytics
 crashpad
 createValueCallback
@@ -17893,7 +17850,6 @@ cueVoiceVolume
 culture
 cultureName
 cumulativeAmount
-currency
 currentActivity
 currentSkillLv
 curve
@@ -17980,7 +17936,6 @@ de-LU
 deadChangePos
 debug
 debugComment
-debugDevice
 debug_quest
 debug_server_time
 debug_update_user
@@ -17995,6 +17950,7 @@ deck_edit_name
 deck_setup
 decoderFallback
 decryption error
+deemedTime
 defPriority
 defRate
 default
@@ -18056,6 +18012,7 @@ destinationIndex
 destinationTimeZone
 destinationType
 detail
+developerPayload
 device.machine
 device.manufacturer
 device.model
@@ -18064,9 +18021,8 @@ device.sdk
 device.type
 deviceID
 deviceInfo
-deviceModel
-deviceVolume
 dgram
+dialogIgnoreTime
 dialogMessage_{0}_{1}
 dialog_title
 diceType
@@ -18395,7 +18351,6 @@ enemySelect
 enemy_icon_
 enemy_icon_leader
 enemymp_
-engagementID
 engine
 enhancedKeyUsages
 enterUserSvtId
@@ -18498,6 +18453,7 @@ eventGroupId
 eventId
 eventId : {0}, slot : {1}, idx : {2}, guideImageId : {3}, count : {4}
 eventLogoId
+eventMission/progress
 eventMission/randomCancel
 eventMission/receive
 eventMissionAnnounce
@@ -18506,7 +18462,6 @@ eventToken
 eventTowerId
 eventType 
 eventUiCushion
-eventVersion
 event_bg_80384
 event_bg_bar
 event_bg_little_{0}01
@@ -18649,6 +18604,7 @@ exceeds buffer size
 exception
 exception.thread
 exceptionObject
+exchangeSvt
 excludeTdChangeTypes
 existing
 expand
@@ -18706,7 +18662,6 @@ fadeOff
 fadein
 fadeout
 failed a fake store purchase
-failureReason
 fake
 false
 family
@@ -18911,6 +18866,7 @@ freeShopCondMessage
 freeShopIds
 freeShopReleaseDate
 freeStone
+freeTrialPeriod
 friend/accept
 friend/cancel
 friend/lockSync
@@ -18973,11 +18929,6 @@ gacha_draw
 game.fate-go.jp
 game1_button
 game1_count_
-gameBundleID
-gameEnded
-gameRunning
-gameStarted
-gameStoreID
 gamedata
 gamedata/top
 gauge_id
@@ -19010,7 +18961,6 @@ getConstructorID
 getDebugMessage
 getDeclaringClass
 getDecorView
-getDefault
 getDescription
 getDeviceID
 getExp
@@ -19028,7 +18978,6 @@ getIntroductoryPriceCycles
 getIntroductoryPricePeriod
 getItemInfo
 getJoinSvts
-getLanguage
 getLength
 getList family cannot return null.
 getLocalDefaultValue
@@ -19061,8 +19010,6 @@ getSku
 getSkus
 getSpecialShadowEffectId
 getStackTraceString
-getStreamMaxVolume
-getStreamVolume
 getString
 getStringExtra
 getSubscriptionPeriod
@@ -19091,13 +19038,11 @@ gimmick_
 gizmos
 gl
 gl-ES
-google
 googlePlay
 gopher
 goto
 goto_login_access
 goto_title
-gpuType
 grade
 graph
 graphic.driver.version
@@ -19145,6 +19090,7 @@ hasChanges
 hasErrors
 hasFocus
 hasNext
+has_introductory_price_trial
 hash
 hashAlgorithm
 he
@@ -19265,12 +19211,10 @@ https
 https:
 https://
 https://cdn.data.fate-go.jp/AssetStorages
-https://collect.analytics.unity3d.com/api/analytics/collect/v1/projects/{0}/environments/{1}
 https://events.backtrace.io/api/
 https://itunes.apple.com/lookup?id=
 https://operate-sdk-telemetry.unity3d.com
 https://play.google.com/store/apps/details?id=
-https://pls.prd.mz.internal.unity3d.com/api/v1/user-lookup
 https://submit.backtrace.io/
 https://view.fate-go.jp/
 https://www.gstatic.com/firebase/ssl/roots.pem
@@ -19413,12 +19357,10 @@ id parameter is an empty string
 id-ID
 id:
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
-idLocalProject
 idempotencyKey
 identities
 identity
 identityHashCode
-idfv
 idref
 idrefs
 idx
@@ -19870,8 +19812,10 @@ internet_reachability
 interopXmlElement
 interopXmlType
 introductoryPrice
+introductoryPriceCycles
 introductoryPriceLocale
 introductoryPriceNumberOfPeriods
+introductoryPricePeriod
 invalid ASN.1 data
 invalid EncryptedData
 invalid EncryptedPrivateKeyInfo
@@ -19950,7 +19894,6 @@ isFamilyShareable
 isFavorite
 isGetEffect
 isHideShadow
-isInitiator
 isLateUpdatePopup
 isLocal
 isLock
@@ -19971,7 +19914,8 @@ isStatic
 isStorage
 isSurrogate
 isTerminalLogin
-isTiny
+is_free_trial
+is_updated
 ischild
 isiXhosa (South Africa)
 isiZulu (South Africa)
@@ -20009,7 +19953,6 @@ iso-ir-148
 iso-ir-149
 iso-ir-58
 iso-ir-6
-iso4217
 iso8859-1
 iso8859-2
 isoCurrencyCode
@@ -20023,11 +19966,9 @@ it-IT
 item
 item/recover
 item/use
-itemAmount
 itemData
 itemGetEffectId
 itemId
-itemName
 itemSelectIdx
 itemSelectNum
 itemType
@@ -20071,7 +20012,6 @@ java.net.SocketTimeoutException
 java.net.UnknownHostException
 java.util.ArrayList
 java.util.HashMap
-java.util.Locale
 java.util.Map
 java/lang/Object
 java/lang/Runnable
@@ -20362,7 +20302,6 @@ m_name
 m_serializedStates
 m_type
 m_userToken
-mac
 machine.config
 macintosh
 mactripledes
@@ -20418,7 +20357,6 @@ masterName
 masterNameWidth
 masterScene
 masterSceneLoad
-masterSeneLoad
 masterSet
 masterSkillDelay
 masterSkillDelayInfo
@@ -20439,6 +20377,7 @@ masterfigure
 masterverticalImageSet
 match
 matchTimeout
+materialLatestClear
 materialPlayUseUserQuestRoute
 materialUserSvtIds
 materialbranchroutesave.dat
@@ -20539,8 +20478,10 @@ missing MAC salt
 missing algorithm OID
 missing key
 missing version
+missionConditionDetailId
 missionId
 missionIds
+missionTargetId
 mission_bg_
 mission_bg_{0}
 mission_board_02
@@ -21051,9 +20992,9 @@ newAttributes
 newBuilder
 newItems
 newOut
-newPlayer
 newProxyInstance
 newSize
+new_sku_price_in_micros
 news
 newsfeed_id
 next
@@ -21207,6 +21148,9 @@ ok
 oldItems
 oldValue
 oldValue is the empty string.
+old_sku_period_string
+old_sku_price_in_micros
+old_sku_remaining_seconds
 on
 onAnimEnd
 onAppReceiptRefreshFailed
@@ -21304,7 +21248,6 @@ org.json.JSONObject
 orienttopath
 origin
 originalRule
-osVersion
 other
 otherSimpleType
 otherUserGame
@@ -21415,7 +21358,6 @@ paths
 pattern
 paused
 paymentBaseReceipt
-paymentCountry
 paymentProductId
 paymentReceipt
 paymentSignature
@@ -21452,7 +21394,6 @@ pieceIndex
 pingPong
 pingpong
 pipelined
-pipl
 pitch
 pixelsPerUnit must be set to a positive non-zero value.
 pl
@@ -21500,7 +21441,6 @@ presentIds
 present_code_redemption_sheet
 present_receive
 preserve
-price
 primary
 print
 priority
@@ -21512,13 +21452,10 @@ private key
 process.age
 processContents
 processing-instruction
-productID
 productId
 productId:
 product_name
 production
-productsReceived
-productsSpent
 profile
 profile/editBirth
 profile/editName
@@ -21530,7 +21467,6 @@ progressAfterMovie
 progress_reward_board
 progress_reward_board_{0}
 prohibited
-projectID
 project_config
 property
 propertyInfo
@@ -21562,6 +21498,8 @@ purchaseDataBase64
 purchaseInfo
 purchaseResultArray is null.
 purchaseResults
+purchaseState
+purchaseTime
 purchaseToken
 purchase_by_bank
 purchase_by_stone
@@ -21586,6 +21524,7 @@ qualifiedName
 quantity
 queryPurchasesAsync
 querySkuDetailsAsync
+query_async_sku_error
 questId
 questMessageOverwrite
 questPhase
@@ -21666,7 +21605,6 @@ raid_point_frame_old
 raid_point_old
 raid_point_over
 raid_point_over_old
-ramTotal
 randomGroupIndex
 randomLimitCount
 randomLimitCountSupport
@@ -21686,9 +21624,6 @@ read
 readType
 reader
 readonly
-realCurrency
-realCurrencyAmount
-realCurrencyType
 realm
 realm="{0}", 
 reason
@@ -21789,7 +21724,6 @@ returnLabel
 returnRarePriShopIds
 returnType
 returnValueAddress
-revenueValidated
 revision
 revivalBranch
 revivalUnder
@@ -21899,19 +21833,12 @@ schemeName
 scopeid
 scores
 screen
-screenHeight
-screenResolution
-screenWidth
 scripting.backend
 scriptsave.dat
 scroll
 scrollStop
 scrollView
 scrollview
-sdkMethod
-sdkName
-sdkStart
-sdkVersion
 se
 se-FI
 se-NO
@@ -21975,7 +21902,6 @@ serverTime
 serversave.dat
 service
 servicePoint
-sessionEndState
 sessionIntervalInMilliseconds
 setAdImpressionsCount
 setAdRevenueNetwork
@@ -22140,6 +22066,8 @@ skipSkill
 skipStop
 skipWaveStartFadeInSe
 skuDetails
+sku_details_response_consolidator_error
+sku_details_response_error
 sl
 sl-SI
 slash
@@ -22308,12 +22236,8 @@ storage_takein
 storage_takeout
 storeError
 storeHandle
-storeID
-storeItemID
-storeItemSkuID
 storeLocation
 storeName
-storeSourceID
 storeSpecificErrorCode
 storeSpecificId
 store_ids
@@ -22389,6 +22313,7 @@ subjectKeyIdentifier
 submit.backtrace.io
 subs
 subscriptionPath
+subscriptionPeriod
 subscriptionUrl
 subsessionIntervalInMilliseconds
 subset
@@ -22432,6 +22357,9 @@ sv-SE
 svalsから[
 svtBgmChange
 svtBuffTurnExtend
+svtCoinConfirm
+svtCoinConfirm2
+svtCoinConfirm3
 svtCommonFlag
 svtCommonFlagList
 svtEqs
@@ -22575,6 +22503,7 @@ targetForceId
 targetGroupId
 targetHost
 targetHost is null or an empty string.
+targetId
 targetNamespace
 targetPieceIndex
 targetType
@@ -22734,17 +22663,8 @@ trackViewUrl
 trackerName
 trackerToken
 trailCount
-transaction
 transaction-id
-transactionFailed
-transactionID
 transactionId
-transactionName
-transactionReceipt
-transactionReceiptSignature
-transactionServer
-transactionType
-transactorID
 transform
 transform.position
 transform.rotation
@@ -22830,7 +22750,6 @@ uSequencer-RecordPrefs-PresetName
 uSequencer-RecordPrefs-PresetPrefData
 uSequencer-RecordPrefs-SelectedPreset
 uSequencer-RecordPrefs-UpscaleAmount
-uasUserID
 ucs-2
 ucs-4
 ucs-4 (Bigendian)
@@ -22882,11 +22801,8 @@ uniqueId
 unique_events
 unit
 unity
-unity.PurchaseFailed
 unity.cloud_userid
 unity.player_sessionid
-unity.services.analytics.consent_status
-unity.services.analytics.pipl_consent_status
 unity4.30.0
 unity4.30.0@
 unity_version
@@ -22925,6 +22841,7 @@ updateShiftHplabel
 updateTDGauge
 updateValues
 updateView
+update_subscription_metadata
 updated
 upgrade_downgrade_subscription
 upload_file
@@ -22962,6 +22879,7 @@ useItemNum
 useQp
 useTemporaryCommandSpell
 useTestConnectionOptions
+useTreasureDevices
 usedEquipSkillList
 usedTurnList
 user
@@ -22976,7 +22894,6 @@ userCommandCode
 userCommandCodeCollection
 userCommandCodeId
 userContinue
-userCountry
 userCreateServer
 userDeck
 userDelete
@@ -23018,7 +22935,6 @@ userGame
 userHeelPortrait
 userId
 userItem
-userLocale
 userLogin
 userNpcSvtRecord
 userPresentBox
@@ -23136,11 +23052,6 @@ viewQuestInfo
 viewWaveEnemy
 viewWaveEnemyDispDanger
 virtual
-virtualCurrencies
-virtualCurrency
-virtualCurrencyAmount
-virtualCurrencyName
-virtualCurrencyType
 visibility
 visual
 vm.data
@@ -23382,7 +23293,6 @@ yyyy-
 yyyy-MM
 yyyy-MM-
 yyyy-MM-dd
-yyyy-MM-dd HH:mm:ss zzz
 yyyy-MM-dd zzz
 yyyy-MM-ddT
 yyyy-MM-ddTHH:mm:ss.FFFFFFF
@@ -23427,8 +23337,6 @@ zu-ZA
 { "error" : "Cannot parse inventory type for UDP. Please make sure your UDP package is installed and up-to-date" }
 { "error" : "already retrieving products" }
 { ... } 
-{"eventList":[
-{"eventList":[{"eventName":"ddnaForgetMe","userID":"
 {"id":
 {"supportDeckId":
 {"ミッションID": "
@@ -23660,7 +23568,6 @@ zu-ZA
 |windows-1254|windows-1254|iso-8859-9
 ||=
 }
-},
 }?
 
 [Environment: FakeStore]
