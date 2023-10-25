@@ -798,6 +798,7 @@ file crc (
 , numDetail:
 , openAt:
 , priceDetail:
+, questId:
 , stoneNum:
 , zone name: 
 ,"classId":
@@ -1045,6 +1046,7 @@ file crc (
 03
 04
 06414A97-74F6-488F-877B-A6CA9BBEB82E
+09eb29f45c7a6efb29794d8de2a74731ee89c58eb97f9b45578c789373b5af32
 0:
 0:0:0:0:0:0:0:1
 0:A[_`a{İı
@@ -1069,12 +1071,13 @@ file crc (
 0_B201
 0_M040
 0x
+0x000000
 0x{0:X2}
 0x{0:X}
 1
 1.0
 1.0.1
-1.00.00 (2.38.28h4-VolumeForCueInfo)
+1.01.00 (2.38.28h4-VolumeForCueInfo)
 1.1
 1.2.840.10040.4.1
 1.2.840.10040.4.3
@@ -1206,11 +1209,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.81.0
+2.82.0
 20
 200
 20220731_BOOST_RATE_1
-20231005_14:19
+20231020_21:18
 264
 2841AE
 2D UI
@@ -1888,6 +1891,7 @@ Account expired
 Account locked out
 Account restriction
 Acos
+ActNpcServantId
 ActSelectIndex
 Action
 Action : 
@@ -2230,6 +2234,8 @@ AtlasManager/Marks/MarkAtlas
 AtlasManager/SkillIcons/SkillIconAtlas
 Atomic locks not supported
 Atomic value
+AttackUnable_end
+AttackUnable_start
 Attempt to access the method failed.
 Attempt to redirect activation of type '
 Attempt to serialize a null TypeInfo.
@@ -2285,6 +2291,7 @@ AutoOrganizationBonusFilterEventId
 AutoOrganizationBonusFilterGroupId
 AutoOrganizationFilterNew-
 AutoOrganizationWaveBattle
+AutoPlayView
 Autodataseg exceeds 64k
 Avg
 Azeri
@@ -2795,6 +2802,7 @@ BadImageFormat_FusionLog
 Badly encoded extension.
 BankStatusRequest string error: 
 Banner/DownloadBanner
+Barrier
 Base/TitlePrefab/BackObj/BtnBg
 Base64
 Base64Binary
@@ -2935,6 +2943,7 @@ Brazil
 Breadcrumbs size must be greater or equal to 10kB
 Breadcrumbs storage path is null or empty
 BreakPoint_effect_{0}
+BreakWall_{0:00}
 Breakpoint
 Breton (France)
 BrightTurn
@@ -3540,6 +3549,7 @@ Calling GetLocalCorners with an array that is null or has less than 4 elements.
 Calling GetWorldCorners with an array that is null or has less than 4 elements.
 Camera
 CameraAction
+CameraBackActionKey
 CameraClippingFar
 CameraClippingNear
 CameraFSM
@@ -3992,6 +4002,7 @@ CharaFigure/
 CharaFigure/1000000
 CharaFigure/8001000
 CharaFigure/Form/
+CharaGraph
 CharaGraph/
 CharaGraph/100000
 CharaGraph/9400010
@@ -4237,6 +4248,7 @@ Commitment limit
 Common
 Common Language Runtime detected an invalid program.
 CommonDesignerServices
+CommonFocus
 CommonMiniPopup
 CommonMotion
 CommonTreasureGet
@@ -4274,6 +4286,7 @@ Component with hash[{0}] does not exist!
 Component with hash[{0}] threw exception when sorting package[{1}][{2}]
 Compression Method unknown
 Conditional sections must specify the keyword 'IGNORE' or 'INCLUDE'.
+ConfWindowServant
 Config
 Configuration
 Configurations
@@ -4341,6 +4354,7 @@ Context expired
 ContextID: 
 Continue
 ContinueChangeFade
+ContinueConfirmPopup
 Control ID not found
 Control cannot enter a try block.
 Control cannot enter an expression--only statements can be jumped into.
@@ -5382,6 +5396,7 @@ Disk operation failed
 Disk recalibrate failed
 Disk reset failed
 Disk too fragmented
+DispChangeUI
 DispObject
 Display
 DisplayCardBottomImageName
@@ -5453,6 +5468,7 @@ DragEnd
 DragReturnEnd
 DragReturnMoveEnd
 DragSwapEnd
+DrawPath
 Drive locked
 Drive media mismatch
 Driver blocked
@@ -5583,7 +5599,6 @@ EPT S Can't create
 EPT S Can't perform op
 EPT S Invalid entry
 EPT S Not registered
-EQUIP_DETAIL_LINK
 EQUIP_GET_EFFECT_ID
 EQUIP_GRAPH_EVENT_SERVANT_WARNING_MESSAGE
 EQUIP_GRAPH_EVENT_SERVANT_WARNING_TITLE
@@ -6051,9 +6066,10 @@ EndrolPanel
 Endroll
 Enemy
 EnemyActCount
+EnemyConfWindowServant
 EnemyMasterFace/enemyMstFace{0:d5}
 EnemyMasterFigure/figure{0:D5}
-EnemyServantDetailPopup
+Enemy_Dead_Effect
 Enemys/DownloadEnemy
 Enemys/Icon/
 English
@@ -6114,6 +6130,7 @@ EquipFaces/DownloadEquipFace
 EquipGachaTemplate
 EquipGraph
 EquipGraphListMenuPrefab(Clone)
+EquipGraphViewMode
 Era value was not valid.
 Error
 Error 
@@ -6194,6 +6211,7 @@ Error: {0} ({1})
 ErrorCount : 
 ErrorCount : 0
 Error[
+Escape_Effect
 EstabResets
 Estonian
 Estonian (Estonia)
@@ -6399,6 +6417,7 @@ FGO_Battle/Particle/Base
 FGO_Battle/Particle/Base-Stencil
 FGO_CH/AlphaBlendSingle
 FGO_CH/AlphaBlendSingleFlat
+FGO_CH/AlphaBlendSingleFlat_r1
 FGO_CH/Base
 FGO_CH/SingleFlat
 FGO_Noble/GrabPassBlur
@@ -6782,6 +6801,7 @@ Firebase.TestLab.GameLoop, Firebase.TestLab
 First argument of delegate must be CallSite
 FirstEntry
 Flag   : 
+Flag   : back
 Flags
 Flags={0}, TryOffset={1}, TryLength={2}, HandlerOffset={3}, HandlerLength={4}
 Float
@@ -6842,6 +6862,7 @@ Found an obsolete .resources file in assembly '{0}'. Rebuild that .resources fil
 Found duplicate parameter '{0}'. Each ParameterExpression in the list must be a unique object.
 FourthFeedNodeName
 FourthItemNodeName
+FowardView
 Fr
 FractionDigits is greater than TotalDigits.
 FractionDigits should be equal to 0 on types other then decimal.
@@ -7009,6 +7030,7 @@ GetCustomHeaderValue
 GetEncoding
 GetEnumerator
 GetEvents
+GetExistSvt
 GetExtendedTypeDescriptor
 GetFields
 GetFreeSize
@@ -7019,6 +7041,7 @@ GetMarshalledDomainObjRef
 GetMatch
 GetMember
 GetNativeParameterId failed.
+GetNewSvt
 GetNewsFeeds: Arguments limit or offsetID must be a positive value.
 GetNewsFeeds: Invalid value was set for `campaignType`.
 GetParentRow requires a row whose Table is {0}, but the specified row's Table is {1}.
@@ -7225,6 +7248,8 @@ Hidden/Particle/distortion
 Hidden/Particle/distortion-GrabPass
 Hidden/Particle/distortion-Stencil
 HideInAnimNode
+HideInDetailWindow
+Highlight_
 Highlighted
 Hindi
 Hindi (India)
@@ -7504,9 +7529,12 @@ ISO_8859-8
 ISO_8859-8:1988
 ISO_8859-9
 ISO_8859-9:1989
+IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE
 IS_IOS_EXAMINATION
 IS_SAVE
 IS_WAR_BOARD_AI_CALC_EVAL_SUM
+IS_WAR_BOARD_AI_FILTER_NOT_ACTION
+IS_WAR_BOARD_AI_FILTER_WASTE_ROUTE
 ISerializable type '{0}' does not have a valid constructor. To correctly implement ISerializable a constructor that takes SerializationInfo and StreamingContext parameters should be present.
 ITEM_ID_QP
 ITEM_POSSESSION_TITLE
@@ -7540,6 +7568,7 @@ Iff
 Igbo (Nigeria)
 Ignore Raycast
 IgnoreComments
+IgnoreIndivUnreleaseable
 IgnoreProcessingInstructions
 IgnoreWhitespace
 Iif
@@ -7601,6 +7630,7 @@ InUnknownProtos
 Inactive
 Inc backup
 IncludeIgnoreIndividuality
+IncludePassiveIndividuality
 Incompatible Delegate Types. First is {0} second is {1}.
 Incompatible handle: Trying to assign a playable data of type `{0}` that is not compatible with the PlayableBehaviour of type `{1}`.
 Incompatible variable type: 
@@ -9027,6 +9057,7 @@ MasterFullFigure/equip{0:D5}
 MasterMissionScene
 MasterPiece
 MasterPoint_effect_{0}
+MasterPoint_recharge_effect_1
 MasterProfileInfo
 Material
 Material 
@@ -11454,6 +11485,7 @@ Registry key names should not be greater than 255 characters.
 Registry recovered
 Registry requires a valid dependency tree to be initialized.
 RegistryKey.SetValue does not allow a String[] that contains a null String reference.
+Reinforcement_Effect_1
 Relation
 Relation {0} cannot be merged, because keys have mismatch columns.
 Relation {0} does not belong to this DataSet.
@@ -12653,6 +12685,7 @@ SavePlayedClassBoardBaseRelease
 Sc
 Scale
 ScaleChangeButton
+ScaleSquare_start
 Scanner_(?<ID>\d+)
 Scanner_\d+_Dist(?<DistIndex>\d+)
 SceneManager:scene changed from {0} to {1}
@@ -12761,7 +12794,6 @@ Servant4
 ServantBonusFilterSelect1
 ServantCombine
 ServantCostumeEventBalloon_
-ServantDetailPopup
 ServantDying
 ServantEQCombine
 ServantEquipList
@@ -12780,6 +12812,7 @@ ServantSortSelect2
 ServantSortSelect4
 ServantStatusDialogPrefab(Clone)
 Servant_Dead_Effect
+Servant_Regenerate_Effect
 Servant_SORT_FILTER2_EXCEED_
 Servant_get_prefab
 Servant_get_prefab_for_battle
@@ -12840,23 +12873,34 @@ Set-Cookie
 Set-Cookie2
 SetAddColor
 SetAlertDialogEnabled
+SetAllButton
 SetArrayItem
+SetAtkButton
+SetAtkLabel
+SetAutoLabel
 SetBannerCenter
 SetBaseTransform
 SetBasicAuthInfo
+SetBottomButton
 SetClearAlpha
 SetDefault
 SetDirty
 SetEnableTime
 SetEventBoardQuestArrivalPanel
+SetHpButton
+SetHpLabel
 SetLabelUpdate
 SetLength
 SetMainColor
 SetMargins
 SetMember
+SetNameButton
 SetNotMatched
 SetNull
 SetParentRow requires a child row whose Table is {0}, but the specified row's Table is {1}.
+SetRarityButton
+SetRotateButton
+SetTopButton
 SetTypedReference
 SetURLPattern
 SetVisibility
@@ -13002,6 +13046,7 @@ Special group
 Special user
 SpecialItemHelp
 SpecialShadowEffectId
+Special_Effect{0:D2}
 Specified
 Specified Content-Length is less than the number of bytes to write
 Specified SeekOrigin value is invalid.
@@ -15274,8 +15319,11 @@ WARBOARD_ACTION_COUNT_DECREASE_NOTICE_MESSAGE
 WARBOARD_ATTACK_CONFIRMATION_MESSAGE
 WARBOARD_ATTACK_CONFIRMATION_NO
 WARBOARD_ATTACK_CONFIRMATION_YES
+WARBOARD_BUFF_STATE_REST_TURN
 WARBOARD_CONSUMED_PIECE_ACTION_POINT_CLOSE
 WARBOARD_CONSUMED_PIECE_ACTION_POINT_MESSAGE
+WARBOARD_CONTINUE_EXPLANATION
+WARBOARD_CONTINUE_RETIRE_CHECKSTR
 WARBOARD_GET_TREASURE_DIALOG_MESSAGE
 WARBOARD_GET_TREASURE_DIALOG_TITLE_GET
 WARBOARD_GET_TREASURE_DIALOG_TITLE_RESULT
@@ -15360,12 +15408,12 @@ WAREHOUSE_OVER_PUT_OUT_SERVANT_EQUIP_MESSAGE
 WAREHOUSE_OVER_PUT_OUT_SERVANT_MESSAGE
 WAREHOUSE_OVER_PUT_OUT_TITLE
 WARN
-WAR_BOARD_ADD_ACTION_TREND_VALUE_ATTACK
-WAR_BOARD_ADD_ACTION_TREND_VALUE_MOVE
+WAR_BOARD_ACTION_DISABLED_BUFF_TYPES
 WAR_BOARD_BATTLE_END_REDUCE_BUFF_TURN_FLAG
 WAR_BOARD_BATTLE_END_RESET_BUFF_TYPES
 WAR_BOARD_BATTLE_LOSE_BGM
 WAR_BOARD_BATTLE_WIN_HIDE_RESULT_TYPES
+WAR_BOARD_EVAL_FACTORS_AFFECT_RATIO
 WAR_BOARD_PROGRESS_OPPONENT_BUFF_TYPES
 WAR_BOARD_PROGRESS_SELF_BUFF_TYPES
 WAR_CLEAR_CLOSED_
@@ -15428,8 +15476,10 @@ Wait no children
 Wait timeout
 WaitCallback
 WaitQuest
+WaitTimeSetting
 Wait_Action
 Waithandle array may not be empty.
+Wall
 WallHack Detector
 WarBoard/Background/{0}
 WarBoard/Common
@@ -15438,9 +15488,17 @@ WarBoard/PartyOrganization
 WarBoard/Shop/Effect/bit_grail_get
 WarBoard/Terminal/Effect/bit_warclear_get{0}
 WarBoardAtlas
+WarBoardBreakPointDamage
+WarBoardBreakPointDamageType
+WarBoardConfirmedRule
 WarBoardEquipGraph
+WarBoardEventBossEffect_Break{0}
+WarBoardEventBossEffect_Dead{0}
+WarBoardEventBossUIData
+WarBoardEventBossUi
 WarBoardForcePassiveEveryBattle
 WarBoardMessage 
+WarBoardObjectAtlas
 WarBoardPartyMenu
 WarBoardPartyServant
 WarBoardScene
@@ -15885,6 +15943,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 \P{_xmlI}
 \P{_xmlW}
 \[#[^:]+:[^:]+\]
+\[tRoute (?<id>[0-9]+) (?<text>.+)\]
 \\
 \\?\
 \\[
@@ -16218,6 +16277,7 @@ _rootMatrix
 _s
 _servicePack
 _start
+_target
 _targetMatrix
 _text
 _thick
@@ -16275,6 +16335,7 @@ actRarity
 action
 actionAfterCallback
 actionId: 
+actionType
 activateFetched
 activated
 activationContext
@@ -16282,6 +16343,7 @@ activeDeckId
 activeInHierarchy
 activeSelf
 activity
+actorEffectPieceIndex
 actualUri
 adServicesFrameworkEnabled
 add
@@ -16297,6 +16359,7 @@ addMessageCommonReleaseId
 addPartnerParameter
 addSessionCallbackParameter
 addSessionPartnerParameter
+addSquareIndex
 additionExpandImage
 additionalSkillActorType
 additionalSkillId
@@ -16329,9 +16392,11 @@ agentVersion
 aiActTypeAttackCommandCard
 aiAllocations
 aiFieldIds
+aiId
 aiIds
 aiMultiNpc
 aiNpc
+aiResetTiming
 ai_quest_event
 ai_quest_free
 algorithm
@@ -16383,6 +16448,7 @@ anim_giveout
 anim_wait
 animalName
 animationId
+animationName
 annotation
 annotations
 anonymous
@@ -16476,6 +16542,7 @@ ar200
 ar210
 ar223
 ar236
+ar255
 ar60
 ar93
 arabic
@@ -16645,11 +16712,13 @@ bas13
 base
 base64
 base64Binary
+baseAiId
 baseInputStream
 baseName: 
 baseOutputStream
 basePath
 baseURL
+baseUniqueCameraId
 baseUri
 baseUrl
 baseUserSvtId
@@ -16914,7 +16983,10 @@ bool
 boolean
 booleanValue
 boostId
+bossBattleInfo
 bossIdAndChangeBgmId
+bossIdx
+bossProcessType
 bottom
 bounds
 box
@@ -16959,9 +17031,9 @@ breakOnBattleWin
 breakOnBattleWinFadeColorBlack
 breakOnBattleWinWaitMSec
 break_off
-break_off_{0}
+break_off_boss
 break_on
-break_on_{0}
+break_on_boss
 broken uncompressed block
 browser
 bs
@@ -17133,6 +17205,7 @@ btn_txt_voice_off
 btn_txt_voice_on
 btn_wallpainting
 buddy_bg_at
+buffStateNoticeName
 buffer
 buffer is a null reference.
 buffer is null
@@ -17184,7 +17257,6 @@ bytearray
 bytes
 bytesUnknown
 c
-c696bda722cfd8558e389d532352b29b2729c64cc63020c072add3904cd890f3
 cBool
 cDate
 cDbl
@@ -17307,6 +17379,7 @@ changeLoadAnimations
 changeNp
 changeUpdateStatus
 changeUserSvtIds
+changeWinCondition
 channel
 channelID
 channelInfo
@@ -17684,6 +17757,7 @@ const
 constant
 constraint
 consumeAsync
+consumeType
 contact
 contactURL
 contains
@@ -17711,6 +17785,7 @@ continue_input
 continue_prepare
 continue_promotional_purchases
 contract
+contretire_win/btn_cancel
 conversion
 conversionType
 convertJsonStringToMap
@@ -17934,6 +18009,7 @@ de-DE
 de-LI
 de-LU
 deadChangePos
+deadEffect
 debug
 debugComment
 debug_quest
@@ -17963,6 +18039,7 @@ default_font_size
 default_text_color
 defence_target_loss_hp_01
 defenseNpRate
+defenseTarget
 defenseUserSvtIds
 deflate
 deflater
@@ -18044,6 +18121,7 @@ disableInAppMessagesOnForegroundTransition
 disableSystemFadeStartBattle
 disableThirdPartySharing
 disableUniqueFieldMotion
+disp
 dispBreakShift
 dispLimitCount
 distinguishedName
@@ -18099,8 +18177,36 @@ e.Count
 e806f6
 eQBoardL1Type
 e_svlist
+easeInBack
+easeInBounce
+easeInCirc
+easeInCubic
+easeInElastic
+easeInExpo
+easeInOutBack
+easeInOutBounce
+easeInOutCirc
+easeInOutCubic
+easeInOutElastic
+easeInOutExpo
+easeInOutQuad
+easeInOutQuart
+easeInOutQuint
+easeInOutSine
 easeInQuad
+easeInQuart
+easeInQuint
+easeInSine
+easeOutBack
+easeOutBounce
 easeOutCirc
+easeOutCubic
+easeOutElastic
+easeOutExpo
+easeOutQuad
+easeOutQuart
+easeOutQuint
+easeOutSine
 easeType
 easetype
 ebcdic
@@ -18169,13 +18275,16 @@ ef_dannna_up
 ef_dannna_up1
 ef_difference11
 ef_difference21
+ef_dm_base
 ef_enchant
 ef_excard01
 ef_excard02
+ef_exercise_01
 ef_factory_flash
 ef_factory_flash1
 ef_factory_open
 ef_factory_open1
+ef_guts
 ef_hit01_M
 ef_hit_slash01_M
 ef_hit_slash02_M
@@ -18186,6 +18295,7 @@ ef_mission_extric01
 ef_overgauge01
 ef_pig_return01
 ef_point_show_02
+ef_popLabel{0:00}
 ef_presenter
 ef_raid_damage
 ef_resistarrow
@@ -18194,8 +18304,11 @@ ef_soundchoice
 ef_soundopen
 ef_soundplay
 ef_special_invincible
+ef_special_invincible01
+ef_sq_
 ef_states_down_01
 ef_states_up_01
+ef_status_{0}
 ef_tower_change
 ef_tower_change{0}_end
 ef_tower_change{0}_start
@@ -18215,6 +18328,7 @@ effect/BitEffect/bit_cut_u3
 effect/BitEffect/bit_cut_ua
 effect/BitEffect/bit_cutin{0:00}
 effect/BitEffect/bit_flash02
+effect/BitEffect/bit_mastercutin01
 effect/BitEffect/bit_quick{0:00}
 effect/data/effect/ef_skill_rankup01
 effect/ef_boostitem01
@@ -18249,6 +18363,7 @@ effectDestroy
 effectFolder
 effectForceStop
 effectId
+effectIds
 effectPause
 effectStart
 effectStop
@@ -19157,6 +19272,7 @@ hp_crystaleffect_superboss_1_1
 hp_damage_
 hp_frame_
 hp_gauge_
+hp_gauge_boss
 hp_icon_
 hp_iconcharge_1_
 hp_iconeffect_1_
@@ -19320,6 +19436,7 @@ icon_guest
 icon_limit_off
 icon_limit_on
 icon_noblephantasmup
+icon_noticebg_01
 icon_np_off
 icon_np_on
 icon_nplv
@@ -19723,6 +19840,7 @@ img_txt_takeoverid
 img_txt_target_panel
 img_txt_terminal
 img_txt_unlockcc
+img_wall_{0}
 impl
 implicit
 import
@@ -19735,6 +19853,8 @@ in_app_message
 inapp
 include
 includeDeathSvt
+includeInvolvedAttacker
+includeInvolvedDefender
 includeUnsubState
 includechildren
 incomingCallDispTime
@@ -19894,6 +20014,7 @@ isFamilyShareable
 isFavorite
 isGetEffect
 isHideShadow
+isIncludeDeadPiece
 isLateUpdatePopup
 isLocal
 isLock
@@ -19901,6 +20022,7 @@ isMaterial
 isNew
 isNotMaterial
 isPersonalRaid
+isPlaySkillSe
 isPlaying
 isPlayingOrWillChangePlaymode
 isPrimitive
@@ -19909,11 +20031,14 @@ isPush
 isResult
 isRevival
 isScriptPlayForWarBoard
+isShadow
 isSkillShiftInfo
 isStatic
+isStop
 isStorage
 isSurrogate
 isTerminalLogin
+isUseHoldReinforcements
 is_free_trial
 is_updated
 ischild
@@ -20529,6 +20654,7 @@ mounted
 move
 moveDown
 moveSceneInfo
+moveTime
 movetopath
 movie
 movieAfterCrossFadeStartFrame
@@ -20895,8 +21021,13 @@ mstWarBoardActionPoint
 mstWarBoardActionPointClass
 mstWarBoardActionTrend
 mstWarBoardActionTrendCond
+mstWarBoardActionTrendGroup
 mstWarBoardAi
+mstWarBoardCommonRelease
 mstWarBoardEffect
+mstWarBoardEvent
+mstWarBoardEventScript
+mstWarBoardFutureActionTrend
 mstWarBoardIndividualityClass
 mstWarBoardItem
 mstWarBoardMessage
@@ -20906,13 +21037,19 @@ mstWarBoardPartySkill
 mstWarBoardQuest
 mstWarBoardRatingBase
 mstWarBoardRatingOffset
+mstWarBoardRatingOffsetGroup
+mstWarBoardReinforcements
 mstWarBoardRoad
 mstWarBoardSquare
+mstWarBoardSquareIndexGroup
 mstWarBoardStage
+mstWarBoardStageBoss
 mstWarBoardStageDetail
 mstWarBoardStageLayout
 mstWarBoardStageNpc
 mstWarBoardStagePieceDetail
+mstWarBoardStageReinforcements
+mstWarBoardStageWall
 mstWarBoardTacticalTrend
 mstWarBoardTreasure
 mstWarGroup
@@ -21026,7 +21163,12 @@ no number
 no private key available for signature
 no private key to export
 no queue
+noActorEffect
 noBackoffWait
+noMoveAfterAttack
+noMoveLastPieceCamera
+noMoveTargetCamera
+noMovedAfterDefend
 noNamespaceSchemaLocation
 noResult
 noSkipDeadFirstIdListKey
@@ -21156,6 +21298,8 @@ onAnimEnd
 onAppReceiptRefreshFailed
 onAppReceiptRefreshed
 onBoard_initial_placement_class2_{0}
+onBoard_itembase
+onBoard_itembase_{0}
 onClickCheckListView
 onClickListViewBlacklistRegist
 onClickListViewBlacklistRemove
@@ -21270,6 +21414,8 @@ overWriteTDRuby
 overWriteTDTypeText
 overgauge_
 overkill_
+overlayEffectMessage
+overlayEffectPrefabName
 overlayFadein
 override
 overwrite
@@ -21299,11 +21445,14 @@ overwritePresentboxDetail
 overwriteRewardCondCommonReleaseId
 overwriteRewardMessageCommonReleaseId
 overwriteRewardMessageId
+overwriteServantParameter
+overwriteServantParameterTitle
 overwriteShopCondCommonReleaseId
 overwriteShopMessageCommonReleaseId
 overwriteShopMessageId
 overwriteSvtDetailName
 overwriteTreasureEffectId
+overwriteWallAttackCost
 owner
 p
 pN6ds2Bg
@@ -21391,6 +21540,8 @@ pictureFrameTop
 piece
 pieceIdx
 pieceIndex
+pieceIndex2
+pieceIndexes
 pingPong
 pingpong
 pipelined
@@ -21402,6 +21553,7 @@ platform
 platformType
 platformer
 playAddition
+playAfterCurrentAnim
 playCoreApiMissing
 playEffect
 playEffectDrop
@@ -21557,6 +21709,7 @@ questboard_shohi_bg_01
 questboard_shohi_bg_02
 questhintdialogopensave.dat
 questinfo_enemy_brank
+questinfo_enemyface_bg
 questinfo_tab_btn_txt_01_off
 questinfo_tab_btn_txt_01_on
 questinfo_tab_btn_txt_02_off
@@ -21663,6 +21816,8 @@ registPushKey
 regist_account
 registerNotificationChannel
 registry
+reinforcements
+reinforcementsIdx
 rel_
 relation
 relationBgmIds
@@ -21763,6 +21918,7 @@ road_on
 root
 root object
 root_master
+root_text/type01/dm_base
 rotate
 rotation
 round
@@ -21833,6 +21989,7 @@ schemeName
 scopeid
 scores
 screen
+scriptId
 scripting.backend
 scriptsave.dat
 scroll
@@ -21844,6 +22001,7 @@ se-FI
 se-NO
 se-SE
 seLoop
+seName
 seStop
 seVolume
 se_
@@ -21889,6 +22047,7 @@ serializerWriter
 servantId
 servantName
 servantName 
+servantParameterLimitCount
 servant_base_{0}
 servant_icon
 servantcharactergraphexopen.dat
@@ -22050,6 +22209,7 @@ sk
 sk-SK
 ski
 skillId
+skillLv
 skillNum
 skillScript_1
 skillShiftNpcSvtIds
@@ -22134,6 +22294,7 @@ spot_info_gauge_base_color
 spot_info_gauge_l
 spot_info_gauge_s
 spot_info_window
+spring
 spriteMaskOff
 spriteMaskOn
 spriteMaskSet
@@ -22142,9 +22303,16 @@ sprites
 sq
 sq-AL
 squareId
+squareIds
+squareIndex
+squareIndex1
+squareIndex2
+squareIndexGroup
+squareIndexInfo
 squareIndexes
 square_{0:D2}
 squares
+squares_target
 square{0:D3}
 sr
 sr-Cyrl-BA
@@ -22162,6 +22330,7 @@ stackTrace
 stackTraceLogType
 stackalloc
 stageId
+stageReinforcementId
 standalone
 start
 start1
@@ -22499,6 +22668,7 @@ talkStart
 tapSkip
 target
 target must be null
+targetAllCameraSize
 targetForceId
 targetGroupId
 targetHost
@@ -22511,6 +22681,7 @@ targetURL
 targetUri
 targetUserId
 targetUserIds
+targetWallId
 task
 tasks
 tblFriend
@@ -22552,6 +22723,7 @@ textOnly
 textTitle
 textWriter
 text_effect_color
+text_effect_colors
 textarea
 textfield
 textureToCopy
@@ -22880,6 +23052,7 @@ useQp
 useTemporaryCommandSpell
 useTestConnectionOptions
 useTreasureDevices
+usecheck_win/win/btn_cancel
 usedEquipSkillList
 usedTurnList
 user
@@ -23083,34 +23256,62 @@ voluntary_ctxt_switches
 vsmacros
 wait
 waitObject
+waitTime
 wait_tuto
+wallInfo
+wall_0
+wall_1
+wall_gauge_{0}
 warBoard
 warBoard/battleResult
 warBoard/battleResume
 warBoard/battleSetup
 warBoard/buffSave
 warBoard/commandSpell
+warBoard/continue
 warBoard/finish
 warBoard/masterAttack
+warBoard/reinforcements
 warBoard/resume
 warBoard/setup
 warBoard/start
 warBoard/treasure
 warBoard/turnEnd
+warBoard/wallAttack
 warBoardBattleInfo
 warBoardData
 warBoardSvtDetail
+warBoardTalkScreen
+warCharaFadein
+warEffectOff
+warEffectPiece
+warEffectPos
+warEffectSquare
+warEventScript
+warMoveCameraPiece
+warMoveCameraPos
+warMoveCameraSquare
 war_board_battle_result
+war_board_boss_hp_back
+war_board_boss_hp_frame
+war_board_boss_hp_lower_{0}
+war_board_boss_hp_upper_{0}
+war_board_boss_hp_white
+war_board_boss_icon_{0}{1:D2}
 war_board_buff_save
 war_board_command_spell
+war_board_continue
 war_board_finish
 war_board_master_attack
 war_board_move
+war_board_reinforcements
 war_board_resume
 war_board_setup
 war_board_start
 war_board_treasure
 war_board_turn_end
+war_board_wall_attack
+warboardcontinue.dat
 warboardmessagehistorysave.dat
 warboardmoviehistorysave.dat
 warn
@@ -23143,6 +23344,8 @@ whiteSpace
 wholeHeightIndicator
 width
 willRetry
+winCondGroup
+winCondId
 winResult
 window
 windows-1250
@@ -23329,6 +23532,7 @@ zh-cht
 zh-hans
 zh-hant
 zooName
+zoom
 zu
 zu-ZA
 {
@@ -23528,6 +23732,7 @@ zu-ZA
 {0}{1}---> (Inner Exception #{2}) {3}{4}{5}
 {0}{1}-{2}
 {0}{1}/submit?token={2}&universe={3}
+{0}{1}?stageId={2}&gameDomain={3}&changeWinCond={4}
 {0}{1}_{2}
 {0}{1}{2}
 {0}{1}{2} 
