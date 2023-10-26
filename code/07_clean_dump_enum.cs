@@ -14408,6 +14408,7 @@ public enum BehaviorType.Kind
 	INDIVIDUALITY = 4,
 	NOT_GIVE_QUEST_CLEAR_GIFT = 5,
 	DISP_NEXT_ICON = 6,
+	GO_TERMINAL_QUEST_AFTER = 7,
 }
 
 public enum BuffList.TYPE
@@ -17859,6 +17860,12 @@ public enum BuffEntity.CheckIndvType
 	AND_TYPE = 1,
 	BOTH_OR_TYPE = 2,
 	BOTH_AND_TYPE = 3,
+}
+
+public enum BuffMaster.UnSubBuffWhenContinueStatus
+{
+	DEAD = 1,
+	ALIVE = 2,
 }
 
 public enum ClassBoardSquareEntity.Flag
