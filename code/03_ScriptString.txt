@@ -1208,11 +1208,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.82.1
+2.82.2
 20
 200
 20220731_BOOST_RATE_1
-20231025_17:16
+20231101_14:56
 264
 2841AE
 2D UI
@@ -1275,6 +1275,7 @@ file crc (
 7
 71
 7999
+7b9aefa12638f07f0bb09e791b1170c3d00228d068fde689205af2f52b68f15d
 8
 8 bytes maximum
 80341001
@@ -15314,6 +15315,7 @@ W0Juh4cFJSYPkebJB9WpswNF51oa6Gm7
 WAIT_OPEN
 WAIT_OTHER_SKILL
 WARBOARDDATA_SAVEDATA
+WARBOARDDATA_SERVERDATA
 WARBOARD_ACTION_COUNT_DECREASE_NOTICE_CLOSE
 WARBOARD_ACTION_COUNT_DECREASE_NOTICE_MESSAGE
 WARBOARD_ATTACK_CONFIRMATION_MESSAGE
@@ -18176,7 +18178,6 @@ dynamic_links
 e
 e.Count
 e806f6
-e87ff2883c7d2c8fb4e5f2a156dfaea2ded2f72f97060e2a5fe630bde93ce456
 eQBoardL1Type
 e_svlist
 easeInBack
@@ -20522,6 +20523,7 @@ maxLength
 maxLine
 maxNum
 maxOccurs
+maxPhase
 maxValue
 maximum number of service points reached
 maximumThreshold
@@ -21195,6 +21197,7 @@ nonce="{0}",
 none
 none data
 none response data
+noneQuest
 nonvoluntary_ctxt_switches
 normal
 normalize-space
