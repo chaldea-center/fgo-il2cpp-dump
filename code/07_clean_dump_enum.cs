@@ -13138,6 +13138,22 @@ public enum ServantLimitUpVoiceCache.Type
 	SERVANT_DETAIL = 2,
 }
 
+public enum OtherUserSortDialog.ModeKind
+{
+	SUPPORT_SELECT = 0,
+	FRIEND_MEMBER_LIST = 1,
+	FRIEND_REQUEST_LIST = 2,
+}
+
+private enum OtherUserSortDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+}
+
 protected enum PresentBoxFilterSelectMenu.State
 {
 	INIT = 0,
@@ -15617,6 +15633,7 @@ public enum DataNameKind.Kind
 	WAR_BOARD_ACTION_TREND_GROUP = 467,
 	WAR_BOARD_RATING_OFFSET_GROUP = 468,
 	WAR_BOARD_FUTURE_ACTION_TREND = 469,
+	SERVANT_PROFILE_PUSH = 470,
 }
 
 public enum Device.Type
@@ -16522,6 +16539,7 @@ public enum ShopType.Type
 	SHOP13 = 13,
 	TRADE_AP = 14,
 	SHOP15 = 15,
+	EVENT_SVT_EQUIP = 16,
 }
 
 public enum StatusRank.Kind
@@ -19904,6 +19922,17 @@ public enum ListViewSort.ExpUpDispType
 	ATK_UP = 1,
 	HP_UP = 2,
 	SUM = 3,
+}
+
+public enum ListViewSort.PriorityKind
+{
+	NONE = 0,
+	FRIEND_POINT_UP = 1,
+	MASTER_EXP_UP = 2,
+	EQUIP_EXP_UP = 3,
+	BOND_UP = 4,
+	QP_UP = 5,
+	DROP_UP = 6,
 }
 
 public enum MainMenuBarButton.Kind
@@ -25602,6 +25631,7 @@ public enum ShopBuyItemListViewManager.Kind
 	TRADE_AP = 17,
 	AP = 18,
 	SHOP15 = 19,
+	EVENT_SVT_EQUIP = 20,
 }
 
 public enum ShopBuyItemListViewManager.InitMode
@@ -25709,7 +25739,8 @@ public enum ShopHelpItemInfo.ItemKind
 	SHOP_HELP_SHOP13 = 18,
 	SHOP_HELP_TRADE_AP = 19,
 	SHOP_HELP_SHOP15 = 20,
-	SHOP_BLANK = 21,
+	SHOP_HELP_EVENT_SVT_EQUIP = 21,
+	SHOP_BLANK = 22,
 }
 
 public enum ShopHelpListViewItemDraw.DispMode
@@ -25792,6 +25823,7 @@ protected enum ShopPlayVoiceConstants.VoiceKind
 	ENTER_SHOP13_SHOP = 18,
 	ENTER_TRADE_AP_SHOP = 19,
 	ENTER_SHOP15_SHOP = 20,
+	ENTER_EVENT_SVT_EQUIP_SHOP = 21,
 }
 
 public enum ShopPlayVoiceConstants.VoiceFlag
@@ -25816,6 +25848,7 @@ public enum ShopPlayVoiceConstants.VoiceFlag
 	ENTER_SHOP13_SHOP = 262144,
 	ENTER_TRADE_AP_SHOP = 524288,
 	ENTER_SHOP15_SHOP = 1048576,
+	ENTER_EVENT_SVT_EQUIP_SHOP = 2097152,
 }
 
 public enum ShopRootConstants.State
@@ -25841,6 +25874,7 @@ public enum ShopRootConstants.State
 	SHOP13 = 18,
 	TRADE_AP = 19,
 	SHOP15 = 20,
+	EVENT_SVT_EQUIP = 21,
 }
 
 public enum ShopRootConstants.InputState
@@ -25884,6 +25918,7 @@ public enum ShopTopItemInfo.ItemKind
 	SHOP_TRADE_AP = 20,
 	SHOP_BLANK = 21,
 	SHOP15 = 22,
+	SHOP_EVENT_SVT_EQUIP = 23,
 }
 
 public enum ShopTopListViewItemDraw.DispMode

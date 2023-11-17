@@ -404,6 +404,7 @@ Content-Type:
 #000000
 #0039E2
 #042484
+#303030
 #494949
 #4C4C4C
 #6B6B6B
@@ -1208,11 +1209,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.82.2
+2.83.0
 20
 200
 20220731_BOOST_RATE_1
-20231101_14:56
+20231110_15:23
 264
 2841AE
 2D UI
@@ -1272,10 +1273,10 @@ file crc (
 504: Gateway Timeout
 6
 6.9.3
+69dca996144c40ad079a85d192cdef0eac26f5373ade5a2c9357304b32b02df9
 7
 71
 7999
-7b9aefa12638f07f0bb09e791b1170c3d00228d068fde689205af2f52b68f15d
 8
 8 bytes maximum
 80341001
@@ -3693,6 +3694,7 @@ Cannot change AutoIncrement of a DataColumn with type '{0}' once it has data.
 Cannot change CaseSensitive or Locale property. This change would lead to at least one DataRelation or Constraint to have different Locale or CaseSensitive settings between its related tables.
 Cannot change DataType of a column once it has data.
 Cannot change DateTimeMode from '{0}' to '{1}' once the table has data.
+Cannot change ObservableCollection during a CollectionChanged event.
 Cannot change ReadOnly property for the expression column.
 Cannot change Table property on a DefaultView or a DataView coming from a DataViewManager.
 Cannot change Table property once it is set.
@@ -6433,7 +6435,6 @@ FLAG_20220119
 FLAG_20220511
 FLAG_20220730
 FLAG_20230402
-FLAG_20230730
 FLAG_BATTLE_RETRY_UNAVAILABLE
 FLAG_EQUAL
 FLAG_OFF
@@ -8197,7 +8198,7 @@ IsCJKSymbolsandPunctuation
 IsCJKUnifiedIdeographs
 IsCJKUnifiedIdeographsExtensionA
 IsCherokee
-IsClearFilterServantClass-
+IsClearFilterServantClass20231117-
 IsCombiningDiacriticalMarks
 IsCombiningDiacriticalMarksforSymbols
 IsCombiningHalfMarks
@@ -8347,6 +8348,7 @@ Item has already been added. Key in dictionary: '{0}'  Key being added: '{1}'
 ItemArray
 ItemGet
 ItemIcons
+Item[]
 Items
 Items/DownloadItem
 Items/ItemAtlas
@@ -9927,6 +9929,19 @@ ORT_THIRD_FORM_ID
 OSX
 OTHER
 OTHER_IMAGE_LIMIT_COUNT
+OTHER_USER_SORT_DIALOG_CANCEL
+OTHER_USER_SORT_DIALOG_DECIDE
+OTHER_USER_SORT_DIALOG_PRIORITY_DETAIL
+OTHER_USER_SORT_DIALOG_PRIORITY_TITLE
+OTHER_USER_SORT_DIALOG_SORT_DETAIL
+OTHER_USER_SORT_DIALOG_SORT_TITLE
+OTHER_USER_SORT_PRIORITY_KIND_BOND_UP
+OTHER_USER_SORT_PRIORITY_KIND_DROP_UP
+OTHER_USER_SORT_PRIORITY_KIND_EQUIP_EXP_UP
+OTHER_USER_SORT_PRIORITY_KIND_FRIEND_POINT_UP
+OTHER_USER_SORT_PRIORITY_KIND_MASTER_EXP_UP
+OTHER_USER_SORT_PRIORITY_KIND_NONE
+OTHER_USER_SORT_PRIORITY_KIND_QP_UP
 OU
 OU=
 OVER_COST_COLOR
@@ -10882,6 +10897,7 @@ Printer driver warned
 Printer has jobs queued
 Printer not found
 PriorityIndex_
+PriorityKind-
 Private dialog index
 Private/public key mismatch
 PrivateKey
@@ -12235,11 +12251,13 @@ SHOP_COIN_ROOM
 SHOP_EVENT_LIST_EMPTY
 SHOP_EVENT_NO_ITEMS_REQUIRED
 SHOP_EVENT_RETURN_ERROR
+SHOP_EVENT_SVT_EQUIP
 SHOP_FREE_EXCHANGE_CONDITIONS
 SHOP_HELP_ANONYMOUS_SHOP_EXPLANATION
 SHOP_HELP_COIN_ROOM_EXPLANATION
 SHOP_HELP_EQUIP_FRAME_EXTENSION_EXPLANATION
 SHOP_HELP_EVENT_SHOP_EXPLANATION
+SHOP_HELP_EVENT_SVT_EQUIP_EXPLANATION
 SHOP_HELP_GRAIL_FRAGMENTS_SHOP_EXPLANATION
 SHOP_HELP_MANA_SHOP_EXPLANATION
 SHOP_HELP_RARE_PRI_SHOP_EXPLANATION
@@ -12272,6 +12290,7 @@ SHOP_SCENE_VOICE_BACK2
 SHOP_SCENE_VOICE_CANCEL
 SHOP_SCENE_VOICE_EQSTORAGE
 SHOP_SCENE_VOICE_EVENT
+SHOP_SCENE_VOICE_EVENT_SVT_EQUIP
 SHOP_SCENE_VOICE_FRAGMENT
 SHOP_SCENE_VOICE_GRAIL_FRAGMENTS
 SHOP_SCENE_VOICE_MANA
@@ -13267,6 +13286,7 @@ SvtEqCombine
 SvtEqScrollBarValue
 SvtEquipEffectFilterNew-
 SvtEventBonusFilterNew-
+SvtProfilePushKey
 SvtW_StartClose
 Swap error
 SwapCached
@@ -18887,6 +18907,7 @@ followerRandomLimitCount
 followerSpoilerProtectionLimitCount
 followerSupportDeckId
 followerType
+followerVals
 follower_edit_name
 follower_setup
 following
@@ -19709,6 +19730,7 @@ img_shop_17
 img_shop_18
 img_shop_20
 img_shop_21
+img_shop_22
 img_shop_3
 img_shop_4
 img_shop_7
@@ -20988,6 +21010,7 @@ mstSvtMultiPortrait
 mstSvtPassiveSkill
 mstSvtPassiveSkillRelease
 mstSvtProfile
+mstSvtProfilePush
 mstSvtRarity
 mstSvtScript
 mstSvtScriptAdd
