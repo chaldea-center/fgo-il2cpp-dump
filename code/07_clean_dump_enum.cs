@@ -12657,6 +12657,14 @@ public enum EventInfoDetectiveRankControl.DetectiveRank
 	RANK_EX = 5,
 }
 
+public enum EventInfoDistanceDispComponent.BorderType
+{
+	MORE_THAN = 1,
+	OR_MORE = 2,
+	OR_LESS = 3,
+	LESS_THAN = 4,
+}
+
 public enum EventInfoJapaneseCushionControl.ServantType
 {
 	MAIN = 0,
@@ -14598,6 +14606,10 @@ public enum BuffList.TYPE
 	ATTACK_AFTER_FUNCTION_MAIN_ONLY = 182,
 	WAR_BOARD_NOT_ATTACKED = 183,
 	WAR_BOARD_IGNORE_DEFEATPOINT = 184,
+	SKILL_AFTER_FUNCTION = 185,
+	TREASURE_DEVICE_AFTER_FUNCTION = 186,
+	SKILL_AFTER_FUNCTION_MAIN_ONLY = 187,
+	TREASURE_DEVICE_AFTER_FUNCTION_MAIN_ONLY = 188,
 	TO_FIELD_CHANGE_FIELD = 10001,
 	TO_FIELD_AVOID_BUFF = 10002,
 	TO_FIELD_SUB_INDIVIDUALITY_FIELD = 10003,
@@ -14735,6 +14747,10 @@ public enum BuffList.ACTION
 	FUNCTION_COMMANDATTACK_AFTER_MAIN_ONLY = 119,
 	FUNCTION_ATTACK_BEFORE_MAIN_ONLY = 120,
 	FUNCTION_ATTACK_AFTER_MAIN_ONLY = 121,
+	FUNCTION_SKILL_AFTER = 122,
+	FUNCTION_SKILL_AFTER_MAIN_ONLY = 123,
+	FUNCTION_TREASURE_DEVICE_AFTER = 124,
+	FUNCTION_TREASURE_DEVICE_AFTER_MAIN_ONLY = 125,
 }
 
 public enum BuffList.DEL_AFTER_TYPE
@@ -15030,6 +15046,21 @@ public enum CondType.Kind
 	SKILL_LV_EXCHANGE_SVT = 190,
 	SVT_FRIENDSHIP_EXCHANGE_SVT = 191,
 	EXCHANGE_SVT = 192,
+	RAID_DAMAGE_ABOVE = 193,
+	RAID_DAMAGE_BELOW = 194,
+	RAID_GROUP_DAMAGE_ABOVE = 195,
+	RAID_GROUP_DAMAGE_BELOW = 196,
+	RAID_DAMAGE_RATE_ABOVE = 197,
+	RAID_DAMAGE_RATE_BELOW = 198,
+	RAID_DAMAGE_RATE_NOT_ABOVE = 199,
+	RAID_DAMAGE_RATE_NOT_BELOW = 200,
+	RAID_GROUP_DAMAGE_RATE_ABOVE = 201,
+	RAID_GROUP_DAMAGE_RATE_BELOW = 202,
+	RAID_GROUP_DAMAGE_RATE_NOT_ABOVE = 203,
+	RAID_GROUP_DAMAGE_RATE_NOT_BELOW = 204,
+	NOT_QUEST_GROUP_CLEAR_NUM = 205,
+	RAID_GROUP_OPEN_ABOVE = 206,
+	RAID_GROUP_OPEN_BELOW = 207,
 }
 
 public enum CondType.CheckType
@@ -15634,6 +15665,8 @@ public enum DataNameKind.Kind
 	WAR_BOARD_RATING_OFFSET_GROUP = 468,
 	WAR_BOARD_FUTURE_ACTION_TREND = 469,
 	SERVANT_PROFILE_PUSH = 470,
+	MAP_GIMMICK_PATH = 471,
+	MAP_GIMMICK_PATH_RELEASE = 472,
 }
 
 public enum Device.Type
@@ -15677,6 +15710,7 @@ public enum EventStatus.Type
 	BATTLE_LINE_RESULT_WIN = 6,
 	USE_EVENT_ITEM = 7,
 	VIEW_OPENING_MOVIE = 8,
+	RAID_PARTICIPATE = 9,
 }
 
 public enum EventStatus.TypeFlag
@@ -15689,6 +15723,7 @@ public enum EventStatus.TypeFlag
 	BATTLE_LINE_RESULT_WIN = 64,
 	USE_EVENT_ITEM = 128,
 	VIEW_OPENING_MOVIE = 256,
+	RAID_PARTICIPATE = 512,
 }
 
 public enum EventWorkType.Type
@@ -18524,6 +18559,13 @@ public enum MapGimmickEntity.GimmickType
 	EVENT_MISSION = 1,
 }
 
+public enum MapGimmickPathEntity.MapGimmickPathType
+{
+	NONE = 0,
+	EVENT_TIME_LIMIT_RAID = 1,
+	QUEST_GROUP_CLEAR_STEP = 2,
+}
+
 public enum MstMissionMaster.CurrentType
 {
 	NOT_OPEN = 0,
@@ -20609,6 +20651,7 @@ public enum BattleActionData.ACTTYPE
 	ATTACK = 1,
 	DAMAGE = 2,
 	ATTACK_BEFORE = 3,
+	FUNCTION = 4,
 }
 
 public enum BattleActorEffectMesh.MeshType
@@ -20739,6 +20782,7 @@ public enum BattleData.PROGRESS
 	SERVANT_AI_BEFORE_MOVE_WAVE = 16384,
 	FIELDAI_BEFORE_MOVE_WAVE = 32768,
 	PROGRESS_INTERVAL_TURN = 65536,
+	STAGE_CUTIN = 131072,
 }
 
 public enum BattleDataDefine.FieldActorPosition
@@ -29131,6 +29175,7 @@ public enum USFGOActorBattleActionEvent.ActionType
 	SilentDead = 4,
 	SelfDead = 5,
 	MoveToSubMember = 6,
+	FuncSideEffect = 7,
 }
 
 public enum USFGOActorChangePosition.PosChangeTargetType
@@ -29545,6 +29590,12 @@ public enum FGOCheckBattleFaze.FAZE
 	BATTLE = 1,
 }
 
+public enum FGOEffectFirstTimeScale.PROC
+{
+	SET = 0,
+	RESET = 1,
+}
+
 public enum FGOFieldGimmick.STATE
 {
 	SET = 0,
@@ -29640,6 +29691,9 @@ public enum FGOLogic.PROC
 	FIELDAI_BEFORE_MOVE_WAVE = 53,
 	PROGRESS_INTERVAL_TURN = 54,
 	LOAD_N_STAGE_PLAYER = 55,
+	START_CONTINUE_WAVE_RESTART = 56,
+	INITIALIZE_WAVE_RESTART = 57,
+	STAGE_CUTIN = 58,
 }
 
 public enum FGOPerformance.Effect
@@ -29678,6 +29732,7 @@ public enum FGOPerformance.Effect
 	PREV_TACTICAL = 31,
 	LOSS_COMMAND_SPELL = 32,
 	MOVE_TO_SUBMEMBER = 33,
+	START_FADE_OUT = 34,
 }
 
 public enum FGOPlayStarDirection.DirectionType
