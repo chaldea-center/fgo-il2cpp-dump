@@ -9687,6 +9687,13 @@ public enum ParticleSystemStopBehavior
 	StopEmitting = 1,
 }
 
+public enum ParticleSystemScalingMode
+{
+	Hierarchy = 0,
+	Local = 1,
+	Shape = 2,
+}
+
 public enum ParticleSystemStopAction
 {
 	None = 0,
@@ -9701,6 +9708,12 @@ public enum ParticleSystemCullingMode
 	PauseAndCatchup = 1,
 	Pause = 2,
 	AlwaysSimulate = 3,
+}
+
+public enum ParticleSystemCustomData
+{
+	Custom1 = 0,
+	Custom2 = 1,
 }
 
 public enum ParticleSystemForceFieldShape
@@ -14751,6 +14764,7 @@ public enum BuffList.ACTION
 	FUNCTION_SKILL_AFTER_MAIN_ONLY = 123,
 	FUNCTION_TREASURE_DEVICE_AFTER = 124,
 	FUNCTION_TREASURE_DEVICE_AFTER_MAIN_ONLY = 125,
+	GUTS = 126,
 }
 
 public enum BuffList.DEL_AFTER_TYPE
@@ -15061,6 +15075,7 @@ public enum CondType.Kind
 	NOT_QUEST_GROUP_CLEAR_NUM = 205,
 	RAID_GROUP_OPEN_ABOVE = 206,
 	RAID_GROUP_OPEN_BELOW = 207,
+	TREASURE_DEVICE_ACCELERATE = 208,
 }
 
 public enum CondType.CheckType
@@ -16584,26 +16599,31 @@ public enum StatusRank.Kind
 	A_PLUS2 = 13,
 	A_MINUS = 14,
 	A_PLUS3 = 15,
+	A_QUESTION = 16,
 	B = 21,
 	B_PLUS = 22,
 	B_PLUS2 = 23,
 	B_MINUS = 24,
 	B_PLUS3 = 25,
+	B_QUESTION = 26,
 	C = 31,
 	C_PLUS = 32,
 	C_PLUS2 = 33,
 	C_MINUS = 34,
 	C_PLUS3 = 35,
+	C_QUESTION = 36,
 	D = 41,
 	D_PLUS = 42,
 	D_PLUS2 = 43,
 	D_MINUS = 44,
 	D_PLUS3 = 45,
+	D_QUESTION = 46,
 	E = 51,
 	E_PLUS = 52,
 	E_PLUS2 = 53,
 	E_MINUS = 54,
 	E_PLUS3 = 55,
+	E_QUESTION = 56,
 	EX = 61,
 	QUESTION = 98,
 	NONE = 99,
@@ -17821,6 +17841,7 @@ public enum DataVals.TYPE
 	CancelTransform = 143,
 	UnSubStateWhenContinue = 144,
 	CheckTargetHaveDefeatPoint = 145,
+	NPFixedDamageValue = 146,
 }
 
 public enum DataVals.OverChargeState
@@ -20574,6 +20595,19 @@ public enum ShaderParamAnimation.VectorCountType
 	Vector_4 = 4,
 }
 
+public enum ShaderParamAnimation.RendererType
+{
+	Renderer = 0,
+	BillboardRenderer = 1,
+	LineRenderer = 2,
+	MeshRenderer = 3,
+	ParticleSystemRenderer = 4,
+	SkinnedMeshRenderer = 5,
+	SpriteMask = 6,
+	SpriteRenderer = 7,
+	TrailRenderer = 8,
+}
+
 public enum BattleActionLogType.Type
 {
 	NONE = 0,
@@ -21411,6 +21445,13 @@ public enum MultiplyTargetMatrixChr.TargetObjPathRootType
 {
 	Own = 0,
 	Chr = 1,
+}
+
+private enum ParticleAttatchMesh.CustomDataType
+{
+	None = 0,
+	Color = 1,
+	UV = 2,
 }
 
 public enum BattleActorAnimationEffect.ScaleFlipType
@@ -22645,6 +22686,13 @@ public enum EventMissionItemListViewManager.FilterStatus
 	ACHIVE = 4,
 }
 
+private enum EventSvtControl.PerformanceTiming
+{
+	BEFORE = 0,
+	START = 1,
+	AFTER = 2,
+}
+
 public enum EventPointItemListViewItemDraw.DispMode
 {
 	INVISIBLE = 0,
@@ -22914,6 +22962,13 @@ private enum EventRewardRootComponent.VoiceIndexEnum
 {
 	WELCOME = 0,
 	PURCHASE = 1,
+}
+
+private enum EventRewardRootComponent.VoiceTypeAfterTutorial
+{
+	NONE = 0,
+	SERVANT_VOICE = 1,
+	WELCOME_VOICE = 2,
 }
 
 protected enum EventRewardRootComponent.State
@@ -26609,6 +26664,21 @@ public enum EventRaceResultEffect.STATE
 	SIZEOF = 3,
 }
 
+public enum FortuneBonusBoxAction.STATE
+{
+	NONE = 0,
+	PLAY = 1,
+	SIZEOF = 2,
+}
+
+public enum FortuneBonusResultAction.STATE
+{
+	NONE = 0,
+	PLAY = 1,
+	TOUCH_WAIT = 2,
+	SIZEOF = 3,
+}
+
 public enum CTouch.TCH_STATE
 {
 	NONE = 0,
@@ -29694,6 +29764,7 @@ public enum FGOLogic.PROC
 	START_CONTINUE_WAVE_RESTART = 56,
 	INITIALIZE_WAVE_RESTART = 57,
 	STAGE_CUTIN = 58,
+	WAIT_DROP_ITEM_COLLECT = 59,
 }
 
 public enum FGOPerformance.Effect

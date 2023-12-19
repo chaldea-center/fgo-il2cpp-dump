@@ -1210,11 +1210,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.84.1
+2.85.0
 20
 200
 20220731_BOOST_RATE_1
-20231129_18:38
+20231214_19:28
 264
 2841AE
 2D UI
@@ -1272,6 +1272,7 @@ file crc (
 5047911:100:0
 5047912:100:0
 504: Gateway Timeout
+55db6f74ad7c4fdfc576bb0524700b727df7626e5f7a858ef3f0e825bcccaecd
 6
 6.9.3
 7
@@ -1697,10 +1698,6 @@ A valid UTF32 value is between 0x000000 and 0x10ffff, inclusive, and should not 
 A valid high surrogate character is between 0xd800 and 0xdbff, inclusive.
 A valid license cannot be granted for the type {0}. Contact the manufacturer of the component for more information.
 A valid low surrogate character is between 0xdc00 and 0xdfff, inclusive.
-A+
-A++
-A+++
-A-
 A.D.
 A51B1B
 ABCDEFGHIJ
@@ -2299,9 +2296,6 @@ Azeri
 Azeri (Cyrillic, Azerbaijan)
 Azeri (Latin, Azerbaijan)
 B
-B+
-B++
-B-
 B010
 B020
 B030
@@ -2501,7 +2495,6 @@ BATTLE_DIALOG_NOT_SELECT_TARGET
 BATTLE_DIALOG_RESULT_ERROR_CONF
 BATTLE_DIALOG_RESULT_ERROR_TITLE
 BATTLE_DIALOG_RETIRE_CONF
-BATTLE_DIALOG_RETIRE_CONF_{0}_{1}
 BATTLE_DIALOG_RETIRE_ONLY_NPC
 BATTLE_DIALOG_RETIRE_TITLE
 BATTLE_DIALOG_SELECTMAINSUB_SERVANT
@@ -2634,6 +2627,7 @@ BGM_CHALDEA_2
 BGM_EVENT_128
 BGM_EVENT_2
 BGM_MYROOM_1
+BGM_MYROOM_2
 BGM_SUMMON_1
 BGM_TITLE_1
 BGM_TITLE_2
@@ -2987,10 +2981,6 @@ Byte
 Byte array for GUID must be exactly {0} bytes long.
 Bzip data error
 C
-C+
-C++
-C+++
-C-
 C.E.
 C:/Avalon/Temporary/ScriptData
 C=
@@ -3487,7 +3477,6 @@ COSTUME_NEED_QP_TEXT
 COSTUME_OPEN_MSG
 COSTUME_OPEN_TITLE
 COSTUME_OPEN_WARNING
-COSTUME_RELEASE
 COSTUME_SELECT_SERVANT_EVENT_END_ITEM_COSTUME_MSG
 COSTUME_SELECT_SERVANT_EVENT_ITEM_COSTUME_MSG
 COSTUME_SELECT_SERVANT_MSG
@@ -3549,6 +3538,7 @@ Caches
 CalendarType
 Call
 Call(
+CallPerformanceEndAction
 CallSite.Target
 CallSiteBinder.UpdateLabel
 Callback supplied invalid data
@@ -3994,6 +3984,7 @@ Chain instance is empty.
 Challenge
 ChangeBoardGameDiceButttonActive
 ChangeFaceFade
+ChangeFigure
 ChangeNpCountPlayer
 ChangeType operation is not supported.
 ChangeUserName
@@ -4059,6 +4050,7 @@ Circular identity constraint reference.
 Circular reference in self-nested table '{0}'.
 Circular substitution group affiliation.
 Circular type reference.
+CkIndvForEachDamage
 Class already exists
 Class does not exist
 Class has windows
@@ -4105,6 +4097,7 @@ Cleaner cartridge installed
 Cleaner cartridge spent
 Cleaner slot not set
 Cleaner slot set
+Clear All Player Prefs
 ClearCookies
 ClearCustomHeader
 ClearMatch
@@ -4626,10 +4619,6 @@ Cyan
 Czech
 Czech (Czech Republic)
 D
-D+
-D++
-D+++
-D-
 D2
 D3
 D4
@@ -5276,8 +5265,12 @@ Debug
 Debug TypeDescriptor.
 DebugLogHandler
 DebugTestScene
+Debug_BattleEnemyList
+Debug_GuestNPCInfoList
 Debug_IsBuildInfoDisp
 Debug_IsDummyErrorSelect
+Debug_IsOriginalBattle
+Debug_IsOriginalGuestNPC
 Debug_IsQuestReleaseAll
 Dec
 December
@@ -5513,10 +5506,6 @@ DynamicMaterial
 Dynlink from invalid ring
 D{0}
 E
-E+
-E++
-E+++
-E-
 E=
 EA access denied
 EA file corrupt
@@ -5836,7 +5825,6 @@ EV_PRAM_INIT_FIN
 EV_SCENE_STATUS_INIT
 EV_SCENE_STATUS_RESUME
 EV_SCENE_STATUS_RESUME_FROM_SCRIPT
-EX
 EXCEPT_SERVANT_UNIT
 EXCHANGE_CAMPAIGN_COMBINE_MSG
 EXCHANGE_CAMPAIGN_NOTICE_MSG_TITLE
@@ -6070,6 +6058,7 @@ EndSend
 EndSendTo
 EndSlideDown
 EndSlideIn
+EndSwitchFigure
 EndTweenFunc
 EndValidation
 EndWaitVoice
@@ -6527,6 +6516,12 @@ FORTIFICATION_SET_CONFIRM_DIALOG_WARNING_DESCRIPTION
 FORTIFICATION_WARNING_DIALOG_CHECKBOX
 FORTIFICATION_WARNING_DIALOG_DESCRIPTION
 FORTIFICATION_WARNING_DIALOG_TITLE
+FORTUNE_BONUS_EXEC_BUTTON
+FORTUNE_BONUS_RESULT_BUTTON
+FORTUNE_BONUS_RESULT_DAY_FORMAT
+FORTUNE_BONUS_RESULT_NO_NAME
+FORTUNE_BONUS_RESULT_SUBTITLE
+FORTUNE_BONUS_RESULT_TITLE
 FOUR_PILLARS
 FREESTONE_INFO_TITLE
 FREE_DRAW_NUM_CHANGE_AT
@@ -6865,6 +6860,10 @@ FortificationOrganizationPanel
 FortificationWarningDialog
 FortificationWork
 FortificationWorkMini
+FortuneBonus
+FortuneBonusExecDialog
+FortuneBonusPlayAnim
+FortuneBonusResultDialog
 ForwDatagrams
 ForwardIconAnimObject
 ForwardIconAnimStart
@@ -10837,6 +10836,10 @@ PlayVoiceNo
 PlayVoiceWait
 Player
 Player1
+PlayerPrefsの削除
+PlayerPrefsを全て削除します
+※元に戻せません
+※再起動後反映されます
 Playing
 PlaymakerIcon.tiff
 Please enable BacktraceClient first.
@@ -11795,6 +11798,9 @@ SERVANT_ALL_SELL_MESSAGE_END
 SERVANT_ALL_SELL_MESSAGE_START
 SERVANT_ALL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_ALREADY_RECOVER_NOT_SELECT
+SERVANT_ATTRIBUTE_FORMAT
+SERVANT_ATTRIBUTE_NONE
+SERVANT_ATTRIBUTE_SPLIT
 SERVANT_BEFORE_IN_NOT_FATIGUE_TIME
 SERVANT_CHANGE_RECOVERY_FATIGUE_MSG
 SERVANT_CHANGE_RECOVERY_FATIGUE_TEXT
@@ -11879,6 +11885,17 @@ SERVANT_MATERIAL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_OUT_RECOVERY_FATIGUE_TEXT
 SERVANT_OUT_RECOVERY_FATIGUE_TITLE
 SERVANT_OVER
+SERVANT_PERSONALITY_
+SERVANT_PERSONALITY_1
+SERVANT_PERSONALITY_2
+SERVANT_PERSONALITY_4
+SERVANT_PERSONALITY_8
+SERVANT_POLICY_
+SERVANT_POLICY_1
+SERVANT_POLICY_2
+SERVANT_POLICY_3
+SERVANT_POLICY_4
+SERVANT_POLICY_6
 SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM
 SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY
 SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY_DELIMITER
@@ -12175,6 +12192,7 @@ SERVANT_STORAGE_PURCHASE_MESSAGE
 SERVANT_STORAGE_PURCHASE_NUM
 SERVANT_STORAGE_PURCHASE_RESULT
 SERVANT_STORAGE_PURCHASE_TITLE
+SERVANT_SUB_ATTRIBUTE_
 SERVANT_TAKE
 SERVANT_UNIT
 SERVANT_WAREHOUSE_EMPTY
@@ -12470,6 +12488,7 @@ START_EFFECT
 START_FRIENDSHIPUP_EFFECT
 START_FRIENDSHIP_EXCEED_EFFECT
 START_GACHA
+START_ITEM_GET_EFFECT
 START_LIMITUP_EFFECT
 START_LVEXCEED_EFFECT
 START_NAME_REVEAL_EFFECT
@@ -13726,6 +13745,7 @@ Terminal/EarthCore/{0:D2}
 Terminal/Effect
 Terminal/Info
 Terminal/Info/TitleInfoChronologyDialogPrefab
+Terminal/LoginBonus/FortuneBonus
 Terminal/MapImgs/
 Terminal/MapModels/{0:D4}_{1}
 Terminal/OrdealCall
@@ -14236,12 +14256,14 @@ The requested security protocol is not supported.
 The required attribute '{0}' is missing.
 The required attribute must have a value of yes or no.
 The response string '{0}' has invalid format.
+The result colors list cannot be null.
 The result normals list cannot be null.
 The result of the dynamic binding produced by the object with type '{0}' for the binder '{1}' needs at least one restriction.
 The result type '{0}' of the binder '{1}' is not compatible with the result type '{2}' expected by the call site.
 The result type '{0}' of the dynamic binding produced by binder '{1}' is not compatible with the result type '{2}' expected by the call site.
 The result type '{0}' of the dynamic binding produced by the object with type '{1}' for the binder '{2}' is not compatible with the result type '{3}' expected by the call site.
 The result uvs list cannot be null.
+The result vertices list cannot be null.
 The return type of overload method for operator '{0}' does not match the parameter type of conversion method '{1}'.
 The rgbHash parameter is a null reference.
 The root element is missing.
@@ -16476,7 +16498,6 @@ android.widget.Toast
 android/util/Log
 androidStore
 androidx.core.content.ContextCompat
-animAfterCallback
 animCamLoc
 animCam_aim
 animCam_root
@@ -16920,6 +16941,8 @@ bit_item_get{0}
 bit_mastercutin01
 bit_mural_update
 bit_mural_update{0}
+bit_omikuzi_get
+bit_omikuzi_open
 bit_order_grade_get
 bit_orderrank_change
 bit_orderrank_change_{0:00}
@@ -17643,6 +17666,7 @@ colorA
 colorB
 colorC
 colorD
+colors
 column
 column=2
 column=3
@@ -18037,7 +18061,6 @@ daylightTransitionEnd
 dayofweek
 days
 dbghelp.dll
-dcba6d47f6ea38811ac67021b4b022ae95e4c44a1adc0a2b546b02d07563bd2e
 dd
 ddd
 ddd MMM d HH:mm:ss yyyy
@@ -18839,6 +18862,7 @@ fi-FI
 field
 fieldCount
 fieldHp
+fieldHpContinueRecoverRate
 fieldHpDamage
 fieldHpDamageEffectId
 fieldHpDamageInvincible
@@ -21350,6 +21374,7 @@ oldValue is the empty string.
 old_sku_period_string
 old_sku_price_in_micros
 old_sku_remaining_seconds
+omikuzi_{0}
 on
 onAnimEnd
 onAppReceiptRefreshFailed
@@ -21499,6 +21524,8 @@ overwriteMapAssetId
 overwriteMoveCost
 overwriteName
 overwritePresentboxDetail
+overwriteResultBgmCondIds
+overwriteResultBgmIds
 overwriteRewardCondCommonReleaseId
 overwriteRewardMessageCommonReleaseId
 overwriteRewardMessageId
@@ -21533,7 +21560,6 @@ page up
 page2
 page3
 pair_bg
-panelAfterCallback
 panelMapDetailId
 panelScanId
 paramByteDataSize == null! Data Version: 
@@ -23272,6 +23298,7 @@ verticalscrollbarupbutton
 verticalslider
 verticalsliderthumb
 verticalsliderthumbextent
+vertices
 vi
 vi-VN
 vibrationPattern
@@ -23936,9 +23963,11 @@ zu-ZA
 【名前】
 ぀゠
 あと 
+いいえ
 このアセットは存在しません。
 そのサウンドはcpkリスト内に存在しません
 そのサウンドはcpk内に存在しません
+はい
 ゠㄀
 アルトリア
 アーツ
@@ -23963,6 +23992,8 @@ CUSTOM に変更しました
 ストーリークエスト開放状況
 デイリーミッション達成【完了】ミッション
 データ更新
+データ更新のためゲームを終了します。
+データ更新のため再起動します。
 データ更新開始
 バスター
 バトルスクリプトエラー
