@@ -17142,6 +17142,12 @@ public enum Voice.BATTLE
 	COUNTER1 = 297,
 	COUNTER2 = 298,
 	COUNTER3 = 299,
+	HCARD7 = 300,
+	HCARD8 = 301,
+	HCARD9 = 302,
+	HCARD10 = 303,
+	HCARD11 = 304,
+	HCARD12 = 305,
 }
 
 public enum VoiceClosedType.Type
