@@ -14276,6 +14276,8 @@ public enum Ai.COND
 	TOTAL_TURN_LOWER = 192,
 	TOTAL_TURN_EQUAL = 193,
 	CHECK_WAR_BOARD_SQUARE_INDIVIDUALITY = 194,
+	CHECK_PT_HIGHER_NPGAUGE = 195,
+	CHECK_SELF_HIGHER_NPGAUGE = 196,
 }
 
 public enum Ai.ACT_NUM
@@ -14623,6 +14625,7 @@ public enum BuffList.TYPE
 	TREASURE_DEVICE_AFTER_FUNCTION = 186,
 	SKILL_AFTER_FUNCTION_MAIN_ONLY = 187,
 	TREASURE_DEVICE_AFTER_FUNCTION_MAIN_ONLY = 188,
+	PREVENT_INVISIBLE_WHEN_INSTANT_DEATH = 189,
 	TO_FIELD_CHANGE_FIELD = 10001,
 	TO_FIELD_AVOID_BUFF = 10002,
 	TO_FIELD_SUB_INDIVIDUALITY_FIELD = 10003,
@@ -14765,6 +14768,7 @@ public enum BuffList.ACTION
 	FUNCTION_TREASURE_DEVICE_AFTER = 124,
 	FUNCTION_TREASURE_DEVICE_AFTER_MAIN_ONLY = 125,
 	GUTS = 126,
+	PREVENT_INVISIBLE_WHEN_INSTANT_DEATH = 127,
 }
 
 public enum BuffList.DEL_AFTER_TYPE
@@ -15076,6 +15080,9 @@ public enum CondType.Kind
 	RAID_GROUP_OPEN_ABOVE = 206,
 	RAID_GROUP_OPEN_BELOW = 207,
 	TREASURE_DEVICE_ACCELERATE = 208,
+	PLAY_QUEST_PHASE = 209,
+	NOT_PLAY_QUEST_PHASE = 210,
+	EVENT_START_TO_END = 211,
 }
 
 public enum CondType.CheckType
@@ -15682,6 +15689,7 @@ public enum DataNameKind.Kind
 	SERVANT_PROFILE_PUSH = 470,
 	MAP_GIMMICK_PATH = 471,
 	MAP_GIMMICK_PATH_RELEASE = 472,
+	SERVANT_OVERWRITE = 473,
 }
 
 public enum Device.Type
@@ -18239,6 +18247,7 @@ public enum EventMissionCondDetailEntity.MissionCondType
 	BATTLE_EXCHANGE_SVT_IN_DECK = 37,
 	USE_TREASURE_DEVICE_EXCHANGE_SVT = 38,
 	PLAY_VOICE_EXCHANGE_SVT = 39,
+	MAP_GIMMICK_COUNT = 40,
 }
 
 public enum EventMissionCondDetailEntity.MissionConditionLinkType
@@ -18978,6 +18987,11 @@ public enum ServantFlagEntity.SvtScriptFlagType
 	SECRET_TREASURE_DEVICE_GET = 1,
 }
 
+public enum ServantOverwriteEntity.ServantOverwriteType
+{
+	TREASURE_DEVICE = 1,
+}
+
 public enum ServantScriptEntity.OffsetKind
 {
 	NORMAL = 0,
@@ -19698,7 +19712,8 @@ protected enum CommonEffectComponent.Status
 	DESTORY = 2,
 	START = 3,
 	LOOP = 4,
-	END = 5,
+	TOUCH = 5,
+	END = 6,
 }
 
 public enum CommonEffectManager.FlipKind
@@ -20002,6 +20017,12 @@ public enum ListViewSort.PriorityKind
 	BOND_UP = 4,
 	QP_UP = 5,
 	DROP_UP = 6,
+}
+
+public enum ListViewSort.AutoOrganizationMode
+{
+	USE_ENEMY_CLASS_MAIN = 0,
+	USE_ENEMY_CLASS_ALL = 1,
 }
 
 public enum MainMenuBarButton.Kind
@@ -21426,6 +21447,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	PROGRESS_INTERVAL_TURN = 65,
 	FIELD_AI_PLAYER_SKILL_AFTER = 66,
 	FIELD_AI_PLAYER_SKILL_AFTER_PRIOR = 67,
+	GENERAL_RELAY_TASK = 68,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE

@@ -993,6 +993,7 @@ file crc (
 /forwarding
 /g
 /gamedata/top
+/image/
 /json
 /lib/terminfo
 /minidump
@@ -1210,15 +1211,16 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.85.2
+2.86.0
 20
 200
 20220731_BOOST_RATE_1
-20231228_12:36
+20240112_23:10
 264
 2841AE
 2D UI
 2DUI
+2aeb35d40018ec88a991a224ce5ff7ec99ed443aa0ec8a6f7c8f62541e4e1d4f
 2bba0607-14d5-4afe-b9a0-e0210bf20c40
 2nd Attack
 2pC0bIYM
@@ -1843,9 +1845,13 @@ AUTO_ORGANIZATION_BTN_LABEL
 AUTO_ORGANIZATION_CONFIRM_CANCEL
 AUTO_ORGANIZATION_CONFIRM_DECIDE
 AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER
+AUTO_ORGANIZATION_CONFIRM_DETAIL_CENTER_ADD
 AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_EQUIP
 AUTO_ORGANIZATION_CONFIRM_DETAIL_KIND_SERVANT
 AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT
+AUTO_ORGANIZATION_CONFIRM_DETAIL_LEFT_MODE
+AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_ALL
+AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_MAIN
 AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE
 AUTO_ORGANIZATION_CONFIRM_MESSAGE
 AUTO_ORGANIZATION_CONFIRM_SETTING
@@ -1854,6 +1860,10 @@ AUTO_ORGANIZATION_SETTING_EVENT_BONUS
 AUTO_ORGANIZATION_SETTING_EVENT_BONUS_EXPLATION
 AUTO_ORGANIZATION_SETTING_EXPLATION
 AUTO_ORGANIZATION_SETTING_KIND
+AUTO_ORGANIZATION_SETTING_MODE
+AUTO_ORGANIZATION_SETTING_MODE_EXPLANATION
+AUTO_ORGANIZATION_SETTING_MODE_USE_ENEMY_CLASS_ALL
+AUTO_ORGANIZATION_SETTING_MODE_USE_ENEMY_CLASS_MAIN
 AUTO_ORGANIZATION_SETTING_RARITY
 AUTO_ORGANIZATION_SETTING_TITLE
 AUTO_ORGANIZATION_SETTING_UNIT
@@ -2287,6 +2297,7 @@ AutoOrganizationBonusFilterEquipId
 AutoOrganizationBonusFilterEventId
 AutoOrganizationBonusFilterGroupId
 AutoOrganizationFilterNew-
+AutoOrganizationMode-
 AutoOrganizationWaveBattle
 AutoPlayView
 Autodataseg exceeds 64k
@@ -2804,6 +2815,7 @@ Badly encoded extension.
 BankStatusRequest string error: 
 Banner/DownloadBanner
 Barrier
+Base Layer.
 Base/TitlePrefab/BackObj/BtnBg
 Base64
 Base64Binary
@@ -4017,6 +4029,7 @@ CharaGraphOptionAtlas
 CheckCharacters
 CheckNum : 
 CheckOutputDeviceType
+CheckUpdateShiftServant
 CheckedConvert
 Check{0}BuffTypes
 Child
@@ -7750,6 +7763,7 @@ Input: Touch
 InputField.onSubmit
 InputField.value
 Insertion index was out of range. Must be non-negative and less than or equal to size.
+InsertionAnimations/
 Install UI failure
 Install already running
 Install failure
@@ -9924,6 +9938,8 @@ OPTION_SVT_EXPLANATION
 OPTION_SVT_RAND_DISP
 OPTION_TD_PLAY_SPEED_DISP
 OPTION_TD_PLAY_SPEED_EXPLANATION
+OPTION_TOUCH_SKIP_OPENING_MOVIE
+OPTION_TOUCH_SKIP_OPENING_MOVIE_INFO
 OPTION_VOICE
 OPTION_VOLUME_MUTE
 OPTION_VOLUME_MUTE_EXPLANATION
@@ -10279,6 +10295,7 @@ OptionScenarioTextSpeed
 OptionSeVolume
 OptionSelectAdvantageClassAuto
 OptionSvtRand
+OptionTouchSkipOpeningMovie
 OptionVoiceVolume
 OptionVolumeMute
 Options
@@ -12315,6 +12332,7 @@ SHOP_LIST_EMPTY
 SHOP_MAX_ALERT
 SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS
 SHOP_NOTICE_EXCHANGE_STONE_FRAGMENTS_OVER
+SHOP_NOT_RELEASE_SET_ITEM
 SHOP_PAID_EXCHANGE_CONDITIONS
 SHOP_QUEST_ALREADY_CLEARED
 SHOP_QUEST_FREE_EXCHANGE_CLEARED
@@ -13808,6 +13826,7 @@ Texture
 Texture '{0}' is not readable, the texture memory can not be accessed from scripts. You can make the texture readable in the Texture Import Settings.
 Texture creation failed. '{0}' is not supported for {1} usage on this platform. Use 'SystemInfo.IsFormatSupported' C# API to check format support.
 Texture creation failed. '{0}' is not supported on this platform. Use 'SystemInfo.SupportsTextureFormat' C# API to check format support.
+Texture_
 Th
 Thai
 Thai (Thailand)
@@ -15487,6 +15506,8 @@ WAR_CLEAR_REWARD_GET
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL
 WAVE_BATTLE_COST_OVER_MESSAGE
 WAVE_BATTLE_COST_OVER_TITLE
@@ -16312,6 +16333,7 @@ _enemy
 _f
 _fade
 _glow
+_in
 _invrootMatrix
 _keyPairArray
 _keyPairContainer
@@ -16331,6 +16353,7 @@ _off{0}
 _oneValue
 _on{0}
 _org_
+_out
 _passRuntimeValues
 _platform
 _player
@@ -18741,6 +18764,7 @@ event_reset_digging
 event_rewardframe_{0}
 event_rewardgacha_
 event_rewardget_
+event_rewardget_{0}
 event_rewardget_{0}01
 event_rewardget_{0}02
 event_rewardpoint_
@@ -18824,7 +18848,6 @@ f6
 f7
 f8
 f9
-f965cf52c60f1167f7dc1525596003d6e194706804d0f18b23d31ef73e9e4a86
 fIsMarshalled
 f_
 f_1000000
@@ -19993,6 +20016,13 @@ inputname3
 inquiry
 insert
 inserted
+insertionAnimationEnd
+insertionAnimationSet
+insertionAnimationSetFSL
+insertionAnimationSetFSR
+insertionAnimationSetFSSideL
+insertionAnimationSetFSSideR
+insertionAnimationStart
 inside
 installations
 instance
@@ -20689,11 +20719,13 @@ missionConditionDetailId
 missionId
 missionIds
 missionTargetId
+missionTargetId={0}, condDetailId={1}, targetId={2}, eventId={3}
 mission_bg_
 mission_bg_{0}
 mission_board_02
 mission_board_03
 mission_board_06
+mission_board_mask_{0}
 mission_board_mask_{0}01
 mission_board_rank_{0}{1:D2}
 mission_board_{0:D2}
@@ -21064,6 +21096,7 @@ mstSvtLvDetail
 mstSvtMaterialFolder
 mstSvtMaterialTd
 mstSvtMultiPortrait
+mstSvtOverwrite
 mstSvtPassiveSkill
 mstSvtPassiveSkillRelease
 mstSvtProfile
@@ -21541,6 +21574,7 @@ overwriteShopCondCommonReleaseId
 overwriteShopMessageCommonReleaseId
 overwriteShopMessageId
 overwriteSvtDetailName
+overwriteTreasureDeviceId
 overwriteTreasureEffectId
 overwriteWallAttackCost
 owner
@@ -22625,6 +22659,7 @@ svtEquip/combine
 svtEquip/set
 svtId
 svtInfo
+svtOverwriteTreasureDevice
 svtVoiceButton
 svtVoiceId
 svtVoicePlay
@@ -23982,6 +24017,7 @@ zu-ZA
 イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。
 エクストラ
 エネミー
+ガッツ
 キャンセル
 キュー順
 クイック
@@ -24052,6 +24088,7 @@ CUSTOM に変更しました
 月
 未定義フォーマット[{0}]
 指定可能なフォーマットは[{1}]です
+死亡時の非表示を防ぐバフ
 残り{0:#,0}体
 秒
 表明違反時処理が設定されていません
