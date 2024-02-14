@@ -192,6 +192,7 @@ Proxy-Connection: keep-alive
  Default is 1000. Override in Fsm Inspector.
  Due to: 
  Error found at position {0}.
+ FILE:
  From: 
  HTTP/
  Id="{0}" 
@@ -206,6 +207,7 @@ Proxy-Connection: keep-alive
  Mobile
  PUBLIC 
  PUBLIC "
+ SEID : 
  SYSTEM 
  SYSTEM "
  Start Action 
@@ -213,6 +215,7 @@ Proxy-Connection: keep-alive
  Type '{0}' does not implement IComparable interface. Comparison cannot be done.
  TypeEqual 
  Updated To: 
+ VoiceID : 
  [
  [0x{0:x5}]
  [Non-matching signature algorithms in CRL]
@@ -334,7 +337,9 @@ You specified
 {0}
 
  ※Wi-Fi接続での更新を推奨します。
+ 分類 : 
  召喚！NPC[
+ 確率 / 合計 : 
  ＋ 
 !
 !"#$%&*;<=>@[]^_`{|}
@@ -687,6 +692,7 @@ ${application.persistentdatapath}
 (Parent)
 (Text)
 (UnityUpgradable) -> 
+(\d){1,2}_B(.+)
 (\d+)_(\d)_(.+)
 (^
 (at
@@ -831,6 +837,7 @@ file crc (
 ---
 --- End of inner exception stack trace ---
 --- End of stack trace from previous location where exception was thrown ---
+--- Voice・SE Log ---
 --------
 ---------------------
 -----BEGIN {0}-----
@@ -1079,7 +1086,7 @@ file crc (
 1
 1.0
 1.0.1
-1.01.00 (2.38.28h4-VolumeForCueInfo)
+1.01.04 (2.38.28h4-VolumeForCueInfo)
 1.1
 1.2.840.10040.4.1
 1.2.840.10040.4.3
@@ -1211,11 +1218,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.86.1
+2.87.0
 20
 200
 20220731_BOOST_RATE_1
-20240119_17:55
+20240208_18:44
 264
 2841AE
 2D UI
@@ -1230,6 +1237,7 @@ file crc (
 30102
 302
 326
+32793c326b525c4e41ca5461a32777b035308ba82ed0c92e1f29ee95d54a11d8
 350
 3DMap
 3DSpot
@@ -1362,6 +1370,7 @@ file crc (
 <---
 </
 </D>
+</D></RSAKeyValue>
 </DP>
 </DQ>
 </DSAKeyValue>
@@ -2080,6 +2089,7 @@ AppDomain data '{0}' contains an invalid value or object for specifying a defaul
 AppId
 Appearance
 Append access can be requested only in write-only mode.
+AppendSkillCombine
 AppendUnicodeCodePointValuePercentEncoded
 Apphelp block
 AppleAppStore
@@ -2173,6 +2183,7 @@ ArrayOfChoice
 Arrays larger than 2GB are not supported.
 Arrays must be of same size.
 Arrays must contain >= 1 elements.
+Arts
 Arts!
 Ascii
 Asia
@@ -2521,6 +2532,7 @@ BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_REST_TURN
 BATTLE_DIALOG_TREASURE_DEVICE_TYPE_CHANGE_TITLE
 BATTLE_DIALOG_USECOMMANDSPELL_ERROR_CONF
 BATTLE_DIALOG_USECOMMANDSPELL_ERROR_TITLE
+BATTLE_DO_NOT_ACT_COMMAND
 BATTLE_DO_NOT_ACT_DAMAGE_RELEASE_TEXT
 BATTLE_EFFECT_ID_3003001
 BATTLE_EFFECT_ID_AVOIDANCE
@@ -2984,6 +2996,7 @@ Bulgarian
 Bulgarian (Bulgaria)
 BulletinBoardMessageState
 Bus reset
+Buster
 Buster!
 Busy
 Busy drive
@@ -3347,6 +3360,7 @@ COMMAND_SPELL_CAN_ADD_FUNCTION
 COMMAND_SPELL_CAN_NOT_ADD_FUNCTION
 COMMAND_SPELL_RECOVER_TIME
 COMMAND_SPELL_TXT
+COMMAND_TYPE_NAME_{0}
 COMMNAD_SPELL_RECV_TXT
 COMMON
 COMMON_CONFIRM_CANCEL
@@ -4253,6 +4267,8 @@ CombineSuccessEffect_{0:D2}
 Combining FileMode: {0} with FileAccess: {1} is invalid.
 CommandCard
 CommandCard(
+CommandCardEquip
+CommandCardExceed
 CommandCodes/DownloadCommandCode
 CommandCodes/Texture/
 CommandCord/
@@ -4629,6 +4645,7 @@ Custom/Sprite-ScriptActionFigureWipe
 Custom/Sprite-ScriptActionRender
 Custom/SpriteWithMask
 Custom/SpriteWithMask_Choco
+Custom/Sprites-StandFigureRender
 CustomChannelBinding
 CustomCreationConverter should only be used while deserializing.
 CutIn
@@ -5930,6 +5947,7 @@ Effect/CutIn/Skill/{0}
 Effect/Dedicate
 Effect/Dice
 Effect/Event/{0}
+Effect/Event/{0}/{1}
 Effect/EventFactory
 Effect/EventMission
 Effect/EventShop
@@ -6840,6 +6858,8 @@ Focus
 FollowerScene
 FollowerSelect
 FollowerSelectClass
+FollowerSelectEventQuest
+FollowerSelectMainQuest
 Font
 Font '{0}' is not dynamic, which is required to override its size
 Font '{0}' is not dynamic, which is required to override its style
@@ -6915,6 +6935,7 @@ Fri
 Friday
 FriendOperation
 FriendScene
+FriendshipExceed
 FriendshipUpItemUseState
 Frisian (Netherlands)
 From
@@ -7558,6 +7579,7 @@ ISO_8859-8:1988
 ISO_8859-9
 ISO_8859-9:1989
 IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE
+IS_EVENT_POINT_MENU
 IS_IOS_EXAMINATION
 IS_SAVE
 IS_WAR_BOARD_AI_CALC_EVAL_SUM
@@ -8644,6 +8666,7 @@ LimitedMission
 LimitedPeriod
 LineNumberOffset
 LinePositionOffset
+LineProgressData_
 Linux
 List
 List of 
@@ -8910,6 +8933,7 @@ MOTION_DAMAGE
 MOTION_DEAD
 MOTION_DEAD_CRYSTAL
 MOTION_DEAD_ENERGY
+MOTION_DO_NOT_ACT
 MOTION_EFFECT_DEAD
 MOTION_ENEMY_TURN_END
 MOTION_ENTRY
@@ -9586,6 +9610,7 @@ NmToken
 No
 No '{0}' property with union fields found.
 No '{0}' property with union name found.
+No Algorithm
 No Content
 No DTD found.
 No EFS
@@ -10584,6 +10609,7 @@ PARTY_ORGANIZATION_SUPPORT_ONLY_EXPLANATION
 PARTY_ORGANIZATION_TOTAL_EVENT_POINT_INFO_TITLE
 PASS
 PASV
+PATH:
 PAYSTONE_INFO_TITLE
 PAY_SUMMON_DETAIL
 PBSZ
@@ -10960,6 +10986,7 @@ Profile not associated with device
 Profile not found
 ProgressBar/CancelButton
 ProgressSelfTurn
+ProgressShipData_
 ProgressTurnCond
 Prolog
 Promotion active
@@ -11149,6 +11176,7 @@ QuestStartInsert
 Queue empty.
 Queue grow factor must be between {0} and {1}.
 Queued Clone
+Quick
 Quick!
 Quorum disk not found
 Quorum owner alive
@@ -11820,6 +11848,7 @@ SERVANT_ALL_SELL_MESSAGE_START
 SERVANT_ALL_SELL_REQUEST_RARITY_MESSAGE
 SERVANT_ALREADY_RECOVER_NOT_SELECT
 SERVANT_ATTRIBUTE_FORMAT
+SERVANT_ATTRIBUTE_HIDE
 SERVANT_ATTRIBUTE_NONE
 SERVANT_ATTRIBUTE_SPLIT
 SERVANT_BEFORE_IN_NOT_FATIGUE_TIME
@@ -11907,16 +11936,7 @@ SERVANT_OUT_RECOVERY_FATIGUE_TEXT
 SERVANT_OUT_RECOVERY_FATIGUE_TITLE
 SERVANT_OVER
 SERVANT_PERSONALITY_
-SERVANT_PERSONALITY_1
-SERVANT_PERSONALITY_2
-SERVANT_PERSONALITY_4
-SERVANT_PERSONALITY_8
 SERVANT_POLICY_
-SERVANT_POLICY_1
-SERVANT_POLICY_2
-SERVANT_POLICY_3
-SERVANT_POLICY_4
-SERVANT_POLICY_6
 SERVANT_RECOVERY_FATIGUE_DIALOG_CONFIRM
 SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY
 SERVANT_RECOVERY_FATIGUE_INDIVIDUALITY_DELIMITER
@@ -12000,6 +12020,8 @@ SERVANT_SORT_FILTER_CATEGORY_TITLE_NP_TYPE
 SERVANT_SORT_FILTER_CATEGORY_TITLE_OTHER
 SERVANT_SORT_FILTER_CATEGORY_TITLE_RARITY
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_COMBINE_BASE
+SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_COMBINE_STATUS
+SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_HAVE_STATUS
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_EQUIP_TYPE
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SERVANT_KIND
 SERVANT_SORT_FILTER_CATEGORY_TITLE_SUMMON_CATEGORY
@@ -12057,8 +12079,24 @@ SERVANT_SORT_FILTER_RESULT_EMPTY_NEW_LINE
 SERVANT_SORT_FILTER_SAME_CLASS
 SERVANT_SORT_FILTER_SERVANT_EFFECT_SKILL
 SERVANT_SORT_FILTER_SERVANT_EFFECT_TREASURE_DEVICE
+SERVANT_SORT_FILTER_SERVANT_EQUIP_HAVE_STATUS_1
+SERVANT_SORT_FILTER_SERVANT_EQUIP_HAVE_STATUS_3
+SERVANT_SORT_FILTER_SERVANT_EQUIP_HAVE_STATUS_5
+SERVANT_SORT_FILTER_SERVANT_EQUIP_HAVE_STATUS_NOT
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_CAN_COMBINE
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_CAN_LIMIT
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_CAN_LIMIT_MAX
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_COMBINE
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_LIMIT_MAX
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_NOT_COMBINE
+SERVANT_SORT_FILTER_SERVANT_EQUIP_STATUS_NOT_LIMIT
+SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_CAMPAIGN
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_CHOCOLATE
+SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_EQUIP_EXP
+SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_EVENT_LIMITED
+SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_EVENT_REWARD
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_FRIENDSHIP
+SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_MANA_PRI
 SERVANT_SORT_FILTER_SERVANT_EQUIP_TYPE_NORMAL
 SERVANT_SORT_FILTER_SERVANT_HAVE
 SERVANT_SORT_FILTER_SERVANT_INDIVIDUAL_DISPLAY
@@ -12150,6 +12188,7 @@ SERVANT_STATUS_FAVORITE_CONFIRM_MESSAGE
 SERVANT_STATUS_FAVORITE_CONFIRM_TITLE
 SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_
 SERVANT_STATUS_IMAGE_LIMIT_COUNT_LEVEL_CLOSE
+SERVANT_STATUS_NOT_MOVE_COMBINE_DIALOG_MESSAGE
 SERVANT_STATUS_NP_GUAGE_MESSAGE
 SERVANT_STATUS_PROFILE_CONDITION
 SERVANT_STATUS_PROFILE_CV_TITLE
@@ -12838,6 +12877,7 @@ Semaphore user limit
 SendAsync operation is not in progress
 SendChunked must be True
 SendChunked should be true.
+SendPlayMarkerEventForChange
 Sent By Action: 
 Sent By FSM: 
 Sent By State: 
@@ -12878,11 +12918,16 @@ ServantEquipSimpleDialog
 ServantEquipStatusDialogPrefab(Clone)
 ServantFatigueId
 ServantFilterSelect1
+ServantID : 
 ServantId
 ServantId : 
+ServantLimitCountUp
 ServantListScene
+ServantLvExceed
+ServantNpCombine
 ServantOperation
 ServantPiece
+ServantSkillCombine
 ServantSortSelect1
 ServantSortSelect2
 ServantSortSelect4
@@ -14582,6 +14627,7 @@ Thread was in an invalid state for the operation being executed.
 Threads
 Through
 Throw
+Throw Exception
 Thu
 Thursday
 Tibetan (PRC)
@@ -14888,6 +14934,7 @@ UNKNOWN TAG
 UNKNOWN(
 UNKNOWN_NAME
 UNKNOWN_NAME_ILLUST
+UNKNOWN_QUEST_NAME
 UNLOCK
 UPDATE_FRIENDPOINT_GACHA_ERROR
 UPDATE_FRIENDPOINT_GACHA_ERROR_TITLE
@@ -15385,6 +15432,7 @@ VmallocChunk
 VmallocTotal
 VmallocUsed
 VoiceAssetName
+VoiceID : 
 VoiceVolume
 Void
 Void 
@@ -16109,6 +16157,7 @@ _AlphaTexture_ST
 _Angle
 _AxialAberration
 _B050
+_Blend
 _BloomIntensity
 _BloomTex
 _Blur
@@ -16451,6 +16500,7 @@ addSquareIndex
 additionExpandImage
 additionalSkillActorType
 additionalSkillId
+additionalSkillInsertCurrentSkillAfter
 additionalSkillLv
 addr
 address
@@ -17024,6 +17074,7 @@ bit_runningdog_70
 bit_runningdog_80
 bit_runningdog_{0}_1
 bit_runningdog_{0}_2
+bit_scenario_open
 bit_shot_
 bit_talk_edgeblur_light
 bit_token_get{0}
@@ -17114,6 +17165,7 @@ branchQuestClear
 branchQuestNotClear
 branchRouteSelect
 branchRouteSelectCount
+branchScripts
 breadcrumbs.lastId
 break
 breakGaugeHp
@@ -17271,6 +17323,7 @@ btn_txt_requestlist_off
 btn_txt_requestlist_on
 btn_txt_reset
 btn_txt_returnCombineMenu
+btn_txt_returnSVTMenu
 btn_txt_sale
 btn_txt_servant_off
 btn_txt_servant_on
@@ -17467,6 +17520,8 @@ changeIconSuffix
 changeLimitVoiceInFriendshipLv
 changeLoadAnimations
 changeNp
+changePersonality
+changePolicy
 changeUpdateStatus
 changeUserSvtIds
 changeWinCondition
@@ -17586,6 +17641,7 @@ check--Group(
 check--Rate( 
 checkDateVersion/check
 checkError
+checkEventQuest
 checkFuncAction firstResult:false
 checkFuncAction(
 checkIndvType
@@ -17597,6 +17653,7 @@ checkSelfPermission
 checkUseTreasure
 checkWrite
 check_date_version
+check_in
 checked
 child
 childkey
@@ -18089,7 +18146,6 @@ dayofweek
 days
 dbghelp.dll
 dd
-dd81ea49d730bfdfa69f0b9d3932846141f4a04ded5551650974e091a387a966
 ddd
 ddd MMM d HH:mm:ss yyyy
 ddd, dd MMM yyyy HH':'mm':'ss 'GMT'
@@ -18385,6 +18441,7 @@ ef_mapnamechange_
 ef_master
 ef_masterskill_flash
 ef_mission_extric01
+ef_not_act_by_command_seal
 ef_overgauge01
 ef_pig_return01
 ef_point_show_02
@@ -18698,10 +18755,12 @@ event_fortification
 event_frame_
 event_gachabanner_
 event_gauge_back
+event_gauge_back_0
 event_gauge_base_8036701
 event_gauge_base_8036702
 event_gauge_bg_8036701
 event_gauge_bg_8036702
+event_gauge_frame_0
 event_gauge_front
 event_gauge_front_complete
 event_gauge_img_8036701
@@ -18717,7 +18776,6 @@ event_itembase
 event_location
 event_logo_
 event_logo_mini_
-event_logo_mini_80368
 event_logo_shortcut_
 event_mission_notify
 event_mission_random_cancel
@@ -19328,7 +19386,10 @@ hi
 hi-IN
 hidden
 hideAssistConfButton
+hideAttri
 hideClassSkill
+hidePersonality
+hidePolicy
 hideUserIds
 highSurrogate
 highlightLine
@@ -19575,6 +19636,7 @@ id-ID
 id:
 id:{0} side:{1} atk:{2} def:{3} rate:{4} type:{5}
 idempotencyKey
+idempotencyKeySignature
 identities
 identity
 identityHashCode
@@ -20119,6 +20181,7 @@ isEnabled
 isEnabledBillBoard
 isEventCircleProgress
 isEventCommandAssist
+isEventRiverProgress
 isFamilyShareable
 isFavorite
 isGetEffect
@@ -20801,6 +20864,7 @@ mstAiField
 mstArea
 mstAssetbundleKey
 mstAssist
+mstAttri
 mstAttriRelation
 mstAuraEffect
 mstAuraEffectPosOverwrite
@@ -20987,6 +21051,8 @@ mstGiftDetail
 mstGuide
 mstHeelPortrait
 mstIllustrator
+mstIndividualityPersonality
+mstIndividualityPolicy
 mstItem
 mstItemSelect
 mstLoginQuest
@@ -21112,6 +21178,7 @@ mstSvtTreasureDeviceAdd
 mstSvtTreasureDeviceDamage
 mstSvtTreasureDeviceRelease
 mstSvtVoice
+mstSvtVoicePattern
 mstSvtVoiceRelation
 mstTelop
 mstTerminalOverwrite
@@ -21255,6 +21322,8 @@ newsfeed_id
 next
 nextSceneId
 nextSceneParam
+next_release_title_fade_in
+next_release_title_fade_out
 nfi
 ng
 ngParse
@@ -21619,6 +21688,7 @@ part
 partial
 partialValidationType
 particle
+party_bg
 party_txt_
 path
 path1
@@ -21947,6 +22017,7 @@ relationBgmIds
 relationId
 releaseCount
 releaseUnusedAssetsWhenEntryMember
+release_scenario_out
 reload_cache
 remainDays
 remoteEP
@@ -22032,6 +22103,8 @@ ring_gard2_2
 ring_gard2_3
 ripemd-160
 ripemd160
+river_fade_in
+river_fade_out
 rm
 rm-CH
 ro
@@ -22291,6 +22364,8 @@ shiftClear
 shiftPosition
 shiftUpdateStatus
 shift_jis
+ship_fade_in
+ship_fade_out
 shop/CommitPurchase
 shop/bankStatus
 shop/createSeed
@@ -22458,6 +22533,7 @@ standalone
 start
 start1
 start2
+startAction
 startBattleAssetId
 startBattleSkip
 startBgmOff
@@ -23229,6 +23305,7 @@ userGachaDrawHistory
 userGachaDrawLog
 userGachaExtraCount
 userGame
+userGameCommon
 userHeelPortrait
 userId
 userItem
@@ -23369,6 +23446,7 @@ vm.vma.size
 voice
 voiceCancel
 voiceOffMySvtIds
+voicePatternId
 voicePlay
 voicePlayedList
 voiceStop
@@ -23999,7 +24077,7 @@ zu-ZA
 「
 」
 【カード属性】
-【ヒット数】
+【ボイス・SE】
 【モーションID】
 【名前】
 ぀゠
@@ -24017,6 +24095,7 @@ zu-ZA
 イベントショップ購入時のSvtVoiceマスタが適切に設定されていません。
 エクストラ
 エネミー
+カードタイプ指定なし
 ガッツ
 キャンセル
 キュー順
@@ -24027,6 +24106,7 @@ zu-ZA
 CUSTOM に変更しました
 サーヴァントスキル強化【完了】強化
 サーヴァント強化【完了】強化
+サーヴァント指定なし
 ストーリークエストクリア【完了】クエスト
 ストーリークエストコンテニュー【完了】クエスト
 ストーリークエスト敗北【画面】クエスト
@@ -24068,6 +24148,7 @@ CUSTOM に変更しました
 大
 大正
 存在しないバフIDです
+宝具
 平
 平成
 年
@@ -24090,6 +24171,7 @@ CUSTOM に変更しました
 指定可能なフォーマットは[{1}]です
 死亡時の非表示を防ぐバフ
 残り{0:#,0}体
+番目
 秒
 表明違反時処理が設定されていません
 読み込み失敗

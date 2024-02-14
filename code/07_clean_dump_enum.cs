@@ -13535,6 +13535,16 @@ public enum ServantStatusListViewManager.ResultKind
 	RANDOM_LIMIT_COUNT_SUPPORT = 10,
 	RANDOM_LIMIT_COUNT_SETTING = 11,
 	RANDOM_LIMIT_COUNT_MASK = 12,
+	SERVANT_COMBINE = 13,
+	SERVANT_EQ_COMBINE = 14,
+	SERVANT_SKILL_COMBINE = 15,
+	SERVANT_LIMIT_COUNT_UP = 16,
+	FRIENDSHIP_EXCEED = 17,
+	COMMAND_CARD_EQUIP = 18,
+	COMMAND_CARD_EXCEED = 19,
+	APPEND_SKILL_COMBINE = 20,
+	SERVANT_NP_COMBINE = 21,
+	SERVANT_LV_EXCEED = 22,
 }
 
 public enum ServantStatusListViewObject.InitMode
@@ -15083,6 +15093,9 @@ public enum CondType.Kind
 	PLAY_QUEST_PHASE = 209,
 	NOT_PLAY_QUEST_PHASE = 210,
 	EVENT_START_TO_END = 211,
+	COMMON_VALUE_ABOVE = 212,
+	COMMON_VALUE_BELOW = 213,
+	COMMON_VALUE_EQUAL = 214,
 }
 
 public enum CondType.CheckType
@@ -15690,6 +15703,11 @@ public enum DataNameKind.Kind
 	MAP_GIMMICK_PATH = 471,
 	MAP_GIMMICK_PATH_RELEASE = 472,
 	SERVANT_OVERWRITE = 473,
+	INDIVIDUALITY_POLICY = 474,
+	INDIVIDUALITY_PERSONALITY = 475,
+	ATTRI = 476,
+	SERVANT_VOICE_PATTERN = 477,
+	USER_GAME_COMMON = 478,
 }
 
 public enum Device.Type
@@ -17311,6 +17329,52 @@ public enum MapCameraViewAdjusterUtil.FailedReason
 	OVERFLOW_CAMERA_RECT_UNAVOIDABLE = 2,
 }
 
+public enum CharaGraphListMenuBase.ResultKind
+{
+	CANCEL = 0,
+	DECIDE = 1,
+	SERVANT_QUEST = 2,
+}
+
+public enum CharaGraphListMenuBase.State
+{
+	INIT = 0,
+	OPEN = 1,
+	INPUT = 2,
+	SELECTED = 3,
+	CLOSE = 4,
+	EQUIP_SELECT = 5,
+	SHOW_STATUS = 6,
+}
+
+public enum CharaGraphListViewManager.InitMode
+{
+	NONE = 0,
+	VALID = 1,
+	INPUT = 2,
+	MODIFY = 3,
+}
+
+public enum CharaGraphListViewManager.ResultKind
+{
+	DECIDE = 0,
+	LONG_TAP = 1,
+}
+
+public enum CharaGraphListViewObject.InitMode
+{
+	INVISIBLE = 0,
+	VALID = 1,
+	INPUT = 2,
+	MODIFY = 3,
+}
+
+public enum BattleModelObjectVisibleControlComponent.Timing
+{
+	INITIALIZE = 0,
+	BECOME_TARGET_TREASURE_DEVICE_ACTIVE = 1,
+}
+
 private enum BillBoardGroupManager.phase
 {
 	NONE = 0,
@@ -17856,6 +17920,7 @@ public enum DataVals.TYPE
 	UnSubStateWhenContinue = 144,
 	CheckTargetHaveDefeatPoint = 145,
 	NPFixedDamageValue = 146,
+	IgnoreShiftSafeDamage = 147,
 }
 
 public enum DataVals.OverChargeState
@@ -17974,6 +18039,12 @@ public enum ClassRelationOverwriteEntity.TYPE
 	OVERWRITE_FORCE = 0,
 	OVERWRITE_MORE_THAN_TARGET = 1,
 	OVERWRITE_LESS_THAN_TARGET = 2,
+}
+
+public enum ClosedMessageEntity.Flag
+{
+	CHANGE_DISP_CLOSED_MESSAGE = 2,
+	CHANGE_DISP_POSITION_LEFT = 4,
 }
 
 public enum CombineEntity.CombineType
@@ -18959,6 +19030,11 @@ public enum ServantEntity.FlagKind
 	IGNORE_COMBINE_LIMIT_SPECIAL = 3,
 	SVT_EQUIP_EXP = 4,
 	SVT_EQUIP_CHOCOLATE = 5,
+	FORCE_LOCK = 6,
+	SVT_EQUIP_MANA_EXCHANGE = 7,
+	SVT_EQUIP_CAMPAIGN = 8,
+	SVT_EQUIP_EVENT = 9,
+	SVT_EQUIP_EVENT_REWARD = 10,
 }
 
 public enum ServantEntity.FlagField
@@ -18968,6 +19044,10 @@ public enum ServantEntity.FlagField
 	IGNORE_COMBINE_LIMIT_SPECIAL = 8,
 	SVT_EQUIP_EXP = 16,
 	SVT_EQUIP_CHOCOLATE = 32,
+	SVT_EQUIP_MANA_EXCHANGE = 128,
+	SVT_EQUIP_CAMPAIGN = 256,
+	SVT_EQUIP_EVENT = 512,
+	SVT_EQUIP_EVENT_REWARD = 1024,
 }
 
 public enum ServantExceedEntity.FRAMETYPE
@@ -19013,6 +19093,12 @@ public enum ServantTreasureDvcEntity.Flag
 	NOT_DISPLAY_SKILL_ICON = 16,
 	NOT_TREASURE_DEVICE_GRADE_UP = 32,
 	ONLY_MY_SVT = 64,
+}
+
+public enum ServantVoicePatternEntity.VoicePatternType
+{
+	REMOVE = 0,
+	ADD_COND = 1,
 }
 
 public enum ShopDetailEntity.FrequencyType
@@ -19645,6 +19731,7 @@ public enum WarEntity.Flag
 	IS_WAR_ICON_FREE = 2097152,
 	IS_WAR_ICON_CENTER = 4194304,
 	NOTICE_BOARD = 8388608,
+	CHANGE_DISP_CLOSED_MESSAGE = 16777216,
 }
 
 public enum WarEntity.StartType
@@ -19878,7 +19965,23 @@ public enum ListViewSort.FilterKind
 	NOT_LIMITED = 69,
 	PERIOD_LIMITED = 70,
 	STORY_LIMITED = 71,
-	SUM = 72,
+	SERVANT_EQUIP_TYPE_MANA_PRI = 72,
+	SERVANT_EQUIP_TYPE_CAMPAIGN = 73,
+	SERVANT_EQUIP_TYPE_EVENT_LIMITED = 74,
+	SERVANT_EQUIP_TYPE_EVENT_REWARD = 75,
+	SERVANT_EQUIP_TYPE_EQUIP_EXP = 76,
+	SERVANT_EQUIP_STATUS_LIMIT_MAX = 77,
+	SERVANT_EQUIP_STATUS_CAN_LIMIT_MAX = 78,
+	SERVANT_EQUIP_STATUS_CAN_LIMIT = 79,
+	SERVANT_EQUIP_STATUS_NOT_LIMIT = 80,
+	SERVANT_EQUIP_STATUS_COMBINE = 81,
+	SERVANT_EQUIP_STATUS_CAN_COMBINE = 82,
+	SERVANT_EQUIP_STATUS_NOT_COMBINE = 83,
+	SERVANT_EQUIP_HAVE_STATUS_NOT = 84,
+	SERVANT_EQUIP_HAVE_STATUS_1 = 85,
+	SERVANT_EQUIP_HAVE_STATUS_3 = 86,
+	SERVANT_EQUIP_HAVE_STATUS_5 = 87,
+	SUM = 88,
 }
 
 public enum ListViewSort.FilterCategoryKind
@@ -19902,6 +20005,8 @@ public enum ListViewSort.FilterCategoryKind
 	COLLECTION_STATUS = 16,
 	HAVE_STATUS = 17,
 	SUMMON_CATEGORY = 18,
+	EQUIP_COMBINE_STATUS = 19,
+	EQUIP_HAVE_STATUS = 20,
 	EQUIP_EFFECT = 998,
 	NONE = 999,
 }
@@ -21448,6 +21553,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	FIELD_AI_PLAYER_SKILL_AFTER = 66,
 	FIELD_AI_PLAYER_SKILL_AFTER_PRIOR = 67,
 	GENERAL_RELAY_TASK = 68,
+	DO_NOT_ACT = 69,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
@@ -25246,6 +25352,7 @@ public enum PartyServantSelectMenu.ResultKind
 	CANCEL = 0,
 	DECIDE = 1,
 	DETAIL = 2,
+	MOVE_COMBINE = 3,
 }
 
 protected enum PartyServantSelectMenu.State
@@ -30260,6 +30367,22 @@ private enum Json.Parser.TOKEN
 	TRUE = 9,
 	FALSE = 10,
 	NULL = 11,
+}
+
+public enum TabKind
+{
+	SERVANT = 0,
+	SERVANT_EQUIP = 1,
+	COMMAND_CODE = 2,
+}
+
+public enum ModeKind
+{
+	MAIN = 0,
+	STATUS = 1,
+	LOCK = 2,
+	CHOICE = 3,
+	PUSH = 4,
 }
 
 public enum RenderOption.Grade
