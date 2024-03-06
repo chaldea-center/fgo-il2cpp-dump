@@ -49,6 +49,8 @@ ExecutingFsm:
 
 ExecutingState: 
 
+GameObject:
+
 ON: 
 
 Reason: 
@@ -178,6 +180,7 @@ Proxy-Connection: keep-alive
  :
  : 
  < 
+ <--> 
  <0x{0:x5} + 0x{1:x5}>
  <c# proxy java object>
  = 
@@ -758,6 +761,7 @@ file crc (
 *.cer
 *.cpk.bytes
 *.crl
+*.csv
 *.dat
 *.txt
 */
@@ -912,8 +916,12 @@ file crc (
 .cer
 .com
 .config
+.cpk (
 .cpk.bytes
+.cpkの差分
+
 .crl
+.csv
 .ctor
 .database.chinacloudapi.cn
 .database.cloudapi.de
@@ -979,9 +987,11 @@ file crc (
 /Cameras/BattleCamera
 /CutIns/
 /Date(
+/Diff
 /Management/CommonUI/UI Root/BgCamera
 /Management/Script
 /Output
+/OutputSeVersionData
 /Screenshot_
 /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 /System/Library/Frameworks/CoreServices.framework/Frameworks/CFNetwork.framework/CFNetwork
@@ -1218,11 +1228,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.87.2
+2.88.0
 20
 200
 20220731_BOOST_RATE_1
-20240216_18:36
+20240229_17:45
 264
 2841AE
 2D UI
@@ -1282,6 +1292,7 @@ file crc (
 504: Gateway Timeout
 6
 6.9.3
+6e3fc00118b4e8332b7f0a2f4155dc03106d49487bc4d143750d0c3bb4f26c17
 7
 71
 7999
@@ -1937,6 +1948,7 @@ AdManager Initialize error.(reboot) message=
 Add
 AddCustomHeader
 AddEventHandlerComponent: 
+AddFiles
 AddIndiv
 AddOn
 AddOvf
@@ -2852,7 +2864,6 @@ Basic Constraints
 Basque
 Basque (Basque)
 Battle
-Battle/20220731
 Battle/BattleResult
 Battle/Common
 Battle/CommonEffects/
@@ -4013,6 +4024,7 @@ Challenge
 ChangeBoardGameDiceButttonActive
 ChangeFaceFade
 ChangeFigure
+ChangeFiles
 ChangeNpCountPlayer
 ChangeType operation is not supported.
 ChangeUserName
@@ -4627,6 +4639,7 @@ Custom/Sprite-MasterFigure (SoftClip)
 Custom/Sprite-ScriptActionEquipNormal
 Custom/Sprite-ScriptActionEquipSilhouette
 Custom/Sprite-ScriptActionFigureCrossFade
+Custom/Sprite-ScriptActionFigureCrossFadeSummon
 Custom/Sprite-ScriptActionFigureCut
 Custom/Sprite-ScriptActionFigureErasure
 Custom/Sprite-ScriptActionFigureErasureReverse
@@ -5345,6 +5358,7 @@ DelayEnd
 DelayLoadStart
 Delegate
 Delete pending
+DeleteFiles
 DeleteRule
 Deleted row information cannot be accessed through the row.
 Deleted rows inaccessible.
@@ -5495,6 +5509,7 @@ DownloadMyRoomAtlas
 DownloadMyRoomSoundAtlas
 DownloadNotificationAtlas
 DownloadPartyOrganizationAtlas
+DownloadPhotoCampaignAtlas
 DownloadShopBannerAtlas
 DownloadSkillIconAtlas
 DragDrop
@@ -6740,6 +6755,7 @@ Fgo_20220404
 Fgo_20220427
 Fgo_20220601
 Fgo_20230514_1
+Fgo_20240306_1
 Field '{0}' defined on type '{1}' is not a field on the target object which is of type '{2}'.
 Field '{0}' not found.
 Field '{0}.{1}' is not defined for type '{2}'
@@ -7167,7 +7183,6 @@ HEADER_MSG_MULTIPLE_SERVANT_SELECTED
 HEADER_MSG_NPUP_BASE
 HEADER_MSG_NPUP_MATERIAL
 HEADER_MSG_PHOTO_SERVANT
-HEADER_MSG_PHOTO_SERVANT_SELECTED
 HEADER_MSG_SKILLUP
 HEADER_MSG_SPECIAL_ASCENSION
 HEADER_MSG_SVTCOMBINE_BASE
@@ -8575,6 +8590,7 @@ LOGIN_BONUS_TOTAL_ITEM
 LOGIN_BONUS_TOTAL_MENTAINANCE
 LOGIN_BONUS_TOTAL_POINT
 LOGIN_DAY
+LOGIN_QUEST_RETURN_TERMINAL_DIALOG_MESSAGE
 LOGIN_RESET_AT
 LONGPRESS_ENEMY
 LONG_PRESS
@@ -8624,6 +8640,7 @@ Latvian
 Latvian (Latvia)
 LaunchGooglePlay
 Layer.
+LayerChangeButton
 Layout
 LayoutType
 LayoutType needs to be of type GUILayoutGroup
@@ -8786,6 +8803,9 @@ MASTER_MISSION_RECEIVE_RESULT_REWARD_FMT
 MASTER_MISSION_SERVANT_OVER_MSG
 MASTER_MISSION_SVT_ID1
 MASTER_ORGANIZATION
+MASTER_SETTING_DIALOG_GENDER_SWITCH
+MASTER_SETTING_DIALOG_TITLE
+MASTER_SETTING_DIALOG_WARNING
 MASTER_SPELL_UNIT
 MASTER_TOTAL_EXP
 MATERIAL_BRANCH_SCENARIO_{0:D8}_{1:D1}
@@ -9101,6 +9121,7 @@ Master : Male
 MasterBreak
 MasterDamage
 MasterDataCaches
+MasterEquipSettingDialog
 MasterFace/equip{0:D5}
 MasterFace/image{0:D5}
 MasterFace/statusMask
@@ -9399,6 +9420,7 @@ My
 MyRoom/BackObject/{0}
 MyRoom/DownloadMyRoom
 MyRoom/FrontObject/{0}
+MyRoom/PhotoCampaign
 MyRoomBackObj
 MyRoomFrontObj
 MyRoomHelpListPanel/BaseWindow/UpperCloseButton
@@ -9940,6 +9962,12 @@ OPTION_RANDOM_LIMIT_COUNT_FRIEND_BUTTON
 OPTION_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION
 OPTION_RANDOM_LIMIT_COUNT_OWN_BUTTON
 OPTION_RANDOM_LIMIT_COUNT_OWN_EXPLANATION
+OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_BUTTON
+OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_EXPLANATION
+OPTION_RANDOM_LIMIT_COUNT_RESET_FRIEND_MSG
+OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_BUTTON
+OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_EXPLANATION
+OPTION_RANDOM_LIMIT_COUNT_RESET_OWN_MSG
 OPTION_RERSOLUTION_INFO
 OPTION_RERSOLUTION_INFO_DISABLE
 OPTION_RERSOLUTION_LOW
@@ -10616,9 +10644,17 @@ PENDING
 PER_SAME_COMMAND
 PFBs0eIuunoxKkCcLbqDVerU1rShhS276SAL3A8tFLUfGvtz3F3FFeKELIk3Nvi4
 PHOTO_CAMPAIGN_BUTTON_TEXT
-PHOTO_SERVANT_SELECTED_SERVANT
 PHOTO_SERVANT_SELECT_IMAGE_DIALOG_TITLE
 PHOTO_SERVANT_SELECT_IMAGE_DIALOG_WARNING
+PHOTO_SETTING_CHANGE_MASTER_SETTING_BUTTON
+PHOTO_SETTING_CHANGE_SERVANT_BUTTON
+PHOTO_SETTING_CHANGE_SERVANT_FACE_BUTTON
+PHOTO_SETTING_EXCHANGE_POSITION_BUTTON
+PHOTO_SETTING_HIDE_UI_BUTTON
+PHOTO_TARGET_SELECT_DIALOG_MESSAGE
+PHOTO_TARGET_SELECT_DIALOG_ONLY_SERVANT_BUTTON
+PHOTO_TARGET_SELECT_DIALOG_TITLE
+PHOTO_TARGET_SELECT_DIALOG_WITH_MASTER_BUTTON
 PI
 PK init client failure
 PK init failure
@@ -10829,7 +10865,13 @@ Pf
 PgenCounter
 PhotoCampaign1
 PhotoCampaignSelectImageLimit
+PhotoCampaignSelectImageLimit2024
 PhotoCampaignSelectedUsrSvtId
+PhotoCampaignSelectedUsrSvtId2024
+PhotoMasterEquipIdSetting
+PhotoMasterGenderSetting
+PhotoSettingButton
+PhotoTargetSelectDialog
 Pi
 PickaxetAnimation
 PickaxetAnimation_skip
@@ -10896,6 +10938,7 @@ Point not found
 Pointer startIndex and length do not refer to a valid string.
 Polaroid_btn_shutter
 Polaroid_img_frame
+Polaroid_img_frame_wide
 Policy object not found
 Policy only in DS
 PolicyStatement
@@ -12195,14 +12238,10 @@ SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_CANCEL
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_DECIDE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_CONFIRM_DIALOG_MESSAGE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_DIALOG_SETTING_OWN
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_ALL_SET_INFO
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_DIALOG_SETTING_SUPPORT
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_COMBINE_INFO
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_ENABLE_INFO
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_FRIEND_EXPLANATION
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_BATTLE
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_COMMAND
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_FACE
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_ALL_SETTING_STATUS_ICON
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_BATTLE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_COMMAND
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_INFO_OWN_SETTING_FACE
@@ -12211,12 +12250,13 @@ SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_CANCEL
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_DECIDE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_MASHU_CONFIRM_DIALOG_MESSAGE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_REFLECT_OWN
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_OWN
-SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_ALL_SUPPORT
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_OFF_BUTTON
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_All_ON_BUTTON
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_INFO_COMBINE
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_OWN_EXPLANATION
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_OFF_BUTTON
+SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_RANDOM_ON_BUTTON
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT
 SERVANT_STATUS_RANDOM_LIMIT_COUNT_SETTING_SUPPORT_EXPLANATION
 SERVANT_STATUS_SERVANT_QUEST_CONFIRM_CANCEL
@@ -12821,6 +12861,7 @@ ScriptFileList
 ScriptManagerAutoMessage
 ScriptManagerSelectBranch
 ScriptRenderSub
+ScriptUI/MessageWindow/
 Scroll Bar/item_list_close
 ScrollBarMotionCompleteValue
 ScrollBarMotionUpdateValue
@@ -15979,6 +16020,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 [Unknown]
 [Version]{0}  V{1}{0}{0}
 [WH Detector Service]
+[Warning]questOpenConfirmDialog is null
 [[]-[\]]
 [[][0-9A-F]{6}[\]]
 []
@@ -16340,6 +16382,7 @@ __ActivationType
 __ActivationTypeName
 __Activator
 __Args
+__CPK__,
 __CallContext
 __CallSiteActivationAttributes
 __ContextProperties
@@ -16475,6 +16518,8 @@ activity
 actorEffectPieceIndex
 actualUri
 adServicesFrameworkEnabled
+ad_personalization
+ad_user_data
 add
 addCallbackParameter
 addCount
@@ -16763,6 +16808,7 @@ authenticationScheme
 authenticationType
 authsave.dat
 authsave2.dat
+autoAndBackLog
 autoCancel
 autoRenewing
 auto_sel_support_type
@@ -17179,6 +17225,7 @@ bt-breadcrumbs
 bt-breadcrumbs-0
 btime
 btn
+btn_Polaroid_bg
 btn_atk_
 btn_auto_off
 btn_auto_on
@@ -17455,6 +17502,7 @@ card/combineTd
 card/commandCardExceed
 card/favorite
 card/friendshipExceed
+card/initRandomLimitCount
 card/lockSync
 card/statusSync
 card/svtFlag
@@ -17476,6 +17524,7 @@ card_command_card_exceed
 card_favorite
 card_friendship_exceed
 card_icon_{0}
+card_init_random_limit_count
 card_limit
 card_locksync
 card_servant_
@@ -18174,6 +18223,8 @@ default
 default(
 defaultDeadType
 defaultPort
+defaultRandomLimitCount
+defaultRandomLimitCountSupport
 defaultValue
 default_clearance
 default_font_size
@@ -18264,6 +18315,7 @@ disableThirdPartySharing
 disableUniqueFieldMotion
 disp
 dispBreakShift
+dispFormByFace
 dispLimitCount
 distinguishedName
 distortion
@@ -18384,10 +18436,10 @@ ebcdic-no-277+euro
 ebcdic-se-278+euro
 ebcdic-us-37+euro
 ec
-ec2016bad0cb7eb819934559aca3009e9ee490bc3060dc86df37a2cc8963379b
 edit
 editorBaseType
 ee799f41-cfa5-550b-bf2c-344747c1c668
+eea
 ef_2tab_open
 ef_3tab_open
 ef_4tab_open
@@ -18775,6 +18827,7 @@ event_mission_random_cancel
 event_mission_receive
 event_next
 event_organizationbg_{0}{1}
+event_param
 event_point_bar
 event_point_bg_8036701
 event_point_bg_8036702
@@ -18870,6 +18923,8 @@ excludeTdChangeTypes
 existing
 expand
 expandedName
+expectedEqual
+expectedNotEqual
 expeditionIdx
 expeditionIdxs
 explicit
@@ -18884,6 +18939,7 @@ extra
 extraPath
 extraValue
 f
+f 
 f1
 f10
 f11
@@ -18907,6 +18963,7 @@ f_1000011
 f_1000012
 fa
 fa-IR
+faceIdx
 faceSize
 faceTalkScreen
 face_{0:D3}
@@ -18973,6 +19030,7 @@ filePass
 fileTime
 filename
 filepath
+files)
 filter
 final
 finalDefault
@@ -19141,6 +19199,7 @@ friend/remove
 friend/top
 friendCode
 friendOfferList
+friendPoint
 friend_accept
 friend_cancel
 friend_lock_sync
@@ -19303,6 +19362,7 @@ gizmos
 gl
 gl-ES
 googlePlay
+google_dma
 gopher
 goto
 goto_login_access
@@ -20029,6 +20089,8 @@ index >= 0 && index < s.Length
 index >= Count
 index >= array.Length
 index must be non-negative value
+index({0}) の値が負です
+index({0}) の値が配列の要素数({1})を超えています
 index1
 index2
 index3
@@ -20193,6 +20255,7 @@ isPlayingOrWillChangePlaymode
 isPrimitive
 isProtectedDuringEvent
 isPush
+isReleaseFocus
 isResult
 isRevival
 isScriptPlayForWarBoard
@@ -20369,6 +20432,7 @@ key
 key expansion
 key is null
 key was invalid
+key({0}) の値がディクショナリに含まれていません
 keyBlob
 keySelector
 keySet
@@ -20410,6 +20474,7 @@ ky
 ky-KG
 kzdMtpmzqCHAfx00saU1gIhTjYCuOD1JstqtisXsGYqRVcqrHRydj3k6vJCySu3g
 l
+l 
 l1
 l2
 l3
@@ -20609,6 +20674,7 @@ maint
 major
 makeText
 maleImageId
+manaPrism
 many
 mapCameraMoveEasingType
 mapCameraMoveTimeCoefficient
@@ -20722,6 +20788,8 @@ message
 message too long
 message2
 message3
+messageAlign
+messageChange
 messageId
 messageId must not be empty
 messageOff
@@ -20730,6 +20798,7 @@ messageOn
 messageShake
 messageShakeStop
 messageSpeedForcedNormal
+messageStart
 message_prize_name
 messaging
 metadata
@@ -21062,6 +21131,7 @@ mstMapGimmickRelease
 mstMapLayer
 mstMasterMission
 mstMasterMissionDisplayInfo
+mstMasterPhoto
 mstMaterialFolder
 mstMyroomAdd
 mstNews
@@ -21158,6 +21228,7 @@ mstSvtMultiPortrait
 mstSvtOverwrite
 mstSvtPassiveSkill
 mstSvtPassiveSkillRelease
+mstSvtPhoto
 mstSvtProfile
 mstSvtProfilePush
 mstSvtRarity
@@ -21379,7 +21450,6 @@ normalize-space
 normalizedString
 normals
 not
-not 
 not a generic method definition
 not a valid index into buffer
 not a valid method
@@ -21388,7 +21458,6 @@ not enough key parameters
 not exist : 
 not find directory [
 not find file [
-not null
 notClassBoard
 notClearPriority
 notEndEventMissionFix
@@ -21718,7 +21787,11 @@ phase
 phaseRewardImageId
 phaseRouteSelect
 photoSvtPosition
+photoSvtPositionLeft
+photoSvtPositionRight
 photoSvtScale
+photoSvtScaleLeft
+photoSvtScaleRight
 pickupUserFollower
 pictureFrame
 pictureFrameLoad
@@ -21769,6 +21842,7 @@ preauthenticate
 preceding
 preceding-sibling
 predicate
+prefab
 prefabn_
 prefix
 present/history
@@ -21851,6 +21925,7 @@ q
 qev79
 qop
 qop="{0}", 
+qp
 qp_counter_
 qp_counter_bg_limit
 qp_counter_bg_main
@@ -21893,6 +21968,7 @@ questboard_icon_cap{0:D2}
 questboard_shohi_
 questboard_shohi_bg_01
 questboard_shohi_bg_02
+questfocusstatesave.dat
 questhintdialogopensave.dat
 questinfo_enemy_brank
 questinfo_enemyface_bg
@@ -21914,6 +21990,7 @@ qword
 qyestboard_ap_free
 q{0}
 r
+r 
 r4
 r8
 race_boost_effect_{0}
@@ -21954,6 +22031,7 @@ randomnumbergenerator
 rangeSpecifier
 rankSprite
 rank_
+rarePrism
 rarity
 raw
 rawData
@@ -22727,6 +22805,7 @@ svtEqs
 svtEquip/combine
 svtEquip/set
 svtId
+svtIdx
 svtInfo
 svtOverwriteTreasureDevice
 svtVoiceButton
@@ -23811,6 +23890,9 @@ zu-ZA
 
 {0}
 (expected={1}, actual={2})
+{0}
+{1}
+{2}
 {0} 
 {0}  Length: {1}{0}  Key Blob: 
 {0}  Lv.{1}
@@ -24050,6 +24132,7 @@ zu-ZA
 ⑀①
 ①─
 ─▀
+┗
 ▀■
 ■
 ■☀
@@ -24077,6 +24160,7 @@ zu-ZA
 あと 
 いいえ
 このアセットは存在しません。
+このバージョン間では差分はありません。
 そのサウンドはcpkリスト内に存在しません
 そのサウンドはcpk内に存在しません
 はい
@@ -24105,6 +24189,7 @@ CUSTOM に変更しました
 ストーリークエスト敗北【画面】クエスト
 ストーリークエスト開始【完了】クエスト
 ストーリークエスト開放状況
+ディクショナリが null です
 デイリーミッション達成【完了】ミッション
 データ更新
 データ更新のためゲームを終了します。
@@ -24120,6 +24205,7 @@ CUSTOM に変更しました
 ルビを含むテキストにも[#置換:ちかん]できますよ
 レベル上限：
 ・
+・ 
 ーーー
 ㄀㄰
 ㄰㆐
@@ -24177,6 +24263,7 @@ CUSTOM に変更しました
 購入処理中に問題が発生しました
 通信に失敗したので再度通信を行います
 通信失敗
+配列が null です
 降順
 霊基再臨【完了】強化
 ꀀ꒐
