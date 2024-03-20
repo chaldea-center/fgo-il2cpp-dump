@@ -670,6 +670,7 @@ ${application.persistentdatapath}
 (?::[0-9]{1,5})?
 (?<=_)[Xx]([0-9a-fA-F]{4}|[0-9a-fA-F]{8})_
 (?<Name>.*)\s(?<Number>[0-9]+)$
+(?<limitCount>(\d){1,2})_B(.+)
 (?=(
 (Backtrace)
 (Clone)
@@ -1228,11 +1229,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.88.0
+2.89.0
 20
 200
 20220731_BOOST_RATE_1
-20240229_17:45
+20240315_23:29
 264
 2841AE
 2D UI
@@ -1292,7 +1293,6 @@ file crc (
 504: Gateway Timeout
 6
 6.9.3
-6e3fc00118b4e8332b7f0a2f4155dc03106d49487bc4d143750d0c3bb4f26c17
 7
 71
 7999
@@ -1609,11 +1609,15 @@ or download the <i>06 Initialize Gaming Services</i> sample from <i>Package Mana
 >
 > 65536
 > and <
+>+</size>
+>-</size>
 >=
 >>
 >>=
 >actSetId: 
 >{1}		{0}{1}	</KeyValue>{1}</KeyPair>{1}
+>▲</size>
+>▼</size>
 ?
 ?
 
@@ -1872,6 +1876,7 @@ AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_ALL
 AUTO_ORGANIZATION_CONFIRM_DETAIL_MODE_USE_ENEMY_CLASS_MAIN
 AUTO_ORGANIZATION_CONFIRM_DETAIL_TITLE
 AUTO_ORGANIZATION_CONFIRM_MESSAGE
+AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF
 AUTO_ORGANIZATION_CONFIRM_SETTING
 AUTO_ORGANIZATION_CONFIRM_TITLE
 AUTO_ORGANIZATION_SETTING_EVENT_BONUS
@@ -2354,12 +2359,16 @@ B074
 B080
 B090
 B100
+B1000
 B110
 B120
 B130
 B140
 B150
 B160
+B1600
+B1610
+B1620
 B170
 B180
 B190
@@ -2451,8 +2460,11 @@ B550
 B560
 B570
 B80
+B800
 B81
+B810
 B82
+B820
 B840
 B841
 B842
@@ -3033,6 +3045,7 @@ CAMPAIGN_COST_COLOR
 CAMPAIGN_RESET_AT
 CANCEL
 CANCEL_WAVE_RESTART
+CAN_SELECT_SVT_MATERIAL_FLAG
 CAPTER CREATE
 CAPTER INIT
 CAPTER WAIT
@@ -4128,7 +4141,9 @@ ClassBoardSquareDetailDialog
 ClassBoardSquareOpenConfirmDialog
 ClassBoardUI
 ClassCard/
-ClassIconEx2
+ClassIconEx_ef_glow_{0}
+ClassIconEx_off_{0}
+ClassIconEx_on_{0}
 ClassIcons/DownloadClassIcons
 ClassIcon{0}
 ClassImageId
@@ -9054,7 +9069,8 @@ MainCamera
 MainDataTable
 MainPanel
 MainPanel/BaseView/CloseButton
-MainTransition
+MainTransition{0}
+MainTransition{0}_Release
 Make
 Make sure that the ConformanceLevel setting is set to ConformanceLevel.Fragment or ConformanceLevel.Auto if you want to write an XML fragment.
 Malay
@@ -10808,6 +10824,7 @@ Part of OID doesn't fit in Int32
 Partial Content
 Partial copy
 Particle cannot exist along with 'ContentModel'.
+Particle_CrassIcon_Ex_Released
 Partition failure
 PartyBuffHelpUI
 PartyOrganization/DownloadPartyOrganization
@@ -10946,6 +10963,8 @@ Polish
 Polish (Poland)
 Pop
 Popup already active
+PopupTextCondensedScaleSize
+PopupTextCondensedScaleValue
 Port
 Port unreachable
 Port, 
@@ -11191,6 +11210,8 @@ QUEST_MESSAGE_DLG_QUEST_RESET_NAME
 QUEST_MESSAGE_DLG_QUEST_RESET_TITLE
 QUEST_NONE
 QUEST_PHASE_REWARD_OVERWRITE_SPRITE
+QUEST_RELEASE_DIALOG_CANCEL
+QUEST_RELEASE_DIALOG_DECIDE
 QUEST_ROUTE
 QUEST_SHORTCUT_NONE
 QUEST_START
@@ -12829,6 +12850,7 @@ Save Action: Unsupported parameter type:
 SaveCookies
 SaveDataVer
 SavePlayedClassBoardBaseRelease
+SavePlayedExClassRelease
 Sc
 Scale
 ScaleChangeButton
@@ -15583,9 +15605,14 @@ WAR_BOARD_PROGRESS_SELF_BUFF_TYPES
 WAR_CLEAR_CLOSED_
 WAR_CLEAR_MOVIE_
 WAR_CLEAR_REWARD_GET
+WAR_MESSAGE_DIALOG_CANCEL
+WAR_MESSAGE_DIALOG_DECIDE
+WAR_MESSAGE_{0}_{1}
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_EQUIP
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_KIND_SERVANT
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_CAUTION
+WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MESSAGE_EXIST_QUEST_BUFF
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_ALL
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_MODE_USE_ENEMY_CLASS_MAIN
 WAVE_BATTLE_AUTO_ORGANIZATION_CONFIRM_RARITY_ALL
@@ -16468,6 +16495,7 @@ _txt_
 _txt_craftessence
 _txt_expup
 _txt_noblephantasmup
+_txt_plain
 _txt_servant
 _txt_statusup
 _used_key
@@ -16775,6 +16803,7 @@ assistIds
 assist_icon_
 assist_icon_0
 assumedEffectId
+assumedVoiceAssetNames
 asyncResult
 asyncResult is null or was not obtained by calling BeginRead.
 asyncResult is null or was not obtained by calling BeginWrite.
@@ -16849,6 +16878,7 @@ ba30
 ba38
 ba40
 ba7
+bab50c9c1e6437c932305e8f8040825b124d2e141cf0547a1810f572fcdae5d0
 back
 backEffect
 backEffectDestroy
@@ -18202,6 +18232,9 @@ deadChangePos
 deadEffect
 debug
 debugComment
+debug_add_servant
+debug_delete_servant
+debug_edit_servant
 debug_quest
 debug_server_time
 debug_update_user
@@ -18238,6 +18271,7 @@ deflater
 delay
 delayEnd
 delayLoadAsClientChannel
+delayRemoveExpiredOnPlayerTurn
 delaySeconds can not be negative
 delayStop
 delayStopAll
@@ -18315,6 +18349,7 @@ disableThirdPartySharing
 disableUniqueFieldMotion
 disp
 dispBreakShift
+dispChangeSkillIds
 dispFormByFace
 dispLimitCount
 distinguishedName
@@ -18540,7 +18575,6 @@ effect/ef_commandup_{0}{1:00}
 effect/ef_critlaunch
 effect/ef_cwflash01
 effect/ef_hit_special
-effect/ef_masterskill_buff
 effect/ef_noblecard
 effect/ef_noblegauge01
 effect/ef_noblegauge02
@@ -20545,6 +20579,7 @@ linePosition
 line_whiteAlpha
 linear
 linkUrl
+linklost_svt_material
 linux
 list
 listcframes1_bg
@@ -20894,6 +20929,7 @@ move
 moveDown
 moveSceneInfo
 moveTime
+moveto
 movetopath
 movie
 movieAfterCrossFadeStartFrame
@@ -20940,6 +20976,7 @@ mstBattleMessageGroup
 mstBgm
 mstBgmRelease
 mstBlankEarthSpot
+mstBlankEarthSpotAdd
 mstBlankEarthSpotNavimenu
 mstBoardMessage
 mstBoardMessageRelease
@@ -21087,6 +21124,7 @@ mstEventUi
 mstEventUiRelease
 mstEventUiValue
 mstEventVoicePlay
+mstExcludeMotion
 mstFieldMotion
 mstFriendship
 mstFunc
@@ -21140,6 +21178,7 @@ mstPartialMaintenance
 mstPrivilege
 mstQuest
 mstQuestAdd
+mstQuestAutoOrganizationAdjust
 mstQuestBehavior
 mstQuestConsumeItem
 mstQuestDateRange
@@ -21302,6 +21341,7 @@ mstWarBoardStageWall
 mstWarBoardTacticalTrend
 mstWarBoardTreasure
 mstWarGroup
+mstWarMessage
 mstWarQuestSelection
 mstns
 mstns:
@@ -21416,6 +21456,7 @@ no private key to export
 no queue
 noActorEffect
 noBackoffWait
+noCriticalOnAttack
 noMoveAfterAttack
 noMoveLastPieceCamera
 noMoveTargetCamera
@@ -21707,6 +21748,7 @@ overwriteShopMessageId
 overwriteSvtDetailName
 overwriteTreasureDeviceId
 overwriteTreasureEffectId
+overwriteTvals
 overwriteWallAttackCost
 owner
 p
@@ -22229,6 +22271,7 @@ saveMaterial
 sb
 sbyte
 scale
+scaleto
 scan_icon_{0}
 scene
 scene.active
@@ -22718,6 +22761,7 @@ subCamera
 subCameraFilter
 subCameraHome
 subCameraMove
+subCameraMoveEase
 subCameraOff
 subCameraOn
 subCameraRoll
@@ -23563,6 +23607,7 @@ warEffectPiece
 warEffectPos
 warEffectSquare
 warEventScript
+warId
 warMoveCameraPiece
 warMoveCameraPos
 warMoveCameraSquare
