@@ -14867,6 +14867,7 @@ public enum CollectionStatus.Kind
 	SECRET = 6,
 	DATA_LOST = 7,
 	LINK_LOST = 8,
+	LINK_BAD = 9,
 }
 
 public enum CombineAdjustTarget.TYPE
@@ -19099,6 +19100,7 @@ public enum ServantCollectionEntity.CollectionEffectType
 	DATA_LOST = 1,
 	HIDE = 2,
 	LINK_LOST = 3,
+	LINK_BAD = 4,
 }
 
 public enum ServantEntity.FlagKind
@@ -23866,6 +23868,7 @@ private enum MaterialCollectionServantListViewItem.IsCanSelectFlag
 	NONE = 0,
 	LINK_LOST = 1,
 	DATA_LOST = 2,
+	LINK_BAD = 4,
 }
 
 public enum MaterialCollectionServantListViewItemDraw.DispMode
