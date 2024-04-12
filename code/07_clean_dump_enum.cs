@@ -14309,6 +14309,12 @@ public enum Ai.COND
 	CHECK_WAR_BOARD_SQUARE_INDIVIDUALITY = 194,
 	CHECK_PT_HIGHER_NPGAUGE = 195,
 	CHECK_SELF_HIGHER_NPGAUGE = 196,
+	CHECK_BATTLE_VALUE_ABOVE = 197,
+	CHECK_BATTLE_VALUE_EQUAL = 198,
+	CHECK_BATTLE_VALUE_NOT_EQUAL = 199,
+	CHECK_BATTLE_VALUE_BELOW = 200,
+	CHECK_BATTLE_VALUE_BETWEEN = 201,
+	CHECK_BATTLE_VALUE_NOT_BETWEEN = 202,
 }
 
 public enum Ai.ACT_NUM
@@ -15718,30 +15724,32 @@ public enum DataNameKind.Kind
 	EVENT_MURAL = 458,
 	VIEW_WAVE_ENEMY = 459,
 	BLANK_EARTH_SPOT_NAVIMENU = 460,
-	TERMINAL_OVERWRITE = 461,
-	USER_EXCHANGE_SVT = 462,
-	WAR_BOARD_COMMON_RELEASE = 463,
-	WAR_BOARD_EVENT = 464,
-	WAR_BOARD_EVENT_SCRIPT = 465,
-	WAR_BOARD_STAGE_BOSS = 466,
-	WAR_BOARD_SQUARE_INDEX_GROUP = 467,
-	WAR_BOARD_ACTION_TREND_GROUP = 468,
-	WAR_BOARD_RATING_OFFSET_GROUP = 469,
-	WAR_BOARD_FUTURE_ACTION_TREND = 470,
-	SERVANT_PROFILE_PUSH = 471,
-	MAP_GIMMICK_PATH = 472,
-	MAP_GIMMICK_PATH_RELEASE = 473,
-	SERVANT_OVERWRITE = 474,
-	INDIVIDUALITY_POLICY = 475,
-	INDIVIDUALITY_PERSONALITY = 476,
-	ATTRI = 477,
-	SERVANT_VOICE_PATTERN = 478,
-	USER_GAME_COMMON = 479,
-	SERVANT_PHOTO = 480,
-	MASTER_PHOTO = 481,
-	WAR_MESSAGE = 482,
-	QUEST_AUTO_ORGANIZATION_ADJUST = 483,
-	EXCLUDE_MOTION = 484,
+	BLANK_EARTH_GIMMICK = 461,
+	TERMINAL_OVERWRITE = 462,
+	USER_EXCHANGE_SVT = 463,
+	WAR_BOARD_COMMON_RELEASE = 464,
+	WAR_BOARD_EVENT = 465,
+	WAR_BOARD_EVENT_SCRIPT = 466,
+	WAR_BOARD_STAGE_BOSS = 467,
+	WAR_BOARD_SQUARE_INDEX_GROUP = 468,
+	WAR_BOARD_ACTION_TREND_GROUP = 469,
+	WAR_BOARD_RATING_OFFSET_GROUP = 470,
+	WAR_BOARD_FUTURE_ACTION_TREND = 471,
+	SERVANT_PROFILE_PUSH = 472,
+	MAP_GIMMICK_PATH = 473,
+	MAP_GIMMICK_PATH_RELEASE = 474,
+	SERVANT_OVERWRITE = 475,
+	INDIVIDUALITY_POLICY = 476,
+	INDIVIDUALITY_PERSONALITY = 477,
+	ATTRI = 478,
+	SERVANT_VOICE_PATTERN = 479,
+	USER_GAME_COMMON = 480,
+	SERVANT_PHOTO = 481,
+	MASTER_PHOTO = 482,
+	WAR_MESSAGE = 483,
+	QUEST_AUTO_ORGANIZATION_ADJUST = 484,
+	EXCLUDE_MOTION = 485,
+	USER_INTERRUPTION_QUEST = 486,
 }
 
 public enum Device.Type
@@ -16100,6 +16108,8 @@ public enum FuncList.TYPE
 	LAST_USE_PLAYER_SKILL_COPY = 135,
 	CHANGE_ENEMY_MASTER_FACE = 136,
 	DAMAGE_VALUE_SAFE_ONCE = 137,
+	ADD_BATTLE_VALUE = 138,
+	SET_BATTLE_VALUE = 139,
 }
 
 public enum FuncList.COND
@@ -16206,6 +16216,7 @@ public enum Gift.Type
 	EVENT_BOARD_GAME_TOKEN = 13,
 	EVENT_COMMAND_ASSIST = 14,
 	EVENT_HEEL_PORTRAIT = 15,
+	BATTLE_ITEM = 16,
 }
 
 public enum Grade.Kind
@@ -16255,6 +16266,7 @@ public enum ItemType.Type
 	TRADE_AP = 32,
 	RI = 33,
 	STORMPOD = 34,
+	BATTLE_ITEM = 35,
 }
 
 public enum MissionProgressType.Type
@@ -16498,6 +16510,7 @@ public enum ResponseCommandKind.Kind
 	DEBUG_ADD_SERVANT = 125,
 	DEBUG_EDIT_SERVANT = 126,
 	DEBUG_DELETE_SERVANT = 127,
+	BATTLE_INTERRUPTION = 128,
 }
 
 public enum Restriction.Type
@@ -18003,6 +18016,7 @@ public enum DropInfo.DropEffectType
 {
 	NORMAL = 0,
 	JUMPING = 1,
+	HIGH_POSITION = 2,
 }
 
 public enum FollowerInfo.ReturnSupportServantType
@@ -19103,6 +19117,13 @@ public enum ServantCollectionEntity.CollectionEffectType
 	LINK_BAD = 4,
 }
 
+private enum ServantCommentEntity.ProfileLabelType
+{
+	NONE = 0,
+	DETAIL = 1,
+	PROFILE = 2,
+}
+
 public enum ServantEntity.FlagKind
 {
 	ONLY_USE_FOR_NPC = 1,
@@ -19967,6 +19988,32 @@ public enum ListViewSort.SortKind
 	SERVANT_NAME = 26,
 	DISP_NO = 27,
 	BUDDY_POINT = 28,
+}
+
+public enum ListViewSort.FilterClassKind
+{
+	CLASS_SABER = 1,
+	CLASS_SABER_2 = 13,
+	CLASS_ARCHER = 2,
+	CLASS_ARCHER_2 = 14,
+	CLASS_LANCER = 3,
+	CLASS_LANCER_2 = 15,
+	CLASS_RIDER = 4,
+	CLASS_RIDER_2 = 16,
+	CLASS_CASTER = 5,
+	CLASS_CASTER_2 = 17,
+	CLASS_ASSASSIN = 6,
+	CLASS_ASSASSIN_2 = 18,
+	CLASS_BERSERKER = 7,
+	CLASS_BERSERKER_2 = 19,
+	CLASS_SHIELDER = 8,
+	CLASS_RULER = 9,
+	CLASS_AVENGER = 10,
+	CLASS_MOONCANCER = 11,
+	CLASS_ALTEREGO = 23,
+	CLASS_FOREIGNER = 25,
+	CLASS_PRETENDER = 28,
+	CLASS_BEAST = 33,
 }
 
 public enum ListViewSort.FilterKind
@@ -20967,6 +21014,15 @@ public enum BattleBuffData.BuffData.STATEENUM
 	UNSUBSTATE_WHEN_CONTINUE = 33554432,
 }
 
+public enum BattleData.BattleResult
+{
+	NONE = 0,
+	WIN = 1,
+	LOSE = 2,
+	CANCEL = 3,
+	INTERRUPTION = 4,
+}
+
 public enum BattleData.WinResult
 {
 	None = 0,
@@ -21124,6 +21180,7 @@ public enum BattleMoveObject.TYPE
 	NONE = 0,
 	CRITICAL = 1,
 	ITEM = 2,
+	BATTLE_ITEM = 3,
 }
 
 public enum BattleMoveObject.EASING
@@ -21192,6 +21249,12 @@ public enum BattleSkillInfoData.TYPE
 	COMMAND_ASSIST = 23,
 	TEMP_EFFECT_SQUARE = 100,
 	WARBOARD_PARTY_SKILL = 101,
+}
+
+public enum BattleSkillInfoData.BATTLE_ITEM_DISP_TYPE
+{
+	ITEM_MAX = 0,
+	ITEM_USE = 1,
 }
 
 public enum BattleRankUpSkillInfoData.RankUpState
@@ -21372,6 +21435,7 @@ public enum ConditionsInformation.PARAMATER
 	COUNT_PLAYER_SKILL_INCLUDE_MASTER_SKILL = 38,
 	TOTAL_TURN = 39,
 	WAR_BOARD_SQUARE_INDIVIDUALITY = 40,
+	CHECK_BATTLE_VALUE = 41,
 }
 
 public enum ConditionsInformation.REFINE
@@ -21392,6 +21456,8 @@ public enum ConditionsInformation.CHECK
 	LOWER = 4,
 	MULTIPLE = 5,
 	EXIST = 6,
+	BETWEEN = 7,
+	BETWEEN_NOT = 8,
 }
 
 public enum AiResetChecker.ResetTiming
@@ -21777,6 +21843,13 @@ private enum BattleServantConfConponent.TAB
 {
 	ABILLITY = 0,
 	STATE = 1,
+}
+
+private enum BattleServantConfConponent.HideState
+{
+	QUESTION = 1,
+	NONE = 2,
+	HIDDEN = 3,
 }
 
 private enum BattleServantHeadUpComponent.MODE
@@ -25586,8 +25659,9 @@ public enum WaveBattlePartyOrganizationMenu.ResultKind
 	PARTY_EDIT = 3,
 	CLASS_INFO = 4,
 	AUTO_SELL = 5,
-	BATTLE_START = 6,
-	DETAIL_SERVANT = 7,
+	INTERRUPTION_DECK = 6,
+	BATTLE_START = 7,
+	DETAIL_SERVANT = 8,
 }
 
 protected enum WaveBattlePartyOrganizationMenu.State
@@ -25597,6 +25671,26 @@ protected enum WaveBattlePartyOrganizationMenu.State
 	INPUT = 2,
 	SELECTED = 3,
 	CLOSE = 4,
+}
+
+private enum WaveBattleSelectWaveConfirmDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	CLOSE = 2,
+}
+
+private enum WaveBattleSelectWaveDialog.State
+{
+	INIT = 0,
+	OPEN = 1,
+	CLOSE = 2,
+}
+
+public enum WaveBattleSelectWaveDialog.Kind
+{
+	TERMINAL = 0,
+	BATTLE = 1,
 }
 
 public enum WaveBattleWaveEnemyInfoItem.DispMode
@@ -26900,6 +26994,21 @@ public enum BlankEarth.STATE
 	QAA_ROTATE = 5,
 	SHORTCUT_ROTATE = 6,
 	SIZEOF = 7,
+}
+
+public enum BlankEarthGimmickComponent.DispType
+{
+	None = 0,
+	Normal = 1,
+}
+
+public enum BlankEarthGimmickComponent.STATE
+{
+	NONE = 0,
+	MAP_MAIN = 1,
+	HIDE_ANIM = 2,
+	DISP_ANIM = 3,
+	SIZEOF = 4,
 }
 
 private enum BlankEarthShortcutUIButton.WaitState
@@ -30077,6 +30186,7 @@ public enum FGOLogic.PROC
 	STAGE_CUTIN = 58,
 	WAIT_DROP_ITEM_COLLECT = 59,
 	FIELD_AI_BEFORE_WAVE_START_ANIMATION = 60,
+	START_CONTINUE_INTERRUPTION = 61,
 }
 
 public enum FGOPerformance.Effect
