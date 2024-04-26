@@ -14315,6 +14315,14 @@ public enum Ai.COND
 	CHECK_BATTLE_VALUE_BELOW = 200,
 	CHECK_BATTLE_VALUE_BETWEEN = 201,
 	CHECK_BATTLE_VALUE_NOT_BETWEEN = 202,
+	CHECK_USE_MASTER_SKILL_INDEX = 203,
+	CHECK_USE_MASTER_SKILL_INDEX_THIS_TURN = 204,
+	COUNT_MASTER_SKILL_HIGHER_THIS_TURN = 205,
+	COUNT_MASTER_SKILL_LOWER_THIS_TURN = 206,
+	COUNT_MASTER_SKILL_EQUAL_THIS_TURN = 207,
+	COUNT_MASTER_SKILL_HIGHER_THIS_WAVE = 208,
+	COUNT_MASTER_SKILL_LOWER_THIS_WAVE = 209,
+	COUNT_MASTER_SKILL_EQUAL_THIS_WAVE = 210,
 }
 
 public enum Ai.ACT_NUM
@@ -14665,6 +14673,15 @@ public enum BuffList.TYPE
 	TREASURE_DEVICE_AFTER_FUNCTION_MAIN_ONLY = 188,
 	PREVENT_INVISIBLE_WHEN_INSTANT_DEATH = 189,
 	OVERWRITE_SUBATTRIBUTE = 190,
+	AVOIDANCE_ATTACK_DEATH_DAMAGE = 191,
+	AVOID_FUNCTION_EXECUTE_SELF = 192,
+	PIERCE_SUBDAMAGE = 193,
+	CONTINUE_FUNCTION = 194,
+	ADD_SPECIALDAMAGE = 195,
+	SUB_SPECIALDAMAGE = 196,
+	ADD_FUNC_HP_REDUCE = 197,
+	SUB_FUNC_HP_REDUCE = 198,
+	CHANGE_BGM = 199,
 	TO_FIELD_CHANGE_FIELD = 10001,
 	TO_FIELD_AVOID_BUFF = 10002,
 	TO_FIELD_SUB_INDIVIDUALITY_FIELD = 10003,
@@ -14809,6 +14826,14 @@ public enum BuffList.ACTION
 	GUTS = 126,
 	PREVENT_INVISIBLE_WHEN_INSTANT_DEATH = 127,
 	OVERWRITE_SUBATTRIBUTE = 128,
+	AVOIDANCE_ATTACK_DEATH_DAMAGE = 129,
+	AVOID_FUNCTION_EXECUTE_SELF = 130,
+	FUNCTION_CONTINUE = 131,
+	PIERCE_SUBDAMAGE = 132,
+	RECEIVE_DAMAGE_PIERCE = 133,
+	SPECIAL_RECEIVE_DAMAGE = 134,
+	FUNC_HP_REDUCE_VALUE = 135,
+	CHANGE_BGM = 136,
 }
 
 public enum BuffList.DEL_AFTER_TYPE
@@ -14816,6 +14841,7 @@ public enum BuffList.DEL_AFTER_TYPE
 	NONE = 0,
 	UPDATE_FIELD = 1,
 	UPDATE_VIEW = 2,
+	UPDATE_BGM = 3,
 }
 
 public enum BuffList.INVOKE_COND_TYPE
@@ -15129,6 +15155,9 @@ public enum CondType.Kind
 	COMMON_VALUE_BELOW = 213,
 	COMMON_VALUE_EQUAL = 214,
 	ELAPSED_TIME_AFTER_QUEST_CLEAR = 215,
+	WITH_STARTING_MEMBER = 216,
+	LATEST_QUEST_PHASE_EQUAL = 217,
+	NOT_LATEST_QUEST_PHASE_EQUAL = 218,
 }
 
 public enum CondType.CheckType
@@ -15750,6 +15779,9 @@ public enum DataNameKind.Kind
 	QUEST_AUTO_ORGANIZATION_ADJUST = 484,
 	EXCLUDE_MOTION = 485,
 	USER_INTERRUPTION_QUEST = 486,
+	SERVANT_TRANSFORM = 487,
+	MAP_UPDATE_SCHEDULE = 488,
+	QUEST_PHASE_PRESENT = 489,
 }
 
 public enum Device.Type
@@ -16110,6 +16142,8 @@ public enum FuncList.TYPE
 	DAMAGE_VALUE_SAFE_ONCE = 137,
 	ADD_BATTLE_VALUE = 138,
 	SET_BATTLE_VALUE = 139,
+	GAIN_MULTIPLY_NP = 140,
+	LOSS_MULTIPLY_NP = 141,
 }
 
 public enum FuncList.COND
@@ -17240,6 +17274,8 @@ public enum Voice.BATTLE
 	HCARD10 = 303,
 	HCARD11 = 304,
 	HCARD12 = 305,
+	START3_1 = 306,
+	START4_1 = 307,
 	HOUGU10_1 = 1001,
 }
 
@@ -17669,6 +17705,14 @@ private enum NetworkManager.DataServerAddressType
 	REDIRECT = 3,
 }
 
+public enum OptionManager.SOUND_MASK
+{
+	NONE = 0,
+	SE = 1,
+	VOICE = 2,
+	BGM = 4,
+}
+
 public enum AccountingManager.Result
 {
 	NONE = 0,
@@ -17942,56 +17986,70 @@ public enum DataVals.TYPE
 	BehaveAsFamilyBuff = 97,
 	UnSubStateWhileLinkedToOthers = 98,
 	NotAccompanyWhenLinkedTargetMoveState = 99,
-	AllowSubBgmPlaying = 100,
-	NotTargetSkillIdArray = 101,
-	ShortTurn = 102,
-	FieldIndividuality = 103,
-	BGId = 104,
-	BGType = 105,
-	BgmId = 106,
-	TakeOverFieldState = 107,
-	TakeOverNextWaveBGAndBGM = 108,
-	RemoveFieldBuffActorDeath = 109,
-	FieldBuffGrantType = 110,
-	Priority = 111,
-	AddIndividualityEx = 112,
-	IgnoreResistance = 113,
-	GainNpTargetPassiveIndividuality = 114,
-	HpReduceToRegainIndiv = 115,
-	DisplayActualRecoveryHpFlag = 116,
-	ShiftDeckIndex = 117,
-	PopValueText = 118,
-	IsLossHpPerNow = 119,
-	CopyTargetFunctionType = 120,
-	CopyFunctionTargetPTOnly = 121,
-	IgnoreValueUp = 122,
-	ApplyValueUp = 123,
-	ActNoDamageBuff = 124,
-	ActSelectIndex = 125,
-	CopyTargetBuffType = 126,
-	NotSkillCopyTargetFuncIds = 127,
-	NotSkillCopyTargetIndividualities = 128,
-	ClassIconAuraEffectId = 129,
-	ActMasterGenderType = 130,
-	IntervalTurn = 131,
-	IntervalCount = 132,
-	TriggeredFieldCountTarget = 133,
-	TriggeredFieldCountRange = 134,
-	TargetEnemyRange = 135,
-	TriggeredFuncPositionSameTarget = 136,
-	TriggeredFuncPositionAll = 137,
-	TriggeredTargetHpRange = 138,
-	TriggeredTargetHpRateRange = 139,
-	ExcludeUnSubStateIndiv = 140,
-	ProgressTurnOnBoard = 141,
-	CheckTargetResurrectable = 142,
-	CancelTransform = 143,
-	UnSubStateWhenContinue = 144,
-	CheckTargetHaveDefeatPoint = 145,
-	NPFixedDamageValue = 146,
-	IgnoreShiftSafeDamage = 147,
-	ActAttackFunction = 148,
-	DelayRemoveBuffExpiredOnPlayerTurn = 149,
+	NotTargetSkillIdArray = 100,
+	ShortTurn = 101,
+	FieldIndividuality = 102,
+	BGId = 103,
+	BGType = 104,
+	BgmId = 105,
+	TakeOverFieldState = 106,
+	TakeOverNextWaveBGAndBGM = 107,
+	RemoveFieldBuffActorDeath = 108,
+	FieldBuffGrantType = 109,
+	Priority = 110,
+	AddIndividualityEx = 111,
+	IgnoreResistance = 112,
+	GainNpTargetPassiveIndividuality = 113,
+	HpReduceToRegainIndiv = 114,
+	DisplayActualRecoveryHpFlag = 115,
+	ShiftDeckIndex = 116,
+	PopValueText = 117,
+	IsLossHpPerNow = 118,
+	CopyTargetFunctionType = 119,
+	CopyFunctionTargetPTOnly = 120,
+	IgnoreValueUp = 121,
+	ApplyValueUp = 122,
+	ActNoDamageBuff = 123,
+	ActSelectIndex = 124,
+	CopyTargetBuffType = 125,
+	NotSkillCopyTargetFuncIds = 126,
+	NotSkillCopyTargetIndividualities = 127,
+	ClassIconAuraEffectId = 128,
+	ActMasterGenderType = 129,
+	IntervalTurn = 130,
+	IntervalCount = 131,
+	TriggeredFieldCountTarget = 132,
+	TriggeredFieldCountRange = 133,
+	TargetEnemyRange = 134,
+	TriggeredFuncPositionSameTarget = 135,
+	TriggeredFuncPositionAll = 136,
+	TriggeredTargetHpRange = 137,
+	TriggeredTargetHpRateRange = 138,
+	ExcludeUnSubStateIndiv = 139,
+	ProgressTurnOnBoard = 140,
+	CheckTargetResurrectable = 141,
+	CancelTransform = 142,
+	UnSubStateWhenContinue = 143,
+	CheckTargetHaveDefeatPoint = 144,
+	NPFixedDamageValue = 145,
+	IgnoreShiftSafeDamage = 146,
+	ActAttackFunction = 147,
+	DelayRemoveBuffExpiredOnPlayerTurn = 148,
+	AllowRemoveBuff = 149,
+	NotExecFunctionIfKeepAliveOnWarBoard = 150,
+	SnapShotParamAddSelfIndv = 151,
+	SnapShotParamAddOpIndv = 152,
+	SnapShotParamAddFieldIndv = 153,
+	SnapShotParamAddValue = 154,
+	SnapShotParamAddMaxValue = 155,
+	SnapShotParamAddMaxCount = 156,
+	NotExecOnTransform = 157,
+	NotRemoveOnTransform = 158,
+	PriorityBgm = 159,
+	BgmAllowSubPlaying = 160,
+	BgPriority = 161,
+	PriorityBg = 162,
+	ResetBgmPriorityAtWaveStart = 163,
 }
 
 public enum DataVals.OverChargeState
@@ -18642,6 +18700,12 @@ public enum EventTutorialMaster.OpenType
 	ON_CLASS_BOARD_CLASS_SELECT = 82,
 	ON_BLANK_EARTH_TOP = 83,
 	CALLED_BY_OTHER = 84,
+	ON_TRANSFORM_SKILL_COMBINE = 85,
+	ON_TRANSFORM_SVT_STATUS = 86,
+	ON_TRANSFORM_COMMAND_CODE = 87,
+	ON_TRANSFORM_COMMAND_CARD_EXCEED = 88,
+	ON_TRANSFORM_TREASURE_DEVICE_COMBINE = 89,
+	ON_MAP_WITHOUT_AFTER_ACTION = 90,
 }
 
 public enum EventUiEntity.ObjectType
@@ -18988,6 +19052,14 @@ public enum QuestPhaseDetailAddEntity.OverwriteType
 {
 	AFTER_ACITON = 1,
 	BEFORE_ACITON = 2,
+}
+
+public enum QuestPhaseEntity.SCREEN_EFFECT_TYPE
+{
+	NONE = 0,
+	ALL_MONOCHROME = 1,
+	BG_CHARA_MONOCHROME = 2,
+	BG_MONOCHROME = 3,
 }
 
 public enum QuestPhaseMaster.MoviePlayType
@@ -20276,6 +20348,16 @@ public enum MainMenuBarButton.Mode
 	SELECT = 3,
 }
 
+public enum SyncWidget.SyncParamType
+{
+	WIDTH = 0,
+	HEIGHT = 1,
+	SCALE = 2,
+	COLOR_ALPHA = 3,
+	PRINTED_WIDTH = 4,
+	PRINTED_HEIGHT = 5,
+}
+
 public enum UICharaGraphRender.Kind
 {
 	SERVANT = 0,
@@ -20907,6 +20989,7 @@ public enum BattleActionData.STATE
 	LOAD_IMMEDIATE_ENTRY_SERVANT = 5,
 	WAIT_COND = 6,
 	UPDATE_VIEW = 7,
+	EXEC_IN_ACTION_DATA = 8,
 }
 
 public enum BattleActionData.DamageHitType
@@ -21114,6 +21197,12 @@ public enum BattleDataDefine.WinLeave
 	NORMAL_ENEMY_FOCUS = 3,
 }
 
+public enum BattleDataDefine.SkillTiming
+{
+	NONE = 0,
+	PASSIVE_ON_TRANSFORM = 1,
+}
+
 public enum BattleDebug.TAG
 {
 	NONE = 0,
@@ -21247,6 +21336,9 @@ public enum BattleSkillInfoData.TYPE
 	BOOST = 21,
 	COMMAND_CODE = 22,
 	COMMAND_ASSIST = 23,
+	ADD_PASSIVE = 24,
+	APPEND_SKILL = 25,
+	CLASS_BOARD = 26,
 	TEMP_EFFECT_SQUARE = 100,
 	WARBOARD_PARTY_SKILL = 101,
 }
@@ -21262,6 +21354,14 @@ public enum BattleRankUpSkillInfoData.RankUpState
 	None = 0,
 	RightAfterUp = 1,
 	AlreadyUp = 2,
+}
+
+public enum WrapBaseBattlePopupControl.DamageType
+{
+	NORMAL = 0,
+	CRITICAL = 1,
+	WEEK = 2,
+	RESIST = 3,
 }
 
 public enum ChangeRendererMaterialColorEffect.RendererType
@@ -21436,6 +21536,10 @@ public enum ConditionsInformation.PARAMATER
 	TOTAL_TURN = 39,
 	WAR_BOARD_SQUARE_INDIVIDUALITY = 40,
 	CHECK_BATTLE_VALUE = 41,
+	CHECK_PLAYER_MASTER_SKILL_INDEX = 42,
+	CHECK_PLAYER_MASTER_SKILL_INDEX_THIS_TURN = 43,
+	COUNT_PLAYER_MASTER_SKILL_THIS_TURN = 44,
+	COUNT_PLAYER_MASTER_SKILL_THIS_WAVE = 45,
 }
 
 public enum ConditionsInformation.REFINE
@@ -21458,6 +21562,7 @@ public enum ConditionsInformation.CHECK
 	EXIST = 6,
 	BETWEEN = 7,
 	BETWEEN_NOT = 8,
+	ALL_EXIST = 9,
 }
 
 public enum AiResetChecker.ResetTiming
@@ -21717,6 +21822,7 @@ public enum BattleLogicTask.ACTIONTYPE
 	GENERAL_RELAY_TASK = 68,
 	DO_NOT_ACT = 69,
 	FIELD_AI_BEFORE_WAVE_START_ANIMATION = 70,
+	CREATE_TASK_SIDE = 71,
 }
 
 public enum BattleLogicTask.MESSAGE_TYPE
@@ -21874,6 +21980,19 @@ public enum BattleServantSkillIConComponent.SHOW_TYPE
 	NONE = 0,
 	NOMAL = 1,
 	NOTOUCH = 2,
+}
+
+public enum BattleSkillSelectAddFuncConfComponent.BtnLayoutType
+{
+	SELECT_NOMAL = 0,
+	SELECT_CARD_TYPE = 1,
+}
+
+private enum BattleSkillSelectComandCardBtnComponent.CommandCardType
+{
+	Quick = 0,
+	Arts = 1,
+	Buster = 2,
 }
 
 public enum BattleSyncTransformComponent.SyncTargetType
@@ -27225,6 +27344,13 @@ public enum MapControl.WarInfo.StatusCheckFlag
 	isWarLastQuestCleard = 8,
 }
 
+public enum MapControl.WarInfo.MapUpdateState
+{
+	None = 0,
+	Enabled = 1,
+	Disabled = 2,
+}
+
 public enum MapGimmickComponent.STATE
 {
 	NONE = 0,
@@ -27260,6 +27386,7 @@ public enum PlayerStatusRaidPointComponent.DispType
 
 public enum QuestAfterAction.COMMAND
 {
+	NONE = 0,
 	SPOT_HIDE = 100,
 	SPOT_GRAY = 101,
 	SPOT_DISP = 102,
@@ -29666,6 +29793,7 @@ public enum USFGOActorBattleActionEvent.ActionType
 	SelfDead = 5,
 	MoveToSubMember = 6,
 	FuncSideEffect = 7,
+	TransformServantUpdateUi = 8,
 }
 
 public enum USFGOActorChangePosition.PosChangeTargetType
@@ -29735,6 +29863,15 @@ public enum USFGOChrBulrEvent.MODE
 {
 	BULR_VALID = 0,
 	BULR_LAG = 1,
+}
+
+public enum USFGOChrColorChange2Event.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+	Other = 4,
 }
 
 public enum USFGOChrColorChangeEvent.ChangeTarget
@@ -30240,6 +30377,12 @@ public enum FGOQuestStartEffect.ActionType
 	Load = 0,
 	Play = 1,
 	Release = 2,
+}
+
+public enum FGOSetPopupDisplayLayerType.PopupLayerType
+{
+	e2DUI = 0,
+	eFront2DUI = 1,
 }
 
 public enum FGOSpecifiedBattleStartVoice.TYPE

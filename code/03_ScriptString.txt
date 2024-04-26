@@ -39,6 +39,8 @@
 
  Please check provided url to Backtrace service or learn more from our integration guide: https://support.backtrace.io/hc/en-us/articles/360040515991-Unity-Integration-Guide
 
+(
+
 Aborting
 
 Body: 
@@ -202,6 +204,7 @@ Proxy-Connection: keep-alive
  Input Caret
  Invalid length {0}.
  Is 
+ IsExecInActionData 
  IsUpdateView 
  MB
 
@@ -286,6 +289,8 @@ Proxy-Connection: keep-alive
  isField 
  isLoadServant 
  isMotion 
+ isNotBoolean
+ isNotNumbers
  isSystem 
  may not be serialized.
  mb)
@@ -741,6 +746,7 @@ file crc (
 ) not handled by CriDisposableObjectManager; memory leak may have occured.
 ) should be of type: 
 ) { ... }
+) の値がディクショナリに含まれていません
 )!
 ))(
 ).
@@ -1195,6 +1201,7 @@ file crc (
 16
 19
 1B2FA5
+1cfce6f958f721045ac241885b7920c700f34cf3edb262e2d24b58bdcafa932e
 1st Attack
 2
 2 CR found
@@ -1233,11 +1240,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.90.1
+2.91.0
 20
 200
 20220731_BOOST_RATE_1
-20240412_17:00
+20240422_20:16
 264
 2841AE
 2D UI
@@ -1277,7 +1284,6 @@ file crc (
 432d18c9-9348-4b90-bfbf-9f2a10e1f15b
 437
 4441
-45dfbba6839a9529563e611817b862fd6c5f7454d6794201ad3411571d72b726
 460
 5
 500
@@ -2473,6 +2479,8 @@ B820
 B840
 B841
 B842
+B8500
+B8510
 B880
 B890
 B910
@@ -2669,6 +2677,7 @@ BATTLE_SKILLERROR_NP_HIGHER
 BATTLE_SKILLERROR_NP_LOWER
 BATTLE_SKILLERROR_STAR_HIGHER
 BATTLE_SKILLERROR_STAR_LOWER
+BATTLE_SKILL_CONF_TITLE
 BATTLE_SKILL_NAME_LEVEL
 BATTLE_START
 BATTLE_SUBENTRY_ENEMY
@@ -2909,6 +2918,7 @@ Battle/Field/{0}
 Battle/Gimmick/{0}
 Battle/Prefab/
 Battle/Prefab/ef_add_enemy
+Battle/Textures/GrayScale_Alpha_Circle_mask
 Battle/Textures/shadow_
 Battle/Textures/shadow_1
 Battle/TurnEffect/
@@ -4680,6 +4690,7 @@ Currently only declarative Assert are supported.
 Currently only declarative Deny are supported.
 Custom channel bindings are not supported.
 Custom/BackFlashSheder
+Custom/OutlineEffectShader
 Custom/SoftEdgeUnlitCutZ (SoftClip)
 Custom/SoftEdgeUnlitCutZ_Choco
 Custom/SoftEdgeUnlitCutZ_Choco (SoftClip)
@@ -5500,6 +5511,7 @@ DispObject
 Display
 DisplayCardBottomImageName
 DisplayName
+DisplayPriority
 DistIndex
 Distortion
 Div
@@ -5811,6 +5823,7 @@ EVENT_INFO_MURAL_DIALOG_DETAIL
 EVENT_INFO_TXT
 EVENT_INIT
 EVENT_ITEM_NEED_INFO
+EVENT_ITEM_NOT_DISP_ITEM_GET_EFFECT
 EVENT_ITEM_REPLACE_BEFORE_EVENT_NAME
 EVENT_ITEM_REPLACE_EVENT_NAME
 EVENT_ITEM_UNIT
@@ -6026,6 +6039,7 @@ Effect/Summon
 Effect/Talk/
 Effect/Talk/bit_harvest_get{0}
 Effect/Talk/bit_heel_portrait_get
+Effect/Talk/bit_item_get_phase{0}
 Effect/Talk/bit_item_get{0}
 Effect/Talk/bit_order_grade_get
 Effect/Talk/bit_present_get{0}
@@ -7006,6 +7020,7 @@ Frisian (Netherlands)
 From
 FrontCommonUI
 FrontCommonUICamera
+FrontEffectRenderPanel
 Fsm will not respond to Event: 
 FstFeedNodeName
 Full backup
@@ -7109,6 +7124,7 @@ GameObject requires RigidBody/Collider!
 GameObject requires a RigidBody2D or Collider2D component!
 
 GameOrderId
+GarbageCollector disposing of ComputeBuffer. Please use ComputeBuffer.Release() or .Dispose() to manually release the buffer.
 Gateway Timeout
 GaussianBlur
 GaussianBlurThrough
@@ -9553,6 +9569,7 @@ NOTIFICATION_COMPLETE_OPERATION_MESSAGE
 NOTIFICATION_FATIGUE_RECOVER_MESSAGE
 NOTIFICATION_RP_RECOVER_MESSAGE
 NOT_
+NOT_CHANGE_BEHAVIOR_TRANSFORM_SVT_ID
 NOT_DISPLAY_BATTLE_ATTRIBUTE
 NOT_FRIEND_POINT
 NOT_GET_COMMIT_AFTER_SCRIPT
@@ -10084,6 +10101,7 @@ OTHER_USER_SORT_PRIORITY_KIND_NONE
 OTHER_USER_SORT_PRIORITY_KIND_QP_UP
 OU
 OU=
+OVERWRITE_NOBLE_DAMAGE_ANIMATION
 OVER_COST_COLOR
 OVER_KILL_NP_RATE
 OVER_KILL_STAR_ADD
@@ -10450,6 +10468,7 @@ OutSrcQuenchs
 OutTimeExcds
 OutTimestampReps
 OutTimestamps
+OutlineEffectMaterial
 OverWriteSkillInfoId
 Overflow
 Overflow or underflow in the arithmetic operation.
@@ -10460,6 +10479,7 @@ OverwriteMotion_{0}
 OverwritePopupColor
 OverwritePopupText
 OverwriteShadowServantEffectNodes
+OverwriteTargetNobleAnimationName
 OverwriteUIVersion
 Owner
 P
@@ -10616,7 +10636,9 @@ PARTY_ORGANIZATION_FIX_NPC_ONLY_EXPLANATION
 PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_AUTO_USE
 PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_EXPIRED
 PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_HAVE
+PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_IN_USE
 PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_NUM
+PARTY_ORGANIZATION_FRIENDSHIP_UP_ITEM_UNUSED
 PARTY_ORGANIZATION_GET_SERVANT_POINT
 PARTY_ORGANIZATION_INPUT_DECK_NAME_EXPLANATION
 PARTY_ORGANIZATION_INPUT_DECK_NAME_TITLE
@@ -13147,6 +13169,8 @@ Setter should have void type.
 Setting a context on the level initializer when we already have one.
 Setting and getting Body Position/Rotation, IK Goals, Lookat and BoneLocalRotation should only be done in OnAnimatorIK or OnStateIK
 Setting position is not supported on 
+SetupSkinnedMeshRenderer -> SkinnedMeshRenderer is null
+SetupSkinnedMeshRenderer -> sharedMesh from SkinnedMeshRenderer returned null value
 SetupVp9Decoder
 Shader "Lines/Colored Blended" {SubShader { Pass { 	Blend SrcAlpha OneMinusSrcAlpha 	ZWrite Off Cull Off Fog { Mode Off } 	BindChannels {	Bind "vertex", vertex Bind "color", color }} } }
 Shaders/ChocoMap
@@ -13358,6 +13382,8 @@ Start may not be called on a task that has completed.
 Start may not be called on a task that was already started.
 StartAnimationName
 StartAttribute
+StartBattleScreenEffect
+StartBattleSoundMode
 StartBgAnim
 StartBoardGamePieceEffectSub
 StartControllerModule
@@ -13445,6 +13471,9 @@ Stuff
 StyleNotFoundError
 Su
 Sub
+SubBGCamera
+SubChrCamera
+SubEffectCamera
 SubOvf
 Subject Alternative Name
 Subject Key Identifier
@@ -15338,6 +15367,7 @@ Unknown server handshake message type:
 Unknown version '{0}', expected versions between ['{1}','{2}'].
 Unknown.
 Unkown CipherMode
+Unlit/PartiallyModifiableGrayScale
 Unlit/Text
 Unlit/Transparent Colored
 Unlit/Transparent Colored_Choco
@@ -15388,11 +15418,13 @@ UpdateChange
 UpdateColor
 UpdateDefenceTargetDamageGauge
 UpdateGauge
+UpdateNpImmediately
 UpdateRemainTime
 UpdateRule
 UpdateRules
 UpdateSequencerCoroutine
 UpdateStatusByTransform
+UpdateTdGauge
 UpdateTweenPosition
 UpdateValue
 Upgrade
@@ -16325,6 +16357,7 @@ _ClipArgs0
 _ClipArgs1
 _ClipArgs2
 _ClipArgs3
+_ClipFade
 _ClipRange0
 _ClipRange1
 _ClipRange2
@@ -16337,6 +16370,7 @@ _CodeBase
 _Coefficient
 _Color
 _ColorBuffer
+_ColorKeysLength
 _ColorMask
 _Column
 _Contrast
@@ -16377,6 +16411,8 @@ _FogColor
 _FourTex
 _GameCam_VP
 _Gradation
+_GradientArrayColors
+_GradientArrayKeys
 _GrainOffsetScale
 _GrainTex
 _HashAlgorithm
@@ -16386,6 +16422,7 @@ _Id
 _Intensity
 _IsEnemy
 _IsProportion
+_IsSet
 _IsVertical
 _L
 _L_
@@ -16411,6 +16448,9 @@ _NearRangeLength
 _NoiseScale
 _Offset
 _Offsets
+_OutlineShiftPixel
+_OutlineThickness
+_OverTex
 _PLAYER
 _PanelReplace
 _PanelSpaceMatrix
@@ -16432,6 +16472,7 @@ _Range
 _Rect
 _RenderType
 _RotationMatrix
+_RotationSpeed
 _S
 _SAFE
 _SSAO
@@ -16442,6 +16483,7 @@ _ScratchTex
 _SecondTex
 _Shadow
 _Sigma
+_Size
 _Spread
 _SrcBlendMode
 _StartTime
@@ -16472,6 +16514,7 @@ _ThresholdParams
 _TintColor
 _TransmissionCoefficient
 _TransmissionRatioRange
+_UVPosition
 _UseDefaultCredentials
 _UseRegistry
 _UseSubtex
@@ -16479,6 +16522,8 @@ _UseUIAlphaClip
 _Use_alphawidth
 _Version
 _VersionCompatibility
+_VertexOffset
+_VertexScale
 _VignetteTex
 _Volume
 _Weights
@@ -17173,6 +17218,7 @@ bit_item_get01
 bit_item_get01_2
 bit_item_get01_3
 bit_item_get01_4
+bit_item_get_phase{0}
 bit_item_get{0}
 bit_mastercutin01
 bit_mural_update
@@ -17184,6 +17230,7 @@ bit_orderrank_change
 bit_orderrank_change_{0:00}
 bit_present_get
 bit_present_get{0}
+bit_prize_get
 bit_raid_battlereport
 bit_raid_turnstart
 bit_raid_turnstart_
@@ -17346,6 +17393,7 @@ bt-breadcrumbs
 bt-breadcrumbs-0
 btime
 btn
+btnLayoutType
 btn_Polaroid_bg
 btn_atk_
 btn_auto_off
@@ -18050,9 +18098,9 @@ components
 compressedStream
 concat
 concurrencyLevel
-condBattleStart
 condHaving
 condId
+condQuestClearable
 condTitle
 condType
 conds
@@ -18577,6 +18625,8 @@ ef_animation_skip
 ef_anning
 ef_anning1
 ef_anning2
+ef_avoid_reset_damage
+ef_avoid_reset_damage_text
 ef_badge_glow
 ef_blackpoint
 ef_boxitem_drop
@@ -18692,6 +18742,7 @@ effectPause
 effectStart
 effectStop
 effectSvtId
+effectText
 effect_Circle_act1
 effect_Circle_act2
 effect_Circle_loop
@@ -19109,6 +19160,8 @@ fadeOff
 fadein
 fadeout
 failed a fake store purchase
+failed to get Custom/OutlineEffectShader from Shader.Find
+failed to get SkinnedMeshRenderer component from parent
 fake
 false
 family
@@ -19233,6 +19286,7 @@ forceDropItem
 forceFullScreenSize
 forceId
 forceOverwrite
+forcePlayFirst
 forceReset
 forcedSkillSpeed
 foreach
@@ -19244,6 +19298,8 @@ format=minidump
 format=plcrash
 format=symbols
 formationBgmId
+formationSubBgmFadeInTime
+formationSubBgmId
 formation_blank_01
 formation_blank_small
 formation_fixing_bg
@@ -19350,6 +19406,7 @@ ftp://
 full
 fullname
 func
+funcIndividuality
 funcName
 funcPositionForSplitFuncSequence
 func_group_icon_
@@ -19475,6 +19532,7 @@ getUserID
 getView
 getWindow
 getWindowVisibleDisplayFrame
+get_02
 get_HasValue
 get_Length
 get_Position
@@ -19524,6 +19582,7 @@ gsw-FR
 gt
 gu
 gu-IN
+guardEffectId
 guid
 gutsIconId
 gutsText
@@ -19792,6 +19851,7 @@ icon_rarity5
 icon_reinforced
 icon_return_bg
 icon_reward_get
+icon_reward_step{0}
 icon_sealact_disable
 icon_sealact_seal
 icon_sealact_skill
@@ -20463,6 +20523,7 @@ itemId
 itemSelectIdx
 itemSelectNum
 itemType
+item_get/title_root
 item_mini_49
 item_recover
 item_use
@@ -20569,7 +20630,7 @@ key
 key expansion
 key is null
 key was invalid
-key({0}) の値がディクショナリに含まれていません
+key(
 keyBlob
 keySelector
 keySet
@@ -21273,6 +21334,7 @@ mstMapGimmickPath
 mstMapGimmickPathRelease
 mstMapGimmickRelease
 mstMapLayer
+mstMapUpdateSchedule
 mstMasterMission
 mstMasterMissionDisplayInfo
 mstMasterPhoto
@@ -21294,6 +21356,7 @@ mstQuestMessage
 mstQuestPhase
 mstQuestPhaseDetail
 mstQuestPhaseDetailAdd
+mstQuestPhasePresent
 mstQuestPickup
 mstQuestRacePoint
 mstQuestRandomGroup
@@ -21382,6 +21445,7 @@ mstSvtScriptAdd
 mstSvtScriptMultiple
 mstSvtSkill
 mstSvtSkillRelease
+mstSvtTransform
 mstSvtTreasureDevice
 mstSvtTreasureDeviceAdd
 mstSvtTreasureDeviceDamage
@@ -21895,6 +21959,7 @@ parameters
 parameters.Count
 params
 parent
+parent is null. please attach this component to object with parent
 parentId
 parentkey
 parnetName
@@ -21981,10 +22046,12 @@ playerhp_1
 playerhp_3
 playingMovie
 playmodeStateChanged
+please play!!
 png
 point_status_side
 pointer
 pooledStream
+popupEffectId
 port
 portraitLimitCount
 portrait_back
@@ -22033,6 +22100,7 @@ progress
 progressAfterMovie
 progress_reward_board
 progress_reward_board_{0}
+prohibitBgmChangeInTreasureDeviceAnim
 prohibited
 project_config
 property
@@ -22220,6 +22288,7 @@ reelSkill
 ref
 ref 
 refer
+referToQuestPhase
 referer
 referrerMapId
 reflectionType
@@ -22587,6 +22656,8 @@ shadow_
 shake
 shakeStop
 share
+sharedMaterials from SkinnedMeshRenderer returned null value
+sharedMesh from SkinnedMeshRenderer returned null value
 shift
 shift-jis
 shiftClear
@@ -22921,6 +22992,7 @@ substring
 substring-after
 substring-before
 subtype
+success
 successResult
 suffix
 sum
@@ -23200,6 +23272,7 @@ timerStartInMilliseconds
 timestamp
 tipsarchivestatesave_{0}.dat
 title
+title01
 title2_2
 titleOffset
 title_
@@ -24322,6 +24395,7 @@ zu-ZA
 ぀゠
 あと 
 いいえ
+が null です
 このアセットは存在しません。
 このバージョン間では差分はありません。
 そのサウンドはcpkリスト内に存在しません
@@ -24339,6 +24413,7 @@ zu-ZA
 ガッツ
 キャンセル
 キュー順
+キー
 クイック
 クラス：
 クリア【完了】チュートリアル
@@ -24352,7 +24427,7 @@ CUSTOM に変更しました
 ストーリークエスト敗北【画面】クエスト
 ストーリークエスト開始【完了】クエスト
 ストーリークエスト開放状況
-ディクショナリが null です
+ディクショナリ
 デイリーミッション達成【完了】ミッション
 データ更新
 データ更新のためゲームを終了します。
@@ -24365,6 +24440,7 @@ CUSTOM に変更しました
 バフID[{0}]はマスターに存在しておりません
 プレイヤー
 ユーザーIDが存在しないため設定できません
+リスト
 ルビを含むテキストにも[#置換:ちかん]できますよ
 レベル上限：
 ・
@@ -24387,6 +24463,7 @@ CUSTOM に変更しました
 全ての通知
 分
 効果測定フラグ
+型が不正です:{0}
 大
 大正
 存在しないバフIDです
@@ -24401,6 +24478,7 @@ CUSTOM に変更しました
 所持
 指定されたプロダクトデータが取得できませんでした
 指定可能な少数点以下の桁数は({0}～{1})です
+文字列
 既に表明違反時の処理が設定されています
 日
 时
@@ -24429,7 +24507,7 @@ CUSTOM に変更しました
 購入処理中に問題が発生しました
 通信に失敗したので再度通信を行います
 通信失敗
-配列が null です
+配列
 降順
 霊基再臨【完了】強化
 ꀀ꒐
