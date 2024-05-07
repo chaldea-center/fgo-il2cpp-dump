@@ -13961,6 +13961,7 @@ public enum TitleInfoControl.TitleKind
 	ADVANCED = 86,
 	RECOLLECTION = 87,
 	BONUS_SELECT_SUMMON = 88,
+	ACCOUNT_LINKAGE = 89,
 }
 
 public enum TitleInfoControl.BackKind
@@ -15782,6 +15783,7 @@ public enum DataNameKind.Kind
 	SERVANT_TRANSFORM = 487,
 	MAP_UPDATE_SCHEDULE = 488,
 	QUEST_PHASE_PRESENT = 489,
+	USER_ACCOUNT_LINKAGE = 490,
 }
 
 public enum Device.Type
@@ -18923,6 +18925,10 @@ public enum PartialMaintenanceEntity.PartialMaintenanceType
 {
 	STONE_GACHA = 1,
 	CHALICE = 2,
+	GOOGLE_BANK = 3,
+	APPLE_BANK = 4,
+	AU_BANK = 5,
+	ANIPLEX_PLUS_ACCOUNT_LINKAGE = 6,
 }
 
 public enum QuestEntity.enType
@@ -24416,6 +24422,7 @@ private enum MyRoomControl.MENUTYPE
 	MATERIAL_SERVANT = 15,
 	MATERIAL_MAIN_INTERLUDE = 16,
 	SERVANT_COIN = 17,
+	ACCOUNT_LINKAGE = 18,
 }
 
 public enum MyRoomControl.STATE
@@ -24765,8 +24772,9 @@ public enum MyRoomHelpListViewManager.ItemKind
 	MYROOM_HELP_HELP = 8,
 	MYROOM_HELP_OPTION = 9,
 	MYROOM_HELP_TAKE_OVER = 10,
-	MYROOM_HELP_RETURN_TITLE = 11,
-	MYROOM_BLANK = 12,
+	MYROOM_HELP_ACCOUNT_LINKAGE = 11,
+	MYROOM_HELP_RETURN_TITLE = 12,
+	MYROOM_BLANK = 13,
 }
 
 public enum MyRoomHelpListViewManager.InitMode
