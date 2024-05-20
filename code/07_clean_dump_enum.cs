@@ -14486,6 +14486,17 @@ public enum BattleCommand.TYPE
 	STRENGTH = 11,
 }
 
+public enum CommandCardTypeChange
+{
+	NONE = 0,
+	ARTS_TO_BUSTER = 1,
+	ARTS_TO_QUICK = 2,
+	BUSTER_TO_ARTS = 3,
+	BUSTER_TO_QUICK = 4,
+	QUICK_TO_ARTS = 5,
+	QUICK_TO_BUSTER = 6,
+}
+
 public enum BehaviorType.Kind
 {
 	SKILL = 1,
