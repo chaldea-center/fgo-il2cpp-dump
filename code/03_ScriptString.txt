@@ -244,6 +244,8 @@ Proxy-Connection: keep-alive
  cannot be serialized because it does not have a default public constructor
  cannot be serialized because it is an interface
  cannot be unmarshalled
+ category: 
+ checkPoint: 
  contains no data
  content="
  controls when doing 
@@ -424,9 +426,11 @@ Content-Type:
 #787878
 #808080
 #A
+#B30000
 #B7A37B
 #E1A545
 #E1C896
+#E60000
 #E6FF00
 #FE4545
 #FEEF99
@@ -1241,11 +1245,11 @@ file crc (
 2.5.4.6
 2.5.4.7
 2.5.4.8
-2.92.1
+2.93.0
 20
 200
 20220731_BOOST_RATE_1
-20240517_13:58
+20240603_15:28
 264
 2841AE
 2D UI
@@ -1308,7 +1312,6 @@ file crc (
 7
 71
 7999
-7ad5df652e16aa2e195beaa30d45a9a4cde8f963bebcc94fe384e2754f9f5314
 8
 8 bytes maximum
 80341001
@@ -1776,7 +1779,7 @@ ACCOUNT_LINKAGE_DELINK_CONFIRM_DECIDE
 ACCOUNT_LINKAGE_DELINK_CONFIRM_MESSAGE
 ACCOUNT_LINKAGE_DELINK_CONFIRM_TITLE
 ACCOUNT_LINKAGE_DELINK_CONFIRM_WARNING
-ACCOUNT_LINKAGE_LABEL_CANNOT_GET_CONTINUE_NUMBER
+ACCOUNT_LINKAGE_ERROR_MESSAGE
 ACCOUNT_LINKAGE_MAINTENANCE_MESSAGE
 ACCOUNT_LINKAGE_MENU_MESSAGE
 ACCOUNT_LINKAGE_MENU_WARNING
@@ -1804,6 +1807,7 @@ ACCOUNT_LINKAGE_TAKEOVER_BUTTON
 ACCOUNT_LINKAGE_TAKEOVER_BUTTON_NO_USER_DATA
 ACCOUNT_LINKAGE_TAKEOVER_CURRENT_TITLE
 ACCOUNT_LINKAGE_TAKEOVER_DETAIL_MESSAGE
+ACCOUNT_LINKAGE_TAKEOVER_ERROR_MESSAGE
 ACCOUNT_LINKAGE_TAKEOVER_OVERRIDE_TITLE
 ACHIEVEMENT_EXCHANGE_CONDITIONS_FREE_SHOP_DETAIL
 ACHIEVEMENT_EXCHANGE_CONDITIONS_FREE_SHOP_TITLE
@@ -2770,6 +2774,7 @@ BGM_TITLE_4
 BGM_TITLE_5
 BGMテストに
 変更
+BG_INDIVIDUALITY_VALUE_RANGE
 BINARY
 BIRTHDAY
 BIRTHDAY_BEFORE_VALENTINE_SVT_ID
@@ -4757,6 +4762,7 @@ Custom/Sprite-MasterFigure (SoftClip)
 Custom/Sprite-ScriptActionEquipNormal
 Custom/Sprite-ScriptActionEquipSilhouette
 Custom/Sprite-ScriptActionFigureCrossFade
+Custom/Sprite-ScriptActionFigureCrossFadeAnotherWide
 Custom/Sprite-ScriptActionFigureCrossFadeSummon
 Custom/Sprite-ScriptActionFigureCut
 Custom/Sprite-ScriptActionFigureErasure
@@ -4834,7 +4840,6 @@ DIGGING_REWARD_DIALOG_VIEW_CHANGE
 DIGGING_TOTAL_EVENT_POINT_NUM
 DIN_66003
 DISABLE
-DISABLE_CONTINUE_DEVICE
 DISABLE_FRIENDSHIP_EXCEED
 DISABLE_SERVANT_EFFECT_FILTER
 DISCONNECTED FROM SERVER
@@ -5710,7 +5715,6 @@ EFS version not support
 EINVALIDPROCTABLE
 EINVALIDPROVIDER
 ELOT_928
-ENABLE_CONTINUE_DEVICE
 ENABLE_PRESENT_HISTORY
 ENABLE_SERIAL_CODE
 ENDPOINT
@@ -6479,6 +6483,7 @@ Exception while getting UnityServices.State:
 Exception:
 ExceptionMethod
 Exceptions
+ExcludeMotionTargetId
 ExcludeSchema
 ExcludeUnSubStateIndiv
 Exclusive semaphore already owned
@@ -6792,6 +6797,7 @@ FUNC_VALUE_PERCENT
 FaceBattle/DownloadFaceBattle
 Faces/DownloadFace
 Facet should go before 'attribute', 'attributeGroup', or 'anyAttribute'.
+FadeChangeColor
 FadeObject
 FadeOff
 FadeOutBGM
@@ -7722,6 +7728,7 @@ ISO_8859-8
 ISO_8859-8:1988
 ISO_8859-9
 ISO_8859-9:1989
+IS_ENABLE_FADE_RERUN_SKIPPED
 IS_ENABLE_OLD_BLOCK_SHORTEST_ROUTE
 IS_EVENT_POINT_MENU
 IS_IOS_EXAMINATION
@@ -10113,11 +10120,19 @@ OPTION_RERSOLUTION_INFO
 OPTION_RERSOLUTION_INFO_DISABLE
 OPTION_RERSOLUTION_LOW
 OPTION_RERSOLUTION_NORMAL
+OPTION_SCENARIO_AUTO_WAIT_TIME
+OPTION_SCENARIO_AUTO_WAIT_TIME_COMMENT
+OPTION_SCENARIO_AUTO_WAIT_TIME_LONG
+OPTION_SCENARIO_AUTO_WAIT_TIME_SHORT
 OPTION_SCENARIO_COMMENT
 OPTION_SCENARIO_SCROLL_SPEED
+OPTION_SCENARIO_SCROLL_SPEED_FAST
+OPTION_SCENARIO_SCROLL_SPEED_SLOW
 OPTION_SCENARIO_SPEED
 OPTION_SCENARIO_TEXTWAIT_SPEED
 OPTION_SCENARIO_TEXT_SPEED
+OPTION_SCENARIO_TEXT_SPEED_FAST
+OPTION_SCENARIO_TEXT_SPEED_SLOW
 OPTION_SCENARIO_UNIT
 OPTION_SE
 OPTION_SMOOTHNESS_ATTENTION
@@ -10480,6 +10495,7 @@ OptionNotiffication
 OptionPreBattleFormation
 OptionRaidNotiffication
 OptionResolutionType
+OptionScenarioAutoWaitTime
 OptionScenarioScrollSpeed
 OptionScenarioSpeed
 OptionScenarioText
@@ -11990,7 +12006,10 @@ SCRIPT_ACTION_LOG_SELECT_COLOR
 SCRIPT_ACTION_LOG_SELECT_MESSAGE
 SCRIPT_ACTION_LOG_SELECT_MESSAGE2
 SCRIPT_ACTION_LOG_SELECT_TIME_OVER_COLOR
+SCRIPT_ACTION_NOT_SET_AUTO_WAIT_COMMAND
+SCRIPT_ACTION_NOT_SET_AUTO_WAIT_TARGET
 SCRIPT_ACTION_SELECT_COLOR
+SCRIPT_ACTION_SET_AUTO_WAIT_TARGET
 SCRIPT_ACTION_SKIP_CONFIRM_DETAIL
 SCRIPT_ACTION_SKIP_CONFIRM_EXIT
 SCRIPT_CHAPTER_SUB_TITLE_BASE
@@ -12195,6 +12214,7 @@ SERVANT_SORT_BONUS_KIND_EVENT_
 SERVANT_SORT_BONUS_KIND_FINISH_EVENT
 SERVANT_SORT_BONUS_KIND_ONLY
 SERVANT_SORT_BONUS_KIND_SERVANT
+SERVANT_SORT_BONUS_KIND_SERVANT_
 SERVANT_SORT_CANCEL
 SERVANT_SORT_CLEAR
 SERVANT_SORT_COSTUME_NOT_OPEN
@@ -13333,6 +13353,7 @@ Software caused connection abort
 SolidWall
 Some not mapped
 Some services couldn't be initialized. Look at inner exceptions to get more information.
+Sony SO-41B
 SortFilter-
 SortFilter2-
 SortFilterLongNew-
@@ -16213,6 +16234,8 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 データ名={0}、キー名={1}が存在しません
 [DataManager.ClearCacheAllCommonProc] Error:
 [E1A545,FEEF99]
+[FADE]
+
 [FCF050]
 [FF0000]
 [FF0000]{0}{1:#,0}[-]
@@ -16311,6 +16334,7 @@ Please make sure you have it included at the Editor > Project Settings > Graphic
 [wait time 
 [wait time {0}]
 
+[wt 
 [x-y] range in reverse order.
 [{0:D4}] {1}
 [{0}: {1}]
@@ -16599,6 +16623,7 @@ _UseRegistry
 _UseSubtex
 _UseUIAlphaClip
 _Use_alphawidth
+_UvRangeX
 _Version
 _VersionCompatibility
 _VertexOffset
@@ -16730,6 +16755,7 @@ _{0}{1:D2}
 a
 a date can have multiple adjustment rules applied to it
 a77d
+a87c029355ca3006495c86cc7fe5024d22ef3601b4a7c67c10087cb8e74669e2
 aa
 absoluteUri
 abstract
@@ -17399,7 +17425,6 @@ blacklist/top
 blacklist_regist
 blacklist_remove
 blacklist_top
-blackoutPanel
 blankEarthRotateKey
 blink
 blit to Back buffer
@@ -21400,7 +21425,7 @@ mstEventUi
 mstEventUiRelease
 mstEventUiValue
 mstEventVoicePlay
-mstExcludeMotion
+mstExcludeMotionCond
 mstFieldMotion
 mstFriendship
 mstFunc
@@ -21448,6 +21473,7 @@ mstMasterMission
 mstMasterMissionDisplayInfo
 mstMasterPhoto
 mstMaterialFolder
+mstMissionNaviTransition
 mstMyroomAdd
 mstNews
 mstOpeningMovie
@@ -23461,6 +23487,7 @@ transform.position
 transform.rotation
 transformNames
 transition
+transitionParam
 translate
 transport
 treasure
@@ -23913,7 +23940,6 @@ warEffectPiece
 warEffectPos
 warEffectSquare
 warEventScript
-warId
 warMoveCameraPiece
 warMoveCameraPos
 warMoveCameraSquare
@@ -24283,6 +24309,7 @@ zu-ZA
 
 {0} {1} {2}
 {0} {1}個
+{0} カラー[{1}] 状態[{2}] 再生時間[{3}s]
 {0}" or "{1}
 {0}() argument is out of range.
 {0}(Clone)
@@ -24349,6 +24376,7 @@ zu-ZA
 {0}AuthState [{1}:{2}]
 {0}Changed
 {0}[{1}]
+{0}_
 {0}_{1:D0}_{2}
 {0}_{1}
 {0}_{1})に該当する効果が存在しません
@@ -24585,7 +24613,9 @@ CUSTOM に変更しました
 大
 大正
 存在しないバフIDです
+完了状態
 宝具
+実行中
 差分チェック
 差分チェック
 終了

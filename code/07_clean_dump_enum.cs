@@ -15170,6 +15170,9 @@ public enum CondType.Kind
 	WITH_STARTING_MEMBER = 216,
 	LATEST_QUEST_PHASE_EQUAL = 217,
 	NOT_LATEST_QUEST_PHASE_EQUAL = 218,
+	PURCHASE_SHOP_NUM = 219,
+	MISSION_ACHIEVE_NUM_BELOW = 221,
+	MISSION_ACHIEVE_NUM_ABOVE = 222,
 }
 
 public enum CondType.CheckType
@@ -15795,6 +15798,7 @@ public enum DataNameKind.Kind
 	MAP_UPDATE_SCHEDULE = 488,
 	QUEST_PHASE_PRESENT = 489,
 	USER_ACCOUNT_LINKAGE = 490,
+	MISSION_NAVI_TRANSITION = 491,
 }
 
 public enum Device.Type
@@ -16782,6 +16786,7 @@ public enum StrengthStatus.Kind
 
 public enum SvtAttri.TYPE
 {
+	NONE = 0,
 	HUMAN = 1,
 	SKY = 2,
 	GROUND = 3,
@@ -18062,7 +18067,13 @@ public enum DataVals.TYPE
 	BgmAllowSubPlaying = 160,
 	BgPriority = 161,
 	PriorityBg = 162,
-	ResetBgmPriorityAtWaveStart = 163,
+	ResetPriorityBgmAtWaveStart = 163,
+	ControlOtherBgmAtOverStageBgm_Priority = 164,
+	ControlOtherBgmAtOverStageBgm_Target = 165,
+	ExtendBuffHalfTurnInOpponentTurn = 166,
+	ShortenBuffHalfTurnInOpponentTurn = 167,
+	ExtendBuffHalfTurnInPartyTurn = 168,
+	ShortenBuffHalfTurnInPartyTurn = 169,
 }
 
 public enum DataVals.OverChargeState
@@ -18405,6 +18416,12 @@ public enum EventEntity.EventOpenType
 	REPEAT = 2,
 }
 
+public enum EventFilterEntity.EventFilterType
+{
+	EVENT = 0,
+	EVENT_GROUP = 1,
+}
+
 public enum EventFilterEntity.FlagKind
 {
 	SUPPORT_NO_DISPLAY = 1,
@@ -18480,6 +18497,7 @@ public enum EventMissionCondDetailEntity.MissionCondType
 	USE_TREASURE_DEVICE_EXCHANGE_SVT = 38,
 	PLAY_VOICE_EXCHANGE_SVT = 39,
 	MAP_GIMMICK_COUNT = 40,
+	PURCHASE_SHOP_NUM = 41,
 }
 
 public enum EventMissionCondDetailEntity.MissionConditionLinkType
@@ -18747,11 +18765,18 @@ public enum EventUiValueEntity.ValueType
 	ASSIST = 6,
 }
 
+public enum ExcludeMotionEntity.TargetIdType
+{
+	ExcludeMotionTargetId = 1,
+	QuestId = 2,
+	WarId = 3,
+}
+
 public enum ExcludeMotionEntity.TargetSvtType
 {
-	ENEMY = 2,
-	NPC = 4,
-	PLAYER = 8,
+	ENEMY = 1,
+	NPC = 2,
+	PLAYER = 3,
 }
 
 public enum FieldMotionEntity.Flag
@@ -18845,6 +18870,15 @@ public enum MapGimmickPathEntity.MapGimmickPathType
 	NONE = 0,
 	EVENT_TIME_LIMIT_RAID = 1,
 	QUEST_GROUP_CLEAR_STEP = 2,
+}
+
+public enum MissionNaviTransitionEntity.MissionTransitionType
+{
+	NONE = 0,
+	QUEST = 1,
+	WAR = 2,
+	SPOT = 3,
+	SCENE = 4,
 }
 
 public enum MstMissionMaster.CurrentType
@@ -20295,12 +20329,15 @@ public enum ListViewSort.Filter2Type
 
 public enum ListViewSort.BonusFilterKind
 {
-	ALL = 0,
-	EVENT = 1,
-	SERVANT = 2,
+	NONE = 0,
+	ALL = 1,
+	COMBINE_CAMPAIGN = 2,
 	CAMPAIGN = 3,
-	CLOSE_EVENT = 4,
-	FINISH_EVENT = 5,
+	EVENT = 4,
+	QUEST_OPEN_EVENT = 5,
+	FINISH_EVENT = 6,
+	SERVANT = 7,
+	CLOSE_EVENT = 8,
 }
 
 public enum ListViewSort.ScaleType
@@ -21970,9 +22007,11 @@ private enum BattleServantConfConponent.TAB
 
 private enum BattleServantConfConponent.HideState
 {
+	NONE = 0,
 	QUESTION = 1,
-	NONE = 2,
+	HYPHEN = 2,
 	HIDDEN = 3,
+	FRAUD = 4,
 }
 
 private enum BattleServantHeadUpComponent.MODE
@@ -30382,6 +30421,7 @@ public enum FGOPerformance.Effect
 	LOSS_COMMAND_SPELL = 32,
 	MOVE_TO_SUBMEMBER = 33,
 	START_FADE_OUT = 34,
+	PREV_WAVE_START_ANIMATION_AFTER_AI = 35,
 }
 
 public enum FGOPlayStarDirection.DirectionType
