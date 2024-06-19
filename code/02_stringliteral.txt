@@ -2,11 +2,16 @@
 
 	
 	
-  
+
+
+  
 	
- ퟿�
+
+
+ ퟿�
 	
- '(),-./0123456789:?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+
+ '(),-./0123456789:?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
 	 !
 
 
