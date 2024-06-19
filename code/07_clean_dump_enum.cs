@@ -1,12442 +1,3 @@
-private enum SimpleCollator.ExtenderType
-{
-	None = 0,
-	Simple = 1,
-	Voiced = 2,
-	Conditional = 3,
-	Buggy = 4,
-}
-
-internal enum X509ChainStatusFlags
-{
-	InvalidBasicConstraints = 1024,
-	NoError = 0,
-	NotSignatureValid = 8,
-	NotTimeNested = 2,
-	NotTimeValid = 1,
-	PartialChain = 65536,
-	UntrustedRoot = 32,
-}
-
-public enum PKCS8.KeyInfo
-{
-	PrivateKey = 0,
-	EncryptedPrivateKey = 1,
-	Unknown = 2,
-}
-
-public enum BigInteger.Sign
-{
-	Zero = 0,
-	Positive = 1,
-}
-
-internal enum ConfidenceFactor
-{
-	ExtraLow = 0,
-	Low = 1,
-	Medium = 2,
-	High = 3,
-	ExtraHigh = 4,
-	Provable = 5,
-}
-
-public enum RegistryHive
-{
-}
-
-public enum RegistryValueKind
-{
-	Unknown = 0,
-	String = 1,
-	ExpandString = 2,
-	Binary = 3,
-	DWord = 4,
-	MultiString = 7,
-	QWord = 11,
-}
-
-public enum RegistryValueOptions
-{
-	None = 0,
-	DoNotExpandEnvironmentNames = 1,
-}
-
-public enum AttributeTargets
-{
-	Assembly = 1,
-	Module = 2,
-	Class = 4,
-	Struct = 8,
-	Enum = 16,
-	Constructor = 32,
-	Method = 64,
-	Property = 128,
-	Field = 256,
-	Event = 512,
-	Interface = 1024,
-	Parameter = 2048,
-	Delegate = 4096,
-	ReturnValue = 8192,
-	GenericParameter = 16384,
-	All = 32767,
-}
-
-public enum ConsoleColor
-{
-	Black = 0,
-	DarkBlue = 1,
-	DarkGreen = 2,
-	DarkCyan = 3,
-	DarkRed = 4,
-	DarkMagenta = 5,
-	DarkYellow = 6,
-	Gray = 7,
-	DarkGray = 8,
-	Blue = 9,
-	Green = 10,
-	Cyan = 11,
-	Red = 12,
-	Magenta = 13,
-	Yellow = 14,
-	White = 15,
-}
-
-public enum ConsoleKey
-{
-	Backspace = 8,
-	Tab = 9,
-	Clear = 12,
-	Enter = 13,
-	Pause = 19,
-	Escape = 27,
-	Spacebar = 32,
-	PageUp = 33,
-	PageDown = 34,
-	End = 35,
-	Home = 36,
-	LeftArrow = 37,
-	UpArrow = 38,
-	RightArrow = 39,
-	DownArrow = 40,
-	Select = 41,
-	Print = 42,
-	Execute = 43,
-	PrintScreen = 44,
-	Insert = 45,
-	Delete = 46,
-	Help = 47,
-	D0 = 48,
-	D1 = 49,
-	D2 = 50,
-	D3 = 51,
-	D4 = 52,
-	D5 = 53,
-	D6 = 54,
-	D7 = 55,
-	D8 = 56,
-	D9 = 57,
-	A = 65,
-	B = 66,
-	C = 67,
-	D = 68,
-	E = 69,
-	F = 70,
-	G = 71,
-	H = 72,
-	I = 73,
-	J = 74,
-	K = 75,
-	L = 76,
-	M = 77,
-	N = 78,
-	O = 79,
-	P = 80,
-	Q = 81,
-	R = 82,
-	S = 83,
-	T = 84,
-	U = 85,
-	V = 86,
-	W = 87,
-	X = 88,
-	Y = 89,
-	Z = 90,
-	LeftWindows = 91,
-	RightWindows = 92,
-	Applications = 93,
-	Sleep = 95,
-	NumPad0 = 96,
-	NumPad1 = 97,
-	NumPad2 = 98,
-	NumPad3 = 99,
-	NumPad4 = 100,
-	NumPad5 = 101,
-	NumPad6 = 102,
-	NumPad7 = 103,
-	NumPad8 = 104,
-	NumPad9 = 105,
-	Multiply = 106,
-	Add = 107,
-	Separator = 108,
-	Subtract = 109,
-	Decimal = 110,
-	Divide = 111,
-	F1 = 112,
-	F2 = 113,
-	F3 = 114,
-	F4 = 115,
-	F5 = 116,
-	F6 = 117,
-	F7 = 118,
-	F8 = 119,
-	F9 = 120,
-	F10 = 121,
-	F11 = 122,
-	F12 = 123,
-	F13 = 124,
-	F14 = 125,
-	F15 = 126,
-	F16 = 127,
-	F17 = 128,
-	F18 = 129,
-	F19 = 130,
-	F20 = 131,
-	F21 = 132,
-	F22 = 133,
-	F23 = 134,
-	F24 = 135,
-	BrowserBack = 166,
-	BrowserForward = 167,
-	BrowserRefresh = 168,
-	BrowserStop = 169,
-	BrowserSearch = 170,
-	BrowserFavorites = 171,
-	BrowserHome = 172,
-	VolumeMute = 173,
-	VolumeDown = 174,
-	VolumeUp = 175,
-	MediaNext = 176,
-	MediaPrevious = 177,
-	MediaStop = 178,
-	MediaPlay = 179,
-	LaunchMail = 180,
-	LaunchMediaSelect = 181,
-	LaunchApp1 = 182,
-	LaunchApp2 = 183,
-	Oem1 = 186,
-	OemPlus = 187,
-	OemComma = 188,
-	OemMinus = 189,
-	OemPeriod = 190,
-	Oem2 = 191,
-	Oem3 = 192,
-	Oem4 = 219,
-	Oem5 = 220,
-	Oem6 = 221,
-	Oem7 = 222,
-	Oem8 = 223,
-	Oem102 = 226,
-	Process = 229,
-	Packet = 231,
-	Attention = 246,
-	CrSel = 247,
-	ExSel = 248,
-	EraseEndOfFile = 249,
-	Play = 250,
-	Zoom = 251,
-	NoName = 252,
-	Pa1 = 253,
-	OemClear = 254,
-}
-
-public enum ConsoleModifiers
-{
-	Alt = 1,
-	Shift = 2,
-	Control = 4,
-}
-
-public enum ConsoleSpecialKey
-{
-	ControlC = 0,
-	ControlBreak = 1,
-}
-
-public enum Base64FormattingOptions
-{
-	None = 0,
-	InsertLineBreaks = 1,
-}
-
-public enum DateTimeKind
-{
-	Unspecified = 0,
-	Utc = 1,
-	Local = 2,
-}
-
-public enum DayOfWeek
-{
-	Sunday = 0,
-	Monday = 1,
-	Tuesday = 2,
-	Wednesday = 3,
-	Thursday = 4,
-	Friday = 5,
-	Saturday = 6,
-}
-
-private enum Enum.ParseFailureKind
-{
-	None = 0,
-	Argument = 1,
-	ArgumentNull = 2,
-	ArgumentWithParameter = 3,
-	UnhandledException = 4,
-}
-
-internal enum Exception.ExceptionMessageKind
-{
-	ThreadAbort = 1,
-	ThreadInterrupted = 2,
-	OutOfMemory = 3,
-}
-
-public enum GCCollectionMode
-{
-	Default = 0,
-	Forced = 1,
-	Optimized = 2,
-}
-
-internal enum DateTimeParse.DTT
-{
-	End = 0,
-	NumEnd = 1,
-	NumAmpm = 2,
-	NumSpace = 3,
-	NumDatesep = 4,
-	NumTimesep = 5,
-	MonthEnd = 6,
-	MonthSpace = 7,
-	MonthDatesep = 8,
-	NumDatesuff = 9,
-	NumTimesuff = 10,
-	DayOfWeek = 11,
-	YearSpace = 12,
-	YearDateSep = 13,
-	YearEnd = 14,
-	TimeZone = 15,
-	Era = 16,
-	NumUTCTimeMark = 17,
-	Unk = 18,
-	NumLocalTimeMark = 19,
-	Max = 20,
-}
-
-internal enum DateTimeParse.TM
-{
-	AM = 0,
-	PM = 1,
-}
-
-internal enum DateTimeParse.DS
-{
-	BEGIN = 0,
-	N = 1,
-	NN = 2,
-	D_Nd = 3,
-	D_NN = 4,
-	D_NNd = 5,
-	D_M = 6,
-	D_MN = 7,
-	D_NM = 8,
-	D_MNd = 9,
-	D_NDS = 10,
-	D_Y = 11,
-	D_YN = 12,
-	D_YNd = 13,
-	D_YM = 14,
-	D_YMd = 15,
-	D_S = 16,
-	T_S = 17,
-	T_Nt = 18,
-	T_NNt = 19,
-	ERROR = 20,
-	DX_NN = 21,
-	DX_NNN = 22,
-	DX_MN = 23,
-	DX_NM = 24,
-	DX_MNN = 25,
-	DX_DS = 26,
-	DX_DSN = 27,
-	DX_NDS = 28,
-	DX_NNDS = 29,
-	DX_YNN = 30,
-	DX_YMN = 31,
-	DX_YN = 32,
-	DX_YM = 33,
-	TX_N = 34,
-	TX_NN = 35,
-	TX_NNN = 36,
-	TX_TS = 37,
-	DX_NNY = 38,
-}
-
-internal enum DTSubStringType
-{
-	Unknown = 0,
-	Invalid = 1,
-	Number = 2,
-	End = 3,
-	Other = 4,
-}
-
-internal enum ParseFailureKind
-{
-	None = 0,
-	ArgumentNull = 1,
-	Format = 2,
-	FormatWithParameter = 3,
-	FormatBadDateTimeCalendar = 4,
-}
-
-internal enum ParseFlags
-{
-	HaveYear = 1,
-	HaveMonth = 2,
-	HaveDay = 4,
-	HaveHour = 8,
-	HaveMinute = 16,
-	HaveSecond = 32,
-	HaveTime = 64,
-	HaveDate = 128,
-	TimeZoneUsed = 256,
-	TimeZoneUtc = 512,
-	ParsedMonthName = 1024,
-	CaptureOffset = 2048,
-	YearDefault = 4096,
-	Rfc1123Pattern = 8192,
-	UtcSortPattern = 16384,
-}
-
-internal enum TokenType
-{
-	NumberToken = 1,
-	YearNumberToken = 2,
-	Am = 3,
-	Pm = 4,
-	MonthToken = 5,
-	EndOfString = 6,
-	DayOfWeekToken = 7,
-	TimeZoneToken = 8,
-	EraToken = 9,
-	DateWordToken = 10,
-	UnknownToken = 11,
-	HebrewNumber = 12,
-	JapaneseEraToken = 13,
-	TEraToken = 14,
-	IgnorableSymbol = 15,
-	SEP_Unk = 256,
-	SEP_End = 512,
-	SEP_Space = 768,
-	SEP_Am = 1024,
-	SEP_Pm = 1280,
-	SEP_Date = 1536,
-	SEP_Time = 1792,
-	SEP_YearSuff = 2048,
-	SEP_MonthSuff = 2304,
-	SEP_DaySuff = 2560,
-	SEP_HourSuff = 2816,
-	SEP_MinuteSuff = 3072,
-	SEP_SecondSuff = 3328,
-	SEP_LocalTimeMark = 3584,
-	SEP_DateOrOffset = 3840,
-	RegularTokenMask = 255,
-	SeparatorTokenMask = 65280,
-}
-
-private enum Guid.GuidStyles
-{
-	None = 0,
-	AllowParenthesis = 1,
-	AllowBraces = 2,
-	AllowDashes = 4,
-	AllowHexPrefix = 8,
-	RequireParenthesis = 16,
-	RequireBraces = 32,
-	RequireDashes = 64,
-	RequireHexPrefix = 128,
-	HexFormat = 160,
-	NumberFormat = 0,
-	DigitFormat = 64,
-	BraceFormat = 96,
-	ParenthesisFormat = 80,
-	Any = 15,
-}
-
-private enum Guid.GuidParseThrowStyle
-{
-	None = 0,
-	All = 1,
-	AllButOverflow = 2,
-}
-
-private enum Guid.ParseFailureKind
-{
-	None = 0,
-	ArgumentNull = 1,
-	Format = 2,
-	FormatWithParameter = 3,
-	NativeException = 4,
-	FormatWithInnerException = 5,
-}
-
-public enum MidpointRounding
-{
-	ToEven = 0,
-	AwayFromZero = 1,
-}
-
-internal enum TypeNameFormatFlags
-{
-	FormatBasic = 0,
-	FormatNamespace = 1,
-	FormatFullInst = 2,
-	FormatAssembly = 4,
-	FormatSignature = 8,
-	FormatNoVersion = 16,
-	FormatAngleBrackets = 64,
-	FormatStubInfo = 128,
-	FormatGenericParam = 256,
-	FormatSerialization = 259,
-}
-
-internal enum TypeNameKind
-{
-	Name = 0,
-	ToString = 1,
-	SerializationName = 2,
-	FullName = 3,
-}
-
-internal enum RuntimeType.MemberListType
-{
-	All = 0,
-	CaseSensitive = 1,
-	CaseInsensitive = 2,
-	HandleToInfo = 3,
-}
-
-public enum StringSplitOptions
-{
-	None = 0,
-	RemoveEmptyEntries = 1,
-}
-
-internal enum ExceptionArgument
-{
-	obj = 0,
-	dictionary = 1,
-	dictionaryCreationThreshold = 2,
-	array = 3,
-	info = 4,
-	key = 5,
-	collection = 6,
-	list = 7,
-	match = 8,
-	converter = 9,
-	queue = 10,
-	stack = 11,
-	capacity = 12,
-	index = 13,
-	startIndex = 14,
-	value = 15,
-	count = 16,
-	arrayIndex = 17,
-	name = 18,
-	mode = 19,
-	item = 20,
-	options = 21,
-	view = 22,
-	sourceBytesToCopy = 23,
-	start = 24,
-	pointer = 25,
-	ownedMemory = 26,
-	text = 27,
-}
-
-internal enum ExceptionResource
-{
-	Argument_ImplementIComparable = 0,
-	Argument_InvalidType = 1,
-	Argument_InvalidArgumentForComparison = 2,
-	Argument_InvalidRegistryKeyPermissionCheck = 3,
-	ArgumentOutOfRange_NeedNonNegNum = 4,
-	Arg_ArrayPlusOffTooSmall = 5,
-	Arg_NonZeroLowerBound = 6,
-	Arg_RankMultiDimNotSupported = 7,
-	Arg_RegKeyDelHive = 8,
-	Arg_RegKeyStrLenBug = 9,
-	Arg_RegSetStrArrNull = 10,
-	Arg_RegSetMismatchedKind = 11,
-	Arg_RegSubKeyAbsent = 12,
-	Arg_RegSubKeyValueAbsent = 13,
-	Argument_AddingDuplicate = 14,
-	Serialization_InvalidOnDeser = 15,
-	Serialization_MissingKeys = 16,
-	Serialization_NullKey = 17,
-	Argument_InvalidArrayType = 18,
-	NotSupported_KeyCollectionSet = 19,
-	NotSupported_ValueCollectionSet = 20,
-	ArgumentOutOfRange_SmallCapacity = 21,
-	ArgumentOutOfRange_Index = 22,
-	Argument_InvalidOffLen = 23,
-	Argument_ItemNotExist = 24,
-	ArgumentOutOfRange_Count = 25,
-	ArgumentOutOfRange_InvalidThreshold = 26,
-	ArgumentOutOfRange_ListInsert = 27,
-	NotSupported_ReadOnlyCollection = 28,
-	InvalidOperation_CannotRemoveFromStackOrQueue = 29,
-	InvalidOperation_EmptyQueue = 30,
-	InvalidOperation_EnumOpCantHappen = 31,
-	InvalidOperation_EnumFailedVersion = 32,
-	InvalidOperation_EmptyStack = 33,
-	ArgumentOutOfRange_BiggerThanCollection = 34,
-	InvalidOperation_EnumNotStarted = 35,
-	InvalidOperation_EnumEnded = 36,
-	NotSupported_SortedListNestedWrite = 37,
-	InvalidOperation_NoValue = 38,
-	InvalidOperation_RegRemoveSubKey = 39,
-	Security_RegistryPermission = 40,
-	UnauthorizedAccess_RegistryNoWrite = 41,
-	ObjectDisposed_RegKeyClosed = 42,
-	NotSupported_InComparableType = 43,
-	Argument_InvalidRegistryOptionsCheck = 44,
-	Argument_InvalidRegistryViewCheck = 45,
-}
-
-internal enum TimeZoneInfoOptions
-{
-	None = 1,
-	NoThrowOnInvalidTime = 2,
-}
-
-internal enum Version.ParseFailureKind
-{
-	ArgumentNullException = 0,
-	ArgumentException = 1,
-	ArgumentOutOfRangeException = 2,
-	FormatException = 3,
-}
-
-public enum Environment.SpecialFolder
-{
-	MyDocuments = 5,
-	Desktop = 0,
-	MyComputer = 17,
-	Programs = 2,
-	Personal = 5,
-	Favorites = 6,
-	Startup = 7,
-	Recent = 8,
-	SendTo = 9,
-	StartMenu = 11,
-	MyMusic = 13,
-	DesktopDirectory = 16,
-	Templates = 21,
-	ApplicationData = 26,
-	LocalApplicationData = 28,
-	InternetCache = 32,
-	Cookies = 33,
-	History = 34,
-	CommonApplicationData = 35,
-	System = 37,
-	ProgramFiles = 38,
-	MyPictures = 39,
-	CommonProgramFiles = 43,
-	MyVideos = 14,
-	NetworkShortcuts = 19,
-	Fonts = 20,
-	CommonStartMenu = 22,
-	CommonPrograms = 23,
-	CommonStartup = 24,
-	CommonDesktopDirectory = 25,
-	PrinterShortcuts = 27,
-	Windows = 36,
-	UserProfile = 40,
-	SystemX86 = 41,
-	ProgramFilesX86 = 42,
-	CommonProgramFilesX86 = 44,
-	CommonTemplates = 45,
-	CommonDocuments = 46,
-	CommonAdminTools = 47,
-	AdminTools = 48,
-	CommonMusic = 53,
-	CommonPictures = 54,
-	CommonVideos = 55,
-	Resources = 56,
-	LocalizedResources = 57,
-	CommonOemLinks = 58,
-	CDBurning = 59,
-}
-
-public enum Environment.SpecialFolderOption
-{
-	None = 0,
-	DoNotVerify = 16384,
-	Create = 32768,
-}
-
-internal enum SByteEnum
-{
-}
-
-internal enum Int16Enum
-{
-}
-
-internal enum Int32Enum
-{
-}
-
-internal enum Int64Enum
-{
-}
-
-internal enum ByteEnum
-{
-}
-
-internal enum UInt16Enum
-{
-}
-
-internal enum UInt32Enum
-{
-}
-
-internal enum UInt64Enum
-{
-}
-
-public enum PlatformID
-{
-	Win32S = 0,
-	Win32Windows = 1,
-	Win32NT = 2,
-	WinCE = 3,
-	Unix = 4,
-	Xbox = 5,
-	MacOSX = 6,
-}
-
-public enum StringComparison
-{
-	CurrentCulture = 0,
-	CurrentCultureIgnoreCase = 1,
-	InvariantCulture = 2,
-	InvariantCultureIgnoreCase = 3,
-	Ordinal = 4,
-	OrdinalIgnoreCase = 5,
-}
-
-internal enum TermInfoNumbers
-{
-	Columns = 0,
-	InitTabs = 1,
-	Lines = 2,
-	LinesOfMemory = 3,
-	MagicCookieGlitch = 4,
-	PaddingBaudRate = 5,
-	VirtualTerminal = 6,
-	WidthStatusLine = 7,
-	NumLabels = 8,
-	LabelHeight = 9,
-	LabelWidth = 10,
-	MaxAttributes = 11,
-	MaximumWindows = 12,
-	MaxColors = 13,
-	MaxPairs = 14,
-	NoColorVideo = 15,
-	BufferCapacity = 16,
-	DotVertSpacing = 17,
-	DotHorzSpacing = 18,
-	MaxMicroAddress = 19,
-	MaxMicroJump = 20,
-	MicroColSize = 21,
-	MicroLineSize = 22,
-	NumberOfPins = 23,
-	OutputResChar = 24,
-	OutputResLine = 25,
-	OutputResHorzInch = 26,
-	OutputResVertInch = 27,
-	PrintRate = 28,
-	WideCharSize = 29,
-	Buttons = 30,
-	BitImageEntwining = 31,
-	BitImageType = 32,
-	Last = 33,
-}
-
-internal enum TermInfoStrings
-{
-	BackTab = 0,
-	Bell = 1,
-	CarriageReturn = 2,
-	ChangeScrollRegion = 3,
-	ClearAllTabs = 4,
-	ClearScreen = 5,
-	ClrEol = 6,
-	ClrEos = 7,
-	ColumnAddress = 8,
-	CommandCharacter = 9,
-	CursorAddress = 10,
-	CursorDown = 11,
-	CursorHome = 12,
-	CursorInvisible = 13,
-	CursorLeft = 14,
-	CursorMemAddress = 15,
-	CursorNormal = 16,
-	CursorRight = 17,
-	CursorToLl = 18,
-	CursorUp = 19,
-	CursorVisible = 20,
-	DeleteCharacter = 21,
-	DeleteLine = 22,
-	DisStatusLine = 23,
-	DownHalfLine = 24,
-	EnterAltCharsetMode = 25,
-	EnterBlinkMode = 26,
-	EnterBoldMode = 27,
-	EnterCaMode = 28,
-	EnterDeleteMode = 29,
-	EnterDimMode = 30,
-	EnterInsertMode = 31,
-	EnterSecureMode = 32,
-	EnterProtectedMode = 33,
-	EnterReverseMode = 34,
-	EnterStandoutMode = 35,
-	EnterUnderlineMode = 36,
-	EraseChars = 37,
-	ExitAltCharsetMode = 38,
-	ExitAttributeMode = 39,
-	ExitCaMode = 40,
-	ExitDeleteMode = 41,
-	ExitInsertMode = 42,
-	ExitStandoutMode = 43,
-	ExitUnderlineMode = 44,
-	FlashScreen = 45,
-	FormFeed = 46,
-	FromStatusLine = 47,
-	Init1string = 48,
-	Init2string = 49,
-	Init3string = 50,
-	InitFile = 51,
-	InsertCharacter = 52,
-	InsertLine = 53,
-	InsertPadding = 54,
-	KeyBackspace = 55,
-	KeyCatab = 56,
-	KeyClear = 57,
-	KeyCtab = 58,
-	KeyDc = 59,
-	KeyDl = 60,
-	KeyDown = 61,
-	KeyEic = 62,
-	KeyEol = 63,
-	KeyEos = 64,
-	KeyF0 = 65,
-	KeyF1 = 66,
-	KeyF10 = 67,
-	KeyF2 = 68,
-	KeyF3 = 69,
-	KeyF4 = 70,
-	KeyF5 = 71,
-	KeyF6 = 72,
-	KeyF7 = 73,
-	KeyF8 = 74,
-	KeyF9 = 75,
-	KeyHome = 76,
-	KeyIc = 77,
-	KeyIl = 78,
-	KeyLeft = 79,
-	KeyLl = 80,
-	KeyNpage = 81,
-	KeyPpage = 82,
-	KeyRight = 83,
-	KeySf = 84,
-	KeySr = 85,
-	KeyStab = 86,
-	KeyUp = 87,
-	KeypadLocal = 88,
-	KeypadXmit = 89,
-	LabF0 = 90,
-	LabF1 = 91,
-	LabF10 = 92,
-	LabF2 = 93,
-	LabF3 = 94,
-	LabF4 = 95,
-	LabF5 = 96,
-	LabF6 = 97,
-	LabF7 = 98,
-	LabF8 = 99,
-	LabF9 = 100,
-	MetaOff = 101,
-	MetaOn = 102,
-	Newline = 103,
-	PadChar = 104,
-	ParmDch = 105,
-	ParmDeleteLine = 106,
-	ParmDownCursor = 107,
-	ParmIch = 108,
-	ParmIndex = 109,
-	ParmInsertLine = 110,
-	ParmLeftCursor = 111,
-	ParmRightCursor = 112,
-	ParmRindex = 113,
-	ParmUpCursor = 114,
-	PkeyKey = 115,
-	PkeyLocal = 116,
-	PkeyXmit = 117,
-	PrintScreen = 118,
-	PrtrOff = 119,
-	PrtrOn = 120,
-	RepeatChar = 121,
-	Reset1string = 122,
-	Reset2string = 123,
-	Reset3string = 124,
-	ResetFile = 125,
-	RestoreCursor = 126,
-	RowAddress = 127,
-	SaveCursor = 128,
-	ScrollForward = 129,
-	ScrollReverse = 130,
-	SetAttributes = 131,
-	SetTab = 132,
-	SetWindow = 133,
-	Tab = 134,
-	ToStatusLine = 135,
-	UnderlineChar = 136,
-	UpHalfLine = 137,
-	InitProg = 138,
-	KeyA1 = 139,
-	KeyA3 = 140,
-	KeyB2 = 141,
-	KeyC1 = 142,
-	KeyC3 = 143,
-	PrtrNon = 144,
-	CharPadding = 145,
-	AcsChars = 146,
-	PlabNorm = 147,
-	KeyBtab = 148,
-	EnterXonMode = 149,
-	ExitXonMode = 150,
-	EnterAmMode = 151,
-	ExitAmMode = 152,
-	XonCharacter = 153,
-	XoffCharacter = 154,
-	EnaAcs = 155,
-	LabelOn = 156,
-	LabelOff = 157,
-	KeyBeg = 158,
-	KeyCancel = 159,
-	KeyClose = 160,
-	KeyCommand = 161,
-	KeyCopy = 162,
-	KeyCreate = 163,
-	KeyEnd = 164,
-	KeyEnter = 165,
-	KeyExit = 166,
-	KeyFind = 167,
-	KeyHelp = 168,
-	KeyMark = 169,
-	KeyMessage = 170,
-	KeyMove = 171,
-	KeyNext = 172,
-	KeyOpen = 173,
-	KeyOptions = 174,
-	KeyPrevious = 175,
-	KeyPrint = 176,
-	KeyRedo = 177,
-	KeyReference = 178,
-	KeyRefresh = 179,
-	KeyReplace = 180,
-	KeyRestart = 181,
-	KeyResume = 182,
-	KeySave = 183,
-	KeySuspend = 184,
-	KeyUndo = 185,
-	KeySbeg = 186,
-	KeyScancel = 187,
-	KeyScommand = 188,
-	KeyScopy = 189,
-	KeyScreate = 190,
-	KeySdc = 191,
-	KeySdl = 192,
-	KeySelect = 193,
-	KeySend = 194,
-	KeySeol = 195,
-	KeySexit = 196,
-	KeySfind = 197,
-	KeyShelp = 198,
-	KeyShome = 199,
-	KeySic = 200,
-	KeySleft = 201,
-	KeySmessage = 202,
-	KeySmove = 203,
-	KeySnext = 204,
-	KeySoptions = 205,
-	KeySprevious = 206,
-	KeySprint = 207,
-	KeySredo = 208,
-	KeySreplace = 209,
-	KeySright = 210,
-	KeySrsume = 211,
-	KeySsave = 212,
-	KeySsuspend = 213,
-	KeySundo = 214,
-	ReqForInput = 215,
-	KeyF11 = 216,
-	KeyF12 = 217,
-	KeyF13 = 218,
-	KeyF14 = 219,
-	KeyF15 = 220,
-	KeyF16 = 221,
-	KeyF17 = 222,
-	KeyF18 = 223,
-	KeyF19 = 224,
-	KeyF20 = 225,
-	KeyF21 = 226,
-	KeyF22 = 227,
-	KeyF23 = 228,
-	KeyF24 = 229,
-	KeyF25 = 230,
-	KeyF26 = 231,
-	KeyF27 = 232,
-	KeyF28 = 233,
-	KeyF29 = 234,
-	KeyF30 = 235,
-	KeyF31 = 236,
-	KeyF32 = 237,
-	KeyF33 = 238,
-	KeyF34 = 239,
-	KeyF35 = 240,
-	KeyF36 = 241,
-	KeyF37 = 242,
-	KeyF38 = 243,
-	KeyF39 = 244,
-	KeyF40 = 245,
-	KeyF41 = 246,
-	KeyF42 = 247,
-	KeyF43 = 248,
-	KeyF44 = 249,
-	KeyF45 = 250,
-	KeyF46 = 251,
-	KeyF47 = 252,
-	KeyF48 = 253,
-	KeyF49 = 254,
-	KeyF50 = 255,
-	KeyF51 = 256,
-	KeyF52 = 257,
-	KeyF53 = 258,
-	KeyF54 = 259,
-	KeyF55 = 260,
-	KeyF56 = 261,
-	KeyF57 = 262,
-	KeyF58 = 263,
-	KeyF59 = 264,
-	KeyF60 = 265,
-	KeyF61 = 266,
-	KeyF62 = 267,
-	KeyF63 = 268,
-	ClrBol = 269,
-	ClearMargins = 270,
-	SetLeftMargin = 271,
-	SetRightMargin = 272,
-	LabelFormat = 273,
-	SetClock = 274,
-	DisplayClock = 275,
-	RemoveClock = 276,
-	CreateWindow = 277,
-	GotoWindow = 278,
-	Hangup = 279,
-	DialPhone = 280,
-	QuickDial = 281,
-	Tone = 282,
-	Pulse = 283,
-	FlashHook = 284,
-	FixedPause = 285,
-	WaitTone = 286,
-	User0 = 287,
-	User1 = 288,
-	User2 = 289,
-	User3 = 290,
-	User4 = 291,
-	User5 = 292,
-	User6 = 293,
-	User7 = 294,
-	User8 = 295,
-	User9 = 296,
-	OrigPair = 297,
-	OrigColors = 298,
-	InitializeColor = 299,
-	InitializePair = 300,
-	SetColorPair = 301,
-	SetForeground = 302,
-	SetBackground = 303,
-	ChangeCharPitch = 304,
-	ChangeLinePitch = 305,
-	ChangeResHorz = 306,
-	ChangeResVert = 307,
-	DefineChar = 308,
-	EnterDoublewideMode = 309,
-	EnterDraftQuality = 310,
-	EnterItalicsMode = 311,
-	EnterLeftwardMode = 312,
-	EnterMicroMode = 313,
-	EnterNearLetterQuality = 314,
-	EnterNormalQuality = 315,
-	EnterShadowMode = 316,
-	EnterSubscriptMode = 317,
-	EnterSuperscriptMode = 318,
-	EnterUpwardMode = 319,
-	ExitDoublewideMode = 320,
-	ExitItalicsMode = 321,
-	ExitLeftwardMode = 322,
-	ExitMicroMode = 323,
-	ExitShadowMode = 324,
-	ExitSubscriptMode = 325,
-	ExitSuperscriptMode = 326,
-	ExitUpwardMode = 327,
-	MicroColumnAddress = 328,
-	MicroDown = 329,
-	MicroLeft = 330,
-	MicroRight = 331,
-	MicroRowAddress = 332,
-	MicroUp = 333,
-	OrderOfPins = 334,
-	ParmDownMicro = 335,
-	ParmLeftMicro = 336,
-	ParmRightMicro = 337,
-	ParmUpMicro = 338,
-	SelectCharSet = 339,
-	SetBottomMargin = 340,
-	SetBottomMarginParm = 341,
-	SetLeftMarginParm = 342,
-	SetRightMarginParm = 343,
-	SetTopMargin = 344,
-	SetTopMarginParm = 345,
-	StartBitImage = 346,
-	StartCharSetDef = 347,
-	StopBitImage = 348,
-	StopCharSetDef = 349,
-	SubscriptCharacters = 350,
-	SuperscriptCharacters = 351,
-	TheseCauseCr = 352,
-	ZeroMotion = 353,
-	CharSetNames = 354,
-	KeyMouse = 355,
-	MouseInfo = 356,
-	ReqMousePos = 357,
-	GetMouse = 358,
-	SetAForeground = 359,
-	SetABackground = 360,
-	PkeyPlab = 361,
-	DeviceType = 362,
-	CodeSetInit = 363,
-	Set0DesSeq = 364,
-	Set1DesSeq = 365,
-	Set2DesSeq = 366,
-	Set3DesSeq = 367,
-	SetLrMargin = 368,
-	SetTbMargin = 369,
-	BitImageRepeat = 370,
-	BitImageNewline = 371,
-	BitImageCarriageReturn = 372,
-	ColorNames = 373,
-	DefineBitImageRegion = 374,
-	EndBitImageRegion = 375,
-	SetColorBand = 376,
-	SetPageLength = 377,
-	DisplayPcChar = 378,
-	EnterPcCharsetMode = 379,
-	ExitPcCharsetMode = 380,
-	EnterScancodeMode = 381,
-	ExitScancodeMode = 382,
-	PcTermOptions = 383,
-	ScancodeEscape = 384,
-	AltScancodeEsc = 385,
-	EnterHorizontalHlMode = 386,
-	EnterLeftHlMode = 387,
-	EnterLowHlMode = 388,
-	EnterRightHlMode = 389,
-	EnterTopHlMode = 390,
-	EnterVerticalHlMode = 391,
-	SetAAttributes = 392,
-	SetPglenInch = 393,
-	Last = 394,
-}
-
-public enum TypeCode
-{
-	Empty = 0,
-	Object = 1,
-	DBNull = 2,
-	Boolean = 3,
-	Char = 4,
-	SByte = 5,
-	Byte = 6,
-	Int16 = 7,
-	UInt16 = 8,
-	Int32 = 9,
-	UInt32 = 10,
-	Int64 = 11,
-	UInt64 = 12,
-	Single = 13,
-	Double = 14,
-	Decimal = 15,
-	DateTime = 16,
-	String = 18,
-}
-
-internal enum TypeSpec.DisplayNameFormat
-{
-	Default = 0,
-	WANT_ASSEMBLY = 1,
-	NO_MODIFIERS = 2,
-}
-
-internal enum Handles
-{
-}
-
-public enum AssemblyHashAlgorithm
-{
-	None = 0,
-	MD5 = 32771,
-	SHA1 = 32772,
-	SHA256 = 32780,
-	SHA384 = 32781,
-	SHA512 = 32782,
-}
-
-public enum AssemblyVersionCompatibility
-{
-	SameMachine = 1,
-	SameProcess = 2,
-	SameDomain = 3,
-}
-
-internal enum NormalizationCheck
-{
-	Yes = 0,
-	No = 1,
-	Maybe = 2,
-}
-
-public enum NormalizationForm
-{
-	FormC = 1,
-	FormD = 2,
-	FormKC = 5,
-	FormKD = 6,
-}
-
-internal enum ResourceTypeCode
-{
-	Null = 0,
-	String = 1,
-	Boolean = 2,
-	Char = 3,
-	Byte = 4,
-	SByte = 5,
-	Int16 = 6,
-	UInt16 = 7,
-	Int32 = 8,
-	UInt32 = 9,
-	Int64 = 10,
-	UInt64 = 11,
-	Single = 12,
-	Double = 13,
-	Decimal = 14,
-	DateTime = 15,
-	TimeSpan = 16,
-	LastPrimitive = 16,
-	ByteArray = 32,
-	Stream = 33,
-	StartOfUserTypes = 64,
-}
-
-public enum UltimateResourceFallbackLocation
-{
-	MainAssembly = 0,
-	Satellite = 1,
-}
-
-public enum AssemblyNameFlags
-{
-	None = 0,
-	PublicKey = 1,
-	EnableJITcompileOptimizer = 16384,
-	EnableJITcompileTracking = 32768,
-	Retargetable = 256,
-}
-
-public enum AssemblyContentType
-{
-	Default = 0,
-	WindowsRuntime = 1,
-}
-
-public enum ProcessorArchitecture
-{
-	None = 0,
-	MSIL = 1,
-	X86 = 2,
-	IA64 = 3,
-	Amd64 = 4,
-	Arm = 5,
-}
-
-public enum BindingFlags
-{
-	Default = 0,
-	IgnoreCase = 1,
-	DeclaredOnly = 2,
-	Instance = 4,
-	Static = 8,
-	Public = 16,
-	NonPublic = 32,
-	FlattenHierarchy = 64,
-	InvokeMethod = 256,
-	CreateInstance = 512,
-	GetField = 1024,
-	SetField = 2048,
-	GetProperty = 4096,
-	SetProperty = 8192,
-	PutDispProperty = 16384,
-	PutRefDispProperty = 32768,
-	ExactBinding = 65536,
-	SuppressChangeType = 131072,
-	OptionalParamBinding = 262144,
-	IgnoreReturn = 16777216,
-}
-
-public enum CallingConventions
-{
-	Standard = 1,
-	VarArgs = 2,
-	Any = 3,
-	HasThis = 32,
-	ExplicitThis = 64,
-}
-
-public enum EventAttributes
-{
-	None = 0,
-	SpecialName = 512,
-	ReservedMask = 1024,
-	RTSpecialName = 1024,
-}
-
-public enum FieldAttributes
-{
-	FieldAccessMask = 7,
-	PrivateScope = 0,
-	Private = 1,
-	FamANDAssem = 2,
-	Assembly = 3,
-	Family = 4,
-	FamORAssem = 5,
-	Public = 6,
-	Static = 16,
-	InitOnly = 32,
-	Literal = 64,
-	NotSerialized = 128,
-	SpecialName = 512,
-	PinvokeImpl = 8192,
-	ReservedMask = 38144,
-	RTSpecialName = 1024,
-	HasFieldMarshal = 4096,
-	HasDefault = 32768,
-	HasFieldRVA = 256,
-}
-
-public enum GenericParameterAttributes
-{
-	None = 0,
-	VarianceMask = 3,
-	Covariant = 1,
-	Contravariant = 2,
-	SpecialConstraintMask = 28,
-	ReferenceTypeConstraint = 4,
-	NotNullableValueTypeConstraint = 8,
-	DefaultConstructorConstraint = 16,
-}
-
-public enum ResourceLocation
-{
-	Embedded = 1,
-	ContainedInAnotherAssembly = 2,
-	ContainedInManifestFile = 4,
-}
-
-internal enum PInvokeAttributes
-{
-	NoMangle = 1,
-	CharSetMask = 6,
-	CharSetNotSpec = 0,
-	CharSetAnsi = 2,
-	CharSetUnicode = 4,
-	CharSetAuto = 6,
-	BestFitUseAssem = 0,
-	BestFitEnabled = 16,
-	BestFitDisabled = 32,
-	BestFitMask = 48,
-	ThrowOnUnmappableCharUseAssem = 0,
-	ThrowOnUnmappableCharEnabled = 4096,
-	ThrowOnUnmappableCharDisabled = 8192,
-	ThrowOnUnmappableCharMask = 12288,
-	SupportsLastError = 64,
-	CallConvMask = 1792,
-	CallConvWinapi = 256,
-	CallConvCdecl = 512,
-	CallConvStdcall = 768,
-	CallConvThiscall = 1024,
-	CallConvFastcall = 1280,
-	MaxValue = 65535,
-}
-
-public enum MemberTypes
-{
-	Constructor = 1,
-	Event = 2,
-	Field = 4,
-	Method = 8,
-	Property = 16,
-	TypeInfo = 32,
-	Custom = 64,
-	NestedType = 128,
-	All = 191,
-}
-
-public enum MethodAttributes
-{
-	MemberAccessMask = 7,
-	PrivateScope = 0,
-	Private = 1,
-	FamANDAssem = 2,
-	Assembly = 3,
-	Family = 4,
-	FamORAssem = 5,
-	Public = 6,
-	Static = 16,
-	Final = 32,
-	Virtual = 64,
-	HideBySig = 128,
-	CheckAccessOnOverride = 512,
-	VtableLayoutMask = 256,
-	ReuseSlot = 0,
-	NewSlot = 256,
-	Abstract = 1024,
-	SpecialName = 2048,
-	PinvokeImpl = 8192,
-	UnmanagedExport = 8,
-	RTSpecialName = 4096,
-	ReservedMask = 53248,
-	HasSecurity = 16384,
-	RequireSecObject = 32768,
-}
-
-public enum ExceptionHandlingClauseOptions
-{
-	Clause = 0,
-	Filter = 1,
-	Finally = 2,
-	Fault = 4,
-}
-
-public enum MethodImplAttributes
-{
-	CodeTypeMask = 3,
-	IL = 0,
-	Native = 1,
-	OPTIL = 2,
-	Runtime = 3,
-	ManagedMask = 4,
-	Unmanaged = 4,
-	Managed = 0,
-	ForwardRef = 16,
-	PreserveSig = 128,
-	InternalCall = 4096,
-	Synchronized = 32,
-	NoInlining = 8,
-	AggressiveInlining = 256,
-	NoOptimization = 64,
-	MaxMethodImplVal = 65535,
-}
-
-public enum ParameterAttributes
-{
-	None = 0,
-	In = 1,
-	Out = 2,
-	Lcid = 4,
-	Retval = 8,
-	Optional = 16,
-	ReservedMask = 61440,
-	HasDefault = 4096,
-	HasFieldMarshal = 8192,
-	Reserved3 = 16384,
-	Reserved4 = 32768,
-}
-
-public enum PropertyAttributes
-{
-	None = 0,
-	SpecialName = 512,
-	ReservedMask = 62464,
-	RTSpecialName = 1024,
-	HasDefault = 4096,
-	Reserved2 = 8192,
-	Reserved3 = 16384,
-	Reserved4 = 32768,
-}
-
-public enum TypeAttributes
-{
-	VisibilityMask = 7,
-	NotPublic = 0,
-	Public = 1,
-	NestedPublic = 2,
-	NestedPrivate = 3,
-	NestedFamily = 4,
-	NestedAssembly = 5,
-	NestedFamANDAssem = 6,
-	NestedFamORAssem = 7,
-	LayoutMask = 24,
-	AutoLayout = 0,
-	SequentialLayout = 8,
-	ExplicitLayout = 16,
-	ClassSemanticsMask = 32,
-	Class = 0,
-	Interface = 32,
-	Abstract = 128,
-	Sealed = 256,
-	SpecialName = 1024,
-	Import = 4096,
-	Serializable = 8192,
-	WindowsRuntime = 16384,
-	StringFormatMask = 196608,
-	AnsiClass = 0,
-	UnicodeClass = 65536,
-	AutoClass = 131072,
-	CustomFormatClass = 196608,
-	CustomFormatMask = 12582912,
-	BeforeFieldInit = 1048576,
-	ReservedMask = 264192,
-	RTSpecialName = 2048,
-	HasSecurity = 262144,
-}
-
-internal enum PInfo
-{
-	Attributes = 1,
-	GetMethod = 2,
-	SetMethod = 4,
-	ReflectedType = 8,
-	DeclaringType = 16,
-	Name = 32,
-}
-
-public enum FileAccess
-{
-	Read = 1,
-	Write = 2,
-	ReadWrite = 3,
-}
-
-public enum FileAttributes
-{
-	Archive = 32,
-	Compressed = 2048,
-	Device = 64,
-	Directory = 16,
-	Encrypted = 16384,
-	Hidden = 2,
-	Normal = 128,
-	NotContentIndexed = 8192,
-	Offline = 4096,
-	ReadOnly = 1,
-	ReparsePoint = 1024,
-	SparseFile = 512,
-	System = 4,
-	Temporary = 256,
-	IntegrityStream = 32768,
-	NoScrubData = 131072,
-}
-
-public enum FileMode
-{
-	CreateNew = 1,
-	Create = 2,
-	Open = 3,
-	OpenOrCreate = 4,
-	Truncate = 5,
-	Append = 6,
-}
-
-public enum FileOptions
-{
-	None = 0,
-	Encrypted = 16384,
-	DeleteOnClose = 67108864,
-	SequentialScan = 134217728,
-	RandomAccess = 268435456,
-	Asynchronous = 1073741824,
-}
-
-public enum FileShare
-{
-	None = 0,
-	Read = 1,
-	Write = 2,
-	ReadWrite = 3,
-	Delete = 4,
-	Inheritable = 16,
-}
-
-internal enum MonoFileType
-{
-	Unknown = 0,
-	Disk = 1,
-	Char = 2,
-	Pipe = 3,
-	Remote = 32768,
-}
-
-internal enum MonoIOError
-{
-	ERROR_SUCCESS = 0,
-	ERROR_FILE_NOT_FOUND = 2,
-	ERROR_PATH_NOT_FOUND = 3,
-	ERROR_TOO_MANY_OPEN_FILES = 4,
-	ERROR_ACCESS_DENIED = 5,
-	ERROR_INVALID_HANDLE = 6,
-	ERROR_INVALID_DRIVE = 15,
-	ERROR_NOT_SAME_DEVICE = 17,
-	ERROR_NO_MORE_FILES = 18,
-	ERROR_NOT_READY = 21,
-	ERROR_WRITE_FAULT = 29,
-	ERROR_READ_FAULT = 30,
-	ERROR_GEN_FAILURE = 31,
-	ERROR_SHARING_VIOLATION = 32,
-	ERROR_LOCK_VIOLATION = 33,
-	ERROR_HANDLE_DISK_FULL = 39,
-	ERROR_FILE_EXISTS = 80,
-	ERROR_CANNOT_MAKE = 82,
-	ERROR_INVALID_PARAMETER = 87,
-	ERROR_BROKEN_PIPE = 109,
-	ERROR_INVALID_NAME = 123,
-	ERROR_DIR_NOT_EMPTY = 145,
-	ERROR_ALREADY_EXISTS = 183,
-	ERROR_FILENAME_EXCED_RANGE = 206,
-	ERROR_DIRECTORY = 267,
-	ERROR_ENCRYPTION_FAILED = 6000,
-}
-
-public enum SearchOption
-{
-	TopDirectoryOnly = 0,
-	AllDirectories = 1,
-}
-
-public enum SeekOrigin
-{
-	Begin = 0,
-	Current = 1,
-	End = 2,
-}
-
-public enum CompareOptions
-{
-	None = 0,
-	IgnoreCase = 1,
-	IgnoreNonSpace = 2,
-	IgnoreSymbols = 4,
-	IgnoreKanaType = 8,
-	IgnoreWidth = 16,
-	OrdinalIgnoreCase = 268435456,
-	StringSort = 536870912,
-	Ordinal = 1073741824,
-}
-
-public enum CultureTypes
-{
-	NeutralCultures = 1,
-	SpecificCultures = 2,
-	InstalledWin32Cultures = 4,
-	AllCultures = 7,
-	UserCustomCulture = 8,
-	ReplacementCultures = 16,
-	WindowsOnlyCultures = 32,
-	FrameworkCultures = 64,
-}
-
-internal enum MonthNameStyles
-{
-	Regular = 0,
-	Genitive = 1,
-	LeapYear = 2,
-}
-
-internal enum DateTimeFormatFlags
-{
-	None = 0,
-	UseGenitiveMonth = 1,
-	UseLeapYearMonth = 2,
-	UseSpacesInMonthNames = 4,
-	UseHebrewRule = 8,
-	UseSpacesInDayNames = 16,
-	UseDigitPrefixInTokens = 32,
-}
-
-internal enum FORMATFLAGS
-{
-	None = 0,
-	UseGenitiveMonth = 1,
-	UseLeapYearMonth = 2,
-	UseSpacesInMonthNames = 4,
-	UseHebrewParsing = 8,
-	UseSpacesInDayNames = 16,
-	UseDigitPrefixInTokens = 32,
-}
-
-internal enum CalendarId
-{
-	GREGORIAN = 1,
-	GREGORIAN_US = 2,
-	JAPAN = 3,
-	TAIWAN = 4,
-	KOREA = 5,
-	HIJRI = 6,
-	THAI = 7,
-	HEBREW = 8,
-	GREGORIAN_ME_FRENCH = 9,
-	GREGORIAN_ARABIC = 10,
-	GREGORIAN_XLIT_ENGLISH = 11,
-	GREGORIAN_XLIT_FRENCH = 12,
-	JULIAN = 13,
-	JAPANESELUNISOLAR = 14,
-	CHINESELUNISOLAR = 15,
-	SAKA = 16,
-	LUNAR_ETO_CHN = 17,
-	LUNAR_ETO_KOR = 18,
-	LUNAR_ETO_ROKUYOU = 19,
-	KOREANLUNISOLAR = 20,
-	TAIWANLUNISOLAR = 21,
-	PERSIAN = 22,
-	UMALQURA = 23,
-	LAST_CALENDAR = 23,
-}
-
-private enum DateTimeFormatInfoScanner.FoundDatePattern
-{
-	None = 0,
-	FoundYearPatternFlag = 1,
-	FoundMonthPatternFlag = 2,
-	FoundDayPatternFlag = 4,
-	FoundYMDPatternFlag = 7,
-}
-
-public enum DateTimeStyles
-{
-	None = 0,
-	AllowLeadingWhite = 1,
-	AllowTrailingWhite = 2,
-	AllowInnerWhite = 4,
-	AllowWhiteSpaces = 7,
-	NoCurrentDateDefault = 8,
-	AdjustToUniversal = 16,
-	AssumeLocal = 32,
-	AssumeUniversal = 64,
-	RoundtripKind = 128,
-}
-
-public enum GregorianCalendarTypes
-{
-	Localized = 1,
-	USEnglish = 2,
-	MiddleEastFrench = 9,
-	Arabic = 10,
-	TransliteratedEnglish = 11,
-	TransliteratedFrench = 12,
-}
-
-internal enum HebrewNumberParsingState
-{
-	InvalidHebrewNumber = 0,
-	NotHebrewDigit = 1,
-	FoundEndOfHebrewNumber = 2,
-	ContinueParsing = 3,
-}
-
-private enum HebrewNumber.HebrewToken
-{
-	Digit400 = 0,
-	Digit200_300 = 1,
-	Digit100 = 2,
-	Digit10 = 3,
-	Digit1 = 4,
-	Digit6_7 = 5,
-	Digit7 = 6,
-	Digit9 = 7,
-	SingleQuote = 8,
-	DoubleQuote = 9,
-}
-
-internal enum HebrewNumber.HS
-{
-	Start = 0,
-	S400 = 1,
-	S400_400 = 2,
-	S400_X00 = 3,
-	S400_X0 = 4,
-	X00_DQ = 5,
-	S400_X00_X0 = 6,
-	X0_DQ = 7,
-	X = 8,
-	X0 = 9,
-	X00 = 10,
-	S400_DQ = 11,
-	S400_400_DQ = 12,
-	S400_400_100 = 13,
-	S9 = 14,
-	X00_S9 = 15,
-	S9_DQ = 16,
-	END = 100,
-}
-
-public enum NumberStyles
-{
-	None = 0,
-	AllowLeadingWhite = 1,
-	AllowTrailingWhite = 2,
-	AllowLeadingSign = 4,
-	AllowTrailingSign = 8,
-	AllowParentheses = 16,
-	AllowDecimalPoint = 32,
-	AllowThousands = 64,
-	AllowExponent = 128,
-	AllowCurrencySymbol = 256,
-	AllowHexSpecifier = 512,
-	Integer = 7,
-	HexNumber = 515,
-	Number = 111,
-	Float = 167,
-	Currency = 383,
-	Any = 511,
-}
-
-internal enum TimeSpanFormat.Pattern
-{
-	None = 0,
-	Minimum = 1,
-	Full = 2,
-}
-
-private enum TimeSpanParse.TimeSpanThrowStyle
-{
-	None = 0,
-	All = 1,
-}
-
-private enum TimeSpanParse.ParseFailureKind
-{
-	None = 0,
-	ArgumentNull = 1,
-	Format = 2,
-	FormatWithParameter = 3,
-	Overflow = 4,
-}
-
-private enum TimeSpanParse.TimeSpanStandardStyles
-{
-	None = 0,
-	Invariant = 1,
-	Localized = 2,
-	RequireFull = 4,
-	Any = 3,
-}
-
-private enum TimeSpanParse.TTT
-{
-	None = 0,
-	End = 1,
-	Num = 2,
-	Sep = 3,
-	NumOverflow = 4,
-}
-
-public enum UnicodeCategory
-{
-	UppercaseLetter = 0,
-	LowercaseLetter = 1,
-	TitlecaseLetter = 2,
-	ModifierLetter = 3,
-	OtherLetter = 4,
-	NonSpacingMark = 5,
-	SpacingCombiningMark = 6,
-	EnclosingMark = 7,
-	DecimalDigitNumber = 8,
-	LetterNumber = 9,
-	OtherNumber = 10,
-	SpaceSeparator = 11,
-	LineSeparator = 12,
-	ParagraphSeparator = 13,
-	Control = 14,
-	Format = 15,
-	Surrogate = 16,
-	PrivateUse = 17,
-	ConnectorPunctuation = 18,
-	DashPunctuation = 19,
-	OpenPunctuation = 20,
-	ClosePunctuation = 21,
-	InitialQuotePunctuation = 22,
-	FinalQuotePunctuation = 23,
-	OtherPunctuation = 24,
-	MathSymbol = 25,
-	CurrencySymbol = 26,
-	ModifierSymbol = 27,
-	OtherSymbol = 28,
-	OtherNotAssigned = 29,
-}
-
-public enum EventResetMode
-{
-	AutoReset = 0,
-	ManualReset = 1,
-}
-
-private enum ExecutionContext.Flags
-{
-	None = 0,
-	IsNewCapture = 1,
-	IsFlowSuppressed = 2,
-	IsPreAllocatedDefault = 4,
-}
-
-internal enum ExecutionContext.CaptureOptions
-{
-	None = 0,
-	IgnoreSyncCtx = 1,
-	OptimizeDefaultCase = 2,
-}
-
-internal enum SynchronizationContextProperties
-{
-	None = 0,
-	RequireWaitNotification = 1,
-}
-
-internal enum StackCrawlMark
-{
-	LookForMe = 0,
-	LookForMyCaller = 1,
-	LookForMyCallersCaller = 2,
-	LookForThread = 3,
-}
-
-public enum ThreadState
-{
-	Running = 0,
-	StopRequested = 1,
-	SuspendRequested = 2,
-	Background = 4,
-	Unstarted = 8,
-	Stopped = 16,
-	WaitSleepJoin = 32,
-	Suspended = 64,
-	AbortRequested = 128,
-	Aborted = 256,
-}
-
-internal enum CausalityTraceLevel
-{
-	Required = 0,
-	Important = 1,
-	Verbose = 2,
-}
-
-internal enum AsyncCausalityStatus
-{
-	Started = 0,
-	Completed = 1,
-	Canceled = 2,
-	Error = 3,
-}
-
-internal enum CausalityRelation
-{
-	AssignDelegate = 0,
-	Join = 1,
-	Choice = 2,
-	Cancel = 3,
-	Error = 4,
-}
-
-internal enum CausalitySynchronousWork
-{
-	CompletionNotification = 0,
-	ProgressNotification = 1,
-	Execution = 2,
-}
-
-public enum TaskStatus
-{
-	Created = 0,
-	WaitingForActivation = 1,
-	WaitingToRun = 2,
-	Running = 3,
-	WaitingForChildrenToComplete = 4,
-	RanToCompletion = 5,
-	Canceled = 6,
-	Faulted = 7,
-}
-
-public enum TaskCreationOptions
-{
-	None = 0,
-	PreferFairness = 1,
-	LongRunning = 2,
-	AttachedToParent = 4,
-	DenyChildAttach = 8,
-	HideScheduler = 16,
-	RunContinuationsAsynchronously = 64,
-}
-
-internal enum InternalTaskOptions
-{
-	None = 0,
-	InternalOptionsMask = 65280,
-	ChildReplica = 256,
-	ContinuationTask = 512,
-	PromiseTask = 1024,
-	SelfReplicating = 2048,
-	LazyCancellation = 4096,
-	QueuedByRuntime = 8192,
-	DoNotDispose = 16384,
-}
-
-public enum TaskContinuationOptions
-{
-	None = 0,
-	PreferFairness = 1,
-	LongRunning = 2,
-	AttachedToParent = 4,
-	DenyChildAttach = 8,
-	HideScheduler = 16,
-	LazyCancellation = 32,
-	RunContinuationsAsynchronously = 64,
-	NotOnRanToCompletion = 65536,
-	NotOnFaulted = 131072,
-	NotOnCanceled = 262144,
-	OnlyOnRanToCompletion = 393216,
-	OnlyOnFaulted = 327680,
-	OnlyOnCanceled = 196608,
-	ExecuteSynchronously = 524288,
-}
-
-public enum PartialTrustVisibilityLevel
-{
-	VisibleToAllHosts = 0,
-	NotVisibleByDefault = 1,
-}
-
-public enum SecurityCriticalScope
-{
-	Explicit = 0,
-	Everything = 1,
-}
-
-public enum SecurityRuleSet
-{
-	None = 0,
-	Level1 = 1,
-	Level2 = 2,
-}
-
-public enum SecurityContextSource
-{
-	CurrentAppDomain = 0,
-	CurrentAssembly = 1,
-}
-
-internal enum SecurityContextDisableFlow
-{
-	Nothing = 0,
-	WI = 1,
-	All = 16383,
-}
-
-public enum HostSecurityManagerOptions
-{
-	None = 0,
-	HostAppDomainEvidence = 1,
-	HostPolicyLevel = 2,
-	HostAssemblyEvidence = 4,
-	HostDetermineApplicationTrust = 8,
-	HostResolvePolicy = 16,
-	AllFlags = 31,
-}
-
-public enum PolicyLevelType
-{
-	User = 0,
-	Machine = 1,
-	Enterprise = 2,
-	AppDomain = 3,
-}
-
-internal enum SecurityElementType
-{
-	Regular = 0,
-	Format = 1,
-	Comment = 2,
-}
-
-public enum SecurityZone
-{
-	MyComputer = 0,
-	Intranet = 1,
-	Trusted = 2,
-	Internet = 3,
-	Untrusted = 4,
-}
-
-public enum PolicyStatementAttribute
-{
-	Nothing = 0,
-	Exclusive = 1,
-	LevelFinal = 2,
-	All = 3,
-}
-
-public enum HostProtectionResource
-{
-	None = 0,
-	Synchronization = 1,
-	SharedState = 2,
-	ExternalProcessMgmt = 4,
-	SelfAffectingProcessMgmt = 8,
-	ExternalThreading = 16,
-	SelfAffectingThreading = 32,
-	SecurityInfrastructure = 64,
-	UI = 128,
-	MayLeakOnAbort = 256,
-	All = 511,
-}
-
-public enum PermissionState
-{
-	Unrestricted = 1,
-	None = 0,
-}
-
-public enum ReflectionPermissionFlag
-{
-	NoFlags = 0,
-	TypeInformation = 1,
-	MemberAccess = 2,
-	ReflectionEmit = 4,
-	AllFlags = 7,
-	RestrictedMemberAccess = 8,
-}
-
-public enum SecurityAction
-{
-	Demand = 2,
-	Assert = 3,
-	Deny = 4,
-	PermitOnly = 5,
-	LinkDemand = 6,
-	InheritanceDemand = 7,
-	RequestMinimum = 8,
-	RequestOptional = 9,
-	RequestRefuse = 10,
-}
-
-private enum Tokenizer.TokenSource
-{
-	UnicodeByteArray = 0,
-	UTF8ByteArray = 1,
-	ASCIIByteArray = 2,
-	CharArray = 3,
-	String = 4,
-	NestedStrings = 5,
-	Other = 6,
-}
-
-public enum TokenImpersonationLevel
-{
-	Anonymous = 1,
-	Delegation = 4,
-	Identification = 2,
-	Impersonation = 3,
-	None = 0,
-}
-
-public enum WindowsAccountType
-{
-	Normal = 0,
-	Guest = 1,
-	System = 2,
-	Anonymous = 3,
-}
-
-public enum RSAEncryptionPaddingMode
-{
-	Pkcs1 = 0,
-	Oaep = 1,
-}
-
-public enum RSASignaturePaddingMode
-{
-	Pkcs1 = 0,
-	Pss = 1,
-}
-
-public enum FromBase64TransformMode
-{
-	IgnoreWhiteSpaces = 0,
-	DoNotIgnoreWhiteSpaces = 1,
-}
-
-public enum CipherMode
-{
-	CBC = 1,
-	ECB = 2,
-	OFB = 3,
-	CFB = 4,
-	CTS = 5,
-}
-
-public enum PaddingMode
-{
-	None = 1,
-	PKCS7 = 2,
-	Zeros = 3,
-	ANSIX923 = 4,
-	ISO10126 = 5,
-}
-
-public enum CspProviderFlags
-{
-	NoFlags = 0,
-	UseMachineKeyStore = 1,
-	UseDefaultKeyContainer = 2,
-	UseNonExportableKey = 4,
-	UseExistingKey = 8,
-	UseArchivableKey = 16,
-	UseUserProtectedKey = 32,
-	NoPrompt = 64,
-	CreateEphemeralKey = 128,
-}
-
-public enum CryptoStreamMode
-{
-	Read = 0,
-	Write = 1,
-}
-
-internal enum RijndaelManagedTransformMode
-{
-	Encrypt = 0,
-	Decrypt = 1,
-}
-
-internal enum CspAlgorithmType
-{
-	Rsa = 0,
-	Dss = 1,
-}
-
-public enum KeyNumber
-{
-	Exchange = 1,
-	Signature = 2,
-}
-
-public enum X509ContentType
-{
-	Unknown = 0,
-	Cert = 1,
-	SerializedCert = 2,
-	Pfx = 3,
-	Pkcs12 = 3,
-	SerializedStore = 4,
-	Pkcs7 = 5,
-	Authenticode = 6,
-}
-
-public enum X509KeyStorageFlags
-{
-	DefaultKeySet = 0,
-	UserKeySet = 1,
-	MachineKeySet = 2,
-	Exportable = 4,
-	UserProtected = 8,
-	PersistKeySet = 16,
-	EphemeralKeySet = 32,
-}
-
-internal enum OidGroup
-{
-	AllGroups = 0,
-	HashAlgorithm = 1,
-	EncryptionAlgorithm = 2,
-	PublicKeyAlgorithm = 3,
-	SignatureAlgorithm = 4,
-	Attribute = 5,
-	ExtensionOrAttribute = 6,
-	EnhancedKeyUsage = 7,
-	Policy = 8,
-	Template = 9,
-	KeyDerivationFunction = 10,
-}
-
-internal enum OidKeyType
-{
-	Oid = 1,
-	Name = 2,
-	AlgorithmID = 3,
-	SignatureID = 4,
-	CngAlgorithmID = 5,
-	CngSignatureID = 6,
-}
-
-public enum StreamingContextStates
-{
-	CrossProcess = 1,
-	CrossMachine = 2,
-	File = 4,
-	Persistence = 8,
-	Remoting = 16,
-	Other = 32,
-	Clone = 64,
-	CrossAppDomain = 128,
-	All = 255,
-}
-
-public enum FormatterTypeStyle
-{
-	TypesWhenNeeded = 0,
-	TypesAlways = 1,
-	XsdString = 2,
-}
-
-public enum FormatterAssemblyStyle
-{
-	Simple = 0,
-	Full = 1,
-}
-
-public enum TypeFilterLevel
-{
-	Low = 2,
-	Full = 3,
-}
-
-internal enum BinaryHeaderEnum
-{
-	SerializedStreamHeader = 0,
-	Object = 1,
-	ObjectWithMap = 2,
-	ObjectWithMapAssemId = 3,
-	ObjectWithMapTyped = 4,
-	ObjectWithMapTypedAssemId = 5,
-	ObjectString = 6,
-	Array = 7,
-	MemberPrimitiveTyped = 8,
-	MemberReference = 9,
-	ObjectNull = 10,
-	MessageEnd = 11,
-	Assembly = 12,
-	ObjectNullMultiple256 = 13,
-	ObjectNullMultiple = 14,
-	ArraySinglePrimitive = 15,
-	ArraySingleObject = 16,
-	ArraySingleString = 17,
-	CrossAppDomainMap = 18,
-	CrossAppDomainString = 19,
-	CrossAppDomainAssembly = 20,
-	MethodCall = 21,
-	MethodReturn = 22,
-}
-
-internal enum BinaryTypeEnum
-{
-	Primitive = 0,
-	String = 1,
-	Object = 2,
-	ObjectUrt = 3,
-	ObjectUser = 4,
-	ObjectArray = 5,
-	StringArray = 6,
-	PrimitiveArray = 7,
-}
-
-internal enum BinaryArrayTypeEnum
-{
-	Single = 0,
-	Jagged = 1,
-	Rectangular = 2,
-	SingleOffset = 3,
-	JaggedOffset = 4,
-	RectangularOffset = 5,
-}
-
-internal enum InternalSerializerTypeE
-{
-	Soap = 1,
-	Binary = 2,
-}
-
-internal enum InternalParseTypeE
-{
-	Empty = 0,
-	SerializedStreamHeader = 1,
-	Object = 2,
-	Member = 3,
-	ObjectEnd = 4,
-	MemberEnd = 5,
-	Headers = 6,
-	HeadersEnd = 7,
-	SerializedStreamHeaderEnd = 8,
-	Envelope = 9,
-	EnvelopeEnd = 10,
-	Body = 11,
-	BodyEnd = 12,
-}
-
-internal enum InternalObjectTypeE
-{
-	Empty = 0,
-	Object = 1,
-	Array = 2,
-}
-
-internal enum InternalObjectPositionE
-{
-	Empty = 0,
-	Top = 1,
-	Child = 2,
-	Headers = 3,
-}
-
-internal enum InternalArrayTypeE
-{
-	Empty = 0,
-	Single = 1,
-	Jagged = 2,
-	Rectangular = 3,
-	Base64 = 4,
-}
-
-internal enum InternalMemberTypeE
-{
-	Empty = 0,
-	Header = 1,
-	Field = 2,
-	Item = 3,
-}
-
-internal enum InternalMemberValueE
-{
-	Empty = 0,
-	InlineValue = 1,
-	Nested = 2,
-	Reference = 3,
-	Null = 4,
-}
-
-internal enum InternalPrimitiveTypeE
-{
-	Invalid = 0,
-	Boolean = 1,
-	Byte = 2,
-	Char = 3,
-	Currency = 4,
-	Decimal = 5,
-	Double = 6,
-	Int16 = 7,
-	Int32 = 8,
-	Int64 = 9,
-	SByte = 10,
-	Single = 11,
-	TimeSpan = 12,
-	DateTime = 13,
-	UInt16 = 14,
-	UInt32 = 15,
-	UInt64 = 16,
-	Null = 17,
-	String = 18,
-}
-
-internal enum MessageEnum
-{
-	NoArgs = 1,
-	ArgsInline = 2,
-	ArgsIsArray = 4,
-	ArgsInArray = 8,
-	NoContext = 16,
-	ContextInline = 32,
-	ContextInArray = 64,
-	MethodSignatureInArray = 128,
-	PropertyInArray = 256,
-	NoReturnValue = 512,
-	ReturnValueVoid = 1024,
-	ReturnValueInline = 2048,
-	ReturnValueInArray = 4096,
-	ExceptionInArray = 8192,
-	GenericMethod = 32768,
-}
-
-internal enum ValueFixupEnum
-{
-	Empty = 0,
-	Array = 1,
-	Header = 2,
-	Member = 3,
-}
-
-public enum WellKnownObjectMode
-{
-	Singleton = 1,
-	SingleCall = 2,
-}
-
-public enum LeaseState
-{
-	Null = 0,
-	Initial = 1,
-	Active = 2,
-	Renewing = 3,
-	Expired = 4,
-}
-
-internal enum ArgInfoType
-{
-	In = 0,
-	Out = 1,
-}
-
-internal enum CallType
-{
-	Sync = 0,
-	BeginInvoke = 1,
-	EndInvoke = 2,
-	OneWay = 3,
-}
-
-public enum Consistency
-{
-	MayCorruptProcess = 0,
-	MayCorruptAppDomain = 1,
-	MayCorruptInstance = 2,
-	WillNotCorruptState = 3,
-}
-
-public enum Cer
-{
-	None = 0,
-	MayFail = 1,
-	Success = 2,
-}
-
-public enum LoadHint
-{
-	Default = 0,
-	Always = 1,
-	Sometimes = 2,
-}
-
-public enum CompilationRelaxations
-{
-	NoStringInterning = 8,
-}
-
-public enum ComInterfaceType
-{
-	InterfaceIsDual = 0,
-	InterfaceIsIUnknown = 1,
-	InterfaceIsIDispatch = 2,
-	InterfaceIsIInspectable = 3,
-}
-
-public enum ClassInterfaceType
-{
-	None = 0,
-	AutoDispatch = 1,
-	AutoDual = 2,
-}
-
-public enum VarEnum
-{
-	VT_EMPTY = 0,
-	VT_NULL = 1,
-	VT_I2 = 2,
-	VT_I4 = 3,
-	VT_R4 = 4,
-	VT_R8 = 5,
-	VT_CY = 6,
-	VT_DATE = 7,
-	VT_BSTR = 8,
-	VT_DISPATCH = 9,
-	VT_ERROR = 10,
-	VT_BOOL = 11,
-	VT_VARIANT = 12,
-	VT_UNKNOWN = 13,
-	VT_DECIMAL = 14,
-	VT_I1 = 16,
-	VT_UI1 = 17,
-	VT_UI2 = 18,
-	VT_UI4 = 19,
-	VT_I8 = 20,
-	VT_UI8 = 21,
-	VT_INT = 22,
-	VT_UINT = 23,
-	VT_VOID = 24,
-	VT_HRESULT = 25,
-	VT_PTR = 26,
-	VT_SAFEARRAY = 27,
-	VT_CARRAY = 28,
-	VT_USERDEFINED = 29,
-	VT_LPSTR = 30,
-	VT_LPWSTR = 31,
-	VT_RECORD = 36,
-	VT_FILETIME = 64,
-	VT_BLOB = 65,
-	VT_STREAM = 66,
-	VT_STORAGE = 67,
-	VT_STREAMED_OBJECT = 68,
-	VT_STORED_OBJECT = 69,
-	VT_BLOB_OBJECT = 70,
-	VT_CF = 71,
-	VT_CLSID = 72,
-	VT_VECTOR = 4096,
-	VT_ARRAY = 8192,
-	VT_BYREF = 16384,
-}
-
-public enum UnmanagedType
-{
-	Bool = 2,
-	I1 = 3,
-	U1 = 4,
-	I2 = 5,
-	U2 = 6,
-	I4 = 7,
-	U4 = 8,
-	I8 = 9,
-	U8 = 10,
-	R4 = 11,
-	R8 = 12,
-	Currency = 15,
-	BStr = 19,
-	LPStr = 20,
-	LPWStr = 21,
-	LPTStr = 22,
-	ByValTStr = 23,
-	IUnknown = 25,
-	IDispatch = 26,
-	Struct = 27,
-	Interface = 28,
-	SafeArray = 29,
-	ByValArray = 30,
-	SysInt = 31,
-	SysUInt = 32,
-	VBByRefStr = 34,
-	AnsiBStr = 35,
-	TBStr = 36,
-	VariantBool = 37,
-	FunctionPtr = 38,
-	AsAny = 40,
-	LPArray = 42,
-	LPStruct = 43,
-	CustomMarshaler = 44,
-	Error = 45,
-	IInspectable = 46,
-	HString = 47,
-	LPUTF8Str = 48,
-}
-
-public enum DllImportSearchPath
-{
-	UseDllDirectoryForDependencies = 256,
-	ApplicationDirectory = 512,
-	UserDirectories = 1024,
-	System32 = 2048,
-	SafeDirectories = 4096,
-	AssemblyDirectory = 2,
-	LegacyBehavior = 0,
-}
-
-public enum CallingConvention
-{
-	Winapi = 1,
-	Cdecl = 2,
-	StdCall = 3,
-	ThisCall = 4,
-	FastCall = 5,
-}
-
-public enum CharSet
-{
-	None = 1,
-	Ansi = 2,
-	Unicode = 3,
-	Auto = 4,
-}
-
-public enum GCHandleType
-{
-	Weak = 0,
-	WeakTrackResurrection = 1,
-	Normal = 2,
-	Pinned = 3,
-}
-
-internal enum InsertionBehavior
-{
-	None = 0,
-	OverwriteExisting = 1,
-	ThrowOnExisting = 2,
-}
-
-public enum DebuggableAttribute.DebuggingModes
-{
-	None = 0,
-	Default = 1,
-	DisableOptimizations = 256,
-	IgnoreSymbolStoreSequencePoints = 2,
-	EnableEditAndContinue = 4,
-}
-
-public enum DebuggerBrowsableState
-{
-	Never = 0,
-	Collapsed = 2,
-	RootHidden = 3,
-}
-
-internal enum StackTrace.TraceFormat
-{
-	Normal = 0,
-	TrailingNewLine = 1,
-	NoResourceLookup = 2,
-}
-
-public enum EventKeywords
-{
-	None = 0,
-	MicrosoftTelemetry = 562949953421312,
-	WdiContext = 562949953421312,
-	WdiDiagnostic = 1125899906842624,
-	Sqm = 2251799813685248,
-	AuditFailure = 4503599627370496,
-	AuditSuccess = 9007199254740992,
-	CorrelationHint = 4503599627370496,
-	EventLogClassic = 36028797018963968,
-}
-
-public enum ConfigurationElementCollectionType
-{
-	AddRemoveClearMap = 1,
-	AddRemoveClearMapAlternate = 3,
-	BasicMap = 0,
-	BasicMapAlternate = 2,
-}
-
-public enum ConfigurationSaveMode
-{
-	Full = 2,
-	Minimal = 1,
-	Modified = 0,
-}
-
-public enum PKCS12.DeriveBytes.Purpose
-{
-	Key = 0,
-	IV = 1,
-	MAC = 2,
-}
-
-public enum X509ChainStatusFlags
-{
-	InvalidBasicConstraints = 1024,
-	NoError = 0,
-	NotSignatureValid = 8,
-	NotTimeNested = 2,
-	NotTimeValid = 1,
-	PartialChain = 65536,
-	UntrustedRoot = 32,
-}
-
-public enum KeyUsages
-{
-	digitalSignature = 128,
-	nonRepudiation = 64,
-	keyEncipherment = 32,
-	dataEncipherment = 16,
-	keyAgreement = 8,
-	keyCertSign = 4,
-	cRLSign = 2,
-	encipherOnly = 1,
-	decipherOnly = 2048,
-	none = 0,
-}
-
-public enum NetscapeCertTypeExtension.CertTypes
-{
-	SslClient = 128,
-	SslServer = 64,
-	Smime = 32,
-	ObjectSigning = 16,
-	SslCA = 4,
-	SmimeCA = 2,
-	ObjectSigningCA = 1,
-}
-
-internal enum AlertLevel
-{
-	Warning = 1,
-	Fatal = 2,
-}
-
-internal enum AlertDescription
-{
-	CloseNotify = 0,
-	UnexpectedMessage = 10,
-	BadRecordMAC = 20,
-	DecryptionFailed = 21,
-	RecordOverflow = 22,
-	DecompressionFailiure = 30,
-	HandshakeFailiure = 40,
-	NoCertificate = 41,
-	BadCertificate = 42,
-	UnsupportedCertificate = 43,
-	CertificateRevoked = 44,
-	CertificateExpired = 45,
-	CertificateUnknown = 46,
-	IlegalParameter = 47,
-	UnknownCA = 48,
-	AccessDenied = 49,
-	DecodeError = 50,
-	DecryptError = 51,
-	ExportRestriction = 60,
-	ProtocolVersion = 70,
-	InsuficientSecurity = 71,
-	InternalError = 80,
-	UserCancelled = 90,
-	NoRenegotiation = 100,
-}
-
-public enum CipherAlgorithmType
-{
-	Des = 0,
-	None = 1,
-	Rc2 = 2,
-	Rc4 = 3,
-	Rijndael = 4,
-	SkipJack = 5,
-	TripleDes = 6,
-}
-
-internal enum ContentType
-{
-	ChangeCipherSpec = 20,
-	Alert = 21,
-	Handshake = 22,
-	ApplicationData = 23,
-}
-
-public enum ExchangeAlgorithmType
-{
-	DiffieHellman = 0,
-	Fortezza = 1,
-	None = 2,
-	RsaKeyX = 3,
-	RsaSign = 4,
-}
-
-internal enum HandshakeState
-{
-	None = 0,
-	Started = 1,
-	Finished = 2,
-}
-
-public enum HashAlgorithmType
-{
-	Md5 = 0,
-	None = 1,
-	Sha1 = 2,
-}
-
-public enum SecurityCompressionType
-{
-	None = 0,
-	Zlib = 1,
-}
-
-public enum SecurityProtocolType
-{
-	Ssl2 = 12,
-	Ssl3 = 48,
-	Tls = 192,
-	Tls11 = 768,
-	Tls12 = 3072,
-}
-
-private enum SslClientStream.NegotiateState
-{
-	SentClientHello = 0,
-	ReceiveClientHelloResponse = 1,
-	SentCipherSpec = 2,
-	ReceiveCipherSpecResponse = 3,
-	SentKeyExchange = 4,
-	ReceiveFinishResponse = 5,
-	SentFinished = 6,
-}
-
-internal enum ClientCertificateType
-{
-	RSA = 1,
-	DSS = 2,
-	RSAFixed = 3,
-	DSSFixed = 4,
-	Unknown = 255,
-}
-
-internal enum HandshakeType
-{
-	HelloRequest = 0,
-	ClientHello = 1,
-	ServerHello = 2,
-	Certificate = 11,
-	ServerKeyExchange = 12,
-	CertificateRequest = 13,
-	ServerHelloDone = 14,
-	CertificateVerify = 15,
-	ClientKeyExchange = 16,
-	Finished = 20,
-	None = 255,
-}
-
-public enum NtlmAuthLevel
-{
-	LM_and_NTLM = 0,
-	LM_and_NTLM_and_try_NTLMv2_Session = 1,
-	NTLM_only = 2,
-	NTLMv2_only = 3,
-}
-
-public enum NtlmFlags
-{
-	NegotiateUnicode = 1,
-	NegotiateOem = 2,
-	RequestTarget = 4,
-	NegotiateNtlm = 512,
-	NegotiateDomainSupplied = 4096,
-	NegotiateWorkstationSupplied = 8192,
-	NegotiateAlwaysSign = 32768,
-	NegotiateNtlm2Key = 524288,
-	Negotiate128 = 536870912,
-}
-
-public enum AlertLevel
-{
-	Warning = 1,
-	Fatal = 2,
-}
-
-public enum AlertDescription
-{
-	CloseNotify = 0,
-	UnexpectedMessage = 10,
-	BadRecordMAC = 20,
-	DecryptionFailed_RESERVED = 21,
-	RecordOverflow = 22,
-	DecompressionFailure = 30,
-	HandshakeFailure = 40,
-	NoCertificate_RESERVED = 41,
-	BadCertificate = 42,
-	UnsupportedCertificate = 43,
-	CertificateRevoked = 44,
-	CertificateExpired = 45,
-	CertificateUnknown = 46,
-	IlegalParameter = 47,
-	UnknownCA = 48,
-	AccessDenied = 49,
-	DecodeError = 50,
-	DecryptError = 51,
-	ExportRestriction = 60,
-	ProtocolVersion = 70,
-	InsuficientSecurity = 71,
-	InternalError = 80,
-	UserCancelled = 90,
-	NoRenegotiation = 100,
-	UnsupportedExtension = 110,
-}
-
-public enum CipherAlgorithmType
-{
-	None = 0,
-	Aes128 = 1,
-	Aes256 = 2,
-	AesGcm128 = 3,
-	AesGcm256 = 4,
-}
-
-public enum CipherSuiteCode
-{
-	TLS_NULL_WITH_NULL_NULL = 0,
-	TLS_RSA_WITH_NULL_MD5 = 1,
-	TLS_RSA_WITH_NULL_SHA = 2,
-	TLS_RSA_EXPORT_WITH_RC4_40_MD5 = 3,
-	TLS_RSA_WITH_RC4_128_MD5 = 4,
-	TLS_RSA_WITH_RC4_128_SHA = 5,
-	TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 = 6,
-	TLS_RSA_WITH_IDEA_CBC_SHA = 7,
-	TLS_RSA_EXPORT_WITH_DES40_CBC_SHA = 8,
-	TLS_RSA_WITH_DES_CBC_SHA = 9,
-	TLS_RSA_WITH_3DES_EDE_CBC_SHA = 10,
-	TLS_DH_DSS_EXPORT_WITH_DES40_CBC_SHA = 11,
-	TLS_DH_DSS_WITH_DES_CBC_SHA = 12,
-	TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA = 13,
-	TLS_DH_RSA_EXPORT_WITH_DES40_CBC_SHA = 14,
-	TLS_DH_RSA_WITH_DES_CBC_SHA = 15,
-	TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA = 16,
-	TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA = 17,
-	TLS_DHE_DSS_WITH_DES_CBC_SHA = 18,
-	TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA = 19,
-	TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA = 20,
-	TLS_DHE_RSA_WITH_DES_CBC_SHA = 21,
-	TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA = 22,
-	TLS_DH_anon_EXPORT_WITH_RC4_40_MD5 = 23,
-	TLS_DH_anon_WITH_RC4_128_MD5 = 24,
-	TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA = 25,
-	TLS_DH_anon_WITH_DES_CBC_SHA = 26,
-	TLS_DH_anon_WITH_3DES_EDE_CBC_SHA = 27,
-	TLS_RSA_WITH_AES_128_CBC_SHA = 47,
-	TLS_DH_DSS_WITH_AES_128_CBC_SHA = 48,
-	TLS_DH_RSA_WITH_AES_128_CBC_SHA = 49,
-	TLS_DHE_DSS_WITH_AES_128_CBC_SHA = 50,
-	TLS_DHE_RSA_WITH_AES_128_CBC_SHA = 51,
-	TLS_DH_anon_WITH_AES_128_CBC_SHA = 52,
-	TLS_RSA_WITH_AES_256_CBC_SHA = 53,
-	TLS_DH_DSS_WITH_AES_256_CBC_SHA = 54,
-	TLS_DH_RSA_WITH_AES_256_CBC_SHA = 55,
-	TLS_DHE_DSS_WITH_AES_256_CBC_SHA = 56,
-	TLS_DHE_RSA_WITH_AES_256_CBC_SHA = 57,
-	TLS_DH_anon_WITH_AES_256_CBC_SHA = 58,
-	TLS_RSA_WITH_CAMELLIA_128_CBC_SHA = 65,
-	TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA = 66,
-	TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA = 67,
-	TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA = 68,
-	TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA = 69,
-	TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA = 70,
-	TLS_RSA_WITH_CAMELLIA_256_CBC_SHA = 132,
-	TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA = 133,
-	TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA = 134,
-	TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA = 135,
-	TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA = 136,
-	TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA = 137,
-	TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 186,
-	TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA256 = 187,
-	TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 188,
-	TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256 = 189,
-	TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 190,
-	TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256 = 191,
-	TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 192,
-	TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA256 = 193,
-	TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 194,
-	TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256 = 195,
-	TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 196,
-	TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256 = 197,
-	TLS_RSA_WITH_SEED_CBC_SHA = 150,
-	TLS_DH_DSS_WITH_SEED_CBC_SHA = 151,
-	TLS_DH_RSA_WITH_SEED_CBC_SHA = 152,
-	TLS_DHE_DSS_WITH_SEED_CBC_SHA = 153,
-	TLS_DHE_RSA_WITH_SEED_CBC_SHA = 154,
-	TLS_DH_anon_WITH_SEED_CBC_SHA = 155,
-	TLS_PSK_WITH_RC4_128_SHA = 138,
-	TLS_PSK_WITH_3DES_EDE_CBC_SHA = 139,
-	TLS_PSK_WITH_AES_128_CBC_SHA = 140,
-	TLS_PSK_WITH_AES_256_CBC_SHA = 141,
-	TLS_DHE_PSK_WITH_RC4_128_SHA = 142,
-	TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA = 143,
-	TLS_DHE_PSK_WITH_AES_128_CBC_SHA = 144,
-	TLS_DHE_PSK_WITH_AES_256_CBC_SHA = 145,
-	TLS_RSA_PSK_WITH_RC4_128_SHA = 146,
-	TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA = 147,
-	TLS_RSA_PSK_WITH_AES_128_CBC_SHA = 148,
-	TLS_RSA_PSK_WITH_AES_256_CBC_SHA = 149,
-	TLS_ECDH_ECDSA_WITH_NULL_SHA = 49153,
-	TLS_ECDH_ECDSA_WITH_RC4_128_SHA = 49154,
-	TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA = 49155,
-	TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA = 49156,
-	TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA = 49157,
-	TLS_ECDHE_ECDSA_WITH_NULL_SHA = 49158,
-	TLS_ECDHE_ECDSA_WITH_RC4_128_SHA = 49159,
-	TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA = 49160,
-	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA = 49161,
-	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA = 49162,
-	TLS_ECDH_RSA_WITH_NULL_SHA = 49163,
-	TLS_ECDH_RSA_WITH_RC4_128_SHA = 49164,
-	TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA = 49165,
-	TLS_ECDH_RSA_WITH_AES_128_CBC_SHA = 49166,
-	TLS_ECDH_RSA_WITH_AES_256_CBC_SHA = 49167,
-	TLS_ECDHE_RSA_WITH_NULL_SHA = 49168,
-	TLS_ECDHE_RSA_WITH_RC4_128_SHA = 49169,
-	TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA = 49170,
-	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA = 49171,
-	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA = 49172,
-	TLS_ECDH_anon_WITH_NULL_SHA = 49173,
-	TLS_ECDH_anon_WITH_RC4_128_SHA = 49174,
-	TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA = 49175,
-	TLS_ECDH_anon_WITH_AES_128_CBC_SHA = 49176,
-	TLS_ECDH_anon_WITH_AES_256_CBC_SHA = 49177,
-	TLS_PSK_WITH_NULL_SHA = 44,
-	TLS_DHE_PSK_WITH_NULL_SHA = 45,
-	TLS_RSA_PSK_WITH_NULL_SHA = 46,
-	TLS_SRP_SHA_WITH_3DES_EDE_CBC_SHA = 49178,
-	TLS_SRP_SHA_RSA_WITH_3DES_EDE_CBC_SHA = 49179,
-	TLS_SRP_SHA_DSS_WITH_3DES_EDE_CBC_SHA = 49180,
-	TLS_SRP_SHA_WITH_AES_128_CBC_SHA = 49181,
-	TLS_SRP_SHA_RSA_WITH_AES_128_CBC_SHA = 49182,
-	TLS_SRP_SHA_DSS_WITH_AES_128_CBC_SHA = 49183,
-	TLS_SRP_SHA_WITH_AES_256_CBC_SHA = 49184,
-	TLS_SRP_SHA_RSA_WITH_AES_256_CBC_SHA = 49185,
-	TLS_SRP_SHA_DSS_WITH_AES_256_CBC_SHA = 49186,
-	TLS_RSA_WITH_NULL_SHA256 = 59,
-	TLS_RSA_WITH_AES_128_CBC_SHA256 = 60,
-	TLS_RSA_WITH_AES_256_CBC_SHA256 = 61,
-	TLS_DH_DSS_WITH_AES_128_CBC_SHA256 = 62,
-	TLS_DH_RSA_WITH_AES_128_CBC_SHA256 = 63,
-	TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 = 64,
-	TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 = 103,
-	TLS_DH_DSS_WITH_AES_256_CBC_SHA256 = 104,
-	TLS_DH_RSA_WITH_AES_256_CBC_SHA256 = 105,
-	TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 = 106,
-	TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 = 107,
-	TLS_DH_anon_WITH_AES_128_CBC_SHA256 = 108,
-	TLS_DH_anon_WITH_AES_256_CBC_SHA256 = 109,
-	TLS_RSA_WITH_AES_128_GCM_SHA256 = 156,
-	TLS_RSA_WITH_AES_256_GCM_SHA384 = 157,
-	TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 = 158,
-	TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 = 159,
-	TLS_DH_RSA_WITH_AES_128_GCM_SHA256 = 160,
-	TLS_DH_RSA_WITH_AES_256_GCM_SHA384 = 161,
-	TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 = 162,
-	TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 = 163,
-	TLS_DH_DSS_WITH_AES_128_GCM_SHA256 = 164,
-	TLS_DH_DSS_WITH_AES_256_GCM_SHA384 = 165,
-	TLS_DH_anon_WITH_AES_128_GCM_SHA256 = 166,
-	TLS_DH_anon_WITH_AES_256_GCM_SHA384 = 167,
-	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 = 49187,
-	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 = 49188,
-	TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 = 49189,
-	TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 = 49190,
-	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 = 49191,
-	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 = 49192,
-	TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 = 49193,
-	TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 = 49194,
-	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 = 49195,
-	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 = 49196,
-	TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 = 49197,
-	TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 = 49198,
-	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 = 49199,
-	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 = 49200,
-	TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 = 49201,
-	TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 = 49202,
-	TLS_PSK_WITH_AES_128_GCM_SHA256 = 168,
-	TLS_PSK_WITH_AES_256_GCM_SHA384 = 169,
-	TLS_DHE_PSK_WITH_AES_128_GCM_SHA256 = 170,
-	TLS_DHE_PSK_WITH_AES_256_GCM_SHA384 = 171,
-	TLS_RSA_PSK_WITH_AES_128_GCM_SHA256 = 172,
-	TLS_RSA_PSK_WITH_AES_256_GCM_SHA384 = 173,
-	TLS_PSK_WITH_AES_128_CBC_SHA256 = 174,
-	TLS_PSK_WITH_AES_256_CBC_SHA384 = 175,
-	TLS_PSK_WITH_NULL_SHA256 = 176,
-	TLS_PSK_WITH_NULL_SHA384 = 177,
-	TLS_DHE_PSK_WITH_AES_128_CBC_SHA256 = 178,
-	TLS_DHE_PSK_WITH_AES_256_CBC_SHA384 = 179,
-	TLS_DHE_PSK_WITH_NULL_SHA256 = 180,
-	TLS_DHE_PSK_WITH_NULL_SHA384 = 181,
-	TLS_RSA_PSK_WITH_AES_128_CBC_SHA256 = 182,
-	TLS_RSA_PSK_WITH_AES_256_CBC_SHA384 = 183,
-	TLS_RSA_PSK_WITH_NULL_SHA256 = 184,
-	TLS_RSA_PSK_WITH_NULL_SHA384 = 185,
-	TLS_ECDHE_PSK_WITH_RC4_128_SHA = 49203,
-	TLS_ECDHE_PSK_WITH_3DES_EDE_CBC_SHA = 49204,
-	TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA = 49205,
-	TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA = 49206,
-	TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256 = 49207,
-	TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384 = 49208,
-	TLS_ECDHE_PSK_WITH_NULL_SHA = 49209,
-	TLS_ECDHE_PSK_WITH_NULL_SHA256 = 49210,
-	TLS_ECDHE_PSK_WITH_NULL_SHA384 = 49211,
-	TLS_EMPTY_RENEGOTIATION_INFO_SCSV = 255,
-	TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 = 49266,
-	TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 = 49267,
-	TLS_ECDH_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 = 49268,
-	TLS_ECDH_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 = 49269,
-	TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 49270,
-	TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 = 49271,
-	TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 49272,
-	TLS_ECDH_RSA_WITH_CAMELLIA_256_CBC_SHA384 = 49273,
-	TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49274,
-	TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49275,
-	TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49276,
-	TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49277,
-	TLS_DH_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49278,
-	TLS_DH_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49279,
-	TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256 = 49280,
-	TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384 = 49281,
-	TLS_DH_DSS_WITH_CAMELLIA_128_GCM_SHA256 = 49282,
-	TLS_DH_DSS_WITH_CAMELLIA_256_GCM_SHA384 = 49283,
-	TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256 = 49284,
-	TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384 = 49285,
-	TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 = 49286,
-	TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 = 49287,
-	TLS_ECDH_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 = 49288,
-	TLS_ECDH_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 = 49289,
-	TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49290,
-	TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49291,
-	TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49292,
-	TLS_ECDH_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49293,
-	TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49294,
-	TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49295,
-	TLS_DHE_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49296,
-	TLS_DHE_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49297,
-	TLS_RSA_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49298,
-	TLS_RSA_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49299,
-	TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49300,
-	TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49301,
-	TLS_DHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49302,
-	TLS_DHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49303,
-	TLS_RSA_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49304,
-	TLS_RSA_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49305,
-	TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49306,
-	TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49307,
-	TLS_RSA_WITH_AES_128_CCM = 49308,
-	TLS_RSA_WITH_AES_256_CCM = 49309,
-	TLS_DHE_RSA_WITH_AES_128_CCM = 49310,
-	TLS_DHE_RSA_WITH_AES_256_CCM = 49311,
-	TLS_RSA_WITH_AES_128_CCM_8 = 49312,
-	TLS_RSA_WITH_AES_256_CCM_8 = 49313,
-	TLS_DHE_RSA_WITH_AES_128_CCM_8 = 49314,
-	TLS_DHE_RSA_WITH_AES_256_CCM_8 = 49315,
-	TLS_PSK_WITH_AES_128_CCM = 49316,
-	TLS_PSK_WITH_AES_256_CCM = 49317,
-	TLS_DHE_PSK_WITH_AES_128_CCM = 49318,
-	TLS_DHE_PSK_WITH_AES_256_CCM = 49319,
-	TLS_PSK_WITH_AES_128_CCM_8 = 49320,
-	TLS_PSK_WITH_AES_256_CCM_8 = 49321,
-	TLS_PSK_DHE_WITH_AES_128_CCM_8 = 49322,
-	TLS_PSK_DHE_WITH_AES_256_CCM_8 = 49323,
-	TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 52243,
-	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = 52244,
-	TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 52245,
-	TLS_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58384,
-	TLS_RSA_WITH_SALSA20_SHA1 = 58385,
-	TLS_ECDHE_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58386,
-	TLS_ECDHE_RSA_WITH_SALSA20_SHA1 = 58387,
-	TLS_ECDHE_ECDSA_WITH_ESTREAM_SALSA20_SHA1 = 58388,
-	TLS_ECDHE_ECDSA_WITH_SALSA20_SHA1 = 58389,
-	TLS_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58390,
-	TLS_PSK_WITH_SALSA20_SHA1 = 58391,
-	TLS_ECDHE_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58392,
-	TLS_ECDHE_PSK_WITH_SALSA20_SHA1 = 58393,
-	TLS_RSA_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58394,
-	TLS_RSA_PSK_WITH_SALSA20_SHA1 = 58395,
-	TLS_DHE_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58396,
-	TLS_DHE_PSK_WITH_SALSA20_SHA1 = 58397,
-	TLS_DHE_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58398,
-	TLS_DHE_RSA_WITH_SALSA20_SHA1 = 58399,
-	TLS_FALLBACK_SCSV = 22016,
-}
-
-public enum ExchangeAlgorithmType
-{
-	None = 0,
-	Dhe = 1,
-	Rsa = 2,
-	EcDhe = 3,
-}
-
-public enum HashAlgorithmType
-{
-	None = 0,
-	Md5 = 1,
-	Sha1 = 2,
-	Sha224 = 3,
-	Sha256 = 4,
-	Sha384 = 5,
-	Sha512 = 6,
-	Unknown = 255,
-	Md5Sha1 = 254,
-}
-
-public enum MonoSslPolicyErrors
-{
-	None = 0,
-	RemoteCertificateNotAvailable = 1,
-	RemoteCertificateNameMismatch = 2,
-	RemoteCertificateChainErrors = 4,
-}
-
-public enum TlsProtocols
-{
-	Zero = 0,
-	Tls10Client = 128,
-	Tls10Server = 64,
-	Tls10 = 192,
-	Tls11Client = 512,
-	Tls11Server = 256,
-	Tls11 = 768,
-	Tls12Client = 2048,
-	Tls12Server = 1024,
-	Tls12 = 3072,
-	ClientMask = 2688,
-	ServerMask = 1344,
-}
-
-public enum BigInteger.Sign
-{
-	Zero = 0,
-	Positive = 1,
-}
-
-public enum ConfidenceFactor
-{
-	ExtraLow = 0,
-	Low = 1,
-	Medium = 2,
-	High = 3,
-	ExtraHigh = 4,
-	Provable = 5,
-}
-
-public enum AstNode.AstType
-{
-	Axis = 0,
-	Operator = 1,
-	Filter = 2,
-	ConstantOperand = 3,
-	Function = 4,
-	Group = 5,
-	Root = 6,
-	Variable = 7,
-	Error = 8,
-}
-
-public enum Axis.AxisType
-{
-	Ancestor = 0,
-	AncestorOrSelf = 1,
-	Attribute = 2,
-	Child = 3,
-	Descendant = 4,
-	DescendantOrSelf = 5,
-	Following = 6,
-	FollowingSibling = 7,
-	Namespace = 8,
-	Parent = 9,
-	Preceding = 10,
-	PrecedingSibling = 11,
-	Self = 12,
-	None = 13,
-}
-
-public enum Function.FunctionType
-{
-	FuncLast = 0,
-	FuncPosition = 1,
-	FuncCount = 2,
-	FuncID = 3,
-	FuncLocalName = 4,
-	FuncNameSpaceUri = 5,
-	FuncName = 6,
-	FuncString = 7,
-	FuncBoolean = 8,
-	FuncNumber = 9,
-	FuncTrue = 10,
-	FuncFalse = 11,
-	FuncNot = 12,
-	FuncConcat = 13,
-	FuncStartsWith = 14,
-	FuncContains = 15,
-	FuncSubstringBefore = 16,
-	FuncSubstringAfter = 17,
-	FuncSubstring = 18,
-	FuncStringLength = 19,
-	FuncNormalize = 20,
-	FuncTranslate = 21,
-	FuncLang = 22,
-	FuncSum = 23,
-	FuncFloor = 24,
-	FuncCeiling = 25,
-	FuncRound = 26,
-	FuncUserDefined = 27,
-}
-
-public enum Operator.Op
-{
-	INVALID = 0,
-	OR = 1,
-	AND = 2,
-	EQ = 3,
-	NE = 4,
-	LT = 5,
-	LE = 6,
-	GT = 7,
-	GE = 8,
-	PLUS = 9,
-	MINUS = 10,
-	MUL = 11,
-	DIV = 12,
-	MOD = 13,
-	UNION = 14,
-}
-
-public enum XPathScanner.LexKind
-{
-	Comma = 44,
-	Slash = 47,
-	At = 64,
-	Dot = 46,
-	LParens = 40,
-	RParens = 41,
-	LBracket = 91,
-	RBracket = 93,
-	Star = 42,
-	Plus = 43,
-	Minus = 45,
-	Eq = 61,
-	Lt = 60,
-	Gt = 62,
-	Bang = 33,
-	Dollar = 36,
-	Apos = 39,
-	Quote = 34,
-	Union = 124,
-	Ne = 78,
-	Le = 76,
-	Ge = 71,
-	And = 65,
-	Or = 79,
-	DotDot = 68,
-	SlashSlash = 83,
-	Name = 110,
-	String = 115,
-	Number = 100,
-	Axe = 97,
-	Eof = 69,
-}
-
-internal enum BinXmlToken
-{
-	Error = 0,
-	XmlDecl = 254,
-	Encoding = 253,
-	DocType = 252,
-	System = 251,
-	Public = 250,
-	Subset = 249,
-	Element = 248,
-	EndElem = 247,
-	Attr = 246,
-	EndAttrs = 245,
-	PI = 244,
-	Comment = 243,
-	CData = 242,
-	EndCData = 241,
-	Name = 240,
-	QName = 239,
-	XmlText = 237,
-	Nest = 236,
-	EndNest = 235,
-	Extn = 234,
-	NmFlush = 233,
-	SQL_BIT = 6,
-	SQL_TINYINT = 7,
-	SQL_SMALLINT = 1,
-	SQL_INT = 2,
-	SQL_BIGINT = 8,
-	SQL_REAL = 3,
-	SQL_FLOAT = 4,
-	SQL_MONEY = 5,
-	SQL_SMALLMONEY = 20,
-	SQL_DATETIME = 18,
-	SQL_SMALLDATETIME = 19,
-	SQL_DECIMAL = 10,
-	SQL_NUMERIC = 11,
-	SQL_UUID = 9,
-	SQL_VARBINARY = 15,
-	SQL_BINARY = 12,
-	SQL_IMAGE = 23,
-	SQL_CHAR = 13,
-	SQL_VARCHAR = 16,
-	SQL_TEXT = 22,
-	SQL_NVARCHAR = 17,
-	SQL_NCHAR = 14,
-	SQL_NTEXT = 24,
-	SQL_UDT = 27,
-	XSD_KATMAI_DATE = 127,
-	XSD_KATMAI_DATETIME = 126,
-	XSD_KATMAI_TIME = 125,
-	XSD_KATMAI_DATEOFFSET = 124,
-	XSD_KATMAI_DATETIMEOFFSET = 123,
-	XSD_KATMAI_TIMEOFFSET = 122,
-	XSD_BOOLEAN = 134,
-	XSD_TIME = 129,
-	XSD_DATETIME = 130,
-	XSD_DATE = 131,
-	XSD_BINHEX = 132,
-	XSD_BASE64 = 133,
-	XSD_DECIMAL = 135,
-	XSD_BYTE = 136,
-	XSD_UNSIGNEDSHORT = 137,
-	XSD_UNSIGNEDINT = 138,
-	XSD_UNSIGNEDLONG = 139,
-	XSD_QNAME = 140,
-}
-
-private enum XmlSqlBinaryReader.ScanState
-{
-	Doc = 0,
-	XmlText = 1,
-	Attr = 2,
-	AttrVal = 3,
-	AttrValPseudoValue = 4,
-	Init = 5,
-	Error = 6,
-	EOF = 7,
-	Closed = 8,
-}
-
-public enum ConformanceLevel
-{
-	Auto = 0,
-	Fragment = 1,
-	Document = 2,
-}
-
-public enum DtdProcessing
-{
-	Prohibit = 0,
-	Ignore = 1,
-	Parse = 2,
-}
-
-public enum EntityHandling
-{
-	ExpandEntities = 1,
-	ExpandCharEntities = 2,
-}
-
-public enum NamespaceHandling
-{
-	Default = 0,
-	OmitDuplicates = 1,
-}
-
-public enum NewLineHandling
-{
-	Replace = 0,
-	Entitize = 1,
-	None = 2,
-}
-
-private enum ReadContentAsBinaryHelper.State
-{
-	None = 0,
-	InReadContent = 1,
-	InReadElementContent = 2,
-}
-
-internal enum ElementProperties
-{
-	DEFAULT = 0,
-	URI_PARENT = 1,
-	BOOL_PARENT = 2,
-	NAME_PARENT = 4,
-	EMPTY = 8,
-	NO_ENTITIES = 16,
-	HEAD = 32,
-	BLOCK_WS = 64,
-	HAS_NS = 128,
-}
-
-internal enum AttributeProperties
-{
-	DEFAULT = 0,
-	URI = 1,
-	BOOLEAN = 2,
-	NAME = 4,
-}
-
-public enum ReadState
-{
-	Initial = 0,
-	Interactive = 1,
-	Error = 2,
-	EndOfFile = 3,
-	Closed = 4,
-}
-
-public enum ValidationType
-{
-	None = 0,
-	Auto = 1,
-	DTD = 2,
-	XDR = 3,
-	Schema = 4,
-}
-
-public enum WhitespaceHandling
-{
-	All = 0,
-	Significant = 1,
-	None = 2,
-}
-
-private enum XmlEventCache.XmlEventType
-{
-	Unknown = 0,
-	DocType = 1,
-	StartElem = 2,
-	StartAttr = 3,
-	EndAttr = 4,
-	CData = 5,
-	Comment = 6,
-	PI = 7,
-	Whitespace = 8,
-	String = 9,
-	Raw = 10,
-	EntRef = 11,
-	CharEnt = 12,
-	SurrCharEnt = 13,
-	Base64 = 14,
-	BinHex = 15,
-	XmlDecl1 = 16,
-	XmlDecl2 = 17,
-	StartContent = 18,
-	EndElem = 19,
-	FullEndElem = 20,
-	Nmsp = 21,
-	EndBase64 = 22,
-	Close = 23,
-	Flush = 24,
-	Dispose = 25,
-}
-
-public enum XmlSpace
-{
-	None = 0,
-	Default = 1,
-	Preserve = 2,
-}
-
-private enum XmlTextReaderImpl.ParsingFunction
-{
-	ElementContent = 0,
-	NoData = 1,
-	OpenUrl = 2,
-	SwitchToInteractive = 3,
-	SwitchToInteractiveXmlDecl = 4,
-	DocumentContent = 5,
-	MoveToElementContent = 6,
-	PopElementContext = 7,
-	PopEmptyElementContext = 8,
-	ResetAttributesRootLevel = 9,
-	Error = 10,
-	Eof = 11,
-	ReaderClosed = 12,
-	EntityReference = 13,
-	InIncrementalRead = 14,
-	FragmentAttribute = 15,
-	ReportEndEntity = 16,
-	AfterResolveEntityInContent = 17,
-	AfterResolveEmptyEntityInContent = 18,
-	XmlDeclarationFragment = 19,
-	GoToEof = 20,
-	PartialTextValue = 21,
-	InReadAttributeValue = 22,
-	InReadValueChunk = 23,
-	InReadContentAsBinary = 24,
-	InReadElementContentAsBinary = 25,
-}
-
-private enum XmlTextReaderImpl.ParsingMode
-{
-	Full = 0,
-	SkipNode = 1,
-	SkipContent = 2,
-}
-
-private enum XmlTextReaderImpl.EntityType
-{
-	CharacterDec = 0,
-	CharacterHex = 1,
-	CharacterNamed = 2,
-	Expanded = 3,
-	Skipped = 4,
-	FakeExpanded = 5,
-	Unexpanded = 6,
-	ExpandedInAttribute = 7,
-}
-
-private enum XmlTextReaderImpl.EntityExpandType
-{
-	All = 0,
-	OnlyGeneral = 1,
-	OnlyCharacter = 2,
-}
-
-private enum XmlTextReaderImpl.IncrementalReadState
-{
-	Text = 0,
-	StartTag = 1,
-	PI = 2,
-	CDATA = 3,
-	Comment = 4,
-	Attributes = 5,
-	AttributeValue = 6,
-	ReadData = 7,
-	EndElement = 8,
-	End = 9,
-	ReadValueChunk_OnCachedValue = 10,
-	ReadValueChunk_OnPartialValue = 11,
-	ReadContentAsBinary_OnCachedValue = 12,
-	ReadContentAsBinary_OnPartialValue = 13,
-	ReadContentAsBinary_End = 14,
-}
-
-private enum XmlTextReaderImpl.InitInputType
-{
-	UriString = 0,
-	Stream = 1,
-	TextReader = 2,
-	Invalid = 3,
-}
-
-public enum Formatting
-{
-	None = 0,
-	Indented = 1,
-}
-
-private enum XmlTextWriter.NamespaceState
-{
-	Uninitialized = 0,
-	NotDeclaredButInScope = 1,
-	DeclaredButNotWrittenOut = 2,
-	DeclaredAndWrittenOut = 3,
-}
-
-private enum XmlTextWriter.SpecialAttr
-{
-	None = 0,
-	XmlSpace = 1,
-	XmlLang = 2,
-	XmlNs = 3,
-}
-
-private enum XmlTextWriter.State
-{
-	Start = 0,
-	Prolog = 1,
-	PostDTD = 2,
-	Element = 3,
-	Attribute = 4,
-	Content = 5,
-	AttrOnly = 6,
-	Epilog = 7,
-	Error = 8,
-	Closed = 9,
-}
-
-private enum XmlTextWriter.Token
-{
-	PI = 0,
-	Doctype = 1,
-	Comment = 2,
-	CData = 3,
-	StartElement = 4,
-	EndElement = 5,
-	LongEndElement = 6,
-	StartAttribute = 7,
-	EndAttribute = 8,
-	Content = 9,
-	Base64 = 10,
-	RawData = 11,
-	Whitespace = 12,
-	Empty = 13,
-}
-
-private enum XmlValidatingReaderImpl.ParsingFunction
-{
-	Read = 0,
-	Init = 1,
-	ParseDtdFromContext = 2,
-	ResolveEntityInternally = 3,
-	InReadBinaryContent = 4,
-	ReaderClosed = 5,
-	Error = 6,
-	None = 7,
-}
-
-private enum XmlWellFormedWriter.State
-{
-	Start = 0,
-	TopLevel = 1,
-	Document = 2,
-	Element = 3,
-	Content = 4,
-	B64Content = 5,
-	B64Attribute = 6,
-	AfterRootEle = 7,
-	Attribute = 8,
-	SpecialAttr = 9,
-	EndDocument = 10,
-	RootLevelAttr = 11,
-	RootLevelSpecAttr = 12,
-	RootLevelB64Attr = 13,
-	AfterRootLevelAttr = 14,
-	Closed = 15,
-	Error = 16,
-	StartContent = 101,
-	StartContentEle = 102,
-	StartContentB64 = 103,
-	StartDoc = 104,
-	StartDocEle = 106,
-	EndAttrSEle = 107,
-	EndAttrEEle = 108,
-	EndAttrSCont = 109,
-	EndAttrSAttr = 111,
-	PostB64Cont = 112,
-	PostB64Attr = 113,
-	PostB64RootAttr = 114,
-	StartFragEle = 115,
-	StartFragCont = 116,
-	StartFragB64 = 117,
-	StartRootLevelAttr = 118,
-}
-
-private enum XmlWellFormedWriter.Token
-{
-	StartDocument = 0,
-	EndDocument = 1,
-	PI = 2,
-	Comment = 3,
-	Dtd = 4,
-	StartElement = 5,
-	EndElement = 6,
-	StartAttribute = 7,
-	EndAttribute = 8,
-	Text = 9,
-	CData = 10,
-	AtomicValue = 11,
-	Base64 = 12,
-	RawData = 13,
-	Whitespace = 14,
-}
-
-private enum XmlWellFormedWriter.NamespaceKind
-{
-	Written = 0,
-	NeedToWrite = 1,
-	Implied = 2,
-	Special = 3,
-}
-
-private enum XmlWellFormedWriter.SpecialAttribute
-{
-	No = 0,
-	DefaultXmlns = 1,
-	PrefixedXmlns = 2,
-	XmlSpace = 3,
-	XmlLang = 4,
-}
-
-private enum XmlWellFormedWriter.AttributeValueCache.ItemType
-{
-	EntityRef = 0,
-	CharEntity = 1,
-	SurrogateCharEntity = 2,
-	Whitespace = 3,
-	String = 4,
-	StringChars = 5,
-	Raw = 6,
-	RawChars = 7,
-	ValueString = 8,
-}
-
-public enum WriteState
-{
-	Start = 0,
-	Prolog = 1,
-	Element = 2,
-	Attribute = 3,
-	Content = 4,
-	Closed = 5,
-	Error = 6,
-}
-
-public enum XmlOutputMethod
-{
-	Xml = 0,
-	Html = 1,
-	Text = 2,
-	AutoDetect = 3,
-}
-
-internal enum TriState
-{
-	False = 0,
-	True = 1,
-}
-
-internal enum XmlStandalone
-{
-	Omit = 0,
-	Yes = 1,
-	No = 2,
-}
-
-private enum XsdCachingReader.CachingReaderState
-{
-	None = 0,
-	Init = 1,
-	Record = 2,
-	Replay = 3,
-	ReaderClosed = 4,
-	Error = 5,
-}
-
-private enum XsdValidatingReader.ValidatingReaderState
-{
-	None = 0,
-	Init = 1,
-	Read = 2,
-	OnAttribute = 3,
-	ClearAttributes = 4,
-	ParseInlineSchema = 5,
-	ReadAhead = 6,
-	OnReadBinaryContent = 7,
-	ReaderClosed = 8,
-	EOF = 9,
-	Error = 10,
-}
-
-public enum XmlNodeChangedAction
-{
-	Insert = 0,
-	Remove = 1,
-	Change = 2,
-}
-
-private enum DtdParser.Token
-{
-	CDATA = 0,
-	ID = 1,
-	IDREF = 2,
-	IDREFS = 3,
-	ENTITY = 4,
-	ENTITIES = 5,
-	NMTOKEN = 6,
-	NMTOKENS = 7,
-	NOTATION = 8,
-	None = 9,
-	PERef = 10,
-	AttlistDecl = 11,
-	ElementDecl = 12,
-	EntityDecl = 13,
-	NotationDecl = 14,
-	Comment = 15,
-	PI = 16,
-	CondSectionStart = 17,
-	CondSectionEnd = 18,
-	Eof = 19,
-	REQUIRED = 20,
-	IMPLIED = 21,
-	FIXED = 22,
-	QName = 23,
-	Name = 24,
-	Nmtoken = 25,
-	Quote = 26,
-	LeftParen = 27,
-	RightParen = 28,
-	GreaterThan = 29,
-	Or = 30,
-	LeftBracket = 31,
-	RightBracket = 32,
-	PUBLIC = 33,
-	SYSTEM = 34,
-	Literal = 35,
-	DOCTYPE = 36,
-	NData = 37,
-	Percent = 38,
-	Star = 39,
-	QMark = 40,
-	Plus = 41,
-	PCDATA = 42,
-	Comma = 43,
-	ANY = 44,
-	EMPTY = 45,
-	IGNORE = 46,
-	INCLUDE = 47,
-}
-
-private enum DtdParser.ScanningFunction
-{
-	SubsetContent = 0,
-	Name = 1,
-	QName = 2,
-	Nmtoken = 3,
-	Doctype1 = 4,
-	Doctype2 = 5,
-	Element1 = 6,
-	Element2 = 7,
-	Element3 = 8,
-	Element4 = 9,
-	Element5 = 10,
-	Element6 = 11,
-	Element7 = 12,
-	Attlist1 = 13,
-	Attlist2 = 14,
-	Attlist3 = 15,
-	Attlist4 = 16,
-	Attlist5 = 17,
-	Attlist6 = 18,
-	Attlist7 = 19,
-	Entity1 = 20,
-	Entity2 = 21,
-	Entity3 = 22,
-	Notation1 = 23,
-	CondSection1 = 24,
-	CondSection2 = 25,
-	CondSection3 = 26,
-	Literal = 27,
-	SystemId = 28,
-	PublicId1 = 29,
-	PublicId2 = 30,
-	ClosingTag = 31,
-	ParamEntitySpace = 32,
-	None = 33,
-}
-
-private enum DtdParser.LiteralType
-{
-	AttributeValue = 0,
-	EntityReplText = 1,
-	SystemOrPublicID = 2,
-}
-
-public enum XmlTokenizedType
-{
-	CDATA = 0,
-	ID = 1,
-	IDREF = 2,
-	IDREFS = 3,
-	ENTITY = 4,
-	ENTITIES = 5,
-	NMTOKEN = 6,
-	NMTOKENS = 7,
-	NOTATION = 8,
-	ENUMERATION = 9,
-	QName = 10,
-	NCName = 11,
-	None = 12,
-}
-
-internal enum ExceptionType
-{
-	ArgumentException = 0,
-	XmlException = 1,
-}
-
-public enum XmlDateTimeSerializationMode
-{
-	Local = 0,
-	Utc = 1,
-	Unspecified = 2,
-	RoundtripKind = 3,
-}
-
-public enum XmlNamespaceScope
-{
-	All = 0,
-	ExcludeXml = 1,
-	Local = 2,
-}
-
-public enum XmlNodeType
-{
-	None = 0,
-	Element = 1,
-	Attribute = 2,
-	Text = 3,
-	CDATA = 4,
-	EntityReference = 5,
-	Entity = 6,
-	ProcessingInstruction = 7,
-	Comment = 8,
-	Document = 9,
-	DocumentType = 10,
-	DocumentFragment = 11,
-	Notation = 12,
-	Whitespace = 13,
-	SignificantWhitespace = 14,
-	EndElement = 15,
-	EndEntity = 16,
-	XmlDeclaration = 17,
-}
-
-public enum XPathResultType
-{
-	Number = 0,
-	String = 1,
-	Boolean = 2,
-	NodeSet = 3,
-	Navigator = 1,
-	Any = 5,
-	Error = 6,
-}
-
-public enum XPathNamespaceScope
-{
-	All = 0,
-	ExcludeXml = 1,
-	Local = 2,
-}
-
-public enum XPathNodeType
-{
-	Root = 0,
-	Element = 1,
-	Attribute = 2,
-	Namespace = 3,
-	Text = 4,
-	SignificantWhitespace = 5,
-	Whitespace = 6,
-	ProcessingInstruction = 7,
-	Comment = 8,
-	All = 9,
-}
-
-internal enum SchemaTypes
-{
-	NotSet = 0,
-	Primitive = 1,
-	Enum = 2,
-	Array = 3,
-	Class = 4,
-	XmlSerializable = 5,
-	XmlNode = 6,
-	Void = 7,
-}
-
-internal enum SerializationFormat
-{
-	Encoded = 0,
-	Literal = 1,
-}
-
-public enum CompiledIdentityConstraint.ConstraintRole
-{
-	Unique = 0,
-	Key = 1,
-	Keyref = 2,
-}
-
-public enum XmlSchemaDatatypeVariety
-{
-	Atomic = 0,
-	List = 1,
-	Union = 2,
-}
-
-internal enum RestrictionFlags
-{
-	Length = 1,
-	MinLength = 2,
-	MaxLength = 4,
-	Pattern = 8,
-	Enumeration = 16,
-	WhiteSpace = 32,
-	MaxInclusive = 64,
-	MaxExclusive = 128,
-	MinInclusive = 256,
-	MinExclusive = 512,
-	TotalDigits = 1024,
-	FractionDigits = 2048,
-}
-
-internal enum XmlSchemaWhiteSpace
-{
-	Preserve = 0,
-	Replace = 1,
-	Collapse = 2,
-}
-
-public enum XmlSchemaInference.InferenceOption
-{
-	Restricted = 0,
-	Relaxed = 1,
-}
-
-public enum NamespaceList.ListType
-{
-	Any = 0,
-	Other = 1,
-	Set = 2,
-}
-
-internal enum Compositor
-{
-	Root = 0,
-	Include = 1,
-	Import = 2,
-	Redefine = 3,
-}
-
-internal enum SchemaAttDef.Reserve
-{
-	None = 0,
-	XmlSpace = 1,
-	XmlLang = 2,
-}
-
-private enum SchemaCollectionPreprocessor.Compositor
-{
-	Root = 0,
-	Include = 1,
-	Import = 2,
-}
-
-internal enum SchemaDeclBase.Use
-{
-	Default = 0,
-	Required = 1,
-	Implied = 2,
-	Fixed = 3,
-	RequiredFixed = 4,
-}
-
-internal enum AttributeMatchState
-{
-	AttributeFound = 0,
-	AnyIdAttributeFound = 1,
-	UndeclaredElementAndAttribute = 2,
-	UndeclaredAttribute = 3,
-	AnyAttributeLax = 4,
-	AnyAttributeSkip = 5,
-	ProhibitedAnyAttribute = 6,
-	ProhibitedAttribute = 7,
-	AttributeNameMismatch = 8,
-	ValidateAttributeInvalidCall = 9,
-}
-
-public enum SchemaNames.Token
-{
-	Empty = 0,
-	SchemaName = 1,
-	SchemaType = 2,
-	SchemaMaxOccurs = 3,
-	SchemaMinOccurs = 4,
-	SchemaInfinite = 5,
-	SchemaModel = 6,
-	SchemaOpen = 7,
-	SchemaClosed = 8,
-	SchemaContent = 9,
-	SchemaMixed = 10,
-	SchemaEmpty = 11,
-	SchemaElementOnly = 12,
-	SchemaTextOnly = 13,
-	SchemaOrder = 14,
-	SchemaSeq = 15,
-	SchemaOne = 16,
-	SchemaMany = 17,
-	SchemaRequired = 18,
-	SchemaYes = 19,
-	SchemaNo = 20,
-	SchemaString = 21,
-	SchemaId = 22,
-	SchemaIdref = 23,
-	SchemaIdrefs = 24,
-	SchemaEntity = 25,
-	SchemaEntities = 26,
-	SchemaNmtoken = 27,
-	SchemaNmtokens = 28,
-	SchemaEnumeration = 29,
-	SchemaDefault = 30,
-	XdrRoot = 31,
-	XdrElementType = 32,
-	XdrElement = 33,
-	XdrGroup = 34,
-	XdrAttributeType = 35,
-	XdrAttribute = 36,
-	XdrDatatype = 37,
-	XdrDescription = 38,
-	XdrExtends = 39,
-	SchemaXdrRootAlias = 40,
-	SchemaDtType = 41,
-	SchemaDtValues = 42,
-	SchemaDtMaxLength = 43,
-	SchemaDtMinLength = 44,
-	SchemaDtMax = 45,
-	SchemaDtMin = 46,
-	SchemaDtMinExclusive = 47,
-	SchemaDtMaxExclusive = 48,
-	SchemaTargetNamespace = 49,
-	SchemaVersion = 50,
-	SchemaFinalDefault = 51,
-	SchemaBlockDefault = 52,
-	SchemaFixed = 53,
-	SchemaAbstract = 54,
-	SchemaBlock = 55,
-	SchemaSubstitutionGroup = 56,
-	SchemaFinal = 57,
-	SchemaNillable = 58,
-	SchemaRef = 59,
-	SchemaBase = 60,
-	SchemaDerivedBy = 61,
-	SchemaNamespace = 62,
-	SchemaProcessContents = 63,
-	SchemaRefer = 64,
-	SchemaPublic = 65,
-	SchemaSystem = 66,
-	SchemaSchemaLocation = 67,
-	SchemaValue = 68,
-	SchemaSource = 69,
-	SchemaAttributeFormDefault = 70,
-	SchemaElementFormDefault = 71,
-	SchemaUse = 72,
-	SchemaForm = 73,
-	XsdSchema = 74,
-	XsdAnnotation = 75,
-	XsdInclude = 76,
-	XsdImport = 77,
-	XsdElement = 78,
-	XsdAttribute = 79,
-	xsdAttributeGroup = 80,
-	XsdAnyAttribute = 81,
-	XsdGroup = 82,
-	XsdAll = 83,
-	XsdChoice = 84,
-	XsdSequence = 85,
-	XsdAny = 86,
-	XsdNotation = 87,
-	XsdSimpleType = 88,
-	XsdComplexType = 89,
-	XsdUnique = 90,
-	XsdKey = 91,
-	XsdKeyref = 92,
-	XsdSelector = 93,
-	XsdField = 94,
-	XsdMinExclusive = 95,
-	XsdMinInclusive = 96,
-	XsdMaxExclusive = 97,
-	XsdMaxInclusive = 98,
-	XsdTotalDigits = 99,
-	XsdFractionDigits = 100,
-	XsdLength = 101,
-	XsdMinLength = 102,
-	XsdMaxLength = 103,
-	XsdEnumeration = 104,
-	XsdPattern = 105,
-	XsdDocumentation = 106,
-	XsdAppInfo = 107,
-	XsdComplexContent = 108,
-	XsdComplexContentExtension = 109,
-	XsdComplexContentRestriction = 110,
-	XsdSimpleContent = 111,
-	XsdSimpleContentExtension = 112,
-	XsdSimpleContentRestriction = 113,
-	XsdSimpleTypeList = 114,
-	XsdSimpleTypeRestriction = 115,
-	XsdSimpleTypeUnion = 116,
-	XsdWhitespace = 117,
-	XsdRedefine = 118,
-	SchemaItemType = 119,
-	SchemaMemberTypes = 120,
-	SchemaXPath = 121,
-	XmlLang = 122,
-}
-
-internal enum SchemaType
-{
-	None = 0,
-	DTD = 1,
-	XDR = 2,
-	XSD = 3,
-}
-
-public enum XmlSchemaContentProcessing
-{
-	None = 0,
-	Skip = 1,
-	Lax = 2,
-	Strict = 3,
-}
-
-public enum XmlSchemaContentType
-{
-	TextOnly = 0,
-	Empty = 1,
-	ElementOnly = 2,
-	Mixed = 3,
-}
-
-public enum XmlSchemaDerivationMethod
-{
-	Empty = 0,
-	Substitution = 1,
-	Extension = 2,
-	Restriction = 4,
-	List = 8,
-	Union = 16,
-	All = 255,
-	None = 256,
-}
-
-internal enum FacetType
-{
-	None = 0,
-	Length = 1,
-	MinLength = 2,
-	MaxLength = 3,
-	Pattern = 4,
-	Whitespace = 5,
-	Enumeration = 6,
-	MinExclusive = 7,
-	MinInclusive = 8,
-	MaxExclusive = 9,
-	MaxInclusive = 10,
-	TotalDigits = 11,
-	FractionDigits = 12,
-}
-
-public enum XmlSchemaForm
-{
-	None = 0,
-	Qualified = 1,
-	Unqualified = 2,
-}
-
-internal enum XmlSchemaObjectTable.EnumeratorType
-{
-	Keys = 0,
-	Values = 1,
-	DictionaryEntry = 2,
-}
-
-private enum XmlSchemaParticle.Occurs
-{
-	None = 0,
-	Min = 1,
-	Max = 2,
-}
-
-public enum XmlSchemaUse
-{
-	None = 0,
-	Optional = 1,
-	Prohibited = 2,
-	Required = 3,
-}
-
-public enum XmlSchemaValidationFlags
-{
-	None = 0,
-	ProcessInlineSchema = 1,
-	ProcessSchemaLocation = 2,
-	ReportValidationWarnings = 4,
-	ProcessIdentityConstraints = 8,
-	AllowXmlAttributes = 16,
-}
-
-internal enum ValidatorState
-{
-	None = 0,
-	Start = 1,
-	TopLevelAttribute = 2,
-	TopLevelTextOrWS = 3,
-	Element = 4,
-	Attribute = 5,
-	EndOfAttributes = 6,
-	Text = 7,
-	Whitespace = 8,
-	EndElement = 9,
-	SkipToEndElement = 10,
-	Finish = 11,
-}
-
-public enum XmlSchemaValidity
-{
-	NotKnown = 0,
-	Valid = 1,
-	Invalid = 2,
-}
-
-public enum XmlSeverityType
-{
-	Error = 0,
-	Warning = 1,
-}
-
-public enum XmlTypeCode
-{
-	None = 0,
-	Item = 1,
-	Node = 2,
-	Document = 3,
-	Element = 4,
-	Attribute = 5,
-	Namespace = 6,
-	ProcessingInstruction = 7,
-	Comment = 8,
-	Text = 9,
-	AnyAtomicType = 10,
-	UntypedAtomic = 11,
-	String = 12,
-	Boolean = 13,
-	Decimal = 14,
-	Float = 15,
-	Double = 16,
-	Duration = 17,
-	DateTime = 18,
-	Time = 19,
-	Date = 20,
-	GYearMonth = 21,
-	GYear = 22,
-	GMonthDay = 23,
-	GDay = 24,
-	GMonth = 25,
-	HexBinary = 26,
-	Base64Binary = 27,
-	AnyUri = 28,
-	QName = 29,
-	Notation = 30,
-	NormalizedString = 31,
-	Token = 32,
-	Language = 33,
-	NmToken = 34,
-	Name = 35,
-	NCName = 36,
-	Id = 37,
-	Idref = 38,
-	Entity = 39,
-	Integer = 40,
-	NonPositiveInteger = 41,
-	NegativeInteger = 42,
-	Long = 43,
-	Int = 44,
-	Short = 45,
-	Byte = 46,
-	NonNegativeInteger = 47,
-	UnsignedLong = 48,
-	UnsignedInt = 49,
-	UnsignedShort = 50,
-	UnsignedByte = 51,
-	PositiveInteger = 52,
-	YearMonthDuration = 53,
-	DayTimeDuration = 54,
-}
-
-private enum XsdBuilder.State
-{
-	Root = 0,
-	Schema = 1,
-	Annotation = 2,
-	Include = 3,
-	Import = 4,
-	Element = 5,
-	Attribute = 6,
-	AttributeGroup = 7,
-	AttributeGroupRef = 8,
-	AnyAttribute = 9,
-	Group = 10,
-	GroupRef = 11,
-	All = 12,
-	Choice = 13,
-	Sequence = 14,
-	Any = 15,
-	Notation = 16,
-	SimpleType = 17,
-	ComplexType = 18,
-	ComplexContent = 19,
-	ComplexContentRestriction = 20,
-	ComplexContentExtension = 21,
-	SimpleContent = 22,
-	SimpleContentExtension = 23,
-	SimpleContentRestriction = 24,
-	SimpleTypeUnion = 25,
-	SimpleTypeList = 26,
-	SimpleTypeRestriction = 27,
-	Unique = 28,
-	Key = 29,
-	KeyRef = 30,
-	Selector = 31,
-	Field = 32,
-	MinExclusive = 33,
-	MinInclusive = 34,
-	MaxExclusive = 35,
-	MaxInclusive = 36,
-	TotalDigits = 37,
-	FractionDigits = 38,
-	Length = 39,
-	MinLength = 40,
-	MaxLength = 41,
-	Enumeration = 42,
-	Pattern = 43,
-	WhiteSpace = 44,
-	AppInfo = 45,
-	Documentation = 46,
-	Redefine = 47,
-}
-
-internal enum XsdDateTimeFlags
-{
-	DateTime = 1,
-	Time = 2,
-	Date = 4,
-	GYearMonth = 8,
-	GYear = 16,
-	GMonthDay = 32,
-	GDay = 64,
-	GMonth = 128,
-	XdrDateTimeNoTz = 256,
-	XdrDateTime = 512,
-	XdrTimeNoTz = 1024,
-	AllXsd = 255,
-}
-
-private enum XsdDateTime.DateTimeTypeCode
-{
-	DateTime = 0,
-	Time = 1,
-	Date = 2,
-	GYearMonth = 3,
-	GYear = 4,
-	GMonthDay = 5,
-	GDay = 6,
-	GMonth = 7,
-	XdrDateTime = 8,
-}
-
-private enum XsdDateTime.XsdDateTimeKind
-{
-	Unspecified = 0,
-	Zulu = 1,
-	LocalWestOfZulu = 2,
-	LocalEastOfZulu = 3,
-}
-
-private enum XsdDuration.Parts
-{
-	HasNone = 0,
-	HasYears = 1,
-	HasMonths = 2,
-	HasDays = 4,
-	HasHours = 8,
-	HasMinutes = 16,
-	HasSeconds = 32,
-}
-
-public enum XsdDuration.DurationType
-{
-	Duration = 0,
-	YearMonthDuration = 1,
-	DayTimeDuration = 2,
-}
-
-public enum UnityTls.unitytls_error_code
-{
-	UNITYTLS_SUCCESS = 0,
-	UNITYTLS_INVALID_ARGUMENT = 1,
-	UNITYTLS_INVALID_FORMAT = 2,
-	UNITYTLS_INVALID_PASSWORD = 3,
-	UNITYTLS_INVALID_STATE = 4,
-	UNITYTLS_BUFFER_OVERFLOW = 5,
-	UNITYTLS_OUT_OF_MEMORY = 6,
-	UNITYTLS_INTERNAL_ERROR = 7,
-	UNITYTLS_NOT_SUPPORTED = 8,
-	UNITYTLS_ENTROPY_SOURCE_FAILED = 9,
-	UNITYTLS_STREAM_CLOSED = 10,
-	UNITYTLS_USER_CUSTOM_ERROR_START = 1048576,
-	UNITYTLS_USER_WOULD_BLOCK = 1048577,
-	UNITYTLS_USER_READ_FAILED = 1048578,
-	UNITYTLS_USER_WRITE_FAILED = 1048579,
-	UNITYTLS_USER_UNKNOWN_ERROR = 1048580,
-	UNITYTLS_USER_CUSTOM_ERROR_END = 2097152,
-}
-
-public enum UnityTls.unitytls_x509verify_result
-{
-	UNITYTLS_X509VERIFY_SUCCESS = 0,
-	UNITYTLS_X509VERIFY_NOT_DONE = 2147483648,
-	UNITYTLS_X509VERIFY_FATAL_ERROR = 4294967295,
-	UNITYTLS_X509VERIFY_FLAG_EXPIRED = 1,
-	UNITYTLS_X509VERIFY_FLAG_REVOKED = 2,
-	UNITYTLS_X509VERIFY_FLAG_CN_MISMATCH = 4,
-	UNITYTLS_X509VERIFY_FLAG_NOT_TRUSTED = 8,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR1 = 65536,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR2 = 131072,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR3 = 262144,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR4 = 524288,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR5 = 1048576,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR6 = 2097152,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR7 = 4194304,
-	UNITYTLS_X509VERIFY_FLAG_USER_ERROR8 = 8388608,
-	UNITYTLS_X509VERIFY_FLAG_UNKNOWN_ERROR = 134217728,
-}
-
-public enum UnityTls.unitytls_ciphersuite
-{
-	UNITYTLS_CIPHERSUITE_INVALID = 16777215,
-}
-
-public enum UnityTls.unitytls_protocol
-{
-	UNITYTLS_PROTOCOL_TLS_1_0 = 0,
-	UNITYTLS_PROTOCOL_TLS_1_1 = 1,
-	UNITYTLS_PROTOCOL_TLS_1_2 = 2,
-	UNITYTLS_PROTOCOL_INVALID = 3,
-}
-
-internal enum CFProxyType
-{
-	None = 0,
-	AutoConfigurationUrl = 1,
-	AutoConfigurationJavaScript = 2,
-	FTP = 3,
-	HTTP = 4,
-	HTTPS = 5,
-	SOCKS = 6,
-}
-
-internal enum AsyncOperationStatus
-{
-	Initialize = 0,
-	Continue = 1,
-	ReadDone = 2,
-	Complete = 3,
-}
-
-private enum MobileAuthenticatedStream.OperationType
-{
-	Read = 0,
-	Write = 1,
-	Shutdown = 2,
-}
-
-public enum GenericUriParserOptions
-{
-	Default = 0,
-	GenericAuthority = 1,
-	AllowEmptyAuthority = 2,
-	NoUserInfo = 4,
-	NoPort = 8,
-	NoQuery = 16,
-	NoFragment = 32,
-	DontConvertPathBackslashes = 64,
-	DontCompressPath = 128,
-	DontUnescapePathDotsAndSlashes = 256,
-	Idn = 512,
-	IriParsing = 1024,
-}
-
-private enum Uri.Flags
-{
-	Zero = 0,
-	SchemeNotCanonical = 1,
-	UserNotCanonical = 2,
-	HostNotCanonical = 4,
-	PortNotCanonical = 8,
-	PathNotCanonical = 16,
-	QueryNotCanonical = 32,
-	FragmentNotCanonical = 64,
-	CannotDisplayCanonical = 127,
-	E_UserNotCanonical = 128,
-	E_HostNotCanonical = 256,
-	E_PortNotCanonical = 512,
-	E_PathNotCanonical = 1024,
-	E_QueryNotCanonical = 2048,
-	E_FragmentNotCanonical = 4096,
-	E_CannotDisplayCanonical = 8064,
-	ShouldBeCompressed = 8192,
-	FirstSlashAbsent = 16384,
-	BackslashInPath = 32768,
-	IndexMask = 65535,
-	HostTypeMask = 458752,
-	HostNotParsed = 0,
-	IPv6HostType = 65536,
-	IPv4HostType = 131072,
-	DnsHostType = 196608,
-	UncHostType = 262144,
-	BasicHostType = 327680,
-	UnusedHostType = 393216,
-	UnknownHostType = 458752,
-	UserEscaped = 524288,
-	AuthorityFound = 1048576,
-	HasUserInfo = 2097152,
-	LoopbackHost = 4194304,
-	NotDefaultPort = 8388608,
-	UserDrivenParsing = 16777216,
-	CanonicalDnsHost = 33554432,
-	ErrorOrParsingRecursion = 67108864,
-	DosPath = 134217728,
-	UncPath = 268435456,
-	ImplicitFile = 536870912,
-	MinimalUriInfoSet = 1073741824,
-	AllUriInfoSet = 2147483648,
-	IdnHost = 4294967296,
-	HasUnicode = 8589934592,
-	HostUnicodeNormalized = 17179869184,
-	RestUnicodeNormalized = 34359738368,
-	UnicodeHost = 68719476736,
-	IntranetUri = 137438953472,
-	UseOrigUncdStrOffset = 274877906944,
-	UserIriCanonical = 549755813888,
-	PathIriCanonical = 1099511627776,
-	QueryIriCanonical = 2199023255552,
-	FragmentIriCanonical = 4398046511104,
-	IriCanonical = 8246337208320,
-	CompressedSlashes = 17592186044416,
-}
-
-private enum Uri.Check
-{
-	None = 0,
-	EscapedCanonical = 1,
-	DisplayCanonical = 2,
-	DotSlashAttn = 4,
-	DotSlashEscaped = 128,
-	BackslashInPath = 16,
-	ReservedFound = 32,
-	NotIriCanonical = 64,
-	FoundNonAscii = 8,
-}
-
-public enum UriPartial
-{
-	Scheme = 0,
-	Authority = 1,
-	Path = 2,
-	Query = 3,
-}
-
-public enum UriKind
-{
-	RelativeOrAbsolute = 0,
-	Absolute = 1,
-	Relative = 2,
-}
-
-public enum UriComponents
-{
-	Scheme = 1,
-	UserInfo = 2,
-	Host = 4,
-	Port = 8,
-	Path = 16,
-	Query = 32,
-	Fragment = 64,
-	StrongPort = 128,
-	NormalizedHost = 256,
-	KeepDelimiter = 1073741824,
-	AbsoluteUri = 127,
-	HostAndPort = 132,
-	StrongAuthority = 134,
-	SchemeAndServer = 13,
-	HttpRequestUrl = 61,
-	PathAndQuery = 48,
-}
-
-public enum UriFormat
-{
-	UriEscaped = 1,
-	Unescaped = 2,
-	SafeUnescaped = 3,
-}
-
-public enum UriIdnScope
-{
-	None = 0,
-	AllExceptIntranet = 1,
-	All = 2,
-}
-
-internal enum ParsingError
-{
-	None = 0,
-	BadFormat = 1,
-	BadScheme = 2,
-	BadAuthority = 3,
-	EmptyUriString = 4,
-	LastRelativeUriOkErrIndex = 4,
-	SchemeLimit = 5,
-	SizeLimit = 6,
-	MustRootedPath = 7,
-	BadHostName = 8,
-	NonEmptyHost = 9,
-	BadPort = 10,
-	BadAuthorityTerminator = 11,
-	CannotCreateRelative = 12,
-}
-
-internal enum UnescapeMode
-{
-	CopyOnly = 0,
-	Escape = 1,
-	Unescape = 2,
-	EscapeUnescape = 3,
-	V1ToStringFlag = 4,
-	UnescapeAll = 8,
-	UnescapeAllOrThrow = 24,
-}
-
-public enum UriHostNameType
-{
-	Unknown = 0,
-	Basic = 1,
-	Dns = 2,
-	IPv4 = 3,
-	IPv6 = 4,
-}
-
-private enum UriParser.UriQuirksVersion
-{
-	V2 = 2,
-	V3 = 3,
-}
-
-internal enum UriSyntaxFlags
-{
-	None = 0,
-	MustHaveAuthority = 1,
-	OptionalAuthority = 2,
-	MayHaveUserInfo = 4,
-	MayHavePort = 8,
-	MayHavePath = 16,
-	MayHaveQuery = 32,
-	MayHaveFragment = 64,
-	AllowEmptyHost = 128,
-	AllowUncHost = 256,
-	AllowDnsHost = 512,
-	AllowIPv4Host = 1024,
-	AllowIPv6Host = 2048,
-	AllowAnInternetHost = 3584,
-	AllowAnyOtherHost = 4096,
-	FileLikeUri = 8192,
-	MailToLikeUri = 16384,
-	V1_UnknownUri = 65536,
-	SimpleUserSyntax = 131072,
-	BuiltInSyntax = 262144,
-	ParserSchemeOnly = 524288,
-	AllowDOSPath = 1048576,
-	PathIsRooted = 2097152,
-	ConvertPathSlashes = 4194304,
-	CompressPath = 8388608,
-	CanonicalizeAsFilePath = 16777216,
-	UnEscapeDotsAndSlashes = 33554432,
-	AllowIdn = 67108864,
-	AllowIriParsing = 268435456,
-}
-
-internal enum IOOperation
-{
-	Read = 1,
-	Write = 2,
-}
-
-public enum RegexOptions
-{
-	None = 0,
-	IgnoreCase = 1,
-	Multiline = 2,
-	ExplicitCapture = 4,
-	Compiled = 8,
-	Singleline = 16,
-	IgnorePatternWhitespace = 32,
-	RightToLeft = 64,
-	ECMAScript = 256,
-	CultureInvariant = 512,
-}
-
-public enum TraceLevel
-{
-	Off = 0,
-	Error = 1,
-	Warning = 2,
-	Info = 3,
-	Verbose = 4,
-}
-
-private enum Process.StreamReadMode
-{
-	undefined = 0,
-	syncMode = 1,
-	asyncMode = 2,
-}
-
-private enum Process.State
-{
-	HaveId = 1,
-	IsLocal = 2,
-	IsNt = 4,
-	HaveProcessInfo = 8,
-	Exited = 16,
-	Associated = 32,
-	IsWin2k = 64,
-	HaveNtProcessInfo = 12,
-}
-
-public enum ProcessWindowStyle
-{
-	Hidden = 1,
-	Maximized = 3,
-	Minimized = 2,
-	Normal = 0,
-}
-
-public enum BindableSupport
-{
-	No = 0,
-	Yes = 1,
-	Default = 2,
-}
-
-public enum BindingDirection
-{
-	OneWay = 0,
-	TwoWay = 1,
-}
-
-public enum CollectionChangeAction
-{
-	Add = 1,
-	Remove = 2,
-	Refresh = 3,
-}
-
-public enum DataObjectMethodType
-{
-	Fill = 0,
-	Select = 1,
-	Update = 2,
-	Insert = 3,
-	Delete = 4,
-}
-
-public enum DesignerSerializationVisibility
-{
-	Hidden = 0,
-	Visible = 1,
-	Content = 2,
-}
-
-public enum EditorBrowsableState
-{
-	Always = 0,
-	Never = 1,
-	Advanced = 2,
-}
-
-public enum LicenseUsageMode
-{
-	Runtime = 0,
-	Designtime = 1,
-}
-
-public enum ListChangedType
-{
-	Reset = 0,
-	ItemAdded = 1,
-	ItemDeleted = 2,
-	ItemMoved = 3,
-	ItemChanged = 4,
-	PropertyDescriptorAdded = 5,
-	PropertyDescriptorDeleted = 6,
-	PropertyDescriptorChanged = 7,
-}
-
-public enum ListSortDirection
-{
-	Ascending = 0,
-	Descending = 1,
-}
-
-private enum MaskedTextProvider.CaseConversion
-{
-	None = 0,
-	ToLower = 1,
-	ToUpper = 2,
-}
-
-private enum MaskedTextProvider.CharType
-{
-	EditOptional = 1,
-	EditRequired = 2,
-	Separator = 4,
-	Literal = 8,
-	Modifier = 16,
-}
-
-public enum MaskedTextResultHint
-{
-	Unknown = 0,
-	CharacterEscaped = 1,
-	NoEffect = 2,
-	SideEffect = 3,
-	Success = 4,
-}
-
-public enum ToolboxItemFilterType
-{
-	Allow = 0,
-	Custom = 1,
-	Prevent = 2,
-	Require = 3,
-}
-
-public enum InheritanceLevel
-{
-	Inherited = 1,
-	InheritedReadOnly = 2,
-	NotInherited = 3,
-}
-
-public enum PropertyTabScope
-{
-	Static = 0,
-	Global = 1,
-	Document = 2,
-	Component = 3,
-}
-
-public enum RefreshProperties
-{
-	None = 0,
-	All = 1,
-	Repaint = 2,
-}
-
-public enum CipherAlgorithmType
-{
-	None = 0,
-	Null = 24576,
-	Aes = 26129,
-	Aes128 = 26126,
-	Aes192 = 26127,
-	Aes256 = 26128,
-	Des = 26113,
-	Rc2 = 26114,
-	Rc4 = 26625,
-	TripleDes = 26115,
-}
-
-public enum ExchangeAlgorithmType
-{
-	None = 0,
-	DiffieHellman = 43522,
-	RsaKeyX = 41984,
-	RsaSign = 9216,
-}
-
-public enum HashAlgorithmType
-{
-	None = 0,
-	Md5 = 32771,
-	Sha1 = 32772,
-	Sha256 = 32780,
-	Sha384 = 32781,
-	Sha512 = 32782,
-}
-
-public enum SslProtocols
-{
-	None = 0,
-	Ssl2 = 12,
-	Ssl3 = 48,
-	Tls = 192,
-	Tls11 = 768,
-	Tls12 = 3072,
-	Default = 240,
-}
-
-public enum ChannelBindingKind
-{
-	Unknown = 0,
-	Unique = 25,
-	Endpoint = 26,
-}
-
-public enum PolicyEnforcement
-{
-	Never = 0,
-	WhenSupported = 1,
-	Always = 2,
-}
-
-public enum OidGroup
-{
-	All = 0,
-	HashAlgorithm = 1,
-	EncryptionAlgorithm = 2,
-	PublicKeyAlgorithm = 3,
-	SignatureAlgorithm = 4,
-	Attribute = 5,
-	ExtensionOrAttribute = 6,
-	EnhancedKeyUsage = 7,
-	Policy = 8,
-	Template = 9,
-	KeyDerivationFunction = 10,
-}
-
-internal enum AsnDecodeStatus
-{
-	Ok = 0,
-	BadAsn = 1,
-	BadTag = 2,
-	BadLength = 3,
-	InformationNotAvailable = 4,
-}
-
-public enum OpenFlags
-{
-	ReadOnly = 0,
-	ReadWrite = 1,
-	MaxAllowed = 2,
-	OpenExistingOnly = 4,
-	IncludeArchived = 8,
-}
-
-public enum StoreLocation
-{
-	CurrentUser = 1,
-	LocalMachine = 2,
-}
-
-public enum StoreName
-{
-	AddressBook = 1,
-	AuthRoot = 2,
-	CertificateAuthority = 3,
-	Disallowed = 4,
-	My = 5,
-	Root = 6,
-	TrustedPeople = 7,
-	TrustedPublisher = 8,
-}
-
-public enum X500DistinguishedNameFlags
-{
-	None = 0,
-	Reversed = 1,
-	UseSemicolons = 16,
-	DoNotUsePlusSign = 32,
-	DoNotUseQuotes = 64,
-	UseCommas = 128,
-	UseNewLines = 256,
-	UseUTF8Encoding = 4096,
-	UseT61Encoding = 8192,
-	ForceUTF8Encoding = 16384,
-}
-
-public enum X509ChainStatusFlags
-{
-	NoError = 0,
-	NotTimeValid = 1,
-	NotTimeNested = 2,
-	Revoked = 4,
-	NotSignatureValid = 8,
-	NotValidForUsage = 16,
-	UntrustedRoot = 32,
-	RevocationStatusUnknown = 64,
-	Cyclic = 128,
-	InvalidExtension = 256,
-	InvalidPolicyConstraints = 512,
-	InvalidBasicConstraints = 1024,
-	InvalidNameConstraints = 2048,
-	HasNotSupportedNameConstraint = 4096,
-	HasNotDefinedNameConstraint = 8192,
-	HasNotPermittedNameConstraint = 16384,
-	HasExcludedNameConstraint = 32768,
-	PartialChain = 65536,
-	CtlNotTimeValid = 131072,
-	CtlNotSignatureValid = 262144,
-	CtlNotValidForUsage = 524288,
-	OfflineRevocation = 16777216,
-	NoIssuanceChainPolicy = 33554432,
-	ExplicitDistrust = 67108864,
-	HasNotSupportedCriticalExtension = 134217728,
-	HasWeakSignature = 1048576,
-}
-
-public enum X509FindType
-{
-	FindByThumbprint = 0,
-	FindBySubjectName = 1,
-	FindBySubjectDistinguishedName = 2,
-	FindByIssuerName = 3,
-	FindByIssuerDistinguishedName = 4,
-	FindBySerialNumber = 5,
-	FindByTimeValid = 6,
-	FindByTimeNotYetValid = 7,
-	FindByTimeExpired = 8,
-	FindByTemplateName = 9,
-	FindByApplicationPolicy = 10,
-	FindByCertificatePolicy = 11,
-	FindByExtension = 12,
-	FindByKeyUsage = 13,
-	FindBySubjectKeyIdentifier = 14,
-}
-
-public enum X509IncludeOption
-{
-	None = 0,
-	ExcludeRoot = 1,
-	EndCertOnly = 2,
-	WholeChain = 3,
-}
-
-public enum X509KeyUsageFlags
-{
-	None = 0,
-	EncipherOnly = 1,
-	CrlSign = 2,
-	KeyCertSign = 4,
-	KeyAgreement = 8,
-	DataEncipherment = 16,
-	KeyEncipherment = 32,
-	NonRepudiation = 64,
-	DigitalSignature = 128,
-	DecipherOnly = 32768,
-}
-
-public enum X509NameType
-{
-	SimpleName = 0,
-	EmailName = 1,
-	UpnName = 2,
-	DnsName = 3,
-	DnsFromAlternativeName = 4,
-	UrlName = 5,
-}
-
-public enum X509RevocationFlag
-{
-	EndCertificateOnly = 0,
-	EntireChain = 1,
-	ExcludeRoot = 2,
-}
-
-public enum X509RevocationMode
-{
-	NoCheck = 0,
-	Online = 1,
-	Offline = 2,
-}
-
-public enum X509SubjectKeyIdentifierHashAlgorithm
-{
-	Sha1 = 0,
-	ShortSha1 = 1,
-	CapiSha1 = 2,
-}
-
-public enum X509VerificationFlags
-{
-	NoFlag = 0,
-	IgnoreNotTimeValid = 1,
-	IgnoreCtlNotTimeValid = 2,
-	IgnoreNotTimeNested = 4,
-	IgnoreInvalidBasicConstraints = 8,
-	AllowUnknownCertificateAuthority = 16,
-	IgnoreWrongUsage = 32,
-	IgnoreInvalidName = 64,
-	IgnoreInvalidPolicy = 128,
-	IgnoreEndRevocationUnknown = 256,
-	IgnoreCtlSignerRevocationUnknown = 512,
-	IgnoreCertificateAuthorityRevocationUnknown = 1024,
-	IgnoreRootRevocationUnknown = 2048,
-	AllFlags = 4095,
-}
-
-public enum OSX509Certificates.SecTrustResult
-{
-	Invalid = 0,
-	Proceed = 1,
-	Confirm = 2,
-	Deny = 3,
-	Unspecified = 4,
-	RecoverableTrustFailure = 5,
-	FatalTrustFailure = 6,
-	ResultOtherError = 7,
-}
-
-public enum CompressionLevel
-{
-	Optimal = 0,
-	Fastest = 1,
-	NoCompression = 2,
-}
-
-public enum CompressionMode
-{
-	Decompress = 0,
-	Compress = 1,
-}
-
-public enum NotifyCollectionChangedAction
-{
-	Add = 0,
-	Remove = 1,
-	Replace = 2,
-	Move = 3,
-	Reset = 4,
-}
-
-internal enum NodeColor
-{
-	Black = 0,
-	Red = 1,
-}
-
-internal enum TreeRotation
-{
-	Left = 0,
-	LeftRight = 1,
-	Right = 2,
-	RightLeft = 3,
-}
-
-public enum SecurityProtocolType
-{
-	SystemDefault = 0,
-	Ssl3 = 48,
-	Tls = 192,
-	Tls11 = 768,
-	Tls12 = 3072,
-}
-
-public enum AuthenticationSchemes
-{
-	None = 0,
-	Digest = 1,
-	Negotiate = 2,
-	Ntlm = 4,
-	Basic = 8,
-	Anonymous = 32768,
-	IntegratedWindowsAuthentication = 6,
-}
-
-public enum FtpStatusCode
-{
-	Undefined = 0,
-	RestartMarker = 110,
-	ServiceTemporarilyNotAvailable = 120,
-	DataAlreadyOpen = 125,
-	OpeningData = 150,
-	CommandOK = 200,
-	CommandExtraneous = 202,
-	DirectoryStatus = 212,
-	FileStatus = 213,
-	SystemType = 215,
-	SendUserCommand = 220,
-	ClosingControl = 221,
-	ClosingData = 226,
-	EnteringPassive = 227,
-	LoggedInProceed = 230,
-	ServerWantsSecureSession = 234,
-	FileActionOK = 250,
-	PathnameCreated = 257,
-	SendPasswordCommand = 331,
-	NeedLoginAccount = 332,
-	FileCommandPending = 350,
-	ServiceNotAvailable = 421,
-	CantOpenData = 425,
-	ConnectionClosed = 426,
-	ActionNotTakenFileUnavailableOrBusy = 450,
-	ActionAbortedLocalProcessingError = 451,
-	ActionNotTakenInsufficientSpace = 452,
-	CommandSyntaxError = 500,
-	ArgumentSyntaxError = 501,
-	CommandNotImplemented = 502,
-	BadCommandSequence = 503,
-	NotLoggedIn = 530,
-	AccountNeeded = 532,
-	ActionNotTakenFileUnavailable = 550,
-	ActionAbortedUnknownPageType = 551,
-	FileActionAborted = 552,
-	ActionNotTakenFilenameNotAllowed = 553,
-}
-
-private enum HttpListenerRequestUriBuilder.ParsingResult
-{
-	Success = 0,
-	InvalidString = 1,
-	EncodingError = 2,
-}
-
-private enum HttpListenerRequestUriBuilder.EncodingType
-{
-	Primary = 0,
-	Secondary = 1,
-}
-
-public enum HttpRequestHeader
-{
-	CacheControl = 0,
-	Connection = 1,
-	Date = 2,
-	KeepAlive = 3,
-	Pragma = 4,
-	Trailer = 5,
-	TransferEncoding = 6,
-	Upgrade = 7,
-	Via = 8,
-	Warning = 9,
-	Allow = 10,
-	ContentLength = 11,
-	ContentType = 12,
-	ContentEncoding = 13,
-	ContentLanguage = 14,
-	ContentLocation = 15,
-	ContentMd5 = 16,
-	ContentRange = 17,
-	Expires = 18,
-	LastModified = 19,
-	Accept = 20,
-	AcceptCharset = 21,
-	AcceptEncoding = 22,
-	AcceptLanguage = 23,
-	Authorization = 24,
-	Cookie = 25,
-	Expect = 26,
-	From = 27,
-	Host = 28,
-	IfMatch = 29,
-	IfModifiedSince = 30,
-	IfNoneMatch = 31,
-	IfRange = 32,
-	IfUnmodifiedSince = 33,
-	MaxForwards = 34,
-	ProxyAuthorization = 35,
-	Referer = 36,
-	Range = 37,
-	Te = 38,
-	Translate = 39,
-	UserAgent = 40,
-}
-
-public enum HttpResponseHeader
-{
-	CacheControl = 0,
-	Connection = 1,
-	Date = 2,
-	KeepAlive = 3,
-	Pragma = 4,
-	Trailer = 5,
-	TransferEncoding = 6,
-	Upgrade = 7,
-	Via = 8,
-	Warning = 9,
-	Allow = 10,
-	ContentLength = 11,
-	ContentType = 12,
-	ContentEncoding = 13,
-	ContentLanguage = 14,
-	ContentLocation = 15,
-	ContentMd5 = 16,
-	ContentRange = 17,
-	Expires = 18,
-	LastModified = 19,
-	AcceptRanges = 20,
-	Age = 21,
-	ETag = 22,
-	Location = 23,
-	ProxyAuthenticate = 24,
-	RetryAfter = 25,
-	Server = 26,
-	SetCookie = 27,
-	Vary = 28,
-	WwwAuthenticate = 29,
-}
-
-public enum HttpStatusCode
-{
-	Continue = 100,
-	SwitchingProtocols = 101,
-	OK = 200,
-	Created = 201,
-	Accepted = 202,
-	NonAuthoritativeInformation = 203,
-	NoContent = 204,
-	ResetContent = 205,
-	PartialContent = 206,
-	MultipleChoices = 300,
-	Ambiguous = 300,
-	MovedPermanently = 301,
-	Moved = 301,
-	Found = 302,
-	Redirect = 302,
-	SeeOther = 303,
-	RedirectMethod = 303,
-	NotModified = 304,
-	UseProxy = 305,
-	Unused = 306,
-	TemporaryRedirect = 307,
-	RedirectKeepVerb = 307,
-	BadRequest = 400,
-	Unauthorized = 401,
-	PaymentRequired = 402,
-	Forbidden = 403,
-	NotFound = 404,
-	MethodNotAllowed = 405,
-	NotAcceptable = 406,
-	ProxyAuthenticationRequired = 407,
-	RequestTimeout = 408,
-	Conflict = 409,
-	Gone = 410,
-	LengthRequired = 411,
-	PreconditionFailed = 412,
-	RequestEntityTooLarge = 413,
-	RequestUriTooLong = 414,
-	UnsupportedMediaType = 415,
-	RequestedRangeNotSatisfiable = 416,
-	ExpectationFailed = 417,
-	UpgradeRequired = 426,
-	InternalServerError = 500,
-	NotImplemented = 501,
-	BadGateway = 502,
-	ServiceUnavailable = 503,
-	GatewayTimeout = 504,
-	HttpVersionNotSupported = 505,
-}
-
-internal enum WindowsInstallationType
-{
-	Unknown = 0,
-	Client = 1,
-	Server = 2,
-	ServerCore = 3,
-	Embedded = 4,
-}
-
-internal enum SecurityStatus
-{
-	OK = 0,
-	ContinueNeeded = 590610,
-	CompleteNeeded = 590611,
-	CompAndContinue = 590612,
-	ContextExpired = 590615,
-	CredentialsNeeded = 590624,
-	Renegotiate = 590625,
-}
-
-internal enum ContentTypeValues
-{
-	ChangeCipherSpec = 20,
-	Alert = 21,
-	HandShake = 22,
-	AppData = 23,
-	Unrecognized = 255,
-}
-
-internal enum ContextAttribute
-{
-	Sizes = 0,
-	Names = 1,
-	Lifespan = 2,
-	DceInfo = 3,
-	StreamSizes = 4,
-	Authority = 6,
-	PackageInfo = 10,
-	NegotiationInfo = 12,
-	UniqueBindings = 25,
-	EndpointBindings = 26,
-	ClientSpecifiedSpn = 27,
-	RemoteCertificate = 83,
-	LocalCertificate = 84,
-	RootStore = 85,
-	IssuerListInfoEx = 89,
-	ConnectionInfo = 90,
-	UiInfo = 104,
-}
-
-internal enum Endianness
-{
-	Network = 0,
-	Native = 16,
-}
-
-internal enum CredentialUse
-{
-	Inbound = 1,
-	Outbound = 2,
-	Both = 3,
-}
-
-internal enum BufferType
-{
-	Empty = 0,
-	Data = 1,
-	Token = 2,
-	Parameters = 3,
-	Missing = 4,
-	Extra = 5,
-	Trailer = 6,
-	Header = 7,
-	Padding = 9,
-	Stream = 10,
-	ChannelBindings = 14,
-	TargetHost = 16,
-	ReadOnlyWithChecksum = 268435456,
-}
-
-internal enum ChainPolicyType
-{
-	Base = 1,
-	Authenticode = 2,
-	Authenticode_TS = 3,
-	SSL = 4,
-	BasicConstraints = 5,
-	NtAuth = 6,
-}
-
-internal enum IgnoreCertProblem
-{
-	not_time_valid = 1,
-	ctl_not_time_valid = 2,
-	not_time_nested = 4,
-	invalid_basic_constraints = 8,
-	all_not_time_valid = 7,
-	allow_unknown_ca = 16,
-	wrong_usage = 32,
-	invalid_name = 64,
-	invalid_policy = 128,
-	end_rev_unknown = 256,
-	ctl_signer_rev_unknown = 512,
-	ca_rev_unknown = 1024,
-	root_rev_unknown = 2048,
-	all_rev_unknown = 3840,
-	none = 4095,
-}
-
-internal enum CertUsage
-{
-	MatchTypeAnd = 0,
-	MatchTypeOr = 1,
-}
-
-internal enum CertificateEncoding
-{
-	Zero = 0,
-	X509AsnEncoding = 1,
-	X509NdrEncoding = 2,
-	Pkcs7AsnEncoding = 65536,
-	Pkcs7NdrEncoding = 131072,
-	AnyAsnEncoding = 65537,
-}
-
-internal enum CertificateProblem
-{
-	OK = 0,
-}
-
-internal enum HttpWriteMode
-{
-	Unknown = 0,
-	ContentLength = 1,
-	Chunked = 2,
-	Buffer = 3,
-	None = 4,
-}
-
-internal enum HttpBehaviour
-{
-	Unknown = 0,
-	HTTP10 = 1,
-	HTTP11PartiallyCompliant = 2,
-	HTTP11 = 3,
-}
-
-internal enum HttpProcessingResult
-{
-	Continue = 0,
-	ReadWait = 1,
-	WriteWait = 2,
-}
-
-internal enum TriState
-{
-	False = 0,
-	True = 1,
-}
-
-internal enum DefaultPorts
-{
-	DEFAULT_FTP_PORT = 21,
-	DEFAULT_GOPHER_PORT = 70,
-	DEFAULT_HTTP_PORT = 80,
-	DEFAULT_HTTPS_PORT = 443,
-	DEFAULT_NNTP_PORT = 119,
-	DEFAULT_SMTP_PORT = 25,
-	DEFAULT_TELNET_PORT = 23,
-}
-
-public enum NetworkAccess
-{
-	Accept = 128,
-	Connect = 64,
-}
-
-public enum TransportType
-{
-	Udp = 1,
-	Connectionless = 1,
-	Tcp = 2,
-	ConnectionOriented = 2,
-	All = 3,
-}
-
-internal enum WebExceptionInternalStatus
-{
-	RequestFatal = 0,
-	ServicePointFatal = 1,
-	Recoverable = 2,
-	Isolated = 3,
-}
-
-public enum WebExceptionStatus
-{
-	Success = 0,
-	NameResolutionFailure = 1,
-	ConnectFailure = 2,
-	ReceiveFailure = 3,
-	SendFailure = 4,
-	PipelineFailure = 5,
-	RequestCanceled = 6,
-	ProtocolError = 7,
-	ConnectionClosed = 8,
-	TrustFailure = 9,
-	SecureChannelFailure = 10,
-	ServerProtocolViolation = 11,
-	KeepAliveFailure = 12,
-	Pending = 13,
-	Timeout = 14,
-	ProxyNameResolutionFailure = 15,
-	UnknownError = 16,
-	MessageLengthLimitExceeded = 17,
-	CacheEntryNotFound = 18,
-	RequestProhibitedByCachePolicy = 19,
-	RequestProhibitedByProxy = 20,
-}
-
-internal enum WebHeaderCollectionType
-{
-	Unknown = 0,
-	WebRequest = 1,
-	WebResponse = 2,
-	HttpWebRequest = 3,
-	HttpWebResponse = 4,
-	HttpListenerRequest = 5,
-	HttpListenerResponse = 6,
-	FtpWebRequest = 7,
-	FtpWebResponse = 8,
-	FileWebRequest = 9,
-	FileWebResponse = 10,
-}
-
-private enum WebHeaderCollection.RfcChar
-{
-	High = 0,
-	Reg = 1,
-	Ctl = 2,
-	CR = 3,
-	LF = 4,
-	WS = 5,
-	Colon = 6,
-	Delim = 7,
-}
-
-internal enum DataParseStatus
-{
-	NeedMoreData = 0,
-	ContinueParsing = 1,
-	Done = 2,
-	Invalid = 3,
-	DataTooBig = 4,
-}
-
-internal enum WriteBufferState
-{
-	Disabled = 0,
-	Headers = 1,
-	Buffer = 2,
-	Playback = 3,
-}
-
-internal enum WebParseErrorSection
-{
-	Generic = 0,
-	ResponseHeader = 1,
-	ResponseStatusLine = 2,
-	ResponseBody = 3,
-}
-
-internal enum WebParseErrorCode
-{
-	Generic = 0,
-	InvalidHeaderName = 1,
-	InvalidContentLength = 2,
-	IncompleteHeaderLine = 3,
-	CrLfError = 4,
-	InvalidChunkFormat = 5,
-	UnexpectedServerResponse = 6,
-}
-
-internal enum CloseExState
-{
-	Normal = 0,
-	Abort = 1,
-	Silent = 2,
-}
-
-internal enum ThreadKinds
-{
-	Unknown = 0,
-	User = 1,
-	System = 2,
-	Sync = 4,
-	Async = 8,
-	Timer = 16,
-	CompletionPort = 32,
-	Worker = 64,
-	Finalization = 128,
-	Other = 256,
-	OwnerMask = 3,
-	SyncMask = 12,
-	SourceMask = 496,
-	SafeSources = 352,
-	ThreadPool = 96,
-}
-
-private enum TimerThread.TimerThreadState
-{
-	Idle = 0,
-	Running = 1,
-	Stopped = 2,
-}
-
-private enum TimerThread.TimerNode.TimerState
-{
-	Ready = 0,
-	Fired = 1,
-	Cancelled = 2,
-	Sentinel = 3,
-}
-
-private enum ConnectionPool.State
-{
-	Initializing = 0,
-	Running = 1,
-	ShuttingDown = 2,
-}
-
-internal enum CookieVariant
-{
-	Unknown = 0,
-	Plain = 1,
-	Rfc2109 = 2,
-	Rfc2965 = 3,
-	Default = 2,
-}
-
-internal enum CookieToken
-{
-	Nothing = 0,
-	NameValuePair = 1,
-	Attribute = 2,
-	EndToken = 3,
-	EndCookie = 4,
-	End = 5,
-	Equals = 6,
-	Comment = 7,
-	CommentUrl = 8,
-	CookieName = 9,
-	Discard = 10,
-	Domain = 11,
-	Expires = 12,
-	MaxAge = 13,
-	Path = 14,
-	Port = 15,
-	Secure = 16,
-	HttpOnly = 17,
-	Unknown = 18,
-	Version = 19,
-}
-
-internal enum CookieCollection.Stamp
-{
-	Check = 0,
-	Set = 1,
-	SetToUnused = 2,
-	SetToMaxUsed = 3,
-}
-
-internal enum UnsafeNclNativeMethods.HttpApi.Enum
-{
-	HttpHeaderCacheControl = 0,
-	HttpHeaderConnection = 1,
-	HttpHeaderDate = 2,
-	HttpHeaderKeepAlive = 3,
-	HttpHeaderPragma = 4,
-	HttpHeaderTrailer = 5,
-	HttpHeaderTransferEncoding = 6,
-	HttpHeaderUpgrade = 7,
-	HttpHeaderVia = 8,
-	HttpHeaderWarning = 9,
-	HttpHeaderAllow = 10,
-	HttpHeaderContentLength = 11,
-	HttpHeaderContentType = 12,
-	HttpHeaderContentEncoding = 13,
-	HttpHeaderContentLanguage = 14,
-	HttpHeaderContentLocation = 15,
-	HttpHeaderContentMd5 = 16,
-	HttpHeaderContentRange = 17,
-	HttpHeaderExpires = 18,
-	HttpHeaderLastModified = 19,
-	HttpHeaderAcceptRanges = 20,
-	HttpHeaderAge = 21,
-	HttpHeaderEtag = 22,
-	HttpHeaderLocation = 23,
-	HttpHeaderProxyAuthenticate = 24,
-	HttpHeaderRetryAfter = 25,
-	HttpHeaderServer = 26,
-	HttpHeaderSetCookie = 27,
-	HttpHeaderVary = 28,
-	HttpHeaderWwwAuthenticate = 29,
-	HttpHeaderResponseMaximum = 30,
-	HttpHeaderMaximum = 41,
-}
-
-public enum DecompressionMethods
-{
-	None = 0,
-	GZip = 1,
-	Deflate = 2,
-}
-
-private enum FtpWebRequest.RequestState
-{
-	Before = 0,
-	Scheduled = 1,
-	Connecting = 2,
-	Authenticating = 3,
-	OpeningData = 4,
-	TransferInProgress = 5,
-	Finished = 6,
-	Aborted = 7,
-	Error = 8,
-}
-
-private enum HttpConnection.InputState
-{
-	RequestLine = 0,
-	Headers = 1,
-}
-
-private enum HttpConnection.LineState
-{
-	None = 0,
-	CR = 1,
-	LF = 2,
-}
-
-private enum HttpWebRequest.NtlmAuthState
-{
-	None = 0,
-	Challenge = 1,
-	Response = 2,
-}
-
-private enum MonoChunkStream.State
-{
-	None = 0,
-	PartialSize = 1,
-	Body = 2,
-	BodyFinished = 3,
-	Trailer = 4,
-}
-
-private enum WebCompletionSource.State
-{
-	Running = 0,
-	Completed = 1,
-	Canceled = 2,
-	Faulted = 3,
-}
-
-internal enum ReadState
-{
-	None = 0,
-	Status = 1,
-	Headers = 2,
-	Content = 3,
-	Aborted = 4,
-}
-
-private enum WebConnectionTunnel.NtlmAuthState
-{
-	None = 0,
-	Challenge = 1,
-	Response = 2,
-}
-
-public enum SmtpDeliveryFormat
-{
-	SevenBit = 0,
-	International = 1,
-}
-
-public enum SmtpDeliveryMethod
-{
-	Network = 0,
-	SpecifiedPickupDirectory = 1,
-	PickupDirectoryFromIis = 2,
-}
-
-public enum AddressFamily
-{
-	Unspecified = 0,
-	Unix = 1,
-	InterNetwork = 2,
-	ImpLink = 3,
-	Pup = 4,
-	Chaos = 5,
-	NS = 6,
-	Ipx = 6,
-	Iso = 7,
-	Osi = 7,
-	Ecma = 8,
-	DataKit = 9,
-	Ccitt = 10,
-	Sna = 11,
-	DecNet = 12,
-	DataLink = 13,
-	Lat = 14,
-	HyperChannel = 15,
-	AppleTalk = 16,
-	NetBios = 17,
-	VoiceView = 18,
-	FireFox = 19,
-	Banyan = 21,
-	Atm = 22,
-	InterNetworkV6 = 23,
-	Cluster = 24,
-	Ieee12844 = 25,
-	Irda = 26,
-	NetworkDesigners = 28,
-	Max = 29,
-}
-
-public enum IOControlCode
-{
-	AsyncIO = 2147772029,
-	NonBlockingIO = 2147772030,
-	DataToRead = 1074030207,
-	OobDataRead = 1074033415,
-	AssociateHandle = 2281701377,
-	EnableCircularQueuing = 671088642,
-	Flush = 671088644,
-	GetBroadcastAddress = 1207959557,
-	GetExtensionFunctionPointer = 3355443206,
-	GetQos = 3355443207,
-	GetGroupQos = 3355443208,
-	MultipointLoopback = 2281701385,
-	MulticastScope = 2281701386,
-	SetQos = 2281701387,
-	SetGroupQos = 2281701388,
-	TranslateHandle = 3355443213,
-	RoutingInterfaceQuery = 3355443220,
-	RoutingInterfaceChange = 2281701397,
-	AddressListQuery = 1207959574,
-	AddressListChange = 671088663,
-	QueryTargetPnpHandle = 1207959576,
-	NamespaceChange = 2281701401,
-	AddressListSort = 3355443225,
-	ReceiveAll = 2550136833,
-	ReceiveAllMulticast = 2550136834,
-	ReceiveAllIgmpMulticast = 2550136835,
-	KeepAliveValues = 2550136836,
-	AbsorbRouterAlert = 2550136837,
-	UnicastInterface = 2550136838,
-	LimitBroadcasts = 2550136839,
-	BindToInterface = 2550136840,
-	MulticastInterface = 2550136841,
-	AddMulticastGroupOnInterface = 2550136842,
-	DeleteMulticastGroupFromInterface = 2550136843,
-}
-
-public enum IPProtectionLevel
-{
-	Unrestricted = 10,
-	EdgeRestricted = 20,
-	Restricted = 30,
-}
-
-public enum ProtocolFamily
-{
-	Unspecified = 0,
-	Unix = 1,
-	InterNetwork = 2,
-	ImpLink = 3,
-	Pup = 4,
-	Chaos = 5,
-	NS = 6,
-	Ipx = 6,
-	Iso = 7,
-	Osi = 7,
-	Ecma = 8,
-	DataKit = 9,
-	Ccitt = 10,
-	Sna = 11,
-	DecNet = 12,
-	DataLink = 13,
-	Lat = 14,
-	HyperChannel = 15,
-	AppleTalk = 16,
-	NetBios = 17,
-	VoiceView = 18,
-	FireFox = 19,
-	Banyan = 21,
-	Atm = 22,
-	InterNetworkV6 = 23,
-	Cluster = 24,
-	Ieee12844 = 25,
-	Irda = 26,
-	NetworkDesigners = 28,
-	Max = 29,
-}
-
-public enum ProtocolType
-{
-	IP = 0,
-	IPv6HopByHopOptions = 0,
-	Icmp = 1,
-	Igmp = 2,
-	Ggp = 3,
-	IPv4 = 4,
-	Tcp = 6,
-	Pup = 12,
-	Udp = 17,
-	Idp = 22,
-	IPv6 = 41,
-	IPv6RoutingHeader = 43,
-	IPv6FragmentHeader = 44,
-	IPSecEncapsulatingSecurityPayload = 50,
-	IPSecAuthenticationHeader = 51,
-	IcmpV6 = 58,
-	IPv6NoNextHeader = 59,
-	IPv6DestinationOptions = 60,
-	ND = 77,
-	Raw = 255,
-	Unspecified = 0,
-	Ipx = 1000,
-	Spx = 1256,
-	SpxII = 1257,
-}
-
-public enum SelectMode
-{
-	SelectRead = 0,
-	SelectWrite = 1,
-	SelectError = 2,
-}
-
-public enum SocketAsyncOperation
-{
-	None = 0,
-	Accept = 1,
-	Connect = 2,
-	Disconnect = 3,
-	Receive = 4,
-	ReceiveFrom = 5,
-	ReceiveMessageFrom = 6,
-	Send = 7,
-	SendPackets = 8,
-	SendTo = 9,
-}
-
-public enum SocketClientAccessPolicyProtocol
-{
-	Tcp = 0,
-	Http = 1,
-}
-
-public enum SocketError
-{
-	Success = 0,
-	Interrupted = 10004,
-	AccessDenied = 10013,
-	Fault = 10014,
-	InvalidArgument = 10022,
-	TooManyOpenSockets = 10024,
-	WouldBlock = 10035,
-	InProgress = 10036,
-	AlreadyInProgress = 10037,
-	NotSocket = 10038,
-	DestinationAddressRequired = 10039,
-	MessageSize = 10040,
-	ProtocolType = 10041,
-	ProtocolOption = 10042,
-	ProtocolNotSupported = 10043,
-	SocketNotSupported = 10044,
-	OperationNotSupported = 10045,
-	ProtocolFamilyNotSupported = 10046,
-	AddressFamilyNotSupported = 10047,
-	AddressAlreadyInUse = 10048,
-	AddressNotAvailable = 10049,
-	NetworkDown = 10050,
-	NetworkUnreachable = 10051,
-	NetworkReset = 10052,
-	ConnectionAborted = 10053,
-	ConnectionReset = 10054,
-	NoBufferSpaceAvailable = 10055,
-	IsConnected = 10056,
-	NotConnected = 10057,
-	Shutdown = 10058,
-	TimedOut = 10060,
-	ConnectionRefused = 10061,
-	HostDown = 10064,
-	HostUnreachable = 10065,
-	ProcessLimit = 10067,
-	SystemNotReady = 10091,
-	VersionNotSupported = 10092,
-	NotInitialized = 10093,
-	Disconnecting = 10101,
-	TypeNotFound = 10109,
-	HostNotFound = 11001,
-	TryAgain = 11002,
-	NoRecovery = 11003,
-	NoData = 11004,
-	IOPending = 997,
-	OperationAborted = 995,
-}
-
-public enum SocketFlags
-{
-	None = 0,
-	OutOfBand = 1,
-	Peek = 2,
-	DontRoute = 4,
-	MaxIOVectorLength = 16,
-	Truncated = 256,
-	ControlDataTruncated = 512,
-	Broadcast = 1024,
-	Multicast = 2048,
-	Partial = 32768,
-}
-
-public enum SocketInformationOptions
-{
-	NonBlocking = 1,
-	Connected = 2,
-	Listening = 4,
-	UseOnlyOverlappedIO = 8,
-}
-
-public enum SocketOptionLevel
-{
-	Socket = 65535,
-	IP = 0,
-	IPv6 = 41,
-	Tcp = 6,
-	Udp = 17,
-}
-
-public enum SocketOptionName
-{
-	Debug = 1,
-	AcceptConnection = 2,
-	ReuseAddress = 4,
-	KeepAlive = 8,
-	DontRoute = 16,
-	Broadcast = 32,
-	UseLoopback = 64,
-	Linger = 128,
-	OutOfBandInline = 256,
-	SendBuffer = 4097,
-	ReceiveBuffer = 4098,
-	SendLowWater = 4099,
-	ReceiveLowWater = 4100,
-	SendTimeout = 4101,
-	ReceiveTimeout = 4102,
-	Error = 4103,
-	Type = 4104,
-	ReuseUnicastPort = 12295,
-	MaxConnections = 2147483647,
-	IPOptions = 1,
-	HeaderIncluded = 2,
-	TypeOfService = 3,
-	IpTimeToLive = 4,
-	MulticastInterface = 9,
-	MulticastTimeToLive = 10,
-	MulticastLoopback = 11,
-	AddMembership = 12,
-	DropMembership = 13,
-	DontFragment = 14,
-	AddSourceMembership = 15,
-	DropSourceMembership = 16,
-	BlockSource = 17,
-	UnblockSource = 18,
-	PacketInformation = 19,
-	HopLimit = 21,
-	IPProtectionLevel = 23,
-	IPv6Only = 27,
-	NoDelay = 1,
-	BsdUrgent = 2,
-	Expedited = 2,
-	NoChecksum = 1,
-	ChecksumCoverage = 20,
-	UpdateAcceptContext = 28683,
-	UpdateConnectContext = 28688,
-}
-
-public enum SocketShutdown
-{
-	Receive = 0,
-	Send = 1,
-	Both = 2,
-}
-
-public enum SocketType
-{
-	Stream = 1,
-	Dgram = 2,
-	Raw = 3,
-	Rdm = 4,
-	Seqpacket = 5,
-}
-
-public enum TransmitFileOptions
-{
-	UseDefaultWorkerThread = 0,
-	Disconnect = 1,
-	ReuseSocket = 2,
-	WriteBehind = 4,
-	UseSystemThread = 16,
-	UseKernelApc = 32,
-}
-
-private enum MultipleConnectAsync.State
-{
-	NotStarted = 0,
-	DnsQuery = 1,
-	ConnectAttempt = 2,
-	Completed = 3,
-	Canceled = 4,
-}
-
-internal enum SocketOperation
-{
-	Accept = 0,
-	Connect = 1,
-	Receive = 2,
-	ReceiveFrom = 3,
-	Send = 4,
-	SendTo = 5,
-	RecvJustCallback = 6,
-	SendJustCallback = 7,
-	Disconnect = 8,
-	AcceptReceive = 9,
-	ReceiveGeneric = 10,
-	SendGeneric = 11,
-}
-
-public enum AuthenticationLevel
-{
-	None = 0,
-	MutualAuthRequested = 1,
-	MutualAuthRequired = 2,
-}
-
-public enum ProtectionLevel
-{
-	None = 0,
-	Sign = 1,
-	EncryptAndSign = 2,
-}
-
-public enum EncryptionPolicy
-{
-	RequireEncryption = 0,
-	AllowNoEncryption = 1,
-	NoEncryption = 2,
-}
-
-public enum SslPolicyErrors
-{
-	None = 0,
-	RemoteCertificateNotAvailable = 1,
-	RemoteCertificateNameMismatch = 2,
-	RemoteCertificateChainErrors = 4,
-}
-
-public enum DuplicateAddressDetectionState
-{
-	Invalid = 0,
-	Tentative = 1,
-	Duplicate = 2,
-	Deprecated = 3,
-	Preferred = 4,
-}
-
-internal enum IcmpV4Type
-{
-	ICMP4_ECHO_REPLY = 0,
-	ICMP4_DST_UNREACH = 3,
-	ICMP4_SOURCE_QUENCH = 4,
-	ICMP4_TIME_EXCEEDED = 11,
-	ICMP4_PARAM_PROB = 12,
-	ICMP4_REDIRECT = 5,
-	ICMP4_ECHO_REQUEST = 8,
-	ICMP4_ROUTER_ADVERT = 9,
-	ICMP4_ROUTER_SOLICIT = 10,
-	ICMP4_TIMESTAMP_REQUEST = 13,
-	ICMP4_TIMESTAMP_REPLY = 14,
-	ICMP4_MASK_REQUEST = 17,
-	ICMP4_MASK_REPLY = 18,
-}
-
-internal enum IcmpV4Code
-{
-	ICMP4_UNREACH_NET = 0,
-	ICMP4_UNREACH_HOST = 1,
-	ICMP4_UNREACH_PROTOCOL = 2,
-	ICMP4_UNREACH_PORT = 3,
-	ICMP4_UNREACH_FRAG_NEEDED = 4,
-	ICMP4_UNREACH_SOURCEROUTE_FAILED = 5,
-	ICMP4_UNREACH_NET_UNKNOWN = 6,
-	ICMP4_UNREACH_HOST_UNKNOWN = 7,
-	ICMP4_UNREACH_ISOLATED = 8,
-	ICMP4_UNREACH_NET_ADMIN = 9,
-	ICMP4_UNREACH_HOST_ADMIN = 10,
-	ICMP4_UNREACH_NET_TOS = 11,
-	ICMP4_UNREACH_HOST_TOS = 12,
-	ICMP4_UNREACH_ADMIN = 13,
-}
-
-public enum IPStatus
-{
-	Success = 0,
-	DestinationNetworkUnreachable = 11002,
-	DestinationHostUnreachable = 11003,
-	DestinationProtocolUnreachable = 11004,
-	DestinationPortUnreachable = 11005,
-	DestinationProhibited = 11004,
-	NoResources = 11006,
-	BadOption = 11007,
-	HardwareError = 11008,
-	PacketTooBig = 11009,
-	TimedOut = 11010,
-	BadRoute = 11012,
-	TtlExpired = 11013,
-	TtlReassemblyTimeExceeded = 11014,
-	ParameterProblem = 11015,
-	SourceQuench = 11016,
-	BadDestination = 11018,
-	DestinationUnreachable = 11040,
-	TimeExceeded = 11041,
-	BadHeader = 11042,
-	UnrecognizedNextHeader = 11043,
-	IcmpError = 11044,
-	DestinationScopeMismatch = 11045,
-}
-
-internal enum StartIPOptions
-{
-	Both = 3,
-	None = 0,
-	StartIPv4 = 1,
-	StartIPv6 = 2,
-}
-
-public enum NetworkInformationAccess
-{
-	None = 0,
-	Read = 1,
-	Ping = 4,
-}
-
-public enum NetworkInterfaceComponent
-{
-	IPv4 = 0,
-	IPv6 = 1,
-}
-
-public enum OperationalStatus
-{
-	Up = 1,
-	Down = 2,
-	Testing = 3,
-	Unknown = 4,
-	Dormant = 5,
-	NotPresent = 6,
-	LowerLayerDown = 7,
-}
-
-public enum PrefixOrigin
-{
-	Other = 0,
-	Manual = 1,
-	WellKnown = 2,
-	Dhcp = 3,
-	RouterAdvertisement = 4,
-}
-
-public enum ScopeLevel
-{
-	None = 0,
-	Interface = 1,
-	Link = 2,
-	Subnet = 3,
-	Admin = 4,
-	Site = 5,
-	Organization = 8,
-	Global = 14,
-}
-
-public enum SuffixOrigin
-{
-	Other = 0,
-	Manual = 1,
-	WellKnown = 2,
-	OriginDhcp = 3,
-	LinkLayerAddress = 4,
-	Random = 5,
-}
-
-public enum TcpState
-{
-	Unknown = 0,
-	Closed = 1,
-	Listen = 2,
-	SynSent = 3,
-	SynReceived = 4,
-	Established = 5,
-	FinWait1 = 6,
-	FinWait2 = 7,
-	CloseWait = 8,
-	Closing = 9,
-	LastAck = 10,
-	TimeWait = 11,
-	DeleteTcb = 12,
-}
-
-public enum NetworkInterfaceType
-{
-	Unknown = 1,
-	Ethernet = 6,
-	TokenRing = 9,
-	Fddi = 15,
-	BasicIsdn = 20,
-	PrimaryIsdn = 21,
-	Ppp = 23,
-	Loopback = 24,
-	Ethernet3Megabit = 26,
-	Slip = 28,
-	Atm = 37,
-	GenericModem = 48,
-	FastEthernetT = 62,
-	Isdn = 63,
-	FastEthernetFx = 69,
-	Wireless80211 = 71,
-	AsymmetricDsl = 94,
-	RateAdaptDsl = 95,
-	SymmetricDsl = 96,
-	VeryHighSpeedDsl = 97,
-	IPOverAtm = 114,
-	GigabitEthernet = 117,
-	Tunnel = 131,
-	MultiRateSymmetricDsl = 143,
-	HighPerformanceSerialBus = 144,
-	Wman = 237,
-	Wwanpp = 243,
-	Wwanpp2 = 244,
-}
-
-public enum NetBiosNodeType
-{
-	Unknown = 0,
-	Broadcast = 1,
-	Peer2Peer = 2,
-	Mixed = 4,
-	Hybrid = 8,
-}
-
-internal enum LinuxArpHardware
-{
-	ETHER = 1,
-	EETHER = 2,
-	PRONET = 4,
-	ATM = 19,
-	SLIP = 256,
-	CSLIP = 257,
-	SLIP6 = 258,
-	CSLIP6 = 259,
-	PPP = 512,
-	LOOPBACK = 772,
-	FDDI = 774,
-	TUNNEL = 768,
-	TUNNEL6 = 769,
-	SIT = 776,
-	IPDDP = 777,
-	IPGRE = 778,
-	IP6GRE = 823,
-}
-
-internal enum MacOsArpHardware
-{
-	ETHER = 6,
-	ATM = 37,
-	SLIP = 28,
-	PPP = 23,
-	LOOPBACK = 24,
-	FDDI = 15,
-}
-
-internal enum MacOsInterfaceFlags
-{
-	IFF_UP = 1,
-	IFF_BROADCAST = 2,
-	IFF_DEBUG = 4,
-	IFF_LOOPBACK = 8,
-	IFF_POINTOPOINT = 16,
-	IFF_NOTRAILERS = 32,
-	IFF_RUNNING = 64,
-	IFF_NOARP = 128,
-	IFF_PROMISC = 256,
-	IFF_ALLMULTI = 512,
-	IFF_OACTIVE = 1024,
-	IFF_SIMPLEX = 2048,
-	IFF_LINK0 = 4096,
-	IFF_LINK1 = 8192,
-	IFF_LINK2 = 16384,
-	IFF_MULTICAST = 32768,
-}
-
-private enum MacNetworkChange.NetworkReachabilityFlags
-{
-	None = 0,
-	TransientConnection = 1,
-	Reachable = 2,
-	ConnectionRequired = 4,
-	ConnectionOnTraffic = 8,
-	InterventionRequired = 16,
-	ConnectionOnDemand = 32,
-	IsLocalAddress = 65536,
-	IsDirect = 131072,
-	IsWWAN = 262144,
-	ConnectionAutomatic = 8,
-}
-
-private enum LinuxNetworkChange.EventType
-{
-	Availability = 1,
-	Address = 2,
-}
-
-public enum UnicodeDecodingConformance
-{
-	Auto = 0,
-	Strict = 1,
-	Compat = 2,
-	Loose = 3,
-}
-
-public enum UnicodeEncodingConformance
-{
-	Auto = 0,
-	Strict = 1,
-	Compat = 2,
-}
-
-public enum RequestCacheLevel
-{
-	Default = 0,
-	BypassCache = 1,
-	CacheOnly = 2,
-	CacheIfAvailable = 3,
-	Revalidate = 4,
-	Reload = 5,
-	NoCacheNoStore = 6,
-}
-
-public enum HttpRequestCacheLevel
-{
-	Default = 0,
-	BypassCache = 1,
-	CacheOnly = 2,
-	CacheIfAvailable = 3,
-	Revalidate = 4,
-	Reload = 5,
-	NoCacheNoStore = 6,
-	CacheOrNextCacheOnly = 7,
-	Refresh = 8,
-}
-
-public enum SettingsSerializeAs
-{
-	Binary = 2,
-	ProviderSpecific = 3,
-	String = 0,
-	Xml = 1,
-}
-
-public enum ProxyElement.AutoDetectValues
-{
-	False = 0,
-	True = 1,
-}
-
-public enum ProxyElement.BypassOnLocalValues
-{
-	False = 0,
-	True = 1,
-}
-
-public enum ProxyElement.UseSystemDefaultValues
-{
-	False = 0,
-	True = 1,
-}
-
-public enum SettingsManageability
-{
-	Roaming = 0,
-}
-
-public enum SpecialSetting
-{
-	ConnectionString = 0,
-	WebServiceUrl = 1,
-}
-
-public enum LockRecursionPolicy
-{
-	NoRecursion = 0,
-	SupportsRecursion = 1,
-}
-
-internal enum AsymmetricPaddingMode
-{
-	None = 1,
-	Pkcs1 = 2,
-	Oaep = 4,
-	Pss = 8,
-}
-
-internal enum HASHALGORITHM_ENUM
-{
-	DSA_HASH_ALGORITHM_SHA1 = 0,
-	DSA_HASH_ALGORITHM_SHA256 = 1,
-	DSA_HASH_ALGORITHM_SHA512 = 2,
-}
-
-internal enum DSAFIPSVERSION_ENUM
-{
-	DSA_FIPS186_2 = 0,
-	DSA_FIPS186_3 = 1,
-}
-
-public enum CngKeyHandleOpenOptions
-{
-	None = 0,
-	EphemeralKey = 1,
-}
-
-public enum ECKeyXmlFormat
-{
-	Rfc4050 = 0,
-}
-
-public enum CngExportPolicies
-{
-	None = 0,
-	AllowExport = 1,
-	AllowPlaintextExport = 2,
-	AllowArchiving = 4,
-	AllowPlaintextArchiving = 8,
-}
-
-public enum CngKeyCreationOptions
-{
-	None = 0,
-	MachineKey = 32,
-	OverwriteExistingKey = 128,
-}
-
-public enum CngKeyOpenOptions
-{
-	None = 0,
-	UserKey = 0,
-	MachineKey = 32,
-	Silent = 64,
-}
-
-internal enum CngKeyTypes
-{
-	None = 0,
-	MachineKey = 32,
-}
-
-public enum CngKeyUsages
-{
-	None = 0,
-	Decryption = 1,
-	Signing = 2,
-	KeyAgreement = 4,
-	AllUsages = 16777215,
-}
-
-public enum CngPropertyOptions
-{
-	None = 0,
-	CustomProperty = 1073741824,
-}
-
-public enum CngUIProtectionLevels
-{
-	None = 0,
-	ProtectKey = 1,
-	ForceHighProtection = 2,
-}
-
-public enum ECCurve.ECCurveType
-{
-	Implicit = 0,
-	PrimeShortWeierstrass = 1,
-	PrimeTwistedEdwards = 2,
-	PrimeMontgomery = 3,
-	Characteristic2 = 4,
-	Named = 5,
-}
-
-internal enum AnalyzeTypeIsResult
-{
-	KnownFalse = 0,
-	KnownTrue = 1,
-	KnownAssignable = 2,
-	Unknown = 3,
-}
-
-public enum ExpressionType
-{
-	Add = 0,
-	AddChecked = 1,
-	And = 2,
-	AndAlso = 3,
-	ArrayLength = 4,
-	ArrayIndex = 5,
-	Call = 6,
-	Coalesce = 7,
-	Conditional = 8,
-	Constant = 9,
-	Convert = 10,
-	ConvertChecked = 11,
-	Divide = 12,
-	Equal = 13,
-	ExclusiveOr = 14,
-	GreaterThan = 15,
-	GreaterThanOrEqual = 16,
-	Invoke = 17,
-	Lambda = 18,
-	LeftShift = 19,
-	LessThan = 20,
-	LessThanOrEqual = 21,
-	ListInit = 22,
-	MemberAccess = 23,
-	MemberInit = 24,
-	Modulo = 25,
-	Multiply = 26,
-	MultiplyChecked = 27,
-	Negate = 28,
-	UnaryPlus = 29,
-	NegateChecked = 30,
-	New = 31,
-	NewArrayInit = 32,
-	NewArrayBounds = 33,
-	Not = 34,
-	NotEqual = 35,
-	Or = 36,
-	OrElse = 37,
-	Parameter = 38,
-	Power = 39,
-	Quote = 40,
-	RightShift = 41,
-	Subtract = 42,
-	SubtractChecked = 43,
-	TypeAs = 44,
-	TypeIs = 45,
-	Assign = 46,
-	Block = 47,
-	DebugInfo = 48,
-	Decrement = 49,
-	Dynamic = 50,
-	Default = 51,
-	Extension = 52,
-	Goto = 53,
-	Increment = 54,
-	Index = 55,
-	Label = 56,
-	RuntimeVariables = 57,
-	Loop = 58,
-	Switch = 59,
-	Throw = 60,
-	Try = 61,
-	Unbox = 62,
-	AddAssign = 63,
-	AndAssign = 64,
-	DivideAssign = 65,
-	ExclusiveOrAssign = 66,
-	LeftShiftAssign = 67,
-	ModuloAssign = 68,
-	MultiplyAssign = 69,
-	OrAssign = 70,
-	PowerAssign = 71,
-	RightShiftAssign = 72,
-	SubtractAssign = 73,
-	AddAssignChecked = 74,
-	MultiplyAssignChecked = 75,
-	SubtractAssignChecked = 76,
-	PreIncrementAssign = 77,
-	PreDecrementAssign = 78,
-	PostIncrementAssign = 79,
-	PostDecrementAssign = 80,
-	TypeEqual = 81,
-	OnesComplement = 82,
-	IsTrue = 83,
-	IsFalse = 84,
-}
-
-public enum GotoExpressionKind
-{
-	Goto = 0,
-	Return = 1,
-	Break = 2,
-	Continue = 3,
-}
-
-public enum MemberBindingType
-{
-	Assignment = 0,
-	MemberBinding = 1,
-	ListBinding = 2,
-}
-
-internal enum LabelScopeKind
-{
-	Statement = 0,
-	Block = 1,
-	Switch = 2,
-	Lambda = 3,
-	Try = 4,
-	Catch = 5,
-	Finally = 6,
-	Filter = 7,
-	Expression = 8,
-}
-
-public enum ManifestKinds
-{
-	Application = 2,
-	ApplicationAndDeployment = 3,
-	Deployment = 1,
-	None = 0,
-}
-
-public enum ECDiffieHellmanKeyDerivationFunction
-{
-	Hash = 0,
-	Hmac = 1,
-	Tls = 2,
-}
-
-public enum SignatureVerificationResult
-{
-	AssemblyIdentityMismatch = 1,
-	ContainingSignatureInvalid = 2,
-	PublicKeyTokenMismatch = 3,
-	PublisherMismatch = 4,
-	Valid = 0,
-}
-
-internal enum TargetType
-{
-	Function = 0,
-	Field = 1,
-}
-
-internal enum CodegenOptions
-{
-	Auto = 0,
-	Custom = 1,
-	Force = 2,
-}
-
-internal enum StaticAccessorType
-{
-	Dot = 0,
-	Arrow = 1,
-	DoubleColon = 2,
-	ArrowWithDefaultReturnIfNull = 3,
-}
-
-internal enum LightmapType
-{
-	StaticLightmap = 0,
-	DynamicLightmap = 1,
-}
-
-public enum TypeInferenceRules
-{
-	TypeReferencedByFirstArgument = 0,
-	TypeReferencedBySecondArgument = 1,
-	ArrayOfTypeReferencedByFirstArgument = 2,
-	TypeOfFirstArgument = 3,
-}
-
-public enum FileState
-{
-	Absent = 0,
-	Exists = 1,
-}
-
-public enum AssetLoadingSubsystem
-{
-	Other = 0,
-	Texture = 1,
-	VirtualTexture = 2,
-	Mesh = 3,
-	Audio = 4,
-	Scripts = 5,
-	EntitiesScene = 6,
-	EntitiesStreamBinaryReader = 7,
-	FileInfo = 8,
-}
-
-public enum Priority
-{
-	PriorityLow = 0,
-	PriorityHigh = 1,
-}
-
-public enum ProcessingState
-{
-	Unknown = 0,
-	InQueue = 1,
-	Reading = 2,
-	Completed = 3,
-	Failed = 4,
-	Canceled = 5,
-}
-
-public enum FileReadType
-{
-	Sync = 0,
-	Async = 1,
-}
-
-public enum Allocator
-{
-	Invalid = 0,
-	None = 1,
-	Temp = 2,
-	TempJob = 3,
-	Persistent = 4,
-	AudioKernel = 5,
-}
-
-public enum SendMessageOptions
-{
-	RequireReceiver = 0,
-	DontRequireReceiver = 1,
-}
-
-public enum PrimitiveType
-{
-	Sphere = 0,
-	Capsule = 1,
-	Cylinder = 2,
-	Cube = 3,
-	Plane = 4,
-	Quad = 5,
-}
-
-public enum Space
-{
-	World = 0,
-	Self = 1,
-}
-
-public enum RuntimePlatform
-{
-	OSXEditor = 0,
-	OSXPlayer = 1,
-	WindowsPlayer = 2,
-	OSXWebPlayer = 3,
-	OSXDashboardPlayer = 4,
-	WindowsWebPlayer = 5,
-	WindowsEditor = 7,
-	IPhonePlayer = 8,
-	XBOX360 = 10,
-	PS3 = 9,
-	Android = 11,
-	NaCl = 12,
-	FlashPlayer = 15,
-	LinuxPlayer = 13,
-	LinuxEditor = 16,
-	WebGLPlayer = 17,
-	MetroPlayerX86 = 18,
-	WSAPlayerX86 = 18,
-	MetroPlayerX64 = 19,
-	WSAPlayerX64 = 19,
-	MetroPlayerARM = 20,
-	WSAPlayerARM = 20,
-	WP8Player = 21,
-	BlackBerryPlayer = 22,
-	TizenPlayer = 23,
-	PSP2 = 24,
-	PS4 = 25,
-	PSM = 26,
-	XboxOne = 27,
-	SamsungTVPlayer = 28,
-	WiiU = 30,
-	tvOS = 31,
-	Switch = 32,
-	Lumin = 33,
-	Stadia = 34,
-	CloudRendering = 35,
-	GameCoreScarlett = 36,
-	GameCoreXboxSeries = 36,
-	GameCoreXboxOne = 37,
-	PS5 = 38,
-}
-
-public enum SystemLanguage
-{
-	Afrikaans = 0,
-	Arabic = 1,
-	Basque = 2,
-	Belarusian = 3,
-	Bulgarian = 4,
-	Catalan = 5,
-	Chinese = 6,
-	Czech = 7,
-	Danish = 8,
-	Dutch = 9,
-	English = 10,
-	Estonian = 11,
-	Faroese = 12,
-	Finnish = 13,
-	French = 14,
-	German = 15,
-	Greek = 16,
-	Hebrew = 17,
-	Icelandic = 19,
-	Indonesian = 20,
-	Italian = 21,
-	Japanese = 22,
-	Korean = 23,
-	Latvian = 24,
-	Lithuanian = 25,
-	Norwegian = 26,
-	Polish = 27,
-	Portuguese = 28,
-	Romanian = 29,
-	Russian = 30,
-	SerboCroatian = 31,
-	Slovak = 32,
-	Slovenian = 33,
-	Spanish = 34,
-	Swedish = 35,
-	Thai = 36,
-	Turkish = 37,
-	Ukrainian = 38,
-	Vietnamese = 39,
-	ChineseSimplified = 40,
-	ChineseTraditional = 41,
-	Unknown = 42,
-	Hungarian = 18,
-}
-
-public enum LogType
-{
-	Error = 0,
-	Assert = 1,
-	Warning = 2,
-	Log = 3,
-	Exception = 4,
-}
-
-public enum LogOption
-{
-	None = 0,
-	NoStacktrace = 1,
-}
-
-public enum WrapMode
-{
-	Once = 1,
-	Loop = 2,
-	PingPong = 4,
-	Default = 0,
-	ClampForever = 8,
-	Clamp = 1,
-}
-
-public enum StackTraceLogType
-{
-	None = 0,
-	ScriptOnly = 1,
-	Full = 2,
-}
-
-public enum NetworkReachability
-{
-	NotReachable = 0,
-	ReachableViaCarrierDataNetwork = 1,
-	ReachableViaLocalAreaNetwork = 2,
-}
-
-public enum ApplicationInstallMode
-{
-	Unknown = 0,
-	Store = 1,
-	DeveloperBuild = 2,
-	Adhoc = 3,
-	Enterprise = 4,
-	Editor = 5,
-}
-
-public enum ApplicationSandboxType
-{
-	Unknown = 0,
-	NotSandboxed = 1,
-	Sandboxed = 2,
-	SandboxBroken = 3,
-}
-
-public enum AudioType
-{
-	UNKNOWN = 0,
-	ACC = 1,
-	AIFF = 2,
-	IT = 10,
-	MOD = 12,
-	MPEG = 13,
-	OGGVORBIS = 14,
-	S3M = 17,
-	WAV = 20,
-	XM = 21,
-	XMA = 22,
-	VAG = 23,
-	AUDIOQUEUE = 24,
-}
-
-public enum Camera.MonoOrStereoscopicEye
-{
-	Left = 0,
-	Right = 1,
-	Mono = 2,
-}
-
-public enum Camera.RenderRequestMode
-{
-	None = 0,
-	ObjectId = 1,
-	Depth = 2,
-	VertexNormal = 3,
-	WorldPosition = 4,
-	EntityId = 5,
-	BaseColor = 6,
-	SpecularColor = 7,
-	Metallic = 8,
-	Emission = 9,
-	Normal = 10,
-	Smoothness = 11,
-	Occlusion = 12,
-	DiffuseColor = 13,
-}
-
-public enum Camera.RenderRequestOutputSpace
-{
-	UV0 = 0,
-	UV1 = 1,
-	UV2 = 2,
-	UV3 = 3,
-	UV4 = 4,
-	UV5 = 5,
-	UV6 = 6,
-	UV7 = 7,
-	UV8 = 8,
-}
-
-public enum ReflectionProbe.ReflectionProbeEvent
-{
-	ReflectionProbeAdded = 0,
-	ReflectionProbeRemoved = 1,
-}
-
-internal enum EnabledOrientation
-{
-	kAutorotateToPortrait = 1,
-	kAutorotateToPortraitUpsideDown = 2,
-	kAutorotateToLandscapeLeft = 4,
-	kAutorotateToLandscapeRight = 8,
-}
-
-public enum FullScreenMode
-{
-	ExclusiveFullScreen = 0,
-	FullScreenWindow = 1,
-	MaximizedWindow = 2,
-	Windowed = 3,
-}
-
-public enum RenderingPath
-{
-	VertexLit = 0,
-	Forward = 1,
-	DeferredLighting = 2,
-	DeferredShading = 3,
-}
-
-public enum TransparencySortMode
-{
-	Default = 0,
-	Perspective = 1,
-	Orthographic = 2,
-	CustomAxis = 3,
-}
-
-public enum LightType
-{
-	Spot = 0,
-	Directional = 1,
-	Point = 2,
-	Area = 3,
-	Rectangle = 3,
-	Disc = 4,
-}
-
-public enum LightShadows
-{
-	None = 0,
-	Hard = 1,
-	Soft = 2,
-}
-
-public enum FogMode
-{
-	Linear = 1,
-	Exponential = 2,
-	ExponentialSquared = 3,
-}
-
-public enum LightmapBakeType
-{
-	Realtime = 4,
-	Baked = 2,
-	Mixed = 1,
-}
-
-public enum MixedLightingMode
-{
-	IndirectOnly = 0,
-	Shadowmask = 2,
-	Subtractive = 1,
-}
-
-public enum ShadowResolution
-{
-	Low = 0,
-	Medium = 1,
-	High = 2,
-	VeryHigh = 3,
-}
-
-public enum CameraClearFlags
-{
-	Skybox = 1,
-	Color = 2,
-	SolidColor = 2,
-	Depth = 3,
-	Nothing = 4,
-}
-
-public enum DepthTextureMode
-{
-	None = 0,
-	Depth = 1,
-	DepthNormals = 2,
-	MotionVectors = 4,
-}
-
-public enum MeshTopology
-{
-	Triangles = 0,
-	Quads = 2,
-	Lines = 3,
-	LineStrip = 4,
-	Points = 5,
-}
-
-public enum ColorSpace
-{
-	Gamma = 0,
-	Linear = 1,
-}
-
-public enum ScreenOrientation
-{
-	Unknown = 0,
-	Portrait = 1,
-	PortraitUpsideDown = 2,
-	LandscapeLeft = 3,
-	LandscapeRight = 4,
-	AutoRotation = 5,
-	Landscape = 3,
-}
-
-public enum FilterMode
-{
-	Point = 0,
-	Bilinear = 1,
-	Trilinear = 2,
-}
-
-public enum TextureWrapMode
-{
-	Repeat = 0,
-	Clamp = 1,
-	Mirror = 2,
-	MirrorOnce = 3,
-}
-
-public enum TextureFormat
-{
-	Alpha8 = 1,
-	ARGB4444 = 2,
-	RGB24 = 3,
-	RGBA32 = 4,
-	ARGB32 = 5,
-	RGB565 = 7,
-	R16 = 9,
-	DXT1 = 10,
-	DXT5 = 12,
-	RGBA4444 = 13,
-	BGRA32 = 14,
-	RHalf = 15,
-	RGHalf = 16,
-	RGBAHalf = 17,
-	RFloat = 18,
-	RGFloat = 19,
-	RGBAFloat = 20,
-	YUY2 = 21,
-	RGB9e5Float = 22,
-	BC4 = 26,
-	BC5 = 27,
-	BC6H = 24,
-	BC7 = 25,
-	DXT1Crunched = 28,
-	DXT5Crunched = 29,
-	PVRTC_RGB2 = 30,
-	PVRTC_RGBA2 = 31,
-	PVRTC_RGB4 = 32,
-	PVRTC_RGBA4 = 33,
-	ETC_RGB4 = 34,
-	EAC_R = 41,
-	EAC_R_SIGNED = 42,
-	EAC_RG = 43,
-	EAC_RG_SIGNED = 44,
-	ETC2_RGB = 45,
-	ETC2_RGBA1 = 46,
-	ETC2_RGBA8 = 47,
-	ASTC_4x4 = 48,
-	ASTC_5x5 = 49,
-	ASTC_6x6 = 50,
-	ASTC_8x8 = 51,
-	ASTC_10x10 = 52,
-	ASTC_12x12 = 53,
-	ETC_RGB4_3DS = 60,
-	ETC_RGBA8_3DS = 61,
-	RG16 = 62,
-	R8 = 63,
-	ETC_RGB4Crunched = 64,
-	ETC2_RGBA8Crunched = 65,
-	ASTC_HDR_4x4 = 66,
-	ASTC_HDR_5x5 = 67,
-	ASTC_HDR_6x6 = 68,
-	ASTC_HDR_8x8 = 69,
-	ASTC_HDR_10x10 = 70,
-	ASTC_HDR_12x12 = 71,
-	RG32 = 72,
-	RGB48 = 73,
-	RGBA64 = 74,
-	ASTC_RGB_4x4 = 48,
-	ASTC_RGB_5x5 = 49,
-	ASTC_RGB_6x6 = 50,
-	ASTC_RGB_8x8 = 51,
-	ASTC_RGB_10x10 = 52,
-	ASTC_RGB_12x12 = 53,
-	ASTC_RGBA_4x4 = 54,
-	ASTC_RGBA_5x5 = 55,
-	ASTC_RGBA_6x6 = 56,
-	ASTC_RGBA_8x8 = 57,
-	ASTC_RGBA_10x10 = 58,
-	ASTC_RGBA_12x12 = 59,
-}
-
-public enum CubemapFace
-{
-	PositiveX = 0,
-	NegativeX = 1,
-	PositiveY = 2,
-	NegativeY = 3,
-	PositiveZ = 4,
-	NegativeZ = 5,
-}
-
-public enum RenderTextureFormat
-{
-	ARGB32 = 0,
-	Depth = 1,
-	ARGBHalf = 2,
-	Shadowmap = 3,
-	RGB565 = 4,
-	ARGB4444 = 5,
-	ARGB1555 = 6,
-	Default = 7,
-	ARGB2101010 = 8,
-	DefaultHDR = 9,
-	ARGB64 = 10,
-	ARGBFloat = 11,
-	RGFloat = 12,
-	RGHalf = 13,
-	RFloat = 14,
-	RHalf = 15,
-	R8 = 16,
-	ARGBInt = 17,
-	RGInt = 18,
-	RInt = 19,
-	BGRA32 = 20,
-	RGB111110Float = 22,
-	RG32 = 23,
-	RGBAUShort = 24,
-	RG16 = 25,
-	BGRA10101010_XR = 26,
-	BGR101010_XR = 27,
-	R16 = 28,
-}
-
-public enum VRTextureUsage
-{
-	None = 0,
-	OneEye = 1,
-	TwoEyes = 2,
-	DeviceSpecific = 3,
-}
-
-public enum RenderTextureCreationFlags
-{
-	MipMap = 1,
-	AutoGenerateMips = 2,
-	SRGB = 4,
-	EyeTexture = 8,
-	EnableRandomWrite = 16,
-	CreatedFromScript = 32,
-	AllowVerticalFlip = 128,
-	NoResolvedColorSurface = 256,
-	DynamicallyScalable = 1024,
-	BindMS = 2048,
-}
-
-public enum RenderTextureReadWrite
-{
-	Default = 0,
-	Linear = 1,
-	sRGB = 2,
-}
-
-public enum RenderTextureMemoryless
-{
-	None = 0,
-	Color = 1,
-	Depth = 2,
-	MSAA = 4,
-}
-
-public enum LightmapsMode
-{
-	NonDirectional = 0,
-	CombinedDirectional = 1,
-}
-
-public enum LineTextureMode
-{
-	Stretch = 0,
-	Tile = 1,
-	DistributePerSegment = 2,
-	RepeatPerSegment = 3,
-}
-
-public enum LineAlignment
-{
-	View = 0,
-	Local = 1,
-	TransformZ = 1,
-}
-
-public enum FullScreenMovieControlMode
-{
-	Full = 0,
-	Minimal = 1,
-	CancelOnInput = 2,
-	Hidden = 3,
-}
-
-public enum FullScreenMovieScalingMode
-{
-	None = 0,
-	AspectFit = 1,
-	AspectFill = 2,
-	Fill = 3,
-}
-
-public enum CursorLockMode
-{
-	None = 0,
-	Locked = 1,
-	Confined = 2,
-}
-
-public enum KeyCode
-{
-	None = 0,
-	Backspace = 8,
-	Delete = 127,
-	Tab = 9,
-	Clear = 12,
-	Return = 13,
-	Pause = 19,
-	Escape = 27,
-	Space = 32,
-	Keypad0 = 256,
-	Keypad1 = 257,
-	Keypad2 = 258,
-	Keypad3 = 259,
-	Keypad4 = 260,
-	Keypad5 = 261,
-	Keypad6 = 262,
-	Keypad7 = 263,
-	Keypad8 = 264,
-	Keypad9 = 265,
-	KeypadPeriod = 266,
-	KeypadDivide = 267,
-	KeypadMultiply = 268,
-	KeypadMinus = 269,
-	KeypadPlus = 270,
-	KeypadEnter = 271,
-	KeypadEquals = 272,
-	UpArrow = 273,
-	DownArrow = 274,
-	RightArrow = 275,
-	LeftArrow = 276,
-	Insert = 277,
-	Home = 278,
-	End = 279,
-	PageUp = 280,
-	PageDown = 281,
-	F1 = 282,
-	F2 = 283,
-	F3 = 284,
-	F4 = 285,
-	F5 = 286,
-	F6 = 287,
-	F7 = 288,
-	F8 = 289,
-	F9 = 290,
-	F10 = 291,
-	F11 = 292,
-	F12 = 293,
-	F13 = 294,
-	F14 = 295,
-	F15 = 296,
-	Alpha0 = 48,
-	Alpha1 = 49,
-	Alpha2 = 50,
-	Alpha3 = 51,
-	Alpha4 = 52,
-	Alpha5 = 53,
-	Alpha6 = 54,
-	Alpha7 = 55,
-	Alpha8 = 56,
-	Alpha9 = 57,
-	Exclaim = 33,
-	DoubleQuote = 34,
-	Hash = 35,
-	Dollar = 36,
-	Percent = 37,
-	Ampersand = 38,
-	Quote = 39,
-	LeftParen = 40,
-	RightParen = 41,
-	Asterisk = 42,
-	Plus = 43,
-	Comma = 44,
-	Minus = 45,
-	Period = 46,
-	Slash = 47,
-	Colon = 58,
-	Semicolon = 59,
-	Less = 60,
-	Equals = 61,
-	Greater = 62,
-	Question = 63,
-	At = 64,
-	LeftBracket = 91,
-	Backslash = 92,
-	RightBracket = 93,
-	Caret = 94,
-	Underscore = 95,
-	BackQuote = 96,
-	A = 97,
-	B = 98,
-	C = 99,
-	D = 100,
-	E = 101,
-	F = 102,
-	G = 103,
-	H = 104,
-	I = 105,
-	J = 106,
-	K = 107,
-	L = 108,
-	M = 109,
-	N = 110,
-	O = 111,
-	P = 112,
-	Q = 113,
-	R = 114,
-	S = 115,
-	T = 116,
-	U = 117,
-	V = 118,
-	W = 119,
-	X = 120,
-	Y = 121,
-	Z = 122,
-	LeftCurlyBracket = 123,
-	Pipe = 124,
-	RightCurlyBracket = 125,
-	Tilde = 126,
-	Numlock = 300,
-	CapsLock = 301,
-	ScrollLock = 302,
-	RightShift = 303,
-	LeftShift = 304,
-	RightControl = 305,
-	LeftControl = 306,
-	RightAlt = 307,
-	LeftAlt = 308,
-	LeftCommand = 310,
-	LeftApple = 310,
-	LeftWindows = 311,
-	RightCommand = 309,
-	RightApple = 309,
-	RightWindows = 312,
-	AltGr = 313,
-	Help = 315,
-	Print = 316,
-	SysReq = 317,
-	Break = 318,
-	Menu = 319,
-	Mouse0 = 323,
-	Mouse1 = 324,
-	Mouse2 = 325,
-	Mouse3 = 326,
-	Mouse4 = 327,
-	Mouse5 = 328,
-	Mouse6 = 329,
-	JoystickButton0 = 330,
-	JoystickButton1 = 331,
-	JoystickButton2 = 332,
-	JoystickButton3 = 333,
-	JoystickButton4 = 334,
-	JoystickButton5 = 335,
-	JoystickButton6 = 336,
-	JoystickButton7 = 337,
-	JoystickButton8 = 338,
-	JoystickButton9 = 339,
-	JoystickButton10 = 340,
-	JoystickButton11 = 341,
-	JoystickButton12 = 342,
-	JoystickButton13 = 343,
-	JoystickButton14 = 344,
-	JoystickButton15 = 345,
-	JoystickButton16 = 346,
-	JoystickButton17 = 347,
-	JoystickButton18 = 348,
-	JoystickButton19 = 349,
-	Joystick1Button0 = 350,
-	Joystick1Button1 = 351,
-	Joystick1Button2 = 352,
-	Joystick1Button3 = 353,
-	Joystick1Button4 = 354,
-	Joystick1Button5 = 355,
-	Joystick1Button6 = 356,
-	Joystick1Button7 = 357,
-	Joystick1Button8 = 358,
-	Joystick1Button9 = 359,
-	Joystick1Button10 = 360,
-	Joystick1Button11 = 361,
-	Joystick1Button12 = 362,
-	Joystick1Button13 = 363,
-	Joystick1Button14 = 364,
-	Joystick1Button15 = 365,
-	Joystick1Button16 = 366,
-	Joystick1Button17 = 367,
-	Joystick1Button18 = 368,
-	Joystick1Button19 = 369,
-	Joystick2Button0 = 370,
-	Joystick2Button1 = 371,
-	Joystick2Button2 = 372,
-	Joystick2Button3 = 373,
-	Joystick2Button4 = 374,
-	Joystick2Button5 = 375,
-	Joystick2Button6 = 376,
-	Joystick2Button7 = 377,
-	Joystick2Button8 = 378,
-	Joystick2Button9 = 379,
-	Joystick2Button10 = 380,
-	Joystick2Button11 = 381,
-	Joystick2Button12 = 382,
-	Joystick2Button13 = 383,
-	Joystick2Button14 = 384,
-	Joystick2Button15 = 385,
-	Joystick2Button16 = 386,
-	Joystick2Button17 = 387,
-	Joystick2Button18 = 388,
-	Joystick2Button19 = 389,
-	Joystick3Button0 = 390,
-	Joystick3Button1 = 391,
-	Joystick3Button2 = 392,
-	Joystick3Button3 = 393,
-	Joystick3Button4 = 394,
-	Joystick3Button5 = 395,
-	Joystick3Button6 = 396,
-	Joystick3Button7 = 397,
-	Joystick3Button8 = 398,
-	Joystick3Button9 = 399,
-	Joystick3Button10 = 400,
-	Joystick3Button11 = 401,
-	Joystick3Button12 = 402,
-	Joystick3Button13 = 403,
-	Joystick3Button14 = 404,
-	Joystick3Button15 = 405,
-	Joystick3Button16 = 406,
-	Joystick3Button17 = 407,
-	Joystick3Button18 = 408,
-	Joystick3Button19 = 409,
-	Joystick4Button0 = 410,
-	Joystick4Button1 = 411,
-	Joystick4Button2 = 412,
-	Joystick4Button3 = 413,
-	Joystick4Button4 = 414,
-	Joystick4Button5 = 415,
-	Joystick4Button6 = 416,
-	Joystick4Button7 = 417,
-	Joystick4Button8 = 418,
-	Joystick4Button9 = 419,
-	Joystick4Button10 = 420,
-	Joystick4Button11 = 421,
-	Joystick4Button12 = 422,
-	Joystick4Button13 = 423,
-	Joystick4Button14 = 424,
-	Joystick4Button15 = 425,
-	Joystick4Button16 = 426,
-	Joystick4Button17 = 427,
-	Joystick4Button18 = 428,
-	Joystick4Button19 = 429,
-	Joystick5Button0 = 430,
-	Joystick5Button1 = 431,
-	Joystick5Button2 = 432,
-	Joystick5Button3 = 433,
-	Joystick5Button4 = 434,
-	Joystick5Button5 = 435,
-	Joystick5Button6 = 436,
-	Joystick5Button7 = 437,
-	Joystick5Button8 = 438,
-	Joystick5Button9 = 439,
-	Joystick5Button10 = 440,
-	Joystick5Button11 = 441,
-	Joystick5Button12 = 442,
-	Joystick5Button13 = 443,
-	Joystick5Button14 = 444,
-	Joystick5Button15 = 445,
-	Joystick5Button16 = 446,
-	Joystick5Button17 = 447,
-	Joystick5Button18 = 448,
-	Joystick5Button19 = 449,
-	Joystick6Button0 = 450,
-	Joystick6Button1 = 451,
-	Joystick6Button2 = 452,
-	Joystick6Button3 = 453,
-	Joystick6Button4 = 454,
-	Joystick6Button5 = 455,
-	Joystick6Button6 = 456,
-	Joystick6Button7 = 457,
-	Joystick6Button8 = 458,
-	Joystick6Button9 = 459,
-	Joystick6Button10 = 460,
-	Joystick6Button11 = 461,
-	Joystick6Button12 = 462,
-	Joystick6Button13 = 463,
-	Joystick6Button14 = 464,
-	Joystick6Button15 = 465,
-	Joystick6Button16 = 466,
-	Joystick6Button17 = 467,
-	Joystick6Button18 = 468,
-	Joystick6Button19 = 469,
-	Joystick7Button0 = 470,
-	Joystick7Button1 = 471,
-	Joystick7Button2 = 472,
-	Joystick7Button3 = 473,
-	Joystick7Button4 = 474,
-	Joystick7Button5 = 475,
-	Joystick7Button6 = 476,
-	Joystick7Button7 = 477,
-	Joystick7Button8 = 478,
-	Joystick7Button9 = 479,
-	Joystick7Button10 = 480,
-	Joystick7Button11 = 481,
-	Joystick7Button12 = 482,
-	Joystick7Button13 = 483,
-	Joystick7Button14 = 484,
-	Joystick7Button15 = 485,
-	Joystick7Button16 = 486,
-	Joystick7Button17 = 487,
-	Joystick7Button18 = 488,
-	Joystick7Button19 = 489,
-	Joystick8Button0 = 490,
-	Joystick8Button1 = 491,
-	Joystick8Button2 = 492,
-	Joystick8Button3 = 493,
-	Joystick8Button4 = 494,
-	Joystick8Button5 = 495,
-	Joystick8Button6 = 496,
-	Joystick8Button7 = 497,
-	Joystick8Button8 = 498,
-	Joystick8Button9 = 499,
-	Joystick8Button10 = 500,
-	Joystick8Button11 = 501,
-	Joystick8Button12 = 502,
-	Joystick8Button13 = 503,
-	Joystick8Button14 = 504,
-	Joystick8Button15 = 505,
-	Joystick8Button16 = 506,
-	Joystick8Button17 = 507,
-	Joystick8Button18 = 508,
-	Joystick8Button19 = 509,
-}
-
-public enum RuntimeInitializeLoadType
-{
-	AfterSceneLoad = 0,
-	BeforeSceneLoad = 1,
-	AfterAssembliesLoaded = 2,
-	BeforeSplashScreen = 3,
-	SubsystemRegistration = 4,
-}
-
-public enum HideFlags
-{
-	None = 0,
-	HideInHierarchy = 1,
-	HideInInspector = 2,
-	DontSaveInEditor = 4,
-	NotEditable = 8,
-	DontSaveInBuild = 16,
-	DontUnloadUnusedAsset = 32,
-	DontSave = 52,
-	HideAndDontSave = 61,
-}
-
-public enum BatteryStatus
-{
-	Unknown = 0,
-	Charging = 1,
-	Discharging = 2,
-	NotCharging = 3,
-	Full = 4,
-}
-
-public enum OperatingSystemFamily
-{
-	Other = 0,
-	MacOSX = 1,
-	Windows = 2,
-	Linux = 3,
-}
-
-public enum DeviceType
-{
-	Unknown = 0,
-	Handheld = 1,
-	Console = 2,
-	Desktop = 3,
-}
-
-public enum TouchScreenKeyboard.Status
-{
-	Visible = 0,
-	Done = 1,
-	Canceled = 2,
-	LostFocus = 3,
-}
-
-public enum TouchScreenKeyboardType
-{
-	Default = 0,
-	ASCIICapable = 1,
-	NumbersAndPunctuation = 2,
-	URL = 3,
-	NumberPad = 4,
-	PhonePad = 5,
-	NamePhonePad = 6,
-	EmailAddress = 7,
-	NintendoNetworkAccount = 8,
-	Social = 9,
-	Search = 10,
-	DecimalPad = 11,
-	OneTimeCode = 12,
-}
-
-public enum DrivenTransformProperties
-{
-	None = 0,
-	AnchoredPositionX = 2,
-	AnchoredPositionY = 4,
-	AnchoredPositionZ = 8,
-	Rotation = 16,
-	ScaleX = 32,
-	ScaleY = 64,
-	ScaleZ = 128,
-	AnchorMinX = 256,
-	AnchorMinY = 512,
-	AnchorMaxX = 1024,
-	AnchorMaxY = 2048,
-	SizeDeltaX = 4096,
-	SizeDeltaY = 8192,
-	PivotX = 16384,
-	PivotY = 32768,
-	AnchoredPosition = 6,
-	AnchoredPosition3D = 14,
-	Scale = 224,
-	AnchorMin = 768,
-	AnchorMax = 3072,
-	Anchors = 3840,
-	SizeDelta = 12288,
-	Pivot = 49152,
-}
-
-public enum RectTransform.Axis
-{
-	Horizontal = 0,
-	Vertical = 1,
-}
-
-public enum SpriteMaskInteraction
-{
-	None = 0,
-	VisibleInsideMask = 1,
-	VisibleOutsideMask = 2,
-}
-
-public enum SpriteMeshType
-{
-	FullRect = 0,
-	Tight = 1,
-}
-
-public enum SpritePackingMode
-{
-	Tight = 0,
-	Rectangle = 1,
-}
-
-public enum SpriteSortPoint
-{
-	Center = 0,
-	Pivot = 1,
-}
-
-public enum PersistentListenerMode
-{
-	EventDefined = 0,
-	Void = 1,
-	Object = 2,
-	Int = 3,
-	Float = 4,
-	String = 5,
-	Bool = 6,
-}
-
-public enum UnityEventCallState
-{
-	Off = 0,
-	EditorAndRuntime = 1,
-	RuntimeOnly = 2,
-}
-
-public enum LoadSceneMode
-{
-	Single = 0,
-	Additive = 1,
-}
-
-public enum LocalPhysicsMode
-{
-	None = 0,
-	Physics2D = 1,
-	Physics3D = 2,
-}
-
-public enum UnloadSceneOptions
-{
-	None = 0,
-	UnloadAllEmbeddedSceneObjects = 1,
-}
-
-public enum IndexFormat
-{
-	UInt16 = 0,
-	UInt32 = 1,
-}
-
-public enum MeshUpdateFlags
-{
-	Default = 0,
-	DontValidateIndices = 1,
-	DontResetBoneBounds = 2,
-	DontNotifyMeshUsers = 4,
-	DontRecalculateBounds = 8,
-}
-
-public enum VertexAttributeFormat
-{
-	Float32 = 0,
-	Float16 = 1,
-	UNorm8 = 2,
-	SNorm8 = 3,
-	UNorm16 = 4,
-	SNorm16 = 5,
-	UInt8 = 6,
-	SInt8 = 7,
-	UInt16 = 8,
-	SInt16 = 9,
-	UInt32 = 10,
-	SInt32 = 11,
-}
-
-public enum VertexAttribute
-{
-	Position = 0,
-	Normal = 1,
-	Tangent = 2,
-	Color = 3,
-	TexCoord0 = 4,
-	TexCoord1 = 5,
-	TexCoord2 = 6,
-	TexCoord3 = 7,
-	TexCoord4 = 8,
-	TexCoord5 = 9,
-	TexCoord6 = 10,
-	TexCoord7 = 11,
-	BlendWeight = 12,
-	BlendIndices = 13,
-}
-
-public enum RenderBufferLoadAction
-{
-	Load = 0,
-	Clear = 1,
-	DontCare = 2,
-}
-
-public enum RenderBufferStoreAction
-{
-	Store = 0,
-	Resolve = 1,
-	StoreAndResolve = 2,
-	DontCare = 3,
-}
-
-public enum CompareFunction
-{
-	Disabled = 0,
-	Never = 1,
-	Less = 2,
-	Equal = 3,
-	LessEqual = 4,
-	Greater = 5,
-	NotEqual = 6,
-	GreaterEqual = 7,
-	Always = 8,
-}
-
-public enum ColorWriteMask
-{
-	Alpha = 1,
-	Blue = 2,
-	Green = 4,
-	Red = 8,
-	All = 15,
-}
-
-public enum StencilOp
-{
-	Keep = 0,
-	Zero = 1,
-	Replace = 2,
-	IncrementSaturate = 3,
-	DecrementSaturate = 4,
-	Invert = 5,
-	IncrementWrap = 6,
-	DecrementWrap = 7,
-}
-
-public enum AmbientMode
-{
-	Skybox = 0,
-	Trilight = 1,
-	Flat = 3,
-	Custom = 4,
-}
-
-public enum CameraEvent
-{
-	BeforeDepthTexture = 0,
-	AfterDepthTexture = 1,
-	BeforeDepthNormalsTexture = 2,
-	AfterDepthNormalsTexture = 3,
-	BeforeGBuffer = 4,
-	AfterGBuffer = 5,
-	BeforeLighting = 6,
-	AfterLighting = 7,
-	BeforeFinalPass = 8,
-	AfterFinalPass = 9,
-	BeforeForwardOpaque = 10,
-	AfterForwardOpaque = 11,
-	BeforeImageEffectsOpaque = 12,
-	AfterImageEffectsOpaque = 13,
-	BeforeSkybox = 14,
-	AfterSkybox = 15,
-	BeforeForwardAlpha = 16,
-	AfterForwardAlpha = 17,
-	BeforeImageEffects = 18,
-	AfterImageEffects = 19,
-	AfterEverything = 20,
-	BeforeReflections = 21,
-	AfterReflections = 22,
-	BeforeHaloAndLensFlares = 23,
-	AfterHaloAndLensFlares = 24,
-}
-
-public enum BuiltinRenderTextureType
-{
-	None = 0,
-	CurrentActive = 1,
-	CameraTarget = 2,
-	Depth = 3,
-	DepthNormals = 4,
-	ResolvedDepth = 5,
-	PrepassNormalsSpec = 7,
-	PrepassLight = 8,
-	PrepassLightSpec = 9,
-	GBuffer0 = 10,
-	GBuffer1 = 11,
-	GBuffer2 = 12,
-	GBuffer3 = 13,
-	Reflections = 14,
-	MotionVectors = 15,
-	GBuffer4 = 16,
-	GBuffer5 = 17,
-	GBuffer6 = 18,
-	GBuffer7 = 19,
-}
-
-public enum ShadowCastingMode
-{
-	Off = 0,
-	On = 1,
-	TwoSided = 2,
-	ShadowsOnly = 3,
-}
-
-public enum GraphicsDeviceType
-{
-	OpenGL2 = 0,
-	Direct3D9 = 1,
-	Direct3D11 = 2,
-	PlayStation3 = 3,
-	Null = 4,
-	Xbox360 = 6,
-	OpenGLES2 = 8,
-	OpenGLES3 = 11,
-	PlayStationVita = 12,
-	PlayStation4 = 13,
-	XboxOne = 14,
-	PlayStationMobile = 15,
-	Metal = 16,
-	OpenGLCore = 17,
-	Direct3D12 = 18,
-	N3DS = 19,
-	Vulkan = 21,
-	Switch = 22,
-	XboxOneD3D12 = 23,
-	GameCoreXboxOne = 24,
-	GameCoreScarlett = 25,
-	GameCoreXboxSeries = 25,
-	PlayStation5 = 26,
-	PlayStation5NGGC = 27,
-}
-
-public enum ReflectionProbeUsage
-{
-	Off = 0,
-	BlendProbes = 1,
-	BlendProbesAndSkybox = 2,
-	Simple = 3,
-}
-
-public enum ShadowSamplingMode
-{
-	CompareDepths = 0,
-	RawDepth = 1,
-	None = 2,
-}
-
-public enum LightProbeUsage
-{
-	Off = 0,
-	BlendProbes = 1,
-	UseProxyVolume = 2,
-	CustomProvided = 4,
-}
-
-public enum TextureDimension
-{
-	None = 0,
-	Any = 1,
-	Tex2D = 2,
-	Tex3D = 3,
-	Cube = 4,
-	Tex2DArray = 5,
-	CubeArray = 6,
-}
-
-public enum CommandBufferExecutionFlags
-{
-	None = 0,
-	AsyncCompute = 2,
-}
-
-public enum SupportedRenderingFeatures.ReflectionProbeModes
-{
-	None = 0,
-	Rotation = 1,
-}
-
-public enum SupportedRenderingFeatures.LightmapMixedBakeModes
-{
-	None = 0,
-	IndirectOnly = 1,
-	Subtractive = 2,
-	Shadowmask = 4,
-}
-
-public enum ShaderPropertyFlags
-{
-	None = 0,
-	HideInInspector = 1,
-	PerRendererData = 2,
-	NoScaleOffset = 4,
-	Normal = 8,
-	HDR = 16,
-	Gamma = 32,
-	NonModifiableTextureData = 64,
-	MainTexture = 128,
-	MainColor = 256,
-}
-
-internal enum FrameData.Flags
-{
-	Evaluate = 1,
-	SeekOccured = 2,
-	Loop = 4,
-	Hold = 8,
-	EffectivePlayStateDelayed = 16,
-	EffectivePlayStatePlaying = 32,
-}
-
-public enum DirectorUpdateMode
-{
-	DSPClock = 0,
-	GameTime = 1,
-	UnscaledGameTime = 2,
-	Manual = 3,
-}
-
-public enum PlayState
-{
-	Paused = 0,
-	Playing = 1,
-	Delayed = 2,
-}
-
-public enum LightType
-{
-	Directional = 0,
-	Point = 1,
-	Spot = 2,
-	Rectangle = 3,
-	Disc = 4,
-	SpotPyramidShape = 5,
-	SpotBoxShape = 6,
-}
-
-public enum LightMode
-{
-	Realtime = 0,
-	Mixed = 1,
-	Baked = 2,
-	Unknown = 3,
-}
-
-public enum FalloffType
-{
-	InverseSquared = 0,
-	InverseSquaredNoRangeAttenuation = 1,
-	Linear = 2,
-	Legacy = 3,
-	Undefined = 4,
-}
-
-public enum AngularFalloffType
-{
-	LUT = 0,
-	AnalyticAndInnerAngle = 1,
-}
-
-public enum TextureCreationFlags
-{
-	None = 0,
-	MipChain = 1,
-	Crunch = 64,
-}
-
-public enum FormatUsage
-{
-	Sample = 0,
-	Linear = 1,
-	Sparse = 2,
-	Render = 4,
-	Blend = 5,
-	GetPixels = 6,
-	SetPixels = 7,
-	SetPixels32 = 8,
-	ReadPixels = 9,
-	LoadStore = 10,
-	MSAA2x = 11,
-	MSAA4x = 12,
-	MSAA8x = 13,
-	StencilSampling = 16,
-}
-
-public enum DefaultFormat
-{
-	LDR = 0,
-	HDR = 1,
-}
-
-public enum GraphicsFormat
-{
-	None = 0,
-	R8_SRGB = 1,
-	R8G8_SRGB = 2,
-	R8G8B8_SRGB = 3,
-	R8G8B8A8_SRGB = 4,
-	R8_UNorm = 5,
-	R8G8_UNorm = 6,
-	R8G8B8_UNorm = 7,
-	R8G8B8A8_UNorm = 8,
-	R8_SNorm = 9,
-	R8G8_SNorm = 10,
-	R8G8B8_SNorm = 11,
-	R8G8B8A8_SNorm = 12,
-	R8_UInt = 13,
-	R8G8_UInt = 14,
-	R8G8B8_UInt = 15,
-	R8G8B8A8_UInt = 16,
-	R8_SInt = 17,
-	R8G8_SInt = 18,
-	R8G8B8_SInt = 19,
-	R8G8B8A8_SInt = 20,
-	R16_UNorm = 21,
-	R16G16_UNorm = 22,
-	R16G16B16_UNorm = 23,
-	R16G16B16A16_UNorm = 24,
-	R16_SNorm = 25,
-	R16G16_SNorm = 26,
-	R16G16B16_SNorm = 27,
-	R16G16B16A16_SNorm = 28,
-	R16_UInt = 29,
-	R16G16_UInt = 30,
-	R16G16B16_UInt = 31,
-	R16G16B16A16_UInt = 32,
-	R16_SInt = 33,
-	R16G16_SInt = 34,
-	R16G16B16_SInt = 35,
-	R16G16B16A16_SInt = 36,
-	R32_UInt = 37,
-	R32G32_UInt = 38,
-	R32G32B32_UInt = 39,
-	R32G32B32A32_UInt = 40,
-	R32_SInt = 41,
-	R32G32_SInt = 42,
-	R32G32B32_SInt = 43,
-	R32G32B32A32_SInt = 44,
-	R16_SFloat = 45,
-	R16G16_SFloat = 46,
-	R16G16B16_SFloat = 47,
-	R16G16B16A16_SFloat = 48,
-	R32_SFloat = 49,
-	R32G32_SFloat = 50,
-	R32G32B32_SFloat = 51,
-	R32G32B32A32_SFloat = 52,
-	B8G8R8_SRGB = 56,
-	B8G8R8A8_SRGB = 57,
-	B8G8R8_UNorm = 58,
-	B8G8R8A8_UNorm = 59,
-	B8G8R8_SNorm = 60,
-	B8G8R8A8_SNorm = 61,
-	B8G8R8_UInt = 62,
-	B8G8R8A8_UInt = 63,
-	B8G8R8_SInt = 64,
-	B8G8R8A8_SInt = 65,
-	R4G4B4A4_UNormPack16 = 66,
-	B4G4R4A4_UNormPack16 = 67,
-	R5G6B5_UNormPack16 = 68,
-	B5G6R5_UNormPack16 = 69,
-	R5G5B5A1_UNormPack16 = 70,
-	B5G5R5A1_UNormPack16 = 71,
-	A1R5G5B5_UNormPack16 = 72,
-	E5B9G9R9_UFloatPack32 = 73,
-	B10G11R11_UFloatPack32 = 74,
-	A2B10G10R10_UNormPack32 = 75,
-	A2B10G10R10_UIntPack32 = 76,
-	A2B10G10R10_SIntPack32 = 77,
-	A2R10G10B10_UNormPack32 = 78,
-	A2R10G10B10_UIntPack32 = 79,
-	A2R10G10B10_SIntPack32 = 80,
-	A2R10G10B10_XRSRGBPack32 = 81,
-	A2R10G10B10_XRUNormPack32 = 82,
-	R10G10B10_XRSRGBPack32 = 83,
-	R10G10B10_XRUNormPack32 = 84,
-	A10R10G10B10_XRSRGBPack32 = 85,
-	A10R10G10B10_XRUNormPack32 = 86,
-	RGB_DXT1_SRGB = 96,
-	RGBA_DXT1_SRGB = 96,
-	RGB_DXT1_UNorm = 97,
-	RGBA_DXT1_UNorm = 97,
-	RGBA_DXT3_SRGB = 98,
-	RGBA_DXT3_UNorm = 99,
-	RGBA_DXT5_SRGB = 100,
-	RGBA_DXT5_UNorm = 101,
-	R_BC4_UNorm = 102,
-	R_BC4_SNorm = 103,
-	RG_BC5_UNorm = 104,
-	RG_BC5_SNorm = 105,
-	RGB_BC6H_UFloat = 106,
-	RGB_BC6H_SFloat = 107,
-	RGBA_BC7_SRGB = 108,
-	RGBA_BC7_UNorm = 109,
-	RGB_PVRTC_2Bpp_SRGB = 110,
-	RGB_PVRTC_2Bpp_UNorm = 111,
-	RGB_PVRTC_4Bpp_SRGB = 112,
-	RGB_PVRTC_4Bpp_UNorm = 113,
-	RGBA_PVRTC_2Bpp_SRGB = 114,
-	RGBA_PVRTC_2Bpp_UNorm = 115,
-	RGBA_PVRTC_4Bpp_SRGB = 116,
-	RGBA_PVRTC_4Bpp_UNorm = 117,
-	RGB_ETC_UNorm = 118,
-	RGB_ETC2_SRGB = 119,
-	RGB_ETC2_UNorm = 120,
-	RGB_A1_ETC2_SRGB = 121,
-	RGB_A1_ETC2_UNorm = 122,
-	RGBA_ETC2_SRGB = 123,
-	RGBA_ETC2_UNorm = 124,
-	R_EAC_UNorm = 125,
-	R_EAC_SNorm = 126,
-	RG_EAC_UNorm = 127,
-	RG_EAC_SNorm = 128,
-	RGBA_ASTC4X4_SRGB = 129,
-	RGBA_ASTC4X4_UNorm = 130,
-	RGBA_ASTC5X5_SRGB = 131,
-	RGBA_ASTC5X5_UNorm = 132,
-	RGBA_ASTC6X6_SRGB = 133,
-	RGBA_ASTC6X6_UNorm = 134,
-	RGBA_ASTC8X8_SRGB = 135,
-	RGBA_ASTC8X8_UNorm = 136,
-	RGBA_ASTC10X10_SRGB = 137,
-	RGBA_ASTC10X10_UNorm = 138,
-	RGBA_ASTC12X12_SRGB = 139,
-	RGBA_ASTC12X12_UNorm = 140,
-	RGBA_ASTC4X4_UFloat = 145,
-	RGBA_ASTC5X5_UFloat = 146,
-	RGBA_ASTC6X6_UFloat = 147,
-	RGBA_ASTC8X8_UFloat = 148,
-	RGBA_ASTC10X10_UFloat = 149,
-	RGBA_ASTC12X12_UFloat = 150,
-}
-
-private enum BigInteger.GetBytesMode
-{
-	AllocateArray = 0,
-	Count = 1,
-	Span = 2,
-}
-
-public enum TouchPhase
-{
-	Began = 0,
-	Moved = 1,
-	Stationary = 2,
-	Ended = 3,
-	Canceled = 4,
-}
-
-public enum IMECompositionMode
-{
-	Auto = 0,
-	On = 1,
-	Off = 2,
-}
-
-public enum TouchType
-{
-	Direct = 0,
-	Indirect = 1,
-	Stylus = 2,
-}
-
-public enum DeviceOrientation
-{
-	Unknown = 0,
-	Portrait = 1,
-	PortraitUpsideDown = 2,
-	LandscapeLeft = 3,
-	LandscapeRight = 4,
-	FaceUp = 5,
-	FaceDown = 6,
-}
-
-public enum RigidbodyConstraints2D
-{
-	None = 0,
-	FreezePositionX = 1,
-	FreezePositionY = 2,
-	FreezeRotation = 4,
-	FreezePosition = 3,
-	FreezeAll = 7,
-}
-
-public enum RigidbodyType2D
-{
-	Dynamic = 0,
-	Kinematic = 1,
-	Static = 2,
-}
-
-public enum ForceMode2D
-{
-	Force = 0,
-	Impulse = 1,
-}
-
-public enum ForceMode
-{
-	Force = 0,
-	Acceleration = 5,
-	Impulse = 1,
-	VelocityChange = 2,
-}
-
-public enum CollisionFlags
-{
-	None = 0,
-	Sides = 1,
-	Above = 2,
-	Below = 4,
-	CollidedSides = 1,
-	CollidedAbove = 2,
-	CollidedBelow = 4,
-}
-
-public enum QueryTriggerInteraction
-{
-	UseGlobal = 0,
-	Ignore = 1,
-	Collide = 2,
-}
-
-public enum FontStyle
-{
-	Normal = 0,
-	Bold = 1,
-	Italic = 2,
-	BoldAndItalic = 3,
-}
-
-internal enum TextGenerationError
-{
-	None = 0,
-	CustomSizeOnNonDynamicFont = 1,
-	CustomStyleOnNonDynamicFont = 2,
-	NoFont = 4,
-}
-
-public enum TextAnchor
-{
-	UpperLeft = 0,
-	UpperCenter = 1,
-	UpperRight = 2,
-	MiddleLeft = 3,
-	MiddleCenter = 4,
-	MiddleRight = 5,
-	LowerLeft = 6,
-	LowerCenter = 7,
-	LowerRight = 8,
-}
-
-public enum HorizontalWrapMode
-{
-	Wrap = 0,
-	Overflow = 1,
-}
-
-public enum VerticalWrapMode
-{
-	Truncate = 0,
-	Overflow = 1,
-}
-
-internal enum UnityWebRequest.UnityWebRequestMethod
-{
-	Get = 0,
-	Post = 1,
-	Put = 2,
-	Head = 3,
-	Custom = 4,
-}
-
-internal enum UnityWebRequest.UnityWebRequestError
-{
-	OK = 0,
-	Unknown = 1,
-	SDKError = 2,
-	UnsupportedProtocol = 3,
-	MalformattedUrl = 4,
-	CannotResolveProxy = 5,
-	CannotResolveHost = 6,
-	CannotConnectToHost = 7,
-	AccessDenied = 8,
-	GenericHttpError = 9,
-	WriteError = 10,
-	ReadError = 11,
-	OutOfMemory = 12,
-	Timeout = 13,
-	HTTPPostError = 14,
-	SSLCannotConnect = 15,
-	Aborted = 16,
-	TooManyRedirects = 17,
-	ReceivedNoData = 18,
-	SSLNotSupported = 19,
-	FailedToSendData = 20,
-	FailedToReceiveData = 21,
-	SSLCertificateError = 22,
-	SSLCipherNotAvailable = 23,
-	SSLCACertError = 24,
-	UnrecognizedContentEncoding = 25,
-	LoginFailed = 26,
-	SSLShutdownFailed = 27,
-	NoInternetConnection = 28,
-}
-
-public enum UnityWebRequest.Result
-{
-	InProgress = 0,
-	Success = 1,
-	ConnectionError = 2,
-	ProtocolError = 3,
-	DataProcessingError = 4,
-}
-
-public enum AcceptRejectRule
-{
-	None = 0,
-	Cascade = 1,
-}
-
-internal enum AggregateType
-{
-	None = 0,
-	Sum = 4,
-	Mean = 5,
-	Min = 6,
-	Max = 7,
-	First = 8,
-	Count = 9,
-	Var = 10,
-	StDev = 11,
-}
-
-public enum DataRowAction
-{
-	Nothing = 0,
-	Delete = 1,
-	Change = 2,
-	Rollback = 4,
-	Commit = 8,
-	Add = 16,
-	ChangeOriginal = 32,
-	ChangeCurrentAndOriginal = 64,
-}
-
-public enum DataRowState
-{
-	Detached = 1,
-	Unchanged = 2,
-	Added = 4,
-	Deleted = 8,
-	Modified = 16,
-}
-
-public enum DataRowVersion
-{
-	Original = 256,
-	Current = 512,
-	Proposed = 1024,
-	Default = 1536,
-}
-
-public enum SerializationFormat
-{
-	Xml = 0,
-	Binary = 1,
-}
-
-public enum DataSetDateTime
-{
-	Local = 1,
-	Unspecified = 2,
-	UnspecifiedLocal = 3,
-	Utc = 4,
-}
-
-public enum DataViewRowState
-{
-	None = 0,
-	Unchanged = 2,
-	Added = 4,
-	Deleted = 8,
-	ModifiedCurrent = 16,
-	ModifiedOriginal = 32,
-	OriginalRows = 42,
-	CurrentRows = 22,
-}
-
-internal enum Aggregate
-{
-	Sum = 30,
-	Avg = 31,
-	Min = 32,
-	Max = 33,
-	Count = 34,
-	StDev = 35,
-	Var = 37,
-}
-
-private enum BinaryNode.DataTypePrecedence
-{
-	SqlDateTime = 25,
-	DateTimeOffset = 24,
-	DateTime = 23,
-	TimeSpan = 20,
-	SqlDouble = 19,
-	Double = 18,
-	SqlSingle = 17,
-	Single = 16,
-	SqlDecimal = 15,
-	Decimal = 14,
-	SqlMoney = 13,
-	UInt64 = 12,
-	SqlInt64 = 11,
-	Int64 = 10,
-	UInt32 = 9,
-	SqlInt32 = 8,
-	Int32 = 7,
-	UInt16 = 6,
-	SqlInt16 = 5,
-	Int16 = 4,
-	Byte = 3,
-	SqlByte = 2,
-	SByte = 1,
-	Error = 0,
-}
-
-internal enum ValueType
-{
-	Null = 0,
-	Bool = 1,
-	Numeric = 2,
-	Str = 3,
-	Float = 4,
-	Decimal = 5,
-	Object = 6,
-	Date = 7,
-}
-
-internal enum Nodes
-{
-	Noop = 0,
-	Unop = 1,
-	UnopSpec = 2,
-	Binop = 3,
-	BinopSpec = 4,
-	Zop = 5,
-	Call = 6,
-	Const = 7,
-	Name = 8,
-	Paren = 9,
-	Conv = 10,
-}
-
-internal enum Tokens
-{
-	None = 0,
-	Name = 1,
-	Numeric = 2,
-	Decimal = 3,
-	Float = 4,
-	BinaryConst = 5,
-	StringConst = 6,
-	Date = 7,
-	ListSeparator = 8,
-	LeftParen = 9,
-	RightParen = 10,
-	ZeroOp = 11,
-	UnaryOp = 12,
-	BinaryOp = 13,
-	Child = 14,
-	Parent = 15,
-	Dot = 16,
-	Unknown = 17,
-	EOS = 18,
-}
-
-internal enum FunctionId
-{
-	Ascii = 0,
-	Char = 1,
-	Charindex = 2,
-	Difference = 3,
-	Len = 4,
-	Lower = 5,
-	LTrim = 6,
-	Patindex = 7,
-	Replicate = 8,
-	Reverse = 9,
-	Right = 10,
-	RTrim = 11,
-	Soundex = 12,
-	Space = 13,
-	Str = 14,
-	Stuff = 15,
-	Substring = 16,
-	Upper = 17,
-	IsNull = 18,
-	Iif = 19,
-	Convert = 20,
-	cInt = 21,
-	cBool = 22,
-	cDate = 23,
-	cDbl = 24,
-	cStr = 25,
-	Abs = 26,
-	Acos = 27,
-	In = 28,
-	Trim = 29,
-	Sum = 30,
-	Avg = 31,
-	Min = 32,
-	Max = 33,
-	Count = 34,
-	StDev = 35,
-	Var = 37,
-	DateTimeOffset = 38,
-}
-
-public enum MappingType
-{
-	Element = 1,
-	Attribute = 2,
-	SimpleContent = 3,
-	Hidden = 4,
-}
-
-public enum MissingSchemaAction
-{
-	Add = 1,
-	Ignore = 2,
-	Error = 3,
-	AddWithKey = 4,
-}
-
-internal enum RBTreeError
-{
-	InvalidPageSize = 1,
-	PagePositionInSlotInUse = 3,
-	NoFreeSlots = 4,
-	InvalidStateinInsert = 5,
-	InvalidNextSizeInDelete = 7,
-	InvalidStateinDelete = 8,
-	InvalidNodeSizeinDelete = 9,
-	InvalidStateinEndDelete = 10,
-	CannotRotateInvalidsuccessorNodeinDelete = 11,
-	IndexOutOFRangeinGetNodeByIndex = 13,
-	RBDeleteFixup = 14,
-	UnsupportedAccessMethod1 = 15,
-	UnsupportedAccessMethod2 = 16,
-	UnsupportedAccessMethodInNonNillRootSubtree = 17,
-	AttachedNodeWithZerorbTreeNodeId = 18,
-	CompareNodeInDataRowTree = 19,
-	CompareSateliteTreeNodeInDataRowTree = 20,
-	NestedSatelliteTreeEnumerator = 21,
-}
-
-internal enum TreeAccessMethod
-{
-	KEY_SEARCH_AND_INDEX = 1,
-	INDEX_ONLY = 2,
-}
-
-private enum RBTree.NodeColor<K>
-{
-}
-
-public enum Rule
-{
-	None = 0,
-	Cascade = 1,
-	SetNull = 2,
-	SetDefault = 3,
-}
-
-public enum SchemaSerializationMode
-{
-	IncludeSchema = 1,
-	ExcludeSchema = 2,
-}
-
-public enum XmlReadMode
-{
-	Auto = 0,
-	ReadSchema = 1,
-	IgnoreSchema = 2,
-	InferSchema = 3,
-	DiffGram = 4,
-	Fragment = 5,
-	InferTypedSchema = 6,
-}
-
-public enum XmlWriteMode
-{
-	WriteSchema = 0,
-	IgnoreSchema = 1,
-	DiffGram = 2,
-}
-
-internal enum SchemaFormat
-{
-	Public = 1,
-	Remoting = 2,
-	WebService = 3,
-	RemotingSkipSchema = 4,
-	WebServiceSkipSchema = 5,
-}
-
-internal enum SqlBytesCharsState
-{
-	Null = 0,
-	Buffer = 1,
-	Stream = 3,
-}
-
-public enum SqlCompareOptions
-{
-	None = 0,
-	IgnoreCase = 1,
-	IgnoreNonSpace = 2,
-	IgnoreKanaType = 8,
-	IgnoreWidth = 16,
-	BinarySort = 32768,
-	BinarySort2 = 16384,
-}
-
-internal enum EComparison
-{
-	LT = 0,
-	LE = 1,
-	EQ = 2,
-	GE = 3,
-	GT = 4,
-	NE = 5,
-}
-
-internal enum StorageType
-{
-	Empty = 0,
-	Object = 1,
-	DBNull = 2,
-	Boolean = 3,
-	Char = 4,
-	SByte = 5,
-	Byte = 6,
-	Int16 = 7,
-	UInt16 = 8,
-	Int32 = 9,
-	UInt32 = 10,
-	Int64 = 11,
-	UInt64 = 12,
-	Single = 13,
-	Double = 14,
-	Decimal = 15,
-	DateTime = 16,
-	TimeSpan = 17,
-	String = 18,
-	Guid = 19,
-	ByteArray = 20,
-	CharArray = 21,
-	Type = 22,
-	DateTimeOffset = 23,
-	BigInteger = 24,
-	Uri = 25,
-	SqlBinary = 26,
-	SqlBoolean = 27,
-	SqlByte = 28,
-	SqlBytes = 29,
-	SqlChars = 30,
-	SqlDateTime = 31,
-	SqlDecimal = 32,
-	SqlDouble = 33,
-	SqlGuid = 34,
-	SqlInt16 = 35,
-	SqlInt32 = 36,
-	SqlInt64 = 37,
-	SqlMoney = 38,
-	SqlSingle = 39,
-	SqlString = 40,
-}
-
-private enum ObjectStorage.Families
-{
-	DATETIME = 0,
-	NUMBER = 1,
-	STRING = 2,
-	BOOLEAN = 3,
-	ARRAY = 4,
-}
-
-public enum XObjectChange
-{
-	Add = 0,
-	Remove = 1,
-	Name = 2,
-	Value = 3,
-}
-
-public enum LoadOptions
-{
-	None = 0,
-	PreserveWhitespace = 1,
-	SetBaseUri = 2,
-	SetLineInfo = 4,
-}
-
-public enum SaveOptions
-{
-	None = 0,
-	DisableFormatting = 1,
-	OmitDuplicateNamespaces = 2,
-}
-
-public enum AndroidAssetPackStatus
-{
-	Unknown = 0,
-	Pending = 1,
-	Downloading = 2,
-	Transferring = 3,
-	Completed = 4,
-	Failed = 5,
-	Canceled = 6,
-	WaitingForWifi = 7,
-	NotInstalled = 8,
-}
-
-public enum AndroidAssetPackError
-{
-	NoError = 0,
-}
-
-public enum PlayMode
-{
-	StopSameLayer = 0,
-	StopAll = 4,
-}
-
-public enum QueueMode
-{
-	CompleteOthers = 0,
-	PlayNow = 2,
-}
-
-public enum AnimationBlendMode
-{
-	Blend = 0,
-	Additive = 1,
-}
-
-internal enum AnimationEventSource
-{
-	NoSource = 0,
-	Legacy = 1,
-	Animator = 2,
-}
-
-public enum AvatarTarget
-{
-	Root = 0,
-	Body = 1,
-	LeftFoot = 2,
-	RightFoot = 3,
-	LeftHand = 4,
-	RightHand = 5,
-}
-
-public enum AvatarIKGoal
-{
-	LeftFoot = 0,
-	RightFoot = 1,
-	LeftHand = 2,
-	RightHand = 3,
-}
-
-internal enum StateInfoIndex
-{
-	CurrentState = 0,
-	NextState = 1,
-	ExitState = 2,
-	InterruptedState = 3,
-}
-
-public enum AnimatorCullingMode
-{
-	AlwaysAnimate = 0,
-	CullUpdateTransforms = 1,
-	CullCompletely = 2,
-}
-
-public enum AnimatorUpdateMode
-{
-	Normal = 0,
-	AnimatePhysics = 1,
-	UnscaledTime = 2,
-}
-
-public enum HumanBodyBones
-{
-	Hips = 0,
-	LeftUpperLeg = 1,
-	RightUpperLeg = 2,
-	LeftLowerLeg = 3,
-	RightLowerLeg = 4,
-	LeftFoot = 5,
-	RightFoot = 6,
-	Spine = 7,
-	Chest = 8,
-	UpperChest = 54,
-	Neck = 9,
-	Head = 10,
-	LeftShoulder = 11,
-	RightShoulder = 12,
-	LeftUpperArm = 13,
-	RightUpperArm = 14,
-	LeftLowerArm = 15,
-	RightLowerArm = 16,
-	LeftHand = 17,
-	RightHand = 18,
-	LeftToes = 19,
-	RightToes = 20,
-	LeftEye = 21,
-	RightEye = 22,
-	Jaw = 23,
-	LeftThumbProximal = 24,
-	LeftThumbIntermediate = 25,
-	LeftThumbDistal = 26,
-	LeftIndexProximal = 27,
-	LeftIndexIntermediate = 28,
-	LeftIndexDistal = 29,
-	LeftMiddleProximal = 30,
-	LeftMiddleIntermediate = 31,
-	LeftMiddleDistal = 32,
-	LeftRingProximal = 33,
-	LeftRingIntermediate = 34,
-	LeftRingDistal = 35,
-	LeftLittleProximal = 36,
-	LeftLittleIntermediate = 37,
-	LeftLittleDistal = 38,
-	RightThumbProximal = 39,
-	RightThumbIntermediate = 40,
-	RightThumbDistal = 41,
-	RightIndexProximal = 42,
-	RightIndexIntermediate = 43,
-	RightIndexDistal = 44,
-	RightMiddleProximal = 45,
-	RightMiddleIntermediate = 46,
-	RightMiddleDistal = 47,
-	RightRingProximal = 48,
-	RightRingIntermediate = 49,
-	RightRingDistal = 50,
-	RightLittleProximal = 51,
-	RightLittleIntermediate = 52,
-	RightLittleDistal = 53,
-	LastBone = 55,
-}
-
-public enum Axis
-{
-	None = 0,
-	X = 1,
-	Y = 2,
-	Z = 4,
-}
-
-public enum EventType
-{
-	MouseDown = 0,
-	MouseUp = 1,
-	MouseMove = 2,
-	MouseDrag = 3,
-	KeyDown = 4,
-	KeyUp = 5,
-	ScrollWheel = 6,
-	Repaint = 7,
-	Layout = 8,
-	DragUpdated = 9,
-	DragPerform = 10,
-	DragExited = 15,
-	Ignore = 11,
-	Used = 12,
-	ValidateCommand = 13,
-	ExecuteCommand = 14,
-	ContextClick = 16,
-	MouseEnterWindow = 20,
-	MouseLeaveWindow = 21,
-	TouchDown = 30,
-	TouchUp = 31,
-	TouchMove = 32,
-	TouchEnter = 33,
-	TouchLeave = 34,
-	TouchStationary = 35,
-	mouseDown = 0,
-	mouseUp = 1,
-	mouseMove = 2,
-	mouseDrag = 3,
-	keyDown = 4,
-	keyUp = 5,
-	scrollWheel = 6,
-	repaint = 7,
-	layout = 8,
-	dragUpdated = 9,
-	dragPerform = 10,
-	ignore = 11,
-	used = 12,
-}
-
-public enum EventModifiers
-{
-	None = 0,
-	Shift = 1,
-	Control = 2,
-	Alt = 4,
-	Command = 8,
-	Numeric = 16,
-	CapsLock = 32,
-	FunctionKey = 64,
-}
-
-public enum PointerType
-{
-	Mouse = 0,
-	Touch = 1,
-	Pen = 2,
-}
-
-public enum GUI.ToolbarButtonSize
-{
-	Fixed = 0,
-	FitToContents = 1,
-}
-
-public enum ScaleMode
-{
-	StretchToFill = 0,
-	ScaleAndCrop = 1,
-	ScaleToFit = 2,
-}
-
-public enum FocusType
-{
-	Native = 0,
-	Keyboard = 1,
-	Passive = 2,
-}
-
-internal enum GUILayoutOption.Type
-{
-	fixedWidth = 0,
-	fixedHeight = 1,
-	minWidth = 2,
-	maxWidth = 3,
-	minHeight = 4,
-	maxHeight = 5,
-	stretchWidth = 6,
-	stretchHeight = 7,
-	alignStart = 8,
-	alignMiddle = 9,
-	alignEnd = 10,
-	alignJustify = 11,
-	equalSize = 12,
-	spacing = 13,
-}
-
-public enum ImagePosition
-{
-	ImageLeft = 0,
-	ImageAbove = 1,
-	ImageOnly = 2,
-	TextOnly = 3,
-}
-
-public enum TextEditor.DblClickSnapping
-{
-	WORDS = 0,
-	PARAGRAPHS = 1,
-}
-
-private enum TextEditor.CharacterType
-{
-	LetterLike = 0,
-	Symbol = 1,
-	Symbol2 = 2,
-	WhiteSpace = 3,
-}
-
-private enum TextEditor.Direction
-{
-	Forward = 0,
-	Backward = 1,
-}
-
-private enum TextEditor.TextEditOp
-{
-	MoveLeft = 0,
-	MoveRight = 1,
-	MoveUp = 2,
-	MoveDown = 3,
-	MoveLineStart = 4,
-	MoveLineEnd = 5,
-	MoveTextStart = 6,
-	MoveTextEnd = 7,
-	MovePageUp = 8,
-	MovePageDown = 9,
-	MoveGraphicalLineStart = 10,
-	MoveGraphicalLineEnd = 11,
-	MoveWordLeft = 12,
-	MoveWordRight = 13,
-	MoveParagraphForward = 14,
-	MoveParagraphBackward = 15,
-	MoveToStartOfNextWord = 16,
-	MoveToEndOfPreviousWord = 17,
-	SelectLeft = 18,
-	SelectRight = 19,
-	SelectUp = 20,
-	SelectDown = 21,
-	SelectTextStart = 22,
-	SelectTextEnd = 23,
-	SelectPageUp = 24,
-	SelectPageDown = 25,
-	ExpandSelectGraphicalLineStart = 26,
-	ExpandSelectGraphicalLineEnd = 27,
-	SelectGraphicalLineStart = 28,
-	SelectGraphicalLineEnd = 29,
-	SelectWordLeft = 30,
-	SelectWordRight = 31,
-	SelectToEndOfPreviousWord = 32,
-	SelectToStartOfNextWord = 33,
-	SelectParagraphBackward = 34,
-	SelectParagraphForward = 35,
-	Delete = 36,
-	Backspace = 37,
-	DeleteWordBack = 38,
-	DeleteWordForward = 39,
-	DeleteLineBack = 40,
-	Cut = 41,
-	Copy = 42,
-	Paste = 43,
-	SelectAll = 44,
-	SelectNone = 45,
-	ScrollStart = 46,
-	ScrollEnd = 47,
-	ScrollPageUp = 48,
-	ScrollPageDown = 49,
-}
-
-public enum ParticleSystemRenderMode
-{
-	Billboard = 0,
-	Stretch = 1,
-	HorizontalBillboard = 2,
-	VerticalBillboard = 3,
-	Mesh = 4,
-	None = 5,
-}
-
-public enum ParticleSystemCurveMode
-{
-	Constant = 0,
-	Curve = 1,
-	TwoCurves = 2,
-	TwoConstants = 3,
-}
-
-public enum ParticleSystemGradientMode
-{
-	Color = 0,
-	Gradient = 1,
-	TwoColors = 2,
-	TwoGradients = 3,
-	RandomColor = 4,
-}
-
-public enum ParticleSystemSimulationSpace
-{
-	Local = 0,
-	World = 1,
-	Custom = 2,
-}
-
-public enum ParticleSystemStopBehavior
-{
-	StopEmittingAndClear = 0,
-	StopEmitting = 1,
-}
-
-public enum ParticleSystemScalingMode
-{
-	Hierarchy = 0,
-	Local = 1,
-	Shape = 2,
-}
-
-public enum ParticleSystemStopAction
-{
-	None = 0,
-	Disable = 1,
-	Destroy = 2,
-	Callback = 3,
-}
-
-public enum ParticleSystemCullingMode
-{
-	Automatic = 0,
-	PauseAndCatchup = 1,
-	Pause = 2,
-	AlwaysSimulate = 3,
-}
-
-public enum ParticleSystemCustomData
-{
-	Custom1 = 0,
-	Custom2 = 1,
-}
-
-public enum ParticleSystemForceFieldShape
-{
-	Sphere = 0,
-	Hemisphere = 1,
-	Cylinder = 2,
-	Box = 3,
-}
-
-public enum ScreenCapture.StereoScreenCaptureMode
-{
-	LeftEye = 1,
-	RightEye = 2,
-	BothEyes = 3,
-}
-
-public enum RenderMode
-{
-	ScreenSpaceOverlay = 0,
-	ScreenSpaceCamera = 1,
-	WorldSpace = 2,
-}
-
-public enum UISystemProfilerApi.SampleType
-{
-	Layout = 0,
-	Render = 1,
-}
-
-internal enum RemoteConfigSettingsHelper.Tag
-{
-	kUnknown = 0,
-	kIntVal = 1,
-	kInt64Val = 2,
-	kUInt64Val = 3,
-	kDoubleVal = 4,
-	kBoolVal = 5,
-	kStringVal = 6,
-	kArrayVal = 7,
-	kMixedArrayVal = 8,
-	kMapVal = 9,
-	kMaxTags = 10,
-}
-
-public enum AnalyticsSessionState
-{
-	kSessionStopped = 0,
-	kSessionStarted = 1,
-	kSessionPaused = 2,
-	kSessionResumed = 3,
-}
-
-public enum VideoRenderMode
-{
-	CameraFarPlane = 0,
-	CameraNearPlane = 1,
-	RenderTexture = 2,
-	MaterialOverride = 3,
-	APIOnly = 4,
-}
-
-public enum Video3DLayout
-{
-	No3D = 0,
-	SideBySide3D = 1,
-	OverUnder3D = 2,
-}
-
-public enum VideoAspectRatio
-{
-	NoScaling = 0,
-	FitVertically = 1,
-	FitHorizontally = 2,
-	FitInside = 3,
-	FitOutside = 4,
-	Stretch = 5,
-}
-
-public enum VideoTimeSource
-{
-	AudioDSPTimeSource = 0,
-	GameTimeSource = 1,
-}
-
-public enum VideoTimeReference
-{
-	Freerun = 0,
-	InternalTime = 1,
-	ExternalTime = 2,
-}
-
-public enum VideoSource
-{
-	VideoClip = 0,
-	Url = 1,
-}
-
-public enum VideoAudioOutputMode
-{
-	None = 0,
-	AudioSource = 1,
-	Direct = 2,
-	APIOnly = 3,
-}
-
-public enum WindZoneMode
-{
-	Directional = 0,
-	Spherical = 1,
-}
-
-public enum ConstructorHandling
-{
-	Default = 0,
-	AllowNonPublicDefaultConstructor = 1,
-}
-
-public enum DateFormatHandling
-{
-	IsoDateFormat = 0,
-	MicrosoftDateFormat = 1,
-}
-
-public enum DateParseHandling
-{
-	None = 0,
-	DateTime = 1,
-	DateTimeOffset = 2,
-}
-
-public enum DateTimeZoneHandling
-{
-	Local = 0,
-	Utc = 1,
-	Unspecified = 2,
-	RoundtripKind = 3,
-}
-
-public enum DefaultValueHandling
-{
-	Include = 0,
-	Ignore = 1,
-	Populate = 2,
-	IgnoreAndPopulate = 3,
-}
-
-public enum FloatFormatHandling
-{
-	String = 0,
-	Symbol = 1,
-	DefaultValue = 2,
-}
-
-public enum FloatParseHandling
-{
-	Double = 0,
-	Decimal = 1,
-}
-
-public enum Formatting
-{
-	None = 0,
-	Indented = 1,
-}
-
-internal enum JsonContainerType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Constructor = 3,
-}
-
-protected internal enum JsonReader.State
-{
-	Start = 0,
-	Complete = 1,
-	Property = 2,
-	ObjectStart = 3,
-	Object = 4,
-	ArrayStart = 5,
-	Array = 6,
-	Closed = 7,
-	PostValue = 8,
-	ConstructorStart = 9,
-	Constructor = 10,
-	Error = 11,
-	Finished = 12,
-}
-
-internal enum ReadType
-{
-	Read = 0,
-	ReadAsInt32 = 1,
-	ReadAsInt64 = 2,
-	ReadAsBytes = 3,
-	ReadAsString = 4,
-	ReadAsDecimal = 5,
-	ReadAsDateTime = 6,
-	ReadAsDateTimeOffset = 7,
-	ReadAsDouble = 8,
-	ReadAsBoolean = 9,
-}
-
-public enum JsonToken
-{
-	None = 0,
-	StartObject = 1,
-	StartArray = 2,
-	StartConstructor = 3,
-	PropertyName = 4,
-	Comment = 5,
-	Raw = 6,
-	Integer = 7,
-	Float = 8,
-	String = 9,
-	Boolean = 10,
-	Null = 11,
-	Undefined = 12,
-	EndObject = 13,
-	EndArray = 14,
-	EndConstructor = 15,
-	Date = 16,
-	Bytes = 17,
-}
-
-internal enum JsonWriter.State
-{
-	Start = 0,
-	Property = 1,
-	ObjectStart = 2,
-	Object = 3,
-	ArrayStart = 4,
-	Array = 5,
-	ConstructorStart = 6,
-	Constructor = 7,
-	Closed = 8,
-	Error = 9,
-}
-
-public enum MemberSerialization
-{
-	OptOut = 0,
-	OptIn = 1,
-	Fields = 2,
-}
-
-public enum MetadataPropertyHandling
-{
-	Default = 0,
-	ReadAhead = 1,
-	Ignore = 2,
-}
-
-public enum MissingMemberHandling
-{
-	Ignore = 0,
-	Error = 1,
-}
-
-public enum NullValueHandling
-{
-	Include = 0,
-	Ignore = 1,
-}
-
-public enum ObjectCreationHandling
-{
-	Auto = 0,
-	Reuse = 1,
-	Replace = 2,
-}
-
-public enum PreserveReferencesHandling
-{
-	None = 0,
-	Objects = 1,
-	Arrays = 2,
-	All = 3,
-}
-
-public enum ReferenceLoopHandling
-{
-	Error = 0,
-	Ignore = 1,
-	Serialize = 2,
-}
-
-public enum Required
-{
-	Default = 0,
-	AllowNull = 1,
-	Always = 2,
-	DisallowNull = 3,
-}
-
-public enum StringEscapeHandling
-{
-	Default = 0,
-	EscapeNonAscii = 1,
-	EscapeHtml = 2,
-}
-
-public enum TypeNameAssemblyFormatHandling
-{
-	Simple = 0,
-	Full = 1,
-}
-
-public enum TypeNameHandling
-{
-	None = 0,
-	Objects = 1,
-	Arrays = 2,
-	All = 3,
-	Auto = 4,
-}
-
-public enum WriteState
-{
-	Error = 0,
-	Closed = 1,
-	Object = 2,
-	Array = 3,
-	Constructor = 4,
-	Property = 5,
-	Start = 6,
-}
-
-internal enum PrimitiveTypeCode
-{
-	Empty = 0,
-	Object = 1,
-	Char = 2,
-	CharNullable = 3,
-	Boolean = 4,
-	BooleanNullable = 5,
-	SByte = 6,
-	SByteNullable = 7,
-	Int16 = 8,
-	Int16Nullable = 9,
-	UInt16 = 10,
-	UInt16Nullable = 11,
-	Int32 = 12,
-	Int32Nullable = 13,
-	Byte = 14,
-	ByteNullable = 15,
-	UInt32 = 16,
-	UInt32Nullable = 17,
-	Int64 = 18,
-	Int64Nullable = 19,
-	UInt64 = 20,
-	UInt64Nullable = 21,
-	Single = 22,
-	SingleNullable = 23,
-	Double = 24,
-	DoubleNullable = 25,
-	DateTime = 26,
-	DateTimeNullable = 27,
-	DateTimeOffset = 28,
-	DateTimeOffsetNullable = 29,
-	Decimal = 30,
-	DecimalNullable = 31,
-	Guid = 32,
-	GuidNullable = 33,
-	TimeSpan = 34,
-	TimeSpanNullable = 35,
-	BigInteger = 36,
-	BigIntegerNullable = 37,
-	Uri = 38,
-	String = 39,
-	Bytes = 40,
-	DBNull = 41,
-}
-
-internal enum ParseResult
-{
-	None = 0,
-	Success = 1,
-	Overflow = 2,
-	Invalid = 3,
-}
-
-internal enum ConvertUtils.ConvertResult
-{
-	Success = 0,
-	CannotConvertNull = 1,
-	NotInstantiableType = 2,
-	NoValidConversion = 3,
-}
-
-internal enum ParserTimeZone
-{
-	Unspecified = 0,
-	Utc = 1,
-	LocalWestOfUtc = 2,
-	LocalEastOfUtc = 3,
-}
-
-private enum StringUtils.SeparatedCaseState
-{
-	Start = 0,
-	Lower = 1,
-	Upper = 2,
-	NewWord = 3,
-}
-
-internal enum JsonContractType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Primitive = 3,
-	String = 4,
-	Dictionary = 5,
-	Dynamic = 6,
-	Serializable = 7,
-	Linq = 8,
-}
-
-internal enum JsonSerializerInternalReader.PropertyPresence
-{
-	None = 0,
-	Null = 1,
-	Value = 2,
-}
-
-public enum CommentHandling
-{
-	Ignore = 0,
-	Load = 1,
-}
-
-public enum DuplicatePropertyNameHandling
-{
-	Replace = 0,
-	Ignore = 1,
-	Error = 2,
-}
-
-public enum JTokenType
-{
-	None = 0,
-	Object = 1,
-	Array = 2,
-	Constructor = 3,
-	Property = 4,
-	Comment = 5,
-	Integer = 6,
-	Float = 7,
-	String = 8,
-	Boolean = 9,
-	Null = 10,
-	Undefined = 11,
-	Date = 12,
-	Raw = 13,
-	Bytes = 14,
-	Guid = 15,
-	Uri = 16,
-	TimeSpan = 17,
-}
-
-public enum LineInfoHandling
-{
-	Ignore = 0,
-	Load = 1,
-}
-
-internal enum BsonType
-{
-	Number = 1,
-	String = 2,
-	Object = 3,
-	Array = 4,
-	Binary = 5,
-	Undefined = 6,
-	Oid = 7,
-	Boolean = 8,
-	Date = 9,
-	Null = 10,
-	Regex = 11,
-	Reference = 12,
-	Code = 13,
-	Symbol = 14,
-	CodeWScope = 15,
-	Integer = 16,
-	TimeStamp = 17,
-	Long = 18,
-	MaxKey = 127,
-}
-
-private enum Json.Parser.TOKEN
-{
-	NONE = 0,
-	CURLY_OPEN = 1,
-	CURLY_CLOSE = 2,
-	SQUARED_OPEN = 3,
-	SQUARED_CLOSE = 4,
-	COLON = 5,
-	COMMA = 6,
-	STRING = 7,
-	NUMBER = 8,
-	TRUE = 9,
-	FALSE = 10,
-	NULL = 11,
-}
-
-public enum ServicesInitializationState
-{
-	Uninitialized = 0,
-	Initializing = 1,
-	Initialized = 2,
-}
-
-internal enum PlatformLogLevel
-{
-	Verbose = 0,
-	Debug = 1,
-	Info = 2,
-	Warning = 3,
-	Error = 4,
-	Assert = 5,
-}
-
-internal enum ArrayPoolEventSource.BufferAllocatedReason
-{
-	Pooled = 0,
-	OverMaximumSize = 1,
-	PoolExhausted = 2,
-}
-
-internal enum AsyncOperationStatus
-{
-	None = 0,
-	InProgress = 1,
-	Succeeded = 2,
-	Failed = 3,
-	Cancelled = 4,
-}
-
-private enum DependencyTreeInitializeOrderSorter.ExplorationMark
-{
-	None = 0,
-	Viewed = 1,
-	Sorted = 2,
-}
-
-public enum CanvasUpdate
-{
-	Prelayout = 0,
-	Layout = 1,
-	PostLayout = 2,
-	PreRender = 3,
-	LatePreRender = 4,
-	MaxUpdateValue = 5,
-}
-
-public enum GraphicRaycaster.BlockingObjects
-{
-	None = 0,
-	TwoD = 1,
-	ThreeD = 2,
-	All = 3,
-}
-
-public enum Image.Type
-{
-	Simple = 0,
-	Sliced = 1,
-	Tiled = 2,
-	Filled = 3,
-}
-
-public enum Image.FillMethod
-{
-	Horizontal = 0,
-	Vertical = 1,
-	Radial90 = 2,
-	Radial180 = 3,
-	Radial360 = 4,
-}
-
-public enum InputField.ContentType
-{
-	Standard = 0,
-	Autocorrected = 1,
-	IntegerNumber = 2,
-	DecimalNumber = 3,
-	Alphanumeric = 4,
-	Name = 5,
-	EmailAddress = 6,
-	Password = 7,
-	Pin = 8,
-	Custom = 9,
-}
-
-public enum InputField.InputType
-{
-	Standard = 0,
-	AutoCorrect = 1,
-	Password = 2,
-}
-
-public enum InputField.CharacterValidation
-{
-	None = 0,
-	Integer = 1,
-	Decimal = 2,
-	Alphanumeric = 3,
-	Name = 4,
-	EmailAddress = 5,
-}
-
-public enum InputField.LineType
-{
-	SingleLine = 0,
-	MultiLineSubmit = 1,
-	MultiLineNewline = 2,
-}
-
-protected enum InputField.EditState
-{
-	Continue = 0,
-	Finish = 1,
-}
-
-public enum AspectRatioFitter.AspectMode
-{
-	None = 0,
-	WidthControlsHeight = 1,
-	HeightControlsWidth = 2,
-	FitInParent = 3,
-	EnvelopeParent = 4,
-}
-
-public enum CanvasScaler.ScaleMode
-{
-	ConstantPixelSize = 0,
-	ScaleWithScreenSize = 1,
-	ConstantPhysicalSize = 2,
-}
-
-public enum CanvasScaler.ScreenMatchMode
-{
-	MatchWidthOrHeight = 0,
-	Expand = 1,
-	Shrink = 2,
-}
-
-public enum CanvasScaler.Unit
-{
-	Centimeters = 0,
-	Millimeters = 1,
-	Inches = 2,
-	Points = 3,
-	Picas = 4,
-}
-
-public enum ContentSizeFitter.FitMode
-{
-	Unconstrained = 0,
-	MinSize = 1,
-	PreferredSize = 2,
-}
-
-public enum GridLayoutGroup.Corner
-{
-	UpperLeft = 0,
-	UpperRight = 1,
-	LowerLeft = 2,
-	LowerRight = 3,
-}
-
-public enum GridLayoutGroup.Axis
-{
-	Horizontal = 0,
-	Vertical = 1,
-}
-
-public enum GridLayoutGroup.Constraint
-{
-	Flexible = 0,
-	FixedColumnCount = 1,
-	FixedRowCount = 2,
-}
-
-public enum Navigation.Mode
-{
-	None = 0,
-	Horizontal = 1,
-	Vertical = 2,
-	Automatic = 3,
-	Explicit = 4,
-}
-
-public enum ScrollRect.MovementType
-{
-	Unrestricted = 0,
-	Elastic = 1,
-	Clamped = 2,
-}
-
-public enum ScrollRect.ScrollbarVisibility
-{
-	Permanent = 0,
-	AutoHide = 1,
-	AutoHideAndExpandViewport = 2,
-}
-
-public enum Scrollbar.Direction
-{
-	LeftToRight = 0,
-	RightToLeft = 1,
-	BottomToTop = 2,
-	TopToBottom = 3,
-}
-
-private enum Scrollbar.Axis
-{
-	Horizontal = 0,
-	Vertical = 1,
-}
-
-public enum Selectable.Transition
-{
-	None = 0,
-	ColorTint = 1,
-	SpriteSwap = 2,
-	Animation = 3,
-}
-
-protected enum Selectable.SelectionState
-{
-	Normal = 0,
-	Highlighted = 1,
-	Pressed = 2,
-	Selected = 3,
-	Disabled = 4,
-}
-
-public enum Slider.Direction
-{
-	LeftToRight = 0,
-	RightToLeft = 1,
-	BottomToTop = 2,
-	TopToBottom = 3,
-}
-
-private enum Slider.Axis
-{
-	Horizontal = 0,
-	Vertical = 1,
-}
-
-public enum Toggle.ToggleTransition
-{
-	None = 0,
-	Fade = 1,
-}
-
-public enum ColorTween.ColorTweenMode
-{
-	All = 0,
-	RGB = 1,
-	Alpha = 2,
-}
-
-public enum PointerEventData.InputButton
-{
-	Left = 0,
-	Right = 1,
-	Middle = 2,
-}
-
-public enum PointerEventData.FramePressState
-{
-	Pressed = 0,
-	Released = 1,
-	PressedAndReleased = 2,
-	NotChanged = 3,
-}
-
-public enum EventTriggerType
-{
-	PointerEnter = 0,
-	PointerExit = 1,
-	PointerDown = 2,
-	PointerUp = 3,
-	PointerClick = 4,
-	Drag = 5,
-	Drop = 6,
-	Scroll = 7,
-	UpdateSelected = 8,
-	Select = 9,
-	Deselect = 10,
-	Move = 11,
-	InitializePotentialDrag = 12,
-	BeginDrag = 13,
-	EndDrag = 14,
-	Submit = 15,
-	Cancel = 16,
-}
-
-public enum StandaloneInputModule.InputMode
-{
-	Mouse = 0,
-	Buttons = 1,
-}
-
-public enum MoveDirection
-{
-	Left = 0,
-	Up = 1,
-	Right = 2,
-	Down = 3,
-	None = 4,
-}
-
-public enum DependencyStatus
-{
-	Available = 0,
-	UnavailableDisabled = 1,
-	UnavailableInvalid = 2,
-	UnavilableMissing = 3,
-	UnavailablePermission = 4,
-	UnavailableUpdaterequired = 5,
-	UnavailableUpdating = 6,
-	UnavailableOther = 7,
-}
-
-internal enum VariantExtension.KeyOptions
-{
-	UseObjectKeys = 0,
-	UseStringKeys = 1,
-}
-
-internal enum FutureStatus
-{
-	Complete = 0,
-	Pending = 1,
-	Invalid = 2,
-}
-
-public enum InitResult
-{
-	Success = 0,
-	FailedMissingDependency = 1,
-}
-
-public enum LogLevel
-{
-	Verbose = 0,
-	Debug = 1,
-	Info = 2,
-	Warning = 3,
-	Error = 4,
-	Assert = 5,
-}
-
-internal enum GooglePlayServicesAvailability
-{
-	AvailabilityAvailable = 0,
-	AvailabilityUnavailableDisabled = 1,
-	AvailabilityUnavailableInvalid = 2,
-	AvailabilityUnavailableMissing = 3,
-	AvailabilityUnavailablePermissions = 4,
-	AvailabilityUnavailableUpdateRequired = 5,
-	AvailabilityUnavailableUpdating = 6,
-	AvailabilityUnavailableOther = 7,
-}
-
-public enum Variant.Type
-{
-	Null = 0,
-	Int64 = 1,
-	Double = 2,
-	Bool = 3,
-	StaticString = 4,
-	MutableString = 5,
-	Vector = 6,
-	Map = 7,
-	StaticBlob = 8,
-	MutableBlob = 9,
-}
-
-public enum CollisionType
-{
-	OnCollisionEnter = 0,
-	OnCollisionStay = 1,
-	OnCollisionExit = 2,
-	OnControllerColliderHit = 3,
-	OnParticleCollision = 4,
-}
-
-public enum TriggerType
-{
-	OnTriggerEnter = 0,
-	OnTriggerStay = 1,
-	OnTriggerExit = 2,
-}
-
-public enum Collision2DType
-{
-	OnCollisionEnter2D = 0,
-	OnCollisionStay2D = 1,
-	OnCollisionExit2D = 2,
-	OnParticleCollision = 3,
-}
-
-public enum Trigger2DType
-{
-	OnTriggerEnter2D = 0,
-	OnTriggerStay2D = 1,
-	OnTriggerExit2D = 2,
-}
-
-public enum InterpolationType
-{
-	Linear = 0,
-	EaseInOut = 1,
-}
-
-public enum MouseEventType
-{
-	OnMouseEnter = 0,
-	OnMouseOver = 1,
-	OnMouseExit = 2,
-	OnMouseDown = 3,
-	OnMouseUp = 4,
-	OnMouseDrag = 5,
-}
-
-public enum ActionCategory
-{
-	Animation = 0,
-	Audio = 1,
-	Debug = 2,
-	Events = 3,
-	GameObject = 4,
-	GUI = 5,
-	Input = 6,
-	Math = 7,
-	Movement = 8,
-	Physics = 9,
-	Renderer = 10,
-	ScriptControl = 11,
-	StateMachine = 12,
-	Effects = 13,
-	Transform = 14,
-	GameLogic = 15,
-	String = 16,
-	Convert = 17,
-	GUIElement = 18,
-	Vector3 = 19,
-	Material = 20,
-	Lights = 21,
-	Camera = 22,
-	RenderSettings = 23,
-	Color = 24,
-	Level = 25,
-	GUILayout = 26,
-	Logic = 27,
-	World = 28,
-	Screen = 29,
-	Movie = 30,
-	Time = 31,
-	Character = 32,
-	Device = 33,
-	Controller = 34,
-	CharacterController = 35,
-	iTween = 36,
-	AnimateVariables = 37,
-	InputDevice = 38,
-	Rect = 39,
-	UnityObject = 40,
-	Application = 41,
-	NavMesh = 42,
-	NavMeshAgent = 43,
-	Network = 44,
-	Vector2 = 45,
-	Array = 46,
-	Mecanim = 47,
-	Animator = 48,
-	Quaternion = 49,
-	Enum = 50,
-	Physics2D = 51,
-	Trigonometry = 52,
-	Scene = 53,
-	UI = 54,
-	Tween = 55,
-}
-
-public enum UIHint
-{
-	None = 0,
-	TextArea = 1,
-	Behaviour = 2,
-	Script = 3,
-	Method = 4,
-	Coroutine = 5,
-	Animation = 6,
-	Tag = 7,
-	Layer = 8,
-	Description = 9,
-	Variable = 10,
-	ScriptComponent = 11,
-	Comment = 12,
-	NamedColor = 13,
-	NamedTexture = 14,
-	FsmName = 15,
-	FsmEvent = 16,
-	FsmFloat = 17,
-	FsmInt = 18,
-	FsmBool = 19,
-	FsmString = 20,
-	FsmVector3 = 21,
-	FsmGameObject = 22,
-	FsmColor = 23,
-	FsmRect = 24,
-	FsmMaterial = 25,
-	FsmTexture = 26,
-	FsmQuaternion = 27,
-	FsmObject = 28,
-	FsmVector2 = 29,
-	FsmEnum = 30,
-	FsmArray = 31,
-	AnimatorFloat = 32,
-	AnimatorBool = 33,
-	AnimatorInt = 34,
-	AnimatorTrigger = 35,
-	SortingLayer = 36,
-	TagMenu = 37,
-}
-
-public enum MouseButton
-{
-	Left = 0,
-	Right = 1,
-	Middle = 2,
-}
-
-public enum LogLevel
-{
-	Info = 0,
-	Warning = 1,
-	Error = 2,
-}
-
-public enum ColorBlendMode
-{
-	Normal = 0,
-	Multiply = 1,
-	Screen = 2,
-}
-
-public enum FsmEventTarget.EventTarget
-{
-	Self = 0,
-	GameObject = 1,
-	GameObjectFSM = 2,
-	FSMComponent = 3,
-	BroadcastAll = 4,
-	HostFSM = 5,
-	SubFSMs = 6,
-}
-
-public enum LayoutOption.LayoutOptionType
-{
-	Width = 0,
-	Height = 1,
-	MinWidth = 2,
-	MaxWidth = 3,
-	MinHeight = 4,
-	MaxHeight = 5,
-	ExpandWidth = 6,
-	ExpandHeight = 7,
-}
-
-public enum None
-{
-	None = 0,
-}
-
-public enum OwnerDefaultOption
-{
-	UseOwner = 0,
-	SpecifyGameObject = 1,
-}
-
-public enum ParamDataType
-{
-	Integer = 0,
-	Boolean = 1,
-	Float = 2,
-	String = 3,
-	Color = 4,
-	ObjectReference = 5,
-	LayerMask = 6,
-	Enum = 7,
-	Vector2 = 8,
-	Vector3 = 9,
-	Vector4 = 10,
-	Rect = 11,
-	Array = 12,
-	Character = 13,
-	AnimationCurve = 14,
-	FsmFloat = 15,
-	FsmInt = 16,
-	FsmBool = 17,
-	FsmString = 18,
-	FsmGameObject = 19,
-	FsmOwnerDefault = 20,
-	FunctionCall = 21,
-	FsmAnimationCurve = 22,
-	FsmEvent = 23,
-	FsmObject = 24,
-	FsmColor = 25,
-	Unsupported = 26,
-	GameObject = 27,
-	FsmVector3 = 28,
-	LayoutOption = 29,
-	FsmRect = 30,
-	FsmEventTarget = 31,
-	FsmMaterial = 32,
-	FsmTexture = 33,
-	Quaternion = 34,
-	FsmQuaternion = 35,
-	FsmProperty = 36,
-	FsmVector2 = 37,
-	FsmTemplateControl = 38,
-	FsmVar = 39,
-	CustomClass = 40,
-	FsmArray = 41,
-	FsmEnum = 42,
-}
-
-private enum Fsm.EditorFlags
-{
-	none = 0,
-	nameIsExpanded = 1,
-	controlsIsExpanded = 2,
-	debugIsExpanded = 4,
-	experimentalIsExpanded = 8,
-}
-
-public enum UiEvents
-{
-	None = 0,
-	Click = 1,
-	BeginDrag = 2,
-	Drag = 4,
-	EndDrag = 8,
-	Drop = 16,
-	PointerClick = 32,
-	PointerDown = 64,
-	PointerEnter = 128,
-	PointerExit = 256,
-	PointerUp = 512,
-	EndEdit = 1024,
-	BoolValueChanged = 2048,
-	FloatValueChanged = 4096,
-	IntValueChanged = 8192,
-	Vector2ValueChanged = 16384,
-	DragEvents = 14,
-	PointerEvents = 992,
-}
-
-public enum FsmLogType
-{
-	Info = 0,
-	Warning = 1,
-	Error = 2,
-	Event = 3,
-	Transition = 4,
-	ExitState = 5,
-	EnterState = 6,
-	Break = 7,
-	SendEvent = 8,
-	Start = 9,
-	Stop = 10,
-}
-
-public enum FsmTransition.CustomLinkStyle
-{
-	Default = 0,
-	Bezier = 1,
-	Circuit = 2,
-	Direct = 3,
-}
-
-public enum FsmTransition.CustomLinkConstraint
-{
-	None = 0,
-	LockLeft = 1,
-	LockRight = 2,
-}
-
-public enum VariableType
-{
-	Float = 0,
-	Int = 1,
-	Bool = 2,
-	GameObject = 3,
-	String = 4,
-	Vector2 = 5,
-	Vector3 = 6,
-	Color = 7,
-	Rect = 8,
-	Material = 9,
-	Texture = 10,
-	Quaternion = 11,
-	Object = 12,
-	Array = 13,
-	Enum = 14,
-}
-
-public enum VariableTypeNicified
-{
-	Float = 0,
-	Int = 1,
-	Bool = 2,
-	GameObject = 3,
-	String = 4,
-	Vector2 = 5,
-	Vector3 = 6,
-	Color = 7,
-	Rect = 8,
-	Material = 9,
-	Texture = 10,
-	Quaternion = 11,
-	Object = 12,
-	Array = 13,
-	Enum = 14,
-}
-
-public enum ArrayVariableTypesNicified
-{
-	Float = 0,
-	Int = 1,
-	Bool = 2,
-	GameObject = 3,
-	String = 4,
-	Vector2 = 5,
-	Vector3 = 6,
-	Color = 7,
-	Rect = 8,
-	Material = 9,
-	Texture = 10,
-	Quaternion = 11,
-	Object = 12,
-	Enum = 14,
-}
-
-public enum LoopType
-{
-	None = 0,
-	Loop = 1,
-	PingPong = 2,
-}
-
-public enum RotationInterpolation
-{
-	Spherical = 0,
-	Linear = 1,
-}
-
-public enum RotationOptions
-{
-	CurrentRotation = 0,
-	WorldRotation = 1,
-	LocalRotation = 2,
-	WorldOffsetRotation = 3,
-	LocalOffsetRotation = 4,
-	MatchGameObjectRotation = 5,
-}
-
-public enum ScaleOptions
-{
-	CurrentScale = 0,
-	LocalScale = 1,
-	MultiplyScale = 2,
-	AddToScale = 3,
-	MatchGameObject = 4,
-}
-
-public enum PositionOptions
-{
-	CurrentPosition = 0,
-	WorldPosition = 1,
-	LocalPosition = 2,
-	WorldOffset = 3,
-	LocalOffset = 4,
-	TargetGameObject = 5,
-}
-
-public enum TargetValueOptions
-{
-	CurrentValue = 0,
-	Offset = 1,
-	Value = 2,
-}
-
-internal enum ExceptionArgument
-{
-	length = 0,
-	start = 1,
-	minimumBufferSize = 2,
-	elementIndex = 3,
-	comparable = 4,
-	comparer = 5,
-	destination = 6,
-	offset = 7,
-	startSegment = 8,
-	endSegment = 9,
-	startIndex = 10,
-	endIndex = 11,
-	array = 12,
-	culture = 13,
-	manager = 14,
-}
-
-public enum InitializationFailureReason
-{
-	PurchasingUnavailable = 0,
-	NoProductsAvailable = 1,
-	AppNotKnown = 2,
-}
-
-public enum PayoutType
-{
-	Other = 0,
-	Currency = 1,
-	Item = 2,
-	Resource = 3,
-}
-
-public enum ProductType
-{
-	Consumable = 0,
-	NonConsumable = 1,
-	Subscription = 2,
-}
-
-public enum PurchaseFailureReason
-{
-	PurchasingUnavailable = 0,
-	ExistingPurchasePending = 1,
-	ProductUnavailable = 2,
-	SignatureInvalid = 3,
-	UserCancelled = 4,
-	PaymentDeclined = 5,
-	DuplicateTransaction = 6,
-	Unknown = 7,
-}
-
-public enum PurchaseProcessingResult
-{
-	Complete = 0,
-	Pending = 1,
-}
-
-internal enum TelemetryMetricTypes
-{
-	Gauge = 0,
-	Sum = 1,
-	Histogram = 2,
-}
-
-public enum Asn1EndOfIndefiniteLengthNodeType
-{
-	EndOfStream = 0,
-	EndOfNodeFooter = 1,
-	NotEnd = 2,
-}
-
-public enum GooglePurchaseState
-{
-	Purchased = 0,
-	Cancelled = 1,
-	Refunded = 2,
-	Deferred = 4,
-}
-
-public enum Easing.EasingType
-{
-	Linear = 0,
-	QuadraticEaseOut = 1,
-	QuadraticEaseIn = 2,
-	QuadraticEaseInOut = 3,
-	QuadraticEaseOutIn = 4,
-	SineEaseOut = 5,
-	SineEaseIn = 6,
-	SineEaseInOut = 7,
-	SineEaseOutIn = 8,
-	ExponentialEaseOut = 9,
-	ExponentialEaseIn = 10,
-	ExponentialEaseInOut = 11,
-	ExponentialEaseOutIn = 12,
-	CirclicEaseOut = 13,
-	CirclicEaseIn = 14,
-	CirclicEaseInOut = 15,
-	CirclicEaseOutIn = 16,
-	CubicEaseOut = 17,
-	CubicEaseIn = 18,
-	CubicEaseInOut = 19,
-	CubicEaseOutIn = 20,
-	QuarticEaseOut = 21,
-	QuarticEaseIn = 22,
-	QuarticEaseInOut = 23,
-	QuarticEaseOutIn = 24,
-	QuinticEaseOut = 25,
-	QuinticEaseIn = 26,
-	QuinticEaseInOut = 27,
-	QuinticEaseOutIn = 28,
-	ElasticEaseOut = 29,
-	ElasticEaseIn = 30,
-	ElasticEaseInOut = 31,
-	ElasticEaseOutIn = 32,
-	BounceEaseOut = 33,
-	BounceEaseIn = 34,
-	BounceEaseInOut = 35,
-	BounceEaseOutIn = 36,
-	BackEaseOut = 37,
-	BackEaseIn = 38,
-	BackEaseInOut = 39,
-	BackEaseOutIn = 40,
-}
-
-public enum ShakeType
-{
-	None = 0,
-	Position = 1,
-	Rotation = 2,
-	Both = 3,
-}
-
-public enum TypeOfTransition
-{
-	Cut = 0,
-	Dissolve = 1,
-	WipeLeft = 2,
-	WipeRight = 3,
-	WipeUp = 4,
-	WipeDown = 5,
-}
-
-public enum JSONBinaryTag
-{
-	Array = 1,
-	Class = 2,
-	Value = 3,
-	IntValue = 4,
-	DoubleValue = 5,
-	BoolValue = 6,
-	FloatValue = 7,
-}
-
-public enum AdjustEnvironment
-{
-	Sandbox = 0,
-	Production = 1,
-}
-
-public enum AdjustLogLevel
-{
-	Verbose = 1,
-	Debug = 2,
-	Info = 3,
-	Warn = 4,
-	Error = 5,
-	Assert = 6,
-	Suppress = 7,
-}
-
-public enum AdjustUrlStrategy
-{
-	Default = 0,
-	DataResidencyEU = 1,
-	DataResidencyTK = 2,
-	DataResidencyUS = 3,
-	India = 4,
-	China = 5,
-}
-
-public enum BacktraceResultStatus
-{
-	LimitReached = 0,
-	ServerError = 1,
-	Ok = 2,
-	Empty = 3,
-	NetworkError = 4,
-}
-
-internal enum BacktraceStackFrameType
-{
-	Unknown = 0,
-	Dotnet = 1,
-	Android = 2,
-	Native = 3,
-}
-
-public enum DeduplicationStrategy
-{
-	None = 0,
-	Default = 1,
-	Classifier = 2,
-	Message = 4,
-}
-
-internal enum MinidumpException
-{
-	None = 0,
-	Present = 1,
-}
-
-public enum MiniDumpType
-{
-	None = 524286,
-	Normal = 0,
-	WithDataSegs = 1,
-	WithFullMemory = 2,
-	WithHandleData = 4,
-	FilterMemory = 8,
-	ScanMemory = 16,
-	WithUnloadedModules = 32,
-	WithIndirectlyReferencedMemory = 64,
-	FilterModulePaths = 128,
-	WithProcessThreadData = 256,
-	WithPrivateReadWriteMemory = 512,
-	WithoutOptionalData = 1024,
-	WithFullMemoryInfo = 2048,
-	WithThreadInfo = 4096,
-	WithCodeSegs = 8192,
-	WithoutAuxiliaryState = 16384,
-	WithFullAuxiliaryState = 32768,
-	WithPrivateWriteCopyMemory = 65536,
-	IgnoreInaccessibleMemory = 131072,
-	ValidTypeFlags = 262143,
-}
-
-public enum ReportFilterType
-{
-	None = 0,
-	Message = 1,
-	Exception = 2,
-	UnhandledException = 4,
-	Hang = 8,
-	Error = 16,
-}
-
-public enum RetryBehavior
-{
-	ByInterval = 0,
-	NoRetry = 1,
-}
-
-public enum RetryOrder
-{
-	Stack = 0,
-	Queue = 1,
-}
-
-internal enum UnwindingMode
-{
-	LOCAL = 0,
-	REMOTE = 1,
-	REMOTE_DUMPWITHOUTCRASH = 2,
-	LOCAL_DUMPWITHOUTCRASH = 3,
-	LOCAL_CONTEXT = 4,
-}
-
-public enum BacktraceBreadcrumbType
-{
-	None = 0,
-	Manual = 1,
-	Log = 2,
-	Navigation = 4,
-	Http = 8,
-	System = 16,
-	User = 32,
-	Configuration = 64,
-}
-
-public enum BreadcrumbLevel
-{
-	Manual = 1,
-	Log = 2,
-	Navigation = 4,
-	Http = 8,
-	System = 16,
-	User = 32,
-	Configuration = 64,
-}
-
-public enum UnityEngineLogLevel
-{
-	None = 0,
-	Debug = 1,
-	Warning = 2,
-	Info = 4,
-	Fatal = 8,
-	Error = 16,
-}
-
-internal enum ObscuredPrefs.DataType
-{
-	Unknown = 0,
-	Int = 5,
-	UInt = 10,
-	String = 15,
-	Float = 20,
-	Double = 25,
-	Long = 30,
-	Bool = 35,
-	ByteArray = 40,
-	Vector2 = 45,
-	Vector3 = 50,
-	Quaternion = 55,
-	Color = 60,
-	Rect = 65,
-}
-
-public enum ObscuredPrefs.DeviceLockLevel
-{
-	None = 0,
-	Soft = 1,
-	Strict = 2,
-}
-
-public enum DeflateStrategy
-{
-	Default = 0,
-	Filtered = 1,
-	HuffmanOnly = 2,
-}
-
-private enum GZipOutputStream.OutputState
-{
-	Header = 0,
-	Footer = 1,
-	Finished = 2,
-	Closed = 3,
-}
-
-public enum NotificationStyle
-{
-	None = 0,
-	BigTextStyle = 2,
-}
-
-public enum GroupAlertBehaviours
-{
-	GroupAlertAll = 0,
-	GroupAlertSummary = 1,
-	GroupAlertChildren = 2,
-}
-
-public enum Importance
-{
-	None = 0,
-	Low = 2,
-	Default = 3,
-	High = 4,
-}
-
-public enum LockScreenVisibility
-{
-	Private = 0,
-	Public = 1,
-}
-
-internal enum MetricType
-{
-	Gauge = 0,
-	Sum = 1,
-	Histogram = 2,
-}
-
-internal enum WebRequestResult
-{
-	Success = 0,
-	ConnectionError = 1,
-	ProtocolError = 2,
-	UnknownError = 3,
-}
-
-internal enum GoogleBillingConnectionState
-{
-	Disconnected = 0,
-	Connecting = 1,
-	Connected = 2,
-	Closed = 3,
-}
-
-public enum GooglePlayProrationMode
-{
-	UnknownSubscriptionUpgradeDowngradePolicy = 0,
-	ImmediateWithTimeProration = 1,
-	ImmediateAndChargeProratedPrice = 2,
-	ImmediateWithoutProration = 3,
-	Deferred = 4,
-	ImmediateAndChargeFullPrice = 5,
-}
-
-public enum AppStore
-{
-	NotSpecified = 0,
-	GooglePlay = 1,
-	AmazonAppStore = 2,
-	UDP = 3,
-	MacAppStore = 4,
-	AppleAppStore = 5,
-	WinRT = 6,
-	fake = 7,
-}
-
-public enum AppleStorePromotionVisibility
-{
-	Default = 0,
-	Hide = 1,
-	Show = 2,
-}
-
-public enum FakeStoreUIMode
-{
-	Default = 0,
-	StandardUser = 1,
-	DeveloperUser = 2,
-}
-
-protected enum FakeStore.DialogType
-{
-	Purchase = 0,
-	RetrieveProducts = 1,
-}
-
-public enum TranslationLocale
-{
-	zh_TW = 0,
-	cs_CZ = 1,
-	da_DK = 2,
-	nl_NL = 3,
-	en_US = 4,
-	fr_FR = 5,
-	fi_FI = 6,
-	de_DE = 7,
-	iw_IL = 8,
-	hi_IN = 9,
-	it_IT = 10,
-	ja_JP = 11,
-	ko_KR = 12,
-	no_NO = 13,
-	pl_PL = 14,
-	pt_PT = 15,
-	ru_RU = 16,
-	es_ES = 17,
-	sv_SE = 18,
-	zh_CN = 19,
-	en_AU = 20,
-	en_CA = 21,
-	en_GB = 22,
-	fr_CA = 23,
-	el_GR = 24,
-	id_ID = 25,
-	ms_MY = 26,
-	pt_BR = 27,
-	es_MX = 28,
-	th_TH = 29,
-	tr_TR = 30,
-	vi_VN = 31,
-}
-
-public enum ProductCatalogPayout.ProductCatalogPayoutType
-{
-	Other = 0,
-	Currency = 1,
-	Item = 2,
-	Resource = 3,
-}
-
-public enum StoreSpecificPurchaseErrorCode
-{
-	SKErrorUnknown = 0,
-	SKErrorClientInvalid = 1,
-	SKErrorPaymentCancelled = 2,
-	SKErrorPaymentInvalid = 3,
-	SKErrorPaymentNotAllowed = 4,
-	SKErrorStoreProductNotAvailable = 5,
-	SKErrorCloudServicePermissionDenied = 6,
-	SKErrorCloudServiceNetworkConnectionFailed = 7,
-	SKErrorCloudServiceRevoked = 8,
-	BILLING_RESPONSE_RESULT_OK = 9,
-	BILLING_RESPONSE_RESULT_USER_CANCELED = 10,
-	BILLING_RESPONSE_RESULT_SERVICE_UNAVAILABLE = 11,
-	BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE = 12,
-	BILLING_RESPONSE_RESULT_ITEM_UNAVAILABLE = 13,
-	BILLING_RESPONSE_RESULT_DEVELOPER_ERROR = 14,
-	BILLING_RESPONSE_RESULT_ERROR = 15,
-	BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED = 16,
-	BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED = 17,
-	IABHELPER_ERROR_BASE = 18,
-	IABHELPER_REMOTE_EXCEPTION = 19,
-	IABHELPER_BAD_RESPONSE = 20,
-	IABHELPER_VERIFICATION_FAILED = 21,
-	IABHELPER_SEND_INTENT_FAILED = 22,
-	IABHELPER_USER_CANCELLED = 23,
-	IABHELPER_UNKNOWN_PURCHASE_RESPONSE = 24,
-	IABHELPER_MISSING_TOKEN = 25,
-	IABHELPER_UNKNOWN_ERROR = 26,
-	IABHELPER_SUBSCRIPTIONS_NOT_AVAILABLE = 27,
-	IABHELPER_INVALID_CONSUMPTION = 28,
-	Amazon_ALREADY_PURCHASED = 29,
-	Amazon_FAILED = 30,
-	Amazon_INVALID_SKU = 31,
-	Amazon_NOT_SUPPORTED = 32,
-	Unknown = 33,
-}
-
-public enum Result
-{
-	True = 0,
-	False = 1,
-	Unsupported = 2,
-}
-
-public enum SubscriptionPeriodUnit
-{
-	Day = 0,
-	Month = 1,
-	Week = 2,
-	Year = 3,
-	NotAvailable = 4,
-}
-
-internal enum AppleStoreProductType
-{
-	NonConsumable = 0,
-	Consumable = 1,
-	NonRenewingSubscription = 2,
-	AutoRenewingSubscription = 3,
-}
-
-internal enum GoogleRetrieveProductsFailureReason
-{
-	BillingServiceDisconnected = 0,
-	BillingServiceUnavailable = 1,
-}
-
-internal enum GoogleBillingResponseCode
-{
-	Ok = 0,
-	UserCanceled = 1,
-	ServiceUnavailable = 2,
-	BillingUnavailable = 3,
-	ItemUnavailable = 4,
-	DeveloperError = 5,
-	FatalError = 6,
-	ItemAlreadyOwned = 7,
-	ItemNotOwned = 8,
-}
-
-internal enum Number.NumberBufferKind
-{
-	Unknown = 0,
-	Integer = 1,
-	Decimal = 2,
-	FloatingPoint = 3,
-}
-
-public enum CurveAutoTangentModes
-{
-	None = 0,
-	Smooth = 1,
-	Flatten = 2,
-	RightLinear = 3,
-	RightConstant = 4,
-	LeftLinear = 5,
-	LeftConstant = 6,
-	BothLinear = 7,
-	BothConstant = 8,
-	Count = 9,
-}
-
-public enum UILayer
-{
-	Front = 0,
-	Middle = 1,
-	Back = 2,
-}
-
-public enum UIPosition
-{
-	Center = 0,
-	TopLeft = 1,
-	TopRight = 2,
-	BottomLeft = 3,
-	BottomRight = 4,
-}
-
-public enum PropertyTypeInfo
-{
-	Int = 0,
-	Long = 1,
-	Float = 2,
-	Double = 3,
-	Bool = 4,
-	Vec2 = 5,
-	Vec3 = 6,
-	Vec4 = 7,
-	Quat = 8,
-	Colour = 9,
-}
-
-public enum USRecord.PlayerResolution
-{
-	_1920x1080 = 0,
-	_1280x720 = 1,
-	_960x540 = 2,
-	_854x480 = 3,
-	_720x576 = 4,
-	_640x480 = 5,
-	_Custom = 6,
-}
-
-public enum USRecord.FrameRate
-{
-	_24 = 0,
-	_25 = 1,
-	_30 = 2,
-	_50 = 3,
-	_60 = 4,
-}
-
-public enum USRecord.Upscaling
-{
-	_1 = 0,
-	_2 = 1,
-	_4 = 2,
-	_8 = 3,
-}
-
-public enum SplineOrientationMode
-{
-	ManualOrientation = 0,
-	LookAtTransform = 1,
-	LookAhead = 2,
-}
-
-public enum ApplicationChrome.States
-{
-	Unknown = 0,
-	Visible = 1,
-	VisibleOverContent = 2,
-	TranslucentOverContent = 3,
-	Hidden = 4,
-}
-
-public enum ChargeServicePluginScript.Response
-{
-	BILLING_RESPONSE_RESULT_OK = 0,
-	BILLING_RESPONSE_RESULT_USER_CANCELED = 1,
-	BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE = 3,
-	BILLING_RESPONSE_RESULT_ITEM_UNAVAILABLE = 4,
-	BILLING_RESPONSE_RESULT_DEVELOPER_ERROR = 5,
-	BILLING_RESPONSE_RESULT_ERROR = 6,
-	BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED = 7,
-	BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED = 8,
-}
-
-public enum CriAtomOutputDeviceObserver.OutputDeviceType
-{
-	BuiltinSpeaker = 0,
-	WiredDevice = 1,
-	WirelessDevice = 2,
-}
-
-public enum CriAtomSource.Status
-{
-	Stop = 0,
-	Prep = 1,
-	Playing = 2,
-	PlayEnd = 3,
-	Error = 4,
-}
-
-public enum CriAtomEx.CharacterEncoding
-{
-	Utf8 = 0,
-	Sjis = 1,
-}
-
-public enum CriAtomEx.SoundRendererType
-{
-	Default = 0,
-	Native = 1,
-	Asr = 2,
-	Hw1 = 1,
-	Hw2 = 9,
-}
-
-public enum CriAtomEx.VoiceAllocationMethod
-{
-	Once = 0,
-	Retry = 1,
-}
-
-public enum CriAtomEx.BiquadFilterType
-{
-	Off = 0,
-	LowPass = 1,
-	HighPass = 2,
-	Notch = 3,
-	LowShelf = 4,
-	HighShelf = 5,
-	Peaking = 6,
-}
-
-public enum CriAtomEx.ResumeMode
-{
-	AllPlayback = 0,
-	PausedPlayback = 1,
-	PreparedPlayback = 2,
-}
-
-public enum CriAtomEx.PanType
-{
-	Pan3d = 0,
-	Pos3d = 1,
-	Auto = 2,
-}
-
-public enum CriAtomEx.VoiceControlMethod
-{
-	PreferLast = 0,
-	PreferFirst = 1,
-}
-
-public enum CriAtomEx.Parameter
-{
-	Volume = 0,
-	Pitch = 1,
-	Pan3dAngle = 2,
-	Pan3dDistance = 3,
-	Pan3dVolume = 4,
-	BusSendLevel0 = 9,
-	BusSendLevel1 = 10,
-	BusSendLevel2 = 11,
-	BusSendLevel3 = 12,
-	BusSendLevel4 = 13,
-	BusSendLevel5 = 14,
-	BusSendLevel6 = 15,
-	BusSendLevel7 = 16,
-	BandPassFilterCofLow = 17,
-	BandPassFilterCofHigh = 18,
-	BiquadFilterType = 19,
-	BiquadFilterFreq = 20,
-	BiquadFIlterQ = 21,
-	BiquadFilterGain = 22,
-	EnvelopeAttackTime = 23,
-	EnvelopeHoldTime = 24,
-	EnvelopeDecayTime = 25,
-	EnvelopeReleaseTime = 26,
-	EnvelopeSustainLevel = 27,
-	StartTime = 28,
-	Priority = 31,
-}
-
-public enum CriAtomEx.Speaker
-{
-	FrontLeft = 0,
-	FrontRight = 1,
-	FrontCenter = 2,
-	LowFrequency = 3,
-	SurroundLeft = 4,
-	SurroundRight = 5,
-	SurroundBackLeft = 6,
-	SurroundBackRight = 7,
-}
-
-public enum CriAtomEx.Format
-{
-	ADX = 1,
-	HCA = 3,
-	HCA_MX = 4,
-	WAVE = 5,
-	RAW_PCM = 6,
-}
-
-private enum CriAtomEx.SpeakerSystem
-{
-	Surround_5_1 = 0,
-	Surround_7_1 = 1,
-}
-
-public enum CriAtomEx.Randomize3dCalcType
-{
-	Rectangle = 0,
-	Cuboid = 1,
-	Circle = 2,
-	Cylinder = 3,
-	Sphere = 4,
-	List = 6,
-}
-
-public enum CriAtomEx.Randomize3dParamType
-{
-	None = 0,
-	Width = 1,
-	Depth = 2,
-	Height = 3,
-	Radius = 4,
-}
-
-public enum CriAtomEx.CueType
-{
-	Polyphonic = 0,
-	Sequential = 1,
-	Shuffle = 2,
-	Random = 3,
-	RandomNoRepeat = 4,
-	SwitchGameVariable = 5,
-	ComboSequential = 6,
-	SwitchSelector = 7,
-	TrackTransitionBySelector = 8,
-}
-
-public enum CriAtomExCategory.ReactType
-{
-	Ducker = 0,
-	AisacModulationTrigger = 1,
-}
-
-public enum CriAtomExCategory.ReactDuckerTargetType
-{
-	Volume = 0,
-	AisacControlValue = 1,
-}
-
-public enum CriAtomExCategory.ReactDuckerCurveType
-{
-	Linear = 0,
-	Square = 1,
-	SquareReverse = 2,
-	SCurve = 3,
-	FlatAtHalf = 4,
-}
-
-public enum CriAtomExCategory.ReactHoldType
-{
-	WhilePlaying = 0,
-	FixedTime = 1,
-}
-
-public enum CriAtomExCategory.ReactStatus
-{
-	Stop = 0,
-	FadeOut = 1,
-	Hold = 2,
-	FadeIn = 3,
-	Error = 4,
-}
-
-public enum CriAtomExLatencyEstimator.Status
-{
-	Stop = 0,
-	Processing = 1,
-	Done = 2,
-	Error = 3,
-}
-
-public enum CriAtomExAcbLoader.Status
-{
-	Stop = 0,
-	Loading = 1,
-	Complete = 2,
-	Error = 3,
-}
-
-public enum CriAtomExAcf.AcfDspBusLinkType
-{
-	preVolume = 0,
-	postVolume = 1,
-	postPan = 2,
-}
-
-public enum CriAtomExAcf.AcfAisacType
-{
-	normal = 0,
-	autoModulation = 1,
-}
-
-public enum CriAtomExAcf.AisacGraphType
-{
-	none = 0,
-	volume = 1,
-	pitch = 2,
-	bandpassHigh = 3,
-	bandpassLow = 4,
-	biquadFreq = 5,
-	biquadQ = 6,
-	busSend0 = 7,
-	busSend1 = 8,
-	busSend2 = 9,
-	busSend3 = 10,
-	busSend4 = 11,
-	busSend5 = 12,
-	busSend6 = 13,
-	busSend7 = 14,
-	pan3dAngel = 15,
-	pan3dVolume = 16,
-	pan3dInteriorDistance = 17,
-	pan3dCenter = 18,
-	pan3dLfe = 19,
-	aisac0 = 20,
-	aisac1 = 21,
-	aisac2 = 22,
-	aisac3 = 23,
-	aisac4 = 24,
-	aisac5 = 25,
-	aisac6 = 26,
-	aisac7 = 27,
-	aisac8 = 28,
-	aisac9 = 29,
-	aisac10 = 30,
-	aisac11 = 31,
-	aisac12 = 32,
-	aisac13 = 33,
-	aisac14 = 34,
-	aisac15 = 35,
-	priority = 36,
-	preDelayTime = 37,
-	biquadGain = 38,
-	pan3dMixdownCenter = 39,
-	pan3dMixdownLfe = 40,
-	egAttack = 41,
-	egRelease = 42,
-	playbackRatio = 43,
-	drySendL = 44,
-	drySendR = 45,
-	drySendCenter = 46,
-	drySendLfe = 47,
-	drySendSl = 48,
-	drySendSr = 49,
-	drySendEx1 = 50,
-	drySendEx2 = 51,
-	panSpread = 52,
-}
-
-public enum CriAtomExAcf.CharacterEncoding
-{
-	utf8 = 0,
-	sjis = 1,
-}
-
-public enum CriAtomExPlayback.Status
-{
-	Prep = 1,
-	Playing = 2,
-	Removed = 3,
-}
-
-public enum CriAtomExPlayer.Status
-{
-	Stop = 0,
-	Prep = 1,
-	Playing = 2,
-	PlayEnd = 3,
-	Error = 4,
-}
-
-public enum CriAtomExPlayer.TimeStretchParameterId
-{
-	Ratio = 0,
-	FrameTime = 1,
-	Quality = 2,
-}
-
-public enum CriAtomExPlayer.PitchShifterParameterId
-{
-	Pitch = 0,
-	Formant = 1,
-	Mode = 2,
-}
-
-public enum CriAtomExPlayerOutputAnalyzer.Type
-{
-	LevelMeter = 0,
-	SpectrumAnalyzer = 1,
-	PcmCapture = 2,
-}
-
-public enum CriAtomExTween.ParameterType
-{
-	Basic = 0,
-	Aisac = 1,
-}
-
-public enum CriAtomExVoicePool.VoicePoolId
-{
-	StandardMemory = 0,
-	StandardStreaming = 1,
-	HcaMxMemory = 4,
-	HcaMxStreaming = 5,
-	LowLatencyMemory = 2,
-	LowLatencyStreaming = 3,
-}
-
-public enum CriAtomExVoicePool.PitchShifterMode
-{
-	Music = 0,
-	Vocal = 1,
-	SoundEffect = 2,
-	Speech = 3,
-}
-
-public enum CriAtomExRawPcmVoicePool.RawPcmFormat
-{
-	Sint16 = 0,
-	Float32 = 1,
-}
-
-public enum CriFsLoader.Status
-{
-	Stop = 0,
-	Loading = 1,
-	Complete = 2,
-	Error = 3,
-}
-
-public enum CriFsInstaller.Status
-{
-	Stop = 0,
-	Busy = 1,
-	Complete = 2,
-	Error = 3,
-}
-
-private enum CriFsInstaller.CopyPolicy
-{
-	Always = 0,
-}
-
-public enum CriFsBinder.Status
-{
-	None = 0,
-	Analyze = 1,
-	Complete = 2,
-	Unbind = 3,
-	Removed = 4,
-	Invalid = 5,
-	Error = 6,
-}
-
-private enum CriFsLoadFileRequest.Phase
-{
-	Stop = 0,
-	Bind = 1,
-	Load = 2,
-	Done = 3,
-	Error = 4,
-}
-
-public enum CriFsBindRequest.BindType
-{
-	Cpk = 0,
-	Directory = 1,
-	File = 2,
-}
-
-public enum CriFsWebInstaller.Status
-{
-	Stop = 0,
-	Busy = 1,
-	Complete = 2,
-	Error = 3,
-}
-
-public enum CriFsWebInstaller.Error
-{
-	None = 0,
-	Timeout = 1,
-	Memory = 2,
-	LocalFs = 3,
-	DNS = 4,
-	Connection = 5,
-	SSL = 6,
-	HTTP = 7,
-	Internal = 8,
-}
-
-public enum CriManaMovieMaterial.MaxFrameDrop
-{
-	Disabled = 0,
-	One = 1,
-	Two = 2,
-	Three = 3,
-	Four = 4,
-	Five = 5,
-	Six = 6,
-	Seven = 7,
-	Eight = 8,
-	Nine = 9,
-	Ten = 10,
-}
-
-public enum CriManaMovieMaterial.RenderMode
-{
-	Always = 0,
-	OnVisibility = 1,
-	Never = 2,
-}
-
-public enum CriAtomConfig.InGamePreviewSwitchMode
-{
-	Disable = 0,
-	Enable = 1,
-	FollowBuildSetting = 2,
-	Default = 3,
-}
-
-public enum CriAtomConfig.LinuxOutput
-{
-	Default = 0,
-	PulseAudio = 1,
-	ALSA = 2,
-}
-
-public enum CriAtomExAcfDebug.AisacType
-{
-	Normal = 0,
-	AutoModulation = 1,
-}
-
-public enum CriDisposableObjectManager.ModuleType
-{
-	Atom = 0,
-	AtomMic = 1,
-	Fs = 2,
-	FsWeb = 3,
-	Mana = 4,
-	Lips = 5,
-	Vip = 6,
-}
-
-public enum ContinuousGesturePhase
-{
-	None = 0,
-	Started = 1,
-	Updated = 2,
-	Ended = 3,
-}
-
-public enum GestureRecognitionState
-{
-	Ready = 0,
-	Started = 1,
-	InProgress = 2,
-	Failed = 3,
-	Ended = 4,
-	Recognized = 4,
-	FailAndRetry = 5,
-}
-
-public enum GestureResetMode
-{
-	Default = 0,
-	NextFrame = 1,
-	EndOfTouchSequence = 2,
-}
-
-public enum GestureRecognizer.SelectionType
-{
-	Default = 0,
-	StartSelection = 1,
-	CurrentSelection = 2,
-	None = 3,
-}
-
-public enum FingerHoverPhase
-{
-	None = 0,
-	Enter = 1,
-	Exit = 2,
-}
-
-public enum FingerMotionPhase
-{
-	None = 0,
-	Started = 1,
-	Updated = 2,
-	Ended = 3,
-}
-
-private enum FingerMotionDetector.EventType
-{
-	Move = 0,
-	Stationary = 1,
-}
-
-public enum FingerGestures.FingerPhase
-{
-	None = 0,
-	Begin = 1,
-	Moving = 2,
-	Stationary = 3,
-}
-
-public enum FingerGestures.SwipeDirection
-{
-	Right = 1,
-	Left = 2,
-	Up = 4,
-	Down = 8,
-	UpperLeftDiagonal = 16,
-	UpperRightDiagonal = 32,
-	LowerRightDiagonal = 64,
-	LowerLeftDiagonal = 128,
-	None = 0,
-	Vertical = 12,
-	Horizontal = 3,
-	Cross = 15,
-	UpperDiagonals = 48,
-	LowerDiagonals = 192,
-	Diagonals = 240,
-	All = 255,
-}
-
-public enum DistanceUnit
-{
-	Pixels = 0,
-	Inches = 1,
-	Centimeters = 2,
-}
-
-public enum TwistMethod
-{
-	Standard = 0,
-	Pivot = 1,
-}
-
-public enum TBOrbit.PanMode
-{
-	Disabled = 0,
-	OneFinger = 1,
-	TwoFingers = 2,
-}
-
-public enum TBPinchZoom.ZoomMethod
-{
-	Position = 0,
-	FOV = 1,
-}
-
-public enum TBDragToMove.DragPlaneType
-{
-	Camera = 0,
-	UseCollider = 1,
-}
-
-public enum TBTwistToRotate.RotationAxis
-{
-	WorldX = 0,
-	WorldY = 1,
-	WorldZ = 2,
-	ObjectX = 3,
-	ObjectY = 4,
-	ObjectZ = 5,
-	CameraX = 6,
-	CameraY = 7,
-	CameraZ = 8,
-}
-
-public enum NewsFeedCampaignType
-{
-	Unknown = 0,
-	PushNotification = 1,
-	InAppMessage = 2,
-	WebMessage = 4,
-	All = 8,
-}
-
-public enum EventPropertySetIndicator
-{
-	CONTENT_ID = 1,
-	CONTENT_NAME = 2,
-	CONTENT_CATEGORY = 4,
-	VALUE = 8,
-	CURRENCY = 16,
-	NUM_ITEMS = 32,
-	SEARCH_STRING = 64,
-	SERVICE_NAME = 128,
-	STATUS = 256,
-	EXTRAS = 512,
-}
-
-public enum Repro.LogLevel
-{
-	Debug = 0,
-	Info = 1,
-	Warn = 2,
-	Error = 3,
-	None = 4,
-}
-
-public enum Repro.FetchStatus
-{
-	Success = 0,
-	TimeoutReached = 1,
-	AlreadyFetched = 2,
-}
-
-public enum Bloom.LensFlareStyle
-{
-	Ghosting = 0,
-	Anamorphic = 1,
-	Combined = 2,
-}
-
-public enum Bloom.TweakMode
-{
-	Basic = 0,
-	Complex = 1,
-}
-
-public enum Bloom.HDRBloomMode
-{
-	Auto = 0,
-	On = 1,
-	Off = 2,
-}
-
-public enum Bloom.BloomScreenBlendMode
-{
-	Screen = 0,
-	Add = 1,
-}
-
-public enum Bloom.BloomQuality
-{
-	Cheap = 0,
-	High = 1,
-}
-
-public enum SSAOEffect.SSAOSamples
-{
-	Low = 0,
-	Medium = 1,
-	High = 2,
-}
-
-public enum Vignetting.AberrationMode
-{
-	Simple = 0,
-	Advanced = 1,
-}
-
-public enum CodecType
-{
-	Unknown = 0,
-	SofdecPrime = 1,
-	H264 = 5,
-	VP9 = 9,
-}
-
-public enum AlphaType
-{
-	CompoOpaq = 0,
-	CompoAlphaFull = 1,
-	CompoAlpha3Step = 2,
-	CompoAlpha32Bit = 3,
-}
-
-public enum Player.Status
-{
-	Stop = 0,
-	Dechead = 1,
-	WaitPrep = 2,
-	Prep = 3,
-	Ready = 4,
-	Playing = 5,
-	PlayEnd = 6,
-	Error = 7,
-	StopProcessing = 8,
-	ReadyForRendering = 9,
-}
-
-public enum Player.SetMode
-{
-	New = 0,
-	Append = 1,
-	AppendRepeatedly = 2,
-}
-
-public enum Player.MovieEventSyncMode
-{
-	FrameTime = 0,
-	PlayBackTime = 1,
-}
-
-public enum Player.AudioTrack
-{
-	Off = 0,
-	Auto = 1,
-}
-
-public enum Player.TimerType
-{
-	None = 0,
-	System = 1,
-	Audio = 2,
-	User = 3,
-	Manual = 4,
-}
-
-public enum Player.CriManaUnityPlayer_RenderEventAction
-{
-	UPDATE = 0,
-	INITIALIZE = 256,
-	RENDER = 512,
-	DESTROY = 768,
-}
-
 protected enum AchievementExchangeConditionsDialog.State
 {
 	INIT = 0,
@@ -13862,14 +1423,6 @@ private enum TitleInfoControl.SideItemKind
 	BUFF_EVENT = 2,
 }
 
-private enum TitleInfoControl.SuperBossAnimeState
-{
-	NONE = 0,
-	PLAY = 1,
-	END = 2,
-	WAIT = 3,
-}
-
 public enum TitleInfoControl.TitleKind
 {
 	NONE = 0,
@@ -15257,54 +2810,6 @@ public enum CutInType
 	CutIn30 = 29,
 }
 
-public enum DatFileName.FILE_NAME
-{
-	SCRIPT_SAVE = 0,
-	PURCHASE_BY_BANK_REQUEST_SAVE = 1,
-	BATTLE_USE_CONTINUE_REQUEST_SAVE = 2,
-	BATTLE_COMMAND_SPELL_REQUEST_SAVE = 3,
-	USER_SERVANT_COMBINE_VOICE_SAVE = 4,
-	USER_SERVANT_NEW_SAVE = 5,
-	USER_SERVANT_LOCK_SAVE = 6,
-	USER_SERVANT_COLLECTION_SAVE = 7,
-	USER_EQUIP_LV_SAVE = 8,
-	USER_COMMANDCODE_NEW_SAVE = 9,
-	USER_COMMANDCODE_COLLECTION_SAVE = 10,
-	USER_SERVANT_COMMENT_SAVE = 11,
-	OTHER_USER_NEW_SAVE = 12,
-	MASTER_DATA_CHECK = 13,
-	MASTER_DATA_LIST = 14,
-	MASTER_DATA = 15,
-	AUTHSAVE = 16,
-	AUTHSAVE_2 = 17,
-	SIGNUP_SAVE = 18,
-	SERVER_SAVE = 19,
-	FRIENDCODE_SAVE = 20,
-	PAYMENT_SAVE = 21,
-	PAYMENT_TIME_SAVE = 22,
-	USER_MISSION_PROG_SAVE_EVENTID = 23,
-	USER_MISSION_PROG_SAVE_EVENTID_SLOT = 24,
-	USER_MISSION_NEW_SAVE = 25,
-	MATERIAL_SERVANT_LIMIT_COUNT = 26,
-	SERVANT_PROFILE_LIMIT_COUNT = 27,
-	SERVANT_PROFILE_EVENT_JOIN = 28,
-	BATTLE_USE_CONTINUE_ITEM_REQUEST_SAVE = 29,
-	BATTLE_USE_ITEM_REQUEST = 30,
-	UNCONFIRMED_PAYMENT = 31,
-	SERVANT_CHARA_GRAPH_EX_OPEN = 32,
-	QUEST_HINT_DIALOG_OPEN_SAVE = 33,
-	LAST_USED_DECK_NUMBER_SAVE = 34,
-	MATERIAL_BRANCH_ROUTE_SAVE = 35,
-	CLEAR_RANDOM_MISSION_SAVE = 36,
-	MATERIAL_GROUP_CLEAR_HISTORY_SAVE = 37,
-	WARBOARD_MESSAGE_HISTORY_SAVE = 38,
-	WARBOARD_MOVIE_HISTORY_SAVE = 39,
-	TIPS_ARCHIVE_STATE_SAVE = 40,
-	WAR_BOARD_CONTINUE_SAVE = 41,
-	QUEST_FOCUS_STATE_SAVE = 42,
-	SUM = 43,
-}
-
 public enum DataNameKind.Kind
 {
 	NONE = 0,
@@ -15801,6 +3306,54 @@ public enum DataNameKind.Kind
 	MISSION_NAVI_TRANSITION = 491,
 }
 
+public enum DatFileName.FILE_NAME
+{
+	SCRIPT_SAVE = 0,
+	PURCHASE_BY_BANK_REQUEST_SAVE = 1,
+	BATTLE_USE_CONTINUE_REQUEST_SAVE = 2,
+	BATTLE_COMMAND_SPELL_REQUEST_SAVE = 3,
+	USER_SERVANT_COMBINE_VOICE_SAVE = 4,
+	USER_SERVANT_NEW_SAVE = 5,
+	USER_SERVANT_LOCK_SAVE = 6,
+	USER_SERVANT_COLLECTION_SAVE = 7,
+	USER_EQUIP_LV_SAVE = 8,
+	USER_COMMANDCODE_NEW_SAVE = 9,
+	USER_COMMANDCODE_COLLECTION_SAVE = 10,
+	USER_SERVANT_COMMENT_SAVE = 11,
+	OTHER_USER_NEW_SAVE = 12,
+	MASTER_DATA_CHECK = 13,
+	MASTER_DATA_LIST = 14,
+	MASTER_DATA = 15,
+	AUTHSAVE = 16,
+	AUTHSAVE_2 = 17,
+	SIGNUP_SAVE = 18,
+	SERVER_SAVE = 19,
+	FRIENDCODE_SAVE = 20,
+	PAYMENT_SAVE = 21,
+	PAYMENT_TIME_SAVE = 22,
+	USER_MISSION_PROG_SAVE_EVENTID = 23,
+	USER_MISSION_PROG_SAVE_EVENTID_SLOT = 24,
+	USER_MISSION_NEW_SAVE = 25,
+	MATERIAL_SERVANT_LIMIT_COUNT = 26,
+	SERVANT_PROFILE_LIMIT_COUNT = 27,
+	SERVANT_PROFILE_EVENT_JOIN = 28,
+	BATTLE_USE_CONTINUE_ITEM_REQUEST_SAVE = 29,
+	BATTLE_USE_ITEM_REQUEST = 30,
+	UNCONFIRMED_PAYMENT = 31,
+	SERVANT_CHARA_GRAPH_EX_OPEN = 32,
+	QUEST_HINT_DIALOG_OPEN_SAVE = 33,
+	LAST_USED_DECK_NUMBER_SAVE = 34,
+	MATERIAL_BRANCH_ROUTE_SAVE = 35,
+	CLEAR_RANDOM_MISSION_SAVE = 36,
+	MATERIAL_GROUP_CLEAR_HISTORY_SAVE = 37,
+	WARBOARD_MESSAGE_HISTORY_SAVE = 38,
+	WARBOARD_MOVIE_HISTORY_SAVE = 39,
+	TIPS_ARCHIVE_STATE_SAVE = 40,
+	WAR_BOARD_CONTINUE_SAVE = 41,
+	QUEST_FOCUS_STATE_SAVE = 42,
+	SUM = 43,
+}
+
 public enum Device.Type
 {
 	ALL = 0,
@@ -16274,6 +3827,35 @@ public enum Grade.Kind
 {
 	NONE = 0,
 	FES = 1,
+}
+
+public enum ImageItem.Id
+{
+	NONE = 0,
+	TREASURE_1 = 1,
+	TREASURE_2 = 2,
+	TREASURE_3 = 3,
+	SERVANT = 4,
+	QP = 5,
+	STONE = 6,
+	MANA = 7,
+	NP = 8,
+	SKILL = 9,
+	SVT_EQUIP = 10,
+	GACHA_TICKET = 11,
+	FRIEND_POINT = 12,
+	STONE_FRAGMENTS = 16,
+	ANONYMOUS = 17,
+	RARE_PRI = 18,
+	SVT_COSTUME_RELEASE = 23,
+	QUESTION_MARK = 99,
+	QUESTION_MARK2 = 8007,
+	SERVANT_SVT = 8008,
+	SERVANT_EQ = 8009,
+	COMMAND_CODE = 8014,
+	TRADE_AP_SEED = 103,
+	TRADE_AP_FRUIT = 104,
+	AP = 47,
 }
 
 public enum Individuality.TYPE
@@ -17333,35 +4915,6 @@ public enum VoiceCondType.Type
 	LEVEL_UP_LIMIT_COUNT_BELOW = 26,
 }
 
-public enum ImageItem.Id
-{
-	NONE = 0,
-	TREASURE_1 = 1,
-	TREASURE_2 = 2,
-	TREASURE_3 = 3,
-	SERVANT = 4,
-	QP = 5,
-	STONE = 6,
-	MANA = 7,
-	NP = 8,
-	SKILL = 9,
-	SVT_EQUIP = 10,
-	GACHA_TICKET = 11,
-	FRIEND_POINT = 12,
-	STONE_FRAGMENTS = 16,
-	ANONYMOUS = 17,
-	RARE_PRI = 18,
-	SVT_COSTUME_RELEASE = 23,
-	QUESTION_MARK = 99,
-	QUESTION_MARK2 = 8007,
-	SERVANT_SVT = 8008,
-	SERVANT_EQ = 8009,
-	COMMAND_CODE = 8014,
-	TRADE_AP_SEED = 103,
-	TRADE_AP_FRUIT = 104,
-	AP = 47,
-}
-
 public enum AssetData.Type
 {
 	ASSET_STORAGE = 0,
@@ -17496,18 +5049,18 @@ public enum BattleModelObjectVisibleControlComponent.Timing
 	BECOME_TARGET_TREASURE_DEVICE_ACTIVE = 1,
 }
 
-private enum BillBoardGroupManager.phase
-{
-	NONE = 0,
-	ADDING = 1,
-	USING = 2,
-}
-
 protected enum BillBoardGrouped.SP_GROUP
 {
 	FIXED = 0,
 	FIXED_CAM = 1,
 	SIZE_OF = 2,
+}
+
+private enum BillBoardGroupManager.phase
+{
+	NONE = 0,
+	ADDING = 1,
+	USING = 2,
 }
 
 public enum EventUpValIconComponent.Alignment
@@ -20042,28 +7595,6 @@ public enum RaceResultEffectParam.ParamIndex
 	TIME = 4,
 }
 
-public enum UICamera.ControlScheme
-{
-	Mouse = 0,
-	Touch = 1,
-	Controller = 2,
-}
-
-public enum UICamera.ClickNotification
-{
-	None = 0,
-	Always = 1,
-	BasedOnDelta = 2,
-}
-
-public enum UICamera.EventType
-{
-	World_3D = 0,
-	UI_3D = 1,
-	World_2D = 2,
-	UI_2D = 3,
-}
-
 public enum ListViewItemSeed.Arrangement
 {
 	Horizontal = 0,
@@ -20481,13 +8012,6 @@ public enum UINarrowFigureRender.DispType
 	FULL = 0,
 	USER_SELECT = 1,
 	MY_ROOM = 2,
-}
-
-public enum UIPanel.RenderQueue
-{
-	Automatic = 0,
-	StartAt = 1,
-	Explicit = 2,
 }
 
 public enum UIPlaySystemSe.Trigger
@@ -22014,15 +9538,6 @@ private enum BattleServantConfConponent.HideState
 	FRAUD = 4,
 }
 
-private enum BattleServantHeadUpComponent.MODE
-{
-	NONE = 0,
-	WAVE_START = 1,
-	COMMAND = 2,
-	TAC = 3,
-	ACTION = 4,
-}
-
 private enum BattleServantParamComponent.WINDOW_MODE
 {
 	NONE = 0,
@@ -22169,14 +9684,6 @@ public enum BattleScriptRootComponent.QuestTalkPhase
 	AFTER_BATTLE_AFTER_DEMO = 8,
 	AFTER_BATTLE_BATTLE_DEMO2 = 9,
 	GO_TO_TERMINAL = 10,
-}
-
-public enum CRIMovieControl.Status
-{
-	Closed = 0,
-	Opening = 1,
-	Opened = 2,
-	Closing = 3,
 }
 
 private enum ClassBoardBlank.ConnectType
@@ -22937,6 +10444,14 @@ protected enum SvtEqCombineListViewObject.State
 	IDLE = 1,
 	MOVE = 2,
 	INPUT = 3,
+}
+
+public enum CRIMovieControl.Status
+{
+	Closed = 0,
+	Opening = 1,
+	Opened = 2,
+	Closing = 3,
 }
 
 public enum EndrolContentItem.displayObjectType
@@ -27195,6 +14710,14 @@ private enum BlankEarthShortcutUIButton.WaitState
 	DISABLE = 2,
 }
 
+public enum clsQuestCheck.QUEST_START_EFFECT_SKIP
+{
+	NONE = 0,
+	FIRST = 1,
+	SECOND = 2,
+	DESABLE = 3,
+}
+
 private enum SubmarineScanConfirmDialog.State
 {
 	INIT = 0,
@@ -27276,44 +14799,10 @@ public enum FortuneBonusResultAction.STATE
 	SIZEOF = 3,
 }
 
-public enum CTouch.TCH_STATE
-{
-	NONE = 0,
-	PUSH = 1,
-	KEEP = 2,
-	RELEASE = 3,
-}
-
 public enum ColorChange.CHANGE_STYLE
 {
 	ONE = 0,
 	PINGPONG = 1,
-}
-
-public enum Easing.TYPE
-{
-	LINER = 0,
-	QUADRATIC_IN = 1,
-	QUADRATIC_OUT = 2,
-	QUADRATIC_IN_OUT = 3,
-	CUBIC_IN = 4,
-	CUBIC_OUT = 5,
-	CUBIC_IN_OUT = 6,
-	QUARTIC_IN = 7,
-	QUARTIC_OUT = 8,
-	QUARTIC_IN_OUT = 9,
-	QUINTIC_IN = 10,
-	QUINTIC_OUT = 11,
-	QUINTIC_IN_OUT = 12,
-	SINUSOIDAL_IN = 13,
-	SINUSOIDAL_OUT = 14,
-	SINUSOIDAL_IN_OUT = 15,
-	EXPONENTIAL_IN = 16,
-	EXPONENTIAL_OUT = 17,
-	EXPONENTIAL_IN_OUT = 18,
-	CIRCULAR_IN = 19,
-	CIRCULAR_OUT = 20,
-	CIRCULAR_IN_OUT = 21,
 }
 
 public enum ScrollArrowComponent.DirectionType
@@ -27781,21 +15270,6 @@ public enum QuestRewardTokenAction.STATE
 	SIZEOF = 3,
 }
 
-public enum ScrPlayerStatus.enSpell
-{
-	Zero = 0,
-	One = 1,
-	Two = 2,
-	Tree = 3,
-	enMAX = 4,
-}
-
-private enum ScrPlayerStatus.MstMissionState
-{
-	Weekly = 0,
-	Limited = 1,
-}
-
 public enum ScrTerminalListTop.enPrevList
 {
 	TOPMENU = 0,
@@ -27854,6 +15328,16 @@ public enum SpotLargeComponent.STATE
 	SIZEOF = 4,
 }
 
+public enum srcLineSprite.STATE
+{
+	NONE = 0,
+	MAP_MAIN = 1,
+	QAA_HIDE = 2,
+	QAA_GRAY = 3,
+	QAA_DISP = 4,
+	SIZEOF = 5,
+}
+
 public enum SrcSpotBasePrefab.STATE
 {
 	NONE = 0,
@@ -27902,24 +15386,6 @@ public enum TerminalPramsManager.eSpecifiedScene
 {
 	None = 0,
 	EventReward = 1,
-}
-
-public enum clsQuestCheck.QUEST_START_EFFECT_SKIP
-{
-	NONE = 0,
-	FIRST = 1,
-	SECOND = 2,
-	DESABLE = 3,
-}
-
-public enum srcLineSprite.STATE
-{
-	NONE = 0,
-	MAP_MAIN = 1,
-	QAA_HIDE = 2,
-	QAA_GRAY = 3,
-	QAA_DISP = 4,
-	SIZEOF = 5,
 }
 
 public enum BackViewListViewItemDraw.DispMode
@@ -27976,42 +15442,6 @@ public enum CostSpriteListManager.ListType
 	SUCCESS = 2,
 }
 
-public enum DPIListViewItemDraw.DispMode
-{
-	INVISIBLE = 0,
-	INVALID = 1,
-	VALID = 2,
-	INPUT = 3,
-}
-
-public enum DPIListViewManager.InitMode
-{
-	NONE = 0,
-	INPUT = 1,
-}
-
-protected enum DPIListViewMenu.State
-{
-	INIT = 0,
-	INPUT = 1,
-}
-
-public enum DPIListViewObject.InitMode
-{
-	INVISIBLE = 0,
-	INVALID = 1,
-	VALID = 2,
-	INPUT = 3,
-}
-
-protected enum DPIListViewObject.State
-{
-	INIT = 0,
-	IDLE = 1,
-	MOVE = 2,
-	INPUT = 3,
-}
-
 public enum DebugListViewItemDraw.DispMode
 {
 	INVISIBLE = 0,
@@ -28057,6 +15487,42 @@ protected enum DebugSignupMenu.State
 	INPUT_OBJECT_MENU = 2,
 	SELECTED = 3,
 	CLOSE = 4,
+}
+
+public enum DPIListViewItemDraw.DispMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+}
+
+public enum DPIListViewManager.InitMode
+{
+	NONE = 0,
+	INPUT = 1,
+}
+
+protected enum DPIListViewMenu.State
+{
+	INIT = 0,
+	INPUT = 1,
+}
+
+public enum DPIListViewObject.InitMode
+{
+	INVISIBLE = 0,
+	INVALID = 1,
+	VALID = 2,
+	INPUT = 3,
+}
+
+protected enum DPIListViewObject.State
+{
+	INIT = 0,
+	IDLE = 1,
+	MOVE = 2,
+	INPUT = 3,
 }
 
 protected enum EquipGraphViewListViewMenu.State
@@ -29263,6 +16729,12923 @@ protected enum WarehouseRootComponent.State
 	INPUT_WAREHOUSE_LIST = 1,
 }
 
+public enum NGuiPlayMakerDelegates
+{
+	OnClickEvent = 0,
+	OnHoverEvent = 1,
+	OnHoverEventEnter = 2,
+	OnHoverEventExit = 3,
+	OnPressEvent = 4,
+	OnPressEventUp = 5,
+	OnPressEventDown = 6,
+	OnSelectEvent = 7,
+	OnDragEvent = 8,
+	OnDropEvent = 9,
+	OnSubmitEvent = 10,
+	OnSliderChangeEvent = 11,
+	OnSelectionChangeEvent = 12,
+	OnTooltipEvent = 13,
+	OnChangeEvent = 14,
+}
+
+public enum CurveAutoTangentModes
+{
+	None = 0,
+	Smooth = 1,
+	Flatten = 2,
+	RightLinear = 3,
+	RightConstant = 4,
+	LeftLinear = 5,
+	LeftConstant = 6,
+	BothLinear = 7,
+	BothConstant = 8,
+	Count = 9,
+}
+
+public enum PieceType
+{
+	Servant = 0,
+	Master = 1,
+}
+
+public enum FrequencyType
+{
+	ONCE = 1,
+	EVERY_TIME = 2,
+	EVERY_TURN = 3,
+}
+
+public enum EventAction
+{
+	PLAY_TALK = 1,
+	CHANGE_WAR_BOARD_WIN_COND = 2,
+	REINFORCE = 3,
+	MOVE_CAMERA = 5,
+	HIGHLIGHT_SQUARE_INDEX = 7,
+	DEFEAT_PIECE = 8,
+	DIRECT_SKILL = 9,
+	UNLOCK_SQUARE_INDEX = 10,
+	UNLOCK_SQUARE_ROAD = 11,
+	WAIT = 12,
+	UPDATE_BOSS_INFO = 14,
+	BG_ANIMATION = 15,
+	SQUARE_EFFECT_DISP = 16,
+	SQUARE_EFFECT_HIDE = 17,
+	OVERLAY_EFFECT = 19,
+	SET_WARNING_AREA = 20,
+	REMOVE_WARNING_AREA = 21,
+	SET_UI_SQUARE = 22,
+	SET_UI_PIECE = 23,
+	CHANGE_ACTION_TYPE = 25,
+	CHANGE_AI_ID = 26,
+	DIRECT_SKILL_DELAYED_DEAD = 27,
+	EVENT_TUTORIAL = 28,
+}
+
+protected enum SwitchingSoundInfoMenu.State
+{
+	INIT = 0,
+	ACTIVE = 1,
+}
+
+public enum DebugItemMenuBase.Group
+{
+	ALL = 0,
+	ASSET = 1,
+	VIEW = 2,
+	SOUND = 3,
+	ETC = 4,
+}
+
+protected enum DebugItemRoot.State
+{
+	INIT = 0,
+	INPUT = 1,
+}
+
+public enum USFGOActorBattleActionEvent.ActionType
+{
+	Damage = 0,
+	BuffDebuff = 1,
+	Heal = 2,
+	DamageVoice = 3,
+	SilentDead = 4,
+	SelfDead = 5,
+	MoveToSubMember = 6,
+	FuncSideEffect = 7,
+	TransformServantUpdateUi = 8,
+}
+
+public enum USFGOActorChangePosition.PosChangeTargetType
+{
+	ACTOR = 1,
+}
+
+public enum USFGOActorChangePosition.PosSetType
+{
+	TARGET = 0,
+	TARGET_OTHER_FRONT = 1,
+	TARGET_OTHER_BACK = 2,
+}
+
+public enum USFGOActorUpdateScale.UpdateType
+{
+	RATIO = 0,
+	OVERWRITE = 1,
+}
+
+public enum FGOTarget
+{
+	ActorObject = 0,
+	EnemyObject = 1,
+	Zero = 2,
+	Camera = 3,
+	Actor1 = 4,
+	Actor2 = 5,
+	Actor3 = 6,
+	Actor4 = 7,
+	Actor5 = 8,
+	Actor6 = 9,
+	Node = 10,
+}
+
+public enum USFGOCameraEffectEvent.CameraEffectType
+{
+	Bloom = 0,
+	MotionBlur = 1,
+	Vignet = 2,
+	Grayscale = 3,
+}
+
+public enum USFGOChangeShaderProperty.PropertyType
+{
+	Float = 0,
+	Int = 1,
+}
+
+public enum USFGOCheckPlayerTypeFlip.FGOFlipPlayerType
+{
+	None = 0,
+	Player = 1,
+	Enemy = 2,
+}
+
+public enum USFGOChrAlphaChangeEvent.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+	Other = 4,
+}
+
+public enum USFGOChrBulrEvent.MODE
+{
+	BULR_VALID = 0,
+	BULR_LAG = 1,
+}
+
+public enum USFGOChrColorChange2Event.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+	Other = 4,
+}
+
+public enum USFGOChrColorChangeEvent.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+	Other = 4,
+}
+
+public enum USFGOChrDispChangeEvent.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+}
+
+public enum USFGOChrShadowColorSetEvent.ChangeTarget
+{
+	Actor = 0,
+	PlayerSide = 1,
+	EnemySide = 2,
+	All = 3,
+}
+
+public enum USFGOCreateEffectEvent.EffectCategory
+{
+	ServantNoblePhantasm = 0,
+	Servant = 1,
+	Weapon = 2,
+	Common = 3,
+}
+
+public enum USFGOCreateEffectEvent.EffectTarget
+{
+	Actor = 0,
+	Target = 1,
+	DamageTagets = 2,
+	BuffTargets = 3,
+	DebuffTargets = 4,
+	PlayerParty = 5,
+	EnemyParty = 6,
+	All = 7,
+}
+
+public enum USFGOObjectFlip.FGOFlipTarget
+{
+	None = 0,
+	X = 1,
+	Y = 2,
+	Z = 4,
+	X_Y = 3,
+	X_Z = 5,
+	Y_Z = 6,
+	X_Y_Z = 7,
+}
+
+public enum USFGOPlayAudioEvent.AudioCategory
+{
+	ServantNoblePhantasm = 0,
+	ServantBattle = 1,
+	ServantNormal = 2,
+	Common = 3,
+	BattleCommon = 4,
+	Weapon = 5,
+}
+
+public enum USFGOPlayAudioEvent.AudioType
+{
+	Auto = 0,
+	SE = 1,
+	Voice = 2,
+	VoiceNotStop = 3,
+}
+
+public enum USFGOResetCharacterPositionEvent.CharacterPosition
+{
+	ResetAll = 0,
+	ResetPlayers = 1,
+	ResetEnemies = 2,
+}
+
+public enum USFGOSetAudioGroupIndexConditional.WeightIndex.VoiceStrParam
+{
+	SVT_ID = 0,
+	VOICE_PREFIX = 1,
+	VOICE_ID = 2,
+	TERM = 3,
+}
+
+public enum USFGOSetAudioGroupIndexConditional.AudioGroupData.ApplySide
+{
+	ALL = 0,
+	PLAYER = 1,
+	ENEMY = 2,
+}
+
+public enum USFGOTargetEffectSwitchEvent.EffectSwitch
+{
+	Off = 0,
+	On = 1,
+}
+
+public enum USFGOTargetEffectSwitchEvent.SwitchType
+{
+	SwitchActive = 0,
+	SwitchParticle = 1,
+}
+
+public enum USFGOToggleImageEffect.ImageEffectType
+{
+	Constrast = 0,
+	Saturation = 1,
+}
+
+public enum UILayer
+{
+	Front = 0,
+	Middle = 1,
+	Back = 2,
+}
+
+public enum UIPosition
+{
+	Center = 0,
+	TopLeft = 1,
+	TopRight = 2,
+	BottomLeft = 3,
+	BottomRight = 4,
+}
+
+public enum PropertyTypeInfo
+{
+	Int = 0,
+	Long = 1,
+	Float = 2,
+	Double = 3,
+	Bool = 4,
+	Vec2 = 5,
+	Vec3 = 6,
+	Vec4 = 7,
+	Quat = 8,
+	Colour = 9,
+}
+
+public enum USRecord.PlayerResolution
+{
+	_1920x1080 = 0,
+	_1280x720 = 1,
+	_960x540 = 2,
+	_854x480 = 3,
+	_720x576 = 4,
+	_640x480 = 5,
+	_Custom = 6,
+}
+
+public enum USRecord.FrameRate
+{
+	_24 = 0,
+	_25 = 1,
+	_30 = 2,
+	_50 = 3,
+	_60 = 4,
+}
+
+public enum USRecord.Upscaling
+{
+	_1 = 0,
+	_2 = 1,
+	_4 = 2,
+	_8 = 3,
+}
+
+public enum SplineOrientationMode
+{
+	ManualOrientation = 0,
+	LookAtTransform = 1,
+	LookAhead = 2,
+}
+
+public enum SplineType
+{
+	StraightLine = 0,
+	QuadraticBezier = 1,
+	CubicBezier = 2,
+	CatmullRom = 3,
+}
+
+public enum Easing.EasingType
+{
+	Linear = 0,
+	QuadraticEaseOut = 1,
+	QuadraticEaseIn = 2,
+	QuadraticEaseInOut = 3,
+	QuadraticEaseOutIn = 4,
+	SineEaseOut = 5,
+	SineEaseIn = 6,
+	SineEaseInOut = 7,
+	SineEaseOutIn = 8,
+	ExponentialEaseOut = 9,
+	ExponentialEaseIn = 10,
+	ExponentialEaseInOut = 11,
+	ExponentialEaseOutIn = 12,
+	CirclicEaseOut = 13,
+	CirclicEaseIn = 14,
+	CirclicEaseInOut = 15,
+	CirclicEaseOutIn = 16,
+	CubicEaseOut = 17,
+	CubicEaseIn = 18,
+	CubicEaseInOut = 19,
+	CubicEaseOutIn = 20,
+	QuarticEaseOut = 21,
+	QuarticEaseIn = 22,
+	QuarticEaseInOut = 23,
+	QuarticEaseOutIn = 24,
+	QuinticEaseOut = 25,
+	QuinticEaseIn = 26,
+	QuinticEaseInOut = 27,
+	QuinticEaseOutIn = 28,
+	ElasticEaseOut = 29,
+	ElasticEaseIn = 30,
+	ElasticEaseInOut = 31,
+	ElasticEaseOutIn = 32,
+	BounceEaseOut = 33,
+	BounceEaseIn = 34,
+	BounceEaseInOut = 35,
+	BounceEaseOutIn = 36,
+	BackEaseOut = 37,
+	BackEaseIn = 38,
+	BackEaseInOut = 39,
+	BackEaseOutIn = 40,
+}
+
+public enum ShakeType
+{
+	None = 0,
+	Position = 1,
+	Rotation = 2,
+	Both = 3,
+}
+
+public enum TypeOfTransition
+{
+	Cut = 0,
+	Dissolve = 1,
+	WipeLeft = 2,
+	WipeRight = 3,
+	WipeUp = 4,
+	WipeDown = 5,
+}
+
+public enum iTweenFsmActionSimple.AxisRestriction
+{
+	none = 0,
+	x = 1,
+	y = 2,
+	z = 3,
+	xy = 4,
+	xz = 5,
+	yz = 6,
+}
+
+public enum FGOActorAnimation.ANIMATIONNAME
+{
+	NONE = 0,
+	attack_a = 1,
+	attack_b = 2,
+	attack_q = 3,
+	attack_gen = 4,
+	spell = 5,
+	damage_01 = 6,
+	step_front = 7,
+	step_back = 8,
+	wait = 9,
+	treasure_arms = 10,
+	death_01 = 11,
+	attack_ex = 12,
+	attack_a02 = 13,
+	attack_b02 = 14,
+	attack_q02 = 15,
+	attack_gen02 = 16,
+	attack_ex02 = 17,
+	attack_a03 = 18,
+	attack_b03 = 19,
+	attack_q03 = 20,
+	attack_gen03 = 21,
+	attack_ex03 = 22,
+	spell02 = 23,
+	spell03 = 24,
+	step_back02 = 25,
+	step_front02 = 26,
+	attack_a04 = 27,
+	attack_b04 = 28,
+	attack_q04 = 29,
+	attack_gen04 = 30,
+	attack_ex04 = 31,
+	damage_02 = 32,
+	spell_loop = 33,
+	treasureArms1_a = 34,
+	treasureArms2_a = 35,
+	treasureArms3_a = 36,
+	treasureArms4_a = 37,
+	treasureArms5_a = 38,
+	wait02 = 39,
+	wait03 = 40,
+	attack_a05 = 41,
+	attack_b05 = 42,
+	attack_q05 = 43,
+	attack_gen05 = 44,
+	attack_ex05 = 45,
+	sleep_wait01 = 46,
+	spell04 = 47,
+	spell05 = 48,
+	counter_wait01 = 49,
+	counter_attack01 = 50,
+}
+
+public enum FGOActorBulr.MODE
+{
+	BULR_VALID = 0,
+	BULR_LAG = 1,
+}
+
+public enum FGOActorChangeLimitCount.ACTION
+{
+	CHANGE = 0,
+	CHANGE_BASE = 1,
+	RESET = 2,
+}
+
+public enum FGOActorCheck.CHECK
+{
+	NONE = 0,
+	PREVATTACK_ME = 1,
+	NEXTATTACK_ME = 2,
+	ISPLAYER = 3,
+	ISENEMY = 4,
+	STEP_IN = 5,
+	ISSHADOW = 6,
+	ISMONSTER = 7,
+	ISDEAD = 8,
+	IS_SUCCEEDED_MOVING_TO_SUBMEMBER = 9,
+}
+
+public enum FGOActorCutIn.TYPE
+{
+	RTLD = 1,
+	LTRD = 2,
+	CENTER = 3,
+	INPUT_NAME = 4,
+}
+
+public enum FGOActorEffect.PROC
+{
+	NAME_INPUT = 0,
+	DAMAGE_1 = 1,
+	DAMAGE_2 = 2,
+	DAMAGE_3 = 3,
+	DAMAGE_4 = 4,
+	DAMAGE_5 = 5,
+	DAMAGE_6 = 6,
+}
+
+public enum FGOActorLogic.LOGIC
+{
+	NONE = 0,
+	END_FINISH = 1,
+	ON_SKIP_VOICE = 2,
+	OFF_SKIP_VOICE = 3,
+	DROP_ITEM = 4,
+	ON_DRESS = 5,
+	OFF_DRESS = 6,
+	LOAD_CALL = 7,
+	STOP_VOICE = 8,
+	ON_SKIP_DEAD = 9,
+	OFF_SKIP_DEAD = 10,
+}
+
+public enum FGOActorMotion.MOTION
+{
+	NONE = 0,
+	JUMP = 1,
+	STEP = 2,
+	BACKSTEP = 3,
+	DASHATTACK = 4,
+	STEP_WAIT = 5,
+	TREASURE_ARMS = 6,
+	CANCEL = 7,
+	STEP_USE_PARAM = 8,
+	BACKSTEP_USE_PARAM = 9,
+}
+
+public enum FGOActorParticleEffectSwitch.PARTICLE_SWITCH_TYPE
+{
+	STOP = 0,
+	PLAY = 1,
+}
+
+public enum FGOActorSetAttackTarget.TARGET_POS
+{
+	LEFT = 0,
+	CENTER = 1,
+	RIGHT = 2,
+}
+
+public enum FGOActorShowMessage.TYPE
+{
+	NOBLE_NAME = 0,
+	COMMON = 1,
+}
+
+public enum FGOActorSwitchWidget.WidgetType
+{
+	ShadowObject = 0,
+	SpecialShadowObject = 1,
+	ShadowServantAura = 2,
+	Find = 3,
+}
+
+public enum FGOActorSystemLogic.LOGIC
+{
+	NONE = 0,
+	ON_SKIP_DEAD = 1,
+	OFF_SKIP_DEAD = 2,
+}
+
+public enum FGOActorVoiceDesignate.CheckType
+{
+	None = 0,
+	Skill = 1,
+}
+
+public enum FGOBattleStatusCheck.CHECK
+{
+	NONE = 0,
+	CRITICAL_PERFORMANCE = 1,
+}
+
+public enum FGOCheckAttackSide.CheckType
+{
+	NEXT = 0,
+	TURN_START = 1,
+	TURN_END = 2,
+	NEXT_ACTION_ATTACKED = 3,
+	PREV_ACTION_ATTACKED = 4,
+}
+
+public enum FGOCheckBattleFaze.FAZE
+{
+	TACTICAL = 0,
+	BATTLE = 1,
+}
+
+public enum FGOEffectFirstTimeScale.PROC
+{
+	SET = 0,
+	RESET = 1,
+}
+
+public enum FGOFieldGimmick.STATE
+{
+	SET = 0,
+	START = 1,
+	END = 2,
+	WAIT_VOICE = 3,
+}
+
+public enum FGOFieldLogic.PROC
+{
+	START_REPLACE = 0,
+	LOAD_TARGETACTOR = 1,
+	LOAD_REPLACE = 2,
+	PT_STEPOUT = 3,
+	LOAD_PT = 4,
+	LOAD_FIELD_CALL = 5,
+	BEFORE_FIELD_CALL_EFFECT = 6,
+	AFTER_FIELD_CALL_EFFECT = 7,
+	DISPLAY_DEFENCE_TARGET = 8,
+}
+
+public enum FGOFieldSkillCutIn.ActionType
+{
+	Load = 0,
+	Play = 1,
+	Release = 2,
+	Finish = 3,
+	Skip = 4,
+}
+
+public enum FGOGetBattleParam.PARAM
+{
+	WAVE = 0,
+	TURN = 1,
+	EFFECT_BGM_ID = 2,
+}
+
+public enum FGOLogic.PROC
+{
+	INIT_QUEST = 0,
+	DRAW_COMMAND = 1,
+	CHECK_COMBO = 2,
+	INIT_BATTLETURN = 3,
+	SELECT_TACTICAL = 4,
+	END_BATTLETURN = 5,
+	CHECK_ENDBATTLE = 6,
+	TURN_PROGRSSING = 7,
+	CHECK_BATTLEEND = 8,
+	TEST_INITBATTLETURN = 9,
+	LOAD_N_STAGE = 10,
+	ENTRY_SUBMEMBER = 11,
+	CHECK_NEXTBATTLE = 12,
+	SET_NEXTBATTLE = 13,
+	START_BATTLETURN = 14,
+	PROC_WIN = 15,
+	PROC_LOSE = 16,
+	END_BATTLE = 17,
+	CONNECT_BATTLEEND = 18,
+	SHOW_RESULT = 19,
+	LOAD_NEXT = 20,
+	START_CONTINUE = 21,
+	RECOVERPT = 22,
+	START_COMMAND = 23,
+	ENTRY_CHECK = 24,
+	ENTRY_WAIT = 25,
+	LOSE_PERFORMANCE = 26,
+	FIELDAI_STARTWAVE = 27,
+	BOOSTITEM = 28,
+	WAVEBUFF = 29,
+	FIRSTENTRY = 30,
+	ENEMYAI_WAVE = 31,
+	FIELDAI_TURNSTART = 32,
+	START_CONTINUE_TURN = 33,
+	ENTRY_CHECK_TACTICAL = 34,
+	ENTRY_WAIT_TACTICAL = 35,
+	RECOVERPT_TACTICAL = 36,
+	QUEST_BEHAVIOR = 37,
+	GIMMICK = 38,
+	STAR_DIRECTION = 39,
+	ENTRY_CHECK_EVENT = 40,
+	DROP_ITEM_COLLECTION = 41,
+	FORCE_DROP_ITEM = 42,
+	CHECK_ENDBATTLE_IGNORE_TURN = 43,
+	CHECK_REMAIN_BATTLE_END_WAVE = 44,
+	BOOST_SKILL = 45,
+	ASSIST = 46,
+	FIELDAI_ENTRY = 47,
+	PRECHECK_ENDBATTLE = 48,
+	SERVANT_AI_WAVE = 49,
+	SERVANT_AI_TURN_START = 50,
+	TURN_START_FUNCTION = 51,
+	SERVANT_AI_BEFORE_MOVE_WAVE = 52,
+	FIELDAI_BEFORE_MOVE_WAVE = 53,
+	PROGRESS_INTERVAL_TURN = 54,
+	LOAD_N_STAGE_PLAYER = 55,
+	START_CONTINUE_WAVE_RESTART = 56,
+	INITIALIZE_WAVE_RESTART = 57,
+	STAGE_CUTIN = 58,
+	WAIT_DROP_ITEM_COLLECT = 59,
+	FIELD_AI_BEFORE_WAVE_START_ANIMATION = 60,
+	START_CONTINUE_INTERRUPTION = 61,
+}
+
+public enum FGOPerformance.Effect
+{
+	QUEST_START = 0,
+	QUEST_CLEAR = 1,
+	QUEST_OVER = 2,
+	BATTLE_START = 3,
+	BATTLE_WIN = 4,
+	BATTLE_LOSE = 5,
+	ACTION_BATTLE = 6,
+	END_SELECTCOMMAND = 7,
+	ACTION_ABILITY = 8,
+	MOVE_TACTICAL = 9,
+	MOVE_COMMAND = 10,
+	MOVE_ACTION = 11,
+	MOVE_NEXTBATTLE = 12,
+	PROC_BUFF = 13,
+	RAIDATTACK = 14,
+	UPDATE_VIEW = 15,
+	PLAY_SHIFTSERVANT = 16,
+	PLAY_SHIFTEFFECT = 17,
+	SET_TIMEACCELERATION = 18,
+	RESET_TIMEACCELERATION = 19,
+	PLAY_CHANGESERVANT = 20,
+	PLAY_CHANGEBG = 21,
+	UPDATE_FOV = 22,
+	CHECK_RAIDATTACK = 23,
+	DOWNLOAD_ASSETBUNDLE = 24,
+	SAVE_PART_ACTION_TIMEACCELERATION = 25,
+	RESET_PART_ACTION_TIMEACCELERATION = 26,
+	PLAY_SHIFTGAUGECHANGE = 27,
+	PLAY_SHIFTGAUGECHANGE_SERVANT = 28,
+	SET_TIMEACCELERATION_DIFFERENT = 29,
+	FORCE_RESET_TIMEACCELERATION = 30,
+	PREV_TACTICAL = 31,
+	LOSS_COMMAND_SPELL = 32,
+	MOVE_TO_SUBMEMBER = 33,
+	START_FADE_OUT = 34,
+	PREV_WAVE_START_ANIMATION_AFTER_AI = 35,
+}
+
+public enum FGOPlayStarDirection.DirectionType
+{
+	Refresh = 0,
+	Recovery = 1,
+	Add = 2,
+}
+
+public enum FGOQuestStartEffect.ActionType
+{
+	Load = 0,
+	Play = 1,
+	Release = 2,
+}
+
+public enum FGOSetPopupDisplayLayerType.PopupLayerType
+{
+	e2DUI = 0,
+	eFront2DUI = 1,
+}
+
+public enum FGOSpecifiedBattleStartVoice.TYPE
+{
+	CHECK = 0,
+	PLAY = 1,
+}
+
+public enum GetAppearActorObject.SIDE
+{
+	PLAYER = 0,
+	ENEMY = 1,
+}
+
+public enum ManagerConfigCheck.Kind
+{
+	USE_DEBUG_COMMAND = 0,
+}
+
+public enum ShowDefenceTargetAddBuffEffect.AddType
+{
+	NoblePhantasm = 0,
+}
+
+private enum Json.Parser.TOKEN
+{
+	NONE = 0,
+	CURLY_OPEN = 1,
+	CURLY_CLOSE = 2,
+	SQUARED_OPEN = 3,
+	SQUARED_CLOSE = 4,
+	COLON = 5,
+	COMMA = 6,
+	STRING = 7,
+	NUMBER = 8,
+	TRUE = 9,
+	FALSE = 10,
+	NULL = 11,
+}
+
+public enum TabKind
+{
+	SERVANT = 0,
+	SERVANT_EQUIP = 1,
+	COMMAND_CODE = 2,
+}
+
+public enum ModeKind
+{
+	MAIN = 0,
+	STATUS = 1,
+	LOCK = 2,
+	CHOICE = 3,
+	PUSH = 4,
+}
+
+internal enum Interop.Error
+{
+	SUCCESS = 0,
+	E2BIG = 65537,
+	EACCES = 65538,
+	EADDRINUSE = 65539,
+	EADDRNOTAVAIL = 65540,
+	EAFNOSUPPORT = 65541,
+	EAGAIN = 65542,
+	EALREADY = 65543,
+	EBADF = 65544,
+	EBADMSG = 65545,
+	EBUSY = 65546,
+	ECANCELED = 65547,
+	ECHILD = 65548,
+	ECONNABORTED = 65549,
+	ECONNREFUSED = 65550,
+	ECONNRESET = 65551,
+	EDEADLK = 65552,
+	EDESTADDRREQ = 65553,
+	EDOM = 65554,
+	EDQUOT = 65555,
+	EEXIST = 65556,
+	EFAULT = 65557,
+	EFBIG = 65558,
+	EHOSTUNREACH = 65559,
+	EIDRM = 65560,
+	EILSEQ = 65561,
+	EINPROGRESS = 65562,
+	EINTR = 65563,
+	EINVAL = 65564,
+	EIO = 65565,
+	EISCONN = 65566,
+	EISDIR = 65567,
+	ELOOP = 65568,
+	EMFILE = 65569,
+	EMLINK = 65570,
+	EMSGSIZE = 65571,
+	EMULTIHOP = 65572,
+	ENAMETOOLONG = 65573,
+	ENETDOWN = 65574,
+	ENETRESET = 65575,
+	ENETUNREACH = 65576,
+	ENFILE = 65577,
+	ENOBUFS = 65578,
+	ENODEV = 65580,
+	ENOENT = 65581,
+	ENOEXEC = 65582,
+	ENOLCK = 65583,
+	ENOLINK = 65584,
+	ENOMEM = 65585,
+	ENOMSG = 65586,
+	ENOPROTOOPT = 65587,
+	ENOSPC = 65588,
+	ENOSYS = 65591,
+	ENOTCONN = 65592,
+	ENOTDIR = 65593,
+	ENOTEMPTY = 65594,
+	ENOTSOCK = 65596,
+	ENOTSUP = 65597,
+	ENOTTY = 65598,
+	ENXIO = 65599,
+	EOVERFLOW = 65600,
+	EPERM = 65602,
+	EPIPE = 65603,
+	EPROTO = 65604,
+	EPROTONOSUPPORT = 65605,
+	EPROTOTYPE = 65606,
+	ERANGE = 65607,
+	EROFS = 65608,
+	ESPIPE = 65609,
+	ESRCH = 65610,
+	ESTALE = 65611,
+	ETIMEDOUT = 65613,
+	ETXTBSY = 65614,
+	EXDEV = 65615,
+	ESOCKTNOSUPPORT = 65630,
+	EPFNOSUPPORT = 65632,
+	ESHUTDOWN = 65644,
+	EHOSTDOWN = 65648,
+	ENODATA = 65649,
+	EOPNOTSUPP = 65597,
+	EWOULDBLOCK = 65542,
+}
+
+internal enum Interop.Sys.NodeType
+{
+	DT_UNKNOWN = 0,
+	DT_FIFO = 1,
+	DT_CHR = 2,
+	DT_DIR = 4,
+	DT_BLK = 6,
+	DT_REG = 8,
+	DT_LNK = 10,
+	DT_SOCK = 12,
+	DT_WHT = 14,
+}
+
+internal enum Interop.Sys.FileStatusFlags
+{
+	None = 0,
+	HasBirthTime = 1,
+}
+
+internal enum Interop.Sys.Permissions
+{
+	Mask = 511,
+	S_IRWXU = 448,
+	S_IRUSR = 256,
+	S_IWUSR = 128,
+	S_IXUSR = 64,
+	S_IRWXG = 56,
+	S_IRGRP = 32,
+	S_IWGRP = 16,
+	S_IXGRP = 8,
+	S_IRWXO = 7,
+	S_IROTH = 4,
+	S_IWOTH = 2,
+	S_IXOTH = 1,
+}
+
+internal enum CertificateImportFlags
+{
+	None = 0,
+	DisableNativeBackend = 1,
+	DisableAutomaticFallback = 2,
+}
+
+private enum SimpleCollator.ExtenderType
+{
+	None = 0,
+	Simple = 1,
+	Voiced = 2,
+	Conditional = 3,
+	Buggy = 4,
+}
+
+public enum BigInteger.Sign
+{
+	Zero = 0,
+	Positive = 1,
+}
+
+internal enum ConfidenceFactor
+{
+	ExtraLow = 0,
+	Low = 1,
+	Medium = 2,
+	High = 3,
+	ExtraHigh = 4,
+	Provable = 5,
+}
+
+internal enum AsyncStatus
+{
+	Started = 0,
+	Completed = 1,
+	Canceled = 2,
+	Error = 3,
+}
+
+private enum string.TrimType
+{
+	Head = 0,
+	Tail = 1,
+	Both = 2,
+}
+
+private enum TimeZoneInfo.TZVersion
+{
+	V1 = 0,
+	V2 = 1,
+	V3 = 2,
+}
+
+public enum AttributeTargets
+{
+	Assembly = 1,
+	Module = 2,
+	Class = 4,
+	Struct = 8,
+	Enum = 16,
+	Constructor = 32,
+	Method = 64,
+	Property = 128,
+	Field = 256,
+	Event = 512,
+	Interface = 1024,
+	Parameter = 2048,
+	Delegate = 4096,
+	ReturnValue = 8192,
+	GenericParameter = 16384,
+	All = 32767,
+}
+
+public enum Base64FormattingOptions
+{
+	None = 0,
+	InsertLineBreaks = 1,
+}
+
+public enum DateTimeKind
+{
+	Unspecified = 0,
+	Utc = 1,
+	Local = 2,
+}
+
+public enum DayOfWeek
+{
+	Sunday = 0,
+	Monday = 1,
+	Tuesday = 2,
+	Wednesday = 3,
+	Thursday = 4,
+	Friday = 5,
+	Saturday = 6,
+}
+
+internal enum DateTimeParse.DTT
+{
+	End = 0,
+	NumEnd = 1,
+	NumAmpm = 2,
+	NumSpace = 3,
+	NumDatesep = 4,
+	NumTimesep = 5,
+	MonthEnd = 6,
+	MonthSpace = 7,
+	MonthDatesep = 8,
+	NumDatesuff = 9,
+	NumTimesuff = 10,
+	DayOfWeek = 11,
+	YearSpace = 12,
+	YearDateSep = 13,
+	YearEnd = 14,
+	TimeZone = 15,
+	Era = 16,
+	NumUTCTimeMark = 17,
+	Unk = 18,
+	NumLocalTimeMark = 19,
+	Max = 20,
+}
+
+internal enum DateTimeParse.TM
+{
+	AM = 0,
+	PM = 1,
+}
+
+internal enum DateTimeParse.DS
+{
+	BEGIN = 0,
+	N = 1,
+	NN = 2,
+	D_Nd = 3,
+	D_NN = 4,
+	D_NNd = 5,
+	D_M = 6,
+	D_MN = 7,
+	D_NM = 8,
+	D_MNd = 9,
+	D_NDS = 10,
+	D_Y = 11,
+	D_YN = 12,
+	D_YNd = 13,
+	D_YM = 14,
+	D_YMd = 15,
+	D_S = 16,
+	T_S = 17,
+	T_Nt = 18,
+	T_NNt = 19,
+	ERROR = 20,
+	DX_NN = 21,
+	DX_NNN = 22,
+	DX_MN = 23,
+	DX_NM = 24,
+	DX_MNN = 25,
+	DX_DS = 26,
+	DX_DSN = 27,
+	DX_NDS = 28,
+	DX_NNDS = 29,
+	DX_YNN = 30,
+	DX_YMN = 31,
+	DX_YN = 32,
+	DX_YM = 33,
+	TX_N = 34,
+	TX_NN = 35,
+	TX_NNN = 36,
+	TX_TS = 37,
+	DX_NNY = 38,
+}
+
+internal enum DTSubStringType
+{
+	Unknown = 0,
+	Invalid = 1,
+	Number = 2,
+	End = 3,
+	Other = 4,
+}
+
+internal enum ParseFailureKind
+{
+	None = 0,
+	ArgumentNull = 1,
+	Format = 2,
+	FormatWithParameter = 3,
+	FormatWithOriginalDateTime = 4,
+	FormatWithFormatSpecifier = 5,
+	FormatWithOriginalDateTimeAndParameter = 6,
+	FormatBadDateTimeCalendar = 7,
+}
+
+internal enum ParseFlags
+{
+	HaveYear = 1,
+	HaveMonth = 2,
+	HaveDay = 4,
+	HaveHour = 8,
+	HaveMinute = 16,
+	HaveSecond = 32,
+	HaveTime = 64,
+	HaveDate = 128,
+	TimeZoneUsed = 256,
+	TimeZoneUtc = 512,
+	ParsedMonthName = 1024,
+	CaptureOffset = 2048,
+	YearDefault = 4096,
+	Rfc1123Pattern = 8192,
+	UtcSortPattern = 16384,
+}
+
+internal enum TokenType
+{
+	NumberToken = 1,
+	YearNumberToken = 2,
+	Am = 3,
+	Pm = 4,
+	MonthToken = 5,
+	EndOfString = 6,
+	DayOfWeekToken = 7,
+	TimeZoneToken = 8,
+	EraToken = 9,
+	DateWordToken = 10,
+	UnknownToken = 11,
+	HebrewNumber = 12,
+	JapaneseEraToken = 13,
+	TEraToken = 14,
+	IgnorableSymbol = 15,
+	SEP_Unk = 256,
+	SEP_End = 512,
+	SEP_Space = 768,
+	SEP_Am = 1024,
+	SEP_Pm = 1280,
+	SEP_Date = 1536,
+	SEP_Time = 1792,
+	SEP_YearSuff = 2048,
+	SEP_MonthSuff = 2304,
+	SEP_DaySuff = 2560,
+	SEP_HourSuff = 2816,
+	SEP_MinuteSuff = 3072,
+	SEP_SecondSuff = 3328,
+	SEP_LocalTimeMark = 3584,
+	SEP_DateOrOffset = 3840,
+	RegularTokenMask = 255,
+	SeparatorTokenMask = 65280,
+}
+
+private enum Guid.GuidStyles
+{
+	None = 0,
+	AllowParenthesis = 1,
+	AllowBraces = 2,
+	AllowDashes = 4,
+	AllowHexPrefix = 8,
+	RequireParenthesis = 16,
+	RequireBraces = 32,
+	RequireDashes = 64,
+	RequireHexPrefix = 128,
+	HexFormat = 160,
+	NumberFormat = 0,
+	DigitFormat = 64,
+	BraceFormat = 96,
+	ParenthesisFormat = 80,
+	Any = 15,
+}
+
+private enum Guid.GuidParseThrowStyle
+{
+	None = 0,
+	All = 1,
+	AllButOverflow = 2,
+}
+
+private enum Guid.ParseFailureKind
+{
+	None = 0,
+	ArgumentNull = 1,
+	Format = 2,
+	FormatWithParameter = 3,
+	NativeException = 4,
+	FormatWithInnerException = 5,
+}
+
+public enum MidpointRounding
+{
+	ToEven = 0,
+	AwayFromZero = 1,
+}
+
+public enum StringComparison
+{
+	CurrentCulture = 0,
+	CurrentCultureIgnoreCase = 1,
+	InvariantCulture = 2,
+	InvariantCultureIgnoreCase = 3,
+	Ordinal = 4,
+	OrdinalIgnoreCase = 5,
+}
+
+public enum StringSplitOptions
+{
+	None = 0,
+	RemoveEmptyEntries = 1,
+}
+
+internal enum TimeZoneInfoOptions
+{
+	None = 1,
+	NoThrowOnInvalidTime = 2,
+}
+
+public enum TypeCode
+{
+	Empty = 0,
+	Object = 1,
+	DBNull = 2,
+	Boolean = 3,
+	Char = 4,
+	SByte = 5,
+	Byte = 6,
+	Int16 = 7,
+	UInt16 = 8,
+	Int32 = 9,
+	UInt32 = 10,
+	Int64 = 11,
+	UInt64 = 12,
+	Single = 13,
+	Double = 14,
+	Decimal = 15,
+	DateTime = 16,
+	String = 18,
+}
+
+public enum ConsoleColor
+{
+	Black = 0,
+	DarkBlue = 1,
+	DarkGreen = 2,
+	DarkCyan = 3,
+	DarkRed = 4,
+	DarkMagenta = 5,
+	DarkYellow = 6,
+	Gray = 7,
+	DarkGray = 8,
+	Blue = 9,
+	Green = 10,
+	Cyan = 11,
+	Red = 12,
+	Magenta = 13,
+	Yellow = 14,
+	White = 15,
+}
+
+public enum ConsoleKey
+{
+	Backspace = 8,
+	Tab = 9,
+	Clear = 12,
+	Enter = 13,
+	Pause = 19,
+	Escape = 27,
+	Spacebar = 32,
+	PageUp = 33,
+	PageDown = 34,
+	End = 35,
+	Home = 36,
+	LeftArrow = 37,
+	UpArrow = 38,
+	RightArrow = 39,
+	DownArrow = 40,
+	Select = 41,
+	Print = 42,
+	Execute = 43,
+	PrintScreen = 44,
+	Insert = 45,
+	Delete = 46,
+	Help = 47,
+	D0 = 48,
+	D1 = 49,
+	D2 = 50,
+	D3 = 51,
+	D4 = 52,
+	D5 = 53,
+	D6 = 54,
+	D7 = 55,
+	D8 = 56,
+	D9 = 57,
+	A = 65,
+	B = 66,
+	C = 67,
+	D = 68,
+	E = 69,
+	F = 70,
+	G = 71,
+	H = 72,
+	I = 73,
+	J = 74,
+	K = 75,
+	L = 76,
+	M = 77,
+	N = 78,
+	O = 79,
+	P = 80,
+	Q = 81,
+	R = 82,
+	S = 83,
+	T = 84,
+	U = 85,
+	V = 86,
+	W = 87,
+	X = 88,
+	Y = 89,
+	Z = 90,
+	LeftWindows = 91,
+	RightWindows = 92,
+	Applications = 93,
+	Sleep = 95,
+	NumPad0 = 96,
+	NumPad1 = 97,
+	NumPad2 = 98,
+	NumPad3 = 99,
+	NumPad4 = 100,
+	NumPad5 = 101,
+	NumPad6 = 102,
+	NumPad7 = 103,
+	NumPad8 = 104,
+	NumPad9 = 105,
+	Multiply = 106,
+	Add = 107,
+	Separator = 108,
+	Subtract = 109,
+	Decimal = 110,
+	Divide = 111,
+	F1 = 112,
+	F2 = 113,
+	F3 = 114,
+	F4 = 115,
+	F5 = 116,
+	F6 = 117,
+	F7 = 118,
+	F8 = 119,
+	F9 = 120,
+	F10 = 121,
+	F11 = 122,
+	F12 = 123,
+	F13 = 124,
+	F14 = 125,
+	F15 = 126,
+	F16 = 127,
+	F17 = 128,
+	F18 = 129,
+	F19 = 130,
+	F20 = 131,
+	F21 = 132,
+	F22 = 133,
+	F23 = 134,
+	F24 = 135,
+	BrowserBack = 166,
+	BrowserForward = 167,
+	BrowserRefresh = 168,
+	BrowserStop = 169,
+	BrowserSearch = 170,
+	BrowserFavorites = 171,
+	BrowserHome = 172,
+	VolumeMute = 173,
+	VolumeDown = 174,
+	VolumeUp = 175,
+	MediaNext = 176,
+	MediaPrevious = 177,
+	MediaStop = 178,
+	MediaPlay = 179,
+	LaunchMail = 180,
+	LaunchMediaSelect = 181,
+	LaunchApp1 = 182,
+	LaunchApp2 = 183,
+	Oem1 = 186,
+	OemPlus = 187,
+	OemComma = 188,
+	OemMinus = 189,
+	OemPeriod = 190,
+	Oem2 = 191,
+	Oem3 = 192,
+	Oem4 = 219,
+	Oem5 = 220,
+	Oem6 = 221,
+	Oem7 = 222,
+	Oem8 = 223,
+	Oem102 = 226,
+	Process = 229,
+	Packet = 231,
+	Attention = 246,
+	CrSel = 247,
+	ExSel = 248,
+	EraseEndOfFile = 249,
+	Play = 250,
+	Zoom = 251,
+	NoName = 252,
+	Pa1 = 253,
+	OemClear = 254,
+}
+
+public enum ConsoleModifiers
+{
+	Alt = 1,
+	Shift = 2,
+	Control = 4,
+}
+
+public enum ConsoleSpecialKey
+{
+	ControlC = 0,
+	ControlBreak = 1,
+}
+
+private enum AppContext.SwitchValueState
+{
+	HasFalseValue = 1,
+	HasTrueValue = 2,
+	HasLookedForOverride = 4,
+	UnknownValue = 8,
+}
+
+private enum DefaultBinder.Primitives
+{
+	Boolean = 8,
+	Char = 16,
+	SByte = 32,
+	Byte = 64,
+	Int16 = 128,
+	UInt16 = 256,
+	Int32 = 512,
+	UInt32 = 1024,
+	Int64 = 2048,
+	UInt64 = 4096,
+	Single = 8192,
+	Double = 16384,
+	Decimal = 32768,
+	DateTime = 65536,
+	String = 262144,
+}
+
+private enum Enum.ParseFailureKind
+{
+	None = 0,
+	Argument = 1,
+	ArgumentNull = 2,
+	ArgumentWithParameter = 3,
+	UnhandledException = 4,
+}
+
+internal enum Exception.ExceptionMessageKind
+{
+	ThreadAbort = 1,
+	ThreadInterrupted = 2,
+	OutOfMemory = 3,
+}
+
+public enum GCCollectionMode
+{
+	Default = 0,
+	Forced = 1,
+	Optimized = 2,
+}
+
+internal enum TypeNameFormatFlags
+{
+	FormatBasic = 0,
+	FormatNamespace = 1,
+	FormatFullInst = 2,
+	FormatAssembly = 4,
+	FormatSignature = 8,
+	FormatNoVersion = 16,
+	FormatAngleBrackets = 64,
+	FormatStubInfo = 128,
+	FormatGenericParam = 256,
+	FormatSerialization = 259,
+}
+
+internal enum TypeNameKind
+{
+	Name = 0,
+	ToString = 1,
+	SerializationName = 2,
+	FullName = 3,
+}
+
+internal enum RuntimeType.MemberListType
+{
+	All = 0,
+	CaseSensitive = 1,
+	CaseInsensitive = 2,
+	HandleToInfo = 3,
+}
+
+internal enum ExceptionArgument
+{
+	obj = 0,
+	dictionary = 1,
+	dictionaryCreationThreshold = 2,
+	array = 3,
+	info = 4,
+	key = 5,
+	collection = 6,
+	list = 7,
+	match = 8,
+	converter = 9,
+	queue = 10,
+	stack = 11,
+	capacity = 12,
+	index = 13,
+	startIndex = 14,
+	value = 15,
+	count = 16,
+	arrayIndex = 17,
+	name = 18,
+	mode = 19,
+	item = 20,
+	options = 21,
+	view = 22,
+	sourceBytesToCopy = 23,
+	start = 24,
+	pointer = 25,
+	ownedMemory = 26,
+	text = 27,
+	length = 28,
+	comparer = 29,
+	comparable = 30,
+	exceptions = 31,
+	exception = 32,
+	action = 33,
+	comparison = 34,
+	startSegment = 35,
+	endSegment = 36,
+	endIndex = 37,
+	task = 38,
+	source = 39,
+	state = 40,
+	culture = 41,
+	destination = 42,
+	byteOffset = 43,
+	minimumBufferSize = 44,
+	offset = 45,
+	values = 46,
+	comparisonType = 47,
+	s = 48,
+	input = 49,
+	format = 50,
+}
+
+internal enum ExceptionResource
+{
+	Argument_ImplementIComparable = 0,
+	Argument_InvalidType = 1,
+	Argument_InvalidArgumentForComparison = 2,
+	Argument_InvalidRegistryKeyPermissionCheck = 3,
+	ArgumentOutOfRange_NeedNonNegNum = 4,
+	Arg_ArrayPlusOffTooSmall = 5,
+	Arg_NonZeroLowerBound = 6,
+	Arg_RankMultiDimNotSupported = 7,
+	Arg_RegKeyDelHive = 8,
+	Arg_RegKeyStrLenBug = 9,
+	Arg_RegSetStrArrNull = 10,
+	Arg_RegSetMismatchedKind = 11,
+	Arg_RegSubKeyAbsent = 12,
+	Arg_RegSubKeyValueAbsent = 13,
+	Argument_AddingDuplicate = 14,
+	Serialization_InvalidOnDeser = 15,
+	Serialization_MissingKeys = 16,
+	Serialization_NullKey = 17,
+	Argument_InvalidArrayType = 18,
+	NotSupported_KeyCollectionSet = 19,
+	NotSupported_ValueCollectionSet = 20,
+	ArgumentOutOfRange_SmallCapacity = 21,
+	ArgumentOutOfRange_Index = 22,
+	Argument_InvalidOffLen = 23,
+	Argument_ItemNotExist = 24,
+	ArgumentOutOfRange_Count = 25,
+	ArgumentOutOfRange_InvalidThreshold = 26,
+	ArgumentOutOfRange_ListInsert = 27,
+	NotSupported_ReadOnlyCollection = 28,
+	InvalidOperation_CannotRemoveFromStackOrQueue = 29,
+	InvalidOperation_EmptyQueue = 30,
+	InvalidOperation_EnumOpCantHappen = 31,
+	InvalidOperation_EnumFailedVersion = 32,
+	InvalidOperation_EmptyStack = 33,
+	ArgumentOutOfRange_BiggerThanCollection = 34,
+	InvalidOperation_EnumNotStarted = 35,
+	InvalidOperation_EnumEnded = 36,
+	NotSupported_SortedListNestedWrite = 37,
+	InvalidOperation_NoValue = 38,
+	InvalidOperation_RegRemoveSubKey = 39,
+	Security_RegistryPermission = 40,
+	UnauthorizedAccess_RegistryNoWrite = 41,
+	ObjectDisposed_RegKeyClosed = 42,
+	NotSupported_InComparableType = 43,
+	Argument_InvalidRegistryOptionsCheck = 44,
+	Argument_InvalidRegistryViewCheck = 45,
+	TaskT_TransitionToFinal_AlreadyCompleted = 46,
+	TaskCompletionSourceT_TrySetException_NullException = 47,
+	TaskCompletionSourceT_TrySetException_NoExceptions = 48,
+	NotSupported_StringComparison = 49,
+	InvalidOperation_NullArray = 50,
+}
+
+public enum Environment.SpecialFolder
+{
+	MyDocuments = 5,
+	Desktop = 0,
+	MyComputer = 17,
+	Programs = 2,
+	Personal = 5,
+	Favorites = 6,
+	Startup = 7,
+	Recent = 8,
+	SendTo = 9,
+	StartMenu = 11,
+	MyMusic = 13,
+	DesktopDirectory = 16,
+	Templates = 21,
+	ApplicationData = 26,
+	LocalApplicationData = 28,
+	InternetCache = 32,
+	Cookies = 33,
+	History = 34,
+	CommonApplicationData = 35,
+	System = 37,
+	ProgramFiles = 38,
+	MyPictures = 39,
+	CommonProgramFiles = 43,
+	MyVideos = 14,
+	NetworkShortcuts = 19,
+	Fonts = 20,
+	CommonStartMenu = 22,
+	CommonPrograms = 23,
+	CommonStartup = 24,
+	CommonDesktopDirectory = 25,
+	PrinterShortcuts = 27,
+	Windows = 36,
+	UserProfile = 40,
+	SystemX86 = 41,
+	ProgramFilesX86 = 42,
+	CommonProgramFilesX86 = 44,
+	CommonTemplates = 45,
+	CommonDocuments = 46,
+	CommonAdminTools = 47,
+	AdminTools = 48,
+	CommonMusic = 53,
+	CommonPictures = 54,
+	CommonVideos = 55,
+	Resources = 56,
+	LocalizedResources = 57,
+	CommonOemLinks = 58,
+	CDBurning = 59,
+}
+
+public enum Environment.SpecialFolderOption
+{
+	None = 0,
+	DoNotVerify = 16384,
+	Create = 32768,
+}
+
+internal enum SByteEnum
+{
+}
+
+internal enum Int16Enum
+{
+}
+
+internal enum Int32Enum
+{
+}
+
+internal enum Int64Enum
+{
+}
+
+internal enum ByteEnum
+{
+}
+
+internal enum UInt16Enum
+{
+}
+
+internal enum UInt32Enum
+{
+}
+
+internal enum UInt64Enum
+{
+}
+
+public enum PlatformID
+{
+	Win32S = 0,
+	Win32Windows = 1,
+	Win32NT = 2,
+	WinCE = 3,
+	Unix = 4,
+	Xbox = 5,
+	MacOSX = 6,
+}
+
+internal enum TermInfoNumbers
+{
+	Columns = 0,
+	InitTabs = 1,
+	Lines = 2,
+	LinesOfMemory = 3,
+	MagicCookieGlitch = 4,
+	PaddingBaudRate = 5,
+	VirtualTerminal = 6,
+	WidthStatusLine = 7,
+	NumLabels = 8,
+	LabelHeight = 9,
+	LabelWidth = 10,
+	MaxAttributes = 11,
+	MaximumWindows = 12,
+	MaxColors = 13,
+	MaxPairs = 14,
+	NoColorVideo = 15,
+	BufferCapacity = 16,
+	DotVertSpacing = 17,
+	DotHorzSpacing = 18,
+	MaxMicroAddress = 19,
+	MaxMicroJump = 20,
+	MicroColSize = 21,
+	MicroLineSize = 22,
+	NumberOfPins = 23,
+	OutputResChar = 24,
+	OutputResLine = 25,
+	OutputResHorzInch = 26,
+	OutputResVertInch = 27,
+	PrintRate = 28,
+	WideCharSize = 29,
+	Buttons = 30,
+	BitImageEntwining = 31,
+	BitImageType = 32,
+	Last = 33,
+}
+
+internal enum TermInfoStrings
+{
+	BackTab = 0,
+	Bell = 1,
+	CarriageReturn = 2,
+	ChangeScrollRegion = 3,
+	ClearAllTabs = 4,
+	ClearScreen = 5,
+	ClrEol = 6,
+	ClrEos = 7,
+	ColumnAddress = 8,
+	CommandCharacter = 9,
+	CursorAddress = 10,
+	CursorDown = 11,
+	CursorHome = 12,
+	CursorInvisible = 13,
+	CursorLeft = 14,
+	CursorMemAddress = 15,
+	CursorNormal = 16,
+	CursorRight = 17,
+	CursorToLl = 18,
+	CursorUp = 19,
+	CursorVisible = 20,
+	DeleteCharacter = 21,
+	DeleteLine = 22,
+	DisStatusLine = 23,
+	DownHalfLine = 24,
+	EnterAltCharsetMode = 25,
+	EnterBlinkMode = 26,
+	EnterBoldMode = 27,
+	EnterCaMode = 28,
+	EnterDeleteMode = 29,
+	EnterDimMode = 30,
+	EnterInsertMode = 31,
+	EnterSecureMode = 32,
+	EnterProtectedMode = 33,
+	EnterReverseMode = 34,
+	EnterStandoutMode = 35,
+	EnterUnderlineMode = 36,
+	EraseChars = 37,
+	ExitAltCharsetMode = 38,
+	ExitAttributeMode = 39,
+	ExitCaMode = 40,
+	ExitDeleteMode = 41,
+	ExitInsertMode = 42,
+	ExitStandoutMode = 43,
+	ExitUnderlineMode = 44,
+	FlashScreen = 45,
+	FormFeed = 46,
+	FromStatusLine = 47,
+	Init1string = 48,
+	Init2string = 49,
+	Init3string = 50,
+	InitFile = 51,
+	InsertCharacter = 52,
+	InsertLine = 53,
+	InsertPadding = 54,
+	KeyBackspace = 55,
+	KeyCatab = 56,
+	KeyClear = 57,
+	KeyCtab = 58,
+	KeyDc = 59,
+	KeyDl = 60,
+	KeyDown = 61,
+	KeyEic = 62,
+	KeyEol = 63,
+	KeyEos = 64,
+	KeyF0 = 65,
+	KeyF1 = 66,
+	KeyF10 = 67,
+	KeyF2 = 68,
+	KeyF3 = 69,
+	KeyF4 = 70,
+	KeyF5 = 71,
+	KeyF6 = 72,
+	KeyF7 = 73,
+	KeyF8 = 74,
+	KeyF9 = 75,
+	KeyHome = 76,
+	KeyIc = 77,
+	KeyIl = 78,
+	KeyLeft = 79,
+	KeyLl = 80,
+	KeyNpage = 81,
+	KeyPpage = 82,
+	KeyRight = 83,
+	KeySf = 84,
+	KeySr = 85,
+	KeyStab = 86,
+	KeyUp = 87,
+	KeypadLocal = 88,
+	KeypadXmit = 89,
+	LabF0 = 90,
+	LabF1 = 91,
+	LabF10 = 92,
+	LabF2 = 93,
+	LabF3 = 94,
+	LabF4 = 95,
+	LabF5 = 96,
+	LabF6 = 97,
+	LabF7 = 98,
+	LabF8 = 99,
+	LabF9 = 100,
+	MetaOff = 101,
+	MetaOn = 102,
+	Newline = 103,
+	PadChar = 104,
+	ParmDch = 105,
+	ParmDeleteLine = 106,
+	ParmDownCursor = 107,
+	ParmIch = 108,
+	ParmIndex = 109,
+	ParmInsertLine = 110,
+	ParmLeftCursor = 111,
+	ParmRightCursor = 112,
+	ParmRindex = 113,
+	ParmUpCursor = 114,
+	PkeyKey = 115,
+	PkeyLocal = 116,
+	PkeyXmit = 117,
+	PrintScreen = 118,
+	PrtrOff = 119,
+	PrtrOn = 120,
+	RepeatChar = 121,
+	Reset1string = 122,
+	Reset2string = 123,
+	Reset3string = 124,
+	ResetFile = 125,
+	RestoreCursor = 126,
+	RowAddress = 127,
+	SaveCursor = 128,
+	ScrollForward = 129,
+	ScrollReverse = 130,
+	SetAttributes = 131,
+	SetTab = 132,
+	SetWindow = 133,
+	Tab = 134,
+	ToStatusLine = 135,
+	UnderlineChar = 136,
+	UpHalfLine = 137,
+	InitProg = 138,
+	KeyA1 = 139,
+	KeyA3 = 140,
+	KeyB2 = 141,
+	KeyC1 = 142,
+	KeyC3 = 143,
+	PrtrNon = 144,
+	CharPadding = 145,
+	AcsChars = 146,
+	PlabNorm = 147,
+	KeyBtab = 148,
+	EnterXonMode = 149,
+	ExitXonMode = 150,
+	EnterAmMode = 151,
+	ExitAmMode = 152,
+	XonCharacter = 153,
+	XoffCharacter = 154,
+	EnaAcs = 155,
+	LabelOn = 156,
+	LabelOff = 157,
+	KeyBeg = 158,
+	KeyCancel = 159,
+	KeyClose = 160,
+	KeyCommand = 161,
+	KeyCopy = 162,
+	KeyCreate = 163,
+	KeyEnd = 164,
+	KeyEnter = 165,
+	KeyExit = 166,
+	KeyFind = 167,
+	KeyHelp = 168,
+	KeyMark = 169,
+	KeyMessage = 170,
+	KeyMove = 171,
+	KeyNext = 172,
+	KeyOpen = 173,
+	KeyOptions = 174,
+	KeyPrevious = 175,
+	KeyPrint = 176,
+	KeyRedo = 177,
+	KeyReference = 178,
+	KeyRefresh = 179,
+	KeyReplace = 180,
+	KeyRestart = 181,
+	KeyResume = 182,
+	KeySave = 183,
+	KeySuspend = 184,
+	KeyUndo = 185,
+	KeySbeg = 186,
+	KeyScancel = 187,
+	KeyScommand = 188,
+	KeyScopy = 189,
+	KeyScreate = 190,
+	KeySdc = 191,
+	KeySdl = 192,
+	KeySelect = 193,
+	KeySend = 194,
+	KeySeol = 195,
+	KeySexit = 196,
+	KeySfind = 197,
+	KeyShelp = 198,
+	KeyShome = 199,
+	KeySic = 200,
+	KeySleft = 201,
+	KeySmessage = 202,
+	KeySmove = 203,
+	KeySnext = 204,
+	KeySoptions = 205,
+	KeySprevious = 206,
+	KeySprint = 207,
+	KeySredo = 208,
+	KeySreplace = 209,
+	KeySright = 210,
+	KeySrsume = 211,
+	KeySsave = 212,
+	KeySsuspend = 213,
+	KeySundo = 214,
+	ReqForInput = 215,
+	KeyF11 = 216,
+	KeyF12 = 217,
+	KeyF13 = 218,
+	KeyF14 = 219,
+	KeyF15 = 220,
+	KeyF16 = 221,
+	KeyF17 = 222,
+	KeyF18 = 223,
+	KeyF19 = 224,
+	KeyF20 = 225,
+	KeyF21 = 226,
+	KeyF22 = 227,
+	KeyF23 = 228,
+	KeyF24 = 229,
+	KeyF25 = 230,
+	KeyF26 = 231,
+	KeyF27 = 232,
+	KeyF28 = 233,
+	KeyF29 = 234,
+	KeyF30 = 235,
+	KeyF31 = 236,
+	KeyF32 = 237,
+	KeyF33 = 238,
+	KeyF34 = 239,
+	KeyF35 = 240,
+	KeyF36 = 241,
+	KeyF37 = 242,
+	KeyF38 = 243,
+	KeyF39 = 244,
+	KeyF40 = 245,
+	KeyF41 = 246,
+	KeyF42 = 247,
+	KeyF43 = 248,
+	KeyF44 = 249,
+	KeyF45 = 250,
+	KeyF46 = 251,
+	KeyF47 = 252,
+	KeyF48 = 253,
+	KeyF49 = 254,
+	KeyF50 = 255,
+	KeyF51 = 256,
+	KeyF52 = 257,
+	KeyF53 = 258,
+	KeyF54 = 259,
+	KeyF55 = 260,
+	KeyF56 = 261,
+	KeyF57 = 262,
+	KeyF58 = 263,
+	KeyF59 = 264,
+	KeyF60 = 265,
+	KeyF61 = 266,
+	KeyF62 = 267,
+	KeyF63 = 268,
+	ClrBol = 269,
+	ClearMargins = 270,
+	SetLeftMargin = 271,
+	SetRightMargin = 272,
+	LabelFormat = 273,
+	SetClock = 274,
+	DisplayClock = 275,
+	RemoveClock = 276,
+	CreateWindow = 277,
+	GotoWindow = 278,
+	Hangup = 279,
+	DialPhone = 280,
+	QuickDial = 281,
+	Tone = 282,
+	Pulse = 283,
+	FlashHook = 284,
+	FixedPause = 285,
+	WaitTone = 286,
+	User0 = 287,
+	User1 = 288,
+	User2 = 289,
+	User3 = 290,
+	User4 = 291,
+	User5 = 292,
+	User6 = 293,
+	User7 = 294,
+	User8 = 295,
+	User9 = 296,
+	OrigPair = 297,
+	OrigColors = 298,
+	InitializeColor = 299,
+	InitializePair = 300,
+	SetColorPair = 301,
+	SetForeground = 302,
+	SetBackground = 303,
+	ChangeCharPitch = 304,
+	ChangeLinePitch = 305,
+	ChangeResHorz = 306,
+	ChangeResVert = 307,
+	DefineChar = 308,
+	EnterDoublewideMode = 309,
+	EnterDraftQuality = 310,
+	EnterItalicsMode = 311,
+	EnterLeftwardMode = 312,
+	EnterMicroMode = 313,
+	EnterNearLetterQuality = 314,
+	EnterNormalQuality = 315,
+	EnterShadowMode = 316,
+	EnterSubscriptMode = 317,
+	EnterSuperscriptMode = 318,
+	EnterUpwardMode = 319,
+	ExitDoublewideMode = 320,
+	ExitItalicsMode = 321,
+	ExitLeftwardMode = 322,
+	ExitMicroMode = 323,
+	ExitShadowMode = 324,
+	ExitSubscriptMode = 325,
+	ExitSuperscriptMode = 326,
+	ExitUpwardMode = 327,
+	MicroColumnAddress = 328,
+	MicroDown = 329,
+	MicroLeft = 330,
+	MicroRight = 331,
+	MicroRowAddress = 332,
+	MicroUp = 333,
+	OrderOfPins = 334,
+	ParmDownMicro = 335,
+	ParmLeftMicro = 336,
+	ParmRightMicro = 337,
+	ParmUpMicro = 338,
+	SelectCharSet = 339,
+	SetBottomMargin = 340,
+	SetBottomMarginParm = 341,
+	SetLeftMarginParm = 342,
+	SetRightMarginParm = 343,
+	SetTopMargin = 344,
+	SetTopMarginParm = 345,
+	StartBitImage = 346,
+	StartCharSetDef = 347,
+	StopBitImage = 348,
+	StopCharSetDef = 349,
+	SubscriptCharacters = 350,
+	SuperscriptCharacters = 351,
+	TheseCauseCr = 352,
+	ZeroMotion = 353,
+	CharSetNames = 354,
+	KeyMouse = 355,
+	MouseInfo = 356,
+	ReqMousePos = 357,
+	GetMouse = 358,
+	SetAForeground = 359,
+	SetABackground = 360,
+	PkeyPlab = 361,
+	DeviceType = 362,
+	CodeSetInit = 363,
+	Set0DesSeq = 364,
+	Set1DesSeq = 365,
+	Set2DesSeq = 366,
+	Set3DesSeq = 367,
+	SetLrMargin = 368,
+	SetTbMargin = 369,
+	BitImageRepeat = 370,
+	BitImageNewline = 371,
+	BitImageCarriageReturn = 372,
+	ColorNames = 373,
+	DefineBitImageRegion = 374,
+	EndBitImageRegion = 375,
+	SetColorBand = 376,
+	SetPageLength = 377,
+	DisplayPcChar = 378,
+	EnterPcCharsetMode = 379,
+	ExitPcCharsetMode = 380,
+	EnterScancodeMode = 381,
+	ExitScancodeMode = 382,
+	PcTermOptions = 383,
+	ScancodeEscape = 384,
+	AltScancodeEsc = 385,
+	EnterHorizontalHlMode = 386,
+	EnterLeftHlMode = 387,
+	EnterLowHlMode = 388,
+	EnterRightHlMode = 389,
+	EnterTopHlMode = 390,
+	EnterVerticalHlMode = 391,
+	SetAAttributes = 392,
+	SetPglenInch = 393,
+	Last = 394,
+}
+
+internal enum TypeSpec.DisplayNameFormat
+{
+	Default = 0,
+	WANT_ASSEMBLY = 1,
+	NO_MODIFIERS = 2,
+}
+
+internal enum Handles
+{
+}
+
+internal enum Decimal.DecCalc.RoundingMode
+{
+	ToEven = 0,
+	AwayFromZero = 1,
+	Truncate = 2,
+	Floor = 3,
+	Ceiling = 4,
+}
+
+public enum EventResetMode
+{
+	AutoReset = 0,
+	ManualReset = 1,
+}
+
+public enum ThreadState
+{
+	Running = 0,
+	StopRequested = 1,
+	SuspendRequested = 2,
+	Background = 4,
+	Unstarted = 8,
+	Stopped = 16,
+	WaitSleepJoin = 32,
+	Suspended = 64,
+	AbortRequested = 128,
+	Aborted = 256,
+}
+
+private enum ExecutionContext.Flags
+{
+	None = 0,
+	IsNewCapture = 1,
+	IsFlowSuppressed = 2,
+	IsPreAllocatedDefault = 4,
+}
+
+internal enum ExecutionContext.CaptureOptions
+{
+	None = 0,
+	IgnoreSyncCtx = 1,
+	OptimizeDefaultCase = 2,
+}
+
+internal enum SynchronizationContextProperties
+{
+	None = 0,
+	RequireWaitNotification = 1,
+}
+
+internal enum StackCrawlMark
+{
+	LookForMe = 0,
+	LookForMyCaller = 1,
+	LookForMyCallersCaller = 2,
+	LookForThread = 3,
+}
+
+public enum TaskStatus
+{
+	Created = 0,
+	WaitingForActivation = 1,
+	WaitingToRun = 2,
+	Running = 3,
+	WaitingForChildrenToComplete = 4,
+	RanToCompletion = 5,
+	Canceled = 6,
+	Faulted = 7,
+}
+
+public enum TaskCreationOptions
+{
+	None = 0,
+	PreferFairness = 1,
+	LongRunning = 2,
+	AttachedToParent = 4,
+	DenyChildAttach = 8,
+	HideScheduler = 16,
+	RunContinuationsAsynchronously = 64,
+}
+
+internal enum InternalTaskOptions
+{
+	None = 0,
+	InternalOptionsMask = 65280,
+	ContinuationTask = 512,
+	PromiseTask = 1024,
+	LazyCancellation = 4096,
+	QueuedByRuntime = 8192,
+	DoNotDispose = 16384,
+}
+
+public enum TaskContinuationOptions
+{
+	None = 0,
+	PreferFairness = 1,
+	LongRunning = 2,
+	AttachedToParent = 4,
+	DenyChildAttach = 8,
+	HideScheduler = 16,
+	LazyCancellation = 32,
+	RunContinuationsAsynchronously = 64,
+	NotOnRanToCompletion = 65536,
+	NotOnFaulted = 131072,
+	NotOnCanceled = 262144,
+	OnlyOnRanToCompletion = 393216,
+	OnlyOnFaulted = 327680,
+	OnlyOnCanceled = 196608,
+	ExecuteSynchronously = 524288,
+}
+
+internal enum CausalityTraceLevel
+{
+	Required = 0,
+	Important = 1,
+	Verbose = 2,
+}
+
+internal enum AsyncCausalityStatus
+{
+	Started = 0,
+	Completed = 1,
+	Canceled = 2,
+	Error = 3,
+}
+
+internal enum CausalityRelation
+{
+	AssignDelegate = 0,
+	Join = 1,
+	Choice = 2,
+	Cancel = 3,
+	Error = 4,
+}
+
+internal enum CausalitySynchronousWork
+{
+	CompletionNotification = 0,
+	ProgressNotification = 1,
+	Execution = 2,
+}
+
+public enum ValueTaskSourceOnCompletedFlags
+{
+	None = 0,
+	UseSchedulingContext = 1,
+	FlowExecutionContext = 2,
+}
+
+public enum ValueTaskSourceStatus
+{
+	Pending = 0,
+	Succeeded = 1,
+	Faulted = 2,
+	Canceled = 3,
+}
+
+public enum NormalizationForm
+{
+	FormC = 1,
+	FormD = 2,
+	FormKC = 5,
+	FormKD = 6,
+}
+
+internal enum NormalizationCheck
+{
+	Yes = 0,
+	No = 1,
+	Maybe = 2,
+}
+
+public enum PolicyLevelType
+{
+	AppDomain = 3,
+	Enterprise = 2,
+	Machine = 1,
+	User = 0,
+}
+
+public enum SecurityZone
+{
+	Internet = 3,
+	Intranet = 1,
+	MyComputer = 0,
+	Trusted = 2,
+	Untrusted = 4,
+}
+
+public enum PartialTrustVisibilityLevel
+{
+	VisibleToAllHosts = 0,
+	NotVisibleByDefault = 1,
+}
+
+public enum SecurityCriticalScope
+{
+	Explicit = 0,
+	Everything = 1,
+}
+
+public enum SecurityRuleSet
+{
+	None = 0,
+	Level1 = 1,
+	Level2 = 2,
+}
+
+public enum SecurityContextSource
+{
+	CurrentAppDomain = 0,
+	CurrentAssembly = 1,
+}
+
+internal enum SecurityContextDisableFlow
+{
+	Nothing = 0,
+	WI = 1,
+	All = 16383,
+}
+
+public enum HostSecurityManagerOptions
+{
+	None = 0,
+	HostAppDomainEvidence = 1,
+	HostPolicyLevel = 2,
+	HostAssemblyEvidence = 4,
+	HostDetermineApplicationTrust = 8,
+	HostResolvePolicy = 16,
+	AllFlags = 31,
+}
+
+internal enum SecurityElementType
+{
+	Regular = 0,
+	Format = 1,
+	Comment = 2,
+}
+
+private enum Tokenizer.TokenSource
+{
+	UnicodeByteArray = 0,
+	UTF8ByteArray = 1,
+	ASCIIByteArray = 2,
+	CharArray = 3,
+	String = 4,
+	NestedStrings = 5,
+	Other = 6,
+}
+
+public enum PolicyStatementAttribute
+{
+	All = 3,
+	Exclusive = 1,
+	LevelFinal = 2,
+	Nothing = 0,
+}
+
+public enum HostProtectionResource
+{
+	All = 511,
+	ExternalProcessMgmt = 4,
+	ExternalThreading = 16,
+	MayLeakOnAbort = 256,
+	None = 0,
+	SecurityInfrastructure = 64,
+	SelfAffectingProcessMgmt = 8,
+	SelfAffectingThreading = 32,
+	SharedState = 2,
+	Synchronization = 1,
+	UI = 128,
+}
+
+public enum PermissionState
+{
+	None = 0,
+	Unrestricted = 1,
+}
+
+public enum ReflectionPermissionFlag
+{
+	AllFlags = 7,
+	MemberAccess = 2,
+	NoFlags = 0,
+	ReflectionEmit = 4,
+	RestrictedMemberAccess = 8,
+	TypeInformation = 1,
+}
+
+public enum SecurityAction
+{
+	Demand = 2,
+	Assert = 3,
+	Deny = 4,
+	PermitOnly = 5,
+	LinkDemand = 6,
+	InheritanceDemand = 7,
+	RequestMinimum = 8,
+	RequestOptional = 9,
+	RequestRefuse = 10,
+}
+
+public enum KeyNumber
+{
+	Exchange = 1,
+	Signature = 2,
+}
+
+public enum CryptoStreamMode
+{
+	Read = 0,
+	Write = 1,
+}
+
+public enum RSAEncryptionPaddingMode
+{
+	Pkcs1 = 0,
+	Oaep = 1,
+}
+
+public enum RSASignaturePaddingMode
+{
+	Pkcs1 = 0,
+	Pss = 1,
+}
+
+public enum FromBase64TransformMode
+{
+	IgnoreWhiteSpaces = 0,
+	DoNotIgnoreWhiteSpaces = 1,
+}
+
+public enum CipherMode
+{
+	CBC = 1,
+	ECB = 2,
+	OFB = 3,
+	CFB = 4,
+	CTS = 5,
+}
+
+public enum PaddingMode
+{
+	None = 1,
+	PKCS7 = 2,
+	Zeros = 3,
+	ANSIX923 = 4,
+	ISO10126 = 5,
+}
+
+public enum CspProviderFlags
+{
+	NoFlags = 0,
+	UseMachineKeyStore = 1,
+	UseDefaultKeyContainer = 2,
+	UseNonExportableKey = 4,
+	UseExistingKey = 8,
+	UseArchivableKey = 16,
+	UseUserProtectedKey = 32,
+	NoPrompt = 64,
+	CreateEphemeralKey = 128,
+}
+
+internal enum RijndaelManagedTransformMode
+{
+	Encrypt = 0,
+	Decrypt = 1,
+}
+
+internal enum CspAlgorithmType
+{
+	Rsa = 0,
+	Dss = 1,
+}
+
+public enum PbeEncryptionAlgorithm
+{
+	Unknown = 0,
+	Aes128Cbc = 1,
+	Aes192Cbc = 2,
+	Aes256Cbc = 3,
+	TripleDes3KeyPkcs12 = 4,
+}
+
+public enum X509ContentType
+{
+	Unknown = 0,
+	Cert = 1,
+	SerializedCert = 2,
+	Pfx = 3,
+	Pkcs12 = 3,
+	SerializedStore = 4,
+	Pkcs7 = 5,
+	Authenticode = 6,
+}
+
+public enum X509KeyStorageFlags
+{
+	DefaultKeySet = 0,
+	UserKeySet = 1,
+	MachineKeySet = 2,
+	Exportable = 4,
+	UserProtected = 8,
+	PersistKeySet = 16,
+	EphemeralKeySet = 32,
+}
+
+public enum TokenImpersonationLevel
+{
+	None = 0,
+	Anonymous = 1,
+	Identification = 2,
+	Impersonation = 3,
+	Delegation = 4,
+}
+
+public enum WindowsAccountType
+{
+	Normal = 0,
+	Guest = 1,
+	System = 2,
+	Anonymous = 3,
+}
+
+public enum CustomErrorsModes
+{
+	On = 0,
+	Off = 1,
+	RemoteOnly = 2,
+}
+
+public enum WellKnownObjectMode
+{
+	Singleton = 1,
+	SingleCall = 2,
+}
+
+public enum LeaseState
+{
+	Null = 0,
+	Initial = 1,
+	Active = 2,
+	Renewing = 3,
+	Expired = 4,
+}
+
+internal enum ArgInfoType
+{
+	In = 0,
+	Out = 1,
+}
+
+internal enum CallType
+{
+	Sync = 0,
+	BeginInvoke = 1,
+	EndInvoke = 2,
+	OneWay = 3,
+}
+
+public enum StreamingContextStates
+{
+	CrossProcess = 1,
+	CrossMachine = 2,
+	File = 4,
+	Persistence = 8,
+	Remoting = 16,
+	Other = 32,
+	Clone = 64,
+	CrossAppDomain = 128,
+	All = 255,
+}
+
+public enum FormatterTypeStyle
+{
+	TypesWhenNeeded = 0,
+	TypesAlways = 1,
+	XsdString = 2,
+}
+
+public enum FormatterAssemblyStyle
+{
+	Simple = 0,
+	Full = 1,
+}
+
+public enum TypeFilterLevel
+{
+	Low = 2,
+	Full = 3,
+}
+
+internal enum BinaryHeaderEnum
+{
+	SerializedStreamHeader = 0,
+	Object = 1,
+	ObjectWithMap = 2,
+	ObjectWithMapAssemId = 3,
+	ObjectWithMapTyped = 4,
+	ObjectWithMapTypedAssemId = 5,
+	ObjectString = 6,
+	Array = 7,
+	MemberPrimitiveTyped = 8,
+	MemberReference = 9,
+	ObjectNull = 10,
+	MessageEnd = 11,
+	Assembly = 12,
+	ObjectNullMultiple256 = 13,
+	ObjectNullMultiple = 14,
+	ArraySinglePrimitive = 15,
+	ArraySingleObject = 16,
+	ArraySingleString = 17,
+	CrossAppDomainMap = 18,
+	CrossAppDomainString = 19,
+	CrossAppDomainAssembly = 20,
+	MethodCall = 21,
+	MethodReturn = 22,
+}
+
+internal enum BinaryTypeEnum
+{
+	Primitive = 0,
+	String = 1,
+	Object = 2,
+	ObjectUrt = 3,
+	ObjectUser = 4,
+	ObjectArray = 5,
+	StringArray = 6,
+	PrimitiveArray = 7,
+}
+
+internal enum BinaryArrayTypeEnum
+{
+	Single = 0,
+	Jagged = 1,
+	Rectangular = 2,
+	SingleOffset = 3,
+	JaggedOffset = 4,
+	RectangularOffset = 5,
+}
+
+internal enum InternalSerializerTypeE
+{
+	Soap = 1,
+	Binary = 2,
+}
+
+internal enum InternalParseTypeE
+{
+	Empty = 0,
+	SerializedStreamHeader = 1,
+	Object = 2,
+	Member = 3,
+	ObjectEnd = 4,
+	MemberEnd = 5,
+	Headers = 6,
+	HeadersEnd = 7,
+	SerializedStreamHeaderEnd = 8,
+	Envelope = 9,
+	EnvelopeEnd = 10,
+	Body = 11,
+	BodyEnd = 12,
+}
+
+internal enum InternalObjectTypeE
+{
+	Empty = 0,
+	Object = 1,
+	Array = 2,
+}
+
+internal enum InternalObjectPositionE
+{
+	Empty = 0,
+	Top = 1,
+	Child = 2,
+	Headers = 3,
+}
+
+internal enum InternalArrayTypeE
+{
+	Empty = 0,
+	Single = 1,
+	Jagged = 2,
+	Rectangular = 3,
+	Base64 = 4,
+}
+
+internal enum InternalMemberTypeE
+{
+	Empty = 0,
+	Header = 1,
+	Field = 2,
+	Item = 3,
+}
+
+internal enum InternalMemberValueE
+{
+	Empty = 0,
+	InlineValue = 1,
+	Nested = 2,
+	Reference = 3,
+	Null = 4,
+}
+
+internal enum InternalPrimitiveTypeE
+{
+	Invalid = 0,
+	Boolean = 1,
+	Byte = 2,
+	Char = 3,
+	Currency = 4,
+	Decimal = 5,
+	Double = 6,
+	Int16 = 7,
+	Int32 = 8,
+	Int64 = 9,
+	SByte = 10,
+	Single = 11,
+	TimeSpan = 12,
+	DateTime = 13,
+	UInt16 = 14,
+	UInt32 = 15,
+	UInt64 = 16,
+	Null = 17,
+	String = 18,
+}
+
+internal enum ValueFixupEnum
+{
+	Empty = 0,
+	Array = 1,
+	Header = 2,
+	Member = 3,
+}
+
+internal enum MessageEnum
+{
+	NoArgs = 1,
+	ArgsInline = 2,
+	ArgsIsArray = 4,
+	ArgsInArray = 8,
+	NoContext = 16,
+	ContextInline = 32,
+	ContextInArray = 64,
+	MethodSignatureInArray = 128,
+	PropertyInArray = 256,
+	NoReturnValue = 512,
+	ReturnValueVoid = 1024,
+	ReturnValueInline = 2048,
+	ReturnValueInArray = 4096,
+	ExceptionInArray = 8192,
+	GenericMethod = 32768,
+}
+
+public enum CharSet
+{
+	None = 1,
+	Ansi = 2,
+	Unicode = 3,
+	Auto = 4,
+}
+
+public enum Architecture
+{
+	X86 = 0,
+	X64 = 1,
+	Arm = 2,
+	Arm64 = 3,
+}
+
+public enum GCHandleType
+{
+	Weak = 0,
+	WeakTrackResurrection = 1,
+	Normal = 2,
+	Pinned = 3,
+}
+
+public enum ComInterfaceType
+{
+	InterfaceIsDual = 0,
+	InterfaceIsIUnknown = 1,
+	InterfaceIsIDispatch = 2,
+	InterfaceIsIInspectable = 3,
+}
+
+public enum ClassInterfaceType
+{
+	None = 0,
+	AutoDispatch = 1,
+	AutoDual = 2,
+}
+
+public enum VarEnum
+{
+	VT_EMPTY = 0,
+	VT_NULL = 1,
+	VT_I2 = 2,
+	VT_I4 = 3,
+	VT_R4 = 4,
+	VT_R8 = 5,
+	VT_CY = 6,
+	VT_DATE = 7,
+	VT_BSTR = 8,
+	VT_DISPATCH = 9,
+	VT_ERROR = 10,
+	VT_BOOL = 11,
+	VT_VARIANT = 12,
+	VT_UNKNOWN = 13,
+	VT_DECIMAL = 14,
+	VT_I1 = 16,
+	VT_UI1 = 17,
+	VT_UI2 = 18,
+	VT_UI4 = 19,
+	VT_I8 = 20,
+	VT_UI8 = 21,
+	VT_INT = 22,
+	VT_UINT = 23,
+	VT_VOID = 24,
+	VT_HRESULT = 25,
+	VT_PTR = 26,
+	VT_SAFEARRAY = 27,
+	VT_CARRAY = 28,
+	VT_USERDEFINED = 29,
+	VT_LPSTR = 30,
+	VT_LPWSTR = 31,
+	VT_RECORD = 36,
+	VT_FILETIME = 64,
+	VT_BLOB = 65,
+	VT_STREAM = 66,
+	VT_STORAGE = 67,
+	VT_STREAMED_OBJECT = 68,
+	VT_STORED_OBJECT = 69,
+	VT_BLOB_OBJECT = 70,
+	VT_CF = 71,
+	VT_CLSID = 72,
+	VT_VECTOR = 4096,
+	VT_ARRAY = 8192,
+	VT_BYREF = 16384,
+}
+
+public enum UnmanagedType
+{
+	Bool = 2,
+	I1 = 3,
+	U1 = 4,
+	I2 = 5,
+	U2 = 6,
+	I4 = 7,
+	U4 = 8,
+	I8 = 9,
+	U8 = 10,
+	R4 = 11,
+	R8 = 12,
+	Currency = 15,
+	BStr = 19,
+	LPStr = 20,
+	LPWStr = 21,
+	LPTStr = 22,
+	ByValTStr = 23,
+	IUnknown = 25,
+	IDispatch = 26,
+	Struct = 27,
+	Interface = 28,
+	SafeArray = 29,
+	ByValArray = 30,
+	SysInt = 31,
+	SysUInt = 32,
+	VBByRefStr = 34,
+	AnsiBStr = 35,
+	TBStr = 36,
+	VariantBool = 37,
+	FunctionPtr = 38,
+	AsAny = 40,
+	LPArray = 42,
+	LPStruct = 43,
+	CustomMarshaler = 44,
+	Error = 45,
+	IInspectable = 46,
+	HString = 47,
+	LPUTF8Str = 48,
+}
+
+public enum DllImportSearchPath
+{
+	UseDllDirectoryForDependencies = 256,
+	ApplicationDirectory = 512,
+	UserDirectories = 1024,
+	System32 = 2048,
+	SafeDirectories = 4096,
+	AssemblyDirectory = 2,
+	LegacyBehavior = 0,
+}
+
+public enum CallingConvention
+{
+	Winapi = 1,
+	Cdecl = 2,
+	StdCall = 3,
+	ThisCall = 4,
+	FastCall = 5,
+}
+
+public enum Cer
+{
+	None = 0,
+	MayFail = 1,
+	Success = 2,
+}
+
+public enum Consistency
+{
+	MayCorruptProcess = 0,
+	MayCorruptAppDomain = 1,
+	MayCorruptInstance = 2,
+	WillNotCorruptState = 3,
+}
+
+public enum LoadHint
+{
+	Default = 0,
+	Always = 1,
+	Sometimes = 2,
+}
+
+public enum CompilationRelaxations
+{
+	NoStringInterning = 8,
+}
+
+internal enum ResourceTypeCode
+{
+	Null = 0,
+	String = 1,
+	Boolean = 2,
+	Char = 3,
+	Byte = 4,
+	SByte = 5,
+	Int16 = 6,
+	UInt16 = 7,
+	Int32 = 8,
+	UInt32 = 9,
+	Int64 = 10,
+	UInt64 = 11,
+	Single = 12,
+	Double = 13,
+	Decimal = 14,
+	DateTime = 15,
+	TimeSpan = 16,
+	LastPrimitive = 16,
+	ByteArray = 32,
+	Stream = 33,
+	StartOfUserTypes = 64,
+}
+
+public enum UltimateResourceFallbackLocation
+{
+	MainAssembly = 0,
+	Satellite = 1,
+}
+
+public enum AssemblyContentType
+{
+	Default = 0,
+	WindowsRuntime = 1,
+}
+
+public enum AssemblyNameFlags
+{
+	None = 0,
+	PublicKey = 1,
+	EnableJITcompileOptimizer = 16384,
+	EnableJITcompileTracking = 32768,
+	Retargetable = 256,
+}
+
+public enum BindingFlags
+{
+	Default = 0,
+	IgnoreCase = 1,
+	DeclaredOnly = 2,
+	Instance = 4,
+	Static = 8,
+	Public = 16,
+	NonPublic = 32,
+	FlattenHierarchy = 64,
+	InvokeMethod = 256,
+	CreateInstance = 512,
+	GetField = 1024,
+	SetField = 2048,
+	GetProperty = 4096,
+	SetProperty = 8192,
+	PutDispProperty = 16384,
+	PutRefDispProperty = 32768,
+	ExactBinding = 65536,
+	SuppressChangeType = 131072,
+	OptionalParamBinding = 262144,
+	IgnoreReturn = 16777216,
+	DoNotWrapExceptions = 33554432,
+}
+
+public enum CallingConventions
+{
+	Standard = 1,
+	VarArgs = 2,
+	Any = 3,
+	HasThis = 32,
+	ExplicitThis = 64,
+}
+
+public enum EventAttributes
+{
+	None = 0,
+	SpecialName = 512,
+	RTSpecialName = 1024,
+	ReservedMask = 1024,
+}
+
+public enum ExceptionHandlingClauseOptions
+{
+	Clause = 0,
+	Filter = 1,
+	Finally = 2,
+	Fault = 4,
+}
+
+public enum FieldAttributes
+{
+	FieldAccessMask = 7,
+	PrivateScope = 0,
+	Private = 1,
+	FamANDAssem = 2,
+	Assembly = 3,
+	Family = 4,
+	FamORAssem = 5,
+	Public = 6,
+	Static = 16,
+	InitOnly = 32,
+	Literal = 64,
+	NotSerialized = 128,
+	SpecialName = 512,
+	PinvokeImpl = 8192,
+	RTSpecialName = 1024,
+	HasFieldMarshal = 4096,
+	HasDefault = 32768,
+	HasFieldRVA = 256,
+	ReservedMask = 38144,
+}
+
+public enum GenericParameterAttributes
+{
+	None = 0,
+	VarianceMask = 3,
+	Covariant = 1,
+	Contravariant = 2,
+	SpecialConstraintMask = 28,
+	ReferenceTypeConstraint = 4,
+	NotNullableValueTypeConstraint = 8,
+	DefaultConstructorConstraint = 16,
+}
+
+public enum MemberTypes
+{
+	Constructor = 1,
+	Event = 2,
+	Field = 4,
+	Method = 8,
+	Property = 16,
+	TypeInfo = 32,
+	Custom = 64,
+	NestedType = 128,
+	All = 191,
+}
+
+public enum MethodAttributes
+{
+	MemberAccessMask = 7,
+	PrivateScope = 0,
+	Private = 1,
+	FamANDAssem = 2,
+	Assembly = 3,
+	Family = 4,
+	FamORAssem = 5,
+	Public = 6,
+	Static = 16,
+	Final = 32,
+	Virtual = 64,
+	HideBySig = 128,
+	CheckAccessOnOverride = 512,
+	VtableLayoutMask = 256,
+	ReuseSlot = 0,
+	NewSlot = 256,
+	Abstract = 1024,
+	SpecialName = 2048,
+	PinvokeImpl = 8192,
+	UnmanagedExport = 8,
+	RTSpecialName = 4096,
+	HasSecurity = 16384,
+	RequireSecObject = 32768,
+	ReservedMask = 53248,
+}
+
+public enum MethodImplAttributes
+{
+	CodeTypeMask = 3,
+	IL = 0,
+	Native = 1,
+	OPTIL = 2,
+	Runtime = 3,
+	ManagedMask = 4,
+	Unmanaged = 4,
+	Managed = 0,
+	ForwardRef = 16,
+	PreserveSig = 128,
+	InternalCall = 4096,
+	Synchronized = 32,
+	NoInlining = 8,
+	AggressiveInlining = 256,
+	NoOptimization = 64,
+	MaxMethodImplVal = 65535,
+	SecurityMitigations = 1024,
+}
+
+public enum ParameterAttributes
+{
+	None = 0,
+	In = 1,
+	Out = 2,
+	Lcid = 4,
+	Retval = 8,
+	Optional = 16,
+	HasDefault = 4096,
+	HasFieldMarshal = 8192,
+	Reserved3 = 16384,
+	Reserved4 = 32768,
+	ReservedMask = 61440,
+}
+
+public enum ProcessorArchitecture
+{
+	None = 0,
+	MSIL = 1,
+	X86 = 2,
+	IA64 = 3,
+	Amd64 = 4,
+	Arm = 5,
+}
+
+public enum PropertyAttributes
+{
+	None = 0,
+	SpecialName = 512,
+	RTSpecialName = 1024,
+	HasDefault = 4096,
+	Reserved2 = 8192,
+	Reserved3 = 16384,
+	Reserved4 = 32768,
+	ReservedMask = 62464,
+}
+
+public enum ResourceLocation
+{
+	ContainedInAnotherAssembly = 2,
+	ContainedInManifestFile = 4,
+	Embedded = 1,
+}
+
+public enum TypeAttributes
+{
+	VisibilityMask = 7,
+	NotPublic = 0,
+	Public = 1,
+	NestedPublic = 2,
+	NestedPrivate = 3,
+	NestedFamily = 4,
+	NestedAssembly = 5,
+	NestedFamANDAssem = 6,
+	NestedFamORAssem = 7,
+	LayoutMask = 24,
+	AutoLayout = 0,
+	SequentialLayout = 8,
+	ExplicitLayout = 16,
+	ClassSemanticsMask = 32,
+	Class = 0,
+	Interface = 32,
+	Abstract = 128,
+	Sealed = 256,
+	SpecialName = 1024,
+	Import = 4096,
+	Serializable = 8192,
+	WindowsRuntime = 16384,
+	StringFormatMask = 196608,
+	AnsiClass = 0,
+	UnicodeClass = 65536,
+	AutoClass = 131072,
+	CustomFormatClass = 196608,
+	CustomFormatMask = 12582912,
+	BeforeFieldInit = 1048576,
+	RTSpecialName = 2048,
+	HasSecurity = 262144,
+	ReservedMask = 264192,
+}
+
+internal enum CorElementType
+{
+	End = 0,
+	Void = 1,
+	Boolean = 2,
+	Char = 3,
+	I1 = 4,
+	U1 = 5,
+	I2 = 6,
+	U2 = 7,
+	I4 = 8,
+	U4 = 9,
+	I8 = 10,
+	U8 = 11,
+	R4 = 12,
+	R8 = 13,
+	String = 14,
+	Ptr = 15,
+	ByRef = 16,
+	ValueType = 17,
+	Class = 18,
+	Var = 19,
+	Array = 20,
+	GenericInst = 21,
+	TypedByRef = 22,
+	I = 24,
+	U = 25,
+	FnPtr = 27,
+	Object = 28,
+	SzArray = 29,
+	MVar = 30,
+	CModReqd = 31,
+	CModOpt = 32,
+	Internal = 33,
+	Max = 34,
+	Modifier = 64,
+	Sentinel = 65,
+	Pinned = 69,
+	ELEMENT_TYPE_END = 0,
+	ELEMENT_TYPE_VOID = 1,
+	ELEMENT_TYPE_BOOLEAN = 2,
+	ELEMENT_TYPE_CHAR = 3,
+	ELEMENT_TYPE_I1 = 4,
+	ELEMENT_TYPE_U1 = 5,
+	ELEMENT_TYPE_I2 = 6,
+	ELEMENT_TYPE_U2 = 7,
+	ELEMENT_TYPE_I4 = 8,
+	ELEMENT_TYPE_U4 = 9,
+	ELEMENT_TYPE_I8 = 10,
+	ELEMENT_TYPE_U8 = 11,
+	ELEMENT_TYPE_R4 = 12,
+	ELEMENT_TYPE_R8 = 13,
+	ELEMENT_TYPE_STRING = 14,
+	ELEMENT_TYPE_PTR = 15,
+	ELEMENT_TYPE_BYREF = 16,
+	ELEMENT_TYPE_VALUETYPE = 17,
+	ELEMENT_TYPE_CLASS = 18,
+	ELEMENT_TYPE_VAR = 19,
+	ELEMENT_TYPE_ARRAY = 20,
+	ELEMENT_TYPE_GENERICINST = 21,
+	ELEMENT_TYPE_TYPEDBYREF = 22,
+	ELEMENT_TYPE_I = 24,
+	ELEMENT_TYPE_U = 25,
+	ELEMENT_TYPE_FNPTR = 27,
+	ELEMENT_TYPE_OBJECT = 28,
+	ELEMENT_TYPE_SZARRAY = 29,
+	ELEMENT_TYPE_MVAR = 30,
+	ELEMENT_TYPE_CMOD_REQD = 31,
+	ELEMENT_TYPE_CMOD_OPT = 32,
+	ELEMENT_TYPE_INTERNAL = 33,
+	ELEMENT_TYPE_MAX = 34,
+	ELEMENT_TYPE_MODIFIER = 64,
+	ELEMENT_TYPE_SENTINEL = 65,
+	ELEMENT_TYPE_PINNED = 69,
+}
+
+internal enum PInvokeAttributes
+{
+	NoMangle = 1,
+	CharSetMask = 6,
+	CharSetNotSpec = 0,
+	CharSetAnsi = 2,
+	CharSetUnicode = 4,
+	CharSetAuto = 6,
+	BestFitUseAssem = 0,
+	BestFitEnabled = 16,
+	BestFitDisabled = 32,
+	BestFitMask = 48,
+	ThrowOnUnmappableCharUseAssem = 0,
+	ThrowOnUnmappableCharEnabled = 4096,
+	ThrowOnUnmappableCharDisabled = 8192,
+	ThrowOnUnmappableCharMask = 12288,
+	SupportsLastError = 64,
+	CallConvMask = 1792,
+	CallConvWinapi = 256,
+	CallConvCdecl = 512,
+	CallConvStdcall = 768,
+	CallConvThiscall = 1024,
+	CallConvFastcall = 1280,
+	MaxValue = 65535,
+}
+
+internal enum PInfo
+{
+	Attributes = 1,
+	GetMethod = 2,
+	SetMethod = 4,
+	ReflectedType = 8,
+	DeclaringType = 16,
+	Name = 32,
+}
+
+public enum FileAccess
+{
+	Read = 1,
+	Write = 2,
+	ReadWrite = 3,
+}
+
+public enum FileMode
+{
+	CreateNew = 1,
+	Create = 2,
+	Open = 3,
+	OpenOrCreate = 4,
+	Truncate = 5,
+	Append = 6,
+}
+
+public enum FileOptions
+{
+	None = 0,
+	Asynchronous = 1073741824,
+	RandomAccess = 268435456,
+	DeleteOnClose = 67108864,
+	SequentialScan = 134217728,
+	Encrypted = 16384,
+}
+
+public enum FileShare
+{
+	None = 0,
+	Read = 1,
+	Write = 2,
+	ReadWrite = 3,
+	Delete = 4,
+	Inheritable = 16,
+}
+
+public enum SeekOrigin
+{
+	Begin = 0,
+	Current = 1,
+	End = 2,
+}
+
+public enum MatchCasing
+{
+	PlatformDefault = 0,
+	CaseSensitive = 1,
+	CaseInsensitive = 2,
+}
+
+public enum MatchType
+{
+	Simple = 0,
+	Win32 = 1,
+}
+
+public enum SearchOption
+{
+	TopDirectoryOnly = 0,
+	AllDirectories = 1,
+}
+
+internal enum SearchTarget
+{
+	Files = 1,
+	Directories = 2,
+	Both = 3,
+}
+
+public enum FileAttributes
+{
+	ReadOnly = 1,
+	Hidden = 2,
+	System = 4,
+	Directory = 16,
+	Archive = 32,
+	Device = 64,
+	Normal = 128,
+	Temporary = 256,
+	SparseFile = 512,
+	ReparsePoint = 1024,
+	Compressed = 2048,
+	Offline = 4096,
+	NotContentIndexed = 8192,
+	Encrypted = 16384,
+	IntegrityStream = 32768,
+	NoScrubData = 131072,
+}
+
+internal enum MonoFileType
+{
+	Unknown = 0,
+	Disk = 1,
+	Char = 2,
+	Pipe = 3,
+	Remote = 32768,
+}
+
+internal enum MonoIOError
+{
+	ERROR_SUCCESS = 0,
+	ERROR_FILE_NOT_FOUND = 2,
+	ERROR_PATH_NOT_FOUND = 3,
+	ERROR_TOO_MANY_OPEN_FILES = 4,
+	ERROR_ACCESS_DENIED = 5,
+	ERROR_INVALID_HANDLE = 6,
+	ERROR_INVALID_DRIVE = 15,
+	ERROR_NOT_SAME_DEVICE = 17,
+	ERROR_NO_MORE_FILES = 18,
+	ERROR_NOT_READY = 21,
+	ERROR_WRITE_FAULT = 29,
+	ERROR_READ_FAULT = 30,
+	ERROR_GEN_FAILURE = 31,
+	ERROR_SHARING_VIOLATION = 32,
+	ERROR_LOCK_VIOLATION = 33,
+	ERROR_HANDLE_DISK_FULL = 39,
+	ERROR_NOT_SUPPORTED = 50,
+	ERROR_FILE_EXISTS = 80,
+	ERROR_CANNOT_MAKE = 82,
+	ERROR_INVALID_PARAMETER = 87,
+	ERROR_BROKEN_PIPE = 109,
+	ERROR_INVALID_NAME = 123,
+	ERROR_DIR_NOT_EMPTY = 145,
+	ERROR_ALREADY_EXISTS = 183,
+	ERROR_FILENAME_EXCED_RANGE = 206,
+	ERROR_DIRECTORY = 267,
+	ERROR_ENCRYPTION_FAILED = 6000,
+}
+
+public enum CompareOptions
+{
+	None = 0,
+	IgnoreCase = 1,
+	IgnoreNonSpace = 2,
+	IgnoreSymbols = 4,
+	IgnoreKanaType = 8,
+	IgnoreWidth = 16,
+	OrdinalIgnoreCase = 268435456,
+	StringSort = 536870912,
+	Ordinal = 1073741824,
+}
+
+public enum CultureTypes
+{
+	NeutralCultures = 1,
+	SpecificCultures = 2,
+	InstalledWin32Cultures = 4,
+	AllCultures = 7,
+	UserCustomCulture = 8,
+	ReplacementCultures = 16,
+	WindowsOnlyCultures = 32,
+	FrameworkCultures = 64,
+}
+
+internal enum MonthNameStyles
+{
+	Regular = 0,
+	Genitive = 1,
+	LeapYear = 2,
+}
+
+internal enum DateTimeFormatFlags
+{
+	None = 0,
+	UseGenitiveMonth = 1,
+	UseLeapYearMonth = 2,
+	UseSpacesInMonthNames = 4,
+	UseHebrewRule = 8,
+	UseSpacesInDayNames = 16,
+	UseDigitPrefixInTokens = 32,
+}
+
+internal enum FORMATFLAGS
+{
+	None = 0,
+	UseGenitiveMonth = 1,
+	UseLeapYearMonth = 2,
+	UseSpacesInMonthNames = 4,
+	UseHebrewParsing = 8,
+	UseSpacesInDayNames = 16,
+	UseDigitPrefixInTokens = 32,
+}
+
+internal enum CalendarId
+{
+	UNINITIALIZED_VALUE = 0,
+	GREGORIAN = 1,
+	GREGORIAN_US = 2,
+	JAPAN = 3,
+	TAIWAN = 4,
+	KOREA = 5,
+	HIJRI = 6,
+	THAI = 7,
+	HEBREW = 8,
+	GREGORIAN_ME_FRENCH = 9,
+	GREGORIAN_ARABIC = 10,
+	GREGORIAN_XLIT_ENGLISH = 11,
+	GREGORIAN_XLIT_FRENCH = 12,
+	JULIAN = 13,
+	JAPANESELUNISOLAR = 14,
+	CHINESELUNISOLAR = 15,
+	SAKA = 16,
+	LUNAR_ETO_CHN = 17,
+	LUNAR_ETO_KOR = 18,
+	LUNAR_ETO_ROKUYOU = 19,
+	KOREANLUNISOLAR = 20,
+	TAIWANLUNISOLAR = 21,
+	PERSIAN = 22,
+	UMALQURA = 23,
+	LAST_CALENDAR = 23,
+}
+
+private enum DateTimeFormatInfoScanner.FoundDatePattern
+{
+	None = 0,
+	FoundYearPatternFlag = 1,
+	FoundMonthPatternFlag = 2,
+	FoundDayPatternFlag = 4,
+	FoundYMDPatternFlag = 7,
+}
+
+public enum DateTimeStyles
+{
+	None = 0,
+	AllowLeadingWhite = 1,
+	AllowTrailingWhite = 2,
+	AllowInnerWhite = 4,
+	AllowWhiteSpaces = 7,
+	NoCurrentDateDefault = 8,
+	AdjustToUniversal = 16,
+	AssumeLocal = 32,
+	AssumeUniversal = 64,
+	RoundtripKind = 128,
+}
+
+internal enum HebrewNumberParsingState
+{
+	InvalidHebrewNumber = 0,
+	NotHebrewDigit = 1,
+	FoundEndOfHebrewNumber = 2,
+	ContinueParsing = 3,
+}
+
+private enum HebrewNumber.HebrewToken
+{
+	Digit400 = 0,
+	Digit200_300 = 1,
+	Digit100 = 2,
+	Digit10 = 3,
+	Digit1 = 4,
+	Digit6_7 = 5,
+	Digit7 = 6,
+	Digit9 = 7,
+	SingleQuote = 8,
+	DoubleQuote = 9,
+}
+
+internal enum HebrewNumber.HS
+{
+	Start = 0,
+	S400 = 1,
+	S400_400 = 2,
+	S400_X00 = 3,
+	S400_X0 = 4,
+	X00_DQ = 5,
+	S400_X00_X0 = 6,
+	X0_DQ = 7,
+	X = 8,
+	X0 = 9,
+	X00 = 10,
+	S400_DQ = 11,
+	S400_400_DQ = 12,
+	S400_400_100 = 13,
+	S9 = 14,
+	X00_S9 = 15,
+	S9_DQ = 16,
+	END = 100,
+}
+
+public enum NumberStyles
+{
+	None = 0,
+	AllowLeadingWhite = 1,
+	AllowTrailingWhite = 2,
+	AllowLeadingSign = 4,
+	AllowTrailingSign = 8,
+	AllowParentheses = 16,
+	AllowDecimalPoint = 32,
+	AllowThousands = 64,
+	AllowExponent = 128,
+	AllowCurrencySymbol = 256,
+	AllowHexSpecifier = 512,
+	Integer = 7,
+	HexNumber = 515,
+	Number = 111,
+	Float = 167,
+	Currency = 383,
+	Any = 511,
+}
+
+internal enum TimeSpanFormat.Pattern
+{
+	None = 0,
+	Minimum = 1,
+	Full = 2,
+}
+
+private enum TimeSpanParse.ParseFailureKind
+{
+	None = 0,
+	ArgumentNull = 1,
+	Format = 2,
+	FormatWithParameter = 3,
+	Overflow = 4,
+}
+
+private enum TimeSpanParse.TimeSpanStandardStyles
+{
+	None = 0,
+	Invariant = 1,
+	Localized = 2,
+	RequireFull = 4,
+	Any = 3,
+}
+
+private enum TimeSpanParse.TTT
+{
+	None = 0,
+	End = 1,
+	Num = 2,
+	Sep = 3,
+	NumOverflow = 4,
+}
+
+public enum TimeSpanStyles
+{
+	None = 0,
+	AssumeNegative = 1,
+}
+
+public enum UnicodeCategory
+{
+	UppercaseLetter = 0,
+	LowercaseLetter = 1,
+	TitlecaseLetter = 2,
+	ModifierLetter = 3,
+	OtherLetter = 4,
+	NonSpacingMark = 5,
+	SpacingCombiningMark = 6,
+	EnclosingMark = 7,
+	DecimalDigitNumber = 8,
+	LetterNumber = 9,
+	OtherNumber = 10,
+	SpaceSeparator = 11,
+	LineSeparator = 12,
+	ParagraphSeparator = 13,
+	Control = 14,
+	Format = 15,
+	Surrogate = 16,
+	PrivateUse = 17,
+	ConnectorPunctuation = 18,
+	DashPunctuation = 19,
+	OpenPunctuation = 20,
+	ClosePunctuation = 21,
+	InitialQuotePunctuation = 22,
+	FinalQuotePunctuation = 23,
+	OtherPunctuation = 24,
+	MathSymbol = 25,
+	CurrencySymbol = 26,
+	ModifierSymbol = 27,
+	OtherSymbol = 28,
+	OtherNotAssigned = 29,
+}
+
+public enum GregorianCalendarTypes
+{
+	Localized = 1,
+	USEnglish = 2,
+	MiddleEastFrench = 9,
+	Arabic = 10,
+	TransliteratedEnglish = 11,
+	TransliteratedFrench = 12,
+}
+
+public enum DebuggableAttribute.DebuggingModes
+{
+	None = 0,
+	Default = 1,
+	DisableOptimizations = 256,
+	IgnoreSymbolStoreSequencePoints = 2,
+	EnableEditAndContinue = 4,
+}
+
+public enum DebuggerBrowsableState
+{
+	Never = 0,
+	Collapsed = 2,
+	RootHidden = 3,
+}
+
+internal enum StackTrace.TraceFormat
+{
+	Normal = 0,
+	TrailingNewLine = 1,
+	NoResourceLookup = 2,
+}
+
+public enum EventLevel
+{
+	LogAlways = 0,
+	Critical = 1,
+	Error = 2,
+	Warning = 3,
+	Informational = 4,
+	Verbose = 5,
+}
+
+public enum EventKeywords
+{
+	None = 0,
+	MicrosoftTelemetry = 562949953421312,
+	WdiContext = 562949953421312,
+	WdiDiagnostic = 1125899906842624,
+	Sqm = 2251799813685248,
+	AuditFailure = 4503599627370496,
+	AuditSuccess = 9007199254740992,
+	CorrelationHint = 4503599627370496,
+	EventLogClassic = 36028797018963968,
+}
+
+public enum AssemblyHashAlgorithm
+{
+	None = 0,
+	MD5 = 32771,
+	SHA1 = 32772,
+	SHA256 = 32780,
+	SHA384 = 32781,
+	SHA512 = 32782,
+}
+
+public enum AssemblyVersionCompatibility
+{
+	SameMachine = 1,
+	SameProcess = 2,
+	SameDomain = 3,
+}
+
+internal enum InsertionBehavior
+{
+	None = 0,
+	OverwriteExisting = 1,
+	ThrowOnExisting = 2,
+}
+
+internal enum ArrayPoolEventSource.BufferAllocatedReason
+{
+	Pooled = 0,
+	OverMaximumSize = 1,
+	PoolExhausted = 2,
+}
+
+private enum TlsOverPerCoreLockedStacksArrayPool.MemoryPressure<T>
+{
+}
+
+internal enum Interop.NetSecurityNative.Status
+{
+	GSS_S_COMPLETE = 0,
+	GSS_S_CONTINUE_NEEDED = 1,
+	GSS_S_BAD_MECH = 65536,
+	GSS_S_BAD_NAME = 131072,
+	GSS_S_BAD_NAMETYPE = 196608,
+	GSS_S_BAD_BINDINGS = 262144,
+	GSS_S_BAD_STATUS = 327680,
+	GSS_S_BAD_SIG = 393216,
+	GSS_S_NO_CRED = 458752,
+	GSS_S_NO_CONTEXT = 524288,
+	GSS_S_DEFECTIVE_TOKEN = 589824,
+	GSS_S_DEFECTIVE_CREDENTIAL = 655360,
+	GSS_S_CREDENTIALS_EXPIRED = 720896,
+	GSS_S_CONTEXT_EXPIRED = 786432,
+	GSS_S_FAILURE = 851968,
+	GSS_S_BAD_QOP = 917504,
+	GSS_S_UNAUTHORIZED = 983040,
+	GSS_S_UNAVAILABLE = 1048576,
+	GSS_S_DUPLICATE_ELEMENT = 1114112,
+	GSS_S_NAME_NOT_MN = 1179648,
+}
+
+internal enum Interop.NetSecurityNative.GssFlags
+{
+	GSS_C_DELEG_FLAG = 1,
+	GSS_C_MUTUAL_FLAG = 2,
+	GSS_C_REPLAY_FLAG = 4,
+	GSS_C_SEQUENCE_FLAG = 8,
+	GSS_C_CONF_FLAG = 16,
+	GSS_C_INTEG_FLAG = 32,
+	GSS_C_ANON_FLAG = 64,
+	GSS_C_PROT_READY_FLAG = 128,
+	GSS_C_TRANS_FLAG = 256,
+	GSS_C_DCE_STYLE = 4096,
+	GSS_C_IDENTIFY_FLAG = 8192,
+	GSS_C_EXTENDED_ERROR_FLAG = 16384,
+	GSS_C_DELEG_POLICY_FLAG = 32768,
+}
+
+public enum UnityTls.unitytls_error_code
+{
+	UNITYTLS_SUCCESS = 0,
+	UNITYTLS_INVALID_ARGUMENT = 1,
+	UNITYTLS_INVALID_FORMAT = 2,
+	UNITYTLS_INVALID_PASSWORD = 3,
+	UNITYTLS_INVALID_STATE = 4,
+	UNITYTLS_BUFFER_OVERFLOW = 5,
+	UNITYTLS_OUT_OF_MEMORY = 6,
+	UNITYTLS_INTERNAL_ERROR = 7,
+	UNITYTLS_NOT_SUPPORTED = 8,
+	UNITYTLS_ENTROPY_SOURCE_FAILED = 9,
+	UNITYTLS_STREAM_CLOSED = 10,
+	UNITYTLS_USER_CUSTOM_ERROR_START = 1048576,
+	UNITYTLS_USER_WOULD_BLOCK = 1048577,
+	UNITYTLS_USER_READ_FAILED = 1048578,
+	UNITYTLS_USER_WRITE_FAILED = 1048579,
+	UNITYTLS_USER_UNKNOWN_ERROR = 1048580,
+	UNITYTLS_USER_CUSTOM_ERROR_END = 2097152,
+}
+
+public enum UnityTls.unitytls_x509verify_result
+{
+	UNITYTLS_X509VERIFY_SUCCESS = 0,
+	UNITYTLS_X509VERIFY_NOT_DONE = 2147483648,
+	UNITYTLS_X509VERIFY_FATAL_ERROR = 4294967295,
+	UNITYTLS_X509VERIFY_FLAG_EXPIRED = 1,
+	UNITYTLS_X509VERIFY_FLAG_REVOKED = 2,
+	UNITYTLS_X509VERIFY_FLAG_CN_MISMATCH = 4,
+	UNITYTLS_X509VERIFY_FLAG_NOT_TRUSTED = 8,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR1 = 65536,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR2 = 131072,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR3 = 262144,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR4 = 524288,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR5 = 1048576,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR6 = 2097152,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR7 = 4194304,
+	UNITYTLS_X509VERIFY_FLAG_USER_ERROR8 = 8388608,
+	UNITYTLS_X509VERIFY_FLAG_UNKNOWN_ERROR = 134217728,
+}
+
+public enum UnityTls.unitytls_ciphersuite
+{
+	UNITYTLS_CIPHERSUITE_INVALID = 16777215,
+}
+
+public enum UnityTls.unitytls_protocol
+{
+	UNITYTLS_PROTOCOL_TLS_1_0 = 0,
+	UNITYTLS_PROTOCOL_TLS_1_1 = 1,
+	UNITYTLS_PROTOCOL_TLS_1_2 = 2,
+	UNITYTLS_PROTOCOL_INVALID = 3,
+}
+
+internal enum AsyncOperationStatus
+{
+	Initialize = 0,
+	Continue = 1,
+	ReadDone = 2,
+	Complete = 3,
+}
+
+private enum MobileAuthenticatedStream.Operation
+{
+	None = 0,
+	Handshake = 1,
+	Authenticated = 2,
+	Renegotiate = 3,
+	Read = 4,
+	Write = 5,
+	Close = 6,
+}
+
+private enum MobileAuthenticatedStream.OperationType
+{
+	Read = 0,
+	Write = 1,
+	Renegotiate = 2,
+	Shutdown = 3,
+}
+
+internal enum GeneralNameType
+{
+	OtherName = 0,
+	Rfc822Name = 1,
+	Email = 1,
+	DnsName = 2,
+	X400Address = 3,
+	DirectoryName = 4,
+	EdiPartyName = 5,
+	UniformResourceIdentifier = 6,
+	IPAddress = 7,
+	RegisteredId = 8,
+}
+
+public enum GenericUriParserOptions
+{
+	Default = 0,
+	GenericAuthority = 1,
+	AllowEmptyAuthority = 2,
+	NoUserInfo = 4,
+	NoPort = 8,
+	NoQuery = 16,
+	NoFragment = 32,
+	DontConvertPathBackslashes = 64,
+	DontCompressPath = 128,
+	DontUnescapePathDotsAndSlashes = 256,
+	Idn = 512,
+	IriParsing = 1024,
+}
+
+private enum Uri.Flags
+{
+	Zero = 0,
+	SchemeNotCanonical = 1,
+	UserNotCanonical = 2,
+	HostNotCanonical = 4,
+	PortNotCanonical = 8,
+	PathNotCanonical = 16,
+	QueryNotCanonical = 32,
+	FragmentNotCanonical = 64,
+	CannotDisplayCanonical = 127,
+	E_UserNotCanonical = 128,
+	E_HostNotCanonical = 256,
+	E_PortNotCanonical = 512,
+	E_PathNotCanonical = 1024,
+	E_QueryNotCanonical = 2048,
+	E_FragmentNotCanonical = 4096,
+	E_CannotDisplayCanonical = 8064,
+	ShouldBeCompressed = 8192,
+	FirstSlashAbsent = 16384,
+	BackslashInPath = 32768,
+	IndexMask = 65535,
+	HostTypeMask = 458752,
+	HostNotParsed = 0,
+	IPv6HostType = 65536,
+	IPv4HostType = 131072,
+	DnsHostType = 196608,
+	UncHostType = 262144,
+	BasicHostType = 327680,
+	UnusedHostType = 393216,
+	UnknownHostType = 458752,
+	UserEscaped = 524288,
+	AuthorityFound = 1048576,
+	HasUserInfo = 2097152,
+	LoopbackHost = 4194304,
+	NotDefaultPort = 8388608,
+	UserDrivenParsing = 16777216,
+	CanonicalDnsHost = 33554432,
+	ErrorOrParsingRecursion = 67108864,
+	DosPath = 134217728,
+	UncPath = 268435456,
+	ImplicitFile = 536870912,
+	MinimalUriInfoSet = 1073741824,
+	AllUriInfoSet = 2147483648,
+	IdnHost = 4294967296,
+	HasUnicode = 8589934592,
+	HostUnicodeNormalized = 17179869184,
+	RestUnicodeNormalized = 34359738368,
+	UnicodeHost = 68719476736,
+	IntranetUri = 137438953472,
+	UseOrigUncdStrOffset = 274877906944,
+	UserIriCanonical = 549755813888,
+	PathIriCanonical = 1099511627776,
+	QueryIriCanonical = 2199023255552,
+	FragmentIriCanonical = 4398046511104,
+	IriCanonical = 8246337208320,
+	CompressedSlashes = 17592186044416,
+}
+
+private enum Uri.Check
+{
+	None = 0,
+	EscapedCanonical = 1,
+	DisplayCanonical = 2,
+	DotSlashAttn = 4,
+	DotSlashEscaped = 128,
+	BackslashInPath = 16,
+	ReservedFound = 32,
+	NotIriCanonical = 64,
+	FoundNonAscii = 8,
+}
+
+public enum UriPartial
+{
+	Scheme = 0,
+	Authority = 1,
+	Path = 2,
+	Query = 3,
+}
+
+public enum UriKind
+{
+	RelativeOrAbsolute = 0,
+	Absolute = 1,
+	Relative = 2,
+}
+
+public enum UriComponents
+{
+	Scheme = 1,
+	UserInfo = 2,
+	Host = 4,
+	Port = 8,
+	Path = 16,
+	Query = 32,
+	Fragment = 64,
+	StrongPort = 128,
+	NormalizedHost = 256,
+	KeepDelimiter = 1073741824,
+	AbsoluteUri = 127,
+	HostAndPort = 132,
+	StrongAuthority = 134,
+	SchemeAndServer = 13,
+	HttpRequestUrl = 61,
+	PathAndQuery = 48,
+}
+
+public enum UriFormat
+{
+	UriEscaped = 1,
+	Unescaped = 2,
+	SafeUnescaped = 3,
+}
+
+public enum UriIdnScope
+{
+	None = 0,
+	AllExceptIntranet = 1,
+	All = 2,
+}
+
+internal enum ParsingError
+{
+	None = 0,
+	BadFormat = 1,
+	BadScheme = 2,
+	BadAuthority = 3,
+	EmptyUriString = 4,
+	LastRelativeUriOkErrIndex = 4,
+	SchemeLimit = 5,
+	SizeLimit = 6,
+	MustRootedPath = 7,
+	BadHostName = 8,
+	NonEmptyHost = 9,
+	BadPort = 10,
+	BadAuthorityTerminator = 11,
+	CannotCreateRelative = 12,
+}
+
+internal enum UnescapeMode
+{
+	CopyOnly = 0,
+	Escape = 1,
+	Unescape = 2,
+	EscapeUnescape = 3,
+	V1ToStringFlag = 4,
+	UnescapeAll = 8,
+	UnescapeAllOrThrow = 24,
+}
+
+public enum UriHostNameType
+{
+	Unknown = 0,
+	Basic = 1,
+	Dns = 2,
+	IPv4 = 3,
+	IPv6 = 4,
+}
+
+private enum UriParser.UriQuirksVersion
+{
+	V2 = 2,
+	V3 = 3,
+}
+
+internal enum UriSyntaxFlags
+{
+	None = 0,
+	MustHaveAuthority = 1,
+	OptionalAuthority = 2,
+	MayHaveUserInfo = 4,
+	MayHavePort = 8,
+	MayHavePath = 16,
+	MayHaveQuery = 32,
+	MayHaveFragment = 64,
+	AllowEmptyHost = 128,
+	AllowUncHost = 256,
+	AllowDnsHost = 512,
+	AllowIPv4Host = 1024,
+	AllowIPv6Host = 2048,
+	AllowAnInternetHost = 3584,
+	AllowAnyOtherHost = 4096,
+	FileLikeUri = 8192,
+	MailToLikeUri = 16384,
+	V1_UnknownUri = 65536,
+	SimpleUserSyntax = 131072,
+	BuiltInSyntax = 262144,
+	ParserSchemeOnly = 524288,
+	AllowDOSPath = 1048576,
+	PathIsRooted = 2097152,
+	ConvertPathSlashes = 4194304,
+	CompressPath = 8388608,
+	CanonicalizeAsFilePath = 16777216,
+	UnEscapeDotsAndSlashes = 33554432,
+	AllowIdn = 67108864,
+	AllowIriParsing = 268435456,
+}
+
+internal enum IOOperation
+{
+	Read = 1,
+	Write = 2,
+}
+
+public enum RegexOptions
+{
+	None = 0,
+	IgnoreCase = 1,
+	Multiline = 2,
+	ExplicitCapture = 4,
+	Compiled = 8,
+	Singleline = 16,
+	IgnorePatternWhitespace = 32,
+	RightToLeft = 64,
+	ECMAScript = 256,
+	CultureInvariant = 512,
+}
+
+public enum TraceLevel
+{
+	Off = 0,
+	Error = 1,
+	Warning = 2,
+	Info = 3,
+	Verbose = 4,
+}
+
+private enum Process.StreamReadMode
+{
+	undefined = 0,
+	syncMode = 1,
+	asyncMode = 2,
+}
+
+private enum Process.State
+{
+	HaveId = 1,
+	IsLocal = 2,
+	IsNt = 4,
+	HaveProcessInfo = 8,
+	Exited = 16,
+	Associated = 32,
+	IsWin2k = 64,
+	HaveNtProcessInfo = 12,
+}
+
+public enum ProcessWindowStyle
+{
+	Hidden = 1,
+	Maximized = 3,
+	Minimized = 2,
+	Normal = 0,
+}
+
+public enum CipherAlgorithmType
+{
+	None = 0,
+	Null = 24576,
+	Aes = 26129,
+	Aes128 = 26126,
+	Aes192 = 26127,
+	Aes256 = 26128,
+	Des = 26113,
+	Rc2 = 26114,
+	Rc4 = 26625,
+	TripleDes = 26115,
+}
+
+public enum ExchangeAlgorithmType
+{
+	None = 0,
+	DiffieHellman = 43522,
+	RsaKeyX = 41984,
+	RsaSign = 9216,
+}
+
+public enum HashAlgorithmType
+{
+	None = 0,
+	Md5 = 32771,
+	Sha1 = 32772,
+	Sha256 = 32780,
+	Sha384 = 32781,
+	Sha512 = 32782,
+}
+
+public enum SslProtocols
+{
+	None = 0,
+	Ssl2 = 12,
+	Ssl3 = 48,
+	Tls = 192,
+	Tls11 = 768,
+	Tls12 = 3072,
+	Tls13 = 12288,
+	Default = 240,
+}
+
+public enum ChannelBindingKind
+{
+	Unknown = 0,
+	Unique = 25,
+	Endpoint = 26,
+}
+
+public enum PolicyEnforcement
+{
+	Never = 0,
+	WhenSupported = 1,
+	Always = 2,
+}
+
+internal enum DerSequenceReader.DerTag
+{
+	Boolean = 1,
+	Integer = 2,
+	BitString = 3,
+	OctetString = 4,
+	Null = 5,
+	ObjectIdentifier = 6,
+	UTF8String = 12,
+	Sequence = 16,
+	Set = 17,
+	PrintableString = 19,
+	T61String = 20,
+	IA5String = 22,
+	UTCTime = 23,
+	GeneralizedTime = 24,
+	BMPString = 30,
+}
+
+public enum OidGroup
+{
+	All = 0,
+	HashAlgorithm = 1,
+	EncryptionAlgorithm = 2,
+	PublicKeyAlgorithm = 3,
+	SignatureAlgorithm = 4,
+	Attribute = 5,
+	ExtensionOrAttribute = 6,
+	EnhancedKeyUsage = 7,
+	Policy = 8,
+	Template = 9,
+	KeyDerivationFunction = 10,
+}
+
+internal enum AsnDecodeStatus
+{
+	Ok = 0,
+	BadAsn = 1,
+	BadTag = 2,
+	BadLength = 3,
+	InformationNotAvailable = 4,
+}
+
+private enum GeneralNameEncoder.GeneralNameTag
+{
+	OtherName = 160,
+	Rfc822Name = 129,
+	DnsName = 130,
+	X400Address = 131,
+	DirectoryName = 132,
+	EdiPartyName = 133,
+	Uri = 134,
+	IpAddress = 135,
+	RegisteredId = 136,
+}
+
+public enum OpenFlags
+{
+	ReadOnly = 0,
+	ReadWrite = 1,
+	MaxAllowed = 2,
+	OpenExistingOnly = 4,
+	IncludeArchived = 8,
+}
+
+public enum StoreLocation
+{
+	CurrentUser = 1,
+	LocalMachine = 2,
+}
+
+public enum StoreName
+{
+	AddressBook = 1,
+	AuthRoot = 2,
+	CertificateAuthority = 3,
+	Disallowed = 4,
+	My = 5,
+	Root = 6,
+	TrustedPeople = 7,
+	TrustedPublisher = 8,
+}
+
+public enum X500DistinguishedNameFlags
+{
+	None = 0,
+	Reversed = 1,
+	UseSemicolons = 16,
+	DoNotUsePlusSign = 32,
+	DoNotUseQuotes = 64,
+	UseCommas = 128,
+	UseNewLines = 256,
+	UseUTF8Encoding = 4096,
+	UseT61Encoding = 8192,
+	ForceUTF8Encoding = 16384,
+}
+
+public enum X509ChainStatusFlags
+{
+	NoError = 0,
+	NotTimeValid = 1,
+	NotTimeNested = 2,
+	Revoked = 4,
+	NotSignatureValid = 8,
+	NotValidForUsage = 16,
+	UntrustedRoot = 32,
+	RevocationStatusUnknown = 64,
+	Cyclic = 128,
+	InvalidExtension = 256,
+	InvalidPolicyConstraints = 512,
+	InvalidBasicConstraints = 1024,
+	InvalidNameConstraints = 2048,
+	HasNotSupportedNameConstraint = 4096,
+	HasNotDefinedNameConstraint = 8192,
+	HasNotPermittedNameConstraint = 16384,
+	HasExcludedNameConstraint = 32768,
+	PartialChain = 65536,
+	CtlNotTimeValid = 131072,
+	CtlNotSignatureValid = 262144,
+	CtlNotValidForUsage = 524288,
+	OfflineRevocation = 16777216,
+	NoIssuanceChainPolicy = 33554432,
+	ExplicitDistrust = 67108864,
+	HasNotSupportedCriticalExtension = 134217728,
+	HasWeakSignature = 1048576,
+}
+
+public enum X509FindType
+{
+	FindByThumbprint = 0,
+	FindBySubjectName = 1,
+	FindBySubjectDistinguishedName = 2,
+	FindByIssuerName = 3,
+	FindByIssuerDistinguishedName = 4,
+	FindBySerialNumber = 5,
+	FindByTimeValid = 6,
+	FindByTimeNotYetValid = 7,
+	FindByTimeExpired = 8,
+	FindByTemplateName = 9,
+	FindByApplicationPolicy = 10,
+	FindByCertificatePolicy = 11,
+	FindByExtension = 12,
+	FindByKeyUsage = 13,
+	FindBySubjectKeyIdentifier = 14,
+}
+
+public enum X509IncludeOption
+{
+	None = 0,
+	ExcludeRoot = 1,
+	EndCertOnly = 2,
+	WholeChain = 3,
+}
+
+public enum X509KeyUsageFlags
+{
+	None = 0,
+	EncipherOnly = 1,
+	CrlSign = 2,
+	KeyCertSign = 4,
+	KeyAgreement = 8,
+	DataEncipherment = 16,
+	KeyEncipherment = 32,
+	NonRepudiation = 64,
+	DigitalSignature = 128,
+	DecipherOnly = 32768,
+}
+
+public enum X509NameType
+{
+	SimpleName = 0,
+	EmailName = 1,
+	UpnName = 2,
+	DnsName = 3,
+	DnsFromAlternativeName = 4,
+	UrlName = 5,
+}
+
+public enum X509RevocationFlag
+{
+	EndCertificateOnly = 0,
+	EntireChain = 1,
+	ExcludeRoot = 2,
+}
+
+public enum X509RevocationMode
+{
+	NoCheck = 0,
+	Online = 1,
+	Offline = 2,
+}
+
+public enum X509SubjectKeyIdentifierHashAlgorithm
+{
+	Sha1 = 0,
+	ShortSha1 = 1,
+	CapiSha1 = 2,
+}
+
+public enum X509VerificationFlags
+{
+	NoFlag = 0,
+	IgnoreNotTimeValid = 1,
+	IgnoreCtlNotTimeValid = 2,
+	IgnoreNotTimeNested = 4,
+	IgnoreInvalidBasicConstraints = 8,
+	AllowUnknownCertificateAuthority = 16,
+	IgnoreWrongUsage = 32,
+	IgnoreInvalidName = 64,
+	IgnoreInvalidPolicy = 128,
+	IgnoreEndRevocationUnknown = 256,
+	IgnoreCtlSignerRevocationUnknown = 512,
+	IgnoreCertificateAuthorityRevocationUnknown = 1024,
+	IgnoreRootRevocationUnknown = 2048,
+	AllFlags = 4095,
+}
+
+public enum EditorBrowsableState
+{
+	Always = 0,
+	Never = 1,
+	Advanced = 2,
+}
+
+public enum DesignerSerializationVisibility
+{
+	Hidden = 0,
+	Visible = 1,
+	Content = 2,
+}
+
+public enum BindableSupport
+{
+	No = 0,
+	Yes = 1,
+	Default = 2,
+}
+
+public enum BindingDirection
+{
+	OneWay = 0,
+	TwoWay = 1,
+}
+
+public enum CollectionChangeAction
+{
+	Add = 1,
+	Remove = 2,
+	Refresh = 3,
+}
+
+public enum DataObjectMethodType
+{
+	Fill = 0,
+	Select = 1,
+	Update = 2,
+	Insert = 3,
+	Delete = 4,
+}
+
+public enum InheritanceLevel
+{
+	Inherited = 1,
+	InheritedReadOnly = 2,
+	NotInherited = 3,
+}
+
+public enum PropertyTabScope
+{
+	Static = 0,
+	Global = 1,
+	Document = 2,
+	Component = 3,
+}
+
+public enum LicenseUsageMode
+{
+	Runtime = 0,
+	Designtime = 1,
+}
+
+public enum ListChangedType
+{
+	Reset = 0,
+	ItemAdded = 1,
+	ItemDeleted = 2,
+	ItemMoved = 3,
+	ItemChanged = 4,
+	PropertyDescriptorAdded = 5,
+	PropertyDescriptorDeleted = 6,
+	PropertyDescriptorChanged = 7,
+}
+
+public enum ListSortDirection
+{
+	Ascending = 0,
+	Descending = 1,
+}
+
+private enum MaskedTextProvider.CaseConversion
+{
+	None = 0,
+	ToLower = 1,
+	ToUpper = 2,
+}
+
+private enum MaskedTextProvider.CharType
+{
+	EditOptional = 1,
+	EditRequired = 2,
+	Separator = 4,
+	Literal = 8,
+	Modifier = 16,
+}
+
+public enum MaskedTextResultHint
+{
+	Unknown = 0,
+	CharacterEscaped = 1,
+	NoEffect = 2,
+	SideEffect = 3,
+	Success = 4,
+}
+
+public enum ToolboxItemFilterType
+{
+	Allow = 0,
+	Custom = 1,
+	Prevent = 2,
+	Require = 3,
+}
+
+public enum RefreshProperties
+{
+	None = 0,
+	All = 1,
+	Repaint = 2,
+}
+
+public enum NotifyCollectionChangedAction
+{
+	Add = 0,
+	Remove = 1,
+	Replace = 2,
+	Move = 3,
+	Reset = 4,
+}
+
+internal enum NodeColor
+{
+	Black = 0,
+	Red = 1,
+}
+
+internal enum TreeRotation
+{
+	Left = 0,
+	LeftRight = 1,
+	Right = 2,
+	RightLeft = 3,
+}
+
+public enum CompressionLevel
+{
+	Optimal = 0,
+	Fastest = 1,
+	NoCompression = 2,
+}
+
+public enum CompressionMode
+{
+	Decompress = 0,
+	Compress = 1,
+}
+
+private enum ContextAwareResult.StateFlags
+{
+	None = 0,
+	CaptureIdentity = 1,
+	CaptureContext = 2,
+	ThreadSafeContextCopy = 4,
+	PostBlockStarted = 8,
+	PostBlockFinished = 16,
+}
+
+internal enum ContextFlagsPal
+{
+	None = 0,
+	Delegate = 1,
+	MutualAuth = 2,
+	ReplayDetect = 4,
+	SequenceDetect = 8,
+	Confidentiality = 16,
+	UseSessionKey = 32,
+	AllocateMemory = 256,
+	Connection = 2048,
+	InitExtendedError = 16384,
+	AcceptExtendedError = 32768,
+	InitStream = 32768,
+	AcceptStream = 65536,
+	InitIntegrity = 65536,
+	AcceptIntegrity = 131072,
+	InitManualCredValidation = 524288,
+	InitUseSuppliedCreds = 128,
+	InitIdentify = 131072,
+	AcceptIdentify = 524288,
+	ProxyBindings = 67108864,
+	AllowMissingBindings = 268435456,
+	UnverifiedTargetName = 536870912,
+}
+
+internal enum SecurityStatusPalErrorCode
+{
+	NotSet = 0,
+	OK = 1,
+	ContinueNeeded = 2,
+	CompleteNeeded = 3,
+	CompAndContinue = 4,
+	ContextExpired = 5,
+	CredentialsNeeded = 6,
+	Renegotiate = 7,
+	OutOfMemory = 8,
+	InvalidHandle = 9,
+	Unsupported = 10,
+	TargetUnknown = 11,
+	InternalError = 12,
+	PackageNotFound = 13,
+	NotOwner = 14,
+	CannotInstall = 15,
+	InvalidToken = 16,
+	CannotPack = 17,
+	QopNotSupported = 18,
+	NoImpersonation = 19,
+	LogonDenied = 20,
+	UnknownCredentials = 21,
+	NoCredentials = 22,
+	MessageAltered = 23,
+	OutOfSequence = 24,
+	NoAuthenticatingAuthority = 25,
+	IncompleteMessage = 26,
+	IncompleteCredentials = 27,
+	BufferNotEnough = 28,
+	WrongPrincipal = 29,
+	TimeSkew = 30,
+	UntrustedRoot = 31,
+	IllegalMessage = 32,
+	CertUnknown = 33,
+	CertExpired = 34,
+	AlgorithmMismatch = 35,
+	SecurityQosFailed = 36,
+	SmartcardLogonRequired = 37,
+	UnsupportedPreauth = 38,
+	BadBinding = 39,
+	DowngradeDetected = 40,
+	ApplicationProtocolMismatch = 41,
+}
+
+public enum HttpStatusCode
+{
+	Continue = 100,
+	SwitchingProtocols = 101,
+	Processing = 102,
+	EarlyHints = 103,
+	OK = 200,
+	Created = 201,
+	Accepted = 202,
+	NonAuthoritativeInformation = 203,
+	NoContent = 204,
+	ResetContent = 205,
+	PartialContent = 206,
+	MultiStatus = 207,
+	AlreadyReported = 208,
+	IMUsed = 226,
+	MultipleChoices = 300,
+	Ambiguous = 300,
+	MovedPermanently = 301,
+	Moved = 301,
+	Found = 302,
+	Redirect = 302,
+	SeeOther = 303,
+	RedirectMethod = 303,
+	NotModified = 304,
+	UseProxy = 305,
+	Unused = 306,
+	TemporaryRedirect = 307,
+	RedirectKeepVerb = 307,
+	PermanentRedirect = 308,
+	BadRequest = 400,
+	Unauthorized = 401,
+	PaymentRequired = 402,
+	Forbidden = 403,
+	NotFound = 404,
+	MethodNotAllowed = 405,
+	NotAcceptable = 406,
+	ProxyAuthenticationRequired = 407,
+	RequestTimeout = 408,
+	Conflict = 409,
+	Gone = 410,
+	LengthRequired = 411,
+	PreconditionFailed = 412,
+	RequestEntityTooLarge = 413,
+	RequestUriTooLong = 414,
+	UnsupportedMediaType = 415,
+	RequestedRangeNotSatisfiable = 416,
+	ExpectationFailed = 417,
+	MisdirectedRequest = 421,
+	UnprocessableEntity = 422,
+	Locked = 423,
+	FailedDependency = 424,
+	UpgradeRequired = 426,
+	PreconditionRequired = 428,
+	TooManyRequests = 429,
+	RequestHeaderFieldsTooLarge = 431,
+	UnavailableForLegalReasons = 451,
+	InternalServerError = 500,
+	NotImplemented = 501,
+	BadGateway = 502,
+	ServiceUnavailable = 503,
+	GatewayTimeout = 504,
+	HttpVersionNotSupported = 505,
+	VariantAlsoNegotiates = 506,
+	InsufficientStorage = 507,
+	LoopDetected = 508,
+	NotExtended = 510,
+	NetworkAuthenticationRequired = 511,
+}
+
+internal enum CommandStream.PipelineInstruction
+{
+	Abort = 0,
+	Advance = 1,
+	Pause = 2,
+	Reread = 3,
+	GiveStream = 4,
+}
+
+internal enum CommandStream.PipelineEntryFlags
+{
+	UserCommand = 1,
+	GiveDataStream = 2,
+	CreateDataConnection = 4,
+	DontLogParameter = 8,
+}
+
+internal enum FtpLoginState
+{
+	NotLoggedIn = 0,
+	LoggedIn = 1,
+	LoggedInButNeedsRelogin = 2,
+	ReloginFailed = 3,
+}
+
+private enum FtpControlStream.GetPathOption
+{
+	Normal = 0,
+	AssumeFilename = 1,
+	AssumeNoFilename = 2,
+}
+
+internal enum FtpOperation
+{
+	DownloadFile = 0,
+	ListDirectory = 1,
+	ListDirectoryDetails = 2,
+	UploadFile = 3,
+	UploadFileUnique = 4,
+	AppendFile = 5,
+	DeleteFile = 6,
+	GetDateTimestamp = 7,
+	GetFileSize = 8,
+	Rename = 9,
+	MakeDirectory = 10,
+	RemoveDirectory = 11,
+	PrintWorkingDirectory = 12,
+	Other = 13,
+}
+
+internal enum FtpMethodFlags
+{
+	None = 0,
+	IsDownload = 1,
+	IsUpload = 2,
+	TakesParameter = 4,
+	MayTakeParameter = 8,
+	DoesNotTakeParameter = 16,
+	ParameterIsDirectory = 32,
+	ShouldParseForResponseUri = 64,
+	HasHttpCommand = 128,
+	MustChangeWorkingDirectoryToPath = 256,
+}
+
+private enum FtpWebRequest.RequestStage
+{
+	CheckForError = 0,
+	RequestStarted = 1,
+	WriteReady = 2,
+	ReadReady = 3,
+	ReleaseConnection = 4,
+}
+
+public enum SecurityProtocolType
+{
+	SystemDefault = 0,
+	Ssl3 = 48,
+	Tls = 192,
+	Tls11 = 768,
+	Tls12 = 3072,
+	Tls13 = 12288,
+}
+
+public enum AuthenticationSchemes
+{
+	None = 0,
+	Digest = 1,
+	Negotiate = 2,
+	Ntlm = 4,
+	Basic = 8,
+	Anonymous = 32768,
+	IntegratedWindowsAuthentication = 6,
+}
+
+public enum FtpStatusCode
+{
+	Undefined = 0,
+	RestartMarker = 110,
+	ServiceTemporarilyNotAvailable = 120,
+	DataAlreadyOpen = 125,
+	OpeningData = 150,
+	CommandOK = 200,
+	CommandExtraneous = 202,
+	DirectoryStatus = 212,
+	FileStatus = 213,
+	SystemType = 215,
+	SendUserCommand = 220,
+	ClosingControl = 221,
+	ClosingData = 226,
+	EnteringPassive = 227,
+	LoggedInProceed = 230,
+	ServerWantsSecureSession = 234,
+	FileActionOK = 250,
+	PathnameCreated = 257,
+	SendPasswordCommand = 331,
+	NeedLoginAccount = 332,
+	FileCommandPending = 350,
+	ServiceNotAvailable = 421,
+	CantOpenData = 425,
+	ConnectionClosed = 426,
+	ActionNotTakenFileUnavailableOrBusy = 450,
+	ActionAbortedLocalProcessingError = 451,
+	ActionNotTakenInsufficientSpace = 452,
+	CommandSyntaxError = 500,
+	ArgumentSyntaxError = 501,
+	CommandNotImplemented = 502,
+	BadCommandSequence = 503,
+	NotLoggedIn = 530,
+	AccountNeeded = 532,
+	ActionNotTakenFileUnavailable = 550,
+	ActionAbortedUnknownPageType = 551,
+	FileActionAborted = 552,
+	ActionNotTakenFilenameNotAllowed = 553,
+}
+
+private enum HttpListenerRequestUriBuilder.ParsingResult
+{
+	Success = 0,
+	InvalidString = 1,
+	EncodingError = 2,
+}
+
+private enum HttpListenerRequestUriBuilder.EncodingType
+{
+	Primary = 0,
+	Secondary = 1,
+}
+
+public enum HttpRequestHeader
+{
+	CacheControl = 0,
+	Connection = 1,
+	Date = 2,
+	KeepAlive = 3,
+	Pragma = 4,
+	Trailer = 5,
+	TransferEncoding = 6,
+	Upgrade = 7,
+	Via = 8,
+	Warning = 9,
+	Allow = 10,
+	ContentLength = 11,
+	ContentType = 12,
+	ContentEncoding = 13,
+	ContentLanguage = 14,
+	ContentLocation = 15,
+	ContentMd5 = 16,
+	ContentRange = 17,
+	Expires = 18,
+	LastModified = 19,
+	Accept = 20,
+	AcceptCharset = 21,
+	AcceptEncoding = 22,
+	AcceptLanguage = 23,
+	Authorization = 24,
+	Cookie = 25,
+	Expect = 26,
+	From = 27,
+	Host = 28,
+	IfMatch = 29,
+	IfModifiedSince = 30,
+	IfNoneMatch = 31,
+	IfRange = 32,
+	IfUnmodifiedSince = 33,
+	MaxForwards = 34,
+	ProxyAuthorization = 35,
+	Referer = 36,
+	Range = 37,
+	Te = 38,
+	Translate = 39,
+	UserAgent = 40,
+}
+
+public enum HttpResponseHeader
+{
+	CacheControl = 0,
+	Connection = 1,
+	Date = 2,
+	KeepAlive = 3,
+	Pragma = 4,
+	Trailer = 5,
+	TransferEncoding = 6,
+	Upgrade = 7,
+	Via = 8,
+	Warning = 9,
+	Allow = 10,
+	ContentLength = 11,
+	ContentType = 12,
+	ContentEncoding = 13,
+	ContentLanguage = 14,
+	ContentLocation = 15,
+	ContentMd5 = 16,
+	ContentRange = 17,
+	Expires = 18,
+	LastModified = 19,
+	AcceptRanges = 20,
+	Age = 21,
+	ETag = 22,
+	Location = 23,
+	ProxyAuthenticate = 24,
+	RetryAfter = 25,
+	Server = 26,
+	SetCookie = 27,
+	Vary = 28,
+	WwwAuthenticate = 29,
+}
+
+internal enum WindowsInstallationType
+{
+	Unknown = 0,
+	Client = 1,
+	Server = 2,
+	ServerCore = 3,
+	Embedded = 4,
+}
+
+internal enum SecurityStatus
+{
+	OK = 0,
+	ContinueNeeded = 590610,
+	CompleteNeeded = 590611,
+	CompAndContinue = 590612,
+	ContextExpired = 590615,
+	CredentialsNeeded = 590624,
+	Renegotiate = 590625,
+}
+
+internal enum ContentTypeValues
+{
+	ChangeCipherSpec = 20,
+	Alert = 21,
+	HandShake = 22,
+	AppData = 23,
+	Unrecognized = 255,
+}
+
+internal enum ContextAttribute
+{
+	Sizes = 0,
+	Names = 1,
+	Lifespan = 2,
+	DceInfo = 3,
+	StreamSizes = 4,
+	Authority = 6,
+	PackageInfo = 10,
+	NegotiationInfo = 12,
+	UniqueBindings = 25,
+	EndpointBindings = 26,
+	ClientSpecifiedSpn = 27,
+	RemoteCertificate = 83,
+	LocalCertificate = 84,
+	RootStore = 85,
+	IssuerListInfoEx = 89,
+	ConnectionInfo = 90,
+	UiInfo = 104,
+}
+
+internal enum Endianness
+{
+	Network = 0,
+	Native = 16,
+}
+
+internal enum CredentialUse
+{
+	Inbound = 1,
+	Outbound = 2,
+	Both = 3,
+}
+
+internal enum BufferType
+{
+	Empty = 0,
+	Data = 1,
+	Token = 2,
+	Parameters = 3,
+	Missing = 4,
+	Extra = 5,
+	Trailer = 6,
+	Header = 7,
+	Padding = 9,
+	Stream = 10,
+	ChannelBindings = 14,
+	TargetHost = 16,
+	ReadOnlyWithChecksum = 268435456,
+}
+
+internal enum ChainPolicyType
+{
+	Base = 1,
+	Authenticode = 2,
+	Authenticode_TS = 3,
+	SSL = 4,
+	BasicConstraints = 5,
+	NtAuth = 6,
+}
+
+internal enum IgnoreCertProblem
+{
+	not_time_valid = 1,
+	ctl_not_time_valid = 2,
+	not_time_nested = 4,
+	invalid_basic_constraints = 8,
+	all_not_time_valid = 7,
+	allow_unknown_ca = 16,
+	wrong_usage = 32,
+	invalid_name = 64,
+	invalid_policy = 128,
+	end_rev_unknown = 256,
+	ctl_signer_rev_unknown = 512,
+	ca_rev_unknown = 1024,
+	root_rev_unknown = 2048,
+	all_rev_unknown = 3840,
+	none = 4095,
+}
+
+internal enum CertUsage
+{
+	MatchTypeAnd = 0,
+	MatchTypeOr = 1,
+}
+
+internal enum CertificateEncoding
+{
+	Zero = 0,
+	X509AsnEncoding = 1,
+	X509NdrEncoding = 2,
+	Pkcs7AsnEncoding = 65536,
+	Pkcs7NdrEncoding = 131072,
+	AnyAsnEncoding = 65537,
+}
+
+internal enum CertificateProblem
+{
+	OK = 0,
+}
+
+internal enum HttpWriteMode
+{
+	Unknown = 0,
+	ContentLength = 1,
+	Chunked = 2,
+	Buffer = 3,
+	None = 4,
+}
+
+internal enum HttpBehaviour
+{
+	Unknown = 0,
+	HTTP10 = 1,
+	HTTP11PartiallyCompliant = 2,
+	HTTP11 = 3,
+}
+
+internal enum HttpProcessingResult
+{
+	Continue = 0,
+	ReadWait = 1,
+	WriteWait = 2,
+}
+
+internal enum TriState
+{
+	False = 0,
+	True = 1,
+}
+
+internal enum DefaultPorts
+{
+	DEFAULT_FTP_PORT = 21,
+	DEFAULT_GOPHER_PORT = 70,
+	DEFAULT_HTTP_PORT = 80,
+	DEFAULT_HTTPS_PORT = 443,
+	DEFAULT_NNTP_PORT = 119,
+	DEFAULT_SMTP_PORT = 25,
+	DEFAULT_TELNET_PORT = 23,
+}
+
+public enum NetworkAccess
+{
+	Accept = 128,
+	Connect = 64,
+}
+
+public enum TransportType
+{
+	Udp = 1,
+	Connectionless = 1,
+	Tcp = 2,
+	ConnectionOriented = 2,
+	All = 3,
+}
+
+internal enum WebExceptionInternalStatus
+{
+	RequestFatal = 0,
+	ServicePointFatal = 1,
+	Recoverable = 2,
+	Isolated = 3,
+}
+
+public enum WebExceptionStatus
+{
+	Success = 0,
+	NameResolutionFailure = 1,
+	ConnectFailure = 2,
+	ReceiveFailure = 3,
+	SendFailure = 4,
+	PipelineFailure = 5,
+	RequestCanceled = 6,
+	ProtocolError = 7,
+	ConnectionClosed = 8,
+	TrustFailure = 9,
+	SecureChannelFailure = 10,
+	ServerProtocolViolation = 11,
+	KeepAliveFailure = 12,
+	Pending = 13,
+	Timeout = 14,
+	ProxyNameResolutionFailure = 15,
+	UnknownError = 16,
+	MessageLengthLimitExceeded = 17,
+	CacheEntryNotFound = 18,
+	RequestProhibitedByCachePolicy = 19,
+	RequestProhibitedByProxy = 20,
+}
+
+internal enum WebHeaderCollectionType
+{
+	Unknown = 0,
+	WebRequest = 1,
+	WebResponse = 2,
+	HttpWebRequest = 3,
+	HttpWebResponse = 4,
+	HttpListenerRequest = 5,
+	HttpListenerResponse = 6,
+	FtpWebRequest = 7,
+	FtpWebResponse = 8,
+	FileWebRequest = 9,
+	FileWebResponse = 10,
+}
+
+private enum WebHeaderCollection.RfcChar
+{
+	High = 0,
+	Reg = 1,
+	Ctl = 2,
+	CR = 3,
+	LF = 4,
+	WS = 5,
+	Colon = 6,
+	Delim = 7,
+}
+
+internal enum DataParseStatus
+{
+	NeedMoreData = 0,
+	ContinueParsing = 1,
+	Done = 2,
+	Invalid = 3,
+	DataTooBig = 4,
+}
+
+internal enum WriteBufferState
+{
+	Disabled = 0,
+	Headers = 1,
+	Buffer = 2,
+	Playback = 3,
+}
+
+internal enum WebParseErrorSection
+{
+	Generic = 0,
+	ResponseHeader = 1,
+	ResponseStatusLine = 2,
+	ResponseBody = 3,
+}
+
+internal enum WebParseErrorCode
+{
+	Generic = 0,
+	InvalidHeaderName = 1,
+	InvalidContentLength = 2,
+	IncompleteHeaderLine = 3,
+	CrLfError = 4,
+	InvalidChunkFormat = 5,
+	UnexpectedServerResponse = 6,
+}
+
+internal enum CloseExState
+{
+	Normal = 0,
+	Abort = 1,
+	Silent = 2,
+}
+
+internal enum ThreadKinds
+{
+	Unknown = 0,
+	User = 1,
+	System = 2,
+	Sync = 4,
+	Async = 8,
+	Timer = 16,
+	CompletionPort = 32,
+	Worker = 64,
+	Finalization = 128,
+	Other = 256,
+	OwnerMask = 3,
+	SyncMask = 12,
+	SourceMask = 496,
+	SafeSources = 352,
+	ThreadPool = 96,
+}
+
+private enum TimerThread.TimerThreadState
+{
+	Idle = 0,
+	Running = 1,
+	Stopped = 2,
+}
+
+private enum TimerThread.TimerNode.TimerState
+{
+	Ready = 0,
+	Fired = 1,
+	Cancelled = 2,
+	Sentinel = 3,
+}
+
+internal enum CookieVariant
+{
+	Unknown = 0,
+	Plain = 1,
+	Rfc2109 = 2,
+	Rfc2965 = 3,
+	Default = 2,
+}
+
+internal enum CookieToken
+{
+	Nothing = 0,
+	NameValuePair = 1,
+	Attribute = 2,
+	EndToken = 3,
+	EndCookie = 4,
+	End = 5,
+	Equals = 6,
+	Comment = 7,
+	CommentUrl = 8,
+	CookieName = 9,
+	Discard = 10,
+	Domain = 11,
+	Expires = 12,
+	MaxAge = 13,
+	Path = 14,
+	Port = 15,
+	Secure = 16,
+	HttpOnly = 17,
+	Unknown = 18,
+	Version = 19,
+}
+
+internal enum CookieCollection.Stamp
+{
+	Check = 0,
+	Set = 1,
+	SetToUnused = 2,
+	SetToMaxUsed = 3,
+}
+
+internal enum UnsafeNclNativeMethods.HttpApi.Enum
+{
+	HttpHeaderCacheControl = 0,
+	HttpHeaderConnection = 1,
+	HttpHeaderDate = 2,
+	HttpHeaderKeepAlive = 3,
+	HttpHeaderPragma = 4,
+	HttpHeaderTrailer = 5,
+	HttpHeaderTransferEncoding = 6,
+	HttpHeaderUpgrade = 7,
+	HttpHeaderVia = 8,
+	HttpHeaderWarning = 9,
+	HttpHeaderAllow = 10,
+	HttpHeaderContentLength = 11,
+	HttpHeaderContentType = 12,
+	HttpHeaderContentEncoding = 13,
+	HttpHeaderContentLanguage = 14,
+	HttpHeaderContentLocation = 15,
+	HttpHeaderContentMd5 = 16,
+	HttpHeaderContentRange = 17,
+	HttpHeaderExpires = 18,
+	HttpHeaderLastModified = 19,
+	HttpHeaderAcceptRanges = 20,
+	HttpHeaderAge = 21,
+	HttpHeaderEtag = 22,
+	HttpHeaderLocation = 23,
+	HttpHeaderProxyAuthenticate = 24,
+	HttpHeaderRetryAfter = 25,
+	HttpHeaderServer = 26,
+	HttpHeaderSetCookie = 27,
+	HttpHeaderVary = 28,
+	HttpHeaderWwwAuthenticate = 29,
+	HttpHeaderResponseMaximum = 30,
+	HttpHeaderMaximum = 41,
+}
+
+internal enum ContentDecodeStream.Mode
+{
+	GZip = 0,
+	Deflate = 1,
+}
+
+public enum DecompressionMethods
+{
+	None = 0,
+	GZip = 1,
+	Deflate = 2,
+}
+
+private enum HttpConnection.InputState
+{
+	RequestLine = 0,
+	Headers = 1,
+}
+
+private enum HttpConnection.LineState
+{
+	None = 0,
+	CR = 1,
+	LF = 2,
+}
+
+private enum HttpWebRequest.NtlmAuthState
+{
+	None = 0,
+	Challenge = 1,
+	Response = 2,
+}
+
+private enum MonoChunkParser.State
+{
+	None = 0,
+	PartialSize = 1,
+	Body = 2,
+	BodyFinished = 3,
+	Trailer = 4,
+}
+
+internal enum WebCompletionSource.Status<T>
+{
+}
+
+internal enum ReadState
+{
+	None = 0,
+	Status = 1,
+	Headers = 2,
+	Content = 3,
+	Aborted = 4,
+}
+
+private enum WebConnectionTunnel.NtlmAuthState
+{
+	None = 0,
+	Challenge = 1,
+	Response = 2,
+}
+
+public enum DuplicateAddressDetectionState
+{
+	Invalid = 0,
+	Tentative = 1,
+	Duplicate = 2,
+	Deprecated = 3,
+	Preferred = 4,
+}
+
+internal enum IcmpV4Type
+{
+	ICMP4_ECHO_REPLY = 0,
+	ICMP4_DST_UNREACH = 3,
+	ICMP4_SOURCE_QUENCH = 4,
+	ICMP4_TIME_EXCEEDED = 11,
+	ICMP4_PARAM_PROB = 12,
+	ICMP4_REDIRECT = 5,
+	ICMP4_ECHO_REQUEST = 8,
+	ICMP4_ROUTER_ADVERT = 9,
+	ICMP4_ROUTER_SOLICIT = 10,
+	ICMP4_TIMESTAMP_REQUEST = 13,
+	ICMP4_TIMESTAMP_REPLY = 14,
+	ICMP4_MASK_REQUEST = 17,
+	ICMP4_MASK_REPLY = 18,
+}
+
+internal enum IcmpV4Code
+{
+	ICMP4_UNREACH_NET = 0,
+	ICMP4_UNREACH_HOST = 1,
+	ICMP4_UNREACH_PROTOCOL = 2,
+	ICMP4_UNREACH_PORT = 3,
+	ICMP4_UNREACH_FRAG_NEEDED = 4,
+	ICMP4_UNREACH_SOURCEROUTE_FAILED = 5,
+	ICMP4_UNREACH_NET_UNKNOWN = 6,
+	ICMP4_UNREACH_HOST_UNKNOWN = 7,
+	ICMP4_UNREACH_ISOLATED = 8,
+	ICMP4_UNREACH_NET_ADMIN = 9,
+	ICMP4_UNREACH_HOST_ADMIN = 10,
+	ICMP4_UNREACH_NET_TOS = 11,
+	ICMP4_UNREACH_HOST_TOS = 12,
+	ICMP4_UNREACH_ADMIN = 13,
+}
+
+public enum IPStatus
+{
+	Success = 0,
+	DestinationNetworkUnreachable = 11002,
+	DestinationHostUnreachable = 11003,
+	DestinationProtocolUnreachable = 11004,
+	DestinationPortUnreachable = 11005,
+	DestinationProhibited = 11004,
+	NoResources = 11006,
+	BadOption = 11007,
+	HardwareError = 11008,
+	PacketTooBig = 11009,
+	TimedOut = 11010,
+	BadRoute = 11012,
+	TtlExpired = 11013,
+	TtlReassemblyTimeExceeded = 11014,
+	ParameterProblem = 11015,
+	SourceQuench = 11016,
+	BadDestination = 11018,
+	DestinationUnreachable = 11040,
+	TimeExceeded = 11041,
+	BadHeader = 11042,
+	UnrecognizedNextHeader = 11043,
+	IcmpError = 11044,
+	DestinationScopeMismatch = 11045,
+}
+
+internal enum StartIPOptions
+{
+	Both = 3,
+	None = 0,
+	StartIPv4 = 1,
+	StartIPv6 = 2,
+}
+
+public enum NetworkInformationAccess
+{
+	None = 0,
+	Read = 1,
+	Ping = 4,
+}
+
+public enum NetworkInterfaceComponent
+{
+	IPv4 = 0,
+	IPv6 = 1,
+}
+
+public enum OperationalStatus
+{
+	Up = 1,
+	Down = 2,
+	Testing = 3,
+	Unknown = 4,
+	Dormant = 5,
+	NotPresent = 6,
+	LowerLayerDown = 7,
+}
+
+public enum PrefixOrigin
+{
+	Other = 0,
+	Manual = 1,
+	WellKnown = 2,
+	Dhcp = 3,
+	RouterAdvertisement = 4,
+}
+
+public enum ScopeLevel
+{
+	None = 0,
+	Interface = 1,
+	Link = 2,
+	Subnet = 3,
+	Admin = 4,
+	Site = 5,
+	Organization = 8,
+	Global = 14,
+}
+
+public enum SuffixOrigin
+{
+	Other = 0,
+	Manual = 1,
+	WellKnown = 2,
+	OriginDhcp = 3,
+	LinkLayerAddress = 4,
+	Random = 5,
+}
+
+public enum TcpState
+{
+	Unknown = 0,
+	Closed = 1,
+	Listen = 2,
+	SynSent = 3,
+	SynReceived = 4,
+	Established = 5,
+	FinWait1 = 6,
+	FinWait2 = 7,
+	CloseWait = 8,
+	Closing = 9,
+	LastAck = 10,
+	TimeWait = 11,
+	DeleteTcb = 12,
+}
+
+public enum NetworkInterfaceType
+{
+	Unknown = 1,
+	Ethernet = 6,
+	TokenRing = 9,
+	Fddi = 15,
+	BasicIsdn = 20,
+	PrimaryIsdn = 21,
+	Ppp = 23,
+	Loopback = 24,
+	Ethernet3Megabit = 26,
+	Slip = 28,
+	Atm = 37,
+	GenericModem = 48,
+	FastEthernetT = 62,
+	Isdn = 63,
+	FastEthernetFx = 69,
+	Wireless80211 = 71,
+	AsymmetricDsl = 94,
+	RateAdaptDsl = 95,
+	SymmetricDsl = 96,
+	VeryHighSpeedDsl = 97,
+	IPOverAtm = 114,
+	GigabitEthernet = 117,
+	Tunnel = 131,
+	MultiRateSymmetricDsl = 143,
+	HighPerformanceSerialBus = 144,
+	Wman = 237,
+	Wwanpp = 243,
+	Wwanpp2 = 244,
+}
+
+public enum NetBiosNodeType
+{
+	Unknown = 0,
+	Broadcast = 1,
+	Peer2Peer = 2,
+	Mixed = 4,
+	Hybrid = 8,
+}
+
+internal enum AixArpHardware
+{
+	ETHER = 6,
+	ATM = 37,
+	SLIP = 28,
+	PPP = 23,
+	LOOPBACK = 24,
+	FDDI = 15,
+}
+
+internal enum AixInterfaceFlags
+{
+	IFF_UP = 1,
+	IFF_BROADCAST = 2,
+	IFF_DEBUG = 4,
+	IFF_LOOPBACK = 8,
+	IFF_POINTOPOINT = 16,
+	IFF_NOTRAILERS = 32,
+	IFF_RUNNING = 64,
+	IFF_NOARP = 128,
+	IFF_PROMISC = 256,
+	IFF_ALLMULTI = 512,
+	IFF_OACTIVE = 1024,
+	IFF_SIMPLEX = 2048,
+	IFF_LINK0 = 1048576,
+	IFF_LINK1 = 2097152,
+	IFF_LINK2 = 4194304,
+	IFF_MULTICAST = 134217728,
+}
+
+internal enum AixAddressFamily
+{
+	AF_INET = 2,
+	AF_INET6 = 24,
+	AF_LINK = 18,
+}
+
+internal enum AixIoctlRequest
+{
+	SIOCGSIZIFCONF = 1074030954,
+	SIOCGIFCONF = 3222300997,
+	SIOCGIFFLAGS = 3223873809,
+	SIOCGIFNETMASK = 3223873829,
+	SIOCGIFMTU = 3223873878,
+}
+
+internal enum LinuxArpHardware
+{
+	ETHER = 1,
+	EETHER = 2,
+	PRONET = 4,
+	ATM = 19,
+	SLIP = 256,
+	CSLIP = 257,
+	SLIP6 = 258,
+	CSLIP6 = 259,
+	PPP = 512,
+	LOOPBACK = 772,
+	FDDI = 774,
+	TUNNEL = 768,
+	TUNNEL6 = 769,
+	SIT = 776,
+	IPDDP = 777,
+	IPGRE = 778,
+	IP6GRE = 823,
+}
+
+internal enum MacOsArpHardware
+{
+	ETHER = 6,
+	ATM = 37,
+	SLIP = 28,
+	PPP = 23,
+	LOOPBACK = 24,
+	FDDI = 15,
+}
+
+internal enum MacOsInterfaceFlags
+{
+	IFF_UP = 1,
+	IFF_BROADCAST = 2,
+	IFF_DEBUG = 4,
+	IFF_LOOPBACK = 8,
+	IFF_POINTOPOINT = 16,
+	IFF_NOTRAILERS = 32,
+	IFF_RUNNING = 64,
+	IFF_NOARP = 128,
+	IFF_PROMISC = 256,
+	IFF_ALLMULTI = 512,
+	IFF_OACTIVE = 1024,
+	IFF_SIMPLEX = 2048,
+	IFF_LINK0 = 4096,
+	IFF_LINK1 = 8192,
+	IFF_LINK2 = 16384,
+	IFF_MULTICAST = 32768,
+}
+
+private enum MacNetworkChange.NetworkReachabilityFlags
+{
+	None = 0,
+	TransientConnection = 1,
+	Reachable = 2,
+	ConnectionRequired = 4,
+	ConnectionOnTraffic = 8,
+	InterventionRequired = 16,
+	ConnectionOnDemand = 32,
+	IsLocalAddress = 65536,
+	IsDirect = 131072,
+	IsWWAN = 262144,
+	ConnectionAutomatic = 8,
+}
+
+private enum LinuxNetworkChange.EventType
+{
+	Availability = 1,
+	Address = 2,
+}
+
+public enum UnicodeDecodingConformance
+{
+	Auto = 0,
+	Strict = 1,
+	Compat = 2,
+	Loose = 3,
+}
+
+public enum UnicodeEncodingConformance
+{
+	Auto = 0,
+	Strict = 1,
+	Compat = 2,
+}
+
+public enum RequestCacheLevel
+{
+	Default = 0,
+	BypassCache = 1,
+	CacheOnly = 2,
+	CacheIfAvailable = 3,
+	Revalidate = 4,
+	Reload = 5,
+	NoCacheNoStore = 6,
+}
+
+public enum HttpRequestCacheLevel
+{
+	Default = 0,
+	BypassCache = 1,
+	CacheOnly = 2,
+	CacheIfAvailable = 3,
+	Revalidate = 4,
+	Reload = 5,
+	NoCacheNoStore = 6,
+	CacheOrNextCacheOnly = 7,
+	Refresh = 8,
+}
+
+private enum MultipleConnectAsync.State
+{
+	NotStarted = 0,
+	DnsQuery = 1,
+	ConnectAttempt = 2,
+	Completed = 3,
+	Canceled = 4,
+}
+
+public enum AddressFamily
+{
+	Unspecified = 0,
+	Unix = 1,
+	InterNetwork = 2,
+	ImpLink = 3,
+	Pup = 4,
+	Chaos = 5,
+	NS = 6,
+	Ipx = 6,
+	Iso = 7,
+	Osi = 7,
+	Ecma = 8,
+	DataKit = 9,
+	Ccitt = 10,
+	Sna = 11,
+	DecNet = 12,
+	DataLink = 13,
+	Lat = 14,
+	HyperChannel = 15,
+	AppleTalk = 16,
+	NetBios = 17,
+	VoiceView = 18,
+	FireFox = 19,
+	Banyan = 21,
+	Atm = 22,
+	InterNetworkV6 = 23,
+	Cluster = 24,
+	Ieee12844 = 25,
+	Irda = 26,
+	NetworkDesigners = 28,
+	Max = 29,
+}
+
+public enum IOControlCode
+{
+	AsyncIO = 2147772029,
+	NonBlockingIO = 2147772030,
+	DataToRead = 1074030207,
+	OobDataRead = 1074033415,
+	AssociateHandle = 2281701377,
+	EnableCircularQueuing = 671088642,
+	Flush = 671088644,
+	GetBroadcastAddress = 1207959557,
+	GetExtensionFunctionPointer = 3355443206,
+	GetQos = 3355443207,
+	GetGroupQos = 3355443208,
+	MultipointLoopback = 2281701385,
+	MulticastScope = 2281701386,
+	SetQos = 2281701387,
+	SetGroupQos = 2281701388,
+	TranslateHandle = 3355443213,
+	RoutingInterfaceQuery = 3355443220,
+	RoutingInterfaceChange = 2281701397,
+	AddressListQuery = 1207959574,
+	AddressListChange = 671088663,
+	QueryTargetPnpHandle = 1207959576,
+	NamespaceChange = 2281701401,
+	AddressListSort = 3355443225,
+	ReceiveAll = 2550136833,
+	ReceiveAllMulticast = 2550136834,
+	ReceiveAllIgmpMulticast = 2550136835,
+	KeepAliveValues = 2550136836,
+	AbsorbRouterAlert = 2550136837,
+	UnicastInterface = 2550136838,
+	LimitBroadcasts = 2550136839,
+	BindToInterface = 2550136840,
+	MulticastInterface = 2550136841,
+	AddMulticastGroupOnInterface = 2550136842,
+	DeleteMulticastGroupFromInterface = 2550136843,
+}
+
+public enum IPProtectionLevel
+{
+	Unrestricted = 10,
+	EdgeRestricted = 20,
+	Restricted = 30,
+}
+
+public enum ProtocolFamily
+{
+	Unspecified = 0,
+	Unix = 1,
+	InterNetwork = 2,
+	ImpLink = 3,
+	Pup = 4,
+	Chaos = 5,
+	NS = 6,
+	Ipx = 6,
+	Iso = 7,
+	Osi = 7,
+	Ecma = 8,
+	DataKit = 9,
+	Ccitt = 10,
+	Sna = 11,
+	DecNet = 12,
+	DataLink = 13,
+	Lat = 14,
+	HyperChannel = 15,
+	AppleTalk = 16,
+	NetBios = 17,
+	VoiceView = 18,
+	FireFox = 19,
+	Banyan = 21,
+	Atm = 22,
+	InterNetworkV6 = 23,
+	Cluster = 24,
+	Ieee12844 = 25,
+	Irda = 26,
+	NetworkDesigners = 28,
+	Max = 29,
+}
+
+public enum ProtocolType
+{
+	IP = 0,
+	IPv6HopByHopOptions = 0,
+	Icmp = 1,
+	Igmp = 2,
+	Ggp = 3,
+	IPv4 = 4,
+	Tcp = 6,
+	Pup = 12,
+	Udp = 17,
+	Idp = 22,
+	IPv6 = 41,
+	IPv6RoutingHeader = 43,
+	IPv6FragmentHeader = 44,
+	IPSecEncapsulatingSecurityPayload = 50,
+	IPSecAuthenticationHeader = 51,
+	IcmpV6 = 58,
+	IPv6NoNextHeader = 59,
+	IPv6DestinationOptions = 60,
+	ND = 77,
+	Raw = 255,
+	Unspecified = 0,
+	Ipx = 1000,
+	Spx = 1256,
+	SpxII = 1257,
+}
+
+public enum SelectMode
+{
+	SelectRead = 0,
+	SelectWrite = 1,
+	SelectError = 2,
+}
+
+public enum SocketAsyncOperation
+{
+	None = 0,
+	Accept = 1,
+	Connect = 2,
+	Disconnect = 3,
+	Receive = 4,
+	ReceiveFrom = 5,
+	ReceiveMessageFrom = 6,
+	Send = 7,
+	SendPackets = 8,
+	SendTo = 9,
+}
+
+public enum SocketClientAccessPolicyProtocol
+{
+	Tcp = 0,
+	Http = 1,
+}
+
+public enum SocketError
+{
+	Success = 0,
+	Interrupted = 10004,
+	AccessDenied = 10013,
+	Fault = 10014,
+	InvalidArgument = 10022,
+	TooManyOpenSockets = 10024,
+	WouldBlock = 10035,
+	InProgress = 10036,
+	AlreadyInProgress = 10037,
+	NotSocket = 10038,
+	DestinationAddressRequired = 10039,
+	MessageSize = 10040,
+	ProtocolType = 10041,
+	ProtocolOption = 10042,
+	ProtocolNotSupported = 10043,
+	SocketNotSupported = 10044,
+	OperationNotSupported = 10045,
+	ProtocolFamilyNotSupported = 10046,
+	AddressFamilyNotSupported = 10047,
+	AddressAlreadyInUse = 10048,
+	AddressNotAvailable = 10049,
+	NetworkDown = 10050,
+	NetworkUnreachable = 10051,
+	NetworkReset = 10052,
+	ConnectionAborted = 10053,
+	ConnectionReset = 10054,
+	NoBufferSpaceAvailable = 10055,
+	IsConnected = 10056,
+	NotConnected = 10057,
+	Shutdown = 10058,
+	TimedOut = 10060,
+	ConnectionRefused = 10061,
+	HostDown = 10064,
+	HostUnreachable = 10065,
+	ProcessLimit = 10067,
+	SystemNotReady = 10091,
+	VersionNotSupported = 10092,
+	NotInitialized = 10093,
+	Disconnecting = 10101,
+	TypeNotFound = 10109,
+	HostNotFound = 11001,
+	TryAgain = 11002,
+	NoRecovery = 11003,
+	NoData = 11004,
+	IOPending = 997,
+	OperationAborted = 995,
+}
+
+public enum SocketFlags
+{
+	None = 0,
+	OutOfBand = 1,
+	Peek = 2,
+	DontRoute = 4,
+	MaxIOVectorLength = 16,
+	Truncated = 256,
+	ControlDataTruncated = 512,
+	Broadcast = 1024,
+	Multicast = 2048,
+	Partial = 32768,
+}
+
+public enum SocketInformationOptions
+{
+	NonBlocking = 1,
+	Connected = 2,
+	Listening = 4,
+	UseOnlyOverlappedIO = 8,
+}
+
+public enum SocketOptionLevel
+{
+	Socket = 65535,
+	IP = 0,
+	IPv6 = 41,
+	Tcp = 6,
+	Udp = 17,
+}
+
+public enum SocketOptionName
+{
+	Debug = 1,
+	AcceptConnection = 2,
+	ReuseAddress = 4,
+	KeepAlive = 8,
+	DontRoute = 16,
+	Broadcast = 32,
+	UseLoopback = 64,
+	Linger = 128,
+	OutOfBandInline = 256,
+	SendBuffer = 4097,
+	ReceiveBuffer = 4098,
+	SendLowWater = 4099,
+	ReceiveLowWater = 4100,
+	SendTimeout = 4101,
+	ReceiveTimeout = 4102,
+	Error = 4103,
+	Type = 4104,
+	ReuseUnicastPort = 12295,
+	MaxConnections = 2147483647,
+	IPOptions = 1,
+	HeaderIncluded = 2,
+	TypeOfService = 3,
+	IpTimeToLive = 4,
+	MulticastInterface = 9,
+	MulticastTimeToLive = 10,
+	MulticastLoopback = 11,
+	AddMembership = 12,
+	DropMembership = 13,
+	DontFragment = 14,
+	AddSourceMembership = 15,
+	DropSourceMembership = 16,
+	BlockSource = 17,
+	UnblockSource = 18,
+	PacketInformation = 19,
+	HopLimit = 21,
+	IPProtectionLevel = 23,
+	IPv6Only = 27,
+	NoDelay = 1,
+	BsdUrgent = 2,
+	Expedited = 2,
+	NoChecksum = 1,
+	ChecksumCoverage = 20,
+	UpdateAcceptContext = 28683,
+	UpdateConnectContext = 28688,
+}
+
+public enum SocketShutdown
+{
+	Receive = 0,
+	Send = 1,
+	Both = 2,
+}
+
+public enum SocketType
+{
+	Stream = 1,
+	Dgram = 2,
+	Raw = 3,
+	Rdm = 4,
+	Seqpacket = 5,
+}
+
+public enum TransmitFileOptions
+{
+	UseDefaultWorkerThread = 0,
+	Disconnect = 1,
+	ReuseSocket = 2,
+	WriteBehind = 4,
+	UseSystemThread = 16,
+	UseKernelApc = 32,
+}
+
+internal enum SocketOperation
+{
+	Accept = 0,
+	Connect = 1,
+	Receive = 2,
+	ReceiveFrom = 3,
+	Send = 4,
+	SendTo = 5,
+	RecvJustCallback = 6,
+	SendJustCallback = 7,
+	Disconnect = 8,
+	AcceptReceive = 9,
+	ReceiveGeneric = 10,
+	SendGeneric = 11,
+}
+
+public enum SmtpDeliveryFormat
+{
+	SevenBit = 0,
+	International = 1,
+}
+
+public enum SmtpDeliveryMethod
+{
+	Network = 0,
+	SpecifiedPickupDirectory = 1,
+	PickupDirectoryFromIis = 2,
+}
+
+internal enum SecurityBufferType
+{
+	SECBUFFER_EMPTY = 0,
+	SECBUFFER_DATA = 1,
+	SECBUFFER_TOKEN = 2,
+	SECBUFFER_PKG_PARAMS = 3,
+	SECBUFFER_MISSING = 4,
+	SECBUFFER_EXTRA = 5,
+	SECBUFFER_STREAM_TRAILER = 6,
+	SECBUFFER_STREAM_HEADER = 7,
+	SECBUFFER_PADDING = 9,
+	SECBUFFER_STREAM = 10,
+	SECBUFFER_CHANNEL_BINDINGS = 14,
+	SECBUFFER_TARGET_HOST = 16,
+	SECBUFFER_ALERT = 17,
+	SECBUFFER_APPLICATION_PROTOCOLS = 18,
+	SECBUFFER_READONLY_WITH_CHECKSUM = 268435456,
+}
+
+public enum AuthenticationLevel
+{
+	None = 0,
+	MutualAuthRequested = 1,
+	MutualAuthRequired = 2,
+}
+
+public enum ProtectionLevel
+{
+	None = 0,
+	Sign = 1,
+	EncryptAndSign = 2,
+}
+
+public enum EncryptionPolicy
+{
+	RequireEncryption = 0,
+	AllowNoEncryption = 1,
+	NoEncryption = 2,
+}
+
+public enum SslPolicyErrors
+{
+	None = 0,
+	RemoteCertificateNotAvailable = 1,
+	RemoteCertificateNameMismatch = 2,
+	RemoteCertificateChainErrors = 4,
+}
+
+public enum SettingsSerializeAs
+{
+	Binary = 2,
+	ProviderSpecific = 3,
+	String = 0,
+	Xml = 1,
+}
+
+public enum ProxyElement.AutoDetectValues
+{
+	False = 0,
+	True = 1,
+}
+
+public enum ProxyElement.BypassOnLocalValues
+{
+	False = 0,
+	True = 1,
+}
+
+public enum ProxyElement.UseSystemDefaultValues
+{
+	False = 0,
+	True = 1,
+}
+
+public enum SettingsManageability
+{
+	Roaming = 0,
+}
+
+public enum SpecialSetting
+{
+	ConnectionString = 0,
+	WebServiceUrl = 1,
+}
+
+internal enum YogaAlign
+{
+	Auto = 0,
+	FlexStart = 1,
+	Center = 2,
+	FlexEnd = 3,
+	Stretch = 4,
+	Baseline = 5,
+	SpaceBetween = 6,
+	SpaceAround = 7,
+}
+
+internal enum YogaDirection
+{
+	Inherit = 0,
+	LTR = 1,
+	RTL = 2,
+}
+
+internal enum YogaDisplay
+{
+	Flex = 0,
+	None = 1,
+}
+
+internal enum YogaEdge
+{
+	Left = 0,
+	Top = 1,
+	Right = 2,
+	Bottom = 3,
+	Start = 4,
+	End = 5,
+	Horizontal = 6,
+	Vertical = 7,
+	All = 8,
+}
+
+internal enum YogaFlexDirection
+{
+	Column = 0,
+	ColumnReverse = 1,
+	Row = 2,
+	RowReverse = 3,
+}
+
+internal enum YogaJustify
+{
+	FlexStart = 0,
+	Center = 1,
+	FlexEnd = 2,
+	SpaceBetween = 3,
+	SpaceAround = 4,
+}
+
+internal enum YogaLogLevel
+{
+	Error = 0,
+	Warn = 1,
+	Info = 2,
+	Debug = 3,
+	Verbose = 4,
+	Fatal = 5,
+}
+
+internal enum YogaMeasureMode
+{
+	Undefined = 0,
+	Exactly = 1,
+	AtMost = 2,
+}
+
+internal enum YogaOverflow
+{
+	Visible = 0,
+	Hidden = 1,
+	Scroll = 2,
+}
+
+internal enum YogaPositionType
+{
+	Relative = 0,
+	Absolute = 1,
+}
+
+internal enum YogaUnit
+{
+	Undefined = 0,
+	Point = 1,
+	Percent = 2,
+	Auto = 3,
+}
+
+internal enum YogaWrap
+{
+	NoWrap = 0,
+	Wrap = 1,
+	WrapReverse = 2,
+}
+
+public enum DynamicAtlasFilters
+{
+	None = 0,
+	Readability = 1,
+	Size = 2,
+	Format = 4,
+	ColorSpace = 8,
+	FilterMode = 16,
+}
+
+public enum ClampedDragger.DragDirection<T>
+{
+}
+
+private enum DynamicHeightVirtualizationController.VirtualizationChange<T>
+{
+}
+
+private enum DynamicHeightVirtualizationController.ScrollDirection<T>
+{
+}
+
+public enum ListViewReorderMode
+{
+	Simple = 0,
+	Animated = 1,
+}
+
+public enum SliderDirection
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+internal enum BaseSlider.SliderKey<TValueType>
+{
+}
+
+public enum AlternatingRowBackground
+{
+	None = 0,
+	ContentOnly = 1,
+	All = 2,
+}
+
+public enum CollectionVirtualizationMethod
+{
+	FixedHeight = 0,
+	DynamicHeight = 1,
+}
+
+public enum HelpBoxMessageType
+{
+	None = 0,
+	Info = 1,
+	Warning = 2,
+	Error = 3,
+}
+
+private enum MinMaxSlider.DragState
+{
+	NoThumb = 0,
+	MinThumb = 1,
+	MiddleThumb = 2,
+	MaxThumb = 3,
+}
+
+internal enum ColumnDataType
+{
+	Name = 0,
+	Title = 1,
+	Icon = 2,
+	Visibility = 3,
+	Width = 4,
+	MaxWidth = 5,
+	MinWidth = 6,
+	Stretchable = 7,
+	Sortable = 8,
+	Optional = 9,
+	Resizable = 10,
+	HeaderTemplate = 11,
+	CellTemplate = 12,
+}
+
+internal enum ColumnsDataType
+{
+	PrimaryColumn = 0,
+	StretchMode = 1,
+	Reorderable = 2,
+	Resizable = 3,
+	ResizePreview = 4,
+}
+
+public enum Columns.StretchMode
+{
+	Grow = 0,
+	GrowAndFill = 1,
+}
+
+public enum SortDirection
+{
+	Ascending = 0,
+	Descending = 1,
+}
+
+public enum ScrollViewMode
+{
+	Vertical = 0,
+	Horizontal = 1,
+	VerticalAndHorizontal = 2,
+}
+
+public enum ScrollerVisibility
+{
+	Auto = 0,
+	AlwaysVisible = 1,
+	Hidden = 2,
+}
+
+public enum ScrollView.TouchScrollBehavior
+{
+	Unrestricted = 0,
+	Elastic = 1,
+	Clamped = 2,
+}
+
+public enum ScrollView.NestedInteractionKind
+{
+	Default = 0,
+	StopScrolling = 1,
+	ForwardScrolling = 2,
+}
+
+internal enum ScrollView.TouchScrollingResult
+{
+	Apply = 0,
+	Forward = 1,
+	Block = 2,
+}
+
+public enum DeltaSpeed
+{
+	Fast = 0,
+	Normal = 1,
+	Slow = 2,
+}
+
+public enum TwoPaneSplitViewOrientation
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+public enum DefaultEventSystem.UpdateMode
+{
+	Always = 0,
+	IgnoreIfAppNotFocused = 1,
+}
+
+internal enum DragEventsProcessor.DragState
+{
+	None = 0,
+	CanStartDrag = 1,
+	Dragging = 2,
+}
+
+internal enum DragAndDropPosition
+{
+	OverItem = 0,
+	BetweenItems = 1,
+	OutsideItems = 2,
+}
+
+internal enum DragVisualMode
+{
+	None = 0,
+	Copy = 1,
+	Move = 2,
+	Rejected = 3,
+}
+
+public enum DropdownMenuAction.Status
+{
+	None = 0,
+	Normal = 1,
+	Disabled = 2,
+	Checked = 4,
+	Hidden = 8,
+}
+
+internal enum DispatchMode
+{
+	Default = 1,
+	Queued = 1,
+	Immediate = 2,
+}
+
+internal enum EventBase.EventPropagation
+{
+	None = 0,
+	Bubbles = 1,
+	TricklesDown = 2,
+	Cancellable = 4,
+	SkipDisabledElements = 8,
+	IgnoreCompositeRoots = 16,
+}
+
+private enum EventBase.LifeCycleStatus
+{
+	None = 0,
+	PropagationStopped = 1,
+	ImmediatePropagationStopped = 2,
+	DefaultPrevented = 4,
+	Dispatching = 8,
+	Pooled = 16,
+	IMGUIEventIsValid = 32,
+	StopDispatch = 64,
+	PropagateToIMGUI = 128,
+	Dispatched = 512,
+	Processed = 1024,
+	ProcessedByFocusController = 2048,
+}
+
+public enum TrickleDown
+{
+	NoTrickleDown = 0,
+	TrickleDown = 1,
+}
+
+internal enum CallbackPhase
+{
+	TargetAndBubbleUp = 1,
+	TrickleDownAndTarget = 2,
+}
+
+internal enum InvokePolicy
+{
+	Default = 0,
+	IncludeDisabled = 1,
+}
+
+public enum PropagationPhase
+{
+	None = 0,
+	TrickleDown = 1,
+	AtTarget = 2,
+	DefaultActionAtTarget = 5,
+	BubbleUp = 3,
+	DefaultAction = 4,
+}
+
+private enum MouseCaptureDispatchingStrategy.EventBehavior
+{
+	None = 0,
+	IsCapturable = 1,
+	IsSentExclusivelyToCapturingElement = 2,
+}
+
+internal enum NavigationDeviceType
+{
+	Unknown = 0,
+	Keyboard = 1,
+	NonKeyboard = 2,
+}
+
+public enum NavigationMoveEvent.Direction
+{
+	None = 0,
+	Left = 1,
+	Up = 2,
+	Right = 3,
+	Down = 4,
+	Next = 5,
+	Previous = 6,
+}
+
+internal enum PointerDeviceState.LocationFlag
+{
+	None = 0,
+	OutsidePanel = 1,
+}
+
+public enum PanelScaleMode
+{
+	ConstantPixelSize = 0,
+	ConstantPhysicalSize = 1,
+	ScaleWithScreenSize = 2,
+}
+
+public enum PanelScreenMatchMode
+{
+	MatchWidthOrHeight = 0,
+	Shrink = 1,
+	Expand = 2,
+}
+
+public enum SelectionType
+{
+	None = 0,
+	Single = 1,
+	Multiple = 2,
+}
+
+public enum KeyboardNavigationOperation
+{
+	None = 0,
+	SelectAll = 1,
+	Cancel = 2,
+	Submit = 3,
+	Previous = 4,
+	Next = 5,
+	MoveRight = 6,
+	MoveLeft = 7,
+	PageUp = 8,
+	PageDown = 9,
+	Begin = 10,
+	End = 11,
+}
+
+public enum MouseButton
+{
+	LeftMouse = 0,
+	RightMouse = 1,
+	MiddleMouse = 2,
+}
+
+public enum ContextType
+{
+	Player = 0,
+	Editor = 1,
+}
+
+internal enum VersionChangeType
+{
+	Bindings = 1,
+	ViewData = 2,
+	Hierarchy = 4,
+	Layout = 8,
+	StyleSheet = 16,
+	Styles = 32,
+	Overflow = 64,
+	BorderRadius = 128,
+	BorderWidth = 256,
+	Transform = 512,
+	Size = 1024,
+	Repaint = 2048,
+	Opacity = 4096,
+	Color = 8192,
+	RenderHints = 16384,
+	TransitionProperty = 32768,
+	EventCallbackCategories = 65536,
+	Picking = 1048576,
+}
+
+public enum UsageHints
+{
+	None = 0,
+	DynamicTransform = 1,
+	GroupTransform = 2,
+	MaskContainer = 4,
+	DynamicColor = 8,
+}
+
+internal enum RenderHints
+{
+	None = 0,
+	GroupTransform = 1,
+	BoneTransform = 2,
+	ClipWithScissors = 4,
+	MaskContainer = 8,
+	DynamicColor = 16,
+	DirtyOffset = 5,
+	DirtyGroupTransform = 32,
+	DirtyBoneTransform = 64,
+	DirtyClipWithScissors = 128,
+	DirtyMaskContainer = 256,
+	DirtyDynamicColor = 512,
+	DirtyAll = 992,
+}
+
+internal enum MeshGenerationContext.MeshFlags
+{
+	None = 0,
+	UVisDisplacement = 1,
+	SkipDynamicAtlas = 2,
+}
+
+public enum AngleUnit
+{
+	Degree = 0,
+	Gradian = 1,
+	Radian = 2,
+	Turn = 3,
+}
+
+private enum Angle.Unit
+{
+	Degree = 0,
+	Gradian = 1,
+	Radian = 2,
+	Turn = 3,
+	None = 4,
+}
+
+public enum EasingMode
+{
+	Ease = 0,
+	EaseIn = 1,
+	EaseOut = 2,
+	EaseInOut = 3,
+	Linear = 4,
+	EaseInSine = 5,
+	EaseOutSine = 6,
+	EaseInOutSine = 7,
+	EaseInCubic = 8,
+	EaseOutCubic = 9,
+	EaseInOutCubic = 10,
+	EaseInCirc = 11,
+	EaseOutCirc = 12,
+	EaseInOutCirc = 13,
+	EaseInElastic = 14,
+	EaseOutElastic = 15,
+	EaseInOutElastic = 16,
+	EaseInBack = 17,
+	EaseOutBack = 18,
+	EaseInOutBack = 19,
+	EaseInBounce = 20,
+	EaseOutBounce = 21,
+	EaseInOutBounce = 22,
+}
+
+public enum VisualElement.MeasureMode
+{
+	Undefined = 0,
+	Exactly = 1,
+	AtMost = 2,
+}
+
+internal enum VisualElement.RenderTargetMode
+{
+	None = 0,
+	NoColorConversion = 1,
+	LinearToGamma = 2,
+	GammaToLinear = 3,
+}
+
+public enum LengthUnit
+{
+	Pixel = 0,
+	Percent = 1,
+}
+
+private enum Length.Unit
+{
+	Pixel = 0,
+	Percent = 1,
+	Auto = 2,
+	None = 3,
+}
+
+public enum StyleKeyword
+{
+	Undefined = 0,
+	Null = 1,
+	Auto = 2,
+	None = 3,
+	Initial = 4,
+}
+
+public enum TimeUnit
+{
+	Second = 0,
+	Millisecond = 1,
+}
+
+public enum Position
+{
+	Relative = 0,
+	Absolute = 1,
+}
+
+public enum Overflow
+{
+	Visible = 0,
+	Hidden = 1,
+}
+
+internal enum OverflowInternal
+{
+	Visible = 0,
+	Hidden = 1,
+	Scroll = 2,
+}
+
+public enum OverflowClipBox
+{
+	PaddingBox = 0,
+	ContentBox = 1,
+}
+
+public enum FlexDirection
+{
+	Column = 0,
+	ColumnReverse = 1,
+	Row = 2,
+	RowReverse = 3,
+}
+
+public enum Wrap
+{
+	NoWrap = 0,
+	Wrap = 1,
+	WrapReverse = 2,
+}
+
+public enum Align
+{
+	Auto = 0,
+	FlexStart = 1,
+	Center = 2,
+	FlexEnd = 3,
+	Stretch = 4,
+}
+
+public enum Justify
+{
+	FlexStart = 0,
+	Center = 1,
+	FlexEnd = 2,
+	SpaceBetween = 3,
+	SpaceAround = 4,
+}
+
+public enum TextOverflowPosition
+{
+	End = 0,
+	Start = 1,
+	Middle = 2,
+}
+
+public enum TextOverflow
+{
+	Clip = 0,
+	Ellipsis = 1,
+}
+
+public enum TransformOriginOffset
+{
+	Left = 1,
+	Right = 2,
+	Top = 3,
+	Bottom = 4,
+	Center = 5,
+}
+
+public enum Visibility
+{
+	Visible = 0,
+	Hidden = 1,
+}
+
+public enum WhiteSpace
+{
+	Normal = 0,
+	NoWrap = 1,
+}
+
+public enum DisplayStyle
+{
+	Flex = 0,
+	None = 1,
+}
+
+public enum BackgroundPositionKeyword
+{
+	Center = 0,
+	Top = 1,
+	Bottom = 2,
+	Left = 3,
+	Right = 4,
+}
+
+public enum Repeat
+{
+	NoRepeat = 0,
+	Space = 1,
+	Round = 2,
+	Repeat = 3,
+}
+
+public enum BackgroundSizeType
+{
+	Length = 0,
+	Cover = 1,
+	Contain = 2,
+}
+
+private enum StylePropertyAnimationSystem.TransitionState
+{
+	None = 0,
+	Running = 1,
+	Started = 2,
+	Ended = 4,
+	Canceled = 8,
+}
+
+internal enum Salt
+{
+	TagNameSalt = 13,
+	IdSalt = 17,
+	ClassSalt = 19,
+}
+
+internal enum StyleSelectorRelationship
+{
+	None = 0,
+	Child = 1,
+	Descendent = 2,
+}
+
+internal enum StyleSelectorType
+{
+	Unknown = 0,
+	Wildcard = 1,
+	Type = 2,
+	Class = 3,
+	PseudoClass = 4,
+	RecursivePseudoClass = 5,
+	ID = 6,
+	Predicate = 7,
+}
+
+internal enum StyleValueFunction
+{
+	Unknown = 0,
+	Var = 1,
+	Env = 2,
+	LinearGradient = 3,
+}
+
+internal enum StyleValueKeyword
+{
+	Inherit = 0,
+	Initial = 1,
+	Auto = 2,
+	Unset = 3,
+	True = 4,
+	False = 5,
+	None = 6,
+}
+
+internal enum StyleValueType
+{
+	Invalid = 0,
+	Keyword = 1,
+	Float = 2,
+	Dimension = 3,
+	Color = 4,
+	ResourcePath = 5,
+	AssetReference = 6,
+	Enum = 7,
+	Variable = 8,
+	String = 9,
+	Function = 10,
+	CommaSeparator = 11,
+	ScalableImage = 12,
+	MissingAssetReference = 13,
+}
+
+private enum StyleVariableResolver.Result
+{
+	Valid = 0,
+	Invalid = 1,
+	NotFound = 2,
+}
+
+public enum UxmlAttributeDescription.Use
+{
+	None = 0,
+	Optional = 1,
+	Prohibited = 2,
+	Required = 3,
+}
+
+internal enum GradientType
+{
+	Linear = 0,
+	Radial = 1,
+}
+
+internal enum AddressMode
+{
+	Wrap = 0,
+	Clamp = 1,
+	Mirror = 2,
+}
+
+internal enum PseudoStates
+{
+	Active = 1,
+	Hover = 2,
+	Checked = 8,
+	Disabled = 32,
+	Focus = 64,
+	Root = 128,
+}
+
+internal enum VisualElementFlags
+{
+	WorldTransformDirty = 1,
+	WorldTransformInverseDirty = 2,
+	WorldClipDirty = 4,
+	BoundingBoxDirty = 8,
+	WorldBoundingBoxDirty = 16,
+	EventCallbackParentCategoriesDirty = 32,
+	LayoutManual = 64,
+	CompositeRoot = 128,
+	RequireMeasureFunction = 256,
+	EnableViewDataPersistence = 512,
+	DisableClipping = 1024,
+	NeedsAttachToPanelEvent = 2048,
+	HierarchyDisplayed = 4096,
+	StyleInitialized = 8192,
+	Init = 4159,
+}
+
+public enum PickingMode
+{
+	Position = 0,
+	Ignore = 1,
+}
+
+public enum LanguageDirection
+{
+	Inherit = 0,
+	LTR = 1,
+	RTL = 2,
+}
+
+internal enum EventCategory
+{
+	Default = 0,
+	Pointer = 1,
+	PointerMove = 2,
+	EnterLeave = 3,
+	EnterLeaveWindow = 4,
+	Keyboard = 5,
+	Geometry = 6,
+	Style = 7,
+	ChangeValue = 8,
+	Bind = 9,
+	Focus = 10,
+	ChangePanel = 11,
+	StyleTransition = 12,
+	Navigation = 13,
+	Command = 14,
+	Tooltip = 15,
+	IMGUI = 16,
+	Reserved = 31,
+}
+
+internal enum EventCategoryFlags
+{
+	None = 0,
+	TriggeredByOS = 81974,
+	TargetOnly = 2768,
+}
+
+public enum EventInterestOptions
+{
+	Inherit = 0,
+}
+
+public enum VisualElementFocusRing.DefaultFocusOrder
+{
+	ChildOrder = 0,
+	PositionXY = 1,
+	PositionYX = 2,
+}
+
+internal enum HierarchyChangeType
+{
+	Add = 0,
+	Remove = 1,
+	Move = 2,
+}
+
+private enum BaseVisualTreeHierarchyTrackerUpdater.State
+{
+	Waiting = 0,
+	TrackingAddOrMove = 1,
+	TrackingRemove = 2,
+}
+
+internal enum VisualTreeUpdatePhase
+{
+	ViewData = 0,
+	Bindings = 1,
+	Animation = 2,
+	Styles = 3,
+	Layout = 4,
+	TransformClip = 5,
+	Repaint = 6,
+	Count = 7,
+}
+
+internal enum Utility.GPUBufferType
+{
+	Vertex = 0,
+	Index = 1,
+}
+
+internal enum RenderDataDirtyTypes
+{
+	None = 0,
+	Transform = 1,
+	ClipRectSize = 2,
+	Clipping = 4,
+	ClippingHierarchy = 8,
+	Visuals = 16,
+	VisualsHierarchy = 32,
+	VisualsOpacityId = 64,
+	Opacity = 128,
+	OpacityHierarchy = 256,
+	Color = 512,
+	AllVisuals = 112,
+}
+
+internal enum RenderDataDirtyTypeClasses
+{
+	Clipping = 0,
+	Opacity = 1,
+	Color = 2,
+	TransformSize = 3,
+	Visuals = 4,
+	Count = 5,
+}
+
+internal enum RenderDataFlags
+{
+	IsIgnoringDynamicColorHint = 1,
+}
+
+internal enum OwnedState
+{
+	Inherited = 0,
+	Owned = 1,
+}
+
+internal enum VertexFlags
+{
+	IsSolid = 0,
+	IsText = 1,
+	IsTextured = 2,
+	IsDynamic = 3,
+	IsSvgGradients = 4,
+	LastType = 10,
+	IsGraphViewEdge = 10,
+}
+
+internal enum CommandType
+{
+	Draw = 0,
+	ImmediateCull = 1,
+	Immediate = 2,
+	PushView = 3,
+	PopView = 4,
+	PushScissor = 5,
+	PopScissor = 6,
+	PushRenderTexture = 7,
+	PopRenderTexture = 8,
+	BlitToPreviousRT = 9,
+	PushDefaultMaterial = 10,
+	PopDefaultMaterial = 11,
+}
+
+internal enum ClipMethod
+{
+	Undetermined = 0,
+	NotClipped = 1,
+	Scissor = 2,
+	ShaderDiscard = 3,
+	Stencil = 4,
+}
+
+internal enum StyleEnumType
+{
+	Align = 0,
+	BackgroundPositionKeyword = 1,
+	BackgroundSizeType = 2,
+	DisplayStyle = 3,
+	EasingMode = 4,
+	FlexDirection = 5,
+	FontStyle = 6,
+	Justify = 7,
+	Overflow = 8,
+	OverflowClipBox = 9,
+	OverflowInternal = 10,
+	Position = 11,
+	Repeat = 12,
+	RepeatXY = 13,
+	ScaleMode = 14,
+	TextAnchor = 15,
+	TextOverflow = 16,
+	TextOverflowPosition = 17,
+	TransformOriginOffset = 18,
+	Visibility = 19,
+	WhiteSpace = 20,
+	Wrap = 21,
+}
+
+internal enum StylePropertyId
+{
+	Unknown = 0,
+	AlignContent = 131072,
+	AlignItems = 131073,
+	AlignSelf = 131074,
+	All = 262144,
+	BackgroundColor = 458752,
+	BackgroundImage = 458753,
+	BackgroundPosition = 262145,
+	BackgroundPositionX = 458754,
+	BackgroundPositionY = 458755,
+	BackgroundRepeat = 458756,
+	BackgroundSize = 458757,
+	BorderBottomColor = 458758,
+	BorderBottomLeftRadius = 458759,
+	BorderBottomRightRadius = 458760,
+	BorderBottomWidth = 131075,
+	BorderColor = 262146,
+	BorderLeftColor = 458761,
+	BorderLeftWidth = 131076,
+	BorderRadius = 262147,
+	BorderRightColor = 458762,
+	BorderRightWidth = 131077,
+	BorderTopColor = 458763,
+	BorderTopLeftRadius = 458764,
+	BorderTopRightRadius = 458765,
+	BorderTopWidth = 131078,
+	BorderWidth = 262148,
+	Bottom = 131079,
+	Color = 65536,
+	Cursor = 196608,
+	Display = 131080,
+	Flex = 262149,
+	FlexBasis = 131081,
+	FlexDirection = 131082,
+	FlexGrow = 131083,
+	FlexShrink = 131084,
+	FlexWrap = 131085,
+	FontSize = 65537,
+	Height = 131086,
+	JustifyContent = 131087,
+	Left = 131088,
+	LetterSpacing = 65538,
+	Margin = 262150,
+	MarginBottom = 131089,
+	MarginLeft = 131090,
+	MarginRight = 131091,
+	MarginTop = 131092,
+	MaxHeight = 131093,
+	MaxWidth = 131094,
+	MinHeight = 131095,
+	MinWidth = 131096,
+	Opacity = 458766,
+	Overflow = 458767,
+	Padding = 262151,
+	PaddingBottom = 131097,
+	PaddingLeft = 131098,
+	PaddingRight = 131099,
+	PaddingTop = 131100,
+	Position = 131101,
+	Right = 131102,
+	Rotate = 327680,
+	Scale = 327681,
+	TextOverflow = 196609,
+	TextShadow = 65539,
+	Top = 131103,
+	TransformOrigin = 327682,
+	Transition = 262152,
+	TransitionDelay = 393216,
+	TransitionDuration = 393217,
+	TransitionProperty = 393218,
+	TransitionTimingFunction = 393219,
+	Translate = 327683,
+	UnityBackgroundImageTintColor = 196610,
+	UnityBackgroundScaleMode = 262153,
+	UnityFont = 65540,
+	UnityFontDefinition = 65541,
+	UnityFontStyleAndWeight = 65542,
+	UnityOverflowClipBox = 196611,
+	UnityParagraphSpacing = 65543,
+	UnitySliceBottom = 196612,
+	UnitySliceLeft = 196613,
+	UnitySliceRight = 196614,
+	UnitySliceScale = 196615,
+	UnitySliceTop = 196616,
+	UnityTextAlign = 65544,
+	UnityTextOutline = 262154,
+	UnityTextOutlineColor = 65545,
+	UnityTextOutlineWidth = 65546,
+	UnityTextOverflowPosition = 196617,
+	Visibility = 65547,
+	WhiteSpace = 65548,
+	Width = 131104,
+	WordSpacing = 65549,
+}
+
+public enum Dimension.Unit
+{
+	Unitless = 0,
+	Pixel = 1,
+	Percent = 2,
+	Second = 3,
+	Millisecond = 4,
+	Degree = 5,
+	Gradian = 6,
+	Radian = 7,
+	Turn = 8,
+}
+
+internal enum MatchResultErrorCode
+{
+	None = 0,
+	Syntax = 1,
+	EmptyValue = 2,
+	ExpectedEndOfValue = 3,
+}
+
+internal enum ExpressionType
+{
+	Unknown = 0,
+	Data = 1,
+	Keyword = 2,
+	Combinator = 3,
+}
+
+internal enum DataType
+{
+	None = 0,
+	Number = 1,
+	Integer = 2,
+	Length = 3,
+	Percentage = 4,
+	Color = 5,
+	Resource = 6,
+	Url = 7,
+	Time = 8,
+	Angle = 9,
+	CustomIdent = 10,
+}
+
+internal enum ExpressionCombinator
+{
+	None = 0,
+	Or = 1,
+	OrOr = 2,
+	AndAnd = 3,
+	Juxtaposition = 4,
+	Group = 5,
+}
+
+internal enum ExpressionMultiplierType
+{
+	None = 0,
+	ZeroOrMore = 1,
+	OneOrMore = 2,
+	ZeroOrOne = 3,
+	Ranges = 4,
+	OneOrMoreComma = 5,
+	GroupAtLeastOne = 6,
+}
+
+internal enum StyleSyntaxTokenType
+{
+	Unknown = 0,
+	String = 1,
+	Number = 2,
+	Space = 3,
+	SingleBar = 4,
+	DoubleBar = 5,
+	DoubleAmpersand = 6,
+	Comma = 7,
+	SingleQuote = 8,
+	Asterisk = 9,
+	Plus = 10,
+	QuestionMark = 11,
+	HashMark = 12,
+	ExclamationPoint = 13,
+	OpenBracket = 14,
+	CloseBracket = 15,
+	OpenBrace = 16,
+	CloseBrace = 17,
+	LessThan = 18,
+	GreaterThan = 19,
+	End = 20,
+}
+
+internal enum BinXmlToken
+{
+	Error = 0,
+	XmlDecl = 254,
+	Encoding = 253,
+	DocType = 252,
+	System = 251,
+	Public = 250,
+	Subset = 249,
+	Element = 248,
+	EndElem = 247,
+	Attr = 246,
+	EndAttrs = 245,
+	PI = 244,
+	Comment = 243,
+	CData = 242,
+	EndCData = 241,
+	Name = 240,
+	QName = 239,
+	XmlText = 237,
+	Nest = 236,
+	EndNest = 235,
+	Extn = 234,
+	NmFlush = 233,
+	SQL_BIT = 6,
+	SQL_TINYINT = 7,
+	SQL_SMALLINT = 1,
+	SQL_INT = 2,
+	SQL_BIGINT = 8,
+	SQL_REAL = 3,
+	SQL_FLOAT = 4,
+	SQL_MONEY = 5,
+	SQL_SMALLMONEY = 20,
+	SQL_DATETIME = 18,
+	SQL_SMALLDATETIME = 19,
+	SQL_DECIMAL = 10,
+	SQL_NUMERIC = 11,
+	SQL_UUID = 9,
+	SQL_VARBINARY = 15,
+	SQL_BINARY = 12,
+	SQL_IMAGE = 23,
+	SQL_CHAR = 13,
+	SQL_VARCHAR = 16,
+	SQL_TEXT = 22,
+	SQL_NVARCHAR = 17,
+	SQL_NCHAR = 14,
+	SQL_NTEXT = 24,
+	SQL_UDT = 27,
+	XSD_KATMAI_DATE = 127,
+	XSD_KATMAI_DATETIME = 126,
+	XSD_KATMAI_TIME = 125,
+	XSD_KATMAI_DATEOFFSET = 124,
+	XSD_KATMAI_DATETIMEOFFSET = 123,
+	XSD_KATMAI_TIMEOFFSET = 122,
+	XSD_BOOLEAN = 134,
+	XSD_TIME = 129,
+	XSD_DATETIME = 130,
+	XSD_DATE = 131,
+	XSD_BINHEX = 132,
+	XSD_BASE64 = 133,
+	XSD_DECIMAL = 135,
+	XSD_BYTE = 136,
+	XSD_UNSIGNEDSHORT = 137,
+	XSD_UNSIGNEDINT = 138,
+	XSD_UNSIGNEDLONG = 139,
+	XSD_QNAME = 140,
+}
+
+private enum XmlSqlBinaryReader.ScanState
+{
+	Doc = 0,
+	XmlText = 1,
+	Attr = 2,
+	AttrVal = 3,
+	AttrValPseudoValue = 4,
+	Init = 5,
+	Error = 6,
+	EOF = 7,
+	Closed = 8,
+}
+
+public enum ConformanceLevel
+{
+	Auto = 0,
+	Fragment = 1,
+	Document = 2,
+}
+
+public enum DtdProcessing
+{
+	Prohibit = 0,
+	Ignore = 1,
+	Parse = 2,
+}
+
+public enum EntityHandling
+{
+	ExpandEntities = 1,
+	ExpandCharEntities = 2,
+}
+
+public enum NamespaceHandling
+{
+	Default = 0,
+	OmitDuplicates = 1,
+}
+
+public enum NewLineHandling
+{
+	Replace = 0,
+	Entitize = 1,
+	None = 2,
+}
+
+private enum ReadContentAsBinaryHelper.State
+{
+	None = 0,
+	InReadContent = 1,
+	InReadElementContent = 2,
+}
+
+internal enum ElementProperties
+{
+	DEFAULT = 0,
+	URI_PARENT = 1,
+	BOOL_PARENT = 2,
+	NAME_PARENT = 4,
+	EMPTY = 8,
+	NO_ENTITIES = 16,
+	HEAD = 32,
+	BLOCK_WS = 64,
+	HAS_NS = 128,
+}
+
+internal enum AttributeProperties
+{
+	DEFAULT = 0,
+	URI = 1,
+	BOOLEAN = 2,
+	NAME = 4,
+}
+
+public enum ReadState
+{
+	Initial = 0,
+	Interactive = 1,
+	Error = 2,
+	EndOfFile = 3,
+	Closed = 4,
+}
+
+public enum ValidationType
+{
+	None = 0,
+	Auto = 1,
+	DTD = 2,
+	XDR = 3,
+	Schema = 4,
+}
+
+public enum WhitespaceHandling
+{
+	All = 0,
+	Significant = 1,
+	None = 2,
+}
+
+private enum XmlEventCache.XmlEventType
+{
+	Unknown = 0,
+	DocType = 1,
+	StartElem = 2,
+	StartAttr = 3,
+	EndAttr = 4,
+	CData = 5,
+	Comment = 6,
+	PI = 7,
+	Whitespace = 8,
+	String = 9,
+	Raw = 10,
+	EntRef = 11,
+	CharEnt = 12,
+	SurrCharEnt = 13,
+	Base64 = 14,
+	BinHex = 15,
+	XmlDecl1 = 16,
+	XmlDecl2 = 17,
+	StartContent = 18,
+	EndElem = 19,
+	FullEndElem = 20,
+	Nmsp = 21,
+	EndBase64 = 22,
+	Close = 23,
+	Flush = 24,
+	Dispose = 25,
+}
+
+public enum XmlSpace
+{
+	None = 0,
+	Default = 1,
+	Preserve = 2,
+}
+
+private enum XmlTextReaderImpl.ParsingFunction
+{
+	ElementContent = 0,
+	NoData = 1,
+	OpenUrl = 2,
+	SwitchToInteractive = 3,
+	SwitchToInteractiveXmlDecl = 4,
+	DocumentContent = 5,
+	MoveToElementContent = 6,
+	PopElementContext = 7,
+	PopEmptyElementContext = 8,
+	ResetAttributesRootLevel = 9,
+	Error = 10,
+	Eof = 11,
+	ReaderClosed = 12,
+	EntityReference = 13,
+	InIncrementalRead = 14,
+	FragmentAttribute = 15,
+	ReportEndEntity = 16,
+	AfterResolveEntityInContent = 17,
+	AfterResolveEmptyEntityInContent = 18,
+	XmlDeclarationFragment = 19,
+	GoToEof = 20,
+	PartialTextValue = 21,
+	InReadAttributeValue = 22,
+	InReadValueChunk = 23,
+	InReadContentAsBinary = 24,
+	InReadElementContentAsBinary = 25,
+}
+
+private enum XmlTextReaderImpl.ParsingMode
+{
+	Full = 0,
+	SkipNode = 1,
+	SkipContent = 2,
+}
+
+private enum XmlTextReaderImpl.EntityType
+{
+	CharacterDec = 0,
+	CharacterHex = 1,
+	CharacterNamed = 2,
+	Expanded = 3,
+	Skipped = 4,
+	FakeExpanded = 5,
+	Unexpanded = 6,
+	ExpandedInAttribute = 7,
+}
+
+private enum XmlTextReaderImpl.EntityExpandType
+{
+	All = 0,
+	OnlyGeneral = 1,
+	OnlyCharacter = 2,
+}
+
+private enum XmlTextReaderImpl.IncrementalReadState
+{
+	Text = 0,
+	StartTag = 1,
+	PI = 2,
+	CDATA = 3,
+	Comment = 4,
+	Attributes = 5,
+	AttributeValue = 6,
+	ReadData = 7,
+	EndElement = 8,
+	End = 9,
+	ReadValueChunk_OnCachedValue = 10,
+	ReadValueChunk_OnPartialValue = 11,
+	ReadContentAsBinary_OnCachedValue = 12,
+	ReadContentAsBinary_OnPartialValue = 13,
+	ReadContentAsBinary_End = 14,
+}
+
+private enum XmlTextReaderImpl.InitInputType
+{
+	UriString = 0,
+	Stream = 1,
+	TextReader = 2,
+	Invalid = 3,
+}
+
+public enum Formatting
+{
+	None = 0,
+	Indented = 1,
+}
+
+private enum XmlTextWriter.NamespaceState
+{
+	Uninitialized = 0,
+	NotDeclaredButInScope = 1,
+	DeclaredButNotWrittenOut = 2,
+	DeclaredAndWrittenOut = 3,
+}
+
+private enum XmlTextWriter.SpecialAttr
+{
+	None = 0,
+	XmlSpace = 1,
+	XmlLang = 2,
+	XmlNs = 3,
+}
+
+private enum XmlTextWriter.State
+{
+	Start = 0,
+	Prolog = 1,
+	PostDTD = 2,
+	Element = 3,
+	Attribute = 4,
+	Content = 5,
+	AttrOnly = 6,
+	Epilog = 7,
+	Error = 8,
+	Closed = 9,
+}
+
+private enum XmlTextWriter.Token
+{
+	PI = 0,
+	Doctype = 1,
+	Comment = 2,
+	CData = 3,
+	StartElement = 4,
+	EndElement = 5,
+	LongEndElement = 6,
+	StartAttribute = 7,
+	EndAttribute = 8,
+	Content = 9,
+	Base64 = 10,
+	RawData = 11,
+	Whitespace = 12,
+	Empty = 13,
+}
+
+private enum XmlValidatingReaderImpl.ParsingFunction
+{
+	Read = 0,
+	Init = 1,
+	ParseDtdFromContext = 2,
+	ResolveEntityInternally = 3,
+	InReadBinaryContent = 4,
+	ReaderClosed = 5,
+	Error = 6,
+	None = 7,
+}
+
+private enum XmlWellFormedWriter.State
+{
+	Start = 0,
+	TopLevel = 1,
+	Document = 2,
+	Element = 3,
+	Content = 4,
+	B64Content = 5,
+	B64Attribute = 6,
+	AfterRootEle = 7,
+	Attribute = 8,
+	SpecialAttr = 9,
+	EndDocument = 10,
+	RootLevelAttr = 11,
+	RootLevelSpecAttr = 12,
+	RootLevelB64Attr = 13,
+	AfterRootLevelAttr = 14,
+	Closed = 15,
+	Error = 16,
+	StartContent = 101,
+	StartContentEle = 102,
+	StartContentB64 = 103,
+	StartDoc = 104,
+	StartDocEle = 106,
+	EndAttrSEle = 107,
+	EndAttrEEle = 108,
+	EndAttrSCont = 109,
+	EndAttrSAttr = 111,
+	PostB64Cont = 112,
+	PostB64Attr = 113,
+	PostB64RootAttr = 114,
+	StartFragEle = 115,
+	StartFragCont = 116,
+	StartFragB64 = 117,
+	StartRootLevelAttr = 118,
+}
+
+private enum XmlWellFormedWriter.Token
+{
+	StartDocument = 0,
+	EndDocument = 1,
+	PI = 2,
+	Comment = 3,
+	Dtd = 4,
+	StartElement = 5,
+	EndElement = 6,
+	StartAttribute = 7,
+	EndAttribute = 8,
+	Text = 9,
+	CData = 10,
+	AtomicValue = 11,
+	Base64 = 12,
+	RawData = 13,
+	Whitespace = 14,
+}
+
+private enum XmlWellFormedWriter.NamespaceKind
+{
+	Written = 0,
+	NeedToWrite = 1,
+	Implied = 2,
+	Special = 3,
+}
+
+private enum XmlWellFormedWriter.SpecialAttribute
+{
+	No = 0,
+	DefaultXmlns = 1,
+	PrefixedXmlns = 2,
+	XmlSpace = 3,
+	XmlLang = 4,
+}
+
+private enum XmlWellFormedWriter.AttributeValueCache.ItemType
+{
+	EntityRef = 0,
+	CharEntity = 1,
+	SurrogateCharEntity = 2,
+	Whitespace = 3,
+	String = 4,
+	StringChars = 5,
+	Raw = 6,
+	RawChars = 7,
+	ValueString = 8,
+}
+
+public enum WriteState
+{
+	Start = 0,
+	Prolog = 1,
+	Element = 2,
+	Attribute = 3,
+	Content = 4,
+	Closed = 5,
+	Error = 6,
+}
+
+public enum XmlOutputMethod
+{
+	Xml = 0,
+	Html = 1,
+	Text = 2,
+	AutoDetect = 3,
+}
+
+internal enum TriState
+{
+	False = 0,
+	True = 1,
+}
+
+internal enum XmlStandalone
+{
+	Omit = 0,
+	Yes = 1,
+	No = 2,
+}
+
+private enum XsdCachingReader.CachingReaderState
+{
+	None = 0,
+	Init = 1,
+	Record = 2,
+	Replay = 3,
+	ReaderClosed = 4,
+	Error = 5,
+}
+
+private enum XsdValidatingReader.ValidatingReaderState
+{
+	None = 0,
+	Init = 1,
+	Read = 2,
+	OnAttribute = 3,
+	ClearAttributes = 4,
+	ParseInlineSchema = 5,
+	ReadAhead = 6,
+	OnReadBinaryContent = 7,
+	ReaderClosed = 8,
+	EOF = 9,
+	Error = 10,
+}
+
+public enum XmlNodeChangedAction
+{
+	Insert = 0,
+	Remove = 1,
+	Change = 2,
+}
+
+private enum DtdParser.Token
+{
+	CDATA = 0,
+	ID = 1,
+	IDREF = 2,
+	IDREFS = 3,
+	ENTITY = 4,
+	ENTITIES = 5,
+	NMTOKEN = 6,
+	NMTOKENS = 7,
+	NOTATION = 8,
+	None = 9,
+	PERef = 10,
+	AttlistDecl = 11,
+	ElementDecl = 12,
+	EntityDecl = 13,
+	NotationDecl = 14,
+	Comment = 15,
+	PI = 16,
+	CondSectionStart = 17,
+	CondSectionEnd = 18,
+	Eof = 19,
+	REQUIRED = 20,
+	IMPLIED = 21,
+	FIXED = 22,
+	QName = 23,
+	Name = 24,
+	Nmtoken = 25,
+	Quote = 26,
+	LeftParen = 27,
+	RightParen = 28,
+	GreaterThan = 29,
+	Or = 30,
+	LeftBracket = 31,
+	RightBracket = 32,
+	PUBLIC = 33,
+	SYSTEM = 34,
+	Literal = 35,
+	DOCTYPE = 36,
+	NData = 37,
+	Percent = 38,
+	Star = 39,
+	QMark = 40,
+	Plus = 41,
+	PCDATA = 42,
+	Comma = 43,
+	ANY = 44,
+	EMPTY = 45,
+	IGNORE = 46,
+	INCLUDE = 47,
+}
+
+private enum DtdParser.ScanningFunction
+{
+	SubsetContent = 0,
+	Name = 1,
+	QName = 2,
+	Nmtoken = 3,
+	Doctype1 = 4,
+	Doctype2 = 5,
+	Element1 = 6,
+	Element2 = 7,
+	Element3 = 8,
+	Element4 = 9,
+	Element5 = 10,
+	Element6 = 11,
+	Element7 = 12,
+	Attlist1 = 13,
+	Attlist2 = 14,
+	Attlist3 = 15,
+	Attlist4 = 16,
+	Attlist5 = 17,
+	Attlist6 = 18,
+	Attlist7 = 19,
+	Entity1 = 20,
+	Entity2 = 21,
+	Entity3 = 22,
+	Notation1 = 23,
+	CondSection1 = 24,
+	CondSection2 = 25,
+	CondSection3 = 26,
+	Literal = 27,
+	SystemId = 28,
+	PublicId1 = 29,
+	PublicId2 = 30,
+	ClosingTag = 31,
+	ParamEntitySpace = 32,
+	None = 33,
+}
+
+private enum DtdParser.LiteralType
+{
+	AttributeValue = 0,
+	EntityReplText = 1,
+	SystemOrPublicID = 2,
+}
+
+public enum XmlTokenizedType
+{
+	CDATA = 0,
+	ID = 1,
+	IDREF = 2,
+	IDREFS = 3,
+	ENTITY = 4,
+	ENTITIES = 5,
+	NMTOKEN = 6,
+	NMTOKENS = 7,
+	NOTATION = 8,
+	ENUMERATION = 9,
+	QName = 10,
+	NCName = 11,
+	None = 12,
+}
+
+internal enum ExceptionType
+{
+	ArgumentException = 0,
+	XmlException = 1,
+}
+
+public enum XmlDateTimeSerializationMode
+{
+	Local = 0,
+	Utc = 1,
+	Unspecified = 2,
+	RoundtripKind = 3,
+}
+
+public enum XmlNamespaceScope
+{
+	All = 0,
+	ExcludeXml = 1,
+	Local = 2,
+}
+
+public enum XmlNodeType
+{
+	None = 0,
+	Element = 1,
+	Attribute = 2,
+	Text = 3,
+	CDATA = 4,
+	EntityReference = 5,
+	Entity = 6,
+	ProcessingInstruction = 7,
+	Comment = 8,
+	Document = 9,
+	DocumentType = 10,
+	DocumentFragment = 11,
+	Notation = 12,
+	Whitespace = 13,
+	SignificantWhitespace = 14,
+	EndElement = 15,
+	EndEntity = 16,
+	XmlDeclaration = 17,
+}
+
+public enum XPathResultType
+{
+	Number = 0,
+	String = 1,
+	Boolean = 2,
+	NodeSet = 3,
+	Navigator = 1,
+	Any = 5,
+	Error = 6,
+}
+
+public enum XPathNamespaceScope
+{
+	All = 0,
+	ExcludeXml = 1,
+	Local = 2,
+}
+
+public enum XPathNodeType
+{
+	Root = 0,
+	Element = 1,
+	Attribute = 2,
+	Namespace = 3,
+	Text = 4,
+	SignificantWhitespace = 5,
+	Whitespace = 6,
+	ProcessingInstruction = 7,
+	Comment = 8,
+	All = 9,
+}
+
+internal enum SchemaTypes
+{
+	NotSet = 0,
+	Primitive = 1,
+	Enum = 2,
+	Array = 3,
+	Class = 4,
+	XmlSerializable = 5,
+	XmlNode = 6,
+	Void = 7,
+}
+
+internal enum SerializationFormat
+{
+	Encoded = 0,
+	Literal = 1,
+}
+
+public enum CompiledIdentityConstraint.ConstraintRole
+{
+	Unique = 0,
+	Key = 1,
+	Keyref = 2,
+}
+
+public enum XmlSchemaDatatypeVariety
+{
+	Atomic = 0,
+	List = 1,
+	Union = 2,
+}
+
+internal enum RestrictionFlags
+{
+	Length = 1,
+	MinLength = 2,
+	MaxLength = 4,
+	Pattern = 8,
+	Enumeration = 16,
+	WhiteSpace = 32,
+	MaxInclusive = 64,
+	MaxExclusive = 128,
+	MinInclusive = 256,
+	MinExclusive = 512,
+	TotalDigits = 1024,
+	FractionDigits = 2048,
+}
+
+internal enum XmlSchemaWhiteSpace
+{
+	Preserve = 0,
+	Replace = 1,
+	Collapse = 2,
+}
+
+public enum XmlSchemaInference.InferenceOption
+{
+	Restricted = 0,
+	Relaxed = 1,
+}
+
+public enum NamespaceList.ListType
+{
+	Any = 0,
+	Other = 1,
+	Set = 2,
+}
+
+internal enum Compositor
+{
+	Root = 0,
+	Include = 1,
+	Import = 2,
+	Redefine = 3,
+}
+
+internal enum SchemaAttDef.Reserve
+{
+	None = 0,
+	XmlSpace = 1,
+	XmlLang = 2,
+}
+
+private enum SchemaCollectionPreprocessor.Compositor
+{
+	Root = 0,
+	Include = 1,
+	Import = 2,
+}
+
+internal enum SchemaDeclBase.Use
+{
+	Default = 0,
+	Required = 1,
+	Implied = 2,
+	Fixed = 3,
+	RequiredFixed = 4,
+}
+
+internal enum AttributeMatchState
+{
+	AttributeFound = 0,
+	AnyIdAttributeFound = 1,
+	UndeclaredElementAndAttribute = 2,
+	UndeclaredAttribute = 3,
+	AnyAttributeLax = 4,
+	AnyAttributeSkip = 5,
+	ProhibitedAnyAttribute = 6,
+	ProhibitedAttribute = 7,
+	AttributeNameMismatch = 8,
+	ValidateAttributeInvalidCall = 9,
+}
+
+public enum SchemaNames.Token
+{
+	Empty = 0,
+	SchemaName = 1,
+	SchemaType = 2,
+	SchemaMaxOccurs = 3,
+	SchemaMinOccurs = 4,
+	SchemaInfinite = 5,
+	SchemaModel = 6,
+	SchemaOpen = 7,
+	SchemaClosed = 8,
+	SchemaContent = 9,
+	SchemaMixed = 10,
+	SchemaEmpty = 11,
+	SchemaElementOnly = 12,
+	SchemaTextOnly = 13,
+	SchemaOrder = 14,
+	SchemaSeq = 15,
+	SchemaOne = 16,
+	SchemaMany = 17,
+	SchemaRequired = 18,
+	SchemaYes = 19,
+	SchemaNo = 20,
+	SchemaString = 21,
+	SchemaId = 22,
+	SchemaIdref = 23,
+	SchemaIdrefs = 24,
+	SchemaEntity = 25,
+	SchemaEntities = 26,
+	SchemaNmtoken = 27,
+	SchemaNmtokens = 28,
+	SchemaEnumeration = 29,
+	SchemaDefault = 30,
+	XdrRoot = 31,
+	XdrElementType = 32,
+	XdrElement = 33,
+	XdrGroup = 34,
+	XdrAttributeType = 35,
+	XdrAttribute = 36,
+	XdrDatatype = 37,
+	XdrDescription = 38,
+	XdrExtends = 39,
+	SchemaXdrRootAlias = 40,
+	SchemaDtType = 41,
+	SchemaDtValues = 42,
+	SchemaDtMaxLength = 43,
+	SchemaDtMinLength = 44,
+	SchemaDtMax = 45,
+	SchemaDtMin = 46,
+	SchemaDtMinExclusive = 47,
+	SchemaDtMaxExclusive = 48,
+	SchemaTargetNamespace = 49,
+	SchemaVersion = 50,
+	SchemaFinalDefault = 51,
+	SchemaBlockDefault = 52,
+	SchemaFixed = 53,
+	SchemaAbstract = 54,
+	SchemaBlock = 55,
+	SchemaSubstitutionGroup = 56,
+	SchemaFinal = 57,
+	SchemaNillable = 58,
+	SchemaRef = 59,
+	SchemaBase = 60,
+	SchemaDerivedBy = 61,
+	SchemaNamespace = 62,
+	SchemaProcessContents = 63,
+	SchemaRefer = 64,
+	SchemaPublic = 65,
+	SchemaSystem = 66,
+	SchemaSchemaLocation = 67,
+	SchemaValue = 68,
+	SchemaSource = 69,
+	SchemaAttributeFormDefault = 70,
+	SchemaElementFormDefault = 71,
+	SchemaUse = 72,
+	SchemaForm = 73,
+	XsdSchema = 74,
+	XsdAnnotation = 75,
+	XsdInclude = 76,
+	XsdImport = 77,
+	XsdElement = 78,
+	XsdAttribute = 79,
+	xsdAttributeGroup = 80,
+	XsdAnyAttribute = 81,
+	XsdGroup = 82,
+	XsdAll = 83,
+	XsdChoice = 84,
+	XsdSequence = 85,
+	XsdAny = 86,
+	XsdNotation = 87,
+	XsdSimpleType = 88,
+	XsdComplexType = 89,
+	XsdUnique = 90,
+	XsdKey = 91,
+	XsdKeyref = 92,
+	XsdSelector = 93,
+	XsdField = 94,
+	XsdMinExclusive = 95,
+	XsdMinInclusive = 96,
+	XsdMaxExclusive = 97,
+	XsdMaxInclusive = 98,
+	XsdTotalDigits = 99,
+	XsdFractionDigits = 100,
+	XsdLength = 101,
+	XsdMinLength = 102,
+	XsdMaxLength = 103,
+	XsdEnumeration = 104,
+	XsdPattern = 105,
+	XsdDocumentation = 106,
+	XsdAppInfo = 107,
+	XsdComplexContent = 108,
+	XsdComplexContentExtension = 109,
+	XsdComplexContentRestriction = 110,
+	XsdSimpleContent = 111,
+	XsdSimpleContentExtension = 112,
+	XsdSimpleContentRestriction = 113,
+	XsdSimpleTypeList = 114,
+	XsdSimpleTypeRestriction = 115,
+	XsdSimpleTypeUnion = 116,
+	XsdWhitespace = 117,
+	XsdRedefine = 118,
+	SchemaItemType = 119,
+	SchemaMemberTypes = 120,
+	SchemaXPath = 121,
+	XmlLang = 122,
+}
+
+internal enum SchemaType
+{
+	None = 0,
+	DTD = 1,
+	XDR = 2,
+	XSD = 3,
+}
+
+public enum XmlSchemaContentProcessing
+{
+	None = 0,
+	Skip = 1,
+	Lax = 2,
+	Strict = 3,
+}
+
+public enum XmlSchemaContentType
+{
+	TextOnly = 0,
+	Empty = 1,
+	ElementOnly = 2,
+	Mixed = 3,
+}
+
+public enum XmlSchemaDerivationMethod
+{
+	Empty = 0,
+	Substitution = 1,
+	Extension = 2,
+	Restriction = 4,
+	List = 8,
+	Union = 16,
+	All = 255,
+	None = 256,
+}
+
+internal enum FacetType
+{
+	None = 0,
+	Length = 1,
+	MinLength = 2,
+	MaxLength = 3,
+	Pattern = 4,
+	Whitespace = 5,
+	Enumeration = 6,
+	MinExclusive = 7,
+	MinInclusive = 8,
+	MaxExclusive = 9,
+	MaxInclusive = 10,
+	TotalDigits = 11,
+	FractionDigits = 12,
+}
+
+public enum XmlSchemaForm
+{
+	None = 0,
+	Qualified = 1,
+	Unqualified = 2,
+}
+
+internal enum XmlSchemaObjectTable.EnumeratorType
+{
+	Keys = 0,
+	Values = 1,
+	DictionaryEntry = 2,
+}
+
+private enum XmlSchemaParticle.Occurs
+{
+	None = 0,
+	Min = 1,
+	Max = 2,
+}
+
+public enum XmlSchemaUse
+{
+	None = 0,
+	Optional = 1,
+	Prohibited = 2,
+	Required = 3,
+}
+
+public enum XmlSchemaValidationFlags
+{
+	None = 0,
+	ProcessInlineSchema = 1,
+	ProcessSchemaLocation = 2,
+	ReportValidationWarnings = 4,
+	ProcessIdentityConstraints = 8,
+	AllowXmlAttributes = 16,
+}
+
+internal enum ValidatorState
+{
+	None = 0,
+	Start = 1,
+	TopLevelAttribute = 2,
+	TopLevelTextOrWS = 3,
+	Element = 4,
+	Attribute = 5,
+	EndOfAttributes = 6,
+	Text = 7,
+	Whitespace = 8,
+	EndElement = 9,
+	SkipToEndElement = 10,
+	Finish = 11,
+}
+
+public enum XmlSchemaValidity
+{
+	NotKnown = 0,
+	Valid = 1,
+	Invalid = 2,
+}
+
+public enum XmlSeverityType
+{
+	Error = 0,
+	Warning = 1,
+}
+
+public enum XmlTypeCode
+{
+	None = 0,
+	Item = 1,
+	Node = 2,
+	Document = 3,
+	Element = 4,
+	Attribute = 5,
+	Namespace = 6,
+	ProcessingInstruction = 7,
+	Comment = 8,
+	Text = 9,
+	AnyAtomicType = 10,
+	UntypedAtomic = 11,
+	String = 12,
+	Boolean = 13,
+	Decimal = 14,
+	Float = 15,
+	Double = 16,
+	Duration = 17,
+	DateTime = 18,
+	Time = 19,
+	Date = 20,
+	GYearMonth = 21,
+	GYear = 22,
+	GMonthDay = 23,
+	GDay = 24,
+	GMonth = 25,
+	HexBinary = 26,
+	Base64Binary = 27,
+	AnyUri = 28,
+	QName = 29,
+	Notation = 30,
+	NormalizedString = 31,
+	Token = 32,
+	Language = 33,
+	NmToken = 34,
+	Name = 35,
+	NCName = 36,
+	Id = 37,
+	Idref = 38,
+	Entity = 39,
+	Integer = 40,
+	NonPositiveInteger = 41,
+	NegativeInteger = 42,
+	Long = 43,
+	Int = 44,
+	Short = 45,
+	Byte = 46,
+	NonNegativeInteger = 47,
+	UnsignedLong = 48,
+	UnsignedInt = 49,
+	UnsignedShort = 50,
+	UnsignedByte = 51,
+	PositiveInteger = 52,
+	YearMonthDuration = 53,
+	DayTimeDuration = 54,
+}
+
+private enum XsdBuilder.State
+{
+	Root = 0,
+	Schema = 1,
+	Annotation = 2,
+	Include = 3,
+	Import = 4,
+	Element = 5,
+	Attribute = 6,
+	AttributeGroup = 7,
+	AttributeGroupRef = 8,
+	AnyAttribute = 9,
+	Group = 10,
+	GroupRef = 11,
+	All = 12,
+	Choice = 13,
+	Sequence = 14,
+	Any = 15,
+	Notation = 16,
+	SimpleType = 17,
+	ComplexType = 18,
+	ComplexContent = 19,
+	ComplexContentRestriction = 20,
+	ComplexContentExtension = 21,
+	SimpleContent = 22,
+	SimpleContentExtension = 23,
+	SimpleContentRestriction = 24,
+	SimpleTypeUnion = 25,
+	SimpleTypeList = 26,
+	SimpleTypeRestriction = 27,
+	Unique = 28,
+	Key = 29,
+	KeyRef = 30,
+	Selector = 31,
+	Field = 32,
+	MinExclusive = 33,
+	MinInclusive = 34,
+	MaxExclusive = 35,
+	MaxInclusive = 36,
+	TotalDigits = 37,
+	FractionDigits = 38,
+	Length = 39,
+	MinLength = 40,
+	MaxLength = 41,
+	Enumeration = 42,
+	Pattern = 43,
+	WhiteSpace = 44,
+	AppInfo = 45,
+	Documentation = 46,
+	Redefine = 47,
+}
+
+internal enum XsdDateTimeFlags
+{
+	DateTime = 1,
+	Time = 2,
+	Date = 4,
+	GYearMonth = 8,
+	GYear = 16,
+	GMonthDay = 32,
+	GDay = 64,
+	GMonth = 128,
+	XdrDateTimeNoTz = 256,
+	XdrDateTime = 512,
+	XdrTimeNoTz = 1024,
+	AllXsd = 255,
+}
+
+private enum XsdDateTime.DateTimeTypeCode
+{
+	DateTime = 0,
+	Time = 1,
+	Date = 2,
+	GYearMonth = 3,
+	GYear = 4,
+	GMonthDay = 5,
+	GDay = 6,
+	GMonth = 7,
+	XdrDateTime = 8,
+}
+
+private enum XsdDateTime.XsdDateTimeKind
+{
+	Unspecified = 0,
+	Zulu = 1,
+	LocalWestOfZulu = 2,
+	LocalEastOfZulu = 3,
+}
+
+private enum XsdDuration.Parts
+{
+	HasNone = 0,
+	HasYears = 1,
+	HasMonths = 2,
+	HasDays = 4,
+	HasHours = 8,
+	HasMinutes = 16,
+	HasSeconds = 32,
+}
+
+public enum XsdDuration.DurationType
+{
+	Duration = 0,
+	YearMonthDuration = 1,
+	DayTimeDuration = 2,
+}
+
+public enum AstNode.AstType
+{
+	Axis = 0,
+	Operator = 1,
+	Filter = 2,
+	ConstantOperand = 3,
+	Function = 4,
+	Group = 5,
+	Root = 6,
+	Variable = 7,
+	Error = 8,
+}
+
+public enum Axis.AxisType
+{
+	Ancestor = 0,
+	AncestorOrSelf = 1,
+	Attribute = 2,
+	Child = 3,
+	Descendant = 4,
+	DescendantOrSelf = 5,
+	Following = 6,
+	FollowingSibling = 7,
+	Namespace = 8,
+	Parent = 9,
+	Preceding = 10,
+	PrecedingSibling = 11,
+	Self = 12,
+	None = 13,
+}
+
+public enum Function.FunctionType
+{
+	FuncLast = 0,
+	FuncPosition = 1,
+	FuncCount = 2,
+	FuncID = 3,
+	FuncLocalName = 4,
+	FuncNameSpaceUri = 5,
+	FuncName = 6,
+	FuncString = 7,
+	FuncBoolean = 8,
+	FuncNumber = 9,
+	FuncTrue = 10,
+	FuncFalse = 11,
+	FuncNot = 12,
+	FuncConcat = 13,
+	FuncStartsWith = 14,
+	FuncContains = 15,
+	FuncSubstringBefore = 16,
+	FuncSubstringAfter = 17,
+	FuncSubstring = 18,
+	FuncStringLength = 19,
+	FuncNormalize = 20,
+	FuncTranslate = 21,
+	FuncLang = 22,
+	FuncSum = 23,
+	FuncFloor = 24,
+	FuncCeiling = 25,
+	FuncRound = 26,
+	FuncUserDefined = 27,
+}
+
+public enum Operator.Op
+{
+	INVALID = 0,
+	OR = 1,
+	AND = 2,
+	EQ = 3,
+	NE = 4,
+	LT = 5,
+	LE = 6,
+	GT = 7,
+	GE = 8,
+	PLUS = 9,
+	MINUS = 10,
+	MUL = 11,
+	DIV = 12,
+	MOD = 13,
+	UNION = 14,
+}
+
+public enum XPathScanner.LexKind
+{
+	Comma = 44,
+	Slash = 47,
+	At = 64,
+	Dot = 46,
+	LParens = 40,
+	RParens = 41,
+	LBracket = 91,
+	RBracket = 93,
+	Star = 42,
+	Plus = 43,
+	Minus = 45,
+	Eq = 61,
+	Lt = 60,
+	Gt = 62,
+	Bang = 33,
+	Dollar = 36,
+	Apos = 39,
+	Quote = 34,
+	Union = 124,
+	Ne = 78,
+	Le = 76,
+	Ge = 71,
+	And = 65,
+	Or = 79,
+	DotDot = 68,
+	SlashSlash = 83,
+	Name = 110,
+	String = 115,
+	Number = 100,
+	Axe = 97,
+	Eof = 69,
+}
+
+public enum iTweenFSMType
+{
+	all = 0,
+	move = 1,
+	rotate = 2,
+	scale = 3,
+	shake = 4,
+	position = 5,
+	value = 6,
+	look = 7,
+}
+
+public enum EasingFunction.Ease
+{
+	EaseInQuad = 0,
+	EaseOutQuad = 1,
+	EaseInOutQuad = 2,
+	EaseInCubic = 3,
+	EaseOutCubic = 4,
+	EaseInOutCubic = 5,
+	EaseInQuart = 6,
+	EaseOutQuart = 7,
+	EaseInOutQuart = 8,
+	EaseInQuint = 9,
+	EaseOutQuint = 10,
+	EaseInOutQuint = 11,
+	EaseInSine = 12,
+	EaseOutSine = 13,
+	EaseInOutSine = 14,
+	EaseInExpo = 15,
+	EaseOutExpo = 16,
+	EaseInOutExpo = 17,
+	EaseInCirc = 18,
+	EaseOutCirc = 19,
+	EaseInOutCirc = 20,
+	Linear = 21,
+	Spring = 22,
+	EaseInBounce = 23,
+	EaseOutBounce = 24,
+	EaseInOutBounce = 25,
+	EaseInBack = 26,
+	EaseOutBack = 27,
+	EaseInOutBack = 28,
+	EaseInElastic = 29,
+	EaseOutElastic = 30,
+	EaseInOutElastic = 31,
+	CustomCurve = 32,
+}
+
+public enum AnimateFsmAction.Calculation
+{
+	None = 0,
+	SetValue = 1,
+	AddToValue = 2,
+	SubtractFromValue = 3,
+	SubtractValueFromCurve = 4,
+	MultiplyValue = 5,
+	DivideValue = 6,
+	DivideCurveByValue = 7,
+}
+
+public enum CurveFsmAction.Calculation
+{
+	None = 0,
+	AddToValue = 1,
+	SubtractFromValue = 2,
+	SubtractValueFromCurve = 3,
+	MultiplyValue = 4,
+	DivideValue = 5,
+	DivideCurveByValue = 6,
+}
+
+public enum EaseFsmAction.EaseType
+{
+	easeInQuad = 0,
+	easeOutQuad = 1,
+	easeInOutQuad = 2,
+	easeInCubic = 3,
+	easeOutCubic = 4,
+	easeInOutCubic = 5,
+	easeInQuart = 6,
+	easeOutQuart = 7,
+	easeInOutQuart = 8,
+	easeInQuint = 9,
+	easeOutQuint = 10,
+	easeInOutQuint = 11,
+	easeInSine = 12,
+	easeOutSine = 13,
+	easeInOutSine = 14,
+	easeInExpo = 15,
+	easeOutExpo = 16,
+	easeInOutExpo = 17,
+	easeInCirc = 18,
+	easeOutCirc = 19,
+	easeInOutCirc = 20,
+	linear = 21,
+	spring = 22,
+	bounce = 23,
+	easeInBack = 24,
+	easeOutBack = 25,
+	easeInOutBack = 26,
+	elastic = 27,
+	punch = 28,
+}
+
+public enum FsmStateActionAnimatorBase.AnimatorFrameUpdateSelector
+{
+	OnUpdate = 0,
+	OnAnimatorMove = 1,
+	OnAnimatorIK = 2,
+}
+
+public enum ArrayTransferValue.ArrayTransferType
+{
+	Copy = 0,
+	Cut = 1,
+	nullify = 2,
+}
+
+public enum ArrayTransferValue.ArrayPasteType
+{
+	AsFirstItem = 0,
+	AsLastItem = 1,
+	InsertAtSameIndex = 2,
+	ReplaceAtSameIndex = 3,
+}
+
+public enum BaseUpdateAction.UpdateType
+{
+	OnUpdate = 0,
+	OnLateUpdate = 1,
+	OnFixedUpdate = 2,
+}
+
+public enum BoolOperator.Operation
+{
+	AND = 0,
+	NAND = 1,
+	OR = 2,
+	XOR = 3,
+}
+
+public enum ConvertFloatToInt.FloatRounding
+{
+	RoundDown = 0,
+	RoundUp = 1,
+	Nearest = 2,
+}
+
+public enum Assert.AssertType
+{
+	IsTrue = 0,
+	IsFalse = 1,
+}
+
+public enum DebugDrawShape.ShapeType
+{
+	Sphere = 0,
+	Cube = 1,
+	WireSphere = 2,
+	WireCube = 3,
+}
+
+public enum FloatOperator.Operation
+{
+	Add = 0,
+	Subtract = 1,
+	Multiply = 2,
+	Divide = 3,
+	Min = 4,
+	Max = 5,
+}
+
+public enum GetAxisVector.AxisPlane
+{
+	XZ = 0,
+	XY = 1,
+	YZ = 2,
+}
+
+public enum GetDeviceRoll.BaseOrientation
+{
+	Portrait = 0,
+	LandscapeLeft = 1,
+	LandscapeRight = 2,
+}
+
+public enum GetTimeInfo.TimeInfo
+{
+	DeltaTime = 0,
+	TimeScale = 1,
+	SmoothDeltaTime = 2,
+	TimeInCurrentState = 3,
+	TimeSinceStartup = 4,
+	TimeSinceLevelLoad = 5,
+	RealTimeSinceStartup = 6,
+	RealTimeInCurrentState = 7,
+}
+
+public enum IntOperator.Operation
+{
+	Add = 0,
+	Subtract = 1,
+	Multiply = 2,
+	Divide = 3,
+	Min = 4,
+	Max = 5,
+}
+
+public enum iTweenFsmAction.AxisRestriction
+{
+	none = 0,
+	x = 1,
+	y = 2,
+	z = 3,
+	xy = 4,
+	xz = 5,
+	yz = 6,
+}
+
+public enum MouseLook.RotationAxes
+{
+	MouseXAndY = 0,
+	MouseX = 1,
+	MouseY = 2,
+}
+
+public enum MouseLook2.RotationAxes
+{
+	MouseXAndY = 0,
+	MouseX = 1,
+	MouseY = 2,
+}
+
+public enum ProjectLocationToMap.MapProjection
+{
+	EquidistantCylindrical = 0,
+	Mercator = 1,
+}
+
+public enum QuaternionBaseAction.everyFrameOptions
+{
+	Update = 0,
+	FixedUpdate = 1,
+	LateUpdate = 2,
+}
+
+public enum RectTransformFlipLayoutAxis.RectTransformFlipOptions
+{
+	Horizontal = 0,
+	Vertical = 1,
+	Both = 2,
+}
+
+public enum RectTransformGetLocalPosition.LocalPositionReference
+{
+	Anchor = 0,
+	CenterPosition = 1,
+}
+
+public enum RectTransformSetAnchorRectPosition.AnchorReference
+{
+	TopLeft = 0,
+	Top = 1,
+	TopRight = 2,
+	Right = 3,
+	BottomRight = 4,
+	Bottom = 5,
+	BottomLeft = 6,
+	Left = 7,
+	Center = 8,
+}
+
+public enum GetSceneActionBase.SceneReferenceOptions
+{
+	SceneAtIndex = 0,
+	SceneByName = 1,
+	SceneByPath = 2,
+}
+
+public enum GetSceneActionBase.SceneSimpleReferenceOptions
+{
+	SceneAtIndex = 0,
+	SceneByName = 1,
+}
+
+public enum GetSceneActionBase.SceneBuildReferenceOptions
+{
+	SceneAtBuildIndex = 0,
+	SceneByName = 1,
+}
+
+public enum GetSceneActionBase.SceneAllReferenceOptions
+{
+	ActiveScene = 0,
+	SceneAtIndex = 1,
+	SceneByName = 2,
+	SceneByPath = 3,
+	SceneByGameObject = 4,
+}
+
+public enum SetActiveScene.SceneReferenceOptions
+{
+	SceneAtBuildIndex = 0,
+	SceneAtIndex = 1,
+	SceneByName = 2,
+	SceneByPath = 3,
+	SceneByGameObject = 4,
+}
+
+public enum UnloadScene.SceneReferenceOptions
+{
+	ActiveScene = 0,
+	SceneAtBuildIndex = 1,
+	SceneAtIndex = 2,
+	SceneByName = 3,
+	SceneByPath = 4,
+	SceneByGameObject = 5,
+}
+
+public enum UnloadSceneAsynch.SceneReferenceOptions
+{
+	ActiveScene = 0,
+	SceneAtBuildIndex = 1,
+	SceneAtIndex = 2,
+	SceneByName = 3,
+	SceneByPath = 4,
+	SceneByGameObject = 5,
+}
+
+public enum SendMessage.MessageType
+{
+	SendMessage = 0,
+	SendMessageUpwards = 1,
+	BroadcastMessage = 2,
+}
+
+public enum TakeScreenshot.Destination
+{
+	MyPictures = 0,
+	PersistentDataPath = 1,
+	CustomPath = 2,
+}
+
+public enum TouchGUIEvent.OffsetOptions
+{
+	TopLeft = 0,
+	Center = 1,
+	TouchStart = 2,
+}
+
+public enum TransformInputToWorldSpace.AxisPlane
+{
+	XZ = 0,
+	XY = 1,
+	YZ = 2,
+}
+
+public enum GetAtan2FromVector3.aTan2EnumAxis
+{
+	x = 0,
+	y = 1,
+	z = 2,
+}
+
+public enum UiEventSystemExecuteEvent.EventHandlers
+{
+	Submit = 0,
+	beginDrag = 1,
+	cancel = 2,
+	deselectHandler = 3,
+	dragHandler = 4,
+	dropHandler = 5,
+	endDragHandler = 6,
+	initializePotentialDrag = 7,
+	pointerClickHandler = 8,
+	pointerDownHandler = 9,
+	pointerEnterHandler = 10,
+	pointerExitHandler = 11,
+	pointerUpHandler = 12,
+	scrollHandler = 13,
+	submitHandler = 14,
+	updateSelectedHandler = 15,
+}
+
+public enum Vector2Operator.Vector2Operation
+{
+	DotProduct = 0,
+	Distance = 1,
+	Angle = 2,
+	Add = 3,
+	Subtract = 4,
+	Multiply = 5,
+	Divide = 6,
+	Min = 7,
+	Max = 8,
+}
+
+public enum Vector3Operator.Vector3Operation
+{
+	DotProduct = 0,
+	CrossProduct = 1,
+	Distance = 2,
+	Angle = 3,
+	Project = 4,
+	Reflect = 5,
+	Add = 6,
+	Subtract = 7,
+	Multiply = 8,
+	Divide = 9,
+	Min = 10,
+	Max = 11,
+}
+
+internal enum FunctionId
+{
+	Ascii = 0,
+	Char = 1,
+	Charindex = 2,
+	Difference = 3,
+	Len = 4,
+	Lower = 5,
+	LTrim = 6,
+	Patindex = 7,
+	Replicate = 8,
+	Reverse = 9,
+	Right = 10,
+	RTrim = 11,
+	Soundex = 12,
+	Space = 13,
+	Str = 14,
+	Stuff = 15,
+	Substring = 16,
+	Upper = 17,
+	IsNull = 18,
+	Iif = 19,
+	Convert = 20,
+	cInt = 21,
+	cBool = 22,
+	cDate = 23,
+	cDbl = 24,
+	cStr = 25,
+	Abs = 26,
+	Acos = 27,
+	In = 28,
+	Trim = 29,
+	Sum = 30,
+	Avg = 31,
+	Min = 32,
+	Max = 33,
+	Count = 34,
+	StDev = 35,
+	Var = 37,
+	DateTimeOffset = 38,
+}
+
+public enum AcceptRejectRule
+{
+	None = 0,
+	Cascade = 1,
+}
+
+internal enum AggregateType
+{
+	None = 0,
+	Sum = 4,
+	Mean = 5,
+	Min = 6,
+	Max = 7,
+	First = 8,
+	Count = 9,
+	Var = 10,
+	StDev = 11,
+}
+
+public enum DataRowAction
+{
+	Nothing = 0,
+	Delete = 1,
+	Change = 2,
+	Rollback = 4,
+	Commit = 8,
+	Add = 16,
+	ChangeOriginal = 32,
+	ChangeCurrentAndOriginal = 64,
+}
+
+public enum DataRowState
+{
+	Detached = 1,
+	Unchanged = 2,
+	Added = 4,
+	Deleted = 8,
+	Modified = 16,
+}
+
+public enum DataRowVersion
+{
+	Original = 256,
+	Current = 512,
+	Proposed = 1024,
+	Default = 1536,
+}
+
+public enum SerializationFormat
+{
+	Xml = 0,
+	Binary = 1,
+}
+
+public enum DataSetDateTime
+{
+	Local = 1,
+	Unspecified = 2,
+	UnspecifiedLocal = 3,
+	Utc = 4,
+}
+
+public enum DataViewRowState
+{
+	None = 0,
+	Unchanged = 2,
+	Added = 4,
+	Deleted = 8,
+	ModifiedCurrent = 16,
+	ModifiedOriginal = 32,
+	OriginalRows = 42,
+	CurrentRows = 22,
+}
+
+internal enum Aggregate
+{
+	Sum = 30,
+	Avg = 31,
+	Min = 32,
+	Max = 33,
+	Count = 34,
+	StDev = 35,
+	Var = 37,
+}
+
+private enum BinaryNode.DataTypePrecedence
+{
+	SqlDateTime = 25,
+	DateTimeOffset = 24,
+	DateTime = 23,
+	TimeSpan = 20,
+	SqlDouble = 19,
+	Double = 18,
+	SqlSingle = 17,
+	Single = 16,
+	SqlDecimal = 15,
+	Decimal = 14,
+	SqlMoney = 13,
+	UInt64 = 12,
+	SqlInt64 = 11,
+	Int64 = 10,
+	UInt32 = 9,
+	SqlInt32 = 8,
+	Int32 = 7,
+	UInt16 = 6,
+	SqlInt16 = 5,
+	Int16 = 4,
+	Byte = 3,
+	SqlByte = 2,
+	SByte = 1,
+	Error = 0,
+}
+
+internal enum ValueType
+{
+	Null = 0,
+	Bool = 1,
+	Numeric = 2,
+	Str = 3,
+	Float = 4,
+	Decimal = 5,
+	Object = 6,
+	Date = 7,
+}
+
+internal enum Nodes
+{
+	Noop = 0,
+	Unop = 1,
+	UnopSpec = 2,
+	Binop = 3,
+	BinopSpec = 4,
+	Zop = 5,
+	Call = 6,
+	Const = 7,
+	Name = 8,
+	Paren = 9,
+	Conv = 10,
+}
+
+internal enum Tokens
+{
+	None = 0,
+	Name = 1,
+	Numeric = 2,
+	Decimal = 3,
+	Float = 4,
+	BinaryConst = 5,
+	StringConst = 6,
+	Date = 7,
+	ListSeparator = 8,
+	LeftParen = 9,
+	RightParen = 10,
+	ZeroOp = 11,
+	UnaryOp = 12,
+	BinaryOp = 13,
+	Child = 14,
+	Parent = 15,
+	Dot = 16,
+	Unknown = 17,
+	EOS = 18,
+}
+
+public enum MappingType
+{
+	Element = 1,
+	Attribute = 2,
+	SimpleContent = 3,
+	Hidden = 4,
+}
+
+public enum MissingSchemaAction
+{
+	Add = 1,
+	Ignore = 2,
+	Error = 3,
+	AddWithKey = 4,
+}
+
+internal enum RBTreeError
+{
+	InvalidPageSize = 1,
+	PagePositionInSlotInUse = 3,
+	NoFreeSlots = 4,
+	InvalidStateinInsert = 5,
+	InvalidNextSizeInDelete = 7,
+	InvalidStateinDelete = 8,
+	InvalidNodeSizeinDelete = 9,
+	InvalidStateinEndDelete = 10,
+	CannotRotateInvalidsuccessorNodeinDelete = 11,
+	IndexOutOFRangeinGetNodeByIndex = 13,
+	RBDeleteFixup = 14,
+	UnsupportedAccessMethod1 = 15,
+	UnsupportedAccessMethod2 = 16,
+	UnsupportedAccessMethodInNonNillRootSubtree = 17,
+	AttachedNodeWithZerorbTreeNodeId = 18,
+	CompareNodeInDataRowTree = 19,
+	CompareSateliteTreeNodeInDataRowTree = 20,
+	NestedSatelliteTreeEnumerator = 21,
+}
+
+internal enum TreeAccessMethod
+{
+	KEY_SEARCH_AND_INDEX = 1,
+	INDEX_ONLY = 2,
+}
+
+private enum RBTree.NodeColor<K>
+{
+}
+
+public enum Rule
+{
+	None = 0,
+	Cascade = 1,
+	SetNull = 2,
+	SetDefault = 3,
+}
+
+public enum SchemaSerializationMode
+{
+	IncludeSchema = 1,
+	ExcludeSchema = 2,
+}
+
+public enum XmlReadMode
+{
+	Auto = 0,
+	ReadSchema = 1,
+	IgnoreSchema = 2,
+	InferSchema = 3,
+	DiffGram = 4,
+	Fragment = 5,
+	InferTypedSchema = 6,
+}
+
+public enum XmlWriteMode
+{
+	WriteSchema = 0,
+	IgnoreSchema = 1,
+	DiffGram = 2,
+}
+
+internal enum SchemaFormat
+{
+	Public = 1,
+	Remoting = 2,
+	WebService = 3,
+	RemotingSkipSchema = 4,
+	WebServiceSkipSchema = 5,
+}
+
+internal enum SqlBytesCharsState
+{
+	Null = 0,
+	Buffer = 1,
+	Stream = 3,
+}
+
+public enum SqlCompareOptions
+{
+	None = 0,
+	IgnoreCase = 1,
+	IgnoreNonSpace = 2,
+	IgnoreKanaType = 8,
+	IgnoreWidth = 16,
+	BinarySort = 32768,
+	BinarySort2 = 16384,
+}
+
+internal enum EComparison
+{
+	LT = 0,
+	LE = 1,
+	EQ = 2,
+	GE = 3,
+	GT = 4,
+	NE = 5,
+}
+
+private enum ObjectStorage.Families
+{
+	DATETIME = 0,
+	NUMBER = 1,
+	STRING = 2,
+	BOOLEAN = 3,
+	ARRAY = 4,
+}
+
+internal enum StorageType
+{
+	Empty = 0,
+	Object = 1,
+	DBNull = 2,
+	Boolean = 3,
+	Char = 4,
+	SByte = 5,
+	Byte = 6,
+	Int16 = 7,
+	UInt16 = 8,
+	Int32 = 9,
+	UInt32 = 10,
+	Int64 = 11,
+	UInt64 = 12,
+	Single = 13,
+	Double = 14,
+	Decimal = 15,
+	DateTime = 16,
+	TimeSpan = 17,
+	String = 18,
+	Guid = 19,
+	ByteArray = 20,
+	CharArray = 21,
+	Type = 22,
+	DateTimeOffset = 23,
+	BigInteger = 24,
+	Uri = 25,
+	SqlBinary = 26,
+	SqlBoolean = 27,
+	SqlByte = 28,
+	SqlBytes = 29,
+	SqlChars = 30,
+	SqlDateTime = 31,
+	SqlDecimal = 32,
+	SqlDouble = 33,
+	SqlGuid = 34,
+	SqlInt16 = 35,
+	SqlInt32 = 36,
+	SqlInt64 = 37,
+	SqlMoney = 38,
+	SqlSingle = 39,
+	SqlString = 40,
+}
+
+internal enum LightmapType
+{
+	StaticLightmap = 0,
+	DynamicLightmap = 1,
+}
+
+public enum TypeInferenceRules
+{
+	TypeReferencedByFirstArgument = 0,
+	TypeReferencedBySecondArgument = 1,
+	ArrayOfTypeReferencedByFirstArgument = 2,
+	TypeOfFirstArgument = 3,
+}
+
+public enum ScheduleMode
+{
+	Run = 0,
+	Batched = 1,
+	Parallel = 1,
+	Single = 2,
+}
+
+public enum ProfilerCategoryColor
+{
+	Render = 0,
+	Scripts = 1,
+	BurstJobs = 2,
+	Other = 3,
+	Physics = 4,
+	Animation = 5,
+	Audio = 6,
+	AudioJob = 7,
+	AudioUpdateJob = 8,
+	Lighting = 9,
+	GC = 10,
+	VSync = 11,
+	Memory = 12,
+	Internal = 13,
+	UI = 14,
+	Build = 15,
+	Input = 16,
+}
+
+public enum ProfilerCounterOptions
+{
+	None = 0,
+	FlushOnEndOfFrame = 2,
+	ResetToZeroOnFlush = 4,
+}
+
+public enum MarkerFlags
+{
+	Default = 0,
+	Script = 2,
+	ScriptInvoke = 32,
+	ScriptDeepProfiler = 64,
+	AvailabilityEditor = 4,
+	AvailabilityNonDevelopment = 8,
+	Warning = 16,
+	Counter = 128,
+	SampleGPU = 256,
+}
+
+public enum FileState
+{
+	Absent = 0,
+	Exists = 1,
+}
+
+public enum AssetLoadingSubsystem
+{
+	Other = 0,
+	Texture = 1,
+	VirtualTexture = 2,
+	Mesh = 3,
+	Audio = 4,
+	Scripts = 5,
+	EntitiesScene = 6,
+	EntitiesStreamBinaryReader = 7,
+	FileInfo = 8,
+	ContentLoading = 9,
+}
+
+public enum Priority
+{
+	PriorityLow = 0,
+	PriorityHigh = 1,
+}
+
+public enum ProcessingState
+{
+	Unknown = 0,
+	InQueue = 1,
+	Reading = 2,
+	Completed = 3,
+	Failed = 4,
+	Canceled = 5,
+}
+
+public enum FileReadType
+{
+	Sync = 0,
+	Async = 1,
+}
+
+public enum ArchiveStatus
+{
+	InProgress = 0,
+	Complete = 1,
+	Failed = 2,
+}
+
+public enum Allocator
+{
+	Invalid = 0,
+	None = 1,
+	Temp = 2,
+	TempJob = 3,
+	Persistent = 4,
+	AudioKernel = 5,
+	FirstUserIndex = 64,
+}
+
+public enum NativeArrayOptions
+{
+	UninitializedMemory = 0,
+	ClearMemory = 1,
+}
+
+public enum WrapMode
+{
+	Once = 1,
+	Loop = 2,
+	PingPong = 4,
+	Default = 0,
+	ClampForever = 8,
+	Clamp = 1,
+}
+
+public enum ApplicationMemoryUsage
+{
+	Unknown = 0,
+	Low = 1,
+	Medium = 2,
+	High = 3,
+	Critical = 4,
+}
+
+public enum StackTraceLogType
+{
+	None = 0,
+	ScriptOnly = 1,
+	Full = 2,
+}
+
+public enum NetworkReachability
+{
+	NotReachable = 0,
+	ReachableViaCarrierDataNetwork = 1,
+	ReachableViaLocalAreaNetwork = 2,
+}
+
+public enum ApplicationSandboxType
+{
+	Unknown = 0,
+	NotSandboxed = 1,
+	Sandboxed = 2,
+	SandboxBroken = 3,
+}
+
+public enum AudioType
+{
+	UNKNOWN = 0,
+	ACC = 1,
+	AIFF = 2,
+	IT = 10,
+	MOD = 12,
+	MPEG = 13,
+	OGGVORBIS = 14,
+	S3M = 17,
+	WAV = 20,
+	XM = 21,
+	XMA = 22,
+	VAG = 23,
+	AUDIOQUEUE = 24,
+}
+
+public enum SendMessageOptions
+{
+	RequireReceiver = 0,
+	DontRequireReceiver = 1,
+}
+
+public enum PrimitiveType
+{
+	Sphere = 0,
+	Capsule = 1,
+	Cylinder = 2,
+	Cube = 3,
+	Plane = 4,
+	Quad = 5,
+}
+
+public enum Space
+{
+	World = 0,
+	Self = 1,
+}
+
+public enum RuntimePlatform
+{
+	OSXEditor = 0,
+	OSXPlayer = 1,
+	WindowsPlayer = 2,
+	OSXWebPlayer = 3,
+	OSXDashboardPlayer = 4,
+	WindowsWebPlayer = 5,
+	WindowsEditor = 7,
+	IPhonePlayer = 8,
+	XBOX360 = 10,
+	PS3 = 9,
+	Android = 11,
+	NaCl = 12,
+	FlashPlayer = 15,
+	LinuxPlayer = 13,
+	LinuxEditor = 16,
+	WebGLPlayer = 17,
+	MetroPlayerX86 = 18,
+	WSAPlayerX86 = 18,
+	MetroPlayerX64 = 19,
+	WSAPlayerX64 = 19,
+	MetroPlayerARM = 20,
+	WSAPlayerARM = 20,
+	WP8Player = 21,
+	BlackBerryPlayer = 22,
+	TizenPlayer = 23,
+	PSP2 = 24,
+	PS4 = 25,
+	PSM = 26,
+	XboxOne = 27,
+	SamsungTVPlayer = 28,
+	WiiU = 30,
+	tvOS = 31,
+	Switch = 32,
+	Lumin = 33,
+	Stadia = 34,
+	CloudRendering = 35,
+	GameCoreXboxSeries = 36,
+	GameCoreXboxOne = 37,
+	PS5 = 38,
+	EmbeddedLinuxArm64 = 39,
+	EmbeddedLinuxArm32 = 40,
+	EmbeddedLinuxX64 = 41,
+	EmbeddedLinuxX86 = 42,
+	LinuxServer = 43,
+	WindowsServer = 44,
+	OSXServer = 45,
+	QNXArm32 = 46,
+	QNXArm64 = 47,
+	QNXX64 = 48,
+	QNXX86 = 49,
+	VisionOS = 50,
+}
+
+public enum SystemLanguage
+{
+	Afrikaans = 0,
+	Arabic = 1,
+	Basque = 2,
+	Belarusian = 3,
+	Bulgarian = 4,
+	Catalan = 5,
+	Chinese = 6,
+	Czech = 7,
+	Danish = 8,
+	Dutch = 9,
+	English = 10,
+	Estonian = 11,
+	Faroese = 12,
+	Finnish = 13,
+	French = 14,
+	German = 15,
+	Greek = 16,
+	Hebrew = 17,
+	Icelandic = 19,
+	Indonesian = 20,
+	Italian = 21,
+	Japanese = 22,
+	Korean = 23,
+	Latvian = 24,
+	Lithuanian = 25,
+	Norwegian = 26,
+	Polish = 27,
+	Portuguese = 28,
+	Romanian = 29,
+	Russian = 30,
+	SerboCroatian = 31,
+	Slovak = 32,
+	Slovenian = 33,
+	Spanish = 34,
+	Swedish = 35,
+	Thai = 36,
+	Turkish = 37,
+	Ukrainian = 38,
+	Vietnamese = 39,
+	ChineseSimplified = 40,
+	ChineseTraditional = 41,
+	Hindi = 42,
+	Unknown = 43,
+	Hungarian = 18,
+}
+
+public enum LogType
+{
+	Error = 0,
+	Assert = 1,
+	Warning = 2,
+	Log = 3,
+	Exception = 4,
+}
+
+public enum LogOption
+{
+	None = 0,
+	NoStacktrace = 1,
+}
+
+public enum Camera.MonoOrStereoscopicEye
+{
+	Left = 0,
+	Right = 1,
+	Mono = 2,
+}
+
+public enum ReflectionProbe.ReflectionProbeEvent
+{
+	ReflectionProbeAdded = 0,
+	ReflectionProbeRemoved = 1,
+}
+
+private enum ExpressionEvaluator.Op
+{
+	Add = 0,
+	Sub = 1,
+	Mul = 2,
+	Div = 3,
+	Mod = 4,
+	Neg = 5,
+	Pow = 6,
+	Sqrt = 7,
+	Sin = 8,
+	Cos = 9,
+	Tan = 10,
+	Floor = 11,
+	Ceil = 12,
+	Round = 13,
+	Rand = 14,
+	Linear = 15,
+}
+
+private enum ExpressionEvaluator.Associativity
+{
+	Left = 0,
+	Right = 1,
+}
+
+internal enum EnabledOrientation
+{
+	kAutorotateToPortrait = 1,
+	kAutorotateToPortraitUpsideDown = 2,
+	kAutorotateToLandscapeLeft = 4,
+	kAutorotateToLandscapeRight = 8,
+}
+
+public enum FullScreenMode
+{
+	ExclusiveFullScreen = 0,
+	FullScreenWindow = 1,
+	MaximizedWindow = 2,
+	Windowed = 3,
+}
+
+public enum RenderingPath
+{
+	VertexLit = 0,
+	Forward = 1,
+	DeferredLighting = 2,
+	DeferredShading = 3,
+}
+
+public enum TransparencySortMode
+{
+	Default = 0,
+	Perspective = 1,
+	Orthographic = 2,
+	CustomAxis = 3,
+}
+
+public enum LightType
+{
+	Spot = 0,
+	Directional = 1,
+	Point = 2,
+	Area = 3,
+	Rectangle = 3,
+	Disc = 4,
+}
+
+public enum LightShadows
+{
+	None = 0,
+	Hard = 1,
+	Soft = 2,
+}
+
+public enum FogMode
+{
+	Linear = 1,
+	Exponential = 2,
+	ExponentialSquared = 3,
+}
+
+public enum LightmapBakeType
+{
+	Realtime = 4,
+	Baked = 2,
+	Mixed = 1,
+}
+
+public enum MixedLightingMode
+{
+	IndirectOnly = 0,
+	Shadowmask = 2,
+	Subtractive = 1,
+}
+
+public enum ShadowResolution
+{
+	Low = 0,
+	Medium = 1,
+	High = 2,
+	VeryHigh = 3,
+}
+
+public enum CameraClearFlags
+{
+	Skybox = 1,
+	Color = 2,
+	SolidColor = 2,
+	Depth = 3,
+	Nothing = 4,
+}
+
+public enum DepthTextureMode
+{
+	None = 0,
+	Depth = 1,
+	DepthNormals = 2,
+	MotionVectors = 4,
+}
+
+public enum MeshTopology
+{
+	Triangles = 0,
+	Quads = 2,
+	Lines = 3,
+	LineStrip = 4,
+	Points = 5,
+}
+
+public enum ColorSpace
+{
+	Gamma = 0,
+	Linear = 1,
+}
+
+public enum ScreenOrientation
+{
+	Portrait = 1,
+	PortraitUpsideDown = 2,
+	LandscapeLeft = 3,
+	LandscapeRight = 4,
+	AutoRotation = 5,
+	Unknown = 0,
+	Landscape = 3,
+}
+
+public enum FilterMode
+{
+	Point = 0,
+	Bilinear = 1,
+	Trilinear = 2,
+}
+
+public enum TextureWrapMode
+{
+	Repeat = 0,
+	Clamp = 1,
+	Mirror = 2,
+	MirrorOnce = 3,
+}
+
+public enum TextureFormat
+{
+	Alpha8 = 1,
+	ARGB4444 = 2,
+	RGB24 = 3,
+	RGBA32 = 4,
+	ARGB32 = 5,
+	RGB565 = 7,
+	R16 = 9,
+	DXT1 = 10,
+	DXT5 = 12,
+	RGBA4444 = 13,
+	BGRA32 = 14,
+	RHalf = 15,
+	RGHalf = 16,
+	RGBAHalf = 17,
+	RFloat = 18,
+	RGFloat = 19,
+	RGBAFloat = 20,
+	YUY2 = 21,
+	RGB9e5Float = 22,
+	BC4 = 26,
+	BC5 = 27,
+	BC6H = 24,
+	BC7 = 25,
+	DXT1Crunched = 28,
+	DXT5Crunched = 29,
+	PVRTC_RGB2 = 30,
+	PVRTC_RGBA2 = 31,
+	PVRTC_RGB4 = 32,
+	PVRTC_RGBA4 = 33,
+	ETC_RGB4 = 34,
+	EAC_R = 41,
+	EAC_R_SIGNED = 42,
+	EAC_RG = 43,
+	EAC_RG_SIGNED = 44,
+	ETC2_RGB = 45,
+	ETC2_RGBA1 = 46,
+	ETC2_RGBA8 = 47,
+	ASTC_4x4 = 48,
+	ASTC_5x5 = 49,
+	ASTC_6x6 = 50,
+	ASTC_8x8 = 51,
+	ASTC_10x10 = 52,
+	ASTC_12x12 = 53,
+	ETC_RGB4_3DS = 60,
+	ETC_RGBA8_3DS = 61,
+	RG16 = 62,
+	R8 = 63,
+	ETC_RGB4Crunched = 64,
+	ETC2_RGBA8Crunched = 65,
+	ASTC_HDR_4x4 = 66,
+	ASTC_HDR_5x5 = 67,
+	ASTC_HDR_6x6 = 68,
+	ASTC_HDR_8x8 = 69,
+	ASTC_HDR_10x10 = 70,
+	ASTC_HDR_12x12 = 71,
+	RG32 = 72,
+	RGB48 = 73,
+	RGBA64 = 74,
+	ASTC_RGB_4x4 = 48,
+	ASTC_RGB_5x5 = 49,
+	ASTC_RGB_6x6 = 50,
+	ASTC_RGB_8x8 = 51,
+	ASTC_RGB_10x10 = 52,
+	ASTC_RGB_12x12 = 53,
+	ASTC_RGBA_4x4 = 54,
+	ASTC_RGBA_5x5 = 55,
+	ASTC_RGBA_6x6 = 56,
+	ASTC_RGBA_8x8 = 57,
+	ASTC_RGBA_10x10 = 58,
+	ASTC_RGBA_12x12 = 59,
+}
+
+internal enum TextureColorSpace
+{
+	Linear = 0,
+	sRGB = 1,
+}
+
+public enum CubemapFace
+{
+	PositiveX = 0,
+	NegativeX = 1,
+	PositiveY = 2,
+	NegativeY = 3,
+	PositiveZ = 4,
+	NegativeZ = 5,
+}
+
+public enum RenderTextureFormat
+{
+	ARGB32 = 0,
+	Depth = 1,
+	ARGBHalf = 2,
+	Shadowmap = 3,
+	RGB565 = 4,
+	ARGB4444 = 5,
+	ARGB1555 = 6,
+	Default = 7,
+	ARGB2101010 = 8,
+	DefaultHDR = 9,
+	ARGB64 = 10,
+	ARGBFloat = 11,
+	RGFloat = 12,
+	RGHalf = 13,
+	RFloat = 14,
+	RHalf = 15,
+	R8 = 16,
+	ARGBInt = 17,
+	RGInt = 18,
+	RInt = 19,
+	BGRA32 = 20,
+	RGB111110Float = 22,
+	RG32 = 23,
+	RGBAUShort = 24,
+	RG16 = 25,
+	BGRA10101010_XR = 26,
+	BGR101010_XR = 27,
+	R16 = 28,
+}
+
+public enum VRTextureUsage
+{
+	None = 0,
+	OneEye = 1,
+	TwoEyes = 2,
+	DeviceSpecific = 3,
+}
+
+public enum RenderTextureCreationFlags
+{
+	MipMap = 1,
+	AutoGenerateMips = 2,
+	SRGB = 4,
+	EyeTexture = 8,
+	EnableRandomWrite = 16,
+	CreatedFromScript = 32,
+	AllowVerticalFlip = 128,
+	NoResolvedColorSurface = 256,
+	DynamicallyScalable = 1024,
+	BindMS = 2048,
+}
+
+public enum RenderTextureReadWrite
+{
+	Default = 0,
+	Linear = 1,
+	sRGB = 2,
+}
+
+public enum RenderTextureMemoryless
+{
+	None = 0,
+	Color = 1,
+	Depth = 2,
+	MSAA = 4,
+}
+
+public enum LightmapsMode
+{
+	NonDirectional = 0,
+	CombinedDirectional = 1,
+}
+
+public enum LineTextureMode
+{
+	Stretch = 0,
+	Tile = 1,
+	DistributePerSegment = 2,
+	RepeatPerSegment = 3,
+	Static = 4,
+}
+
+public enum LineAlignment
+{
+	View = 0,
+	Local = 1,
+	TransformZ = 1,
+}
+
+public enum FullScreenMovieControlMode
+{
+	Full = 0,
+	Minimal = 1,
+	CancelOnInput = 2,
+	Hidden = 3,
+}
+
+public enum FullScreenMovieScalingMode
+{
+	None = 0,
+	AspectFit = 1,
+	AspectFill = 2,
+	Fill = 3,
+}
+
+public enum CursorMode
+{
+	Auto = 0,
+	ForceSoftware = 1,
+}
+
+public enum CursorLockMode
+{
+	None = 0,
+	Locked = 1,
+	Confined = 2,
+}
+
+public enum KeyCode
+{
+	None = 0,
+	Backspace = 8,
+	Delete = 127,
+	Tab = 9,
+	Clear = 12,
+	Return = 13,
+	Pause = 19,
+	Escape = 27,
+	Space = 32,
+	Keypad0 = 256,
+	Keypad1 = 257,
+	Keypad2 = 258,
+	Keypad3 = 259,
+	Keypad4 = 260,
+	Keypad5 = 261,
+	Keypad6 = 262,
+	Keypad7 = 263,
+	Keypad8 = 264,
+	Keypad9 = 265,
+	KeypadPeriod = 266,
+	KeypadDivide = 267,
+	KeypadMultiply = 268,
+	KeypadMinus = 269,
+	KeypadPlus = 270,
+	KeypadEnter = 271,
+	KeypadEquals = 272,
+	UpArrow = 273,
+	DownArrow = 274,
+	RightArrow = 275,
+	LeftArrow = 276,
+	Insert = 277,
+	Home = 278,
+	End = 279,
+	PageUp = 280,
+	PageDown = 281,
+	F1 = 282,
+	F2 = 283,
+	F3 = 284,
+	F4 = 285,
+	F5 = 286,
+	F6 = 287,
+	F7 = 288,
+	F8 = 289,
+	F9 = 290,
+	F10 = 291,
+	F11 = 292,
+	F12 = 293,
+	F13 = 294,
+	F14 = 295,
+	F15 = 296,
+	Alpha0 = 48,
+	Alpha1 = 49,
+	Alpha2 = 50,
+	Alpha3 = 51,
+	Alpha4 = 52,
+	Alpha5 = 53,
+	Alpha6 = 54,
+	Alpha7 = 55,
+	Alpha8 = 56,
+	Alpha9 = 57,
+	Exclaim = 33,
+	DoubleQuote = 34,
+	Hash = 35,
+	Dollar = 36,
+	Percent = 37,
+	Ampersand = 38,
+	Quote = 39,
+	LeftParen = 40,
+	RightParen = 41,
+	Asterisk = 42,
+	Plus = 43,
+	Comma = 44,
+	Minus = 45,
+	Period = 46,
+	Slash = 47,
+	Colon = 58,
+	Semicolon = 59,
+	Less = 60,
+	Equals = 61,
+	Greater = 62,
+	Question = 63,
+	At = 64,
+	LeftBracket = 91,
+	Backslash = 92,
+	RightBracket = 93,
+	Caret = 94,
+	Underscore = 95,
+	BackQuote = 96,
+	A = 97,
+	B = 98,
+	C = 99,
+	D = 100,
+	E = 101,
+	F = 102,
+	G = 103,
+	H = 104,
+	I = 105,
+	J = 106,
+	K = 107,
+	L = 108,
+	M = 109,
+	N = 110,
+	O = 111,
+	P = 112,
+	Q = 113,
+	R = 114,
+	S = 115,
+	T = 116,
+	U = 117,
+	V = 118,
+	W = 119,
+	X = 120,
+	Y = 121,
+	Z = 122,
+	LeftCurlyBracket = 123,
+	Pipe = 124,
+	RightCurlyBracket = 125,
+	Tilde = 126,
+	Numlock = 300,
+	CapsLock = 301,
+	ScrollLock = 302,
+	RightShift = 303,
+	LeftShift = 304,
+	RightControl = 305,
+	LeftControl = 306,
+	RightAlt = 307,
+	LeftAlt = 308,
+	LeftMeta = 310,
+	LeftCommand = 310,
+	LeftApple = 310,
+	LeftWindows = 311,
+	RightMeta = 309,
+	RightCommand = 309,
+	RightApple = 309,
+	RightWindows = 312,
+	AltGr = 313,
+	Help = 315,
+	Print = 316,
+	SysReq = 317,
+	Break = 318,
+	Menu = 319,
+	Mouse0 = 323,
+	Mouse1 = 324,
+	Mouse2 = 325,
+	Mouse3 = 326,
+	Mouse4 = 327,
+	Mouse5 = 328,
+	Mouse6 = 329,
+	JoystickButton0 = 330,
+	JoystickButton1 = 331,
+	JoystickButton2 = 332,
+	JoystickButton3 = 333,
+	JoystickButton4 = 334,
+	JoystickButton5 = 335,
+	JoystickButton6 = 336,
+	JoystickButton7 = 337,
+	JoystickButton8 = 338,
+	JoystickButton9 = 339,
+	JoystickButton10 = 340,
+	JoystickButton11 = 341,
+	JoystickButton12 = 342,
+	JoystickButton13 = 343,
+	JoystickButton14 = 344,
+	JoystickButton15 = 345,
+	JoystickButton16 = 346,
+	JoystickButton17 = 347,
+	JoystickButton18 = 348,
+	JoystickButton19 = 349,
+	Joystick1Button0 = 350,
+	Joystick1Button1 = 351,
+	Joystick1Button2 = 352,
+	Joystick1Button3 = 353,
+	Joystick1Button4 = 354,
+	Joystick1Button5 = 355,
+	Joystick1Button6 = 356,
+	Joystick1Button7 = 357,
+	Joystick1Button8 = 358,
+	Joystick1Button9 = 359,
+	Joystick1Button10 = 360,
+	Joystick1Button11 = 361,
+	Joystick1Button12 = 362,
+	Joystick1Button13 = 363,
+	Joystick1Button14 = 364,
+	Joystick1Button15 = 365,
+	Joystick1Button16 = 366,
+	Joystick1Button17 = 367,
+	Joystick1Button18 = 368,
+	Joystick1Button19 = 369,
+	Joystick2Button0 = 370,
+	Joystick2Button1 = 371,
+	Joystick2Button2 = 372,
+	Joystick2Button3 = 373,
+	Joystick2Button4 = 374,
+	Joystick2Button5 = 375,
+	Joystick2Button6 = 376,
+	Joystick2Button7 = 377,
+	Joystick2Button8 = 378,
+	Joystick2Button9 = 379,
+	Joystick2Button10 = 380,
+	Joystick2Button11 = 381,
+	Joystick2Button12 = 382,
+	Joystick2Button13 = 383,
+	Joystick2Button14 = 384,
+	Joystick2Button15 = 385,
+	Joystick2Button16 = 386,
+	Joystick2Button17 = 387,
+	Joystick2Button18 = 388,
+	Joystick2Button19 = 389,
+	Joystick3Button0 = 390,
+	Joystick3Button1 = 391,
+	Joystick3Button2 = 392,
+	Joystick3Button3 = 393,
+	Joystick3Button4 = 394,
+	Joystick3Button5 = 395,
+	Joystick3Button6 = 396,
+	Joystick3Button7 = 397,
+	Joystick3Button8 = 398,
+	Joystick3Button9 = 399,
+	Joystick3Button10 = 400,
+	Joystick3Button11 = 401,
+	Joystick3Button12 = 402,
+	Joystick3Button13 = 403,
+	Joystick3Button14 = 404,
+	Joystick3Button15 = 405,
+	Joystick3Button16 = 406,
+	Joystick3Button17 = 407,
+	Joystick3Button18 = 408,
+	Joystick3Button19 = 409,
+	Joystick4Button0 = 410,
+	Joystick4Button1 = 411,
+	Joystick4Button2 = 412,
+	Joystick4Button3 = 413,
+	Joystick4Button4 = 414,
+	Joystick4Button5 = 415,
+	Joystick4Button6 = 416,
+	Joystick4Button7 = 417,
+	Joystick4Button8 = 418,
+	Joystick4Button9 = 419,
+	Joystick4Button10 = 420,
+	Joystick4Button11 = 421,
+	Joystick4Button12 = 422,
+	Joystick4Button13 = 423,
+	Joystick4Button14 = 424,
+	Joystick4Button15 = 425,
+	Joystick4Button16 = 426,
+	Joystick4Button17 = 427,
+	Joystick4Button18 = 428,
+	Joystick4Button19 = 429,
+	Joystick5Button0 = 430,
+	Joystick5Button1 = 431,
+	Joystick5Button2 = 432,
+	Joystick5Button3 = 433,
+	Joystick5Button4 = 434,
+	Joystick5Button5 = 435,
+	Joystick5Button6 = 436,
+	Joystick5Button7 = 437,
+	Joystick5Button8 = 438,
+	Joystick5Button9 = 439,
+	Joystick5Button10 = 440,
+	Joystick5Button11 = 441,
+	Joystick5Button12 = 442,
+	Joystick5Button13 = 443,
+	Joystick5Button14 = 444,
+	Joystick5Button15 = 445,
+	Joystick5Button16 = 446,
+	Joystick5Button17 = 447,
+	Joystick5Button18 = 448,
+	Joystick5Button19 = 449,
+	Joystick6Button0 = 450,
+	Joystick6Button1 = 451,
+	Joystick6Button2 = 452,
+	Joystick6Button3 = 453,
+	Joystick6Button4 = 454,
+	Joystick6Button5 = 455,
+	Joystick6Button6 = 456,
+	Joystick6Button7 = 457,
+	Joystick6Button8 = 458,
+	Joystick6Button9 = 459,
+	Joystick6Button10 = 460,
+	Joystick6Button11 = 461,
+	Joystick6Button12 = 462,
+	Joystick6Button13 = 463,
+	Joystick6Button14 = 464,
+	Joystick6Button15 = 465,
+	Joystick6Button16 = 466,
+	Joystick6Button17 = 467,
+	Joystick6Button18 = 468,
+	Joystick6Button19 = 469,
+	Joystick7Button0 = 470,
+	Joystick7Button1 = 471,
+	Joystick7Button2 = 472,
+	Joystick7Button3 = 473,
+	Joystick7Button4 = 474,
+	Joystick7Button5 = 475,
+	Joystick7Button6 = 476,
+	Joystick7Button7 = 477,
+	Joystick7Button8 = 478,
+	Joystick7Button9 = 479,
+	Joystick7Button10 = 480,
+	Joystick7Button11 = 481,
+	Joystick7Button12 = 482,
+	Joystick7Button13 = 483,
+	Joystick7Button14 = 484,
+	Joystick7Button15 = 485,
+	Joystick7Button16 = 486,
+	Joystick7Button17 = 487,
+	Joystick7Button18 = 488,
+	Joystick7Button19 = 489,
+	Joystick8Button0 = 490,
+	Joystick8Button1 = 491,
+	Joystick8Button2 = 492,
+	Joystick8Button3 = 493,
+	Joystick8Button4 = 494,
+	Joystick8Button5 = 495,
+	Joystick8Button6 = 496,
+	Joystick8Button7 = 497,
+	Joystick8Button8 = 498,
+	Joystick8Button9 = 499,
+	Joystick8Button10 = 500,
+	Joystick8Button11 = 501,
+	Joystick8Button12 = 502,
+	Joystick8Button13 = 503,
+	Joystick8Button14 = 504,
+	Joystick8Button15 = 505,
+	Joystick8Button16 = 506,
+	Joystick8Button17 = 507,
+	Joystick8Button18 = 508,
+	Joystick8Button19 = 509,
+}
+
+public enum EnumDataUtility.CachedType
+{
+	ExcludeObsolete = 0,
+	IncludeObsoleteExceptErrors = 1,
+	IncludeAllObsolete = 2,
+}
+
+public enum InspectorSort
+{
+	ByName = 0,
+	ByValue = 1,
+}
+
+public enum InspectorSortDirection
+{
+	Ascending = 0,
+	Descending = 1,
+}
+
+public enum RuntimeInitializeLoadType
+{
+	AfterSceneLoad = 0,
+	BeforeSceneLoad = 1,
+	AfterAssembliesLoaded = 2,
+	BeforeSplashScreen = 3,
+	SubsystemRegistration = 4,
+}
+
+public enum HideFlags
+{
+	None = 0,
+	HideInHierarchy = 1,
+	HideInInspector = 2,
+	DontSaveInEditor = 4,
+	NotEditable = 8,
+	DontSaveInBuild = 16,
+	DontUnloadUnusedAsset = 32,
+	DontSave = 52,
+	HideAndDontSave = 61,
+}
+
+public enum BatteryStatus
+{
+	Unknown = 0,
+	Charging = 1,
+	Discharging = 2,
+	NotCharging = 3,
+	Full = 4,
+}
+
+public enum OperatingSystemFamily
+{
+	Other = 0,
+	MacOSX = 1,
+	Windows = 2,
+	Linux = 3,
+}
+
+public enum DeviceType
+{
+	Unknown = 0,
+	Handheld = 1,
+	Console = 2,
+	Desktop = 3,
+}
+
+public enum TouchScreenKeyboard.Status
+{
+	Visible = 0,
+	Done = 1,
+	Canceled = 2,
+	LostFocus = 3,
+}
+
+public enum TouchScreenKeyboardType
+{
+	Default = 0,
+	ASCIICapable = 1,
+	NumbersAndPunctuation = 2,
+	URL = 3,
+	NumberPad = 4,
+	PhonePad = 5,
+	NamePhonePad = 6,
+	EmailAddress = 7,
+	NintendoNetworkAccount = 8,
+	Social = 9,
+	Search = 10,
+	DecimalPad = 11,
+	OneTimeCode = 12,
+}
+
+public enum DrivenTransformProperties
+{
+	None = 0,
+	AnchoredPositionX = 2,
+	AnchoredPositionY = 4,
+	AnchoredPositionZ = 8,
+	Rotation = 16,
+	ScaleX = 32,
+	ScaleY = 64,
+	ScaleZ = 128,
+	AnchorMinX = 256,
+	AnchorMinY = 512,
+	AnchorMaxX = 1024,
+	AnchorMaxY = 2048,
+	SizeDeltaX = 4096,
+	SizeDeltaY = 8192,
+	PivotX = 16384,
+	PivotY = 32768,
+	AnchoredPosition = 6,
+	AnchoredPosition3D = 14,
+	Scale = 224,
+	AnchorMin = 768,
+	AnchorMax = 3072,
+	Anchors = 3840,
+	SizeDelta = 12288,
+	Pivot = 49152,
+}
+
+public enum RectTransform.Axis
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+public enum SpriteMaskInteraction
+{
+	None = 0,
+	VisibleInsideMask = 1,
+	VisibleOutsideMask = 2,
+}
+
+public enum SpriteMeshType
+{
+	FullRect = 0,
+	Tight = 1,
+}
+
+public enum SpritePackingRotation
+{
+	None = 0,
+	FlipHorizontal = 1,
+	FlipVertical = 2,
+	Rotate180 = 3,
+	Any = 15,
+}
+
+public enum SpriteSortPoint
+{
+	Center = 0,
+	Pivot = 1,
+}
+
+public enum PersistentListenerMode
+{
+	EventDefined = 0,
+	Void = 1,
+	Object = 2,
+	Int = 3,
+	Float = 4,
+	String = 5,
+	Bool = 6,
+}
+
+public enum UnityEventCallState
+{
+	Off = 0,
+	EditorAndRuntime = 1,
+	RuntimeOnly = 2,
+}
+
+public enum LoadSceneMode
+{
+	Single = 0,
+	Additive = 1,
+}
+
+public enum LocalPhysicsMode
+{
+	None = 0,
+	Physics2D = 1,
+	Physics3D = 2,
+}
+
+public enum UnloadSceneOptions
+{
+	None = 0,
+	UnloadAllEmbeddedSceneObjects = 1,
+}
+
+public enum IndexFormat
+{
+	UInt16 = 0,
+	UInt32 = 1,
+}
+
+public enum MeshUpdateFlags
+{
+	Default = 0,
+	DontValidateIndices = 1,
+	DontResetBoneBounds = 2,
+	DontNotifyMeshUsers = 4,
+	DontRecalculateBounds = 8,
+}
+
+public enum VertexAttributeFormat
+{
+	Float32 = 0,
+	Float16 = 1,
+	UNorm8 = 2,
+	SNorm8 = 3,
+	UNorm16 = 4,
+	SNorm16 = 5,
+	UInt8 = 6,
+	SInt8 = 7,
+	UInt16 = 8,
+	SInt16 = 9,
+	UInt32 = 10,
+	SInt32 = 11,
+}
+
+public enum VertexAttribute
+{
+	Position = 0,
+	Normal = 1,
+	Tangent = 2,
+	Color = 3,
+	TexCoord0 = 4,
+	TexCoord1 = 5,
+	TexCoord2 = 6,
+	TexCoord3 = 7,
+	TexCoord4 = 8,
+	TexCoord5 = 9,
+	TexCoord6 = 10,
+	TexCoord7 = 11,
+	BlendWeight = 12,
+	BlendIndices = 13,
+}
+
+public enum RenderBufferLoadAction
+{
+	Load = 0,
+	Clear = 1,
+	DontCare = 2,
+}
+
+public enum RenderBufferStoreAction
+{
+	Store = 0,
+	Resolve = 1,
+	StoreAndResolve = 2,
+	DontCare = 3,
+}
+
+public enum CompareFunction
+{
+	Disabled = 0,
+	Never = 1,
+	Less = 2,
+	Equal = 3,
+	LessEqual = 4,
+	Greater = 5,
+	NotEqual = 6,
+	GreaterEqual = 7,
+	Always = 8,
+}
+
+public enum ColorWriteMask
+{
+	Alpha = 1,
+	Blue = 2,
+	Green = 4,
+	Red = 8,
+	All = 15,
+}
+
+public enum StencilOp
+{
+	Keep = 0,
+	Zero = 1,
+	Replace = 2,
+	IncrementSaturate = 3,
+	DecrementSaturate = 4,
+	Invert = 5,
+	IncrementWrap = 6,
+	DecrementWrap = 7,
+}
+
+public enum AmbientMode
+{
+	Skybox = 0,
+	Trilight = 1,
+	Flat = 3,
+	Custom = 4,
+}
+
+public enum CameraEvent
+{
+	BeforeDepthTexture = 0,
+	AfterDepthTexture = 1,
+	BeforeDepthNormalsTexture = 2,
+	AfterDepthNormalsTexture = 3,
+	BeforeGBuffer = 4,
+	AfterGBuffer = 5,
+	BeforeLighting = 6,
+	AfterLighting = 7,
+	BeforeFinalPass = 8,
+	AfterFinalPass = 9,
+	BeforeForwardOpaque = 10,
+	AfterForwardOpaque = 11,
+	BeforeImageEffectsOpaque = 12,
+	AfterImageEffectsOpaque = 13,
+	BeforeSkybox = 14,
+	AfterSkybox = 15,
+	BeforeForwardAlpha = 16,
+	AfterForwardAlpha = 17,
+	BeforeImageEffects = 18,
+	AfterImageEffects = 19,
+	AfterEverything = 20,
+	BeforeReflections = 21,
+	AfterReflections = 22,
+	BeforeHaloAndLensFlares = 23,
+	AfterHaloAndLensFlares = 24,
+}
+
+public enum BuiltinRenderTextureType
+{
+	None = 0,
+	CurrentActive = 1,
+	CameraTarget = 2,
+	Depth = 3,
+	DepthNormals = 4,
+	ResolvedDepth = 5,
+	PrepassNormalsSpec = 7,
+	PrepassLight = 8,
+	PrepassLightSpec = 9,
+	GBuffer0 = 10,
+	GBuffer1 = 11,
+	GBuffer2 = 12,
+	GBuffer3 = 13,
+	Reflections = 14,
+	MotionVectors = 15,
+	GBuffer4 = 16,
+	GBuffer5 = 17,
+	GBuffer6 = 18,
+	GBuffer7 = 19,
+}
+
+public enum ShadowCastingMode
+{
+	Off = 0,
+	On = 1,
+	TwoSided = 2,
+	ShadowsOnly = 3,
+}
+
+public enum GraphicsDeviceType
+{
+	OpenGL2 = 0,
+	Direct3D9 = 1,
+	Direct3D11 = 2,
+	PlayStation3 = 3,
+	Null = 4,
+	Xbox360 = 6,
+	OpenGLES2 = 8,
+	OpenGLES3 = 11,
+	PlayStationVita = 12,
+	PlayStation4 = 13,
+	XboxOne = 14,
+	PlayStationMobile = 15,
+	Metal = 16,
+	OpenGLCore = 17,
+	Direct3D12 = 18,
+	N3DS = 19,
+	Vulkan = 21,
+	Switch = 22,
+	XboxOneD3D12 = 23,
+	GameCoreXboxOne = 24,
+	GameCoreXboxSeries = 25,
+	PlayStation5 = 26,
+	PlayStation5NGGC = 27,
+}
+
+public enum ReflectionProbeUsage
+{
+	Off = 0,
+	BlendProbes = 1,
+	BlendProbesAndSkybox = 2,
+	Simple = 3,
+}
+
+public enum ShadowSamplingMode
+{
+	CompareDepths = 0,
+	RawDepth = 1,
+	None = 2,
+}
+
+public enum LightProbeUsage
+{
+	Off = 0,
+	BlendProbes = 1,
+	UseProxyVolume = 2,
+	CustomProvided = 4,
+}
+
+public enum TextureDimension
+{
+	None = 0,
+	Any = 1,
+	Tex2D = 2,
+	Tex3D = 3,
+	Cube = 4,
+	Tex2DArray = 5,
+	CubeArray = 6,
+}
+
+public enum CommandBufferExecutionFlags
+{
+	None = 0,
+	AsyncCompute = 2,
+}
+
+public enum SupportedRenderingFeatures.ReflectionProbeModes
+{
+	None = 0,
+	Rotation = 1,
+}
+
+public enum SupportedRenderingFeatures.LightmapMixedBakeModes
+{
+	None = 0,
+	IndirectOnly = 1,
+	Subtractive = 2,
+	Shadowmask = 4,
+}
+
+public enum BatchDrawCommandFlags
+{
+	None = 0,
+	FlipWinding = 1,
+	HasMotion = 2,
+	IsLightMapped = 4,
+	HasSortingPosition = 8,
+	LODCrossFade = 16,
+}
+
+public enum BatchCullingFlags
+{
+	None = 0,
+	CullLightmappedShadowCasters = 1,
+}
+
+public enum BatchCullingViewType
+{
+	Unknown = 0,
+	Camera = 1,
+	Light = 2,
+	Picking = 3,
+	SelectionOutline = 4,
+}
+
+public enum BatchCullingProjectionType
+{
+	Unknown = 0,
+	Perspective = 1,
+	Orthographic = 2,
+}
+
+public enum ShaderPropertyFlags
+{
+	None = 0,
+	HideInInspector = 1,
+	PerRendererData = 2,
+	NoScaleOffset = 4,
+	Normal = 8,
+	HDR = 16,
+	Gamma = 32,
+	NonModifiableTextureData = 64,
+	MainTexture = 128,
+	MainColor = 256,
+}
+
+internal enum FrameData.Flags
+{
+	Evaluate = 1,
+	SeekOccured = 2,
+	Loop = 4,
+	Hold = 8,
+	EffectivePlayStateDelayed = 16,
+	EffectivePlayStatePlaying = 32,
+}
+
+public enum DirectorUpdateMode
+{
+	DSPClock = 0,
+	GameTime = 1,
+	UnscaledGameTime = 2,
+	Manual = 3,
+}
+
+public enum LightType
+{
+	Directional = 0,
+	Point = 1,
+	Spot = 2,
+	Rectangle = 3,
+	Disc = 4,
+	SpotPyramidShape = 5,
+	SpotBoxShape = 6,
+}
+
+public enum LightMode
+{
+	Realtime = 0,
+	Mixed = 1,
+	Baked = 2,
+	Unknown = 3,
+}
+
+public enum FalloffType
+{
+	InverseSquared = 0,
+	InverseSquaredNoRangeAttenuation = 1,
+	Linear = 2,
+	Legacy = 3,
+	Undefined = 4,
+}
+
+public enum AngularFalloffType
+{
+	LUT = 0,
+	AnalyticAndInnerAngle = 1,
+}
+
+public enum TextureCreationFlags
+{
+	None = 0,
+	MipChain = 1,
+	DontInitializePixels = 4,
+	Crunch = 64,
+	DontUploadUponCreate = 1024,
+	IgnoreMipmapLimit = 2048,
+}
+
+public enum FormatUsage
+{
+	Sample = 0,
+	Linear = 1,
+	Sparse = 2,
+	Render = 4,
+	Blend = 5,
+	GetPixels = 6,
+	SetPixels = 7,
+	SetPixels32 = 8,
+	ReadPixels = 9,
+	LoadStore = 10,
+	MSAA2x = 11,
+	MSAA4x = 12,
+	MSAA8x = 13,
+	StencilSampling = 16,
+}
+
+public enum DefaultFormat
+{
+	LDR = 0,
+	HDR = 1,
+	DepthStencil = 2,
+	Shadow = 3,
+	Video = 4,
+}
+
+public enum GraphicsFormat
+{
+	None = 0,
+	R8_SRGB = 1,
+	R8G8_SRGB = 2,
+	R8G8B8_SRGB = 3,
+	R8G8B8A8_SRGB = 4,
+	R8_UNorm = 5,
+	R8G8_UNorm = 6,
+	R8G8B8_UNorm = 7,
+	R8G8B8A8_UNorm = 8,
+	R8_SNorm = 9,
+	R8G8_SNorm = 10,
+	R8G8B8_SNorm = 11,
+	R8G8B8A8_SNorm = 12,
+	R8_UInt = 13,
+	R8G8_UInt = 14,
+	R8G8B8_UInt = 15,
+	R8G8B8A8_UInt = 16,
+	R8_SInt = 17,
+	R8G8_SInt = 18,
+	R8G8B8_SInt = 19,
+	R8G8B8A8_SInt = 20,
+	R16_UNorm = 21,
+	R16G16_UNorm = 22,
+	R16G16B16_UNorm = 23,
+	R16G16B16A16_UNorm = 24,
+	R16_SNorm = 25,
+	R16G16_SNorm = 26,
+	R16G16B16_SNorm = 27,
+	R16G16B16A16_SNorm = 28,
+	R16_UInt = 29,
+	R16G16_UInt = 30,
+	R16G16B16_UInt = 31,
+	R16G16B16A16_UInt = 32,
+	R16_SInt = 33,
+	R16G16_SInt = 34,
+	R16G16B16_SInt = 35,
+	R16G16B16A16_SInt = 36,
+	R32_UInt = 37,
+	R32G32_UInt = 38,
+	R32G32B32_UInt = 39,
+	R32G32B32A32_UInt = 40,
+	R32_SInt = 41,
+	R32G32_SInt = 42,
+	R32G32B32_SInt = 43,
+	R32G32B32A32_SInt = 44,
+	R16_SFloat = 45,
+	R16G16_SFloat = 46,
+	R16G16B16_SFloat = 47,
+	R16G16B16A16_SFloat = 48,
+	R32_SFloat = 49,
+	R32G32_SFloat = 50,
+	R32G32B32_SFloat = 51,
+	R32G32B32A32_SFloat = 52,
+	B8G8R8_SRGB = 56,
+	B8G8R8A8_SRGB = 57,
+	B8G8R8_UNorm = 58,
+	B8G8R8A8_UNorm = 59,
+	B8G8R8_SNorm = 60,
+	B8G8R8A8_SNorm = 61,
+	B8G8R8_UInt = 62,
+	B8G8R8A8_UInt = 63,
+	B8G8R8_SInt = 64,
+	B8G8R8A8_SInt = 65,
+	R4G4B4A4_UNormPack16 = 66,
+	B4G4R4A4_UNormPack16 = 67,
+	R5G6B5_UNormPack16 = 68,
+	B5G6R5_UNormPack16 = 69,
+	R5G5B5A1_UNormPack16 = 70,
+	B5G5R5A1_UNormPack16 = 71,
+	A1R5G5B5_UNormPack16 = 72,
+	E5B9G9R9_UFloatPack32 = 73,
+	B10G11R11_UFloatPack32 = 74,
+	A2B10G10R10_UNormPack32 = 75,
+	A2B10G10R10_UIntPack32 = 76,
+	A2B10G10R10_SIntPack32 = 77,
+	A2R10G10B10_UNormPack32 = 78,
+	A2R10G10B10_UIntPack32 = 79,
+	A2R10G10B10_SIntPack32 = 80,
+	A2R10G10B10_XRSRGBPack32 = 81,
+	A2R10G10B10_XRUNormPack32 = 82,
+	R10G10B10_XRSRGBPack32 = 83,
+	R10G10B10_XRUNormPack32 = 84,
+	A10R10G10B10_XRSRGBPack32 = 85,
+	A10R10G10B10_XRUNormPack32 = 86,
+	D16_UNorm = 90,
+	D24_UNorm = 91,
+	D24_UNorm_S8_UInt = 92,
+	D32_SFloat = 93,
+	D32_SFloat_S8_UInt = 94,
+	S8_UInt = 95,
+	RGB_DXT1_SRGB = 96,
+	RGBA_DXT1_SRGB = 96,
+	RGB_DXT1_UNorm = 97,
+	RGBA_DXT1_UNorm = 97,
+	RGBA_DXT3_SRGB = 98,
+	RGBA_DXT3_UNorm = 99,
+	RGBA_DXT5_SRGB = 100,
+	RGBA_DXT5_UNorm = 101,
+	R_BC4_UNorm = 102,
+	R_BC4_SNorm = 103,
+	RG_BC5_UNorm = 104,
+	RG_BC5_SNorm = 105,
+	RGB_BC6H_UFloat = 106,
+	RGB_BC6H_SFloat = 107,
+	RGBA_BC7_SRGB = 108,
+	RGBA_BC7_UNorm = 109,
+	RGB_PVRTC_2Bpp_SRGB = 110,
+	RGB_PVRTC_2Bpp_UNorm = 111,
+	RGB_PVRTC_4Bpp_SRGB = 112,
+	RGB_PVRTC_4Bpp_UNorm = 113,
+	RGBA_PVRTC_2Bpp_SRGB = 114,
+	RGBA_PVRTC_2Bpp_UNorm = 115,
+	RGBA_PVRTC_4Bpp_SRGB = 116,
+	RGBA_PVRTC_4Bpp_UNorm = 117,
+	RGB_ETC_UNorm = 118,
+	RGB_ETC2_SRGB = 119,
+	RGB_ETC2_UNorm = 120,
+	RGB_A1_ETC2_SRGB = 121,
+	RGB_A1_ETC2_UNorm = 122,
+	RGBA_ETC2_SRGB = 123,
+	RGBA_ETC2_UNorm = 124,
+	R_EAC_UNorm = 125,
+	R_EAC_SNorm = 126,
+	RG_EAC_UNorm = 127,
+	RG_EAC_SNorm = 128,
+	RGBA_ASTC4X4_SRGB = 129,
+	RGBA_ASTC4X4_UNorm = 130,
+	RGBA_ASTC5X5_SRGB = 131,
+	RGBA_ASTC5X5_UNorm = 132,
+	RGBA_ASTC6X6_SRGB = 133,
+	RGBA_ASTC6X6_UNorm = 134,
+	RGBA_ASTC8X8_SRGB = 135,
+	RGBA_ASTC8X8_UNorm = 136,
+	RGBA_ASTC10X10_SRGB = 137,
+	RGBA_ASTC10X10_UNorm = 138,
+	RGBA_ASTC12X12_SRGB = 139,
+	RGBA_ASTC12X12_UNorm = 140,
+	YUV2 = 141,
+	DepthAuto = 142,
+	ShadowAuto = 143,
+	VideoAuto = 144,
+	RGBA_ASTC4X4_UFloat = 145,
+	RGBA_ASTC5X5_UFloat = 146,
+	RGBA_ASTC6X6_UFloat = 147,
+	RGBA_ASTC8X8_UFloat = 148,
+	RGBA_ASTC10X10_UFloat = 149,
+	RGBA_ASTC12X12_UFloat = 150,
+	D16_UNorm_S8_UInt = 151,
+}
+
+public enum ECCurve.ECCurveType
+{
+	Implicit = 0,
+	PrimeShortWeierstrass = 1,
+	PrimeTwistedEdwards = 2,
+	PrimeMontgomery = 3,
+	Characteristic2 = 4,
+	Named = 5,
+}
+
+internal enum AsymmetricPaddingMode
+{
+	None = 1,
+	Pkcs1 = 2,
+	Oaep = 4,
+	Pss = 8,
+}
+
+internal enum HASHALGORITHM_ENUM
+{
+	DSA_HASH_ALGORITHM_SHA1 = 0,
+	DSA_HASH_ALGORITHM_SHA256 = 1,
+	DSA_HASH_ALGORITHM_SHA512 = 2,
+}
+
+internal enum DSAFIPSVERSION_ENUM
+{
+	DSA_FIPS186_2 = 0,
+	DSA_FIPS186_3 = 1,
+}
+
+public enum CngKeyHandleOpenOptions
+{
+	None = 0,
+	EphemeralKey = 1,
+}
+
+public enum ECKeyXmlFormat
+{
+	Rfc4050 = 0,
+}
+
+public enum CngExportPolicies
+{
+	None = 0,
+	AllowExport = 1,
+	AllowPlaintextExport = 2,
+	AllowArchiving = 4,
+	AllowPlaintextArchiving = 8,
+}
+
+public enum CngKeyCreationOptions
+{
+	None = 0,
+	MachineKey = 32,
+	OverwriteExistingKey = 128,
+}
+
+public enum CngKeyOpenOptions
+{
+	None = 0,
+	UserKey = 0,
+	MachineKey = 32,
+	Silent = 64,
+}
+
+internal enum CngKeyTypes
+{
+	None = 0,
+	MachineKey = 32,
+}
+
+public enum CngKeyUsages
+{
+	None = 0,
+	Decryption = 1,
+	Signing = 2,
+	KeyAgreement = 4,
+	AllUsages = 16777215,
+}
+
+public enum CngPropertyOptions
+{
+	None = 0,
+	CustomProperty = 1073741824,
+}
+
+public enum CngUIProtectionLevels
+{
+	None = 0,
+	ProtectKey = 1,
+	ForceHighProtection = 2,
+}
+
+internal enum AnalyzeTypeIsResult
+{
+	KnownFalse = 0,
+	KnownTrue = 1,
+	KnownAssignable = 2,
+	Unknown = 3,
+}
+
+public enum ExpressionType
+{
+	Add = 0,
+	AddChecked = 1,
+	And = 2,
+	AndAlso = 3,
+	ArrayLength = 4,
+	ArrayIndex = 5,
+	Call = 6,
+	Coalesce = 7,
+	Conditional = 8,
+	Constant = 9,
+	Convert = 10,
+	ConvertChecked = 11,
+	Divide = 12,
+	Equal = 13,
+	ExclusiveOr = 14,
+	GreaterThan = 15,
+	GreaterThanOrEqual = 16,
+	Invoke = 17,
+	Lambda = 18,
+	LeftShift = 19,
+	LessThan = 20,
+	LessThanOrEqual = 21,
+	ListInit = 22,
+	MemberAccess = 23,
+	MemberInit = 24,
+	Modulo = 25,
+	Multiply = 26,
+	MultiplyChecked = 27,
+	Negate = 28,
+	UnaryPlus = 29,
+	NegateChecked = 30,
+	New = 31,
+	NewArrayInit = 32,
+	NewArrayBounds = 33,
+	Not = 34,
+	NotEqual = 35,
+	Or = 36,
+	OrElse = 37,
+	Parameter = 38,
+	Power = 39,
+	Quote = 40,
+	RightShift = 41,
+	Subtract = 42,
+	SubtractChecked = 43,
+	TypeAs = 44,
+	TypeIs = 45,
+	Assign = 46,
+	Block = 47,
+	DebugInfo = 48,
+	Decrement = 49,
+	Dynamic = 50,
+	Default = 51,
+	Extension = 52,
+	Goto = 53,
+	Increment = 54,
+	Index = 55,
+	Label = 56,
+	RuntimeVariables = 57,
+	Loop = 58,
+	Switch = 59,
+	Throw = 60,
+	Try = 61,
+	Unbox = 62,
+	AddAssign = 63,
+	AndAssign = 64,
+	DivideAssign = 65,
+	ExclusiveOrAssign = 66,
+	LeftShiftAssign = 67,
+	ModuloAssign = 68,
+	MultiplyAssign = 69,
+	OrAssign = 70,
+	PowerAssign = 71,
+	RightShiftAssign = 72,
+	SubtractAssign = 73,
+	AddAssignChecked = 74,
+	MultiplyAssignChecked = 75,
+	SubtractAssignChecked = 76,
+	PreIncrementAssign = 77,
+	PreDecrementAssign = 78,
+	PostIncrementAssign = 79,
+	PostDecrementAssign = 80,
+	TypeEqual = 81,
+	OnesComplement = 82,
+	IsTrue = 83,
+	IsFalse = 84,
+}
+
+public enum GotoExpressionKind
+{
+	Goto = 0,
+	Return = 1,
+	Break = 2,
+	Continue = 3,
+}
+
+public enum MemberBindingType
+{
+	Assignment = 0,
+	MemberBinding = 1,
+	ListBinding = 2,
+}
+
+internal enum LabelScopeKind
+{
+	Statement = 0,
+	Block = 1,
+	Switch = 2,
+	Lambda = 3,
+	Try = 4,
+	Catch = 5,
+	Finally = 6,
+	Filter = 7,
+	Expression = 8,
+}
+
+public enum LockRecursionPolicy
+{
+	NoRecursion = 0,
+	SupportsRecursion = 1,
+}
+
+public enum ManifestKinds
+{
+	Application = 2,
+	ApplicationAndDeployment = 3,
+	Deployment = 1,
+	None = 0,
+}
+
+public enum ECDiffieHellmanKeyDerivationFunction
+{
+	Hash = 0,
+	Hmac = 1,
+	Tls = 2,
+}
+
+public enum SignatureVerificationResult
+{
+	AssemblyIdentityMismatch = 1,
+	ContainingSignatureInvalid = 2,
+	PublicKeyTokenMismatch = 3,
+	PublisherMismatch = 4,
+	Valid = 0,
+}
+
+public enum ApplicationChrome.States
+{
+	Unknown = 0,
+	Visible = 1,
+	VisibleOverContent = 2,
+	TranslucentOverContent = 3,
+	Hidden = 4,
+}
+
+public enum ChargeServicePluginScript.Response
+{
+	BILLING_RESPONSE_RESULT_OK = 0,
+	BILLING_RESPONSE_RESULT_USER_CANCELED = 1,
+	BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE = 3,
+	BILLING_RESPONSE_RESULT_ITEM_UNAVAILABLE = 4,
+	BILLING_RESPONSE_RESULT_DEVELOPER_ERROR = 5,
+	BILLING_RESPONSE_RESULT_ERROR = 6,
+	BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED = 7,
+	BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED = 8,
+}
+
+public enum CriAtomOutputDeviceObserver.OutputDeviceType
+{
+	BuiltinSpeaker = 0,
+	WiredDevice = 1,
+	WirelessDevice = 2,
+}
+
+public enum CriAtomSource.Status
+{
+	Stop = 0,
+	Prep = 1,
+	Playing = 2,
+	PlayEnd = 3,
+	Error = 4,
+}
+
+public enum CriAtomEx.CharacterEncoding
+{
+	Utf8 = 0,
+	Sjis = 1,
+}
+
+public enum CriAtomEx.SoundRendererType
+{
+	Default = 0,
+	Native = 1,
+	Asr = 2,
+	Hw1 = 1,
+	Hw2 = 9,
+}
+
+public enum CriAtomEx.VoiceAllocationMethod
+{
+	Once = 0,
+	Retry = 1,
+}
+
+public enum CriAtomEx.BiquadFilterType
+{
+	Off = 0,
+	LowPass = 1,
+	HighPass = 2,
+	Notch = 3,
+	LowShelf = 4,
+	HighShelf = 5,
+	Peaking = 6,
+}
+
+public enum CriAtomEx.ResumeMode
+{
+	AllPlayback = 0,
+	PausedPlayback = 1,
+	PreparedPlayback = 2,
+}
+
+public enum CriAtomEx.PanType
+{
+	Pan3d = 0,
+	Pos3d = 1,
+	Auto = 2,
+}
+
+public enum CriAtomEx.VoiceControlMethod
+{
+	PreferLast = 0,
+	PreferFirst = 1,
+}
+
+public enum CriAtomEx.Parameter
+{
+	Volume = 0,
+	Pitch = 1,
+	Pan3dAngle = 2,
+	Pan3dDistance = 3,
+	Pan3dVolume = 4,
+	BusSendLevel0 = 9,
+	BusSendLevel1 = 10,
+	BusSendLevel2 = 11,
+	BusSendLevel3 = 12,
+	BusSendLevel4 = 13,
+	BusSendLevel5 = 14,
+	BusSendLevel6 = 15,
+	BusSendLevel7 = 16,
+	BandPassFilterCofLow = 17,
+	BandPassFilterCofHigh = 18,
+	BiquadFilterType = 19,
+	BiquadFilterFreq = 20,
+	BiquadFIlterQ = 21,
+	BiquadFilterGain = 22,
+	EnvelopeAttackTime = 23,
+	EnvelopeHoldTime = 24,
+	EnvelopeDecayTime = 25,
+	EnvelopeReleaseTime = 26,
+	EnvelopeSustainLevel = 27,
+	StartTime = 28,
+	Priority = 31,
+}
+
+public enum CriAtomEx.Speaker
+{
+	FrontLeft = 0,
+	FrontRight = 1,
+	FrontCenter = 2,
+	LowFrequency = 3,
+	SurroundLeft = 4,
+	SurroundRight = 5,
+	SurroundBackLeft = 6,
+	SurroundBackRight = 7,
+}
+
+public enum CriAtomEx.Format
+{
+	ADX = 1,
+	HCA = 3,
+	HCA_MX = 4,
+	WAVE = 5,
+	RAW_PCM = 6,
+}
+
+private enum CriAtomEx.SpeakerSystem
+{
+	Surround_5_1 = 0,
+	Surround_7_1 = 1,
+}
+
+public enum CriAtomEx.Randomize3dCalcType
+{
+	Rectangle = 0,
+	Cuboid = 1,
+	Circle = 2,
+	Cylinder = 3,
+	Sphere = 4,
+	List = 6,
+}
+
+public enum CriAtomEx.Randomize3dParamType
+{
+	None = 0,
+	Width = 1,
+	Depth = 2,
+	Height = 3,
+	Radius = 4,
+}
+
+public enum CriAtomEx.CueType
+{
+	Polyphonic = 0,
+	Sequential = 1,
+	Shuffle = 2,
+	Random = 3,
+	RandomNoRepeat = 4,
+	SwitchGameVariable = 5,
+	ComboSequential = 6,
+	SwitchSelector = 7,
+	TrackTransitionBySelector = 8,
+}
+
+public enum CriAtomExCategory.ReactType
+{
+	Ducker = 0,
+	AisacModulationTrigger = 1,
+}
+
+public enum CriAtomExCategory.ReactDuckerTargetType
+{
+	Volume = 0,
+	AisacControlValue = 1,
+}
+
+public enum CriAtomExCategory.ReactDuckerCurveType
+{
+	Linear = 0,
+	Square = 1,
+	SquareReverse = 2,
+	SCurve = 3,
+	FlatAtHalf = 4,
+}
+
+public enum CriAtomExCategory.ReactHoldType
+{
+	WhilePlaying = 0,
+	FixedTime = 1,
+}
+
+public enum CriAtomExCategory.ReactStatus
+{
+	Stop = 0,
+	FadeOut = 1,
+	Hold = 2,
+	FadeIn = 3,
+	Error = 4,
+}
+
+public enum CriAtomExLatencyEstimator.Status
+{
+	Stop = 0,
+	Processing = 1,
+	Done = 2,
+	Error = 3,
+}
+
+public enum CriAtomExAcbLoader.Status
+{
+	Stop = 0,
+	Loading = 1,
+	Complete = 2,
+	Error = 3,
+}
+
+public enum CriAtomExAcf.AcfDspBusLinkType
+{
+	preVolume = 0,
+	postVolume = 1,
+	postPan = 2,
+}
+
+public enum CriAtomExAcf.AcfAisacType
+{
+	normal = 0,
+	autoModulation = 1,
+}
+
+public enum CriAtomExAcf.AisacGraphType
+{
+	none = 0,
+	volume = 1,
+	pitch = 2,
+	bandpassHigh = 3,
+	bandpassLow = 4,
+	biquadFreq = 5,
+	biquadQ = 6,
+	busSend0 = 7,
+	busSend1 = 8,
+	busSend2 = 9,
+	busSend3 = 10,
+	busSend4 = 11,
+	busSend5 = 12,
+	busSend6 = 13,
+	busSend7 = 14,
+	pan3dAngel = 15,
+	pan3dVolume = 16,
+	pan3dInteriorDistance = 17,
+	pan3dCenter = 18,
+	pan3dLfe = 19,
+	aisac0 = 20,
+	aisac1 = 21,
+	aisac2 = 22,
+	aisac3 = 23,
+	aisac4 = 24,
+	aisac5 = 25,
+	aisac6 = 26,
+	aisac7 = 27,
+	aisac8 = 28,
+	aisac9 = 29,
+	aisac10 = 30,
+	aisac11 = 31,
+	aisac12 = 32,
+	aisac13 = 33,
+	aisac14 = 34,
+	aisac15 = 35,
+	priority = 36,
+	preDelayTime = 37,
+	biquadGain = 38,
+	pan3dMixdownCenter = 39,
+	pan3dMixdownLfe = 40,
+	egAttack = 41,
+	egRelease = 42,
+	playbackRatio = 43,
+	drySendL = 44,
+	drySendR = 45,
+	drySendCenter = 46,
+	drySendLfe = 47,
+	drySendSl = 48,
+	drySendSr = 49,
+	drySendEx1 = 50,
+	drySendEx2 = 51,
+	panSpread = 52,
+}
+
+public enum CriAtomExAcf.CharacterEncoding
+{
+	utf8 = 0,
+	sjis = 1,
+}
+
+public enum CriAtomExPlayback.Status
+{
+	Prep = 1,
+	Playing = 2,
+	Removed = 3,
+}
+
+public enum CriAtomExPlayer.Status
+{
+	Stop = 0,
+	Prep = 1,
+	Playing = 2,
+	PlayEnd = 3,
+	Error = 4,
+}
+
+public enum CriAtomExPlayer.TimeStretchParameterId
+{
+	Ratio = 0,
+	FrameTime = 1,
+	Quality = 2,
+}
+
+public enum CriAtomExPlayer.PitchShifterParameterId
+{
+	Pitch = 0,
+	Formant = 1,
+	Mode = 2,
+}
+
+public enum CriAtomExPlayerOutputAnalyzer.Type
+{
+	LevelMeter = 0,
+	SpectrumAnalyzer = 1,
+	PcmCapture = 2,
+}
+
+public enum CriAtomExTween.ParameterType
+{
+	Basic = 0,
+	Aisac = 1,
+}
+
+public enum CriAtomExVoicePool.VoicePoolId
+{
+	StandardMemory = 0,
+	StandardStreaming = 1,
+	HcaMxMemory = 4,
+	HcaMxStreaming = 5,
+	LowLatencyMemory = 2,
+	LowLatencyStreaming = 3,
+}
+
+public enum CriAtomExVoicePool.PitchShifterMode
+{
+	Music = 0,
+	Vocal = 1,
+	SoundEffect = 2,
+	Speech = 3,
+}
+
+public enum CriAtomExRawPcmVoicePool.RawPcmFormat
+{
+	Sint16 = 0,
+	Float32 = 1,
+}
+
+public enum CriFsLoader.Status
+{
+	Stop = 0,
+	Loading = 1,
+	Complete = 2,
+	Error = 3,
+}
+
+public enum CriFsInstaller.Status
+{
+	Stop = 0,
+	Busy = 1,
+	Complete = 2,
+	Error = 3,
+}
+
+private enum CriFsInstaller.CopyPolicy
+{
+	Always = 0,
+}
+
+public enum CriFsBinder.Status
+{
+	None = 0,
+	Analyze = 1,
+	Complete = 2,
+	Unbind = 3,
+	Removed = 4,
+	Invalid = 5,
+	Error = 6,
+}
+
+private enum CriFsLoadFileRequest.Phase
+{
+	Stop = 0,
+	Bind = 1,
+	Load = 2,
+	Done = 3,
+	Error = 4,
+}
+
+public enum CriFsBindRequest.BindType
+{
+	Cpk = 0,
+	Directory = 1,
+	File = 2,
+}
+
+public enum CriFsWebInstaller.Status
+{
+	Stop = 0,
+	Busy = 1,
+	Complete = 2,
+	Error = 3,
+}
+
+public enum CriFsWebInstaller.Error
+{
+	None = 0,
+	Timeout = 1,
+	Memory = 2,
+	LocalFs = 3,
+	DNS = 4,
+	Connection = 5,
+	SSL = 6,
+	HTTP = 7,
+	Internal = 8,
+}
+
+public enum CriManaMovieMaterial.MaxFrameDrop
+{
+	Disabled = 0,
+	One = 1,
+	Two = 2,
+	Three = 3,
+	Four = 4,
+	Five = 5,
+	Six = 6,
+	Seven = 7,
+	Eight = 8,
+	Nine = 9,
+	Ten = 10,
+}
+
+public enum CriManaMovieMaterial.RenderMode
+{
+	Always = 0,
+	OnVisibility = 1,
+	Never = 2,
+}
+
+public enum CriAtomConfig.InGamePreviewSwitchMode
+{
+	Disable = 0,
+	Enable = 1,
+	FollowBuildSetting = 2,
+	Default = 3,
+}
+
+public enum CriAtomConfig.LinuxOutput
+{
+	Default = 0,
+	PulseAudio = 1,
+	ALSA = 2,
+}
+
+public enum CriAtomExAcfDebug.AisacType
+{
+	Normal = 0,
+	AutoModulation = 1,
+}
+
+public enum CriDisposableObjectManager.ModuleType
+{
+	Atom = 0,
+	AtomMic = 1,
+	Fs = 2,
+	FsWeb = 3,
+	Mana = 4,
+	Lips = 5,
+	Vip = 6,
+}
+
+public enum ContinuousGesturePhase
+{
+	None = 0,
+	Started = 1,
+	Updated = 2,
+	Ended = 3,
+}
+
+public enum GestureRecognitionState
+{
+	Ready = 0,
+	Started = 1,
+	InProgress = 2,
+	Failed = 3,
+	Ended = 4,
+	Recognized = 4,
+	FailAndRetry = 5,
+}
+
+public enum GestureResetMode
+{
+	Default = 0,
+	NextFrame = 1,
+	EndOfTouchSequence = 2,
+}
+
+public enum GestureRecognizer.SelectionType
+{
+	Default = 0,
+	StartSelection = 1,
+	CurrentSelection = 2,
+	None = 3,
+}
+
+public enum FingerHoverPhase
+{
+	None = 0,
+	Enter = 1,
+	Exit = 2,
+}
+
+public enum FingerMotionPhase
+{
+	None = 0,
+	Started = 1,
+	Updated = 2,
+	Ended = 3,
+}
+
+private enum FingerMotionDetector.EventType
+{
+	Move = 0,
+	Stationary = 1,
+}
+
+public enum FingerGestures.FingerPhase
+{
+	None = 0,
+	Begin = 1,
+	Moving = 2,
+	Stationary = 3,
+}
+
+public enum FingerGestures.SwipeDirection
+{
+	Right = 1,
+	Left = 2,
+	Up = 4,
+	Down = 8,
+	UpperLeftDiagonal = 16,
+	UpperRightDiagonal = 32,
+	LowerRightDiagonal = 64,
+	LowerLeftDiagonal = 128,
+	None = 0,
+	Vertical = 12,
+	Horizontal = 3,
+	Cross = 15,
+	UpperDiagonals = 48,
+	LowerDiagonals = 192,
+	Diagonals = 240,
+	All = 255,
+}
+
+public enum DistanceUnit
+{
+	Pixels = 0,
+	Inches = 1,
+	Centimeters = 2,
+}
+
+public enum TwistMethod
+{
+	Standard = 0,
+	Pivot = 1,
+}
+
+public enum TBOrbit.PanMode
+{
+	Disabled = 0,
+	OneFinger = 1,
+	TwoFingers = 2,
+}
+
+public enum TBPinchZoom.ZoomMethod
+{
+	Position = 0,
+	FOV = 1,
+}
+
+public enum TBDragToMove.DragPlaneType
+{
+	Camera = 0,
+	UseCollider = 1,
+}
+
+public enum TBTwistToRotate.RotationAxis
+{
+	WorldX = 0,
+	WorldY = 1,
+	WorldZ = 2,
+	ObjectX = 3,
+	ObjectY = 4,
+	ObjectZ = 5,
+	CameraX = 6,
+	CameraY = 7,
+	CameraZ = 8,
+}
+
+public enum NewsFeedCampaignType
+{
+	Unknown = 0,
+	PushNotification = 1,
+	InAppMessage = 2,
+	WebMessage = 4,
+	All = 8,
+}
+
+public enum EventPropertySetIndicator
+{
+	CONTENT_ID = 1,
+	CONTENT_NAME = 2,
+	CONTENT_CATEGORY = 4,
+	VALUE = 8,
+	CURRENCY = 16,
+	NUM_ITEMS = 32,
+	SEARCH_STRING = 64,
+	SERVICE_NAME = 128,
+	STATUS = 256,
+	EXTRAS = 512,
+}
+
+public enum Repro.LogLevel
+{
+	Debug = 0,
+	Info = 1,
+	Warn = 2,
+	Error = 3,
+	None = 4,
+}
+
+public enum Repro.FetchStatus
+{
+	Success = 0,
+	TimeoutReached = 1,
+	AlreadyFetched = 2,
+}
+
+public enum Bloom.LensFlareStyle
+{
+	Ghosting = 0,
+	Anamorphic = 1,
+	Combined = 2,
+}
+
+public enum Bloom.TweakMode
+{
+	Basic = 0,
+	Complex = 1,
+}
+
+public enum Bloom.HDRBloomMode
+{
+	Auto = 0,
+	On = 1,
+	Off = 2,
+}
+
+public enum Bloom.BloomScreenBlendMode
+{
+	Screen = 0,
+	Add = 1,
+}
+
+public enum Bloom.BloomQuality
+{
+	Cheap = 0,
+	High = 1,
+}
+
+public enum SSAOEffect.SSAOSamples
+{
+	Low = 0,
+	Medium = 1,
+	High = 2,
+}
+
+public enum Vignetting.AberrationMode
+{
+	Simple = 0,
+	Advanced = 1,
+}
+
+public enum CodecType
+{
+	Unknown = 0,
+	SofdecPrime = 1,
+	H264 = 5,
+	VP9 = 9,
+}
+
+public enum AlphaType
+{
+	CompoOpaq = 0,
+	CompoAlphaFull = 1,
+	CompoAlpha3Step = 2,
+	CompoAlpha32Bit = 3,
+}
+
+public enum Player.Status
+{
+	Stop = 0,
+	Dechead = 1,
+	WaitPrep = 2,
+	Prep = 3,
+	Ready = 4,
+	Playing = 5,
+	PlayEnd = 6,
+	Error = 7,
+	StopProcessing = 8,
+	ReadyForRendering = 9,
+}
+
+public enum Player.SetMode
+{
+	New = 0,
+	Append = 1,
+	AppendRepeatedly = 2,
+}
+
+public enum Player.MovieEventSyncMode
+{
+	FrameTime = 0,
+	PlayBackTime = 1,
+}
+
+public enum Player.AudioTrack
+{
+	Off = 0,
+	Auto = 1,
+}
+
+public enum Player.TimerType
+{
+	None = 0,
+	System = 1,
+	Audio = 2,
+	User = 3,
+	Manual = 4,
+}
+
+public enum Player.CriManaUnityPlayer_RenderEventAction
+{
+	UPDATE = 0,
+	INITIALIZE = 256,
+	RENDER = 512,
+	DESTROY = 768,
+}
+
+public enum ConstructorHandling
+{
+	Default = 0,
+	AllowNonPublicDefaultConstructor = 1,
+}
+
+public enum DateFormatHandling
+{
+	IsoDateFormat = 0,
+	MicrosoftDateFormat = 1,
+}
+
+public enum DateParseHandling
+{
+	None = 0,
+	DateTime = 1,
+	DateTimeOffset = 2,
+}
+
+public enum DateTimeZoneHandling
+{
+	Local = 0,
+	Utc = 1,
+	Unspecified = 2,
+	RoundtripKind = 3,
+}
+
+public enum DefaultValueHandling
+{
+	Include = 0,
+	Ignore = 1,
+	Populate = 2,
+	IgnoreAndPopulate = 3,
+}
+
+public enum FloatFormatHandling
+{
+	String = 0,
+	Symbol = 1,
+	DefaultValue = 2,
+}
+
+public enum FloatParseHandling
+{
+	Double = 0,
+	Decimal = 1,
+}
+
+public enum Formatting
+{
+	None = 0,
+	Indented = 1,
+}
+
+internal enum JsonContainerType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Constructor = 3,
+}
+
+protected internal enum JsonReader.State
+{
+	Start = 0,
+	Complete = 1,
+	Property = 2,
+	ObjectStart = 3,
+	Object = 4,
+	ArrayStart = 5,
+	Array = 6,
+	Closed = 7,
+	PostValue = 8,
+	ConstructorStart = 9,
+	Constructor = 10,
+	Error = 11,
+	Finished = 12,
+}
+
+internal enum ReadType
+{
+	Read = 0,
+	ReadAsInt32 = 1,
+	ReadAsInt64 = 2,
+	ReadAsBytes = 3,
+	ReadAsString = 4,
+	ReadAsDecimal = 5,
+	ReadAsDateTime = 6,
+	ReadAsDateTimeOffset = 7,
+	ReadAsDouble = 8,
+	ReadAsBoolean = 9,
+}
+
+public enum JsonToken
+{
+	None = 0,
+	StartObject = 1,
+	StartArray = 2,
+	StartConstructor = 3,
+	PropertyName = 4,
+	Comment = 5,
+	Raw = 6,
+	Integer = 7,
+	Float = 8,
+	String = 9,
+	Boolean = 10,
+	Null = 11,
+	Undefined = 12,
+	EndObject = 13,
+	EndArray = 14,
+	EndConstructor = 15,
+	Date = 16,
+	Bytes = 17,
+}
+
+internal enum JsonWriter.State
+{
+	Start = 0,
+	Property = 1,
+	ObjectStart = 2,
+	Object = 3,
+	ArrayStart = 4,
+	Array = 5,
+	ConstructorStart = 6,
+	Constructor = 7,
+	Closed = 8,
+	Error = 9,
+}
+
+public enum MemberSerialization
+{
+	OptOut = 0,
+	OptIn = 1,
+	Fields = 2,
+}
+
+public enum MetadataPropertyHandling
+{
+	Default = 0,
+	ReadAhead = 1,
+	Ignore = 2,
+}
+
+public enum MissingMemberHandling
+{
+	Ignore = 0,
+	Error = 1,
+}
+
+public enum NullValueHandling
+{
+	Include = 0,
+	Ignore = 1,
+}
+
+public enum ObjectCreationHandling
+{
+	Auto = 0,
+	Reuse = 1,
+	Replace = 2,
+}
+
+public enum PreserveReferencesHandling
+{
+	None = 0,
+	Objects = 1,
+	Arrays = 2,
+	All = 3,
+}
+
+public enum ReferenceLoopHandling
+{
+	Error = 0,
+	Ignore = 1,
+	Serialize = 2,
+}
+
+public enum Required
+{
+	Default = 0,
+	AllowNull = 1,
+	Always = 2,
+	DisallowNull = 3,
+}
+
+public enum StringEscapeHandling
+{
+	Default = 0,
+	EscapeNonAscii = 1,
+	EscapeHtml = 2,
+}
+
+public enum TypeNameAssemblyFormatHandling
+{
+	Simple = 0,
+	Full = 1,
+}
+
+public enum TypeNameHandling
+{
+	None = 0,
+	Objects = 1,
+	Arrays = 2,
+	All = 3,
+	Auto = 4,
+}
+
+public enum WriteState
+{
+	Error = 0,
+	Closed = 1,
+	Object = 2,
+	Array = 3,
+	Constructor = 4,
+	Property = 5,
+	Start = 6,
+}
+
+internal enum PrimitiveTypeCode
+{
+	Empty = 0,
+	Object = 1,
+	Char = 2,
+	CharNullable = 3,
+	Boolean = 4,
+	BooleanNullable = 5,
+	SByte = 6,
+	SByteNullable = 7,
+	Int16 = 8,
+	Int16Nullable = 9,
+	UInt16 = 10,
+	UInt16Nullable = 11,
+	Int32 = 12,
+	Int32Nullable = 13,
+	Byte = 14,
+	ByteNullable = 15,
+	UInt32 = 16,
+	UInt32Nullable = 17,
+	Int64 = 18,
+	Int64Nullable = 19,
+	UInt64 = 20,
+	UInt64Nullable = 21,
+	Single = 22,
+	SingleNullable = 23,
+	Double = 24,
+	DoubleNullable = 25,
+	DateTime = 26,
+	DateTimeNullable = 27,
+	DateTimeOffset = 28,
+	DateTimeOffsetNullable = 29,
+	Decimal = 30,
+	DecimalNullable = 31,
+	Guid = 32,
+	GuidNullable = 33,
+	TimeSpan = 34,
+	TimeSpanNullable = 35,
+	BigInteger = 36,
+	BigIntegerNullable = 37,
+	Uri = 38,
+	String = 39,
+	Bytes = 40,
+	DBNull = 41,
+}
+
+internal enum ParseResult
+{
+	None = 0,
+	Success = 1,
+	Overflow = 2,
+	Invalid = 3,
+}
+
+internal enum ConvertUtils.ConvertResult
+{
+	Success = 0,
+	CannotConvertNull = 1,
+	NotInstantiableType = 2,
+	NoValidConversion = 3,
+}
+
+internal enum ParserTimeZone
+{
+	Unspecified = 0,
+	Utc = 1,
+	LocalWestOfUtc = 2,
+	LocalEastOfUtc = 3,
+}
+
+private enum StringUtils.SeparatedCaseState
+{
+	Start = 0,
+	Lower = 1,
+	Upper = 2,
+	NewWord = 3,
+}
+
+internal enum JsonContractType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Primitive = 3,
+	String = 4,
+	Dictionary = 5,
+	Dynamic = 6,
+	Serializable = 7,
+	Linq = 8,
+}
+
+internal enum JsonSerializerInternalReader.PropertyPresence
+{
+	None = 0,
+	Null = 1,
+	Value = 2,
+}
+
+public enum CommentHandling
+{
+	Ignore = 0,
+	Load = 1,
+}
+
+public enum DuplicatePropertyNameHandling
+{
+	Replace = 0,
+	Ignore = 1,
+	Error = 2,
+}
+
+public enum JTokenType
+{
+	None = 0,
+	Object = 1,
+	Array = 2,
+	Constructor = 3,
+	Property = 4,
+	Comment = 5,
+	Integer = 6,
+	Float = 7,
+	String = 8,
+	Boolean = 9,
+	Null = 10,
+	Undefined = 11,
+	Date = 12,
+	Raw = 13,
+	Bytes = 14,
+	Guid = 15,
+	Uri = 16,
+	TimeSpan = 17,
+}
+
+public enum LineInfoHandling
+{
+	Ignore = 0,
+	Load = 1,
+}
+
+internal enum BsonType
+{
+	Number = 1,
+	String = 2,
+	Object = 3,
+	Array = 4,
+	Binary = 5,
+	Undefined = 6,
+	Oid = 7,
+	Boolean = 8,
+	Date = 9,
+	Null = 10,
+	Regex = 11,
+	Reference = 12,
+	Code = 13,
+	Symbol = 14,
+	CodeWScope = 15,
+	Integer = 16,
+	TimeStamp = 17,
+	Long = 18,
+	MaxKey = 127,
+}
+
+public enum UICamera.ControlScheme
+{
+	Mouse = 0,
+	Touch = 1,
+	Controller = 2,
+}
+
+public enum UICamera.ClickNotification
+{
+	None = 0,
+	Always = 1,
+	BasedOnDelta = 2,
+}
+
+public enum UICamera.EventType
+{
+	World_3D = 0,
+	UI_3D = 1,
+	World_2D = 2,
+	UI_2D = 3,
+}
+
+public enum UIPanel.RenderQueue
+{
+	Automatic = 0,
+	StartAt = 1,
+	Explicit = 2,
+}
+
 public enum UIButtonColor.State
 {
 	Normal = 0,
@@ -29660,35 +30043,2118 @@ public enum UITextList.Style
 	Chat = 1,
 }
 
-public enum NGuiPlayMakerDelegates
+public enum Trigger
 {
-	OnClickEvent = 0,
-	OnHoverEvent = 1,
-	OnHoverEventEnter = 2,
-	OnHoverEventExit = 3,
-	OnPressEvent = 4,
-	OnPressEventUp = 5,
-	OnPressEventDown = 6,
-	OnSelectEvent = 7,
-	OnDragEvent = 8,
-	OnDropEvent = 9,
-	OnSubmitEvent = 10,
-	OnSliderChangeEvent = 11,
-	OnSelectionChangeEvent = 12,
-	OnTooltipEvent = 13,
-	OnChangeEvent = 14,
+	OnClick = 0,
+	OnHover = 1,
+	OnPress = 2,
+	OnHoverTrue = 3,
+	OnHoverFalse = 4,
+	OnPressTrue = 5,
+	OnPressFalse = 6,
+	OnActivate = 7,
+	OnActivateTrue = 8,
+	OnActivateFalse = 9,
+	OnDoubleClick = 10,
+	OnSelect = 11,
+	OnSelectTrue = 12,
+	OnSelectFalse = 13,
 }
 
-public enum iTweenFSMType
+public enum Direction
 {
-	all = 0,
-	move = 1,
-	rotate = 2,
-	scale = 3,
-	shake = 4,
-	position = 5,
-	value = 6,
-	look = 7,
+	Toggle = 0,
+	Forward = 1,
+}
+
+public enum EnableCondition
+{
+	DoNothing = 0,
+	EnableThenPlay = 1,
+	IgnoreDisabledState = 2,
+}
+
+public enum DisableCondition
+{
+	DoNotDisable = 0,
+	DisableAfterForward = 1,
+}
+
+public enum CanvasUpdate
+{
+	Prelayout = 0,
+	Layout = 1,
+	PostLayout = 2,
+	PreRender = 3,
+	LatePreRender = 4,
+	MaxUpdateValue = 5,
+}
+
+public enum GraphicRaycaster.BlockingObjects
+{
+	None = 0,
+	TwoD = 1,
+	ThreeD = 2,
+	All = 3,
+}
+
+public enum Image.Type
+{
+	Simple = 0,
+	Sliced = 1,
+	Tiled = 2,
+	Filled = 3,
+}
+
+public enum Image.FillMethod
+{
+	Horizontal = 0,
+	Vertical = 1,
+	Radial90 = 2,
+	Radial180 = 3,
+	Radial360 = 4,
+}
+
+public enum InputField.ContentType
+{
+	Standard = 0,
+	Autocorrected = 1,
+	IntegerNumber = 2,
+	DecimalNumber = 3,
+	Alphanumeric = 4,
+	Name = 5,
+	EmailAddress = 6,
+	Password = 7,
+	Pin = 8,
+	Custom = 9,
+}
+
+public enum InputField.InputType
+{
+	Standard = 0,
+	AutoCorrect = 1,
+	Password = 2,
+}
+
+public enum InputField.CharacterValidation
+{
+	None = 0,
+	Integer = 1,
+	Decimal = 2,
+	Alphanumeric = 3,
+	Name = 4,
+	EmailAddress = 5,
+}
+
+public enum InputField.LineType
+{
+	SingleLine = 0,
+	MultiLineSubmit = 1,
+	MultiLineNewline = 2,
+}
+
+protected enum InputField.EditState
+{
+	Continue = 0,
+	Finish = 1,
+}
+
+public enum AspectRatioFitter.AspectMode
+{
+	None = 0,
+	WidthControlsHeight = 1,
+	HeightControlsWidth = 2,
+	FitInParent = 3,
+	EnvelopeParent = 4,
+}
+
+public enum CanvasScaler.ScaleMode
+{
+	ConstantPixelSize = 0,
+	ScaleWithScreenSize = 1,
+	ConstantPhysicalSize = 2,
+}
+
+public enum CanvasScaler.ScreenMatchMode
+{
+	MatchWidthOrHeight = 0,
+	Expand = 1,
+	Shrink = 2,
+}
+
+public enum CanvasScaler.Unit
+{
+	Centimeters = 0,
+	Millimeters = 1,
+	Inches = 2,
+	Points = 3,
+	Picas = 4,
+}
+
+public enum ContentSizeFitter.FitMode
+{
+	Unconstrained = 0,
+	MinSize = 1,
+	PreferredSize = 2,
+}
+
+public enum GridLayoutGroup.Corner
+{
+	UpperLeft = 0,
+	UpperRight = 1,
+	LowerLeft = 2,
+	LowerRight = 3,
+}
+
+public enum GridLayoutGroup.Axis
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+public enum GridLayoutGroup.Constraint
+{
+	Flexible = 0,
+	FixedColumnCount = 1,
+	FixedRowCount = 2,
+}
+
+public enum Navigation.Mode
+{
+	None = 0,
+	Horizontal = 1,
+	Vertical = 2,
+	Automatic = 3,
+	Explicit = 4,
+}
+
+public enum Scrollbar.Direction
+{
+	LeftToRight = 0,
+	RightToLeft = 1,
+	BottomToTop = 2,
+	TopToBottom = 3,
+}
+
+private enum Scrollbar.Axis
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+public enum ScrollRect.MovementType
+{
+	Unrestricted = 0,
+	Elastic = 1,
+	Clamped = 2,
+}
+
+public enum ScrollRect.ScrollbarVisibility
+{
+	Permanent = 0,
+	AutoHide = 1,
+	AutoHideAndExpandViewport = 2,
+}
+
+public enum Selectable.Transition
+{
+	None = 0,
+	ColorTint = 1,
+	SpriteSwap = 2,
+	Animation = 3,
+}
+
+protected enum Selectable.SelectionState
+{
+	Normal = 0,
+	Highlighted = 1,
+	Pressed = 2,
+	Selected = 3,
+	Disabled = 4,
+}
+
+public enum Slider.Direction
+{
+	LeftToRight = 0,
+	RightToLeft = 1,
+	BottomToTop = 2,
+	TopToBottom = 3,
+}
+
+private enum Slider.Axis
+{
+	Horizontal = 0,
+	Vertical = 1,
+}
+
+public enum Toggle.ToggleTransition
+{
+	None = 0,
+	Fade = 1,
+}
+
+public enum ColorTween.ColorTweenMode
+{
+	All = 0,
+	RGB = 1,
+	Alpha = 2,
+}
+
+private enum PanelEventHandler.PointerEventType
+{
+	Default = 0,
+	Down = 1,
+	Up = 2,
+}
+
+public enum PointerEventData.InputButton
+{
+	Left = 0,
+	Right = 1,
+	Middle = 2,
+}
+
+public enum PointerEventData.FramePressState
+{
+	Pressed = 0,
+	Released = 1,
+	PressedAndReleased = 2,
+	NotChanged = 3,
+}
+
+public enum EventTriggerType
+{
+	PointerEnter = 0,
+	PointerExit = 1,
+	PointerDown = 2,
+	PointerUp = 3,
+	PointerClick = 4,
+	Drag = 5,
+	Drop = 6,
+	Scroll = 7,
+	UpdateSelected = 8,
+	Select = 9,
+	Deselect = 10,
+	Move = 11,
+	InitializePotentialDrag = 12,
+	BeginDrag = 13,
+	EndDrag = 14,
+	Submit = 15,
+	Cancel = 16,
+}
+
+public enum StandaloneInputModule.InputMode
+{
+	Mouse = 0,
+	Buttons = 1,
+}
+
+public enum MoveDirection
+{
+	Left = 0,
+	Up = 1,
+	Right = 2,
+	Down = 3,
+	None = 4,
+}
+
+public enum CollisionType
+{
+	OnCollisionEnter = 0,
+	OnCollisionStay = 1,
+	OnCollisionExit = 2,
+	OnControllerColliderHit = 3,
+	OnParticleCollision = 4,
+}
+
+public enum TriggerType
+{
+	OnTriggerEnter = 0,
+	OnTriggerStay = 1,
+	OnTriggerExit = 2,
+}
+
+public enum Collision2DType
+{
+	OnCollisionEnter2D = 0,
+	OnCollisionStay2D = 1,
+	OnCollisionExit2D = 2,
+	OnParticleCollision = 3,
+}
+
+public enum Trigger2DType
+{
+	OnTriggerEnter2D = 0,
+	OnTriggerStay2D = 1,
+	OnTriggerExit2D = 2,
+}
+
+public enum InterpolationType
+{
+	Linear = 0,
+	EaseInOut = 1,
+}
+
+public enum MouseEventType
+{
+	OnMouseEnter = 0,
+	OnMouseOver = 1,
+	OnMouseExit = 2,
+	OnMouseDown = 3,
+	OnMouseUp = 4,
+	OnMouseDrag = 5,
+}
+
+public enum ActionCategory
+{
+	Animation = 0,
+	Audio = 1,
+	Debug = 2,
+	Events = 3,
+	GameObject = 4,
+	GUI = 5,
+	Input = 6,
+	Math = 7,
+	Movement = 8,
+	Physics = 9,
+	Renderer = 10,
+	ScriptControl = 11,
+	StateMachine = 12,
+	Effects = 13,
+	Transform = 14,
+	GameLogic = 15,
+	String = 16,
+	Convert = 17,
+	GUIElement = 18,
+	Vector3 = 19,
+	Material = 20,
+	Lights = 21,
+	Camera = 22,
+	RenderSettings = 23,
+	Color = 24,
+	Level = 25,
+	GUILayout = 26,
+	Logic = 27,
+	World = 28,
+	Screen = 29,
+	Movie = 30,
+	Time = 31,
+	Character = 32,
+	Device = 33,
+	Controller = 34,
+	CharacterController = 35,
+	iTween = 36,
+	AnimateVariables = 37,
+	InputDevice = 38,
+	Rect = 39,
+	UnityObject = 40,
+	Application = 41,
+	NavMesh = 42,
+	NavMeshAgent = 43,
+	Network = 44,
+	Vector2 = 45,
+	Array = 46,
+	Mecanim = 47,
+	Animator = 48,
+	Quaternion = 49,
+	Enum = 50,
+	Physics2D = 51,
+	Trigonometry = 52,
+	Scene = 53,
+	UI = 54,
+	Tween = 55,
+}
+
+public enum UIHint
+{
+	None = 0,
+	TextArea = 1,
+	Behaviour = 2,
+	Script = 3,
+	Method = 4,
+	Coroutine = 5,
+	Animation = 6,
+	Tag = 7,
+	Layer = 8,
+	Description = 9,
+	Variable = 10,
+	ScriptComponent = 11,
+	Comment = 12,
+	NamedColor = 13,
+	NamedTexture = 14,
+	FsmName = 15,
+	FsmEvent = 16,
+	FsmFloat = 17,
+	FsmInt = 18,
+	FsmBool = 19,
+	FsmString = 20,
+	FsmVector3 = 21,
+	FsmGameObject = 22,
+	FsmColor = 23,
+	FsmRect = 24,
+	FsmMaterial = 25,
+	FsmTexture = 26,
+	FsmQuaternion = 27,
+	FsmObject = 28,
+	FsmVector2 = 29,
+	FsmEnum = 30,
+	FsmArray = 31,
+	AnimatorFloat = 32,
+	AnimatorBool = 33,
+	AnimatorInt = 34,
+	AnimatorTrigger = 35,
+	SortingLayer = 36,
+	TagMenu = 37,
+}
+
+public enum MouseButton
+{
+	Left = 0,
+	Right = 1,
+	Middle = 2,
+}
+
+public enum LogLevel
+{
+	Info = 0,
+	Warning = 1,
+	Error = 2,
+}
+
+public enum ColorBlendMode
+{
+	Normal = 0,
+	Multiply = 1,
+	Screen = 2,
+}
+
+public enum FsmEventTarget.EventTarget
+{
+	Self = 0,
+	GameObject = 1,
+	GameObjectFSM = 2,
+	FSMComponent = 3,
+	BroadcastAll = 4,
+	HostFSM = 5,
+	SubFSMs = 6,
+}
+
+public enum LayoutOption.LayoutOptionType
+{
+	Width = 0,
+	Height = 1,
+	MinWidth = 2,
+	MaxWidth = 3,
+	MinHeight = 4,
+	MaxHeight = 5,
+	ExpandWidth = 6,
+	ExpandHeight = 7,
+}
+
+public enum None
+{
+	None = 0,
+}
+
+public enum OwnerDefaultOption
+{
+	UseOwner = 0,
+	SpecifyGameObject = 1,
+}
+
+public enum ParamDataType
+{
+	Integer = 0,
+	Boolean = 1,
+	Float = 2,
+	String = 3,
+	Color = 4,
+	ObjectReference = 5,
+	LayerMask = 6,
+	Enum = 7,
+	Vector2 = 8,
+	Vector3 = 9,
+	Vector4 = 10,
+	Rect = 11,
+	Array = 12,
+	Character = 13,
+	AnimationCurve = 14,
+	FsmFloat = 15,
+	FsmInt = 16,
+	FsmBool = 17,
+	FsmString = 18,
+	FsmGameObject = 19,
+	FsmOwnerDefault = 20,
+	FunctionCall = 21,
+	FsmAnimationCurve = 22,
+	FsmEvent = 23,
+	FsmObject = 24,
+	FsmColor = 25,
+	Unsupported = 26,
+	GameObject = 27,
+	FsmVector3 = 28,
+	LayoutOption = 29,
+	FsmRect = 30,
+	FsmEventTarget = 31,
+	FsmMaterial = 32,
+	FsmTexture = 33,
+	Quaternion = 34,
+	FsmQuaternion = 35,
+	FsmProperty = 36,
+	FsmVector2 = 37,
+	FsmTemplateControl = 38,
+	FsmVar = 39,
+	CustomClass = 40,
+	FsmArray = 41,
+	FsmEnum = 42,
+}
+
+private enum Fsm.EditorFlags
+{
+	none = 0,
+	nameIsExpanded = 1,
+	controlsIsExpanded = 2,
+	debugIsExpanded = 4,
+	experimentalIsExpanded = 8,
+}
+
+public enum UiEvents
+{
+	None = 0,
+	Click = 1,
+	BeginDrag = 2,
+	Drag = 4,
+	EndDrag = 8,
+	Drop = 16,
+	PointerClick = 32,
+	PointerDown = 64,
+	PointerEnter = 128,
+	PointerExit = 256,
+	PointerUp = 512,
+	EndEdit = 1024,
+	BoolValueChanged = 2048,
+	FloatValueChanged = 4096,
+	IntValueChanged = 8192,
+	Vector2ValueChanged = 16384,
+	DragEvents = 14,
+	PointerEvents = 992,
+}
+
+public enum FsmLogType
+{
+	Info = 0,
+	Warning = 1,
+	Error = 2,
+	Event = 3,
+	Transition = 4,
+	ExitState = 5,
+	EnterState = 6,
+	Break = 7,
+	SendEvent = 8,
+	Start = 9,
+	Stop = 10,
+}
+
+public enum FsmTransition.CustomLinkStyle
+{
+	Default = 0,
+	Bezier = 1,
+	Circuit = 2,
+	Direct = 3,
+}
+
+public enum FsmTransition.CustomLinkConstraint
+{
+	None = 0,
+	LockLeft = 1,
+	LockRight = 2,
+}
+
+public enum VariableType
+{
+	Float = 0,
+	Int = 1,
+	Bool = 2,
+	GameObject = 3,
+	String = 4,
+	Vector2 = 5,
+	Vector3 = 6,
+	Color = 7,
+	Rect = 8,
+	Material = 9,
+	Texture = 10,
+	Quaternion = 11,
+	Object = 12,
+	Array = 13,
+	Enum = 14,
+}
+
+public enum VariableTypeNicified
+{
+	Float = 0,
+	Int = 1,
+	Bool = 2,
+	GameObject = 3,
+	String = 4,
+	Vector2 = 5,
+	Vector3 = 6,
+	Color = 7,
+	Rect = 8,
+	Material = 9,
+	Texture = 10,
+	Quaternion = 11,
+	Object = 12,
+	Array = 13,
+	Enum = 14,
+}
+
+public enum ArrayVariableTypesNicified
+{
+	Float = 0,
+	Int = 1,
+	Bool = 2,
+	GameObject = 3,
+	String = 4,
+	Vector2 = 5,
+	Vector3 = 6,
+	Color = 7,
+	Rect = 8,
+	Material = 9,
+	Texture = 10,
+	Quaternion = 11,
+	Object = 12,
+	Enum = 14,
+}
+
+public enum LoopType
+{
+	None = 0,
+	Loop = 1,
+	PingPong = 2,
+}
+
+public enum RotationInterpolation
+{
+	Spherical = 0,
+	Linear = 1,
+}
+
+public enum RotationOptions
+{
+	CurrentRotation = 0,
+	WorldRotation = 1,
+	LocalRotation = 2,
+	WorldOffsetRotation = 3,
+	LocalOffsetRotation = 4,
+	MatchGameObjectRotation = 5,
+}
+
+public enum ScaleOptions
+{
+	CurrentScale = 0,
+	LocalScale = 1,
+	MultiplyScale = 2,
+	AddToScale = 3,
+	MatchGameObject = 4,
+}
+
+public enum PositionOptions
+{
+	CurrentPosition = 0,
+	WorldPosition = 1,
+	LocalPosition = 2,
+	WorldOffset = 3,
+	LocalOffset = 4,
+	TargetGameObject = 5,
+}
+
+public enum TargetValueOptions
+{
+	CurrentValue = 0,
+	Offset = 1,
+	Value = 2,
+}
+
+public enum TextFontWeight
+{
+	Thin = 100,
+	ExtraLight = 200,
+	Light = 300,
+	Regular = 400,
+	Medium = 500,
+	SemiBold = 600,
+	Bold = 700,
+	Heavy = 800,
+	Black = 900,
+}
+
+public enum AtlasPopulationMode
+{
+	Static = 0,
+	Dynamic = 1,
+	DynamicOS = 2,
+}
+
+internal enum VertexSortingOrder
+{
+	Normal = 0,
+	Reverse = 1,
+}
+
+public enum ColorGradientMode
+{
+	Single = 0,
+	HorizontalGradient = 1,
+	VerticalGradient = 2,
+	FourCornersGradient = 3,
+}
+
+public enum TextElementType
+{
+	Character = 1,
+	Sprite = 2,
+}
+
+internal enum TextAlignment
+{
+	TopLeft = 257,
+	TopCenter = 258,
+	TopRight = 260,
+	TopJustified = 264,
+	TopFlush = 272,
+	TopGeoAligned = 288,
+	MiddleLeft = 513,
+	MiddleCenter = 514,
+	MiddleRight = 516,
+	MiddleJustified = 520,
+	MiddleFlush = 528,
+	MiddleGeoAligned = 544,
+	BottomLeft = 1025,
+	BottomCenter = 1026,
+	BottomRight = 1028,
+	BottomJustified = 1032,
+	BottomFlush = 1040,
+	BottomGeoAligned = 1056,
+	BaselineLeft = 2049,
+	BaselineCenter = 2050,
+	BaselineRight = 2052,
+	BaselineJustified = 2056,
+	BaselineFlush = 2064,
+	BaselineGeoAligned = 2080,
+	MidlineLeft = 4097,
+	MidlineCenter = 4098,
+	MidlineRight = 4100,
+	MidlineJustified = 4104,
+	MidlineFlush = 4112,
+	MidlineGeoAligned = 4128,
+	CaplineLeft = 8193,
+	CaplineCenter = 8194,
+	CaplineRight = 8196,
+	CaplineJustified = 8200,
+	CaplineFlush = 8208,
+	CaplineGeoAligned = 8224,
+}
+
+public enum FontStyles
+{
+	Normal = 0,
+	Bold = 1,
+	Italic = 2,
+	Underline = 4,
+	LowerCase = 8,
+	UpperCase = 16,
+	SmallCaps = 32,
+	Strikethrough = 64,
+	Superscript = 128,
+	Subscript = 256,
+	Highlight = 512,
+}
+
+internal enum TextOverflowMode
+{
+	Overflow = 0,
+	Ellipsis = 1,
+	Masking = 2,
+	Truncate = 3,
+	ScrollRect = 4,
+	Page = 5,
+	Linked = 6,
+}
+
+internal enum TextureMapping
+{
+	Character = 0,
+	Line = 1,
+	Paragraph = 2,
+	MatchAspect = 3,
+}
+
+internal enum TextWrappingMode
+{
+	NoWrap = 0,
+	Normal = 1,
+	PreserveWhitespace = 2,
+	PreserveWhitespaceNoWrap = 3,
+}
+
+internal enum TextInputSource
+{
+	TextInputBox = 0,
+	SetText = 1,
+	SetTextArray = 2,
+	TextString = 3,
+}
+
+internal enum MarkupTag
+{
+	BOLD = 66,
+	SLASH_BOLD = 1613,
+	ITALIC = 73,
+	SLASH_ITALIC = 1606,
+	UNDERLINE = 85,
+	SLASH_UNDERLINE = 1626,
+	STRIKETHROUGH = 83,
+	SLASH_STRIKETHROUGH = 1628,
+	MARK = 2699125,
+	SLASH_MARK = 57644506,
+	SUBSCRIPT = 92132,
+	SLASH_SUBSCRIPT = 1770219,
+	SUPERSCRIPT = 92150,
+	SLASH_SUPERSCRIPT = 1770233,
+	COLOR = 81999901,
+	SLASH_COLOR = 1909026194,
+	ALPHA = 75165780,
+	A = 65,
+	SLASH_A = 1614,
+	SIZE = 3061285,
+	SLASH_SIZE = 58429962,
+	NO_BREAK = 2856657,
+	SLASH_NO_BREAK = 57477502,
+	STYLE = 100252951,
+	SLASH_STYLE = 1927738392,
+	FONT = 2586451,
+	SLASH_FONT = 57747708,
+	LINK = 2656128,
+	SLASH_LINK = 57686191,
+	POSITION = 85420,
+	SLASH_POSITION = 1777699,
+	VERTICAL_OFFSET = 1952379995,
+	SPACE = 100083556,
+	SLASH_SPACE = 1927873067,
+	PAGE = 2808691,
+	SLASH_PAGE = 58683868,
+	ALIGN = 75138797,
+	SLASH_ALIGN = 1916026786,
+	WIDTH = 105793766,
+	SLASH_WIDTH = 1923459625,
+	CLASS = 82115566,
+	SLASH_LINE_INDENT = 93886352,
+	SLASH_LINE_HEIGHT = 200452819,
+	SCALE = 100553336,
+	SLASH_SCALE = 1928413879,
+	TABLE = 226476955,
+	TH = 5862489,
+	SLASH_TH = 193346070,
+	TR = 5862467,
+	SLASH_TR = 193346060,
+	TD = 5862485,
+	SLASH_TD = 193346074,
+	ALLCAPS = 218273952,
+	SLASH_SMALLCAPS = 199921873,
+	LIGA = 2655971,
+	SLASH_LIGA = 57686604,
+	FRAC = 2598518,
+	SLASH_FRAC = 57774681,
+	NAME = 2875623,
+	INDEX = 84268030,
+	TINT = 2960519,
+	ANIM = 2283339,
+	MATERIAL = 825491659,
+	HREF = 2535353,
+	ANGLE = 75347905,
+	FAMILYNAME = 704251153,
+	RED = 91635,
+	GREEN = 87065851,
+	BLUE = 2457214,
+	BLACK = 81074727,
+	WHITE = 105680263,
+	BR = 2256,
+	CR = 2289,
+	ZWSP = 3288238,
+	ZWJ = 99623,
+	NBSP = 2869039,
+	SHY = 92674,
+	LEFT = 2660507,
+	RIGHT = 99937376,
+	JUSTIFIED = 817091359,
+	FLUSH = 85552164,
+	NONE = 2857034,
+	PLUS = 43,
+	MINUS = 45,
+	PX = 2568,
+	PLUS_PX = 49507,
+	MINUS_PX = 47461,
+	EM = 2216,
+	PLUS_EM = 49091,
+	MINUS_EM = 46789,
+	PCT = 85031,
+	PLUS_PCT = 1634348,
+	MINUS_PCT = 1567082,
+	PERCENTAGE = 37,
+	PLUS_PERCENTAGE = 1454,
+	MINUS_PERCENTAGE = 1512,
+	TRUE = 2932022,
+	FALSE = 85422813,
+	INVALID = 1585415185,
+	NOTDEF = 612146780,
+	REGULAR = 1291372090,
+}
+
+internal enum TagValueType
+{
+	None = 0,
+	NumericalValue = 1,
+	StringValue = 2,
+	ColorValue = 4,
+}
+
+internal enum TagUnitType
+{
+	Pixels = 0,
+	FontUnits = 1,
+	Percentage = 2,
+}
+
+internal enum TextProcessingElementType
+{
+	Undefined = 0,
+	TextCharacterElement = 1,
+	TextMarkupElement = 2,
+}
+
+public enum BacktraceResultStatus
+{
+	LimitReached = 0,
+	ServerError = 1,
+	Ok = 2,
+	Empty = 3,
+	NetworkError = 4,
+}
+
+internal enum BacktraceStackFrameType
+{
+	Unknown = 0,
+	Dotnet = 1,
+	Android = 2,
+	Native = 3,
+}
+
+public enum DeduplicationStrategy
+{
+	None = 0,
+	Default = 1,
+	Classifier = 2,
+	Message = 4,
+}
+
+internal enum MinidumpException
+{
+	None = 0,
+	Present = 1,
+}
+
+public enum MiniDumpType
+{
+	None = 524286,
+	Normal = 0,
+	WithDataSegs = 1,
+	WithFullMemory = 2,
+	WithHandleData = 4,
+	FilterMemory = 8,
+	ScanMemory = 16,
+	WithUnloadedModules = 32,
+	WithIndirectlyReferencedMemory = 64,
+	FilterModulePaths = 128,
+	WithProcessThreadData = 256,
+	WithPrivateReadWriteMemory = 512,
+	WithoutOptionalData = 1024,
+	WithFullMemoryInfo = 2048,
+	WithThreadInfo = 4096,
+	WithCodeSegs = 8192,
+	WithoutAuxiliaryState = 16384,
+	WithFullAuxiliaryState = 32768,
+	WithPrivateWriteCopyMemory = 65536,
+	IgnoreInaccessibleMemory = 131072,
+	ValidTypeFlags = 262143,
+}
+
+public enum ReportFilterType
+{
+	None = 0,
+	Message = 1,
+	Exception = 2,
+	UnhandledException = 4,
+	Hang = 8,
+	Error = 16,
+}
+
+public enum RetryBehavior
+{
+	ByInterval = 0,
+	NoRetry = 1,
+}
+
+public enum RetryOrder
+{
+	Stack = 0,
+	Queue = 1,
+}
+
+internal enum UnwindingMode
+{
+	LOCAL = 0,
+	REMOTE = 1,
+	REMOTE_DUMPWITHOUTCRASH = 2,
+	LOCAL_DUMPWITHOUTCRASH = 3,
+	LOCAL_CONTEXT = 4,
+}
+
+public enum BacktraceBreadcrumbType
+{
+	None = 0,
+	Manual = 1,
+	Log = 2,
+	Navigation = 4,
+	Http = 8,
+	System = 16,
+	User = 32,
+	Configuration = 64,
+}
+
+public enum BreadcrumbLevel
+{
+	Manual = 1,
+	Log = 2,
+	Navigation = 4,
+	Http = 8,
+	System = 16,
+	User = 32,
+	Configuration = 64,
+}
+
+public enum UnityEngineLogLevel
+{
+	None = 0,
+	Debug = 1,
+	Warning = 2,
+	Info = 4,
+	Fatal = 8,
+	Error = 16,
+}
+
+public enum PKCS12.DeriveBytes.Purpose
+{
+	Key = 0,
+	IV = 1,
+	MAC = 2,
+}
+
+public enum X509ChainStatusFlags
+{
+	InvalidBasicConstraints = 1024,
+	NoError = 0,
+	NotSignatureValid = 8,
+	NotTimeNested = 2,
+	NotTimeValid = 1,
+	PartialChain = 65536,
+	UntrustedRoot = 32,
+}
+
+public enum KeyUsages
+{
+	digitalSignature = 128,
+	nonRepudiation = 64,
+	keyEncipherment = 32,
+	dataEncipherment = 16,
+	keyAgreement = 8,
+	keyCertSign = 4,
+	cRLSign = 2,
+	encipherOnly = 1,
+	decipherOnly = 2048,
+	none = 0,
+}
+
+public enum NtlmAuthLevel
+{
+	LM_and_NTLM = 0,
+	LM_and_NTLM_and_try_NTLMv2_Session = 1,
+	NTLM_only = 2,
+	NTLMv2_only = 3,
+}
+
+public enum NtlmFlags
+{
+	NegotiateUnicode = 1,
+	NegotiateOem = 2,
+	RequestTarget = 4,
+	NegotiateNtlm = 512,
+	NegotiateDomainSupplied = 4096,
+	NegotiateWorkstationSupplied = 8192,
+	NegotiateAlwaysSign = 32768,
+	NegotiateNtlm2Key = 524288,
+	Negotiate128 = 536870912,
+}
+
+public enum AlertLevel
+{
+	Warning = 1,
+	Fatal = 2,
+}
+
+public enum AlertDescription
+{
+	CloseNotify = 0,
+	UnexpectedMessage = 10,
+	BadRecordMAC = 20,
+	DecryptionFailed_RESERVED = 21,
+	RecordOverflow = 22,
+	DecompressionFailure = 30,
+	HandshakeFailure = 40,
+	NoCertificate_RESERVED = 41,
+	BadCertificate = 42,
+	UnsupportedCertificate = 43,
+	CertificateRevoked = 44,
+	CertificateExpired = 45,
+	CertificateUnknown = 46,
+	IlegalParameter = 47,
+	UnknownCA = 48,
+	AccessDenied = 49,
+	DecodeError = 50,
+	DecryptError = 51,
+	ExportRestriction = 60,
+	ProtocolVersion = 70,
+	InsuficientSecurity = 71,
+	InternalError = 80,
+	UserCancelled = 90,
+	NoRenegotiation = 100,
+	UnsupportedExtension = 110,
+}
+
+public enum CipherAlgorithmType
+{
+	None = 0,
+	Aes128 = 1,
+	Aes256 = 2,
+	AesGcm128 = 3,
+	AesGcm256 = 4,
+}
+
+public enum CipherSuiteCode
+{
+	TLS_NULL_WITH_NULL_NULL = 0,
+	TLS_RSA_WITH_NULL_MD5 = 1,
+	TLS_RSA_WITH_NULL_SHA = 2,
+	TLS_RSA_EXPORT_WITH_RC4_40_MD5 = 3,
+	TLS_RSA_WITH_RC4_128_MD5 = 4,
+	TLS_RSA_WITH_RC4_128_SHA = 5,
+	TLS_RSA_EXPORT_WITH_RC2_CBC_40_MD5 = 6,
+	TLS_RSA_WITH_IDEA_CBC_SHA = 7,
+	TLS_RSA_EXPORT_WITH_DES40_CBC_SHA = 8,
+	TLS_RSA_WITH_DES_CBC_SHA = 9,
+	TLS_RSA_WITH_3DES_EDE_CBC_SHA = 10,
+	TLS_DH_DSS_EXPORT_WITH_DES40_CBC_SHA = 11,
+	TLS_DH_DSS_WITH_DES_CBC_SHA = 12,
+	TLS_DH_DSS_WITH_3DES_EDE_CBC_SHA = 13,
+	TLS_DH_RSA_EXPORT_WITH_DES40_CBC_SHA = 14,
+	TLS_DH_RSA_WITH_DES_CBC_SHA = 15,
+	TLS_DH_RSA_WITH_3DES_EDE_CBC_SHA = 16,
+	TLS_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA = 17,
+	TLS_DHE_DSS_WITH_DES_CBC_SHA = 18,
+	TLS_DHE_DSS_WITH_3DES_EDE_CBC_SHA = 19,
+	TLS_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA = 20,
+	TLS_DHE_RSA_WITH_DES_CBC_SHA = 21,
+	TLS_DHE_RSA_WITH_3DES_EDE_CBC_SHA = 22,
+	TLS_DH_anon_EXPORT_WITH_RC4_40_MD5 = 23,
+	TLS_DH_anon_WITH_RC4_128_MD5 = 24,
+	TLS_DH_anon_EXPORT_WITH_DES40_CBC_SHA = 25,
+	TLS_DH_anon_WITH_DES_CBC_SHA = 26,
+	TLS_DH_anon_WITH_3DES_EDE_CBC_SHA = 27,
+	TLS_RSA_WITH_AES_128_CBC_SHA = 47,
+	TLS_DH_DSS_WITH_AES_128_CBC_SHA = 48,
+	TLS_DH_RSA_WITH_AES_128_CBC_SHA = 49,
+	TLS_DHE_DSS_WITH_AES_128_CBC_SHA = 50,
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA = 51,
+	TLS_DH_anon_WITH_AES_128_CBC_SHA = 52,
+	TLS_RSA_WITH_AES_256_CBC_SHA = 53,
+	TLS_DH_DSS_WITH_AES_256_CBC_SHA = 54,
+	TLS_DH_RSA_WITH_AES_256_CBC_SHA = 55,
+	TLS_DHE_DSS_WITH_AES_256_CBC_SHA = 56,
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA = 57,
+	TLS_DH_anon_WITH_AES_256_CBC_SHA = 58,
+	TLS_RSA_WITH_CAMELLIA_128_CBC_SHA = 65,
+	TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA = 66,
+	TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA = 67,
+	TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA = 68,
+	TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA = 69,
+	TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA = 70,
+	TLS_RSA_WITH_CAMELLIA_256_CBC_SHA = 132,
+	TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA = 133,
+	TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA = 134,
+	TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA = 135,
+	TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA = 136,
+	TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA = 137,
+	TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 186,
+	TLS_DH_DSS_WITH_CAMELLIA_128_CBC_SHA256 = 187,
+	TLS_DH_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 188,
+	TLS_DHE_DSS_WITH_CAMELLIA_128_CBC_SHA256 = 189,
+	TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 190,
+	TLS_DH_anon_WITH_CAMELLIA_128_CBC_SHA256 = 191,
+	TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 192,
+	TLS_DH_DSS_WITH_CAMELLIA_256_CBC_SHA256 = 193,
+	TLS_DH_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 194,
+	TLS_DHE_DSS_WITH_CAMELLIA_256_CBC_SHA256 = 195,
+	TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 = 196,
+	TLS_DH_anon_WITH_CAMELLIA_256_CBC_SHA256 = 197,
+	TLS_RSA_WITH_SEED_CBC_SHA = 150,
+	TLS_DH_DSS_WITH_SEED_CBC_SHA = 151,
+	TLS_DH_RSA_WITH_SEED_CBC_SHA = 152,
+	TLS_DHE_DSS_WITH_SEED_CBC_SHA = 153,
+	TLS_DHE_RSA_WITH_SEED_CBC_SHA = 154,
+	TLS_DH_anon_WITH_SEED_CBC_SHA = 155,
+	TLS_PSK_WITH_RC4_128_SHA = 138,
+	TLS_PSK_WITH_3DES_EDE_CBC_SHA = 139,
+	TLS_PSK_WITH_AES_128_CBC_SHA = 140,
+	TLS_PSK_WITH_AES_256_CBC_SHA = 141,
+	TLS_DHE_PSK_WITH_RC4_128_SHA = 142,
+	TLS_DHE_PSK_WITH_3DES_EDE_CBC_SHA = 143,
+	TLS_DHE_PSK_WITH_AES_128_CBC_SHA = 144,
+	TLS_DHE_PSK_WITH_AES_256_CBC_SHA = 145,
+	TLS_RSA_PSK_WITH_RC4_128_SHA = 146,
+	TLS_RSA_PSK_WITH_3DES_EDE_CBC_SHA = 147,
+	TLS_RSA_PSK_WITH_AES_128_CBC_SHA = 148,
+	TLS_RSA_PSK_WITH_AES_256_CBC_SHA = 149,
+	TLS_ECDH_ECDSA_WITH_NULL_SHA = 49153,
+	TLS_ECDH_ECDSA_WITH_RC4_128_SHA = 49154,
+	TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA = 49155,
+	TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA = 49156,
+	TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA = 49157,
+	TLS_ECDHE_ECDSA_WITH_NULL_SHA = 49158,
+	TLS_ECDHE_ECDSA_WITH_RC4_128_SHA = 49159,
+	TLS_ECDHE_ECDSA_WITH_3DES_EDE_CBC_SHA = 49160,
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA = 49161,
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA = 49162,
+	TLS_ECDH_RSA_WITH_NULL_SHA = 49163,
+	TLS_ECDH_RSA_WITH_RC4_128_SHA = 49164,
+	TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA = 49165,
+	TLS_ECDH_RSA_WITH_AES_128_CBC_SHA = 49166,
+	TLS_ECDH_RSA_WITH_AES_256_CBC_SHA = 49167,
+	TLS_ECDHE_RSA_WITH_NULL_SHA = 49168,
+	TLS_ECDHE_RSA_WITH_RC4_128_SHA = 49169,
+	TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA = 49170,
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA = 49171,
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA = 49172,
+	TLS_ECDH_anon_WITH_NULL_SHA = 49173,
+	TLS_ECDH_anon_WITH_RC4_128_SHA = 49174,
+	TLS_ECDH_anon_WITH_3DES_EDE_CBC_SHA = 49175,
+	TLS_ECDH_anon_WITH_AES_128_CBC_SHA = 49176,
+	TLS_ECDH_anon_WITH_AES_256_CBC_SHA = 49177,
+	TLS_PSK_WITH_NULL_SHA = 44,
+	TLS_DHE_PSK_WITH_NULL_SHA = 45,
+	TLS_RSA_PSK_WITH_NULL_SHA = 46,
+	TLS_SRP_SHA_WITH_3DES_EDE_CBC_SHA = 49178,
+	TLS_SRP_SHA_RSA_WITH_3DES_EDE_CBC_SHA = 49179,
+	TLS_SRP_SHA_DSS_WITH_3DES_EDE_CBC_SHA = 49180,
+	TLS_SRP_SHA_WITH_AES_128_CBC_SHA = 49181,
+	TLS_SRP_SHA_RSA_WITH_AES_128_CBC_SHA = 49182,
+	TLS_SRP_SHA_DSS_WITH_AES_128_CBC_SHA = 49183,
+	TLS_SRP_SHA_WITH_AES_256_CBC_SHA = 49184,
+	TLS_SRP_SHA_RSA_WITH_AES_256_CBC_SHA = 49185,
+	TLS_SRP_SHA_DSS_WITH_AES_256_CBC_SHA = 49186,
+	TLS_RSA_WITH_NULL_SHA256 = 59,
+	TLS_RSA_WITH_AES_128_CBC_SHA256 = 60,
+	TLS_RSA_WITH_AES_256_CBC_SHA256 = 61,
+	TLS_DH_DSS_WITH_AES_128_CBC_SHA256 = 62,
+	TLS_DH_RSA_WITH_AES_128_CBC_SHA256 = 63,
+	TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 = 64,
+	TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 = 103,
+	TLS_DH_DSS_WITH_AES_256_CBC_SHA256 = 104,
+	TLS_DH_RSA_WITH_AES_256_CBC_SHA256 = 105,
+	TLS_DHE_DSS_WITH_AES_256_CBC_SHA256 = 106,
+	TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 = 107,
+	TLS_DH_anon_WITH_AES_128_CBC_SHA256 = 108,
+	TLS_DH_anon_WITH_AES_256_CBC_SHA256 = 109,
+	TLS_RSA_WITH_AES_128_GCM_SHA256 = 156,
+	TLS_RSA_WITH_AES_256_GCM_SHA384 = 157,
+	TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 = 158,
+	TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 = 159,
+	TLS_DH_RSA_WITH_AES_128_GCM_SHA256 = 160,
+	TLS_DH_RSA_WITH_AES_256_GCM_SHA384 = 161,
+	TLS_DHE_DSS_WITH_AES_128_GCM_SHA256 = 162,
+	TLS_DHE_DSS_WITH_AES_256_GCM_SHA384 = 163,
+	TLS_DH_DSS_WITH_AES_128_GCM_SHA256 = 164,
+	TLS_DH_DSS_WITH_AES_256_GCM_SHA384 = 165,
+	TLS_DH_anon_WITH_AES_128_GCM_SHA256 = 166,
+	TLS_DH_anon_WITH_AES_256_GCM_SHA384 = 167,
+	TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 = 49187,
+	TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 = 49188,
+	TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 = 49189,
+	TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384 = 49190,
+	TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 = 49191,
+	TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 = 49192,
+	TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 = 49193,
+	TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384 = 49194,
+	TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 = 49195,
+	TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 = 49196,
+	TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256 = 49197,
+	TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384 = 49198,
+	TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 = 49199,
+	TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 = 49200,
+	TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256 = 49201,
+	TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384 = 49202,
+	TLS_PSK_WITH_AES_128_GCM_SHA256 = 168,
+	TLS_PSK_WITH_AES_256_GCM_SHA384 = 169,
+	TLS_DHE_PSK_WITH_AES_128_GCM_SHA256 = 170,
+	TLS_DHE_PSK_WITH_AES_256_GCM_SHA384 = 171,
+	TLS_RSA_PSK_WITH_AES_128_GCM_SHA256 = 172,
+	TLS_RSA_PSK_WITH_AES_256_GCM_SHA384 = 173,
+	TLS_PSK_WITH_AES_128_CBC_SHA256 = 174,
+	TLS_PSK_WITH_AES_256_CBC_SHA384 = 175,
+	TLS_PSK_WITH_NULL_SHA256 = 176,
+	TLS_PSK_WITH_NULL_SHA384 = 177,
+	TLS_DHE_PSK_WITH_AES_128_CBC_SHA256 = 178,
+	TLS_DHE_PSK_WITH_AES_256_CBC_SHA384 = 179,
+	TLS_DHE_PSK_WITH_NULL_SHA256 = 180,
+	TLS_DHE_PSK_WITH_NULL_SHA384 = 181,
+	TLS_RSA_PSK_WITH_AES_128_CBC_SHA256 = 182,
+	TLS_RSA_PSK_WITH_AES_256_CBC_SHA384 = 183,
+	TLS_RSA_PSK_WITH_NULL_SHA256 = 184,
+	TLS_RSA_PSK_WITH_NULL_SHA384 = 185,
+	TLS_ECDHE_PSK_WITH_RC4_128_SHA = 49203,
+	TLS_ECDHE_PSK_WITH_3DES_EDE_CBC_SHA = 49204,
+	TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA = 49205,
+	TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA = 49206,
+	TLS_ECDHE_PSK_WITH_AES_128_CBC_SHA256 = 49207,
+	TLS_ECDHE_PSK_WITH_AES_256_CBC_SHA384 = 49208,
+	TLS_ECDHE_PSK_WITH_NULL_SHA = 49209,
+	TLS_ECDHE_PSK_WITH_NULL_SHA256 = 49210,
+	TLS_ECDHE_PSK_WITH_NULL_SHA384 = 49211,
+	TLS_EMPTY_RENEGOTIATION_INFO_SCSV = 255,
+	TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 = 49266,
+	TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 = 49267,
+	TLS_ECDH_ECDSA_WITH_CAMELLIA_128_CBC_SHA256 = 49268,
+	TLS_ECDH_ECDSA_WITH_CAMELLIA_256_CBC_SHA384 = 49269,
+	TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 49270,
+	TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 = 49271,
+	TLS_ECDH_RSA_WITH_CAMELLIA_128_CBC_SHA256 = 49272,
+	TLS_ECDH_RSA_WITH_CAMELLIA_256_CBC_SHA384 = 49273,
+	TLS_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49274,
+	TLS_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49275,
+	TLS_DHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49276,
+	TLS_DHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49277,
+	TLS_DH_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49278,
+	TLS_DH_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49279,
+	TLS_DHE_DSS_WITH_CAMELLIA_128_GCM_SHA256 = 49280,
+	TLS_DHE_DSS_WITH_CAMELLIA_256_GCM_SHA384 = 49281,
+	TLS_DH_DSS_WITH_CAMELLIA_128_GCM_SHA256 = 49282,
+	TLS_DH_DSS_WITH_CAMELLIA_256_GCM_SHA384 = 49283,
+	TLS_DH_anon_WITH_CAMELLIA_128_GCM_SHA256 = 49284,
+	TLS_DH_anon_WITH_CAMELLIA_256_GCM_SHA384 = 49285,
+	TLS_ECDHE_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 = 49286,
+	TLS_ECDHE_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 = 49287,
+	TLS_ECDH_ECDSA_WITH_CAMELLIA_128_GCM_SHA256 = 49288,
+	TLS_ECDH_ECDSA_WITH_CAMELLIA_256_GCM_SHA384 = 49289,
+	TLS_ECDHE_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49290,
+	TLS_ECDHE_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49291,
+	TLS_ECDH_RSA_WITH_CAMELLIA_128_GCM_SHA256 = 49292,
+	TLS_ECDH_RSA_WITH_CAMELLIA_256_GCM_SHA384 = 49293,
+	TLS_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49294,
+	TLS_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49295,
+	TLS_DHE_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49296,
+	TLS_DHE_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49297,
+	TLS_RSA_PSK_WITH_CAMELLIA_128_GCM_SHA256 = 49298,
+	TLS_RSA_PSK_WITH_CAMELLIA_256_GCM_SHA384 = 49299,
+	TLS_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49300,
+	TLS_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49301,
+	TLS_DHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49302,
+	TLS_DHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49303,
+	TLS_RSA_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49304,
+	TLS_RSA_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49305,
+	TLS_ECDHE_PSK_WITH_CAMELLIA_128_CBC_SHA256 = 49306,
+	TLS_ECDHE_PSK_WITH_CAMELLIA_256_CBC_SHA384 = 49307,
+	TLS_RSA_WITH_AES_128_CCM = 49308,
+	TLS_RSA_WITH_AES_256_CCM = 49309,
+	TLS_DHE_RSA_WITH_AES_128_CCM = 49310,
+	TLS_DHE_RSA_WITH_AES_256_CCM = 49311,
+	TLS_RSA_WITH_AES_128_CCM_8 = 49312,
+	TLS_RSA_WITH_AES_256_CCM_8 = 49313,
+	TLS_DHE_RSA_WITH_AES_128_CCM_8 = 49314,
+	TLS_DHE_RSA_WITH_AES_256_CCM_8 = 49315,
+	TLS_PSK_WITH_AES_128_CCM = 49316,
+	TLS_PSK_WITH_AES_256_CCM = 49317,
+	TLS_DHE_PSK_WITH_AES_128_CCM = 49318,
+	TLS_DHE_PSK_WITH_AES_256_CCM = 49319,
+	TLS_PSK_WITH_AES_128_CCM_8 = 49320,
+	TLS_PSK_WITH_AES_256_CCM_8 = 49321,
+	TLS_PSK_DHE_WITH_AES_128_CCM_8 = 49322,
+	TLS_PSK_DHE_WITH_AES_256_CCM_8 = 49323,
+	TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 52243,
+	TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 = 52244,
+	TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 = 52245,
+	TLS_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58384,
+	TLS_RSA_WITH_SALSA20_SHA1 = 58385,
+	TLS_ECDHE_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58386,
+	TLS_ECDHE_RSA_WITH_SALSA20_SHA1 = 58387,
+	TLS_ECDHE_ECDSA_WITH_ESTREAM_SALSA20_SHA1 = 58388,
+	TLS_ECDHE_ECDSA_WITH_SALSA20_SHA1 = 58389,
+	TLS_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58390,
+	TLS_PSK_WITH_SALSA20_SHA1 = 58391,
+	TLS_ECDHE_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58392,
+	TLS_ECDHE_PSK_WITH_SALSA20_SHA1 = 58393,
+	TLS_RSA_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58394,
+	TLS_RSA_PSK_WITH_SALSA20_SHA1 = 58395,
+	TLS_DHE_PSK_WITH_ESTREAM_SALSA20_SHA1 = 58396,
+	TLS_DHE_PSK_WITH_SALSA20_SHA1 = 58397,
+	TLS_DHE_RSA_WITH_ESTREAM_SALSA20_SHA1 = 58398,
+	TLS_DHE_RSA_WITH_SALSA20_SHA1 = 58399,
+	TLS_FALLBACK_SCSV = 22016,
+}
+
+public enum ExchangeAlgorithmType
+{
+	None = 0,
+	Dhe = 1,
+	Rsa = 2,
+	EcDhe = 3,
+}
+
+public enum HashAlgorithmType
+{
+	None = 0,
+	Md5 = 1,
+	Sha1 = 2,
+	Sha224 = 3,
+	Sha256 = 4,
+	Sha384 = 5,
+	Sha512 = 6,
+	Unknown = 255,
+	Md5Sha1 = 254,
+}
+
+public enum MonoSslPolicyErrors
+{
+	None = 0,
+	RemoteCertificateNotAvailable = 1,
+	RemoteCertificateNameMismatch = 2,
+	RemoteCertificateChainErrors = 4,
+}
+
+public enum TlsProtocols
+{
+	Zero = 0,
+	Tls10Client = 128,
+	Tls10Server = 64,
+	Tls10 = 192,
+	Tls11Client = 512,
+	Tls11Server = 256,
+	Tls11 = 768,
+	Tls12Client = 2048,
+	Tls12Server = 1024,
+	Tls12 = 3072,
+	ClientMask = 2688,
+	ServerMask = 1344,
+}
+
+public enum BigInteger.Sign
+{
+	Zero = 0,
+	Positive = 1,
+}
+
+public enum ConfidenceFactor
+{
+	ExtraLow = 0,
+	Low = 1,
+	Medium = 2,
+	High = 3,
+	ExtraHigh = 4,
+	Provable = 5,
+}
+
+internal enum GoogleBillingConnectionState
+{
+	Disconnected = 0,
+	Connecting = 1,
+	Connected = 2,
+	Closed = 3,
+}
+
+public enum GooglePlayProrationMode
+{
+	UnknownSubscriptionUpgradeDowngradePolicy = 0,
+	ImmediateWithTimeProration = 1,
+	ImmediateAndChargeProratedPrice = 2,
+	ImmediateWithoutProration = 3,
+	Deferred = 4,
+	ImmediateAndChargeFullPrice = 5,
+}
+
+public enum AppleStorePromotionVisibility
+{
+	Default = 0,
+	Hide = 1,
+	Show = 2,
+}
+
+public enum AppStore
+{
+	NotSpecified = 0,
+	GooglePlay = 1,
+	AmazonAppStore = 2,
+	UDP = 3,
+	MacAppStore = 4,
+	AppleAppStore = 5,
+	WinRT = 6,
+	fake = 7,
+}
+
+public enum FakeStoreUIMode
+{
+	Default = 0,
+	StandardUser = 1,
+	DeveloperUser = 2,
+}
+
+protected enum FakeStore.DialogType
+{
+	Purchase = 0,
+	RetrieveProducts = 1,
+}
+
+public enum TranslationLocale
+{
+	zh_TW = 0,
+	cs_CZ = 1,
+	da_DK = 2,
+	nl_NL = 3,
+	en_US = 4,
+	fr_FR = 5,
+	fi_FI = 6,
+	de_DE = 7,
+	iw_IL = 8,
+	hi_IN = 9,
+	it_IT = 10,
+	ja_JP = 11,
+	ko_KR = 12,
+	no_NO = 13,
+	pl_PL = 14,
+	pt_PT = 15,
+	ru_RU = 16,
+	es_ES = 17,
+	sv_SE = 18,
+	zh_CN = 19,
+	en_AU = 20,
+	en_CA = 21,
+	en_GB = 22,
+	fr_CA = 23,
+	el_GR = 24,
+	id_ID = 25,
+	ms_MY = 26,
+	pt_BR = 27,
+	es_MX = 28,
+	th_TH = 29,
+	tr_TR = 30,
+	vi_VN = 31,
+}
+
+public enum ProductCatalogPayout.ProductCatalogPayoutType
+{
+	Other = 0,
+	Currency = 1,
+	Item = 2,
+	Resource = 3,
+}
+
+public enum StoreSpecificPurchaseErrorCode
+{
+	SKErrorUnknown = 0,
+	SKErrorClientInvalid = 1,
+	SKErrorPaymentCancelled = 2,
+	SKErrorPaymentInvalid = 3,
+	SKErrorPaymentNotAllowed = 4,
+	SKErrorStoreProductNotAvailable = 5,
+	SKErrorCloudServicePermissionDenied = 6,
+	SKErrorCloudServiceNetworkConnectionFailed = 7,
+	SKErrorCloudServiceRevoked = 8,
+	BILLING_RESPONSE_RESULT_OK = 9,
+	BILLING_RESPONSE_RESULT_USER_CANCELED = 10,
+	BILLING_RESPONSE_RESULT_SERVICE_UNAVAILABLE = 11,
+	BILLING_RESPONSE_RESULT_BILLING_UNAVAILABLE = 12,
+	BILLING_RESPONSE_RESULT_ITEM_UNAVAILABLE = 13,
+	BILLING_RESPONSE_RESULT_DEVELOPER_ERROR = 14,
+	BILLING_RESPONSE_RESULT_ERROR = 15,
+	BILLING_RESPONSE_RESULT_ITEM_ALREADY_OWNED = 16,
+	BILLING_RESPONSE_RESULT_ITEM_NOT_OWNED = 17,
+	IABHELPER_ERROR_BASE = 18,
+	IABHELPER_REMOTE_EXCEPTION = 19,
+	IABHELPER_BAD_RESPONSE = 20,
+	IABHELPER_VERIFICATION_FAILED = 21,
+	IABHELPER_SEND_INTENT_FAILED = 22,
+	IABHELPER_USER_CANCELLED = 23,
+	IABHELPER_UNKNOWN_PURCHASE_RESPONSE = 24,
+	IABHELPER_MISSING_TOKEN = 25,
+	IABHELPER_UNKNOWN_ERROR = 26,
+	IABHELPER_SUBSCRIPTIONS_NOT_AVAILABLE = 27,
+	IABHELPER_INVALID_CONSUMPTION = 28,
+	Amazon_ALREADY_PURCHASED = 29,
+	Amazon_FAILED = 30,
+	Amazon_INVALID_SKU = 31,
+	Amazon_NOT_SUPPORTED = 32,
+	Unknown = 33,
+}
+
+public enum Result
+{
+	True = 0,
+	False = 1,
+	Unsupported = 2,
+}
+
+public enum SubscriptionPeriodUnit
+{
+	Day = 0,
+	Month = 1,
+	Week = 2,
+	Year = 3,
+	NotAvailable = 4,
+}
+
+internal enum AppleStoreProductType
+{
+	NonConsumable = 0,
+	Consumable = 1,
+	NonRenewingSubscription = 2,
+	AutoRenewingSubscription = 3,
+}
+
+internal enum GoogleRetrieveProductsFailureReason
+{
+	BillingServiceDisconnected = 0,
+	BillingServiceUnavailable = 1,
+}
+
+internal enum GoogleBillingResponseCode
+{
+	Ok = 0,
+	UserCanceled = 1,
+	ServiceUnavailable = 2,
+	BillingUnavailable = 3,
+	ItemUnavailable = 4,
+	DeveloperError = 5,
+	FatalError = 6,
+	ItemAlreadyOwned = 7,
+	ItemNotOwned = 8,
+}
+
+public enum EventType
+{
+	MouseDown = 0,
+	MouseUp = 1,
+	MouseMove = 2,
+	MouseDrag = 3,
+	KeyDown = 4,
+	KeyUp = 5,
+	ScrollWheel = 6,
+	Repaint = 7,
+	Layout = 8,
+	DragUpdated = 9,
+	DragPerform = 10,
+	DragExited = 15,
+	Ignore = 11,
+	Used = 12,
+	ValidateCommand = 13,
+	ExecuteCommand = 14,
+	ContextClick = 16,
+	MouseEnterWindow = 20,
+	MouseLeaveWindow = 21,
+	TouchDown = 30,
+	TouchUp = 31,
+	TouchMove = 32,
+	TouchEnter = 33,
+	TouchLeave = 34,
+	TouchStationary = 35,
+	mouseDown = 0,
+	mouseUp = 1,
+	mouseMove = 2,
+	mouseDrag = 3,
+	keyDown = 4,
+	keyUp = 5,
+	scrollWheel = 6,
+	repaint = 7,
+	layout = 8,
+	dragUpdated = 9,
+	dragPerform = 10,
+	ignore = 11,
+	used = 12,
+}
+
+public enum EventModifiers
+{
+	None = 0,
+	Shift = 1,
+	Control = 2,
+	Alt = 4,
+	Command = 8,
+	Numeric = 16,
+	CapsLock = 32,
+	FunctionKey = 64,
+}
+
+public enum PointerType
+{
+	Mouse = 0,
+	Touch = 1,
+	Pen = 2,
+}
+
+public enum GUI.ToolbarButtonSize
+{
+	Fixed = 0,
+	FitToContents = 1,
+}
+
+public enum ScaleMode
+{
+	StretchToFill = 0,
+	ScaleAndCrop = 1,
+	ScaleToFit = 2,
+}
+
+public enum FocusType
+{
+	Native = 0,
+	Keyboard = 1,
+	Passive = 2,
+}
+
+internal enum GUILayoutOption.Type
+{
+	fixedWidth = 0,
+	fixedHeight = 1,
+	minWidth = 2,
+	maxWidth = 3,
+	minHeight = 4,
+	maxHeight = 5,
+	stretchWidth = 6,
+	stretchHeight = 7,
+	alignStart = 8,
+	alignMiddle = 9,
+	alignEnd = 10,
+	alignJustify = 11,
+	equalSize = 12,
+	spacing = 13,
+}
+
+public enum ImagePosition
+{
+	ImageLeft = 0,
+	ImageAbove = 1,
+	ImageOnly = 2,
+	TextOnly = 3,
+}
+
+internal enum TextEditOp
+{
+	MoveLeft = 0,
+	MoveRight = 1,
+	MoveUp = 2,
+	MoveDown = 3,
+	MoveLineStart = 4,
+	MoveLineEnd = 5,
+	MoveTextStart = 6,
+	MoveTextEnd = 7,
+	MovePageUp = 8,
+	MovePageDown = 9,
+	MoveGraphicalLineStart = 10,
+	MoveGraphicalLineEnd = 11,
+	MoveWordLeft = 12,
+	MoveWordRight = 13,
+	MoveParagraphForward = 14,
+	MoveParagraphBackward = 15,
+	MoveToStartOfNextWord = 16,
+	MoveToEndOfPreviousWord = 17,
+	Delete = 18,
+	Backspace = 19,
+	DeleteWordBack = 20,
+	DeleteWordForward = 21,
+	DeleteLineBack = 22,
+	Cut = 23,
+	Paste = 24,
+	ScrollStart = 25,
+	ScrollEnd = 26,
+	ScrollPageUp = 27,
+	ScrollPageDown = 28,
+}
+
+internal enum TextSelectOp
+{
+	SelectLeft = 0,
+	SelectRight = 1,
+	SelectUp = 2,
+	SelectDown = 3,
+	SelectTextStart = 4,
+	SelectTextEnd = 5,
+	SelectPageUp = 6,
+	SelectPageDown = 7,
+	ExpandSelectGraphicalLineStart = 8,
+	ExpandSelectGraphicalLineEnd = 9,
+	SelectGraphicalLineStart = 10,
+	SelectGraphicalLineEnd = 11,
+	SelectWordLeft = 12,
+	SelectWordRight = 13,
+	SelectToEndOfPreviousWord = 14,
+	SelectToStartOfNextWord = 15,
+	SelectParagraphBackward = 16,
+	SelectParagraphForward = 17,
+	Copy = 18,
+	SelectAll = 19,
+	SelectNone = 20,
+}
+
+public enum TextEditor.DblClickSnapping
+{
+	WORDS = 0,
+	PARAGRAPHS = 1,
+}
+
+private enum TextEditor.CharacterType
+{
+	LetterLike = 0,
+	Symbol = 1,
+	Symbol2 = 2,
+	WhiteSpace = 3,
+}
+
+private enum TextEditor.Direction
+{
+	Forward = 0,
+	Backward = 1,
+}
+
+private enum TextEditor.TextEditOp
+{
+	MoveLeft = 0,
+	MoveRight = 1,
+	MoveUp = 2,
+	MoveDown = 3,
+	MoveLineStart = 4,
+	MoveLineEnd = 5,
+	MoveTextStart = 6,
+	MoveTextEnd = 7,
+	MovePageUp = 8,
+	MovePageDown = 9,
+	MoveGraphicalLineStart = 10,
+	MoveGraphicalLineEnd = 11,
+	MoveWordLeft = 12,
+	MoveWordRight = 13,
+	MoveParagraphForward = 14,
+	MoveParagraphBackward = 15,
+	MoveToStartOfNextWord = 16,
+	MoveToEndOfPreviousWord = 17,
+	SelectLeft = 18,
+	SelectRight = 19,
+	SelectUp = 20,
+	SelectDown = 21,
+	SelectTextStart = 22,
+	SelectTextEnd = 23,
+	SelectPageUp = 24,
+	SelectPageDown = 25,
+	ExpandSelectGraphicalLineStart = 26,
+	ExpandSelectGraphicalLineEnd = 27,
+	SelectGraphicalLineStart = 28,
+	SelectGraphicalLineEnd = 29,
+	SelectWordLeft = 30,
+	SelectWordRight = 31,
+	SelectToEndOfPreviousWord = 32,
+	SelectToStartOfNextWord = 33,
+	SelectParagraphBackward = 34,
+	SelectParagraphForward = 35,
+	Delete = 36,
+	Backspace = 37,
+	DeleteWordBack = 38,
+	DeleteWordForward = 39,
+	DeleteLineBack = 40,
+	Cut = 41,
+	Copy = 42,
+	Paste = 43,
+	SelectAll = 44,
+	SelectNone = 45,
+	ScrollStart = 46,
+	ScrollEnd = 47,
+	ScrollPageUp = 48,
+	ScrollPageDown = 49,
+}
+
+private enum TextSelectingUtilities.CharacterType
+{
+	LetterLike = 0,
+	Symbol = 1,
+	Symbol2 = 2,
+	WhiteSpace = 3,
+	NewLine = 4,
+}
+
+private enum TextSelectingUtilities.Direction
+{
+	Forward = 0,
+	Backward = 1,
+}
+
+public enum DependencyStatus
+{
+	Available = 0,
+	UnavailableDisabled = 1,
+	UnavailableInvalid = 2,
+	UnavilableMissing = 3,
+	UnavailablePermission = 4,
+	UnavailableUpdaterequired = 5,
+	UnavailableUpdating = 6,
+	UnavailableOther = 7,
+}
+
+internal enum VariantExtension.KeyOptions
+{
+	UseObjectKeys = 0,
+	UseStringKeys = 1,
+}
+
+internal enum FutureStatus
+{
+	Complete = 0,
+	Pending = 1,
+	Invalid = 2,
+}
+
+public enum InitResult
+{
+	Success = 0,
+	FailedMissingDependency = 1,
+}
+
+public enum LogLevel
+{
+	Verbose = 0,
+	Debug = 1,
+	Info = 2,
+	Warning = 3,
+	Error = 4,
+	Assert = 5,
+}
+
+internal enum GooglePlayServicesAvailability
+{
+	AvailabilityAvailable = 0,
+	AvailabilityUnavailableDisabled = 1,
+	AvailabilityUnavailableInvalid = 2,
+	AvailabilityUnavailableMissing = 3,
+	AvailabilityUnavailablePermissions = 4,
+	AvailabilityUnavailableUpdateRequired = 5,
+	AvailabilityUnavailableUpdating = 6,
+	AvailabilityUnavailableOther = 7,
+}
+
+public enum Variant.Type
+{
+	Null = 0,
+	Int64 = 1,
+	Double = 2,
+	Bool = 3,
+	StaticString = 4,
+	MutableString = 5,
+	Vector = 6,
+	Map = 7,
+	StaticBlob = 8,
+	MutableBlob = 9,
+}
+
+internal enum ObscuredPrefs.DataType
+{
+	Unknown = 0,
+	Int = 5,
+	UInt = 10,
+	String = 15,
+	Float = 20,
+	Double = 25,
+	Long = 30,
+	Bool = 35,
+	ByteArray = 40,
+	Vector2 = 45,
+	Vector3 = 50,
+	Quaternion = 55,
+	Color = 60,
+	Rect = 65,
+}
+
+public enum ObscuredPrefs.DeviceLockLevel
+{
+	None = 0,
+	Soft = 1,
+	Strict = 2,
+}
+
+public enum AndroidAssetPackStatus
+{
+	Unknown = 0,
+	Pending = 1,
+	Downloading = 2,
+	Transferring = 3,
+	Completed = 4,
+	Failed = 5,
+	Canceled = 6,
+	WaitingForWifi = 7,
+	NotInstalled = 8,
+}
+
+public enum AndroidAssetPackError
+{
+	NoError = 0,
+}
+
+public enum JSONBinaryTag
+{
+	Array = 1,
+	Class = 2,
+	Value = 3,
+	IntValue = 4,
+	DoubleValue = 5,
+	BoolValue = 6,
+	FloatValue = 7,
+}
+
+public enum AdjustEnvironment
+{
+	Sandbox = 0,
+	Production = 1,
+}
+
+public enum AdjustLogLevel
+{
+	Verbose = 1,
+	Debug = 2,
+	Info = 3,
+	Warn = 4,
+	Error = 5,
+	Assert = 6,
+	Suppress = 7,
+}
+
+public enum AdjustUrlStrategy
+{
+	Default = 0,
+	DataResidencyEU = 1,
+	DataResidencyTK = 2,
+	DataResidencyUS = 3,
+	India = 4,
+	China = 5,
 }
 
 public enum iTween.EaseType
@@ -29743,1103 +32209,1042 @@ public enum iTween.NamedValueColor
 	_ReflectColor = 3,
 }
 
-public enum Trigger
+public enum DeflateStrategy
 {
-	OnClick = 0,
-	OnHover = 1,
-	OnPress = 2,
-	OnHoverTrue = 3,
-	OnHoverFalse = 4,
-	OnPressTrue = 5,
-	OnPressFalse = 6,
-	OnActivate = 7,
-	OnActivateTrue = 8,
-	OnActivateFalse = 9,
-	OnDoubleClick = 10,
-	OnSelect = 11,
-	OnSelectTrue = 12,
-	OnSelectFalse = 13,
+	Default = 0,
+	Filtered = 1,
+	HuffmanOnly = 2,
 }
 
-public enum Direction
+private enum GZipOutputStream.OutputState
 {
-	Toggle = 0,
-	Forward = 1,
+	Header = 0,
+	Footer = 1,
+	Finished = 2,
+	Closed = 3,
 }
 
-public enum EnableCondition
+public enum KnownColor
 {
-	DoNothing = 0,
-	EnableThenPlay = 1,
-	IgnoreDisabledState = 2,
+	ActiveBorder = 1,
+	ActiveCaption = 2,
+	ActiveCaptionText = 3,
+	AppWorkspace = 4,
+	Control = 5,
+	ControlDark = 6,
+	ControlDarkDark = 7,
+	ControlLight = 8,
+	ControlLightLight = 9,
+	ControlText = 10,
+	Desktop = 11,
+	GrayText = 12,
+	Highlight = 13,
+	HighlightText = 14,
+	HotTrack = 15,
+	InactiveBorder = 16,
+	InactiveCaption = 17,
+	InactiveCaptionText = 18,
+	Info = 19,
+	InfoText = 20,
+	Menu = 21,
+	MenuText = 22,
+	ScrollBar = 23,
+	Window = 24,
+	WindowFrame = 25,
+	WindowText = 26,
+	Transparent = 27,
+	AliceBlue = 28,
+	AntiqueWhite = 29,
+	Aqua = 30,
+	Aquamarine = 31,
+	Azure = 32,
+	Beige = 33,
+	Bisque = 34,
+	Black = 35,
+	BlanchedAlmond = 36,
+	Blue = 37,
+	BlueViolet = 38,
+	Brown = 39,
+	BurlyWood = 40,
+	CadetBlue = 41,
+	Chartreuse = 42,
+	Chocolate = 43,
+	Coral = 44,
+	CornflowerBlue = 45,
+	Cornsilk = 46,
+	Crimson = 47,
+	Cyan = 48,
+	DarkBlue = 49,
+	DarkCyan = 50,
+	DarkGoldenrod = 51,
+	DarkGray = 52,
+	DarkGreen = 53,
+	DarkKhaki = 54,
+	DarkMagenta = 55,
+	DarkOliveGreen = 56,
+	DarkOrange = 57,
+	DarkOrchid = 58,
+	DarkRed = 59,
+	DarkSalmon = 60,
+	DarkSeaGreen = 61,
+	DarkSlateBlue = 62,
+	DarkSlateGray = 63,
+	DarkTurquoise = 64,
+	DarkViolet = 65,
+	DeepPink = 66,
+	DeepSkyBlue = 67,
+	DimGray = 68,
+	DodgerBlue = 69,
+	Firebrick = 70,
+	FloralWhite = 71,
+	ForestGreen = 72,
+	Fuchsia = 73,
+	Gainsboro = 74,
+	GhostWhite = 75,
+	Gold = 76,
+	Goldenrod = 77,
+	Gray = 78,
+	Green = 79,
+	GreenYellow = 80,
+	Honeydew = 81,
+	HotPink = 82,
+	IndianRed = 83,
+	Indigo = 84,
+	Ivory = 85,
+	Khaki = 86,
+	Lavender = 87,
+	LavenderBlush = 88,
+	LawnGreen = 89,
+	LemonChiffon = 90,
+	LightBlue = 91,
+	LightCoral = 92,
+	LightCyan = 93,
+	LightGoldenrodYellow = 94,
+	LightGray = 95,
+	LightGreen = 96,
+	LightPink = 97,
+	LightSalmon = 98,
+	LightSeaGreen = 99,
+	LightSkyBlue = 100,
+	LightSlateGray = 101,
+	LightSteelBlue = 102,
+	LightYellow = 103,
+	Lime = 104,
+	LimeGreen = 105,
+	Linen = 106,
+	Magenta = 107,
+	Maroon = 108,
+	MediumAquamarine = 109,
+	MediumBlue = 110,
+	MediumOrchid = 111,
+	MediumPurple = 112,
+	MediumSeaGreen = 113,
+	MediumSlateBlue = 114,
+	MediumSpringGreen = 115,
+	MediumTurquoise = 116,
+	MediumVioletRed = 117,
+	MidnightBlue = 118,
+	MintCream = 119,
+	MistyRose = 120,
+	Moccasin = 121,
+	NavajoWhite = 122,
+	Navy = 123,
+	OldLace = 124,
+	Olive = 125,
+	OliveDrab = 126,
+	Orange = 127,
+	OrangeRed = 128,
+	Orchid = 129,
+	PaleGoldenrod = 130,
+	PaleGreen = 131,
+	PaleTurquoise = 132,
+	PaleVioletRed = 133,
+	PapayaWhip = 134,
+	PeachPuff = 135,
+	Peru = 136,
+	Pink = 137,
+	Plum = 138,
+	PowderBlue = 139,
+	Purple = 140,
+	Red = 141,
+	RosyBrown = 142,
+	RoyalBlue = 143,
+	SaddleBrown = 144,
+	Salmon = 145,
+	SandyBrown = 146,
+	SeaGreen = 147,
+	SeaShell = 148,
+	Sienna = 149,
+	Silver = 150,
+	SkyBlue = 151,
+	SlateBlue = 152,
+	SlateGray = 153,
+	Snow = 154,
+	SpringGreen = 155,
+	SteelBlue = 156,
+	Tan = 157,
+	Teal = 158,
+	Thistle = 159,
+	Tomato = 160,
+	Turquoise = 161,
+	Violet = 162,
+	Wheat = 163,
+	White = 164,
+	WhiteSmoke = 165,
+	Yellow = 166,
+	YellowGreen = 167,
+	ButtonFace = 168,
+	ButtonHighlight = 169,
+	ButtonShadow = 170,
+	GradientActiveCaption = 171,
+	GradientInactiveCaption = 172,
+	MenuBar = 173,
+	MenuHighlight = 174,
 }
 
-public enum DisableCondition
+public enum PlayMode
 {
-	DoNotDisable = 0,
-	DisableAfterForward = 1,
+	StopSameLayer = 0,
+	StopAll = 4,
 }
 
-public enum PieceType
+public enum QueueMode
 {
-	Servant = 0,
-	Master = 1,
+	CompleteOthers = 0,
+	PlayNow = 2,
 }
 
-public enum FrequencyType
+public enum AnimationBlendMode
 {
-	ONCE = 1,
-	EVERY_TIME = 2,
-	EVERY_TURN = 3,
+	Blend = 0,
+	Additive = 1,
 }
 
-public enum EventAction
+internal enum AnimationEventSource
 {
-	PLAY_TALK = 1,
-	CHANGE_WAR_BOARD_WIN_COND = 2,
-	REINFORCE = 3,
-	MOVE_CAMERA = 5,
-	HIGHLIGHT_SQUARE_INDEX = 7,
-	DEFEAT_PIECE = 8,
-	DIRECT_SKILL = 9,
-	UNLOCK_SQUARE_INDEX = 10,
-	UNLOCK_SQUARE_ROAD = 11,
-	WAIT = 12,
-	UPDATE_BOSS_INFO = 14,
-	BG_ANIMATION = 15,
-	SQUARE_EFFECT_DISP = 16,
-	SQUARE_EFFECT_HIDE = 17,
-	OVERLAY_EFFECT = 19,
-	SET_WARNING_AREA = 20,
-	REMOVE_WARNING_AREA = 21,
-	SET_UI_SQUARE = 22,
-	SET_UI_PIECE = 23,
-	CHANGE_ACTION_TYPE = 25,
-	CHANGE_AI_ID = 26,
-	DIRECT_SKILL_DELAYED_DEAD = 27,
-	EVENT_TUTORIAL = 28,
+	NoSource = 0,
+	Legacy = 1,
+	Animator = 2,
 }
 
-protected enum SwitchingSoundInfoMenu.State
+public enum AvatarTarget
 {
-	INIT = 0,
-	ACTIVE = 1,
+	Root = 0,
+	Body = 1,
+	LeftFoot = 2,
+	RightFoot = 3,
+	LeftHand = 4,
+	RightHand = 5,
 }
 
-public enum DebugItemMenuBase.Group
+public enum AvatarIKGoal
 {
-	ALL = 0,
-	ASSET = 1,
-	VIEW = 2,
-	SOUND = 3,
-	ETC = 4,
+	LeftFoot = 0,
+	RightFoot = 1,
+	LeftHand = 2,
+	RightHand = 3,
 }
 
-protected enum DebugItemRoot.State
+internal enum StateInfoIndex
 {
-	INIT = 0,
-	INPUT = 1,
+	CurrentState = 0,
+	NextState = 1,
+	ExitState = 2,
+	InterruptedState = 3,
 }
 
-public enum USFGOActorBattleActionEvent.ActionType
+public enum AnimatorCullingMode
 {
-	Damage = 0,
-	BuffDebuff = 1,
-	Heal = 2,
-	DamageVoice = 3,
-	SilentDead = 4,
-	SelfDead = 5,
-	MoveToSubMember = 6,
-	FuncSideEffect = 7,
-	TransformServantUpdateUi = 8,
+	AlwaysAnimate = 0,
+	CullUpdateTransforms = 1,
+	CullCompletely = 2,
 }
 
-public enum USFGOActorChangePosition.PosChangeTargetType
+public enum AnimatorUpdateMode
 {
-	ACTOR = 1,
+	Normal = 0,
+	AnimatePhysics = 1,
+	UnscaledTime = 2,
 }
 
-public enum USFGOActorChangePosition.PosSetType
+public enum HumanBodyBones
 {
-	TARGET = 0,
-	TARGET_OTHER_FRONT = 1,
-	TARGET_OTHER_BACK = 2,
+	Hips = 0,
+	LeftUpperLeg = 1,
+	RightUpperLeg = 2,
+	LeftLowerLeg = 3,
+	RightLowerLeg = 4,
+	LeftFoot = 5,
+	RightFoot = 6,
+	Spine = 7,
+	Chest = 8,
+	UpperChest = 54,
+	Neck = 9,
+	Head = 10,
+	LeftShoulder = 11,
+	RightShoulder = 12,
+	LeftUpperArm = 13,
+	RightUpperArm = 14,
+	LeftLowerArm = 15,
+	RightLowerArm = 16,
+	LeftHand = 17,
+	RightHand = 18,
+	LeftToes = 19,
+	RightToes = 20,
+	LeftEye = 21,
+	RightEye = 22,
+	Jaw = 23,
+	LeftThumbProximal = 24,
+	LeftThumbIntermediate = 25,
+	LeftThumbDistal = 26,
+	LeftIndexProximal = 27,
+	LeftIndexIntermediate = 28,
+	LeftIndexDistal = 29,
+	LeftMiddleProximal = 30,
+	LeftMiddleIntermediate = 31,
+	LeftMiddleDistal = 32,
+	LeftRingProximal = 33,
+	LeftRingIntermediate = 34,
+	LeftRingDistal = 35,
+	LeftLittleProximal = 36,
+	LeftLittleIntermediate = 37,
+	LeftLittleDistal = 38,
+	RightThumbProximal = 39,
+	RightThumbIntermediate = 40,
+	RightThumbDistal = 41,
+	RightIndexProximal = 42,
+	RightIndexIntermediate = 43,
+	RightIndexDistal = 44,
+	RightMiddleProximal = 45,
+	RightMiddleIntermediate = 46,
+	RightMiddleDistal = 47,
+	RightRingProximal = 48,
+	RightRingIntermediate = 49,
+	RightRingDistal = 50,
+	RightLittleProximal = 51,
+	RightLittleIntermediate = 52,
+	RightLittleDistal = 53,
+	LastBone = 55,
 }
 
-public enum USFGOActorUpdateScale.UpdateType
-{
-	RATIO = 0,
-	OVERWRITE = 1,
-}
-
-public enum FGOTarget
-{
-	ActorObject = 0,
-	EnemyObject = 1,
-	Zero = 2,
-	Camera = 3,
-	Actor1 = 4,
-	Actor2 = 5,
-	Actor3 = 6,
-	Actor4 = 7,
-	Actor5 = 8,
-	Actor6 = 9,
-	Node = 10,
-}
-
-public enum USFGOCameraEffectEvent.CameraEffectType
-{
-	Bloom = 0,
-	MotionBlur = 1,
-	Vignet = 2,
-	Grayscale = 3,
-}
-
-public enum USFGOChangeShaderProperty.PropertyType
-{
-	Float = 0,
-	Int = 1,
-}
-
-public enum USFGOCheckPlayerTypeFlip.FGOFlipPlayerType
-{
-	None = 0,
-	Player = 1,
-	Enemy = 2,
-}
-
-public enum USFGOChrAlphaChangeEvent.ChangeTarget
-{
-	Actor = 0,
-	PlayerSide = 1,
-	EnemySide = 2,
-	All = 3,
-	Other = 4,
-}
-
-public enum USFGOChrBulrEvent.MODE
-{
-	BULR_VALID = 0,
-	BULR_LAG = 1,
-}
-
-public enum USFGOChrColorChange2Event.ChangeTarget
-{
-	Actor = 0,
-	PlayerSide = 1,
-	EnemySide = 2,
-	All = 3,
-	Other = 4,
-}
-
-public enum USFGOChrColorChangeEvent.ChangeTarget
-{
-	Actor = 0,
-	PlayerSide = 1,
-	EnemySide = 2,
-	All = 3,
-	Other = 4,
-}
-
-public enum USFGOChrDispChangeEvent.ChangeTarget
-{
-	Actor = 0,
-	PlayerSide = 1,
-	EnemySide = 2,
-	All = 3,
-}
-
-public enum USFGOChrShadowColorSetEvent.ChangeTarget
-{
-	Actor = 0,
-	PlayerSide = 1,
-	EnemySide = 2,
-	All = 3,
-}
-
-public enum USFGOCreateEffectEvent.EffectCategory
-{
-	ServantNoblePhantasm = 0,
-	Servant = 1,
-	Weapon = 2,
-	Common = 3,
-}
-
-public enum USFGOCreateEffectEvent.EffectTarget
-{
-	Actor = 0,
-	Target = 1,
-	DamageTagets = 2,
-	BuffTargets = 3,
-	DebuffTargets = 4,
-	PlayerParty = 5,
-	EnemyParty = 6,
-	All = 7,
-}
-
-public enum USFGOObjectFlip.FGOFlipTarget
+public enum Axis
 {
 	None = 0,
 	X = 1,
 	Y = 2,
 	Z = 4,
-	X_Y = 3,
-	X_Z = 5,
-	Y_Z = 6,
-	X_Y_Z = 7,
 }
 
-public enum USFGOPlayAudioEvent.AudioCategory
+public enum InstantiationKind
 {
-	ServantNoblePhantasm = 0,
-	ServantBattle = 1,
-	ServantNormal = 2,
-	Common = 3,
-	BattleCommon = 4,
-	Weapon = 5,
+	Activator = 0,
+	PropertyBagOverride = 1,
+	NotInstantiatable = 2,
 }
 
-public enum USFGOPlayAudioEvent.AudioType
+private enum BigInteger.GetBytesMode
 {
-	Auto = 0,
-	SE = 1,
-	Voice = 2,
-	VoiceNotStop = 3,
+	AllocateArray = 0,
+	Count = 1,
+	Span = 2,
 }
 
-public enum USFGOResetCharacterPositionEvent.CharacterPosition
+public enum InitializationFailureReason
 {
-	ResetAll = 0,
-	ResetPlayers = 1,
-	ResetEnemies = 2,
+	PurchasingUnavailable = 0,
+	NoProductsAvailable = 1,
+	AppNotKnown = 2,
 }
 
-public enum USFGOSetAudioGroupIndexConditional.WeightIndex.VoiceStrParam
+public enum PayoutType
 {
-	SVT_ID = 0,
-	VOICE_PREFIX = 1,
-	VOICE_ID = 2,
-	TERM = 3,
+	Other = 0,
+	Currency = 1,
+	Item = 2,
+	Resource = 3,
 }
 
-public enum USFGOSetAudioGroupIndexConditional.AudioGroupData.ApplySide
+public enum ProductType
 {
-	ALL = 0,
-	PLAYER = 1,
-	ENEMY = 2,
+	Consumable = 0,
+	NonConsumable = 1,
+	Subscription = 2,
 }
 
-public enum USFGOTargetEffectSwitchEvent.EffectSwitch
+public enum PurchaseFailureReason
 {
-	Off = 0,
-	On = 1,
+	PurchasingUnavailable = 0,
+	ExistingPurchasePending = 1,
+	ProductUnavailable = 2,
+	SignatureInvalid = 3,
+	UserCancelled = 4,
+	PaymentDeclined = 5,
+	DuplicateTransaction = 6,
+	Unknown = 7,
 }
 
-public enum USFGOTargetEffectSwitchEvent.SwitchType
+public enum PurchaseProcessingResult
 {
-	SwitchActive = 0,
-	SwitchParticle = 1,
+	Complete = 0,
+	Pending = 1,
 }
 
-public enum USFGOToggleImageEffect.ImageEffectType
+internal enum TelemetryMetricTypes
 {
-	Constrast = 0,
-	Saturation = 1,
+	Gauge = 0,
+	Sum = 1,
+	Histogram = 2,
 }
 
-public enum EasingFunction.Ease
+public enum XObjectChange
 {
-	EaseInQuad = 0,
-	EaseOutQuad = 1,
-	EaseInOutQuad = 2,
-	EaseInCubic = 3,
-	EaseOutCubic = 4,
-	EaseInOutCubic = 5,
-	EaseInQuart = 6,
-	EaseOutQuart = 7,
-	EaseInOutQuart = 8,
-	EaseInQuint = 9,
-	EaseOutQuint = 10,
-	EaseInOutQuint = 11,
-	EaseInSine = 12,
-	EaseOutSine = 13,
-	EaseInOutSine = 14,
-	EaseInExpo = 15,
-	EaseOutExpo = 16,
-	EaseInOutExpo = 17,
-	EaseInCirc = 18,
-	EaseOutCirc = 19,
-	EaseInOutCirc = 20,
-	Linear = 21,
-	Spring = 22,
-	EaseInBounce = 23,
-	EaseOutBounce = 24,
-	EaseInOutBounce = 25,
-	EaseInBack = 26,
-	EaseOutBack = 27,
-	EaseInOutBack = 28,
-	EaseInElastic = 29,
-	EaseOutElastic = 30,
-	EaseInOutElastic = 31,
-	CustomCurve = 32,
+	Add = 0,
+	Remove = 1,
+	Name = 2,
+	Value = 3,
 }
 
-public enum FGOActorAnimation.ANIMATIONNAME
-{
-	NONE = 0,
-	attack_a = 1,
-	attack_b = 2,
-	attack_q = 3,
-	attack_gen = 4,
-	spell = 5,
-	damage_01 = 6,
-	step_front = 7,
-	step_back = 8,
-	wait = 9,
-	treasure_arms = 10,
-	death_01 = 11,
-	attack_ex = 12,
-	attack_a02 = 13,
-	attack_b02 = 14,
-	attack_q02 = 15,
-	attack_gen02 = 16,
-	attack_ex02 = 17,
-	attack_a03 = 18,
-	attack_b03 = 19,
-	attack_q03 = 20,
-	attack_gen03 = 21,
-	attack_ex03 = 22,
-	spell02 = 23,
-	spell03 = 24,
-	step_back02 = 25,
-	step_front02 = 26,
-	attack_a04 = 27,
-	attack_b04 = 28,
-	attack_q04 = 29,
-	attack_gen04 = 30,
-	attack_ex04 = 31,
-	damage_02 = 32,
-	spell_loop = 33,
-	treasureArms1_a = 34,
-	treasureArms2_a = 35,
-	treasureArms3_a = 36,
-	treasureArms4_a = 37,
-	treasureArms5_a = 38,
-	wait02 = 39,
-	wait03 = 40,
-	attack_a05 = 41,
-	attack_b05 = 42,
-	attack_q05 = 43,
-	attack_gen05 = 44,
-	attack_ex05 = 45,
-	sleep_wait01 = 46,
-	spell04 = 47,
-	spell05 = 48,
-	counter_wait01 = 49,
-	counter_attack01 = 50,
-}
-
-public enum FGOActorBulr.MODE
-{
-	BULR_VALID = 0,
-	BULR_LAG = 1,
-}
-
-public enum FGOActorChangeLimitCount.ACTION
-{
-	CHANGE = 0,
-	CHANGE_BASE = 1,
-	RESET = 2,
-}
-
-public enum FGOActorCheck.CHECK
-{
-	NONE = 0,
-	PREVATTACK_ME = 1,
-	NEXTATTACK_ME = 2,
-	ISPLAYER = 3,
-	ISENEMY = 4,
-	STEP_IN = 5,
-	ISSHADOW = 6,
-	ISMONSTER = 7,
-	ISDEAD = 8,
-	IS_SUCCEEDED_MOVING_TO_SUBMEMBER = 9,
-}
-
-public enum FGOActorCutIn.TYPE
-{
-	RTLD = 1,
-	LTRD = 2,
-	CENTER = 3,
-	INPUT_NAME = 4,
-}
-
-public enum FGOActorEffect.PROC
-{
-	NAME_INPUT = 0,
-	DAMAGE_1 = 1,
-	DAMAGE_2 = 2,
-	DAMAGE_3 = 3,
-	DAMAGE_4 = 4,
-	DAMAGE_5 = 5,
-	DAMAGE_6 = 6,
-}
-
-public enum FGOActorLogic.LOGIC
-{
-	NONE = 0,
-	END_FINISH = 1,
-	ON_SKIP_VOICE = 2,
-	OFF_SKIP_VOICE = 3,
-	DROP_ITEM = 4,
-	ON_DRESS = 5,
-	OFF_DRESS = 6,
-	LOAD_CALL = 7,
-	STOP_VOICE = 8,
-	ON_SKIP_DEAD = 9,
-	OFF_SKIP_DEAD = 10,
-}
-
-public enum FGOActorMotion.MOTION
-{
-	NONE = 0,
-	JUMP = 1,
-	STEP = 2,
-	BACKSTEP = 3,
-	DASHATTACK = 4,
-	STEP_WAIT = 5,
-	TREASURE_ARMS = 6,
-	CANCEL = 7,
-	STEP_USE_PARAM = 8,
-	BACKSTEP_USE_PARAM = 9,
-}
-
-public enum FGOActorParticleEffectSwitch.PARTICLE_SWITCH_TYPE
-{
-	STOP = 0,
-	PLAY = 1,
-}
-
-public enum FGOActorSetAttackTarget.TARGET_POS
-{
-	LEFT = 0,
-	CENTER = 1,
-	RIGHT = 2,
-}
-
-public enum FGOActorShowMessage.TYPE
-{
-	NOBLE_NAME = 0,
-	COMMON = 1,
-}
-
-public enum FGOActorSwitchWidget.WidgetType
-{
-	ShadowObject = 0,
-	SpecialShadowObject = 1,
-	ShadowServantAura = 2,
-	Find = 3,
-}
-
-public enum FGOActorSystemLogic.LOGIC
-{
-	NONE = 0,
-	ON_SKIP_DEAD = 1,
-	OFF_SKIP_DEAD = 2,
-}
-
-public enum FGOActorVoiceDesignate.CheckType
+public enum LoadOptions
 {
 	None = 0,
-	Skill = 1,
+	PreserveWhitespace = 1,
+	SetBaseUri = 2,
+	SetLineInfo = 4,
 }
 
-public enum FGOBattleStatusCheck.CHECK
-{
-	NONE = 0,
-	CRITICAL_PERFORMANCE = 1,
-}
-
-public enum FGOCheckAttackSide.CheckType
-{
-	NEXT = 0,
-	TURN_START = 1,
-	TURN_END = 2,
-	NEXT_ACTION_ATTACKED = 3,
-	PREV_ACTION_ATTACKED = 4,
-}
-
-public enum FGOCheckBattleFaze.FAZE
-{
-	TACTICAL = 0,
-	BATTLE = 1,
-}
-
-public enum FGOEffectFirstTimeScale.PROC
-{
-	SET = 0,
-	RESET = 1,
-}
-
-public enum FGOFieldGimmick.STATE
-{
-	SET = 0,
-	START = 1,
-	END = 2,
-	WAIT_VOICE = 3,
-}
-
-public enum FGOFieldLogic.PROC
-{
-	START_REPLACE = 0,
-	LOAD_TARGETACTOR = 1,
-	LOAD_REPLACE = 2,
-	PT_STEPOUT = 3,
-	LOAD_PT = 4,
-	LOAD_FIELD_CALL = 5,
-	BEFORE_FIELD_CALL_EFFECT = 6,
-	AFTER_FIELD_CALL_EFFECT = 7,
-	DISPLAY_DEFENCE_TARGET = 8,
-}
-
-public enum FGOFieldSkillCutIn.ActionType
-{
-	Load = 0,
-	Play = 1,
-	Release = 2,
-	Finish = 3,
-	Skip = 4,
-}
-
-public enum FGOGetBattleParam.PARAM
-{
-	WAVE = 0,
-	TURN = 1,
-	EFFECT_BGM_ID = 2,
-}
-
-public enum FGOLogic.PROC
-{
-	INIT_QUEST = 0,
-	DRAW_COMMAND = 1,
-	CHECK_COMBO = 2,
-	INIT_BATTLETURN = 3,
-	SELECT_TACTICAL = 4,
-	END_BATTLETURN = 5,
-	CHECK_ENDBATTLE = 6,
-	TURN_PROGRSSING = 7,
-	CHECK_BATTLEEND = 8,
-	TEST_INITBATTLETURN = 9,
-	LOAD_N_STAGE = 10,
-	ENTRY_SUBMEMBER = 11,
-	CHECK_NEXTBATTLE = 12,
-	SET_NEXTBATTLE = 13,
-	START_BATTLETURN = 14,
-	PROC_WIN = 15,
-	PROC_LOSE = 16,
-	END_BATTLE = 17,
-	CONNECT_BATTLEEND = 18,
-	SHOW_RESULT = 19,
-	LOAD_NEXT = 20,
-	START_CONTINUE = 21,
-	RECOVERPT = 22,
-	START_COMMAND = 23,
-	ENTRY_CHECK = 24,
-	ENTRY_WAIT = 25,
-	LOSE_PERFORMANCE = 26,
-	FIELDAI_STARTWAVE = 27,
-	BOOSTITEM = 28,
-	WAVEBUFF = 29,
-	FIRSTENTRY = 30,
-	ENEMYAI_WAVE = 31,
-	FIELDAI_TURNSTART = 32,
-	START_CONTINUE_TURN = 33,
-	ENTRY_CHECK_TACTICAL = 34,
-	ENTRY_WAIT_TACTICAL = 35,
-	RECOVERPT_TACTICAL = 36,
-	QUEST_BEHAVIOR = 37,
-	GIMMICK = 38,
-	STAR_DIRECTION = 39,
-	ENTRY_CHECK_EVENT = 40,
-	DROP_ITEM_COLLECTION = 41,
-	FORCE_DROP_ITEM = 42,
-	CHECK_ENDBATTLE_IGNORE_TURN = 43,
-	CHECK_REMAIN_BATTLE_END_WAVE = 44,
-	BOOST_SKILL = 45,
-	ASSIST = 46,
-	FIELDAI_ENTRY = 47,
-	PRECHECK_ENDBATTLE = 48,
-	SERVANT_AI_WAVE = 49,
-	SERVANT_AI_TURN_START = 50,
-	TURN_START_FUNCTION = 51,
-	SERVANT_AI_BEFORE_MOVE_WAVE = 52,
-	FIELDAI_BEFORE_MOVE_WAVE = 53,
-	PROGRESS_INTERVAL_TURN = 54,
-	LOAD_N_STAGE_PLAYER = 55,
-	START_CONTINUE_WAVE_RESTART = 56,
-	INITIALIZE_WAVE_RESTART = 57,
-	STAGE_CUTIN = 58,
-	WAIT_DROP_ITEM_COLLECT = 59,
-	FIELD_AI_BEFORE_WAVE_START_ANIMATION = 60,
-	START_CONTINUE_INTERRUPTION = 61,
-}
-
-public enum FGOPerformance.Effect
-{
-	QUEST_START = 0,
-	QUEST_CLEAR = 1,
-	QUEST_OVER = 2,
-	BATTLE_START = 3,
-	BATTLE_WIN = 4,
-	BATTLE_LOSE = 5,
-	ACTION_BATTLE = 6,
-	END_SELECTCOMMAND = 7,
-	ACTION_ABILITY = 8,
-	MOVE_TACTICAL = 9,
-	MOVE_COMMAND = 10,
-	MOVE_ACTION = 11,
-	MOVE_NEXTBATTLE = 12,
-	PROC_BUFF = 13,
-	RAIDATTACK = 14,
-	UPDATE_VIEW = 15,
-	PLAY_SHIFTSERVANT = 16,
-	PLAY_SHIFTEFFECT = 17,
-	SET_TIMEACCELERATION = 18,
-	RESET_TIMEACCELERATION = 19,
-	PLAY_CHANGESERVANT = 20,
-	PLAY_CHANGEBG = 21,
-	UPDATE_FOV = 22,
-	CHECK_RAIDATTACK = 23,
-	DOWNLOAD_ASSETBUNDLE = 24,
-	SAVE_PART_ACTION_TIMEACCELERATION = 25,
-	RESET_PART_ACTION_TIMEACCELERATION = 26,
-	PLAY_SHIFTGAUGECHANGE = 27,
-	PLAY_SHIFTGAUGECHANGE_SERVANT = 28,
-	SET_TIMEACCELERATION_DIFFERENT = 29,
-	FORCE_RESET_TIMEACCELERATION = 30,
-	PREV_TACTICAL = 31,
-	LOSS_COMMAND_SPELL = 32,
-	MOVE_TO_SUBMEMBER = 33,
-	START_FADE_OUT = 34,
-	PREV_WAVE_START_ANIMATION_AFTER_AI = 35,
-}
-
-public enum FGOPlayStarDirection.DirectionType
-{
-	Refresh = 0,
-	Recovery = 1,
-	Add = 2,
-}
-
-public enum FGOQuestStartEffect.ActionType
-{
-	Load = 0,
-	Play = 1,
-	Release = 2,
-}
-
-public enum FGOSetPopupDisplayLayerType.PopupLayerType
-{
-	e2DUI = 0,
-	eFront2DUI = 1,
-}
-
-public enum FGOSpecifiedBattleStartVoice.TYPE
-{
-	CHECK = 0,
-	PLAY = 1,
-}
-
-public enum GetAppearActorObject.SIDE
-{
-	PLAYER = 0,
-	ENEMY = 1,
-}
-
-public enum ManagerConfigCheck.Kind
-{
-	USE_DEBUG_COMMAND = 0,
-}
-
-public enum ShowDefenceTargetAddBuffEffect.AddType
-{
-	NoblePhantasm = 0,
-}
-
-public enum iTweenFsmActionSimple.AxisRestriction
-{
-	none = 0,
-	x = 1,
-	y = 2,
-	z = 3,
-	xy = 4,
-	xz = 5,
-	yz = 6,
-}
-
-public enum AnimateFsmAction.Calculation
+public enum SaveOptions
 {
 	None = 0,
-	SetValue = 1,
-	AddToValue = 2,
-	SubtractFromValue = 3,
-	SubtractValueFromCurve = 4,
-	MultiplyValue = 5,
-	DivideValue = 6,
-	DivideCurveByValue = 7,
+	DisableFormatting = 1,
+	OmitDuplicateNamespaces = 2,
 }
 
-public enum CurveFsmAction.Calculation
+internal enum UnityWebRequest.UnityWebRequestMethod
+{
+	Get = 0,
+	Post = 1,
+	Put = 2,
+	Head = 3,
+	Custom = 4,
+}
+
+internal enum UnityWebRequest.UnityWebRequestError
+{
+	OK = 0,
+	OKCached = 1,
+	Unknown = 2,
+	SDKError = 3,
+	UnsupportedProtocol = 4,
+	MalformattedUrl = 5,
+	CannotResolveProxy = 6,
+	CannotResolveHost = 7,
+	CannotConnectToHost = 8,
+	AccessDenied = 9,
+	GenericHttpError = 10,
+	WriteError = 11,
+	ReadError = 12,
+	OutOfMemory = 13,
+	Timeout = 14,
+	HTTPPostError = 15,
+	SSLCannotConnect = 16,
+	Aborted = 17,
+	TooManyRedirects = 18,
+	ReceivedNoData = 19,
+	SSLNotSupported = 20,
+	FailedToSendData = 21,
+	FailedToReceiveData = 22,
+	SSLCertificateError = 23,
+	SSLCipherNotAvailable = 24,
+	SSLCACertError = 25,
+	UnrecognizedContentEncoding = 26,
+	LoginFailed = 27,
+	SSLShutdownFailed = 28,
+	RedirectLimitInvalid = 29,
+	InvalidRedirect = 30,
+	CannotModifyRequest = 31,
+	HeaderNameContainsInvalidCharacters = 32,
+	HeaderValueContainsInvalidCharacters = 33,
+	CannotOverrideSystemHeaders = 34,
+	AlreadySent = 35,
+	InvalidMethod = 36,
+	NotImplemented = 37,
+	NoInternetConnection = 38,
+	DataProcessingError = 39,
+	InsecureConnectionNotAllowed = 40,
+}
+
+public enum UnityWebRequest.Result
+{
+	InProgress = 0,
+	Success = 1,
+	ConnectionError = 2,
+	ProtocolError = 3,
+	DataProcessingError = 4,
+}
+
+private enum DependencyTreeInitializeOrderSorter.ExplorationMark
 {
 	None = 0,
-	AddToValue = 1,
-	SubtractFromValue = 2,
-	SubtractValueFromCurve = 3,
-	MultiplyValue = 4,
-	DivideValue = 5,
-	DivideCurveByValue = 6,
+	Viewed = 1,
+	Sorted = 2,
 }
 
-public enum EaseFsmAction.EaseType
+public enum NotificationStyle
 {
-	easeInQuad = 0,
-	easeOutQuad = 1,
-	easeInOutQuad = 2,
-	easeInCubic = 3,
-	easeOutCubic = 4,
-	easeInOutCubic = 5,
-	easeInQuart = 6,
-	easeOutQuart = 7,
-	easeInOutQuart = 8,
-	easeInQuint = 9,
-	easeOutQuint = 10,
-	easeInOutQuint = 11,
-	easeInSine = 12,
-	easeOutSine = 13,
-	easeInOutSine = 14,
-	easeInExpo = 15,
-	easeOutExpo = 16,
-	easeInOutExpo = 17,
-	easeInCirc = 18,
-	easeOutCirc = 19,
-	easeInOutCirc = 20,
-	linear = 21,
-	spring = 22,
-	bounce = 23,
-	easeInBack = 24,
-	easeOutBack = 25,
-	easeInOutBack = 26,
-	elastic = 27,
-	punch = 28,
+	None = 0,
+	BigPictureStyle = 1,
+	BigTextStyle = 2,
 }
 
-public enum FsmStateActionAnimatorBase.AnimatorFrameUpdateSelector
+public enum GroupAlertBehaviours
 {
-	OnUpdate = 0,
-	OnAnimatorMove = 1,
-	OnAnimatorIK = 2,
+	GroupAlertAll = 0,
+	GroupAlertSummary = 1,
+	GroupAlertChildren = 2,
 }
 
-public enum ArrayTransferValue.ArrayTransferType
+public enum Importance
 {
-	Copy = 0,
-	Cut = 1,
-	nullify = 2,
+	None = 0,
+	Low = 2,
+	Default = 3,
+	High = 4,
 }
 
-public enum ArrayTransferValue.ArrayPasteType
+public enum LockScreenVisibility
 {
-	AsFirstItem = 0,
-	AsLastItem = 1,
-	InsertAtSameIndex = 2,
-	ReplaceAtSameIndex = 3,
+	Private = 0,
+	Public = 1,
 }
 
-public enum BaseUpdateAction.UpdateType
+public enum Asn1EndOfIndefiniteLengthNodeType
 {
-	OnUpdate = 0,
-	OnLateUpdate = 1,
-	OnFixedUpdate = 2,
+	EndOfStream = 0,
+	EndOfNodeFooter = 1,
+	NotEnd = 2,
 }
 
-public enum BoolOperator.Operation
+public enum GooglePurchaseState
 {
-	AND = 0,
-	NAND = 1,
-	OR = 2,
-	XOR = 3,
+	Purchased = 0,
+	Cancelled = 1,
+	Refunded = 2,
+	Deferred = 4,
 }
 
-public enum ConvertFloatToInt.FloatRounding
+public enum ForceMode
 {
-	RoundDown = 0,
-	RoundUp = 1,
-	Nearest = 2,
+	Force = 0,
+	Acceleration = 5,
+	Impulse = 1,
+	VelocityChange = 2,
 }
 
-public enum Assert.AssertType
+public enum CollisionFlags
 {
-	IsTrue = 0,
-	IsFalse = 1,
+	None = 0,
+	Sides = 1,
+	Above = 2,
+	Below = 4,
+	CollidedSides = 1,
+	CollidedAbove = 2,
+	CollidedBelow = 4,
 }
 
-public enum DebugDrawShape.ShapeType
+public enum QueryTriggerInteraction
+{
+	UseGlobal = 0,
+	Ignore = 1,
+	Collide = 2,
+}
+
+internal enum CollisionPairHeaderFlags
+{
+	RemovedActor = 1,
+	RemovedOtherActor = 2,
+}
+
+internal enum CollisionPairFlags
+{
+	RemovedShape = 1,
+	RemovedOtherShape = 2,
+	ActorPairHasFirstTouch = 4,
+	ActorPairLostTouch = 8,
+	InternalHasImpulses = 16,
+	InternalContactsAreFlipped = 32,
+}
+
+internal enum CollisionPairEventFlags
+{
+	SolveContacts = 1,
+	ModifyContacts = 2,
+	NotifyTouchFound = 4,
+	NotifyTouchPersists = 8,
+	NotifyTouchLost = 16,
+	NotifyTouchCCD = 32,
+	NotifyThresholdForceFound = 64,
+	NotifyThresholdForcePersists = 128,
+	NotifyThresholdForceLost = 256,
+	NotifyContactPoint = 512,
+	DetectDiscreteContact = 1024,
+	DetectCCDContact = 2048,
+	PreSolverVelocity = 4096,
+	PostSolverVelocity = 8192,
+	ContactEventPose = 16384,
+	NextFree = 32768,
+	ContactDefault = 1025,
+	TriggerDefault = 1044,
+}
+
+public enum GlyphClassDefinitionType
+{
+	Undefined = 0,
+	Base = 1,
+	Ligature = 2,
+	Mark = 3,
+	Component = 4,
+}
+
+public enum GlyphLoadFlags
+{
+	LOAD_DEFAULT = 0,
+	LOAD_NO_SCALE = 1,
+	LOAD_NO_HINTING = 2,
+	LOAD_RENDER = 4,
+	LOAD_NO_BITMAP = 8,
+	LOAD_FORCE_AUTOHINT = 32,
+	LOAD_MONOCHROME = 4096,
+	LOAD_NO_AUTOHINT = 32768,
+	LOAD_COLOR = 1048576,
+	LOAD_COMPUTE_METRICS = 2097152,
+	LOAD_BITMAP_METRICS_ONLY = 4194304,
+}
+
+public enum FontEngineError
+{
+	Success = 0,
+	Invalid_File_Path = 1,
+	Invalid_File_Format = 2,
+	Invalid_File_Structure = 3,
+	Invalid_File = 4,
+	Invalid_Table = 8,
+	Invalid_Glyph_Index = 16,
+	Invalid_Character_Code = 17,
+	Invalid_Pixel_Size = 23,
+	Invalid_Library = 33,
+	Invalid_Face = 35,
+	Invalid_Library_or_Face = 41,
+	Atlas_Generation_Cancelled = 100,
+	Invalid_SharedTextureData = 101,
+	OpenTypeLayoutLookup_Mismatch = 116,
+}
+
+public enum GlyphRenderMode
+{
+	SMOOTH_HINTED = 4121,
+	SMOOTH = 4117,
+	COLOR_HINTED = 69656,
+	COLOR = 69652,
+	RASTER_HINTED = 4122,
+	RASTER = 4118,
+	SDF = 4134,
+	SDF8 = 8230,
+	SDF16 = 16422,
+	SDF32 = 32806,
+	SDFAA_HINTED = 4169,
+	SDFAA = 4165,
+}
+
+public enum GlyphPackingMode
+{
+	BestShortSideFit = 0,
+	BestLongSideFit = 1,
+	BestAreaFit = 2,
+	BottomLeftRule = 3,
+	ContactPointRule = 4,
+}
+
+public enum FontFeatureLookupFlags
+{
+	None = 0,
+	IgnoreLigatures = 4,
+	IgnoreSpacingAdjustments = 256,
+}
+
+public enum RigidbodyConstraints2D
+{
+	None = 0,
+	FreezePositionX = 1,
+	FreezePositionY = 2,
+	FreezeRotation = 4,
+	FreezePosition = 3,
+	FreezeAll = 7,
+}
+
+public enum RigidbodyType2D
+{
+	Dynamic = 0,
+	Kinematic = 1,
+	Static = 2,
+}
+
+public enum ForceMode2D
+{
+	Force = 0,
+	Impulse = 1,
+}
+
+public enum ParticleSystemRenderMode
+{
+	Billboard = 0,
+	Stretch = 1,
+	HorizontalBillboard = 2,
+	VerticalBillboard = 3,
+	Mesh = 4,
+	None = 5,
+}
+
+public enum ParticleSystemCurveMode
+{
+	Constant = 0,
+	Curve = 1,
+	TwoCurves = 2,
+	TwoConstants = 3,
+}
+
+public enum ParticleSystemGradientMode
+{
+	Color = 0,
+	Gradient = 1,
+	TwoColors = 2,
+	TwoGradients = 3,
+	RandomColor = 4,
+}
+
+public enum ParticleSystemSimulationSpace
+{
+	Local = 0,
+	World = 1,
+	Custom = 2,
+}
+
+public enum ParticleSystemStopBehavior
+{
+	StopEmittingAndClear = 0,
+	StopEmitting = 1,
+}
+
+public enum ParticleSystemScalingMode
+{
+	Hierarchy = 0,
+	Local = 1,
+	Shape = 2,
+}
+
+public enum ParticleSystemStopAction
+{
+	None = 0,
+	Disable = 1,
+	Destroy = 2,
+	Callback = 3,
+}
+
+public enum ParticleSystemCullingMode
+{
+	Automatic = 0,
+	PauseAndCatchup = 1,
+	Pause = 2,
+	AlwaysSimulate = 3,
+}
+
+public enum ParticleSystemCustomData
+{
+	Custom1 = 0,
+	Custom2 = 1,
+}
+
+public enum ParticleSystemForceFieldShape
 {
 	Sphere = 0,
-	Cube = 1,
-	WireSphere = 2,
-	WireCube = 3,
+	Hemisphere = 1,
+	Cylinder = 2,
+	Box = 3,
 }
 
-public enum FloatOperator.Operation
+internal enum PlatformLogLevel
 {
-	Add = 0,
-	Subtract = 1,
-	Multiply = 2,
-	Divide = 3,
-	Min = 4,
-	Max = 5,
+	Verbose = 0,
+	Debug = 1,
+	Info = 2,
+	Warning = 3,
+	Error = 4,
+	Assert = 5,
 }
 
-public enum GetAxisVector.AxisPlane
+public enum CTouch.TCH_STATE
 {
-	XZ = 0,
-	XY = 1,
-	YZ = 2,
+	NONE = 0,
+	PUSH = 1,
+	KEEP = 2,
+	RELEASE = 3,
 }
 
-public enum GetDeviceRoll.BaseOrientation
+public enum Easing.TYPE
 {
-	Portrait = 0,
-	LandscapeLeft = 1,
-	LandscapeRight = 2,
+	LINER = 0,
+	QUADRATIC_IN = 1,
+	QUADRATIC_OUT = 2,
+	QUADRATIC_IN_OUT = 3,
+	CUBIC_IN = 4,
+	CUBIC_OUT = 5,
+	CUBIC_IN_OUT = 6,
+	QUARTIC_IN = 7,
+	QUARTIC_OUT = 8,
+	QUARTIC_IN_OUT = 9,
+	QUINTIC_IN = 10,
+	QUINTIC_OUT = 11,
+	QUINTIC_IN_OUT = 12,
+	SINUSOIDAL_IN = 13,
+	SINUSOIDAL_OUT = 14,
+	SINUSOIDAL_IN_OUT = 15,
+	EXPONENTIAL_IN = 16,
+	EXPONENTIAL_OUT = 17,
+	EXPONENTIAL_IN_OUT = 18,
+	CIRCULAR_IN = 19,
+	CIRCULAR_OUT = 20,
+	CIRCULAR_IN_OUT = 21,
 }
 
-public enum GetTimeInfo.TimeInfo
+public enum FontStyle
 {
-	DeltaTime = 0,
-	TimeScale = 1,
-	SmoothDeltaTime = 2,
-	TimeInCurrentState = 3,
-	TimeSinceStartup = 4,
-	TimeSinceLevelLoad = 5,
-	RealTimeSinceStartup = 6,
-	RealTimeInCurrentState = 7,
+	Normal = 0,
+	Bold = 1,
+	Italic = 2,
+	BoldAndItalic = 3,
 }
 
-public enum IntOperator.Operation
+internal enum TextGenerationError
 {
-	Add = 0,
-	Subtract = 1,
-	Multiply = 2,
-	Divide = 3,
-	Min = 4,
-	Max = 5,
+	None = 0,
+	CustomSizeOnNonDynamicFont = 1,
+	CustomStyleOnNonDynamicFont = 2,
+	NoFont = 4,
 }
 
-public enum MouseLook.RotationAxes
+public enum TextAnchor
 {
-	MouseXAndY = 0,
-	MouseX = 1,
-	MouseY = 2,
+	UpperLeft = 0,
+	UpperCenter = 1,
+	UpperRight = 2,
+	MiddleLeft = 3,
+	MiddleCenter = 4,
+	MiddleRight = 5,
+	LowerLeft = 6,
+	LowerCenter = 7,
+	LowerRight = 8,
 }
 
-public enum MouseLook2.RotationAxes
+public enum HorizontalWrapMode
 {
-	MouseXAndY = 0,
-	MouseX = 1,
-	MouseY = 2,
+	Wrap = 0,
+	Overflow = 1,
 }
 
-public enum ProjectLocationToMap.MapProjection
+public enum VerticalWrapMode
 {
-	EquidistantCylindrical = 0,
-	Mercator = 1,
+	Truncate = 0,
+	Overflow = 1,
 }
 
-public enum QuaternionBaseAction.everyFrameOptions
+public enum RendererScaler.RenderScale
 {
-	Update = 0,
-	FixedUpdate = 1,
-	LateUpdate = 2,
+	S12 = 12,
+	S25 = 25,
+	S50 = 50,
+	S75 = 75,
+	S100 = 100,
 }
 
-public enum RectTransformFlipLayoutAxis.RectTransformFlipOptions
+public enum RenderOption.Grade
 {
-	Horizontal = 0,
-	Vertical = 1,
-	Both = 2,
+	Normal = 0,
+	Low = 1,
 }
 
-public enum RectTransformGetLocalPosition.LocalPositionReference
+public enum RenderOption.Type
 {
-	Anchor = 0,
-	CenterPosition = 1,
+	Shadow = 0,
 }
 
-public enum RectTransformSetAnchorRectPosition.AnchorReference
+private enum ScreenEffectBlur.State
 {
-	TopLeft = 0,
-	Top = 1,
-	TopRight = 2,
-	Right = 3,
-	BottomRight = 4,
-	Bottom = 5,
-	BottomLeft = 6,
-	Left = 7,
-	Center = 8,
+	NONE = 0,
+	START = 1,
+	STOP = 2,
+	KEEP = 3,
 }
 
-public enum GetSceneActionBase.SceneReferenceOptions
+private enum ScreenEffectCrossFade.State
 {
-	SceneAtIndex = 0,
-	SceneByName = 1,
-	SceneByPath = 2,
+	NONE = 0,
+	START = 1,
 }
 
-public enum GetSceneActionBase.SceneSimpleReferenceOptions
+public enum TouchPhase
 {
-	SceneAtIndex = 0,
-	SceneByName = 1,
+	Began = 0,
+	Moved = 1,
+	Stationary = 2,
+	Ended = 3,
+	Canceled = 4,
 }
 
-public enum GetSceneActionBase.SceneBuildReferenceOptions
+public enum IMECompositionMode
 {
-	SceneAtBuildIndex = 0,
-	SceneByName = 1,
+	Auto = 0,
+	On = 1,
+	Off = 2,
 }
 
-public enum GetSceneActionBase.SceneAllReferenceOptions
+public enum TouchType
 {
-	ActiveScene = 0,
-	SceneAtIndex = 1,
-	SceneByName = 2,
-	SceneByPath = 3,
-	SceneByGameObject = 4,
+	Direct = 0,
+	Indirect = 1,
+	Stylus = 2,
 }
 
-public enum SetActiveScene.SceneReferenceOptions
+public enum PenStatus
 {
-	SceneAtBuildIndex = 0,
-	SceneAtIndex = 1,
-	SceneByName = 2,
-	SceneByPath = 3,
-	SceneByGameObject = 4,
+	None = 0,
+	Contact = 1,
+	Barrel = 2,
+	Inverted = 4,
+	Eraser = 8,
 }
 
-public enum UnloadScene.SceneReferenceOptions
+public enum PenEventType
 {
-	ActiveScene = 0,
-	SceneAtBuildIndex = 1,
-	SceneAtIndex = 2,
-	SceneByName = 3,
-	SceneByPath = 4,
-	SceneByGameObject = 5,
+	NoContact = 0,
+	PenDown = 1,
+	PenUp = 2,
 }
 
-public enum UnloadSceneAsynch.SceneReferenceOptions
+public enum DeviceOrientation
 {
-	ActiveScene = 0,
-	SceneAtBuildIndex = 1,
-	SceneAtIndex = 2,
-	SceneByName = 3,
-	SceneByPath = 4,
-	SceneByGameObject = 5,
+	Unknown = 0,
+	Portrait = 1,
+	PortraitUpsideDown = 2,
+	LandscapeLeft = 3,
+	LandscapeRight = 4,
+	FaceUp = 5,
+	FaceDown = 6,
 }
 
-public enum SendMessage.MessageType
+public enum RenderMode
 {
-	SendMessage = 0,
-	SendMessageUpwards = 1,
-	BroadcastMessage = 2,
+	ScreenSpaceOverlay = 0,
+	ScreenSpaceCamera = 1,
+	WorldSpace = 2,
 }
 
-public enum TakeScreenshot.Destination
+public enum UISystemProfilerApi.SampleType
 {
-	MyPictures = 0,
-	PersistentDataPath = 1,
-	CustomPath = 2,
+	Layout = 0,
+	Render = 1,
 }
 
-public enum TouchGUIEvent.OffsetOptions
+internal enum TargetType
 {
-	TopLeft = 0,
-	Center = 1,
-	TouchStart = 2,
+	Function = 0,
+	Field = 1,
 }
 
-public enum TransformInputToWorldSpace.AxisPlane
+internal enum CodegenOptions
 {
-	XZ = 0,
-	XY = 1,
-	YZ = 2,
+	Auto = 0,
+	Custom = 1,
+	Force = 2,
 }
 
-public enum GetAtan2FromVector3.aTan2EnumAxis
+internal enum StaticAccessorType
 {
-	x = 0,
-	y = 1,
-	z = 2,
+	Dot = 0,
+	Arrow = 1,
+	DoubleColon = 2,
+	ArrowWithDefaultReturnIfNull = 3,
 }
 
-public enum UiEventSystemExecuteEvent.EventHandlers
+public enum VideoRenderMode
 {
-	Submit = 0,
-	beginDrag = 1,
-	cancel = 2,
-	deselectHandler = 3,
-	dragHandler = 4,
-	dropHandler = 5,
-	endDragHandler = 6,
-	initializePotentialDrag = 7,
-	pointerClickHandler = 8,
-	pointerDownHandler = 9,
-	pointerEnterHandler = 10,
-	pointerExitHandler = 11,
-	pointerUpHandler = 12,
-	scrollHandler = 13,
-	submitHandler = 14,
-	updateSelectedHandler = 15,
+	CameraFarPlane = 0,
+	CameraNearPlane = 1,
+	RenderTexture = 2,
+	MaterialOverride = 3,
+	APIOnly = 4,
 }
 
-public enum Vector2Operator.Vector2Operation
+public enum Video3DLayout
 {
-	DotProduct = 0,
-	Distance = 1,
-	Angle = 2,
-	Add = 3,
-	Subtract = 4,
-	Multiply = 5,
-	Divide = 6,
-	Min = 7,
-	Max = 8,
+	No3D = 0,
+	SideBySide3D = 1,
+	OverUnder3D = 2,
 }
 
-public enum Vector3Operator.Vector3Operation
+public enum VideoAspectRatio
 {
-	DotProduct = 0,
-	CrossProduct = 1,
-	Distance = 2,
-	Angle = 3,
-	Project = 4,
-	Reflect = 5,
-	Add = 6,
-	Subtract = 7,
-	Multiply = 8,
-	Divide = 9,
-	Min = 10,
-	Max = 11,
+	NoScaling = 0,
+	FitVertically = 1,
+	FitHorizontally = 2,
+	FitInside = 3,
+	FitOutside = 4,
+	Stretch = 5,
 }
 
-public enum iTweenFsmAction.AxisRestriction
+public enum VideoTimeSource
 {
-	none = 0,
-	x = 1,
-	y = 2,
-	z = 3,
-	xy = 4,
-	xz = 5,
-	yz = 6,
+	AudioDSPTimeSource = 0,
+	GameTimeSource = 1,
+}
+
+public enum VideoTimeReference
+{
+	Freerun = 0,
+	InternalTime = 1,
+	ExternalTime = 2,
+}
+
+public enum VideoSource
+{
+	VideoClip = 0,
+	Url = 1,
+}
+
+public enum VideoTimeUpdateMode
+{
+	DSPTime = 0,
+	GameTime = 1,
+	UnscaledGameTime = 2,
+}
+
+public enum VideoAudioOutputMode
+{
+	None = 0,
+	AudioSource = 1,
+	Direct = 2,
+	APIOnly = 3,
+}
+
+public enum ScreenCapture.StereoScreenCaptureMode
+{
+	LeftEye = 1,
+	RightEye = 2,
+	BothEyes = 3,
+}
+
+public enum WindZoneMode
+{
+	Directional = 0,
+	Spherical = 1,
 }
 
 private enum Json.Parser.TOKEN
@@ -30858,53 +33263,31 @@ private enum Json.Parser.TOKEN
 	NULL = 11,
 }
 
-public enum TabKind
+public enum ServicesInitializationState
 {
-	SERVANT = 0,
-	SERVANT_EQUIP = 1,
-	COMMAND_CODE = 2,
+	Uninitialized = 0,
+	Initializing = 1,
+	Initialized = 2,
 }
 
-public enum ModeKind
+internal enum ServicesType
 {
-	MAIN = 0,
-	STATUS = 1,
-	LOCK = 2,
-	CHOICE = 3,
-	PUSH = 4,
+	Default = 0,
+	Instance = 1,
 }
 
-public enum RenderOption.Grade
+public enum ConfigurationSaveMode
 {
-	Normal = 0,
-	Low = 1,
+	Full = 2,
+	Minimal = 1,
+	Modified = 0,
 }
 
-public enum RenderOption.Type
+public enum ConfigurationElementCollectionType
 {
-	Shadow = 0,
-}
-
-public enum RendererScaler.RenderScale
-{
-	S12 = 12,
-	S25 = 25,
-	S50 = 50,
-	S75 = 75,
-	S100 = 100,
-}
-
-private enum ScreenEffectBlur.State
-{
-	NONE = 0,
-	START = 1,
-	STOP = 2,
-	KEEP = 3,
-}
-
-private enum ScreenEffectCrossFade.State
-{
-	NONE = 0,
-	START = 1,
+	AddRemoveClearMap = 1,
+	AddRemoveClearMapAlternate = 3,
+	BasicMap = 0,
+	BasicMapAlternate = 2,
 }
 
